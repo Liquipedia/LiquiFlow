@@ -1,0 +1,41 @@
+/* Fix second navbar for logged-in users */
+@media (min-width: 768px) {
+  .navbar-inverse {
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    z-index: 990;
+  }
+}
+
+/* Push content down below the second navbar */
+/* Second navbar is hidden on mobile */
+@media (min-width: 768px) and (max-width: 991px) {
+    .container-fluid.main-content {
+        margin-top: 40px;
+    }
+}
+@media (min-width: 992px) {
+    .container-fluid.main-content {
+        margin-top: 38px;
+    }
+}
+
+@media (min-width: 768px) {
+    /* Correct offset to top for anchors */
+    .mw-headline {
+        padding-top: 92px;
+        margin-top: -92px;
+        display: inline-block; /* required for webkit browsers */
+    }
+}
+#sidebar-toc.affix-top {
+    margin-top: 8px;
+}
+#sidebar-toc.affix {
+    top: 89px;
+}
+
+#sidebar-toc-column {
+    margin-top: -2px;
+}

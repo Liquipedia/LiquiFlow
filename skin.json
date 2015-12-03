@@ -1,0 +1,68 @@
+{
+	"name": "LiquiFlow",
+	"author": [
+		"Philip Becker-Ehmck",
+		"..."
+	],
+	"url": "http://wiki.teamliquid.net",
+	"descriptionmsg": "liquiflow-skin-desc",
+	"namemsg": "skinname-liquiflow",
+	"license-name": "GPL-2.0+",
+	"type": "skin",
+	"ConfigRegistry": {
+		"vector": "GlobalVarConfig::newInstance"
+	},
+	"ValidSkinNames": {
+		"liquiflow": "LiquiFlow"
+	},
+	"MessagesDirs": {
+		"LiquiFlow": [
+			"i18n"
+		]
+	},
+	"AutoloadClasses": {
+		"SkinVector": "LiquiFlow.php",
+		"VectorTemplate": "LiquiFlowTemplate.php"
+	},
+	"ResourceModules": {
+		"skins.liquiflow.styles": {
+			"styles": {
+				"font.css": {
+					"media": "screen"
+				},
+				"font-awesome/css/font-awesome.min.css": {
+					"media": "screen"
+				},
+				"themes/starcraft-2.css": {
+					"media": "screen"
+				}
+			}
+		},
+		"skins.liquiflow.js": {
+			"scripts": [
+				"js/jquery.min.js",
+				"js/bootstrap.min.js",
+				"js/toc.js",
+				"js/lp.js",						
+				"js/hover-dropdown.js",
+				"js/ie10-viewport-bug-workaround.js"
+			],
+			"position": "top",
+			"dependencies": [
+				"mw-user"
+			]
+		}
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "",
+		"remoteSkinPath": "LiquiFlow"
+	},
+	"ResourceModuleSkinStyles": {
+		"liquiflow": {
+			"mediawiki.notification": "skinStyles/mediawiki.notification.less",
+			"+mediawiki.sectionAnchor": "skinStyles/mediawiki.sectionAnchor.less",
+			"mediawiki.special": "skinStyles/mediawiki.special.less",
+			"mediawiki.special.preferences": "skinStyles/mediawiki.special.preferences.less"
+		}
+	}
+}

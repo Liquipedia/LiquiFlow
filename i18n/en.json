@@ -1,0 +1,24 @@
+{
+	"@metadata": {
+		"authors": [
+                        "Philip Becker-Ehmck"
+                ]
+	},
+	"skinname-liquiflow": "LiquiFlow",
+	"liquiflow-skin-desc": "Modern bootstrap skin for Liquipedia.",
+	"liquiflow-skin-desc": "Modern version of MonoBook with fresh look and many usability improvements",
+	"liquiflow.css": "/* CSS placed here will affect users of the LiquiFlow skin */",
+	"liquiflow.js": "/* Any JavaScript here will be loaded for users using the LiquiFlow skin */",
+	"liquiflow-action-addsection": "Add topic",
+	"liquiflow-action-delete": "Delete",
+	"liquiflow-action-move": "Move",
+	"liquiflow-action-protect": "Protect",
+	"liquiflow-action-undelete": "Undelete",
+	"liquiflow-action-unprotect": "Change protection",
+	"liquiflow-view-create": "Create",
+	"liquiflow-view-edit": "Edit",
+	"liquiflow-view-history": "View history",
+	"liquiflow-view-view": "Read",
+	"liquiflow-view-viewsource": "View source",
+	"liquiflow-more-actions": "More"
+}

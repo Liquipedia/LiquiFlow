@@ -228,13 +228,7 @@ class LiquiFlowTemplate extends BaseTemplate {
 										<span class="fa fa-fw fa-line-chart"></span> <span class="caret"></span>
 									</div>
 								</a>
-								<ul class="dropdown-menu">
-									<?php
-									foreach ($navEntryArray as $trendingArticle) {
-										echo '<li><a href="'.$trendingArticle['href'].'">'.$trendingArticle['text'].'</a></li>';
-									}
-									?>
-								</ul>
+								<ul id="trending-pages-menu" class="dropdown-menu"></ul>
 							</li>
                                                         <?php 
 						} elseif ($navHeader == 'TOURNAMENTS') {

@@ -231,7 +231,7 @@ class LiquiFlowTemplate extends BaseTemplate {
 								<ul class="dropdown-menu">
 									<?php
 									foreach ($navEntryArray as $trendingArticle) {
-										echo '<li><a href="'.$trendingArticle['href'].'">'.$trendingArticle['title'].'</a></li>';
+										echo '<li><a href="'.$trendingArticle['href'].'">'.$trendingArticle['text'].'</a></li>';
 									}
 									?>
 								</ul>

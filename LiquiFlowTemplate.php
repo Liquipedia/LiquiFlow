@@ -5,10 +5,6 @@
  * @ingroup Skins
  */
 
-/* includes from TLs codebase */
-require_once ($_SERVER['DOCUMENT_ROOT'] . '/../../public_html/includes/connect.php');
-require_once ($_SERVER['DOCUMENT_ROOT'] . '/../../public_html/includes/functions.php');
-
 class LiquiFlowTemplate extends BaseTemplate {
 
 	private $icons = [ 
@@ -224,19 +220,6 @@ class LiquiFlowTemplate extends BaseTemplate {
 
 
 						if ($navHeader == 'TRENDING') {
-							$trendingArticles = array ();
-							global $wgScriptPath;
-							$r = mysql_queryS ("SELECT * FROM wiki_hot WHERE page LIKE '%://wiki.teamliquid.net/".substr($wgScriptPath, 1)."/%' ORDER BY hits DESC LIMIT 5");
-							while ($row = mysql_fetch_assoc ($r))
-							{
-								$title = $row['title'];
-								$title = str_replace ("_", " ", $title);
-								$url = $row['page'];
-								$trendingArticles[] = array (
-									'title' => $title,
-									'href' => $url
-								);
-							}
 							?>
 							<li class="dropdown icon-tablet">
 								<a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="#">
@@ -247,16 +230,13 @@ class LiquiFlowTemplate extends BaseTemplate {
 								</a>
 								<ul class="dropdown-menu">
 									<?php
-									// @TODO: modify code to display trending articles
-
-									$trendingArticles = ['link' => 'r1ch', 'link2' => 'must', 'link3' => 'insert', 'link4' => 'code', 'link5' => 'here.'];
-									foreach ($trendingArticles as $trendingArticle) {
+									foreach ($navEntryArray as $trendingArticle) {
 										echo '<li><a href="'.$trendingArticle['href'].'">'.$trendingArticle['title'].'</a></li>';
 									}
 									?>
 								</ul>
 							</li>
-						<?php 
+                                                        <?php 
 						} elseif ($navHeader == 'TOURNAMENTS') {
 							?>
 							<li class="dropdown hidden-xs icon-tablet">

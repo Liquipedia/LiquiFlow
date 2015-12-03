@@ -266,11 +266,12 @@ class LiquiFlowTemplate extends BaseTemplate {
 										</div>
 									<?php 
 									}
-								}				
+								}
+                                                                global $wgScriptPath;
 								?>                                    
 							     	</div>
 							     	<div class="row">
-							     		<div style="float:right; margin-right:23px"><a href="/liquiflow/index.php?title=Liquipedia:Tournaments">[edit]</a></div>
+							     		<div style="float:right; margin-right:23px"><a href="<?php echo $wgScriptPath ?>/index.php?title=Liquipedia:Tournaments">[edit]</a></div>
 							     	</div>                               					
 								</div>
 							</li>

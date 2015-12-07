@@ -10,7 +10,7 @@
 	"license-name": "GPL-2.0+",
 	"type": "skin",
 	"ConfigRegistry": {
-		"vector": "GlobalVarConfig::newInstance"
+		"liquiflow": "GlobalVarConfig::newInstance"
 	},
 	"ValidSkinNames": {
 		"liquiflow": "LiquiFlow"
@@ -21,8 +21,8 @@
 		]
 	},
 	"AutoloadClasses": {
-		"SkinVector": "LiquiFlow.php",
-		"VectorTemplate": "LiquiFlowTemplate.php"
+		"SkinLiquiFlow": "SkinLiquiFlow.php",
+		"LiquiFlowTemplate": "LiquiFlowTemplate.php"
 	},
 	"ResourceModules": {
 		"skins.liquiflow.styles": {

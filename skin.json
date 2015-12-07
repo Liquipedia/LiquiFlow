@@ -56,13 +56,5 @@
 	"ResourceFileModulePaths": {
 		"localBasePath": "",
 		"remoteSkinPath": "LiquiFlow"
-	},
-	"ResourceModuleSkinStyles": {
-		"liquiflow": {
-			"mediawiki.notification": "skinStyles/mediawiki.notification.less",
-			"+mediawiki.sectionAnchor": "skinStyles/mediawiki.sectionAnchor.less",
-			"mediawiki.special": "skinStyles/mediawiki.special.less",
-			"mediawiki.special.preferences": "skinStyles/mediawiki.special.preferences.less"
-		}
 	}
 }

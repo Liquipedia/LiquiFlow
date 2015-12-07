@@ -20,9 +20,11 @@ class LiquiFlowTemplate extends BaseTemplate {
 			'delete' => 'fa-trash-o',
 			'move' => 'fa-exchange',
 			'protect' => 'fa-unlock-alt',
+			'unprotect' => 'fa-lock',
 			'purge' => 'fa-repeat',
 			'addsection' => false,
 			'stability' => 'fa-check-circle-o',
+			'viewsource' => 'fa-code',
 			
 			// Tools
 			't-whatlinkshere' => 'fa-link',
@@ -936,7 +938,7 @@ $footerLinks = $this->getFooterLinks();
 									<?php  
 									if (isset($this->icons[$key]) && $this->icons[$key] !== false) {
                                      	if (in_array( 'sysop', $this->getSkin()->getUser()->getEffectiveGroups()) 
-                                     		&& in_array($key, ['purge', 'delete', 'protect', 'stability'])) {
+                                     		&& in_array($key, ['purge', 'delete', 'protect', 'unprotect', 'stability'])) {
                                      		echo '<span class="visible-xs"><span class="fa fa-fw ' . $this->icons[$key] . '"></span> ' .
                                      			htmlspecialchars( $link['text'] ) . '</span>';
                                      		echo '<span class="hidden-xs"><span class="fa fa-fw ' . $this->icons[$key] . '"></span></span>';

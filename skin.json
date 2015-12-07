@@ -49,6 +49,13 @@
 			"dependencies": [
 				"mw-user"
 			]
+		},
+		"skins.liquiflowloggedin": {
+			"styles": {
+				"themes/loggedin.css": {
+					"media": "screen"
+				}
+			}
 		}
 	},
 	"ResourceFileModulePaths": {

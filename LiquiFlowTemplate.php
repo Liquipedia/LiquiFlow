@@ -959,6 +959,7 @@ $footerLinks = $this->getFooterLinks();
 					
 				case 'TOOLBOX':
 						$toolbox = $this->getToolbox();
+                                                global $wgScriptPath;
 					?>
 						<li class="dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="#">
@@ -966,8 +967,8 @@ $footerLinks = $this->getFooterLinks();
 							</a>
 							<ul class="dropdown-menu">
 								<li class="dropdown-header">General</li>
-								<li><a href="/liquiflow/index.php?title=Special:RecentChanges"><span class="fa fa-fw fa-clock-o"></span> Recent Changes</a></li>
-								<li><a href="/liquiflow/index.php?title=Special:PendingChanges"><span class="fa fa-fw fa-circle-o"></span> Pending Changes</a></li>
+								<li><a href="<?php echo $wgScriptPath; ?>/index.php?title=Special:RecentChanges"><span class="fa fa-fw fa-clock-o"></span> Recent Changes</a></li>
+								<li><a href="<?php echo $wgScriptPath; ?>/index.php?title=Special:PendingChanges"><span class="fa fa-fw fa-circle-o"></span> Pending Changes</a></li>
 						
 								<li class="divider"></li>
 								<li class="dropdown-header">Specific</li>

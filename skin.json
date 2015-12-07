@@ -25,7 +25,7 @@
 		"LiquiFlowTemplate": "LiquiFlowTemplate.php"
 	},
 	"ResourceModules": {
-		"skins.liquiflow.styles": {
+		"skins.liquiflow": {
 			"styles": {
 				"font.css": {
 					"media": "screen"
@@ -37,9 +37,6 @@
 					"media": "screen"
 				}
 			},
-			"position": "top"
-		},
-		"skins.liquiflow.js": {
 			"scripts": [
 				"js/jquery.min.js",
 				"js/bootstrap.min.js",
@@ -57,13 +54,5 @@
 	"ResourceFileModulePaths": {
 		"localBasePath": "",
 		"remoteSkinPath": "LiquiFlow"
-	},
-	"ResourceModuleSkinStyles": {
-		"liquiflow": {
-			"mediawiki.notification": "skinStyles/mediawiki.notification.less",
-			"+mediawiki.sectionAnchor": "skinStyles/mediawiki.sectionAnchor.less",
-			"mediawiki.special": "skinStyles/mediawiki.special.less",
-			"mediawiki.special.preferences": "skinStyles/mediawiki.special.preferences.less"
-		}
 	}
 }

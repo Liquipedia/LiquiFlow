@@ -140,7 +140,7 @@ class LiquiFlowTemplate extends BaseTemplate {
 		//$meta = "<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\" />\n" .
 		//		"<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n";
 		//$this->data['headelement'] = substr_replace($this->data['headelement'], $meta, $pos, 0);
-		
+
 		$this->html( 'headelement' );
 		
 		// extract the standard table of contents from the page html in order to add it to the left sidebar
@@ -540,8 +540,8 @@ class LiquiFlowTemplate extends BaseTemplate {
                     <?php echo $toc; ?>
                     <?php endif;?>
                 </div>
-            <div id="sidebar-ad" class="affix-top">
-                We don't love ads either, but they help pay the bills.
+	    <div id="sidebar-ad" class="affix-top">
+		<?php include ('TeamLiquidSideAd.inc'); ?>
             </div>
         </div><!-- /#sidebar-toc-colum -->
 
@@ -552,15 +552,8 @@ class LiquiFlowTemplate extends BaseTemplate {
 		<div id="main-content-column" class="col-md-12">
 			<div class="main-content">
 
-			    <!-- @TODO: Ad banner -->
-                <div style="height:100px; width: 100%; padding-top:10px;" class="visible-xl visible-lg visible-md">
-                	<img src="/liquiflow/skins/LiquiFlow/ads/large-leaderboard.png">
-                </div>
-                <div style="hheight:100px; width: 100%; padding-top:10px;" class="visible-sm">
-                	<img src="/liquiflow/skins/LiquiFlow/ads/leaderboard.jpg">
-                </div>
-                <div style="height:100px; width: 100%; padding-top:10px;" class="visible-xs">
-                	<img src="/liquiflow/skins/LiquiFlow/ads/mobile-leaderboard.png">
+		<div style="height:100px; width: 100%; padding-top:10px;">
+			<?php include ('TeamLiquidTopAd.inc'); ?>
                 </div>
 				
 				<?php if ( $this->data['sitenotice'] ) : ?>
@@ -616,17 +609,10 @@ class LiquiFlowTemplate extends BaseTemplate {
 					<?php $this->html( 'debughtml' ); ?>
 				</div>
 			</div>
-			<!-- @TODO: Ad banner -->
-			<div style="height:110px; width: 100%; padding:10px 0;" class="visible-xl visible-lg visible-md">
-                	<img src="/liquiflow/skins/LiquiFlow/ads/large-leaderboard.png">
+		<div style="height:110px; width: 100%; padding: 10px 0;">
+			<?php include ('TeamLiquidTopAd.inc'); ?>
                 </div>
-                <div style="hheight:110px; width: 100%; padding: 10px 0;" class="visible-sm">
-                	<img src="/liquiflow/skins/LiquiFlow/ads/leaderboard.jpg">
-                </div>
-                <div style="height:110px; width: 100%; padding:10px 0;" class="visible-xs">
-                	<img src="/liquiflow/skins/LiquiFlow/ads/mobile-leaderboard.png">
-                </div>
-		</div><!-- /#main-content-column -->
+       		</div><!-- /#main-content-column -->
 	</div><!-- /.row -->
 </div><!-- /.container -->
 </div><!-- /#wrap -->
@@ -762,6 +748,7 @@ $footerLinks = $this->getFooterLinks();
 <!-- Bootstrap core JavaScript -->
 <?php $this->printTrail(); ?>
 
+<?php include ('TeamLiquidFooter.inc'); ?>
     
 </body>
 </html>

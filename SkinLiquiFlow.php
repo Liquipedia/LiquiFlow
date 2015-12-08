@@ -33,6 +33,11 @@ class SkinLiquiFlow extends SkinTemplate {
       		"<script src=\"https://oss.maxcdn.com/respond/1.4.2/respond.min.js\"></script>\n" .
     		"<![endif]-->");
 		$out->addHeadItem( 'responsive', "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">");
+
+		global $tlAdCode;
+		include ('TLAdHeader.inc');
+		$out->addHeadItem( 'tlads', $tlAdCode);
+
 		$out->addModuleScripts( 'skins.liquiflow' );
 	}
 

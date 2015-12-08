@@ -393,7 +393,7 @@ class LiquiFlowTemplate extends BaseTemplate {
 						</li>
 						
 					</ul><!-- /.navbar-nav -->
-                                        
+					
 					<ul class="nav navbar-nav navbar-right tablet-personal">
 						<?php
 						if ( !$wgUser->isLoggedIn() ) {

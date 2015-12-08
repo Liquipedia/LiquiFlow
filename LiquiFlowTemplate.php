@@ -1143,5 +1143,3 @@ $footerLinks = $this->getFooterLinks();
 	}
 	
 }
-
-

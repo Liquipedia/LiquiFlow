@@ -347,7 +347,7 @@ class LiquiFlowTemplate extends BaseTemplate {
 							<?php
 								if ( !$wgUser->isLoggedIn() ) {
 									$personalTools = $this->getPersonalTools();
-									$personalTools['createaccount']['links'][0]['href'] = 'http://www.teamliquid.net/mytlnet/register.php';
+									$personalTools['createaccount']['links'][0]['href'] = 'http://www.teamliquid.net/mytlnet/register';
 									$personalTools['createaccount']['class'] = "visible-xs";
 									$personalTools['login']['class'] = "visible-xs";
 									echo $this->makeListItem( 'createaccount', $personalTools['createaccount'] );

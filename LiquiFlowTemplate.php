@@ -393,7 +393,7 @@ class LiquiFlowTemplate extends BaseTemplate {
 						</li>
 						
 					</ul><!-- /.navbar-nav -->
-					
+                                        
 					<ul class="nav navbar-nav navbar-right tablet-personal">
 						<?php
 						if ( !$wgUser->isLoggedIn() ) {
@@ -492,7 +492,6 @@ class LiquiFlowTemplate extends BaseTemplate {
 						</li>	
 						
 						<?php $this->renderNavigation( 'TOOLBOX' ); ?>
-						
 						
 						<?php if ( in_array( 'sysop', $wgUser->getEffectiveGroups()) ) : ?>
 						<li class="dropdown">

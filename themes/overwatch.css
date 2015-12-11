@@ -525,7 +525,7 @@ mark,
   color: #f1d1e3;
 }
 a.text-primary:hover {
-  color: #aac9e5;
+  color: #e5aacc;
 }
 .text-success {
   color: #3c763d;
@@ -556,7 +556,7 @@ a.text-danger:hover {
   background-color: #f1d1e3;
 }
 a.bg-primary:hover {
-  background-color: #aac9e5;
+  background-color: #e5aacc;
 }
 .bg-success {
   background-color: #dff0d8;
@@ -2245,7 +2245,7 @@ fieldset[disabled] .btn-default.active {
 .btn-primary {
   color: #932d64;
   background-color: #f1d1e3;
-  border-color: #aac9e5;
+  border-color: #e5aacc;
 }
 .btn-primary:hover,
 .btn-primary:focus,
@@ -2254,7 +2254,7 @@ fieldset[disabled] .btn-default.active {
 .btn-primary.active,
 .open > .dropdown-toggle.btn-primary {
   color: #932d64;
-  background-color: #aac9e5;
+  background-color: #e5aacc;
   border-color: #7bacd7;
 }
 .btn-primary:active,
@@ -2281,7 +2281,7 @@ fieldset[disabled] .btn-primary:active,
 .btn-primary[disabled].active,
 fieldset[disabled] .btn-primary.active {
   background-color: #f1d1e3;
-  border-color: #aac9e5;
+  border-color: #e5aacc;
 }
 .btn-primary .badge {
   color: #f1d1e3;
@@ -3078,7 +3078,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   max-width: none;
 }
 .nav-tabs {
-  border-bottom: 1px solid #aac9e5;
+  border-bottom: 1px solid #e5aacc;
 }
 .nav-tabs > li {
   float: left;
@@ -3091,7 +3091,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   border-radius: 0px 0px 0 0;
 }
 .nav-tabs > li > a:hover {
-  border-color: #aac9e5 #aac9e5 #aac9e5;
+  border-color: #e5aacc #e5aacc #e5aacc;
 }
 .nav-tabs > li.active > a,
 .nav-tabs > li.active > a:hover,
@@ -3228,15 +3228,15 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   border-top-left-radius: 0;
 }
 .nav-tabs {
-  border-bottom: 2px solid #aac9e5;
+  border-bottom: 2px solid #e5aacc;
 }
 .nav-tabs > li {
   background-color: #f1d1e3;
   margin-right: 2px;
   margin-bottom: -2px;
-  border-left: 2px solid #aac9e5;
-  border-top: 2px solid #aac9e5;
-  border-right: 2px solid #aac9e5;
+  border-left: 2px solid #e5aacc;
+  border-top: 2px solid #e5aacc;
+  border-right: 2px solid #e5aacc;
 }
 .nav-tabs > li.active > a,
 .nav-tabs > li.active > a:hover,
@@ -3274,7 +3274,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 @media (max-width: 767px) {
   .nav-tabs > li {
     float: none;
-    border: 1px solid #aac9e5;
+    border: 1px solid #e5aacc;
   }
   .nav-tabs > li.active > a {
     border: none;
@@ -3625,7 +3625,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {
-  color: #aac9e5;
+  color: #e5aacc;
   background-color: transparent;
 }
 .navbar-default .navbar-text {
@@ -4091,7 +4091,7 @@ a.label:focus {
 }
 .label-primary[href]:hover,
 .label-primary[href]:focus {
-  background-color: #aac9e5;
+  background-color: #e5aacc;
 }
 .label-success {
   background-color: #5cb85c;
@@ -6035,7 +6035,7 @@ h6 .editsection {
 }
 h1,
 h2 {
-  border-bottom: 2px solid #aac9e5;
+  border-bottom: 2px solid #e5aacc;
 }
 /** No standard TOC on mobile */
 @media (max-width: 767px) {
@@ -6115,7 +6115,7 @@ h2 {
 #sidebar-toc ul li.active:hover > a,
 #sidebar-toc ul li.active:focus > a {
   background-color: #d8d8d8;
-  border-right: 2px solid #aac9e5;
+  border-right: 2px solid #e5aacc;
   color: #932d64;
   font-weight: 700;
   width: 100%;
@@ -6825,7 +6825,7 @@ p {
 }
 #slide-toc a:hover,
 #slide-toc a:focus {
-  color: #aac9e5;
+  color: #e5aacc;
 }
 #toc-toggler > span.fa,
 #mobile-search-button > span.fa,
@@ -7214,7 +7214,7 @@ ul.hlist,
 /* Default skin for navigation boxes */
 table.navbox {
   /* Navbox container style */
-  border: 1px solid #aac9e5;
+  border: 1px solid #e5aacc;
   width: 100%;
   margin: auto;
   clear: both;
@@ -7961,9 +7961,9 @@ div.mpsubtitle {
 .fo-nttax-infobox {
   background-color: #fff;
   width: 336px;
-  border-top: 2px solid #aac9e5;
+  border-top: 2px solid #e5aacc;
   padding: 10px 0;
-  border-bottom: 2px solid #aac9e5;
+  border-bottom: 2px solid #e5aacc;
 }
 .fo-nttax-infobox > div {
   display: table;
@@ -8169,8 +8169,8 @@ html .thumbcaption {
   margin-top: 5px;
 }
 div.thumbinner {
-  border-top: 2px solid #aac9e5;
-  border-bottom: 2px solid #aac9e5;
+  border-top: 2px solid #e5aacc;
+  border-bottom: 2px solid #e5aacc;
   padding: 10px 0;
   margin: 0;
 }

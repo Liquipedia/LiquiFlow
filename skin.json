@@ -47,7 +47,7 @@
 			],
 			"position": "top",
 			"dependencies": [
-				"mw-user"
+				"mw.user"
 			]
 		},
 		"skins.liquiflowloggedin": {

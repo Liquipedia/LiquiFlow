@@ -25,6 +25,7 @@ class LiquiFlowTemplate extends BaseTemplate {
 			'addsection' => false,
 			'stability' => 'fa-check-circle-o',
 			'viewsource' => 'fa-code',
+			'current' => 'fa-circle-o',
 			
 			// Tools
 			't-whatlinkshere' => 'fa-link',
@@ -140,7 +141,7 @@ class LiquiFlowTemplate extends BaseTemplate {
 		//$meta = "<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\" />\n" .
 		//		"<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n";
 		//$this->data['headelement'] = substr_replace($this->data['headelement'], $meta, $pos, 0);
-
+		
 		$this->html( 'headelement' );
 		
 		// extract the standard table of contents from the page html in order to add it to the left sidebar
@@ -347,7 +348,7 @@ class LiquiFlowTemplate extends BaseTemplate {
 							<?php
 								if ( !$wgUser->isLoggedIn() ) {
 									$personalTools = $this->getPersonalTools();
-									$personalTools['createaccount']['links'][0]['href'] = 'http://www.teamliquid.net/mytlnet/register.php';
+									$personalTools['createaccount']['links'][0]['href'] = 'http://www.teamliquid.net/mytlnet/register';
 									$personalTools['createaccount']['class'] = "visible-xs";
 									$personalTools['login']['class'] = "visible-xs";
 									echo $this->makeListItem( 'createaccount', $personalTools['createaccount'] );
@@ -493,7 +494,6 @@ class LiquiFlowTemplate extends BaseTemplate {
 						
 						<?php $this->renderNavigation( 'TOOLBOX' ); ?>
 						
-						
 						<?php if ( in_array( 'sysop', $wgUser->getEffectiveGroups()) ) : ?>
 						<li class="dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="#"> 
@@ -540,8 +540,8 @@ class LiquiFlowTemplate extends BaseTemplate {
                     <?php echo $toc; ?>
                     <?php endif;?>
                 </div>
-	    <div id="sidebar-ad" class="affix-top">
-		<?php include ('TeamLiquidSideAd.inc'); ?>
+            <div id="sidebar-ad" class="affix-top">
+                We don't love ads either, but they help pay the bills.
             </div>
         </div><!-- /#sidebar-toc-colum -->
 
@@ -552,8 +552,15 @@ class LiquiFlowTemplate extends BaseTemplate {
 		<div id="main-content-column" class="col-md-12">
 			<div class="main-content">
 
-		<div style="height:100px; width: 100%; padding-top:10px;">
-			<?php include ('TeamLiquidTopAd.inc'); ?>
+			    <!-- @TODO: Ad banner -->
+                <div style="height:100px; width: 100%; padding-top:10px;" class="visible-xl visible-lg visible-md">
+                	<img src="/liquiflow/skins/LiquiFlow/ads/large-leaderboard.png">
+                </div>
+                <div style="hheight:100px; width: 100%; padding-top:10px;" class="visible-sm">
+                	<img src="/liquiflow/skins/LiquiFlow/ads/leaderboard.jpg">
+                </div>
+                <div style="height:100px; width: 100%; padding-top:10px;" class="visible-xs">
+                	<img src="/liquiflow/skins/LiquiFlow/ads/mobile-leaderboard.png">
                 </div>
 				
 				<?php if ( $this->data['sitenotice'] ) : ?>
@@ -609,10 +616,17 @@ class LiquiFlowTemplate extends BaseTemplate {
 					<?php $this->html( 'debughtml' ); ?>
 				</div>
 			</div>
-		<div style="height:110px; width: 100%; padding: 10px 0;">
-			<?php include ('TeamLiquidTopAd.inc'); ?>
+			<!-- @TODO: Ad banner -->
+			<div style="height:110px; width: 100%; padding:10px 0;" class="visible-xl visible-lg visible-md">
+                	<img src="/liquiflow/skins/LiquiFlow/ads/large-leaderboard.png">
                 </div>
-       		</div><!-- /#main-content-column -->
+                <div style="hheight:110px; width: 100%; padding: 10px 0;" class="visible-sm">
+                	<img src="/liquiflow/skins/LiquiFlow/ads/leaderboard.jpg">
+                </div>
+                <div style="height:110px; width: 100%; padding:10px 0;" class="visible-xs">
+                	<img src="/liquiflow/skins/LiquiFlow/ads/mobile-leaderboard.png">
+                </div>
+		</div><!-- /#main-content-column -->
 	</div><!-- /.row -->
 </div><!-- /.container -->
 </div><!-- /#wrap -->
@@ -748,7 +762,6 @@ $footerLinks = $this->getFooterLinks();
 <!-- Bootstrap core JavaScript -->
 <?php $this->printTrail(); ?>
 
-<?php include ('TeamLiquidFooter.inc'); ?>
     
 </body>
 </html>
@@ -925,7 +938,7 @@ $footerLinks = $this->getFooterLinks();
 									<?php  
 									if (isset($this->icons[$key]) && $this->icons[$key] !== false) {
                                      	if (in_array( 'sysop', $this->getSkin()->getUser()->getEffectiveGroups()) 
-                                     		&& in_array($key, ['purge', 'delete', 'protect', 'unprotect', 'stability'])) {
+                                     		&& in_array($key, ['purge', 'delete', 'protect', 'unprotect', 'stability', 'current'])) {
                                      		echo '<span class="visible-xs"><span class="fa fa-fw ' . $this->icons[$key] . '"></span> ' .
                                      			htmlspecialchars( $link['text'] ) . '</span>';
                                      		echo '<span class="hidden-xs"><span class="fa fa-fw ' . $this->icons[$key] . '"></span></span>';
@@ -946,6 +959,7 @@ $footerLinks = $this->getFooterLinks();
 					
 				case 'TOOLBOX':
 						$toolbox = $this->getToolbox();
+                                                global $wgScriptPath;
 					?>
 						<li class="dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="#">
@@ -953,8 +967,8 @@ $footerLinks = $this->getFooterLinks();
 							</a>
 							<ul class="dropdown-menu">
 								<li class="dropdown-header">General</li>
-								<li><a href="/liquiflow/index.php?title=Special:RecentChanges"><span class="fa fa-fw fa-clock-o"></span> Recent Changes</a></li>
-								<li><a href="/liquiflow/index.php?title=Special:PendingChanges"><span class="fa fa-fw fa-circle-o"></span> Pending Changes</a></li>
+								<li><a href="<?php echo $wgScriptPath; ?>/index.php?title=Special:RecentChanges"><span class="fa fa-fw fa-clock-o"></span> Recent Changes</a></li>
+								<li><a href="<?php echo $wgScriptPath; ?>/index.php?title=Special:PendingChanges"><span class="fa fa-fw fa-circle-o"></span> Pending Changes</a></li>
 						
 								<li class="divider"></li>
 								<li class="dropdown-header">Specific</li>
@@ -1130,5 +1144,3 @@ $footerLinks = $this->getFooterLinks();
 	}
 	
 }
-
-

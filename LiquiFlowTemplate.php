@@ -22,10 +22,12 @@ class LiquiFlowTemplate extends BaseTemplate {
 			'protect' => 'fa-unlock-alt',
 			'unprotect' => 'fa-lock',
 			'purge' => 'fa-repeat',
-			'addsection' => false,
+			'addsection' => 'fa-plus',
 			'stability' => 'fa-check-circle-o',
 			'viewsource' => 'fa-code',
 			'current' => 'fa-circle-o',
+			'default' => 'fa-pause-circle-o',
+			'view-foreign' => 'fa-hdd-o',
 			
 			// Tools
 			't-whatlinkshere' => 'fa-link',

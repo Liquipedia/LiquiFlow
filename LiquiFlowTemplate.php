@@ -933,14 +933,23 @@ $footerLinks = $this->getFooterLinks();
 					break;
 				case 'ACTIONS':
 					?>					
-							<?php foreach ( $this->data['action_urls'] as $key => $link ) :	?>
+                                                        <?php global $wgScriptPath;
+                                                        if (isset($this->data['action_urls']['protect'])) {$this->data['action_urls']['default'] = Array(
+                                                            'class' => '',
+                                                            'text' => 'Stability',
+                                                            'href' => $wgScriptPath. '/index.php?title=Special:Stabilization&page=' . $this->getSkin()->getTitle(),
+                                                            'id' => 'ca-default',
+                                                            'attributes' => ' id="ca-default"',
+                                                            'key' => ' title="Quality assurance settings"'
+                                                        );}
+                                                        foreach ( $this->data['action_urls'] as $key => $link ) :	?>
 								<li <?php echo $link['attributes']; ?>>
 									<a href="<?php echo htmlspecialchars( $link['href'] );?>" 
 									<?php echo $link['key'] ?>>
 									<?php  
 									if (isset($this->icons[$key]) && $this->icons[$key] !== false) {
                                      	if (in_array( 'sysop', $this->getSkin()->getUser()->getEffectiveGroups()) 
-                                     		&& in_array($key, ['purge', 'delete', 'protect', 'unprotect', 'stability', 'current'])) {
+                                     		&& in_array($key, ['purge', 'delete', 'protect', 'unprotect', 'stability', 'current', 'default'])) {
                                      		echo '<span class="visible-xs"><span class="fa fa-fw ' . $this->icons[$key] . '"></span> ' .
                                      			htmlspecialchars( $link['text'] ) . '</span>';
                                      		echo '<span class="hidden-xs"><span class="fa fa-fw ' . $this->icons[$key] . '"></span></span>';

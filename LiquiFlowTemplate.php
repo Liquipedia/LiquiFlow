@@ -558,7 +558,7 @@ class LiquiFlowTemplate extends BaseTemplate {
                 <div style="height:100px; width: 100%; padding-top:10px;" class="visible-xl visible-lg visible-md">
                 	<img src="/liquiflow/skins/LiquiFlow/ads/large-leaderboard.png">
                 </div>
-                <div style="hheight:100px; width: 100%; padding-top:10px;" class="visible-sm">
+                <div style="height:100px; width: 100%; padding-top:10px;" class="visible-sm">
                 	<img src="/liquiflow/skins/LiquiFlow/ads/leaderboard.jpg">
                 </div>
                 <div style="height:100px; width: 100%; padding-top:10px;" class="visible-xs">

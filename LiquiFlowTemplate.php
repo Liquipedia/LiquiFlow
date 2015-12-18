@@ -535,15 +535,15 @@ class LiquiFlowTemplate extends BaseTemplate {
 
 		<!-- @TODO: Sidebar ad box -->
         <div id="sidebar-toc-column" style="display: none;">
-                <div id="sidebar-toc"
+            <div id="sidebar-toc"
                      class="sidebar-toc bs-docs-sidebar hidden-print hidden-xs hidden-sm affix-top"
                      style="" role="complementary">
                     <?php if (strlen($toc) > 0) : ?>
                     <?php echo $toc; ?>
                     <?php endif;?>
+                <div id="sidebar-ad">
+                    We don't love ads either, but they help pay the bills.
                 </div>
-            <div id="sidebar-ad" class="affix-top">
-                We don't love ads either, but they help pay the bills.
             </div>
         </div><!-- /#sidebar-toc-colum -->
 

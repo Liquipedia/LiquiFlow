@@ -10,7 +10,7 @@
 	"liquiflow-skin-desc": "Modern bootstrap skin created for Liquipedia, with a lot of improvements over its old skin.",
 	"liquiflow.css": "/* CSS placed here will affect users of the LiquiFlow skin */",
 	"liquiflow.js": "/* Any JavaScript here will be loaded for users using the LiquiFlow skin */",
-	"liquiflow-action-addsection": "Add topic",
+	"liquiflow-action-addsection": "Add",
 	"liquiflow-action-delete": "Delete",
 	"liquiflow-action-move": "Move",
 	"liquiflow-action-protect": "Protect",

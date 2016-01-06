@@ -54,6 +54,7 @@ class LiquiFlowTemplate extends BaseTemplate {
 			'pt-createaccount' => 'fa-user-plus',
 			'pt-logout' => 'fa-sign-out',
 			'pt-login' => 'fa-sign-in',
+			'pt-adminlinks' => 'fa-gavel',
 
 	];
 

@@ -1,7 +1,6 @@
 
 var lastScrollTop = 0;
 var currentState = 'top';
-var currentStateAd = 'top';
 function adjustSidebar() {
     if ($(this).scrollTop()) {
         $('#back-to-top:hidden, #back-to-top-icon:hidden').stop(true, true).fadeIn();
@@ -20,22 +19,6 @@ function adjustSidebar() {
 
     var secondNavbar = mw.user.isAnon() ? $('#wiki-nav').outerHeight() : 0;
 
-
-    if (distanceToBottom <= $('#footer').outerHeight() && isScrollingDown && currentStateAd == 'top') {
-        $('#sidebar-ad').removeClass('affix-top');
-        $('#sidebar-ad').addClass('affix-bottom');
-        currentStateAd = 'bottom';
-    } else if (distanceToBottom >= $('#footer').outerHeight() && !isScrollingDown && currentStateAd == 'bottom') {
-        $('#sidebar-ad').removeClass('affix-bottom');
-        $('#sidebar-ad').addClass('affix-top');
-        $('#sidebar-ad').css('bottom', 10);
-        currentStateAd = 'top';
-    }
-
-    if (currentStateAd == 'bottom') {
-        $('#sidebar-ad').css('bottom', $('#footer').outerHeight() + 10 - distanceToBottom);
-    }
-
     if (scrollTop >= secondNavbar && isScrollingDown && currentState == 'top') {
         $('#sidebar-toc').removeClass('affix-top');
         $('#sidebar-toc').addClass('affix');
@@ -44,18 +27,18 @@ function adjustSidebar() {
         $('#sidebar-toc').removeClass('affix');
         $('#sidebar-toc').addClass('affix-top');
         currentState = 'top';
-    } else if (distanceToFooter <= $('#sidebar-ad').outerHeight() + 10 && isScrollingDown && currentState == 'middle') {
+    } else if (distanceToFooter <= 10 && isScrollingDown && currentState == 'middle') {
         $('#sidebar-toc').removeClass('affix');
         $('#sidebar-toc').addClass('affix-bottom');
         currentState = 'bottom';
-    } else if (distanceToFooter >= $('#sidebar-ad').outerHeight() + 10  && !isScrollingDown && currentState == 'bottom') {
+    } else if (distanceToFooter >= 10  && !isScrollingDown && currentState == 'bottom') {
         $('#sidebar-toc').removeClass('affix-bottom');
         $('#sidebar-toc').addClass('affix');
         currentState = 'middle';
     }
 
     if (currentState == 'bottom') {
-        $('#sidebar-toc').css('bottom', ($('#sidebar-ad').outerHeight() + $('#footer').outerHeight() + 10) - distanceToBottom);
+        $('#sidebar-toc').css('bottom', ($('#footer').outerHeight() + 10) - distanceToBottom);
     }
 
     lastScrollTop = $(window).scrollTop();

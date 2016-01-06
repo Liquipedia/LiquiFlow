@@ -22,10 +22,12 @@ class LiquiFlowTemplate extends BaseTemplate {
 			'protect' => 'fa-unlock-alt',
 			'unprotect' => 'fa-lock',
 			'purge' => 'fa-repeat',
-			'addsection' => false,
+			'addsection' => 'fa-plus',
 			'stability' => 'fa-check-circle-o',
 			'viewsource' => 'fa-code',
 			'current' => 'fa-circle-o',
+			'default' => 'fa-pause-circle-o',
+			'view-foreign' => 'fa-hdd-o',
 			
 			// Tools
 			't-whatlinkshere' => 'fa-link',
@@ -533,15 +535,15 @@ class LiquiFlowTemplate extends BaseTemplate {
 
 		<!-- @TODO: Sidebar ad box -->
         <div id="sidebar-toc-column" style="display: none;">
-                <div id="sidebar-toc"
+            <div id="sidebar-toc"
                      class="sidebar-toc bs-docs-sidebar hidden-print hidden-xs hidden-sm affix-top"
                      style="" role="complementary">
                     <?php if (strlen($toc) > 0) : ?>
                     <?php echo $toc; ?>
                     <?php endif;?>
+                <div id="sidebar-ad">
+                    We don't love ads either, but they help pay the bills.
                 </div>
-            <div id="sidebar-ad" class="affix-top">
-                We don't love ads either, but they help pay the bills.
             </div>
         </div><!-- /#sidebar-toc-colum -->
 
@@ -556,7 +558,7 @@ class LiquiFlowTemplate extends BaseTemplate {
                 <div style="height:100px; width: 100%; padding-top:10px;" class="visible-xl visible-lg visible-md">
                 	<img src="/liquiflow/skins/LiquiFlow/ads/large-leaderboard.png">
                 </div>
-                <div style="hheight:100px; width: 100%; padding-top:10px;" class="visible-sm">
+                <div style="height:100px; width: 100%; padding-top:10px;" class="visible-sm">
                 	<img src="/liquiflow/skins/LiquiFlow/ads/leaderboard.jpg">
                 </div>
                 <div style="height:100px; width: 100%; padding-top:10px;" class="visible-xs">
@@ -931,14 +933,23 @@ $footerLinks = $this->getFooterLinks();
 					break;
 				case 'ACTIONS':
 					?>					
-							<?php foreach ( $this->data['action_urls'] as $key => $link ) :	?>
+                                                        <?php global $wgScriptPath;
+                                                        if (isset($this->data['action_urls']['protect'])) {$this->data['action_urls']['default'] = Array(
+                                                            'class' => '',
+                                                            'text' => 'Stability',
+                                                            'href' => $wgScriptPath. '/index.php?title=Special:Stabilization&page=' . $this->getSkin()->getTitle(),
+                                                            'id' => 'ca-default',
+                                                            'attributes' => ' id="ca-default"',
+                                                            'key' => ' title="Quality assurance settings"'
+                                                        );}
+                                                        foreach ( $this->data['action_urls'] as $key => $link ) :	?>
 								<li <?php echo $link['attributes']; ?>>
 									<a href="<?php echo htmlspecialchars( $link['href'] );?>" 
 									<?php echo $link['key'] ?>>
 									<?php  
 									if (isset($this->icons[$key]) && $this->icons[$key] !== false) {
                                      	if (in_array( 'sysop', $this->getSkin()->getUser()->getEffectiveGroups()) 
-                                     		&& in_array($key, ['purge', 'delete', 'protect', 'unprotect', 'stability', 'current'])) {
+                                     		&& in_array($key, ['purge', 'delete', 'protect', 'unprotect', 'stability', 'current', 'default'])) {
                                      		echo '<span class="visible-xs"><span class="fa fa-fw ' . $this->icons[$key] . '"></span> ' .
                                      			htmlspecialchars( $link['text'] ) . '</span>';
                                      		echo '<span class="hidden-xs"><span class="fa fa-fw ' . $this->icons[$key] . '"></span></span>';

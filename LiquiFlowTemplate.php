@@ -7,11 +7,11 @@
 
 class LiquiFlowTemplate extends BaseTemplate {
 
-	private $icons = [ 
+	private $icons = [
 			// Wiki actions
 			'subject' => 'fa-file-text-o',
 			'main' => 'fa-file-text-o',
-			'view' => 'fa-file-text-o', 	
+			'view' => 'fa-file-text-o',
 			'talk' => 'fa-comments-o',
 			'history' => 'fa-history',
 			'edit' => 'fa-pencil',
@@ -28,7 +28,7 @@ class LiquiFlowTemplate extends BaseTemplate {
 			'current' => 'fa-circle-o',
 			'default' => 'fa-pause-circle-o',
 			'view-foreign' => 'fa-hdd-o',
-			
+
 			// Tools
 			't-whatlinkshere' => 'fa-link',
 			't-print' => 'fa-print',
@@ -43,7 +43,7 @@ class LiquiFlowTemplate extends BaseTemplate {
 			't-contributions' => 'fa-puzzle-piece',
 			't-userrights' => 'fa-gavel',
 			'feed-atom' => 'fa-rss',
-			
+
 			// Personal
 			'pt-user' => 'fa-user',
 			'pt-userpage' => 'fa-home',
@@ -54,10 +54,10 @@ class LiquiFlowTemplate extends BaseTemplate {
 			'pt-createaccount' => 'fa-user-plus',
 			'pt-logout' => 'fa-sign-out',
 			'pt-login' => 'fa-sign-in',
-	
+
 	];
-	
-	private $adminDropdown = [ 'About' => [ 
+
+	private $adminDropdown = [ 'About' => [
 									[ 'page' => 'Special:Statistics', 'title' => 'Statistics', 'id' => 'ad-statistics'],
 									[ 'page' => 'Special:Version', 'title' => 'Version', 'id' => 'ad-version'],
 									[ 'page' => 'Special:Log', 'title' => 'Logs', 'id' => 'ad-logs'],
@@ -75,7 +75,7 @@ class LiquiFlowTemplate extends BaseTemplate {
 								'Other' => [
 									[ 'page' => 'Special:Import', 'title' => 'Import', 'id' => 'ad-import'],
 									[ 'page' => 'Special:Export', 'title' => 'Export', 'id' => 'ad-export'],
-								],				
+								],
 							];
 
 	/**
@@ -84,7 +84,7 @@ class LiquiFlowTemplate extends BaseTemplate {
 	public function execute() {
 		global $wgUser;
 		global $wgLiquiFlowWikiTitle;
-		
+
 		// Build additional attributes for navigation urls
 		$nav = $this->data['content_navigation'];
 
@@ -123,7 +123,7 @@ class LiquiFlowTemplate extends BaseTemplate {
 			}
 		}
 		unset($nav['views']['view']);
-		//$nav['actions']['delete']['text'] = '<span class="fa fa-fw fa-trash-o" title="Page"></span> <span="hidden-sm">Delete</span>';		
+		//$nav['actions']['delete']['text'] = '<span class="fa fa-fw fa-trash-o" title="Page"></span> <span="hidden-sm">Delete</span>';
 		$this->data['namespace_urls'] = $nav['namespaces'];
 		$this->data['view_urls'] = $nav['views'];
 		$this->data['action_urls'] = $nav['actions'];
@@ -143,9 +143,9 @@ class LiquiFlowTemplate extends BaseTemplate {
 		//$meta = "<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\" />\n" .
 		//		"<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n";
 		//$this->data['headelement'] = substr_replace($this->data['headelement'], $meta, $pos, 0);
-		
+
 		$this->html( 'headelement' );
-		
+
 		// extract the standard table of contents from the page html in order to add it to the left sidebar
 		preg_match("/<div id=\"toctitle\"><h2>Contents<\\/h2><\\/div>(.*?)<ul>(.*?)<\\/ul>(.*?)<\\/div>/si", $this->data['bodycontent'], $match);
 		$toc = "";
@@ -165,16 +165,16 @@ class LiquiFlowTemplate extends BaseTemplate {
 					<button class="navbar-toggle" id="main-nav-toggler">
             			<span class="sr-only">Toggle navigation</span>
             			<span class="fa fa-bars fa-2x"></span>
-          			</button>	
-          			
-					<a class="navbar-brand" href="<?php echo htmlspecialchars( $this->data['nav_urls']['mainpage']['href'] )?>" 
-					<?php echo Xml::expandAttributes( Linker::tooltipAndAccesskeyAttribs( 'p-logo' ) )?>> 
+          			</button>
+
+					<a class="navbar-brand" href="<?php echo htmlspecialchars( $this->data['nav_urls']['mainpage']['href'] )?>"
+					<?php echo Xml::expandAttributes( Linker::tooltipAndAccesskeyAttribs( 'p-logo' ) )?>>
 					<div style="display: inline-block;">
 							<div class="hidden-xs"><img src="<?php $this->text( 'logopath' ) ?>" style="margin-top: -8px; height:40px; float:left; "></div>
 							<div class="visible-xs" style="white-space: nowrap;">Liquipedia</div>
 							</div>
 					</a>
-					
+
 					<?php if (strlen($toc) > 0) { ?>
 					<button class="navbar-toggle pull-right" id="toc-toggler">
             			<span class="sr-only">Toggle navigation</span>
@@ -184,7 +184,7 @@ class LiquiFlowTemplate extends BaseTemplate {
 					<button id="mobile-search-button" class="navbar-toggle navbar-search-toggle pull-right visible-xs">
 						<span class="fa fa-search fa-2x"></span>
 					</button>
-							 						
+
 				</div><!-- /.navbar-header -->
 				<?php if (strlen($toc) > 0) { ?>
 					<div id="slide-toc" class="visible-xs">
@@ -195,32 +195,32 @@ class LiquiFlowTemplate extends BaseTemplate {
 				    	</div>
 					</div>
 				<?php }	?>
-				   
+
 				<div id="slidemenu">
 					<div id="scroll-wrapper-menu">
 					<ul class="nav navbar-nav">
-					<?php 
+					<?php
 					$currentWikiTitle = key($this->data['sidebar']);
 					$wikiNavigation = array_shift($this->data['sidebar']);
 					?>
 						<li class="dropdown dropdown-brand hidden-xs">
-							<a class="dropdown-toggle brand-title" data-toggle="dropdown" data-hover="dropdown" href="#"> 
+							<a class="dropdown-toggle brand-title" data-toggle="dropdown" data-hover="dropdown" href="#">
 								<span style="font-size: 18px;">liquipedia</span> <span class="caret"></span> <br>
 								<span class="hidden-xs brand-subtitle">
 									<?php echo $currentWikiTitle; ?>
 								</span>
 							</a>
 							<ul class="dropdown-menu">
-							<?php 
+							<?php
 								foreach ($wikiNavigation as $wikiNavigationEntry) {
-									echo '<li><a href="'.$wikiNavigationEntry['href'].'">'.$wikiNavigationEntry['text'].'</a></li>';	
+									echo '<li><a href="'.$wikiNavigationEntry['href'].'">'.$wikiNavigationEntry['text'].'</a></li>';
 								}
 							?>
 							</ul>
 						</li>
-					
-					<?php 
-					
+
+					<?php
+
 					foreach ($this->data['sidebar'] as $navHeader => $navEntryArray) {
 
 
@@ -235,7 +235,7 @@ class LiquiFlowTemplate extends BaseTemplate {
 								</a>
 								<ul id="trending-pages-menu" class="dropdown-menu"></ul>
 							</li>
-                                                        <?php 
+                                                        <?php
 						} elseif ($navHeader == 'TOURNAMENTS') {
 							?>
 							<li class="dropdown hidden-xs icon-tablet">
@@ -254,7 +254,7 @@ class LiquiFlowTemplate extends BaseTemplate {
 										<div class="col-sm-4">
 											<ul class="multi-column-dropdown">
 											<li class="dropdown-header"><?php echo $subNavHeader; ?></li>
-										<?php 
+										<?php
 										if (is_array($navSubEntryArray)) {
 											foreach ($navSubEntryArray as $navEntry) {
 												echo '<li><a href="'.$navEntry['href'].'">'.$navEntry['text'].'</a></li>';
@@ -263,20 +263,20 @@ class LiquiFlowTemplate extends BaseTemplate {
 										?>
 											</ul>
 										</div>
-									<?php 
+									<?php
 									}
 								}
                                                                 global $wgScriptPath;
                                                                 global $wgContLang;
-								?>                                    
+								?>
 							     	</div>
 							     	<div class="row">
 							     		<div style="float:right; margin-right:23px"><a href="<?php echo $wgScriptPath ?>/index.php?title=<?php echo $wgContLang->getFormattedNsText(4); ?>:Tournaments">[edit]</a></div>
-							     	</div>                               					
+							     	</div>
 								</div>
 							</li>
 							<li class="visible-xs mobile-divider"></li>
-								<?php 
+								<?php
 								if (is_array($navEntryArray)) {
 									foreach ($navEntryArray as $subNavHeader => $navSubEntryArray) {
 										?>
@@ -285,14 +285,14 @@ class LiquiFlowTemplate extends BaseTemplate {
 										<span class="fa fa-fw fa-trophy"></span> <?php echo $subNavHeader; ?> <span class="caret"></span>
 									</a>
 									<ul class="dropdown-menu">
-									<?php 
+									<?php
 										if (is_array($navSubEntryArray)) {
 											foreach ($navSubEntryArray as $navEntry) {
 												echo '<li><a href="'.$navEntry['href'].'">'.$navEntry['text'].'</a></li>';
 											}
 										}
 										?>
-										
+
 										</ul>
 									</li>
 									<?php
@@ -309,14 +309,14 @@ class LiquiFlowTemplate extends BaseTemplate {
 									</div>
 								</a>
 								<ul class="dropdown-menu">
-								<?php 
+								<?php
 								foreach ($navEntryArray as $navEntry) {
 									echo '<li><a href="'.$navEntry['href'].'">'.$navEntry['text'].'</a></li>';
 								}
 								?>
 								</ul>
 							</li>
-							<?php 
+							<?php
 						} else {
 							?>
 							<li class="visible-xs mobile-divider"></li>
@@ -325,18 +325,18 @@ class LiquiFlowTemplate extends BaseTemplate {
 									 '<?php echo $navHeader; ?>' <span class="caret"></span>
 								</a>
 								<ul class="dropdown-menu">
-								<?php 
+								<?php
 								foreach ($navEntryArray as $navEntry) {
 									echo '<li><a href="'.$navEntry['href'].'">'.$navEntry['text'].'</a></li>';
 								}
 								?>
 								</ul>
 							</li>
-							<?php 
+							<?php
 						}
-						
+
 					}
-					
+
 					?>
 						<li class="visible-xs mobile-divider"></li>
 						<li class="dropdown visible-xs">
@@ -361,10 +361,10 @@ class LiquiFlowTemplate extends BaseTemplate {
 									<li class="dropdown visible-xs">
 										<a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="#">
 											<span class="fa fa-fw fa-user"></span> <?php echo $personalTools["userpage"]["links"][0]["text"]; ?>
-											<span class="caret"></span> 
+											<span class="caret"></span>
 										</a>
 										<ul class="dropdown-menu">
-											<?php 
+											<?php
 											$personalTools["userpage"]["links"][0]["text"] = "Userpage";
 											foreach ( $personalTools as $key => $item ) {
 												echo $this->makeListItem( $key, $item );
@@ -372,31 +372,31 @@ class LiquiFlowTemplate extends BaseTemplate {
 											?>
 										</ul>
 									</li>
-								<?php 
+								<?php
 								}
 								?>
-								
+
 						<li class="visible-xs mobile-divider"></li>
 						<li class="dropdown visible-xs">
-							<a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="#"> 
-								<span class="fa fa-fw fa-puzzle-piece"></span> Other Wikis <span class="caret"></span> 
+							<a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="#">
+								<span class="fa fa-fw fa-puzzle-piece"></span> Other Wikis <span class="caret"></span>
 							</a>
 							<ul class="dropdown-menu">
-							<?php 
+							<?php
 								foreach ($wikiNavigation as $wikiNavigationEntry) {
-									echo '<li><a href="'.$wikiNavigationEntry['href'].'">'.$wikiNavigationEntry['text'].'</a></li>';	
+									echo '<li><a href="'.$wikiNavigationEntry['href'].'">'.$wikiNavigationEntry['text'].'</a></li>';
 								}
 							?>
 							</ul>
 						</li>
 						<li class="dropdown visible-xs">
-							<a href="#top"> 
+							<a href="#top">
 								<span class="fa fa-fw fa-arrow-up"></span> Back to top
 							</a>
 						</li>
-						
+
 					</ul><!-- /.navbar-nav -->
-					
+
 					<ul class="nav navbar-nav navbar-right tablet-personal">
 						<?php
 						if ( !$wgUser->isLoggedIn() ) {
@@ -404,7 +404,7 @@ class LiquiFlowTemplate extends BaseTemplate {
 							$personalTools['createaccount']['links'][0]['href'] = 'http://www.teamliquid.net/mytlnet/register';
 							$personalTools['createaccount']['links'][0]['text'] = "";
 							$personalTools['createaccount']['class'] = "hidden-sm hidden-xs";
-							
+
 							$personalTools['login']['links'][0]['text'] = "";
 							$personalTools['login']['class'] = "icon-tablet hidden-xs";
 							echo $this->makeListItem( 'createaccount', $personalTools['createaccount'] );
@@ -415,7 +415,7 @@ class LiquiFlowTemplate extends BaseTemplate {
 					<ul class="nav navbar-nav navbar-right">
 						<?php $this->renderNavigation( 'SEARCH' ); ?>
 					</ul><!-- /.navbar-nav .navbar-right -->
-					
+
 					</div>	<!-- /#scroll-wrapper-menu -->
 				</div><!-- /#slide-menu -->
 			</div><!-- /.col-lg-8 -->
@@ -425,14 +425,14 @@ class LiquiFlowTemplate extends BaseTemplate {
 
 <nav id="mobile-search-bar" class="navbar visible-xs noprint" style="display:none;">
 	<form action="<?php $this->text( 'wgScript' ) ?>" id="mobile-search-form" class="navbar-form navbar-left" role="search">
-		<div class="input-group">  								
+		<div class="input-group">
         	<input id="searchInput" type="search" accesskey="f"
                title="Search Liquipedia <?php echo $wgLiquiFlowWikiTitle; ?> Wiki [alt-shift-f]" placeholder="Search Liquipedia"
                name="search" autocomplete="off" class="form-control">
             <div class="input-group-btn">
             	<button class="btn navbar-search-btn searchButton" type="submit" id="searchButton">
                 	<i class="fa fa-arrow-right"></i>
-                 </button>      
+                 </button>
             </div>
     	</div>
 	</form>
@@ -446,18 +446,18 @@ class LiquiFlowTemplate extends BaseTemplate {
 					<ul class="nav navbar-nav navbar-nav-2">
 						<?php $this->renderNavigation(array('NAMESPACES', 'VIEWS', 'ACTIONS')) ?>
 					</ul>
-					
+
 					<ul class="nav navbar-nav navbar-right navbar-nav-2">
 						<li class="dropdown">
-							<a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="#"> 
-								<span class="fa fa-fw fa-share-alt"></span> <span class="hidden-sm">Share</span> <span class="caret"></span> 
+							<a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="#">
+								<span class="fa fa-fw fa-share-alt"></span> <span class="hidden-sm">Share</span> <span class="caret"></span>
 							</a>
 							<ul class="dropdown-menu">
-							<?php 
+							<?php
 								$externalLink = $this->data['serverurl'] . str_replace('$1', $this->data['title'], $this->data['articlepath']);
 							?>
 								<li>
-									<a onclick="Share.twitter('<?php echo  $externalLink; ?>','<?php echo $this->data['title']; ?>')"> 
+									<a onclick="Share.twitter('<?php echo  $externalLink; ?>','<?php echo $this->data['title']; ?>')">
 										<span class="fa fa-fw fa-twitter"></span> Twitter
 									</a>
 								</li>
@@ -492,19 +492,19 @@ class LiquiFlowTemplate extends BaseTemplate {
 									</a>
 								</li>
 							</ul>
-						</li>	
-						
+						</li>
+
 						<?php $this->renderNavigation( 'TOOLBOX' ); ?>
-						
+
 						<?php if ( in_array( 'sysop', $wgUser->getEffectiveGroups()) ) : ?>
 						<li class="dropdown">
-							<a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="#"> 
-								<span class="fa fa-fw fa-gavel"></span> <span class="caret"></span> 
+							<a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="#">
+								<span class="fa fa-fw fa-gavel"></span> <span class="caret"></span>
 							</a>
 							<ul class="dropdown-menu">
-								<?php	
+								<?php
 								$adminDropdownLength = sizeof($this->adminDropdown);
-								$count = 0;					
+								$count = 0;
 								foreach ($this->adminDropdown as $header => $items) :
 									$count++;
 								?>
@@ -530,7 +530,7 @@ class LiquiFlowTemplate extends BaseTemplate {
 		</div><!-- /.row -->
 	</div><!-- /.container-fluid -->
 </div><!-- /.navbar-inverse -->
-				
+
 <div id="wrap">
 
 		<!-- @TODO: Sidebar ad box -->
@@ -558,13 +558,13 @@ class LiquiFlowTemplate extends BaseTemplate {
                 <div style="height:100px; width: 100%; padding-top:10px;">
 			<?php include ('TeamLiquidTopAd.inc'); ?>
                 </div>
-				
+
 				<?php if ( $this->data['sitenotice'] ) : ?>
 				<div id="siteNotice">
 					<?php $this->html( 'sitenotice' ) ?>
 				</div>
 				<?php endif; ?>
-				
+
 				<h1 id="firstHeading" class="firstHeading">
 					<span dir="auto"><?php $this->html( 'title' ) ?> </span>
 				</h1>
@@ -617,7 +617,7 @@ class LiquiFlowTemplate extends BaseTemplate {
 </div><!-- /.container -->
 </div><!-- /#wrap -->
 
-<?php 
+<?php
 $footerLinks = $this->getFooterLinks();
 ?>
 <div id="footer" class="footer">
@@ -630,7 +630,7 @@ $footerLinks = $this->getFooterLinks();
              				<div id="footer-logo-big"></div>
               			</div>
             		</div>
-        		
+
         			<div class="col-md-2 col-sm-3 col-xs-12">
              			<div class="col">
                     		<h4>Our Wikis</h4>
@@ -646,7 +646,7 @@ $footerLinks = $this->getFooterLinks();
 	                    	</ul>
               			</div>
             		</div>
-            		
+
         			<div class="col-md-2 col-sm-3 col-xs-12">
             			<h4>About</h4>
             			<ul>
@@ -663,9 +663,9 @@ $footerLinks = $this->getFooterLinks();
                     		<li><a href="mailto:liquipedia@teamliquid.net">Send an Email</a></li>
                     		<li><a href="http://www.teamliquid.net/forum/website-feedback/94785-liquipedia-feedback-thread" target="_blank">Post Feedback</a></li>
                     		<li><a href="http://webchat.quakenet.org/?channels=%23liquipedia" target="_blank">Chat with us</a></li>
-                    	</ul>						
+                    	</ul>
                 	</div>
-                	
+
                 	<div class="col-md-2 hidden-sm hidden-xs">
             			<h4>Affiliated Sites</h4>
             			<ul>
@@ -673,9 +673,9 @@ $footerLinks = $this->getFooterLinks();
                     		<li><a href="http://www.liquidlegends.net" target="_blank">LiquidLegends.net</a></li>
                     		<li><a href="http://www.liquiddota.com" target="_blank">LiquidDota.com</a></li>
                     		<li><a href="http://www.liquidhearth.com" target="_blank">LiquidHearth.net</a></li>
-                    	</ul>						
+                    	</ul>
                 	</div>
-                	
+
                 	<div class="col-md-2 col-sm-3 hidden-xs">
             			<h4>Follow us</h4>
             			<ul id="footer-social-media">
@@ -704,23 +704,23 @@ $footerLinks = $this->getFooterLinks();
              	</div><!-- ./footer-links -->
         	</div><!-- ./row -->
 		</div><!-- ./col-lg-8 -->
-		
+
 		<div style="text-align:center;" class="col-md-12 hidden-xs">
 			<ul id="f-list">
-				<?php 
+				<?php
 				if (isset($footerLinks['info']) && is_array($footerLinks['info'])) {
 					foreach ( $footerLinks['info'] as $link ) {	?>
 						<li id="footer-info-<?php echo $link; ?>">
 							<?php $this->html( $link );?>
 						</li>
-				<?php 
+				<?php
 					}
 				}
 				?>
 			</ul><!-- #/f-list -->
 		</div><!-- ./col-lg-8 -->
-       
-       <?php 
+
+       <?php
        /**
 		* <div style="margin-bottom:20px; text-align:center;" class="col-lg-offset-2 col-lg-8 col-md-12">
        		* <?php
@@ -740,7 +740,7 @@ $footerLinks = $this->getFooterLinks();
 				* </ul>
 			* <?php endif; ?>
 		* </div>
-		*/ 
+		*/
        ?>
 	</div><!-- /.container-fluid -->
 </div><!-- /.footer -->
@@ -748,7 +748,7 @@ $footerLinks = $this->getFooterLinks();
 <!-- Bootstrap core JavaScript -->
 <?php $this->printTrail(); ?>
 
-    
+
 </body>
 </html>
 
@@ -870,7 +870,7 @@ $footerLinks = $this->getFooterLinks();
 					?>
 					<?php foreach ( $this->data['namespace_urls'] as $key => $link ) :   ?>
                     	<li <?php echo $link['attributes']; ?>>
-                        	<a href="<?php echo htmlspecialchars( $link['href'] );?>" 
+                        	<a href="<?php echo htmlspecialchars( $link['href'] );?>"
                             	<?php echo $link['key'] ?>>
 								<?php
 								if (isset($this->icons[$link['context']]) && $this->icons[$link['context']] !== false) {
@@ -883,7 +883,7 @@ $footerLinks = $this->getFooterLinks();
                      		</a>
                     	</li>
                    		<li class="divider-vertical"></li>
-					<?php endforeach; ?>					
+					<?php endforeach; ?>
 
 					<?php
 					break;
@@ -891,11 +891,11 @@ $footerLinks = $this->getFooterLinks();
 					?>
 							<?php foreach ( $this->data['view_urls'] as $key => $link ) :	?>
 								<li <?php echo $link['attributes']; ?>>
-									<a href="<?php echo htmlspecialchars( $link['href'] );?>" 
+									<a href="<?php echo htmlspecialchars( $link['href'] );?>"
 									<?php echo $link['key'] ?>>
 									<?php
 									 if (isset($this->icons[$key]) && $this->icons[$key] !== false) {
-                                     	if (in_array( 'sysop', $this->getSkin()->getUser()->getEffectiveGroups()) 
+                                     	if (in_array( 'sysop', $this->getSkin()->getUser()->getEffectiveGroups())
                                      		&& in_array($key, ['watch', 'unwatch'])) {
                                      		echo '<span class="visible-xs"><span class="fa fa-fw ' . $this->icons[$key] . '"></span> ' .
                                      			htmlspecialchars( $link['text'] ) . '</span>';
@@ -908,7 +908,7 @@ $footerLinks = $this->getFooterLinks();
                                      	echo htmlspecialchars( $link['text'] );
                                      }
                                      ?>
-										
+
 									</a>
 								</li>
 								<li class="divider-vertical"></li>
@@ -916,7 +916,7 @@ $footerLinks = $this->getFooterLinks();
 				<?php
 					break;
 				case 'ACTIONS':
-					?>					
+					?>
                                                         <?php global $wgScriptPath;
                                                         if (isset($this->data['action_urls']['protect'])) {$this->data['action_urls']['default'] = Array(
                                                             'class' => '',
@@ -928,11 +928,11 @@ $footerLinks = $this->getFooterLinks();
                                                         );}
                                                         foreach ( $this->data['action_urls'] as $key => $link ) :	?>
 								<li <?php echo $link['attributes']; ?>>
-									<a href="<?php echo htmlspecialchars( $link['href'] );?>" 
+									<a href="<?php echo htmlspecialchars( $link['href'] );?>"
 									<?php echo $link['key'] ?>>
-									<?php  
+									<?php
 									if (isset($this->icons[$key]) && $this->icons[$key] !== false) {
-                                     	if (in_array( 'sysop', $this->getSkin()->getUser()->getEffectiveGroups()) 
+                                     	if (in_array( 'sysop', $this->getSkin()->getUser()->getEffectiveGroups())
                                      		&& in_array($key, ['purge', 'delete', 'protect', 'unprotect', 'stability', 'current', 'default'])) {
                                      		echo '<span class="visible-xs"><span class="fa fa-fw ' . $this->icons[$key] . '"></span> ' .
                                      			htmlspecialchars( $link['text'] ) . '</span>';
@@ -943,7 +943,7 @@ $footerLinks = $this->getFooterLinks();
                                      	}
                                      } else {
 										echo htmlspecialchars( $link['text'] );
-									} 
+									}
 									?>
 									</a>
 								</li>
@@ -951,23 +951,23 @@ $footerLinks = $this->getFooterLinks();
 							<?php endforeach; ?>
 					<?php
 					break;
-					
+
 				case 'TOOLBOX':
 						$toolbox = $this->getToolbox();
                                                 global $wgScriptPath;
 					?>
 						<li class="dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="#">
-								<span class="fa fa-fw fa-wrench"></span> <span class="hidden-sm">Tools</span> <span class="caret"></span> 
+								<span class="fa fa-fw fa-wrench"></span> <span class="hidden-sm">Tools</span> <span class="caret"></span>
 							</a>
 							<ul class="dropdown-menu">
 								<li class="dropdown-header">General</li>
 								<li><a href="<?php echo $wgScriptPath; ?>/index.php?title=Special:RecentChanges"><span class="fa fa-fw fa-clock-o"></span> Recent Changes</a></li>
 								<li><a href="<?php echo $wgScriptPath; ?>/index.php?title=Special:PendingChanges"><span class="fa fa-fw fa-circle-o"></span> Pending Changes</a></li>
-						
+
 								<li class="divider"></li>
 								<li class="dropdown-header">Specific</li>
-							<?php 
+							<?php
 								foreach ( $toolbox as $key => $item ) {
 									echo $this->makeListItem( $key, $item );
 								}
@@ -978,7 +978,7 @@ $footerLinks = $this->getFooterLinks();
 					break;
 				case 'PERSONAL':
 					?>
-							<?php 
+							<?php
 							global $wgUser;
 							if ( $wgUser->isLoggedIn() ) {
 								$personalTools = $this->getPersonalTools();
@@ -986,17 +986,17 @@ $footerLinks = $this->getFooterLinks();
 								<li class="dropdown">
 									<a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="#">
 										<span class="fa fa-fw fa-user"></span> <span class="hidden-sm"><?php echo $personalTools["userpage"]["links"][0]["text"]; ?></span>
-										<span class="caret"></span> 
+										<span class="caret"></span>
 									</a>
 									<ul class="dropdown-menu multi-level">
 									<li class="dropdown-header visible-sm"><?php echo $personalTools["userpage"]["links"][0]["text"]; ?></li>
-								<?php 
+								<?php
 								$personalTools["userpage"]["links"][0]["text"] = "Userpage";
 								foreach ( $personalTools as $key => $item ) {
 									echo $this->makeListItem( $key, $item );
 								}
 								?>
-								
+
 									</ul>
 								</li>
 							<?php } ?>
@@ -1009,7 +1009,7 @@ $footerLinks = $this->getFooterLinks();
                         <li class="hidden-xs">
 							<form action="<?php $this->text( 'wgScript' ) ?>" id="searchform" class="navbar-form" role="search">
 								<div class="input-group">
-                                	<input  id="searchInput" type="search" accesskey="f" 
+                                	<input  id="searchInput" type="search" accesskey="f"
                                     	   	title="Search Liquipedia <?php echo $wgLiquiFlowWikiTitle; ?> Wiki [alt-shift-f]" placeholder="Search"
                                         	name="search" autocomplete="off" class="form-control">
                                     <div class="input-group-btn">
@@ -1026,7 +1026,7 @@ $footerLinks = $this->getFooterLinks();
 			}
 		}
 	}
-	
+
 	/**
 	 * Makes a link, usually used by makeListItem to generate a link for an item
 	 * in a list used in navigation lists, portlets, portals, sidebars, etc...
@@ -1076,15 +1076,15 @@ $footerLinks = $this->getFooterLinks();
 		} else {
 			$text = $this->translator->translate( isset( $item['msg'] ) ? $item['msg'] : $key );
 		}
-		
+
 		if ( isset($item['single-id']) && isset($this->icons[$item['single-id']]) ) {
 			$html = '<span class="fa fa-fw ' . $this->icons[$item['single-id']] .'"></span> ' . htmlspecialchars( $text );
 		} elseif ( isset($item['id']) && isset($this->icons[$item['id']]) ) {
-			$html = '<span class="fa fa-fw ' . $this->icons[$item['id']] .'"></span> ' . htmlspecialchars( $text ); 
+			$html = '<span class="fa fa-fw ' . $this->icons[$item['id']] .'"></span> ' . htmlspecialchars( $text );
 		} else {
 			$html = htmlspecialchars( $text );
 		}
-		
+
 		if ( isset( $options['text-wrapper'] ) ) {
 			$wrapper = $options['text-wrapper'];
 			if ( isset( $wrapper['tag'] ) ) {
@@ -1097,13 +1097,13 @@ $footerLinks = $this->getFooterLinks();
 												: null, $html );
 			}
 		}
-		
+
 		if ( isset( $item['href'] ) || isset( $options['link-fallback'] ) ) {
 			$attrs = $item;
 			foreach ( array( 'single-id', 'text', 'msg', 'tooltiponly', 'context', 'primary' ) as $k ) {
 				unset( $attrs[$k] );
 			}
-		
+
 			if ( isset( $item['id'] ) && !isset( $item['single-id'] ) ) {
 				$item['single-id'] = $item['id'];
 			}
@@ -1134,8 +1134,8 @@ $footerLinks = $this->getFooterLinks();
 											? 'a'
 											: $options['link-fallback'], $attrs, $html );
 		}
-		
+
 		return $html;
 	}
-	
+
 }

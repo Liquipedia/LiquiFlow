@@ -541,8 +541,8 @@ class LiquiFlowTemplate extends BaseTemplate {
                     <?php if (strlen($toc) > 0) : ?>
                     <?php echo $toc; ?>
                     <?php endif;?>
-                <div id="sidebar-ad">
-                    We don't love ads either, but they help pay the bills.
+		<div id="sidebar-ad">
+			<?php include ('TeamLiquidStickyAd.inc'); ?>
                 </div>
             </div>
         </div><!-- /#sidebar-toc-colum -->
@@ -555,14 +555,8 @@ class LiquiFlowTemplate extends BaseTemplate {
 			<div class="main-content">
 
 			    <!-- @TODO: Ad banner -->
-                <div style="height:100px; width: 100%; padding-top:10px;" class="visible-xl visible-lg visible-md">
-                	<img src="/liquiflow/skins/LiquiFlow/ads/large-leaderboard.png">
-                </div>
-                <div style="height:100px; width: 100%; padding-top:10px;" class="visible-sm">
-                	<img src="/liquiflow/skins/LiquiFlow/ads/leaderboard.jpg">
-                </div>
-                <div style="height:100px; width: 100%; padding-top:10px;" class="visible-xs">
-                	<img src="/liquiflow/skins/LiquiFlow/ads/mobile-leaderboard.png">
+                <div style="height:100px; width: 100%; padding-top:10px;">
+			<?php include ('TeamLiquidTopAd.inc'); ?>
                 </div>
 				
 				<?php if ( $this->data['sitenotice'] ) : ?>
@@ -618,16 +612,6 @@ class LiquiFlowTemplate extends BaseTemplate {
 					<?php $this->html( 'debughtml' ); ?>
 				</div>
 			</div>
-			<!-- @TODO: Ad banner -->
-			<div style="height:110px; width: 100%; padding:10px 0;" class="visible-xl visible-lg visible-md">
-                	<img src="/liquiflow/skins/LiquiFlow/ads/large-leaderboard.png">
-                </div>
-                <div style="hheight:110px; width: 100%; padding: 10px 0;" class="visible-sm">
-                	<img src="/liquiflow/skins/LiquiFlow/ads/leaderboard.jpg">
-                </div>
-                <div style="height:110px; width: 100%; padding:10px 0;" class="visible-xs">
-                	<img src="/liquiflow/skins/LiquiFlow/ads/mobile-leaderboard.png">
-                </div>
 		</div><!-- /#main-content-column -->
 	</div><!-- /.row -->
 </div><!-- /.container -->

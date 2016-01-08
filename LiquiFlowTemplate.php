@@ -153,6 +153,13 @@ class LiquiFlowTemplate extends BaseTemplate {
 		if (isset($match[0])) {
 			$toc = substr($match[0], 0, -6);
 			$toc = str_replace('<ul>', '<ul class="nav">', $toc);
+			
+                        // Adjust Data-Targets in menu so scrollspy works properly with special characters
+			preg_match_all('/\<a href=\"(.*?)\"\>/', $toc, $toc_matches);
+			foreach($toc_matches[1] as $match) {
+				$toc = str_replace('<a href="' . $match . '"', '<a data-target="' . preg_replace('/\./', '\\\\.', $match) . '" href="' . $match . '"', $toc);
+			}
+                        
 			// Hide standard toc on big screens when the sidebar toc is shown
 			$this->data['bodycontent'] = str_replace('<div id="toc" class="toc">', '<div id="toc" class="toc hidden-lg hidden-xl">', $this->data['bodycontent']);
 		}

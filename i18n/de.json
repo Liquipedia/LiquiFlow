@@ -1,0 +1,25 @@
+{
+	"@metadata": {
+		"authors": [
+                        "Philip Becker-Ehmck",
+                        "Alex Winkler"
+                ]
+	},
+	"skinname-liquiflow": "LiquiFlow",
+	"liquiflow-skin-desc": "Moderner Skin für Liquipedia, basierend auf Bootstrap.",
+	"liquiflow-skin-desc": "Moderner, auf Bootstrap basierender Skin erstellt für Liquipedia, mit vielen Verbesserungen gegenüber des bisherigen.",
+	"liquiflow.css": "/* Hier platziertes CSS beeinflusst alle Benutzer des LiquiFlow Skins */",
+	"liquiflow.js": "/* Hier platziertes JavaScript wird für alle Benutzer des LiquiFlow Skins geladen. */",
+	"liquiflow-action-addsection": "Hinzufügen",
+	"liquiflow-action-delete": "Löschen",
+	"liquiflow-action-move": "Verschieben",
+	"liquiflow-action-protect": "Schützen",
+	"liquiflow-action-undelete": "Wiederherstellen",
+	"liquiflow-action-unprotect": "Schutz ändern",
+	"liquiflow-view-create": "Erstellen",
+	"liquiflow-view-edit": "Bearbeiten",
+	"liquiflow-view-history": "Versionsgeschichte",
+	"liquiflow-view-view": "Lesen",
+	"liquiflow-view-viewsource": "Quelltext ansehen",
+	"liquiflow-more-actions": "Mehr"
+}

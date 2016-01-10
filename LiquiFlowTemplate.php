@@ -458,7 +458,7 @@ class LiquiFlowTemplate extends BaseTemplate {
 					<ul class="nav navbar-nav navbar-right navbar-nav-2">
 						<li class="dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="#">
-								<span class="fa fa-fw fa-share-alt"></span> <span class="hidden-sm">Share</span> <span class="caret"></span>
+								<span class="fa fa-fw fa-share-alt"></span> <span class="hidden-sm"><?php $this->msg( 'liquiflow-share' ); ?></span> <span class="caret"></span>
 							</a>
 							<ul class="dropdown-menu">
 							<?php
@@ -641,7 +641,7 @@ $footerLinks = $this->getFooterLinks();
 
         			<div class="col-md-2 col-sm-3 col-xs-12">
              			<div class="col">
-                    		<h4>Our Wikis</h4>
+                    		<h4><?php $this->msg( 'liquiflow-our-wikis') ?></h4>
                     		<ul>
                     			<li><a href="http://wiki.teamliquid.net/starcraft/" target="_blank">Brood War</a></li>
 		                    	<li><a href="http://wiki.teamliquid.net/counterstrike/" target="_blank">Counterstrike</a></li>
@@ -656,7 +656,7 @@ $footerLinks = $this->getFooterLinks();
             		</div>
 
         			<div class="col-md-2 col-sm-3 col-xs-12">
-            			<h4>About</h4>
+            			<h4><?php $this->msg( 'liquiflow-about') ?></h4>
             			<ul>
    							<?php foreach ( $footerLinks['places'] as $link ) :	?>
 								<li id="footer-places-<?php echo $link; ?>">
@@ -666,16 +666,16 @@ $footerLinks = $this->getFooterLinks();
 						</ul>
                     </div>
                     <div class="col-md-2 col-sm-3 hidden-xs">
-            			<h4>Contact us</h4>
+            			<h4><?php $this->msg( 'liquiflow-contact-us') ?></h4>
             			<ul>
-                    		<li><a href="mailto:liquipedia@teamliquid.net">Send an Email</a></li>
-                    		<li><a href="http://www.teamliquid.net/forum/website-feedback/94785-liquipedia-feedback-thread" target="_blank">Post Feedback</a></li>
-                    		<li><a href="http://webchat.quakenet.org/?channels=%23liquipedia" target="_blank">Chat with us</a></li>
+                    		<li><a href="mailto:liquipedia@teamliquid.net"><?php $this->msg( 'liquiflow-send-an-email') ?></a></li>
+                    		<li><a href="http://www.teamliquid.net/forum/website-feedback/94785-liquipedia-feedback-thread" target="_blank"><?php $this->msg( 'liquiflow-post-feedback') ?></a></li>
+                    		<li><a href="http://webchat.quakenet.org/?channels=%23liquipedia" target="_blank"><?php $this->msg( 'liquiflow-chat-with-us') ?></a></li>
                     	</ul>
                 	</div>
 
                 	<div class="col-md-2 hidden-sm hidden-xs">
-            			<h4>Affiliated Sites</h4>
+            			<h4><?php $this->msg( 'liquiflow-affiliated-sites') ?></h4>
             			<ul>
                     		<li><a href="http://www.teamliquid.net" target="_blank">TeamLiquid.net</a></li>
                     		<li><a href="http://www.liquidlegends.net" target="_blank">LiquidLegends.net</a></li>
@@ -685,7 +685,7 @@ $footerLinks = $this->getFooterLinks();
                 	</div>
 
                 	<div class="col-md-2 col-sm-3 hidden-xs">
-            			<h4>Follow us</h4>
+            			<h4><?php $this->msg( 'liquiflow-follow-us') ?></h4>
             			<ul id="footer-social-media">
                     		<li>
                                 <a target="_blank" href="http://twitter.com/LiquipediaNet" class="social-icon twitter-icon">
@@ -966,15 +966,15 @@ $footerLinks = $this->getFooterLinks();
 					?>
 						<li class="dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="#">
-								<span class="fa fa-fw fa-wrench"></span> <span class="hidden-sm">Tools</span> <span class="caret"></span>
+								<span class="fa fa-fw fa-wrench"></span> <span class="hidden-sm"><?php $this->msg( 'liquiflow-tools' ); ?></span> <span class="caret"></span>
 							</a>
 							<ul class="dropdown-menu">
-								<li class="dropdown-header">General</li>
-								<li><a href="<?php echo $wgScriptPath; ?>/index.php?title=Special:RecentChanges"><span class="fa fa-fw fa-clock-o"></span> Recent Changes</a></li>
-								<li><a href="<?php echo $wgScriptPath; ?>/index.php?title=Special:PendingChanges"><span class="fa fa-fw fa-circle-o"></span> Pending Changes</a></li>
+								<li class="dropdown-header"><?php $this->msg( 'liquiflow-tools-general' ); ?></li>
+								<li><a href="<?php echo $wgScriptPath; ?>/index.php?title=Special:RecentChanges"><span class="fa fa-fw fa-clock-o"></span><?php $this->msg( 'liquiflow-recent-changes' ); ?></a></li>
+								<li><a href="<?php echo $wgScriptPath; ?>/index.php?title=Special:PendingChanges"><span class="fa fa-fw fa-circle-o"></span><?php $this->msg( 'liquiflow-pending-changes' ); ?></a></li>
 
 								<li class="divider"></li>
-								<li class="dropdown-header">Specific</li>
+								<li class="dropdown-header"><?php $this->msg( 'liquiflow-tools-specific' ); ?></li>
 							<?php
 								foreach ( $toolbox as $key => $item ) {
 									echo $this->makeListItem( $key, $item );
@@ -1018,7 +1018,7 @@ $footerLinks = $this->getFooterLinks();
 							<form action="<?php $this->text( 'wgScript' ) ?>" id="searchform" class="navbar-form" role="search">
 								<div class="input-group">
                                 	<input  id="searchInput" type="search" accesskey="f"
-                                    	   	title="Search Liquipedia <?php echo $wgLiquiFlowWikiTitle; ?> Wiki [alt-shift-f]" placeholder="Search"
+                                    	   	title="<?php $this->msg( 'liquiflow-search' ); ?> Liquipedia <?php echo $wgLiquiFlowWikiTitle;?> Wiki [alt-shift-f]" placeholder="<?php $this->msg( 'liquiflow-search-placeholder' ); ?>"
                                         	name="search" autocomplete="off" class="form-control">
                                     <div class="input-group-btn">
                                     	<button class="btn btn-default searchButton" type="submit" id="searchButton">

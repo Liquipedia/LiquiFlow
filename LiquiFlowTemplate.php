@@ -928,11 +928,19 @@ $footerLinks = $this->getFooterLinks();
                                                         <?php global $wgScriptPath;
                                                         if (isset($this->data['action_urls']['protect'])) {$this->data['action_urls']['default'] = Array(
                                                             'class' => '',
-                                                            'text' => 'Stability',
+                                                            'text' => $this->getMsg( 'liquiflow-stability' ),
                                                             'href' => $wgScriptPath. '/index.php?title=Special:Stabilization&page=' . $this->getSkin()->getTitle(),
                                                             'id' => 'ca-default',
                                                             'attributes' => ' id="ca-default"',
-                                                            'key' => ' title="Quality assurance settings"'
+                                                            'key' => ' title="'. $this->getMsg( 'liquiflow-stability-tooltip' ) .'"'
+                                                        );}
+                                                        if (isset($this->data['action_urls']['purge'])) {$this->data['action_urls']['purge']  = Array(
+                                                            'class' => '',
+                                                            'text' => $this->getMsg( 'liquiflow-purge' ),
+                                                            'href' => $wgScriptPath. '/index.php?title=' . $this->getSkin()->getTitle() . '&action=purge',
+                                                            'id' => 'ca-purge',
+                                                            'attributes' => ' id="ca-purge"',
+                                                            'key' => ' title="'. $this->getMsg( 'liquiflow-purge-tooltip' ) .'"'
                                                         );}
                                                         foreach ( $this->data['action_urls'] as $key => $link ) :	?>
 								<li <?php echo $link['attributes']; ?>>
@@ -999,7 +1007,7 @@ $footerLinks = $this->getFooterLinks();
 									<ul class="dropdown-menu multi-level">
 									<li class="dropdown-header visible-sm"><?php echo $personalTools["userpage"]["links"][0]["text"]; ?></li>
 								<?php
-								$personalTools["userpage"]["links"][0]["text"] = "Userpage";
+								$personalTools["userpage"]["links"][0]["text"] = $this->getMsg( 'liquiflow-userpage' );
 								foreach ( $personalTools as $key => $item ) {
 									echo $this->makeListItem( $key, $item );
 								}

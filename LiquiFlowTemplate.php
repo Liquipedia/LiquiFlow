@@ -85,7 +85,7 @@ class LiquiFlowTemplate extends BaseTemplate {
 	public function execute() {
 		global $wgUser;
 		global $wgLiquiFlowWikiTitle;
-
+                
 		// Build additional attributes for navigation urls
 		$nav = $this->data['content_navigation'];
 

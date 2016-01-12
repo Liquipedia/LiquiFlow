@@ -22,8 +22,12 @@
 	},
 	"AutoloadClasses": {
 		"SkinLiquiFlow": "SkinLiquiFlow.php",
-		"LiquiFlowTemplate": "LiquiFlowTemplate.php"
+		"LiquiFlowTemplate": "LiquiFlowTemplate.php",
+                "LiquiFlowHooks": "LiquiFlowHooks.php"
 	},
+        "Hooks": {
+            "GetPreferences": "LiquiFlowHooks::onGetPreferences"
+        },
 	"ResourceModules": {
 		"skins.liquiflow": {
 			"styles": {
@@ -41,8 +45,7 @@
 				"js/jquery.min.js",
 				"js/bootstrap.min.js",
 				"js/toc.js",
-				"js/lp.js",						
-				"js/hover-dropdown.js",
+				"js/lp.js",			
 				"js/ie10-viewport-bug-workaround.js"
 			],
 			"position": "top",
@@ -50,13 +53,16 @@
 				"mw.user"
 			]
 		},
-		"skins.liquiflowloggedin": {
+		"skins.liquiflow.loggedin": {
 			"styles": {
 				"themes/loggedin.css": {
 					"media": "screen"
 				}
 			}
-		}
+		},
+                "skins.liquiflow.hoverdropdown": {
+                        "scripts": "js/hover-dropdown.js"
+                }
 	},
 	"ResourceFileModulePaths": {
 		"localBasePath": "",

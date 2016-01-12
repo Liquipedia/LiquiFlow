@@ -1,7 +1,7 @@
 <?php
 
 /**
- * SkinTemplate class for Vector skin
+ * SkinTemplate class for LiquiFlow skin
  * @ingroup Skins
  */
 class SkinLiquiFlow extends SkinTemplate {
@@ -39,8 +39,10 @@ class SkinLiquiFlow extends SkinTemplate {
 		$out->addHeadItem( 'tlads', $tlAdCode);
 
 		$out->addModuleScripts( 'skins.liquiflow' );
-	}
-
+                if ($this->getSkin()->getUser()->getOption ( 'liquiflow-prefs-show-dropdown-on-hover' ) == true) {
+                    $out->addModuleScripts( 'skins.liquiflow.hoverdropdown' );
+                }
+        }
 	/**
 	 * Loads skin and user CSS files.
 	 * @param OutputPage $out
@@ -51,7 +53,7 @@ class SkinLiquiFlow extends SkinTemplate {
 		$styles = array( 'mediawiki.skinning.interface', 'skins.liquiflow' );
 		$out->addModuleStyles( $styles );
 		if ($this->getSkin()->getUser()->isLoggedIn()) {
-			$out->addModuleStyles( 'skins.liquiflowloggedin' );
+			$out->addModuleStyles( 'skins.liquiflow.loggedin' );
 		}
 	}
 

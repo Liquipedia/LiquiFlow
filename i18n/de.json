@@ -31,6 +31,7 @@
         "liquiflow-search-placeholder": "Suche",
         "liquiflow-send-an-email": "Sende eine Email",
         "liquiflow-share": "Teilen",
+        "liquiflow-prefs-show-dropdown-on-hover": "Zeige ausgeklapptes Menü bei schwebendem Mauszeiger",
         "liquiflow-stability": "Stabilität",
         "liquiflow-stability-tooltip": "Einstellungen zur Qualitätssicherung",
         "liquiflow-tools": "Werkzeuge",
@@ -42,5 +43,6 @@
 	"liquiflow-view-history": "Versionsgeschichte",
 	"liquiflow-view-view": "Lesen",
 	"liquiflow-view-viewsource": "Quelltext ansehen",
-	"liquiflow-more-actions": "Mehr"
+	"liquiflow-more-actions": "Mehr",
+        "prefs-liquiflow": "LiquiFlow"
 }

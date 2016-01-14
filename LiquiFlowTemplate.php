@@ -41,7 +41,7 @@ class LiquiFlowTemplate extends BaseTemplate {
 			't-blockip' => 'fa-ban',
 			't-log' => 'fa-book',
 			't-contributions' => 'fa-puzzle-piece',
-			't-userrights' => 'fa-gavel',
+			't-userrights' => 'fa-list-alt',
 			'feed-atom' => 'fa-rss',
 
 			// Personal
@@ -58,24 +58,24 @@ class LiquiFlowTemplate extends BaseTemplate {
 
 	];
 
-	private $adminDropdown = [ 'About' => [
-									[ 'page' => 'Special:Statistics', 'title' => 'Statistics', 'id' => 'ad-statistics'],
-									[ 'page' => 'Special:Version', 'title' => 'Version', 'id' => 'ad-version'],
-									[ 'page' => 'Special:Log', 'title' => 'Logs', 'id' => 'ad-logs'],
+	private $adminDropdown = ['about' => [
+									[ 'page' => 'Special:Statistics', 'title' => 'statistics' , 'id' => 'ad-statistics'],
+									[ 'page' => 'Special:Version', 'title' => 'version', 'id' => 'ad-version'],
+									[ 'page' => 'Special:Log', 'title' => 'log', 'id' => 'ad-logs'],
 								],
-								'User' => [
-									[ 'page' => 'Special:UserList', 'title' => 'User List', 'id' => 'ad-user-list'],
-									[ 'page' => 'Special:UserRights', 'title' => 'User Rights', 'id' => 'ad-user-rights'],
-									[ 'page' => 'Special:BlockUser', 'title' => 'Block User', 'id' => 'ad-block-user'],
+								'filehist-user' => [
+									[ 'page' => 'Special:UserList', 'title' => 'liquiflow-user-list', 'id' => 'ad-user-list'],
+									[ 'page' => 'Special:UserRights', 'title' => 'liquiflow-user-rights', 'id' => 'ad-user-rights'],
+									[ 'page' => 'Special:BlockUser', 'title' => 'liquiflow-block-user', 'id' => 'ad-block-user'],
 								],
-								'Interface' => [
-									[ 'page' => 'MediaWiki:Common.css', 'title' => 'Edit Common.css', 'id' => 'ad-edit-css'],
-									[ 'page' => 'MediaWiki:Common.js', 'title' => 'Edit Common.js', 'id' => 'ad-edit-js'],
-									[ 'page' => 'MediaWiki:Sidebar', 'title' => 'Edit Sidebar', 'id' => 'ad-sidebar'],
+								'liquiflow-interface' => [
+									[ 'page' => 'MediaWiki:Common.css', 'title' => 'liquiflow-edit-common-css', 'id' => 'ad-edit-css'],
+									[ 'page' => 'MediaWiki:Common.js', 'title' => 'liquiflow-edit-common-js', 'id' => 'ad-edit-js'],
+									[ 'page' => 'MediaWiki:Sidebar', 'title' => 'liquiflow-edit-sidebar', 'id' => 'ad-sidebar'],
 								],
-								'Other' => [
-									[ 'page' => 'Special:Import', 'title' => 'Import', 'id' => 'ad-import'],
-									[ 'page' => 'Special:Export', 'title' => 'Export', 'id' => 'ad-export'],
+								'liquiflow-other' => [
+									[ 'page' => 'Special:Import', 'title' => 'liquiflow-import', 'id' => 'ad-import'],
+									[ 'page' => 'Special:Export', 'title' => 'liquiflow-export', 'id' => 'ad-export'],
 								],
 							];
 
@@ -516,11 +516,11 @@ class LiquiFlowTemplate extends BaseTemplate {
 								foreach ($this->adminDropdown as $header => $items) :
 									$count++;
 								?>
-									<li class="dropdown-header"><?php echo $header; ?></li>
+									<li class="dropdown-header"><?php $this->msg( $header ); ?></li>
 									<?php foreach ($items as $key => $item) : ?>
 										<li id="<?php echo $items['id']; ?>">
 											<a href="<?php echo $this->data['serverurl'] . str_replace('$1', $item['page'], $this->data['articlepath']) ?>">
-												<?php echo $item['title']?>
+												<?php $this->msg( $item['title'] )?>
 											</a>
 										</li>
 									<?php endforeach; ?>
@@ -656,7 +656,7 @@ $footerLinks = $this->getFooterLinks();
             		</div>
 
         			<div class="col-md-2 col-sm-3 col-xs-12">
-            			<h4><?php $this->msg( 'liquiflow-about') ?></h4>
+            			<h4><?php $this->msg( 'about') ?></h4>
             			<ul>
    							<?php foreach ( $footerLinks['places'] as $link ) :	?>
 								<li id="footer-places-<?php echo $link; ?>">
@@ -974,12 +974,12 @@ $footerLinks = $this->getFooterLinks();
 					?>
 						<li class="dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="#">
-								<span class="fa fa-fw fa-wrench"></span> <span class="hidden-sm"><?php $this->msg( 'liquiflow-tools' ); ?></span> <span class="caret"></span>
+								<span class="fa fa-fw fa-wrench"></span> <span class="hidden-sm"><?php $this->msg( 'toolbox' ); ?></span> <span class="caret"></span>
 							</a>
 							<ul class="dropdown-menu">
-								<li class="dropdown-header"><?php $this->msg( 'liquiflow-tools-general' ); ?></li>
-								<li><a href="<?php echo $wgScriptPath; ?>/index.php?title=Special:RecentChanges"><span class="fa fa-fw fa-clock-o"></span><?php $this->msg( 'liquiflow-recent-changes' ); ?></a></li>
-								<li><a href="<?php echo $wgScriptPath; ?>/index.php?title=Special:PendingChanges"><span class="fa fa-fw fa-circle-o"></span><?php $this->msg( 'liquiflow-pending-changes' ); ?></a></li>
+								<li class="dropdown-header"><?php $this->msg( 'liquiflow-general' ); ?></li>
+								<li><a href="<?php echo $wgScriptPath; ?>/index.php?title=Special:RecentChanges"><span class="fa fa-fw fa-clock-o"></span><?php $this->msg( 'recentchanges' ); ?></a></li>
+								<li><a href="<?php echo $wgScriptPath; ?>/index.php?title=Special:PendingChanges"><span class="fa fa-fw fa-circle-o"></span><?php $this->msg( 'revreview-current' ); ?></a></li>
 
 								<li class="divider"></li>
 								<li class="dropdown-header"><?php $this->msg( 'liquiflow-tools-specific' ); ?></li>
@@ -1007,7 +1007,7 @@ $footerLinks = $this->getFooterLinks();
 									<ul class="dropdown-menu multi-level">
 									<li class="dropdown-header visible-sm"><?php echo $personalTools["userpage"]["links"][0]["text"]; ?></li>
 								<?php
-								$personalTools["userpage"]["links"][0]["text"] = $this->getMsg( 'liquiflow-userpage' );
+								$personalTools["userpage"]["links"][0]["text"] = $this->getMsg( 'filehist-user' );
 								foreach ( $personalTools as $key => $item ) {
 									echo $this->makeListItem( $key, $item );
 								}

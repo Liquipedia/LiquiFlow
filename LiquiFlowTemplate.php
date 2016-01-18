@@ -60,7 +60,7 @@ class LiquiFlowTemplate extends BaseTemplate {
 
 	private $adminDropdown = ['about' => [
 									[ 'page' => 'Special:Statistics', 'title' => 'statistics' , 'id' => 'ad-statistics'],
-									[ 'page' => 'Special:Version', 'title' => 'version', 'id' => 'ad-version'],
+									[ 'page' => 'Special:Version?detail=1', 'title' => 'version', 'id' => 'ad-version'],
 									[ 'page' => 'Special:Log', 'title' => 'log', 'id' => 'ad-logs'],
 								],
 								'filehist-user' => [

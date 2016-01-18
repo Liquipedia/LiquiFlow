@@ -44,5 +44,16 @@
 	"liquiflow-view-view": "Read",
 	"liquiflow-view-viewsource": "View source",
 	"liquiflow-more-actions": "More",
+	"liquiflow-general": "General",
+	"liquiflow-user-list": "User List",
+	"liquiflow-user-rights": "User Rights",
+	"liquiflow-block-user": "Block User",
+	"liquiflow-interface": "Interface",
+	"liquiflow-edit-common-css": "Edit Common.css",
+	"liquiflow-edit-common-js": "Edit Common.js",
+	"liquiflow-edit-sidebar": "Edit Sidebar",
+	"liquiflow-other": "Other",
+	"liquiflow-import": "Import",
+	"liquiflow-export": "Export",
         "prefs-liquiflow": "LiquiFlow"
 }

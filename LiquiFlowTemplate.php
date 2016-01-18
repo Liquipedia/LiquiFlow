@@ -25,7 +25,7 @@ class LiquiFlowTemplate extends BaseTemplate {
 			'addsection' => 'fa-plus',
 			'stability' => 'fa-check-circle-o',
 			'viewsource' => 'fa-code',
-			'current' => 'fa-circle-o',
+			'current' => 'fa-circle-o-notch',
 			'default' => 'fa-pause-circle-o',
 			'view-foreign' => 'fa-hdd-o',
 

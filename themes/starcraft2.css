@@ -3388,17 +3388,21 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav-tabs > li.active > a,
 .nav-tabs > li.active > a:hover,
 .nav-tabs > li.active > a:focus {
-  color: #444;
   background: #fff;
   cursor: pointer;
   border: 1px solid transparent;
   font-weight: 700;
 }
-.nav-tabs > li > a {
+.nav-tabs > li.active > a:not(.new),
+.nav-tabs > li.active > a:not(.new):hover,
+.nav-tabs > li.active > a:not(.new):focus {
+  color: #444;
+}
+.nav-tabs > li > a:not(.new) {
   color: #2d5f93;
   margin-right: 0;
 }
-.nav-tabs > li:hover > span > span > a {
+.nav-tabs > li:hover > span > span > a:not(.new) {
   background-color: #96bddf;
   color: #2d5f93;
 }

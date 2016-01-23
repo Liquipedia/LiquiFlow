@@ -50,7 +50,7 @@
 			],
 			"position": "top",
 			"dependencies": [
-				"mw.user"
+				"mediawiki.user"
 			]
 		},
 		"skins.liquiflow.loggedin": {

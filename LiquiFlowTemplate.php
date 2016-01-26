@@ -157,7 +157,7 @@ class LiquiFlowTemplate extends BaseTemplate {
                         // Adjust Data-Targets in menu so scrollspy works properly with special characters
 			preg_match_all('/\<a href=\"(.*?)\"\>/', $toc, $toc_matches);
 			foreach($toc_matches[1] as $match) {
-				$toc = str_replace('<a href="' . $match . '"', '<a data-target="' . preg_replace('/\./', '\\\\.', $match) . '" href="' . $match . '"', $toc);
+				$toc = str_replace('<a href="' . $match . '"', '<a data-target="' . preg_replace('/\./', '\\\\.', preg_replace('/\:/', '\\\\:', $match)) . '" href="' . $match . '"', $toc);
 			}
                         
 			// Hide standard toc on big screens when the sidebar toc is shown

@@ -1691,6 +1691,7 @@ table th[class*="col-"] {
 }
 .table-responsive > table {
   white-space: nowrap;
+  margin-bottom: 0;
 }
 @media screen and (max-width: 767px) {
   .table-responsive {
@@ -6646,6 +6647,46 @@ a.youtube-icon:active {
 .mw-prefs-buttons input {
   float: right;
 }
+@media (max-width: 800px) {
+  #preferences table {
+    table-layout: fixed;
+  }
+  #preferences td {
+    display: block;
+    padding: 0;
+  }
+  td.mw-label {
+    text-align: left;
+  }
+  .prefsection {
+    padding: 5px !important;
+    width: calc(90%) !important;
+    max-width: calc(90%) !important;
+    white-space: pre-wrap;
+  }
+  .htmlform-tip {
+    padding: 5px !important;
+  }
+  .mw-prefs-buttons {
+    padding: 5px !important;
+  }
+  .prefsection fieldset {
+    width: 100%;
+  }
+  #preferences .mw-label label {
+    word-wrap: normal !important;
+    white-space: pre !important;
+    width: 100%;
+    max-width: 100%;
+  }
+  #mw-input-wpnickname,
+  .mw-input input[type="text"],
+  .mw-input input[type="number"] {
+    width: 100% !important;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+}
 /* History */
 #contentSub br {
   display: none;
@@ -7001,6 +7042,18 @@ p {
 }
 .lp-icon.lp-youtube:hover {
   background-position: calc(-6401px) 0;
+}
+.lp-icon.lp-github {
+  background-position: calc(-6657px) -257px;
+}
+.lp-icon.lp-github:hover {
+  background-position: calc(-6657px) 0;
+}
+.lp-icon.lp-instagram {
+  background-position: calc(-6913px) -257px;
+}
+.lp-icon.lp-instagram:hover {
+  background-position: calc(-6913px) 0;
 }
 .lp-icon:hover {
   cursor: pointer;
@@ -7369,6 +7422,7 @@ ul.mw-gallery-packed-hover li.gallerybox.mw-gallery-focused div.gallerytextwrapp
   font-weight: bold;
   margin: 2px;
   /* correspond to style on div.thumb */
+  width: 100% !important;
 }
 ul.mw-gallery-packed-hover,
 ul.mw-gallery-packed-overlay,
@@ -7400,4 +7454,39 @@ div.wikitext-quote {
   white-space: pre;
   background: #f0f0f0;
   overflow: auto;
+}
+/* spinning pending changes logo */
+.fa-circle-o-notch:before {
+  animation-duration: 7s;
+  animation-name: rotate;
+  display: inline-block;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* related changes icon */
+.fa.fa-fw.fa-related:before {
+  content: " ";
+  height: 16px;
+  background-image: url(../images/related-changes.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+}
+/* top ad */
+.main-content > div:first-of-type {
+  overflow: hidden;
+}
+/* search bar */
+@media (min-width: 992px) {
+  #searchInput {
+    width: 300px;
+  }
 }

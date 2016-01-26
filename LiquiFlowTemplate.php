@@ -32,7 +32,7 @@ class LiquiFlowTemplate extends BaseTemplate {
 			// Tools
 			't-whatlinkshere' => 'fa-link',
 			't-print' => 'fa-print',
-			't-recentchangeslinked' => 'fa fa-fw fa-files-o',
+			't-recentchangeslinked' => 'fa-related',
 			't-specialpages' => 'fa-magic',
 			't-permalink' => 'fa-dot-circle-o',
 			't-info' => 'fa-info',

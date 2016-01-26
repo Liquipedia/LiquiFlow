@@ -6574,6 +6574,13 @@ a.youtube-icon:hover,
 a.youtube-icon:active {
   background-position: calc(-6401px) 0;
 }
+a.github-icon {
+  background-position: calc(-6657px) -257px;
+}
+a.github-icon:hover,
+a.github-icon:active {
+  background-position: calc(-6657px) 0;
+}
 /* This file is for overwriting some of Mediawiki's default styling */
 /* Preferences */
 #preferences .mainLegend {

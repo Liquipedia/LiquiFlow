@@ -688,23 +688,28 @@ $footerLinks = $this->getFooterLinks();
             			<h4><?php $this->msg( 'liquiflow-follow-us') ?></h4>
             			<ul id="footer-social-media">
                     		<li>
-                                <a target="_blank" href="http://twitter.com/LiquipediaNet" class="social-icon twitter-icon">
+                                        <a target="_blank" href="http://twitter.com/LiquipediaNet" class="social-icon twitter-icon">
                     				<span class="social-link">Twitter</span>
                     			</a>
                     		</li>
                     		<li>
-                                <a target="_blank" href="https://www.facebook.com/Liquipedia" class="social-icon facebook-icon">
-                                    <span class="social-link">Facebook</span>
+                                        <a target="_blank" href="https://www.facebook.com/Liquipedia" class="social-icon facebook-icon">
+                                                <span class="social-link">Facebook</span>
                     			</a>
                     		</li>
                     		<li>
                     			<a target="_blank" href="https://www.youtube.com/user/Liquipedia" class="social-icon youtube-icon">
-                                    <span class="social-link">Youtube</span>
+                                                <span class="social-link">Youtube</span>
                     			</a>
                     		</li>
                     		<li>
                     			<a target="_blank" href="http://www.twitch.tv/liquipedia" class="social-icon twitch-icon">
-                                    <span class="social-link">Twitch</span>
+                                                <span class="social-link">Twitch</span>
+                    			</a>
+                    		</li>
+                    		<li>
+                    			<a target="_blank" href="http://www.github.com/Liquipedia" class="social-icon github-icon">
+                                                <span class="social-link">GitHub</span>
                     			</a>
                     		</li>
                     	</ul>

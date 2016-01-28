@@ -6574,11 +6574,11 @@ a.youtube-icon:hover,
 a.youtube-icon:active {
   background-position: calc(-6401px) 0;
 }
-a.youtube-icon {
+a.github-icon {
   background-position: calc(-6657px) -257px;
 }
-a.youtube-icon:hover,
-a.youtube-icon:active {
+a.github-icon:hover,
+a.github-icon:active {
   background-position: calc(-6657px) 0;
 }
 /* This file is for overwriting some of Mediawiki's default styling */
@@ -6954,10 +6954,10 @@ p {
 .lp-icon.lp-facebook:hover {
   background-position: calc(-2305px) 0;
 }
-.lp-icon.lp-feceit {
+.lp-icon.lp-faceit {
   background-position: calc(-2561px) -257px;
 }
-.lp-icon.lp-feceit:hover {
+.lp-icon.lp-faceit:hover {
   background-position: calc(-2561px) 0;
 }
 .lp-icon.lp-google-plus {
@@ -7482,7 +7482,7 @@ div.wikitext-quote {
 .fa.fa-fw.fa-related:before {
   content: " ";
   height: 16px;
-  background-image: url(../images/related-changes.svg);
+  background-image: url('../images/related-changes.svg');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: bottom center;

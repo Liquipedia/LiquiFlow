@@ -6886,181 +6886,179 @@ p {
 }
 .lp-icon {
   background: url('../images/infoboxicon_sprite.png') no-repeat 0 0;
-  display: block;
-  width: 256px;
-  height: 256px;
+  display: inline-block;
+  width: 32px;
+  height: 32px;
   overflow: hidden;
-  zoom: 0.125;
-  -moz-transform: scale(0.125);
-  -moz-transform-origin: 0 0;
+  background-size: auto 64px;
 }
 .lp-icon.lp-afreeca {
-  background-position: 0 -257px;
+  background-position: 0 -32px;
 }
 .lp-icon.lp-afreeca:hover {
   background-position: 0 0;
 }
 .lp-icon.lp-aligulac {
-  background-position: calc(-257px) -257px;
+  background-position: calc(-32px) -32px;
 }
 .lp-icon.lp-aligulac:hover {
-  background-position: calc(-257px) 0;
+  background-position: calc(-32px) 0;
 }
 .lp-icon.lp-ask-fm {
-  background-position: calc(-513px) -257px;
+  background-position: calc(-64px) -32px;
 }
 .lp-icon.lp-ask-fm:hover {
-  background-position: calc(-513px) 0;
+  background-position: calc(-64px) 0;
 }
 .lp-icon.lp-azubu {
-  background-position: calc(-769px) -257px;
+  background-position: calc(-96px) -32px;
 }
 .lp-icon.lp-azubu:hover {
-  background-position: calc(-769px) 0;
+  background-position: calc(-96px) 0;
 }
 .lp-icon.lp-binary-beast {
-  background-position: calc(-1025px) -257px;
+  background-position: calc(-128px) -32px;
 }
 .lp-icon.lp-binary-beast:hover {
-  background-position: calc(-1025px) 0;
+  background-position: calc(-128px) 0;
 }
 .lp-icon.lp-challonge {
-  background-position: calc(-1281px) -257px;
+  background-position: calc(-160px) -32px;
 }
 .lp-icon.lp-challonge:hover {
-  background-position: calc(-1281px) 0;
+  background-position: calc(-160px) 0;
 }
 .lp-icon.lp-datdota {
-  background-position: calc(-1537px) -257px;
+  background-position: calc(-192px) -32px;
 }
 .lp-icon.lp-datdota:hover {
-  background-position: calc(-1537px) 0;
+  background-position: calc(-192px) 0;
 }
 .lp-icon.lp-dotabuff {
-  background-position: calc(-1793px) -257px;
+  background-position: calc(-224px) -32px;
 }
 .lp-icon.lp-dotabuff:hover {
-  background-position: calc(-1793px) 0;
+  background-position: calc(-224px) 0;
 }
 .lp-icon.lp-email {
-  background-position: calc(-2049px) -257px;
+  background-position: calc(-256px) -32px;
 }
 .lp-icon.lp-email:hover {
-  background-position: calc(-2049px) 0;
+  background-position: calc(-256px) 0;
 }
 .lp-icon.lp-facebook {
-  background-position: calc(-2305px) -257px;
+  background-position: calc(-288px) -32px;
 }
 .lp-icon.lp-facebook:hover {
-  background-position: calc(-2305px) 0;
+  background-position: calc(-288px) 0;
 }
 .lp-icon.lp-faceit {
-  background-position: calc(-2561px) -257px;
+  background-position: calc(-320px) -32px;
 }
 .lp-icon.lp-faceit:hover {
-  background-position: calc(-2561px) 0;
+  background-position: calc(-320px) 0;
 }
 .lp-icon.lp-google-plus {
-  background-position: calc(-2817px) -257px;
+  background-position: calc(-352px) -32px;
 }
 .lp-icon.lp-google-plus:hover {
-  background-position: calc(-2817px) 0;
+  background-position: calc(-352px) 0;
 }
 .lp-icon.lp-reddit {
-  background-position: calc(-3073px) -257px;
+  background-position: calc(-384px) -32px;
 }
 .lp-icon.lp-reddit:hover {
-  background-position: calc(-3073px) 0;
+  background-position: calc(-384px) 0;
 }
 .lp-icon.lp-skype {
-  background-position: calc(-3329px) -257px;
+  background-position: calc(-416px) -32px;
 }
 .lp-icon.lp-skype:hover {
-  background-position: calc(-3329px) 0;
+  background-position: calc(-416px) 0;
 }
 .lp-icon.lp-smashboards {
-  background-position: calc(-3585px) -257px;
+  background-position: calc(-448px) -32px;
 }
 .lp-icon.lp-smashboards:hover {
-  background-position: calc(-3585px) 0;
+  background-position: calc(-448px) 0;
 }
 .lp-icon.lp-smash-gg {
-  background-position: calc(-3841px) -257px;
+  background-position: calc(-480px) -32px;
 }
 .lp-icon.lp-smash-gg:hover {
-  background-position: calc(-3841px) 0;
+  background-position: calc(-480px) 0;
 }
 .lp-icon.lp-steam {
-  background-position: calc(-4097px) -257px;
+  background-position: calc(-512px) -32px;
 }
 .lp-icon.lp-steam:hover {
-  background-position: calc(-4097px) 0;
+  background-position: calc(-512px) 0;
 }
 .lp-icon.lp-tencent {
-  background-position: calc(-4353px) -257px;
+  background-position: calc(-544px) -32px;
 }
 .lp-icon.lp-tencent:hover {
-  background-position: calc(-4353px) 0;
+  background-position: calc(-544px) 0;
 }
 .lp-icon.lp-toornament {
-  background-position: calc(-4609px) -257px;
+  background-position: calc(-576px) -32px;
 }
 .lp-icon.lp-toornament:hover {
-  background-position: calc(-4609px) 0;
+  background-position: calc(-576px) 0;
 }
 .lp-icon.lp-tournament {
-  background-position: calc(-4865px) -257px;
+  background-position: calc(-608px) -32px;
 }
 .lp-icon.lp-tournament:hover {
-  background-position: calc(-4865px) 0;
+  background-position: calc(-608px) 0;
 }
 .lp-icon.lp-twitch {
-  background-position: calc(-5121px) -257px;
+  background-position: calc(-640px) -32px;
 }
 .lp-icon.lp-twitch:hover {
-  background-position: calc(-5121px) 0;
+  background-position: calc(-640px) 0;
 }
 .lp-icon.lp-twitter {
-  background-position: calc(-5377px) -257px;
+  background-position: calc(-672px) -32px;
 }
 .lp-icon.lp-twitter:hover {
-  background-position: calc(-5377px) 0;
+  background-position: calc(-672px) 0;
 }
 .lp-icon.lp-vkontakte {
-  background-position: calc(-5633px) -257px;
+  background-position: calc(-704px) -32px;
 }
 .lp-icon.lp-vkontakte:hover {
-  background-position: calc(-5633px) 0;
+  background-position: calc(-704px) 0;
 }
 .lp-icon.lp-home {
-  background-position: calc(-5889px) -257px;
+  background-position: calc(-736px) -32px;
 }
 .lp-icon.lp-home:hover {
-  background-position: calc(-5889px) 0;
+  background-position: calc(-736px) 0;
 }
 .lp-icon.lp-weibo {
-  background-position: calc(-6145px) -257px;
+  background-position: calc(-768px) -32px;
 }
 .lp-icon.lp-weibo:hover {
-  background-position: calc(-6145px) 0;
+  background-position: calc(-768px) 0;
 }
 .lp-icon.lp-youtube {
-  background-position: calc(-6401px) -257px;
+  background-position: calc(-800px) -32px;
 }
 .lp-icon.lp-youtube:hover {
-  background-position: calc(-6401px) 0;
+  background-position: calc(-800px) 0;
 }
 .lp-icon.lp-github {
-  background-position: calc(-6657px) -257px;
+  background-position: calc(-832px) -32px;
 }
 .lp-icon.lp-github:hover {
-  background-position: calc(-6657px) 0;
+  background-position: calc(-832px) 0;
 }
 .lp-icon.lp-instagram {
-  background-position: calc(-6913px) -257px;
+  background-position: calc(-864px) -32px;
 }
 .lp-icon.lp-instagram:hover {
-  background-position: calc(-6913px) 0;
+  background-position: calc(-864px) 0;
 }
 .lp-icon:hover {
   cursor: pointer;

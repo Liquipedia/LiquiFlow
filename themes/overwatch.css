@@ -3407,6 +3407,18 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   background-color: #df96bf;
   color: #932d64;
 }
+.tabs-static .nav-tabs > li > a {
+  margin-right: 0;
+  float: left;
+}
+.tabs-static .nav-tabs > li > strong {
+  float: left;
+}
+.nav-tabs > li:hover > a,
+.nav-tabs > li:hover > span,
+.nav-tabs > li:hover > span > span {
+  background-color: #df96bf;
+}
 .nav-tabs > li > strong {
   background-color: #fff;
   color: #444;

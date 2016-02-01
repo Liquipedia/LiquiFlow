@@ -37,7 +37,7 @@ class SkinLiquiFlow extends SkinTemplate {
 		global $tlAdCode;
 		include ('TLAdHeader.inc');
 		$out->addHeadItem( 'tlads', $tlAdCode);
-
+                
 		$out->addModuleScripts( 'skins.liquiflow' );
                 if ($this->getSkin()->getUser()->getOption ( 'liquiflow-prefs-show-dropdown-on-hover' ) == true) {
                     $out->addModuleScripts( 'skins.liquiflow.hoverdropdown' );
@@ -55,6 +55,9 @@ class SkinLiquiFlow extends SkinTemplate {
 		if ($this->getSkin()->getUser()->isLoggedIn()) {
 			$out->addModuleStyles( 'skins.liquiflow.loggedin' );
 		}
+
+                global $wgScriptPath;
+		$out->addModuleStyles( 'skins.liquiflow.theme.' . substr($wgScriptPath, 1));
 	}
 
 	/**

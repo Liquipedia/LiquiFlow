@@ -1,6 +1,6 @@
 /* Fix second navbar for logged-in users */
 @media (min-width: 768px) {
-  .navbar-inverse {
+  #wiki-nav {
     position: fixed;
     left: 0px;
     right: 0px;
@@ -33,7 +33,7 @@
     margin-top: 8px;
 }
 #sidebar-toc.affix {
-    top: 89px;
+    top: 89px !important;
 }
 
 #sidebar-toc-column {

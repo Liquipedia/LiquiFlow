@@ -65,72 +65,63 @@
 				"themes/commons.css": {
 					"media": "screen"
 				}
-			},
-			"position": "top"
+			}
 		},
 		"skins.liquiflow.theme.counterstrike": {
 			"styles": {
 				"themes/counterstrike.css": {
 					"media": "screen"
 				}
-			},
-			"position": "top"
+			}
 		},
 		"skins.liquiflow.theme.dota2": {
 			"styles": {
 				"themes/dota2.css": {
 					"media": "screen"
 				}
-			},
-			"position": "top"
+			}
 		},
 		"skins.liquiflow.theme.hearthstone": {
 			"styles": {
 				"themes/hearthstone.css": {
 					"media": "screen"
 				}
-			},
-			"position": "top"
+			}
 		},
 		"skins.liquiflow.theme.heroes": {
 			"styles": {
 				"themes/heroes.css": {
 					"media": "screen"
 				}
-			},
-			"position": "top"
+			}
 		},
 		"skins.liquiflow.theme.overwatch": {
 			"styles": {
 				"themes/overwatch.css": {
 					"media": "screen"
 				}
-			},
-			"position": "top"
+			}
 		},
 		"skins.liquiflow.theme.smash": {
 			"styles": {
 				"themes/smash.css": {
 					"media": "screen"
 				}
-			},
-			"position": "top"
+			}
 		},
 		"skins.liquiflow.theme.starcraft": {
 			"styles": {
 				"themes/starcraft.css": {
 					"media": "screen"
 				}
-			},
-			"position": "top"
+			}
 		},
 		"skins.liquiflow.theme.starcraft2": {
 			"styles": {
 				"themes/starcraft2.css": {
 					"media": "screen"
 				}
-			},
-			"position": "top"
+			}
 		}
 	},
 	"ResourceFileModulePaths": {

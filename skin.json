@@ -36,9 +36,6 @@
 				},
 				"font-awesome/css/font-awesome.min.css": {
 					"media": "screen"
-				},
-				"themes/starcraft2.css": {
-					"media": "screen"
 				}
 			},
 			"scripts": [

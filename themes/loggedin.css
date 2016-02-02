@@ -12,30 +12,30 @@
 /* Second navbar is hidden on mobile */
 @media (min-width: 768px) and (max-width: 991px) {
     .container-fluid.main-content {
-        margin-top: 40px;
+        margin-top: 40px !important;
     }
 }
 @media (min-width: 992px) {
     .container-fluid.main-content {
-        margin-top: 38px;
+        margin-top: 38px !important;
     }
 }
 
 @media (min-width: 768px) {
     /* Correct offset to top for anchors */
     .mw-headline {
-        padding-top: 92px;
-        margin-top: -92px;
-        display: inline-block; /* required for webkit browsers */
+        padding-top: 92px !important;
+        margin-top: -92px !important;
+        display: inline-block !important; /* required for webkit browsers */
     }
 }
 #sidebar-toc.affix-top {
-    margin-top: 8px;
+    margin-top: 8px !important;
 }
 #sidebar-toc.affix {
     top: 89px !important;
 }
 
 #sidebar-toc-column {
-    margin-top: -2px;
+    margin-top: -2px !important;
 }

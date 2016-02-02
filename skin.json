@@ -48,54 +48,87 @@
 		"skins.liquiflow.loggedin": {
 			"styles": [
 				"themes/loggedin.css"
+			],
+			"dependencies": [
+				"skins.liquiflow"
 			]
 		},
                 "skins.liquiflow.hoverdropdown": {
-                        "scripts": "js/hover-dropdown.js"
+                        "scripts": "js/hover-dropdown.js",
+			"dependencies": [
+				"skins.liquiflow"
+			]
                 },
 		"skins.liquiflow.theme.commons": {
 			"styles": [
 				"themes/commons.css"
-                        ]
+                        ],
+			"dependencies": [
+				"skins.liquiflow"
+			]
 		},
 		"skins.liquiflow.theme.counterstrike": {
 			"styles": [
 				"themes/counterstrike.css"
+			],
+			"dependencies": [
+				"skins.liquiflow"
 			]
 		},
 		"skins.liquiflow.theme.dota2": {
 			"styles": [
 				"themes/dota2.css"
+			],
+			"dependencies": [
+				"skins.liquiflow"
 			]
 		},
 		"skins.liquiflow.theme.hearthstone": {
 			"styles": [
 				"themes/hearthstone.css"
+			],
+			"dependencies": [
+				"skins.liquiflow"
 			]
 		},
 		"skins.liquiflow.theme.heroes": {
 			"styles": [
 				"themes/heroes.css"
+			],
+			"dependencies": [
+				"skins.liquiflow"
 			]
 		},
 		"skins.liquiflow.theme.overwatch": {
 			"styles": [
 				"themes/overwatch.css"
+			],
+			"dependencies": [
+				"skins.liquiflow"
 			]
 		},
 		"skins.liquiflow.theme.smash": {
 			"styles": [
 				"themes/smash.css"
+			],
+			"dependencies": [
+				"skins.liquiflow"
 			]
 		},
 		"skins.liquiflow.theme.starcraft": {
 			"styles": [
 				"themes/starcraft.css"
+			],
+			"dependencies": [
+				"skins.liquiflow"
 			]
 		},
 		"skins.liquiflow.theme.starcraft2": {
 			"styles": [
 				"themes/starcraft2.css"
+			],
+			"dependencies": [
+				"skins.liquiflow"
 			]
 		}
 	},

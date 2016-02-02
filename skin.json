@@ -31,7 +31,6 @@
 	"ResourceModules": {
 		"skins.liquiflow": {
 			"styles": [
-				"font.css",
 				"font-awesome/css/font-awesome.css"
                         ],
 			"scripts": [

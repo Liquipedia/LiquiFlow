@@ -30,14 +30,10 @@
         },
 	"ResourceModules": {
 		"skins.liquiflow": {
-			"styles": {
-				"font.css": {
-					"media": "screen"
-				},
-				"font-awesome/css/font-awesome.min.css": {
-					"media": "screen"
-				}
-			},
+			"styles": [
+				"font.css",
+				"font-awesome/css/font-awesome.css"
+                        ],
 			"scripts": [
 				"js/jquery.min.js",
 				"js/bootstrap.min.js",
@@ -51,77 +47,57 @@
 			]
 		},
 		"skins.liquiflow.loggedin": {
-			"styles": {
-				"themes/loggedin.css": {
-					"media": "screen"
-				}
-			}
+			"styles": [
+				"themes/loggedin.css"
+			]
 		},
                 "skins.liquiflow.hoverdropdown": {
                         "scripts": "js/hover-dropdown.js"
                 },
 		"skins.liquiflow.theme.commons": {
-			"styles": {
-				"themes/commons.css": {
-					"media": "screen"
-				}
-			}
+			"styles": [
+				"themes/commons.css"
+                        ]
 		},
 		"skins.liquiflow.theme.counterstrike": {
-			"styles": {
-				"themes/counterstrike.css": {
-					"media": "screen"
-				}
-			}
+			"styles": [
+				"themes/counterstrike.css"
+			]
 		},
 		"skins.liquiflow.theme.dota2": {
-			"styles": {
-				"themes/dota2.css": {
-					"media": "screen"
-				}
-			}
+			"styles": [
+				"themes/dota2.css"
+			]
 		},
 		"skins.liquiflow.theme.hearthstone": {
-			"styles": {
-				"themes/hearthstone.css": {
-					"media": "screen"
-				}
-			}
+			"styles": [
+				"themes/hearthstone.css"
+			]
 		},
 		"skins.liquiflow.theme.heroes": {
-			"styles": {
-				"themes/heroes.css": {
-					"media": "screen"
-				}
-			}
+			"styles": [
+				"themes/heroes.css"
+			]
 		},
 		"skins.liquiflow.theme.overwatch": {
-			"styles": {
-				"themes/overwatch.css": {
-					"media": "screen"
-				}
-			}
+			"styles": [
+				"themes/overwatch.css"
+			]
 		},
 		"skins.liquiflow.theme.smash": {
-			"styles": {
-				"themes/smash.css": {
-					"media": "screen"
-				}
-			}
+			"styles": [
+				"themes/smash.css"
+			]
 		},
 		"skins.liquiflow.theme.starcraft": {
-			"styles": {
-				"themes/starcraft.css": {
-					"media": "screen"
-				}
-			}
+			"styles": [
+				"themes/starcraft.css"
+			]
 		},
 		"skins.liquiflow.theme.starcraft2": {
-			"styles": {
-				"themes/starcraft2.css": {
-					"media": "screen"
-				}
-			}
+			"styles": [
+				"themes/starcraft2.css"
+			]
 		}
 	},
 	"ResourceFileModulePaths": {

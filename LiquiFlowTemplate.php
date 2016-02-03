@@ -651,6 +651,7 @@ $footerLinks = $this->getFooterLinks();
 		                    	<li><a href="http://wiki.teamliquid.net/overwatch/" target="_blank">Overwatch</a></li>
 		                    	<li><a href="http://wiki.teamliquid.net/smash/" target="_blank">Smash</a></li>
 		                    	<li><a href="http://wiki.teamliquid.net/starcraft2/" target="_blank">StarCraft II</a></li>
+		                    	<li><a href="http://wiki.teamliquid.net/commons/" target="_blank">Liquipedia Commons</a></li>
 	                    	</ul>
               			</div>
             		</div>

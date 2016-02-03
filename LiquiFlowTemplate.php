@@ -476,7 +476,7 @@ class LiquiFlowTemplate extends BaseTemplate {
 								</li>
 								<li>
 									<a onclick="Share.reddit('<?php echo  $externalLink; ?>','<?php echo $this->data['title']; ?>')">
-										<span class="fa fa-fw fa-reddit"></span> Reddit
+										<span class="fa fa-fw fa-reddit-alien"></span> Reddit
 									</a>
 								</li>
 								<li>

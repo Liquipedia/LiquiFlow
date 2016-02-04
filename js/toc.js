@@ -17,7 +17,10 @@ function adjustSidebar() {
     var offsetTop = $('#sidebar-toc').offset().top - scrollTop;
     var offsetBottom = $('#sidebar-toc').offset().bottom;
 
-    var secondNavbar = mw.user.isAnon() ? $('#wiki-nav').outerHeight() : 0;
+    var secondNavbar = 0;
+    mw.loader.using('mediawiki.user', function() {
+        secondNavbar = mw.user.isAnon() ? $('#wiki-nav').outerHeight() : 0;
+    });
 
     if (scrollTop >= secondNavbar && isScrollingDown && currentState == 'top') {
         $('#sidebar-toc').removeClass('affix-top');

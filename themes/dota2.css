@@ -1698,6 +1698,14 @@ table th[class*="col-"] {
     margin-bottom: 0;
   }
 }
+.table > thead > tr > th,
+.table > tbody > tr > th,
+.table > tfoot > tr > th,
+.table > thead > tr > td,
+.table > tbody > tr > td,
+.table > tfoot > tr > td {
+  vertical-align: middle;
+}
 fieldset {
   padding: 0;
   margin: 0;
@@ -7378,6 +7386,18 @@ h2 .mw-editsection {
 #file img {
   max-width: 100%;
   height: auto;
+}
+@media (max-width: 600px) {
+  .thumb {
+    margin: 0;
+  }
+  .thumb img {
+    width: 100%;
+    height: auto;
+  }
+}
+.thumbimage {
+  border: 0;
 }
 /* visited links */
 .main-content a:visited:not(.new) {

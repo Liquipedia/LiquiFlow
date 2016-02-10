@@ -6903,6 +6903,7 @@ p {
 }
 #main-content-column {
   background: #fff;
+  padding-bottom: 10px;
 }
 .lp-icon {
   background: url('../images/infoboxicon_sprite.png') no-repeat 0 0;

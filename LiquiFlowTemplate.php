@@ -18,6 +18,7 @@ class LiquiFlowTemplate extends BaseTemplate {
 			'watch' => 'fa-bookmark-o',
 			'unwatch' => 'fa-bookmark',
 			'delete' => 'fa-trash-o',
+			'undelete' => 'fa-undo',
 			'move' => 'fa-exchange',
 			'protect' => 'fa-unlock-alt',
 			'unprotect' => 'fa-lock',
@@ -910,7 +911,7 @@ $footerLinks = $this->getFooterLinks();
 									<?php
 									 if (isset($this->icons[$key]) && $this->icons[$key] !== false) {
                                      	if (in_array( 'sysop', $this->getSkin()->getUser()->getEffectiveGroups())
-                                     		&& in_array($key, ['watch', 'unwatch'])) {
+                                     		&& in_array($key, ['watch', 'unwatch', 'current'])) {
                                      		echo '<span class="visible-xs"><span class="fa fa-fw ' . $this->icons[$key] . '"></span> ' .
                                      			htmlspecialchars( $link['text'] ) . '</span>';
                                      		echo '<span class="hidden-xs"><span class="fa fa-fw ' . $this->icons[$key] . '"></span></span>';
@@ -955,7 +956,7 @@ $footerLinks = $this->getFooterLinks();
 									<?php
 									if (isset($this->icons[$key]) && $this->icons[$key] !== false) {
                                      	if (in_array( 'sysop', $this->getSkin()->getUser()->getEffectiveGroups())
-                                     		&& in_array($key, ['purge', 'delete', 'protect', 'unprotect', 'stability', 'current', 'default'])) {
+                                     		&& in_array($key, ['purge', 'delete', 'undelete', 'protect', 'unprotect', 'default', 'move'])) {
                                      		echo '<span class="visible-xs"><span class="fa fa-fw ' . $this->icons[$key] . '"></span> ' .
                                      			htmlspecialchars( $link['text'] ) . '</span>';
                                      		echo '<span class="hidden-xs"><span class="fa fa-fw ' . $this->icons[$key] . '"></span></span>';

@@ -680,9 +680,9 @@ $footerLinks = $this->getFooterLinks();
             			<h4><?php $this->msg( 'liquiflow-affiliated-sites') ?></h4>
             			<ul>
                     		<li><a href="http://www.teamliquid.net" target="_blank">TeamLiquid.net</a></li>
-                    		<li><a href="http://www.liquidlegends.net" target="_blank">LiquidLegends.net</a></li>
                     		<li><a href="http://www.liquiddota.com" target="_blank">LiquidDota.com</a></li>
-                    		<li><a href="http://www.liquidhearth.com" target="_blank">LiquidHearth.net</a></li>
+                    		<li><a href="http://www.liquidhearth.com" target="_blank">LiquidHearth.com</a></li>
+                    		<li><a href="http://www.liquidlegends.net" target="_blank">LiquidLegends.net</a></li>
                     	</ul>
                 	</div>
 

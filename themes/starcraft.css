@@ -6486,7 +6486,7 @@ a#back-to-top:hover {
   padding: 2px;
 }
 #footer h4 {
-  font-family: Roboto;
+  font-family: 'Roboto', sans-serif;
   font-weight: 500;
   font-size: 12pt;
   color: #7c7c7c;
@@ -6869,7 +6869,7 @@ a.feedlink {
 }
 .logotype,
 ul.nav.navbar-nav:first-child > li.dropdown:first-child > a > span:first-child {
-  font-family: 'Roboto';
+  font-family: 'Roboto', sans-serif;
   font-weight: 500;
 }
 .collapsible-block {

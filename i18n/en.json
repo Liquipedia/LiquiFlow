@@ -52,7 +52,7 @@
 	"liquiflow-interface": "Interface",
 	"liquiflow-edit-common-css": "Edit Common.css",
 	"liquiflow-edit-common-js": "Edit Common.js",
-	"liquiflow-edit-sidebar": "Edit Sidebar",
+	"liquiflow-edit-sidebar": "Edit Navigation Bar",
 	"liquiflow-other": "Other",
 	"liquiflow-import": "Import",
 	"liquiflow-export": "Export",

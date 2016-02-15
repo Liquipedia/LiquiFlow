@@ -7401,7 +7401,7 @@ h2 .mw-editsection {
   border: 0;
 }
 /* visited links */
-.main-content a:visited:not(.new) {
+.main-content :not(.nav.nav-tabs) a:visited:not(.new) {
   color: #5a3696;
 }
 /* review box */

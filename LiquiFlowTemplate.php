@@ -161,6 +161,11 @@ class LiquiFlowTemplate extends BaseTemplate {
 				$toc = str_replace('<a href="' . $match . '"', '<a data-target="' . preg_replace('/\./', '\\\\.', preg_replace('/\:/', '\\\\:', $match)) . '" href="' . $match . '"', $toc);
 			}
                         
+                        preg_match("/<div class=\"toclimit-([1-6])\">/si", $this->data['bodycontent'], $toclimitmatch);
+                        if (isset($toclimitmatch[0])) {
+                                $toclimit = $toclimitmatch[1];
+                        }
+                        
 			// Hide standard toc on big screens when the sidebar toc is shown
 			$this->data['bodycontent'] = str_replace('<div id="toc" class="toc">', '<div id="toc" class="toc hidden-lg hidden-xl">', $this->data['bodycontent']);
 		}
@@ -196,8 +201,8 @@ class LiquiFlowTemplate extends BaseTemplate {
 
 				</div><!-- /.navbar-header -->
 				<?php if (strlen($toc) > 0) { ?>
-					<div id="slide-toc" class="visible-xs">
-				   		<div id="scroll-wrapper-toc">
+                                        <div id="slide-toc" class="visible-xs">
+				   		<div id="scroll-wrapper-toc" class="<?php if(isset($toclimit)) {echo 'toclimit-'.$toclimit;} ?>">
 				    		<ul class="nav navbar-nav">
 				     			<?php echo $toc; ?>
 				     		</ul>
@@ -545,7 +550,7 @@ class LiquiFlowTemplate extends BaseTemplate {
 		<!-- @TODO: Sidebar ad box -->
         <div id="sidebar-toc-column" style="display: none;">
             <div id="sidebar-toc"
-                     class="sidebar-toc bs-docs-sidebar hidden-print hidden-xs hidden-sm affix-top"
+                     class="sidebar-toc bs-docs-sidebar hidden-print hidden-xs hidden-sm affix-top <?php if(isset($toclimit)) {echo 'toclimit-'.$toclimit;} ?>"
                      style="" role="complementary">
                     <?php if (strlen($toc) > 0) : ?>
                     <?php echo $toc; ?>

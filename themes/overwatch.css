@@ -7081,9 +7081,6 @@ p {
 .lp-icon.lp-instagram:hover {
   background-position: calc(-864px) 0;
 }
-.lp-icon:hover {
-  cursor: pointer;
-}
 @media (max-width: 767px) {
   .navbar-brand {
     font-size: 16pt;
@@ -7527,4 +7524,16 @@ div.wikitext-quote {
   #searchInput {
     width: 290px;
   }
+}
+.flaggedrevs_reviewform {
+  background-color: transparent !important;
+}
+#filetoc,
+#catlinks {
+  border: 1px solid #dddddd !important;
+  background-color: transparent !important;
+}
+/* quotes should not overflow infoboxes or other floating stuff */
+blockquote.quote {
+  overflow: hidden;
 }

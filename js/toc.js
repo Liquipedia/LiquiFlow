@@ -18,7 +18,7 @@ function adjustSidebar() {
     var offsetBottom = $('#sidebar-toc').offset().bottom;
 
     var secondNavbar = 0;
-    mw.loader.using('mediawiki.user', function() {
+    mw.loader.using('mediawiki.user').done(function() {
         secondNavbar = mw.user.isAnon() ? $('#wiki-nav').outerHeight() : 0;
     });
 

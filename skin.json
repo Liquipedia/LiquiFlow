@@ -49,12 +49,16 @@
 			"styles": [
 				"themes/loggedin.css"
 			],
+			"position": "top",
 			"dependencies": [
 				"skins.liquiflow"
 			]
 		},
                 "skins.liquiflow.hoverdropdown": {
-                        "scripts": "js/hover-dropdown.js",
+                        "scripts": [
+                                "js/hover-dropdown.js"
+                        ],
+			"position": "top",
 			"dependencies": [
 				"skins.liquiflow"
 			]
@@ -63,6 +67,7 @@
 			"styles": [
 				"themes/commons.css"
                         ],
+			"position": "top",
 			"dependencies": [
 				"skins.liquiflow"
 			]
@@ -71,6 +76,7 @@
 			"styles": [
 				"themes/counterstrike.css"
 			],
+			"position": "top",
 			"dependencies": [
 				"skins.liquiflow"
 			]
@@ -79,6 +85,7 @@
 			"styles": [
 				"themes/dota2.css"
 			],
+			"position": "top",
 			"dependencies": [
 				"skins.liquiflow"
 			]
@@ -87,6 +94,7 @@
 			"styles": [
 				"themes/hearthstone.css"
 			],
+			"position": "top",
 			"dependencies": [
 				"skins.liquiflow"
 			]
@@ -95,6 +103,7 @@
 			"styles": [
 				"themes/heroes.css"
 			],
+			"position": "top",
 			"dependencies": [
 				"skins.liquiflow"
 			]
@@ -103,6 +112,7 @@
 			"styles": [
 				"themes/overwatch.css"
 			],
+			"position": "top",
 			"dependencies": [
 				"skins.liquiflow"
 			]
@@ -111,6 +121,7 @@
 			"styles": [
 				"themes/smash.css"
 			],
+			"position": "top",
 			"dependencies": [
 				"skins.liquiflow"
 			]
@@ -119,6 +130,7 @@
 			"styles": [
 				"themes/starcraft.css"
 			],
+			"position": "top",
 			"dependencies": [
 				"skins.liquiflow"
 			]
@@ -127,6 +139,7 @@
 			"styles": [
 				"themes/starcraft2.css"
 			],
+			"position": "top",
 			"dependencies": [
 				"skins.liquiflow"
 			]

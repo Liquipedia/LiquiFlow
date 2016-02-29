@@ -25,9 +25,9 @@
 		"LiquiFlowTemplate": "LiquiFlowTemplate.php",
                 "LiquiFlowHooks": "LiquiFlowHooks.php"
 	},
-        "Hooks": {
-            "GetPreferences": "LiquiFlowHooks::onGetPreferences"
-        },
+	"Hooks": {
+		"GetPreferences": "LiquiFlowHooks::onGetPreferences"
+	},
 	"ResourceModules": {
 		"skins.liquiflow": {
 			"styles": [

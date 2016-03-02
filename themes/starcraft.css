@@ -6498,7 +6498,7 @@ a#back-to-top:hover {
   color: #444;
   background: #f8f8f8;
   border-top: 1px solid #dfdfdf;
-  height: 300px;
+  height: 330px;
   width: 100%;
   margin-top: 0;
 }
@@ -7536,4 +7536,7 @@ div.wikitext-quote {
 /* quotes should not overflow infoboxes or other floating stuff */
 blockquote.quote {
   overflow: hidden;
+}
+.mw-special-Version h2 {
+  width: 100%;
 }

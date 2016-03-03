@@ -6863,9 +6863,9 @@ a.feedlink {
   height: auto !important;
   height: 100%;
   /* Negative indent footer by its height */
-  margin: 0 auto -300px;
+  margin: 0 auto -330px;
   /* Pad bottom by footer height */
-  padding: 0 0 300px;
+  padding: 0 0 330px;
 }
 .logotype,
 ul.nav.navbar-nav:first-child > li.dropdown:first-child > a > span:first-child {

@@ -7544,6 +7544,6 @@ blockquote.quote {
   min-width: 100px;
 }
 /* wikitables shouold break words in order to not overflow in the Special: namespace */
-body#top.ns--1 #mw-content-text .wikitable {
+body#top.ns--1 #mw-content-text table {
   word-break: break-all;
 }

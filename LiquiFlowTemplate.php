@@ -980,7 +980,6 @@ $footerLinks = $this->getFooterLinks();
 
 				case 'TOOLBOX':
 						$toolbox = $this->getToolbox();
-                                                global $wgScriptPath;
 					?>
 						<li class="dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="#">
@@ -988,9 +987,9 @@ $footerLinks = $this->getFooterLinks();
 							</a>
 							<ul class="dropdown-menu">
 								<li class="dropdown-header"><?php $this->msg( 'liquiflow-general' ); ?></li>
-								<li><a href="<?php echo $wgScriptPath; ?>/index.php?title=Special:RecentChanges"><span class="fa fa-fw fa-clock-o"></span><?php $this->msg( 'recentchanges' ); ?></a></li>
-								<li><a href="<?php echo $wgScriptPath; ?>/index.php?title=Special:PendingChanges"><span class="fa fa-fw fa-circle-o"></span><?php $this->msg( 'revreview-current' ); ?></a></li>
-								<li><a href="<?php echo $wgScriptPath; ?>/index.php?title=Special:Random"><span class="fa fa-fw fa-random"></span><?php $this->msg( 'randompage' ); ?></a></li>
+								<li><a href="<?php echo Title::newFromText('RecentChanges', NS_SPECIAL)->getLocalURL(); ?>"><span class="fa fa-fw fa-clock-o"></span><?php $this->msg( 'recentchanges' ); ?></a></li>
+								<li><a href="<?php echo Title::newFromText('PendingChanges', NS_SPECIAL)->getLocalURL(); ?>"><span class="fa fa-fw fa-circle-o"></span><?php $this->msg( 'revreview-current' ); ?></a></li>
+								<li><a href="<?php echo Title::newFromText('Random', NS_SPECIAL)->getLocalURL(); ?>"><span class="fa fa-fw fa-random"></span><?php $this->msg( 'randompage' ); ?></a></li>
 
 								<li class="divider"></li>
 								<li class="dropdown-header"><?php $this->msg( 'liquiflow-tools-specific' ); ?></li>

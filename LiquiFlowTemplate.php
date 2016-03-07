@@ -567,7 +567,7 @@ class LiquiFlowTemplate extends BaseTemplate {
 			<div class="main-content">
 
 			    <!-- @TODO: Ad banner -->
-                <div style="height:100px; width: 100%; padding-top:10px;">
+                <div class="top-ad">
 			<?php include ('TeamLiquidTopAd.inc'); ?>
                 </div>
 

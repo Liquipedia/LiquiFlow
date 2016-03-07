@@ -7516,8 +7516,11 @@ div.wikitext-quote {
   background-position: bottom center;
 }
 /* top ad */
-.main-content > div:first-of-type {
+.top-ad {
   overflow: hidden;
+  height: 100px;
+  width: 100%;
+  padding-top: 10px;
 }
 /* search bar */
 @media (min-width: 992px) {

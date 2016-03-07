@@ -18,8 +18,10 @@ function adjustSidebar() {
     var offsetBottom = $('#sidebar-toc').offset().bottom;
 
     var secondNavbar = 0;
+    var tocTopOffset = 57;
     mw.loader.using('mediawiki.user').done(function() {
         secondNavbar = mw.user.isAnon() ? $('#wiki-nav').outerHeight() : 0;
+        tocTopOffset = 89;
     });
 
     if (scrollTop >= secondNavbar && isScrollingDown && currentState == 'top') {
@@ -44,7 +46,7 @@ function adjustSidebar() {
         $('#sidebar-toc').css('bottom', ($('#footer').outerHeight() + 10) - distanceToBottom);
     }
     
-    $('#sidebar-toc > .nav').css('max-height', ($(window).height() - secondNavbar) + 'px');
+    $('#sidebar-toc > .nav').css('max-height', ($(window).height() - (tocTopOffset + secondNavbar + 46)) + 'px');
 
     lastScrollTop = $(window).scrollTop();
 }

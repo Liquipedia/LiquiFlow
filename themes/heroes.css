@@ -6485,6 +6485,9 @@ a#back-to-top:hover {
 .toc ul ul {
   padding: 2px;
 }
+#sidebar-toc > .nav {
+  overflow: auto;
+}
 #footer h4 {
   font-family: 'Roboto', sans-serif;
   font-weight: 500;

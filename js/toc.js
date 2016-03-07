@@ -43,6 +43,8 @@ function adjustSidebar() {
     if (currentState == 'bottom') {
         $('#sidebar-toc').css('bottom', ($('#footer').outerHeight() + 10) - distanceToBottom);
     }
+    
+    $('#sidebar-toc > .nav').css('max-height', ($(window).height() - secondNavbar) + 'px');
 
     lastScrollTop = $(window).scrollTop();
 }

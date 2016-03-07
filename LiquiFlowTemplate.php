@@ -59,26 +59,27 @@ class LiquiFlowTemplate extends BaseTemplate {
 
 	];
 
-	private $adminDropdown = ['about' => [
-									[ 'page' => 'Special:Statistics', 'title' => 'statistics' , 'id' => 'ad-statistics'],
-									[ 'page' => 'Special:Version?detail=1', 'title' => 'version', 'id' => 'ad-version'],
-									[ 'page' => 'Special:Log', 'title' => 'log', 'id' => 'ad-logs'],
-								],
-								'filehist-user' => [
-									[ 'page' => 'Special:UserList', 'title' => 'liquiflow-user-list', 'id' => 'ad-user-list'],
-									[ 'page' => 'Special:UserRights', 'title' => 'liquiflow-user-rights', 'id' => 'ad-user-rights'],
-									[ 'page' => 'Special:BlockUser', 'title' => 'liquiflow-block-user', 'id' => 'ad-block-user'],
-								],
-								'liquiflow-interface' => [
-									[ 'page' => 'MediaWiki:Common.css', 'title' => 'liquiflow-edit-common-css', 'id' => 'ad-edit-css'],
-									[ 'page' => 'MediaWiki:Common.js', 'title' => 'liquiflow-edit-common-js', 'id' => 'ad-edit-js'],
-									[ 'page' => 'MediaWiki:Sidebar', 'title' => 'liquiflow-edit-sidebar', 'id' => 'ad-sidebar'],
-								],
-								'liquiflow-other' => [
-									[ 'page' => 'Special:Import', 'title' => 'liquiflow-import', 'id' => 'ad-import'],
-									[ 'page' => 'Special:Export', 'title' => 'liquiflow-export', 'id' => 'ad-export'],
-								],
-							];
+	private $adminDropdown = [
+		'about' => [
+			[ 'page' => 'Special:Statistics', 'title' => 'statistics' , 'id' => 'ad-statistics'],
+			[ 'page' => 'Special:Version?detail=1', 'title' => 'version', 'id' => 'ad-version'],
+			[ 'page' => 'Special:Log', 'title' => 'log', 'id' => 'ad-logs'],
+		],
+		'filehist-user' => [
+			[ 'page' => 'Special:UserList', 'title' => 'liquiflow-user-list', 'id' => 'ad-user-list'],
+			[ 'page' => 'Special:UserRights', 'title' => 'liquiflow-user-rights', 'id' => 'ad-user-rights'],
+			[ 'page' => 'Special:BlockUser', 'title' => 'liquiflow-block-user', 'id' => 'ad-block-user'],
+		],
+		'liquiflow-interface' => [
+			[ 'page' => 'MediaWiki:Common.css', 'title' => 'liquiflow-edit-common-css', 'id' => 'ad-edit-css'],
+			[ 'page' => 'MediaWiki:Common.js', 'title' => 'liquiflow-edit-common-js', 'id' => 'ad-edit-js'],
+			[ 'page' => 'MediaWiki:Sidebar', 'title' => 'liquiflow-edit-sidebar', 'id' => 'ad-sidebar'],
+		],
+		'liquiflow-other' => [
+			[ 'page' => 'Special:Import', 'title' => 'liquiflow-import', 'id' => 'ad-import'],
+			[ 'page' => 'Special:Export', 'title' => 'liquiflow-export', 'id' => 'ad-export'],
+		],
+	];
 
 	/**
 	 * Outputs the entire contents of the (X)HTML page

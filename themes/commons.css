@@ -7327,21 +7327,21 @@ body.slide-active {
   border-bottom: 1px solid #000;
 }
 .wiki-color-dark {
-  color: #e5e5e5;
+  color: #636363;
 }
 .wiki-color-light {
-  color: #636363;
+  color: #e5e5e5;
 }
 .wiki-backgroundcolor-dark,
 .wiki-backgroundcolor-dark-hover:hover {
-  background-color: #e5e5e5;
+  background-color: #636363;
 }
 .wiki-backgroundcolor-light,
 .wiki-backgroundcolor-light-hover:hover {
-  background-color: #636363;
+  background-color: #e5e5e5;
 }
 .wiki-bordercolor-dark {
-  border-color: #e5e5e5;
+  border-color: #636363;
 }
 .wiki-bordercolor-light {
   border-color: #b7b7b7;

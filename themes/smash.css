@@ -7164,6 +7164,10 @@ p {
 #main-nav-toggler > span.fa {
   color: #BDF2D1;
 }
+.slide-active > span.fa,
+.navbar-search-toggle.active > span.fa {
+  color: #BDF2D1 !important;
+}
 /* adjust body when menu is open */
 body.slide-active {
   overflow-x: hidden;
@@ -7304,6 +7308,11 @@ body.slide-active {
     height: auto;
     -webkit-overflow-scrolling: touch;
     -ms-overflow-style: none;
+  }
+  #slide-toc a,
+  #slide-toc h2,
+  #slidemenu a {
+    color: #BDF2D1 !important;
   }
 }
 @media (min-width: 768px) {

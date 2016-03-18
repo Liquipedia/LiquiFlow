@@ -6553,56 +6553,53 @@ ul#footer-social-media li {
   overflow: hidden;
 }
 ul#footer-social-media li > a {
-  zoom: 0.125;
-  -moz-transform: scale(0.125);
-  -moz-transform-origin: 0 0;
   background-repeat: no-repeat;
   display: block;
 }
 a.social-icon {
   background-image: url('../images/infoboxicon_sprite.png');
-  width: 256px;
-  height: 256px;
+  background-size: auto 64px;
+  width: 32px;
+  height: 32px;
 }
 a.social-icon > span.social-link {
-  line-height: 256px;
-  padding-left: 300px;
-  font-size: 8em;
+  line-height: 32px;
+  padding-left: 36px;
 }
 a.facebook-icon {
-  background-position: calc(-2305px) -257px;
+  background-position: calc(-288px) -32px;
 }
 a.facebook-icon:hover,
 a.facebook-icon:active {
-  background-position: calc(-2305px) 0;
+  background-position: calc(-288px) 0;
 }
 a.twitch-icon {
-  background-position: calc(-5121px) -257px;
+  background-position: calc(-640px) -32px;
 }
 a.twitch-icon:hover,
 a.twitch-icon:active {
-  background-position: calc(-5121px) 0;
+  background-position: calc(-640px) 0;
 }
 a.twitter-icon {
-  background-position: calc(-5377px) -257px;
+  background-position: calc(-672px) -32px;
 }
 a.twitter-icon:hover,
 a.twitter-icon:active {
-  background-position: calc(-5377px) 0;
+  background-position: calc(-672px) 0;
 }
 a.youtube-icon {
-  background-position: calc(-6401px) -257px;
+  background-position: calc(-800px) -32px;
 }
 a.youtube-icon:hover,
 a.youtube-icon:active {
-  background-position: calc(-6401px) 0;
+  background-position: calc(-800px) 0;
 }
 a.github-icon {
-  background-position: calc(-6657px) -257px;
+  background-position: calc(-832px) -32px;
 }
 a.github-icon:hover,
 a.github-icon:active {
-  background-position: calc(-6657px) 0;
+  background-position: calc(-832px) 0;
 }
 /* This file is for overwriting some of Mediawiki's default styling */
 /* Preferences */

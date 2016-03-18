@@ -649,14 +649,14 @@ $footerLinks = $this->getFooterLinks();
                     		<h4><?php $this->msg( 'liquiflow-our-wikis') ?></h4>
                     		<ul>
                     			<li><a href="http://wiki.teamliquid.net/starcraft/" target="_blank">Brood War</a></li>
-		                    	<li><a href="http://wiki.teamliquid.net/counterstrike/" target="_blank">Counterstrike</a></li>
+		                    	<li><a href="http://wiki.teamliquid.net/counterstrike/" target="_blank">Counter-Strike</a></li>
 		                    	<li><a href="http://wiki.teamliquid.net/dota2/" target="_blank">Dota 2</a></li>
 		                    	<li><a href="http://wiki.teamliquid.net/hearthstone/" target="_blank">Hearthstone</a></li>
 		                    	<li><a href="http://wiki.teamliquid.net/heroes/" target="_blank">Heroes of the Storm</a></li>
 		                    	<li><a href="http://wiki.teamliquid.net/overwatch/" target="_blank">Overwatch</a></li>
 		                    	<li><a href="http://wiki.teamliquid.net/smash/" target="_blank">Smash</a></li>
 		                    	<li><a href="http://wiki.teamliquid.net/starcraft2/" target="_blank">StarCraft II</a></li>
-		                    	<li><a href="http://wiki.teamliquid.net/commons/" target="_blank">Liquipedia Commons</a></li>
+		                    	<li><a href="http://wiki.teamliquid.net/commons/" target="_blank">Commons</a></li>
 	                    	</ul>
               			</div>
             		</div>

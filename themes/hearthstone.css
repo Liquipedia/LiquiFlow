@@ -6867,8 +6867,7 @@ a.feedlink {
   /* Pad bottom by footer height */
   padding: 0 0 330px;
 }
-.logotype,
-ul.nav.navbar-nav:first-child > li.dropdown:first-child > a > span:first-child {
+.logotype {
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
 }

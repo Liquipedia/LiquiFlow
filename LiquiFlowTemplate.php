@@ -185,8 +185,8 @@ class LiquiFlowTemplate extends BaseTemplate {
 					<a class="navbar-brand" href="<?php echo htmlspecialchars( $this->data['nav_urls']['mainpage']['href'] )?>"
 					<?php echo Xml::expandAttributes( Linker::tooltipAndAccesskeyAttribs( 'p-logo' ) )?>>
 					<div style="display: inline-block;">
-							<div class="hidden-xs"><img src="<?php $this->text( 'logopath' ) ?>" style="margin-top: -8px; height:40px; float:left; "></div>
-							<div class="brand-name visible-xs" style="white-space: nowrap;">Liquipedia</div>
+							<div style="float: left;"><img src="<?php $this->text( 'logopath' ) ?>" style="margin-top: -8px; height:40px; float:left; "></div>
+							<div class="brand-name visible-xs logotype" style="white-space: nowrap; margin-left: 5px; float: left;">liquipedia</div>
 							</div>
 					</a>
 
@@ -220,7 +220,7 @@ class LiquiFlowTemplate extends BaseTemplate {
 					?>
 						<li class="dropdown dropdown-brand hidden-xs">
 							<a class="dropdown-toggle brand-title" data-toggle="dropdown" data-hover="dropdown" href="#">
-								<span class="brand-name" style="font-size: 18px;">liquipedia</span> <span class="caret"></span> <br>
+								<span class="brand-name logotype" style="font-size: 18px;">liquipedia</span> <span class="caret"></span> <br>
 								<span class="hidden-xs brand-subtitle">
 									<?php echo $currentWikiTitle; ?>
 								</span>

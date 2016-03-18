@@ -7533,7 +7533,7 @@ div.wikitext-quote {
 /* search bar */
 @media (min-width: 992px) {
   #searchInput {
-    width: 290px;
+    width: 280px;
   }
 }
 .flaggedrevs_reviewform {

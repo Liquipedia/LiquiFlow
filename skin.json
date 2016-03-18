@@ -144,6 +144,15 @@
 			"dependencies": [
 				"skins.liquiflow"
 			]
+		},
+		"skins.liquiflow.theme.warcraft": {
+			"styles": [
+				"themes/warcraft.css"
+			],
+			"position": "top",
+			"dependencies": [
+				"skins.liquiflow"
+			]
 		}
 	},
 	"ResourceFileModulePaths": {

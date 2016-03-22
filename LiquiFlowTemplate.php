@@ -988,9 +988,9 @@ $footerLinks = $this->getFooterLinks();
 							</a>
 							<ul class="dropdown-menu">
 								<li class="dropdown-header"><?php $this->msg( 'liquiflow-general' ); ?></li>
-								<li><a href="<?php echo Title::newFromText('RecentChanges', NS_SPECIAL)->getLocalURL(); ?>"><span class="fa fa-fw fa-clock-o"></span><?php $this->msg( 'recentchanges' ); ?></a></li>
+								<li><a href="<?php echo Title::newFromText('RecentChanges', NS_SPECIAL)->getLocalURL(); ?>" <?php echo Xml::expandAttributes( Linker::tooltipAndAccesskeyAttribs( 'n-recentchanges' ) ); ?>><span class="fa fa-fw fa-clock-o"></span><?php $this->msg( 'recentchanges' ); ?></a></li>
 								<li><a href="<?php echo Title::newFromText('PendingChanges', NS_SPECIAL)->getLocalURL(); ?>"><span class="fa fa-fw fa-circle-o"></span><?php $this->msg( 'revreview-current' ); ?></a></li>
-								<li><a href="<?php echo Title::newFromText('Random', NS_SPECIAL)->getLocalURL(); ?>"><span class="fa fa-fw fa-random"></span><?php $this->msg( 'randompage' ); ?></a></li>
+								<li><a href="<?php echo Title::newFromText('Random', NS_SPECIAL)->getLocalURL(); ?>" <?php echo Xml::expandAttributes( Linker::tooltipAndAccesskeyAttribs( 'n-randompage' ) ); ?>><span class="fa fa-fw fa-random"></span><?php $this->msg( 'randompage' ); ?></a></li>
 
 								<li class="divider"></li>
 								<li class="dropdown-header"><?php $this->msg( 'liquiflow-tools-specific' ); ?></li>

@@ -3412,7 +3412,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   margin-right: 0;
 }
 .nav-tabs > li:hover > span > span > a:not(.new) {
-  background-color: #c6a1e4;
+  background-color: #c6a0e4;
   color: #6B2D93;
 }
 .tabs-static .nav-tabs > li > a {
@@ -3425,7 +3425,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav-tabs > li:hover > a,
 .nav-tabs > li:hover > span,
 .nav-tabs > li:hover > span > span {
-  background-color: #c6a1e4;
+  background-color: #c6a0e4;
 }
 .nav-tabs > li > strong {
   background-color: #fff;

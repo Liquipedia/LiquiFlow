@@ -3426,6 +3426,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav-tabs > li:hover > span,
 .nav-tabs > li:hover > span > span {
   background-color: #e4db89;
+  text-decoration: none !important;
 }
 .nav-tabs > li > strong {
   background-color: #fff;

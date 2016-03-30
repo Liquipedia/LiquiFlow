@@ -3,15 +3,15 @@ var lastScrollTop = 0;
 var currentState = 'top';
 function adjustSidebar() {
     if ($(this).scrollTop()) {
-        $('#back-to-top:hidden, #back-to-top-icon:hidden').stop(true, true).fadeIn();
+        $('#back-to-top, #back-to-top-icon').stop(true, true).removeClass('back-to-top-hidden');
     } else {
-        $('#back-to-top, #back-to-top-icon').stop(true, true).fadeOut();
+        $('#back-to-top, #back-to-top-icon').stop(true, true).addClass('back-to-top-hidden');
     }
 
     var scrollTop = $(window).scrollTop();
 
     var distanceToFooter = $(document).height() - $('#slide-nav').outerHeight() - $(window).scrollTop()
-        - $('#sidebar-toc').outerHeight() - $('#footer').outerHeight();
+        - $('#sidebar-toc').outerHeight() - $('#footer').outerHeight() + $('#sidebar-ad').outerHeight();
     var distanceToBottom = $(document).height() - $(window).height() - $(window).scrollTop();
     var isScrollingDown = ((scrollTop - lastScrollTop) > 0) ? true : false;
     var offsetTop = $('#sidebar-toc').offset().top - scrollTop;
@@ -43,7 +43,7 @@ function adjustSidebar() {
     }
 
     if (currentState == 'bottom') {
-        $('#sidebar-toc').css('bottom', ($('#footer').outerHeight() + 10) - distanceToBottom);
+        $('#sidebar-toc').css('bottom', ($('#footer').outerHeight() + 10) - distanceToBottom - $('#sidebar-ad').outerHeight() - 46);
     }
     
     $('#sidebar-toc > .nav').css('max-height', ($(window).height() - (tocTopOffset + secondNavbar + 46)) + 'px');
@@ -67,8 +67,8 @@ function adjustSidebar() {
             //$('#toc').addClass('hidden-lg');
             //$('#sidebar-toc').prepend($('#toc').html());
             //$('#sidebar-toc').find('.toctoggle').remove();
-            $('#sidebar-toc').append('<span id="back-to-top-icon" class="fa fa-fw fa-arrow-up" style="color:#444444; display:none;"></span> ' +
-            '<a id="back-to-top" class="back-to-top" href="#top" style="display:none;">Back to top</a>');
+            $('#sidebar-toc').append('<span id="back-to-top-icon" class="fa fa-fw fa-arrow-up back-to-top-hidden" style="color:#444444;"></span> ' +
+            '<a id="back-to-top" class="back-to-top back-to-top-hidden" href="#top">Back to top</a>');
             //$('#sidebar-toc').find('ul').addClass('nav');
             $body.scrollspy('refresh');
             $('#sidebar-toc-column').css('height', $('#main-content-column').height() + 12);

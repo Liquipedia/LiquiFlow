@@ -3,6 +3,10 @@ var lastScrollTop = 0;
 var currentState = 'top';
 function adjustSidebar() {
     var scrollTop = $(window).scrollTop();
+    var navMaxHeightAd = true;
+    if($(window).height() < 600) {
+        navMaxHeightAd = false;
+    }
 
     var distanceToFooter = $(document).height() - $('#slide-nav').outerHeight() - $(window).scrollTop()
         - $('#sidebar-toc').outerHeight() - $('#footer').outerHeight() + $('#sidebar-ad').outerHeight();
@@ -40,7 +44,7 @@ function adjustSidebar() {
         $('#sidebar-toc').css('bottom', ($('#footer').outerHeight() + 10) - distanceToBottom - $('#sidebar-ad').outerHeight() - 18);
     }
     
-    $('#sidebar-toc > .nav').css('max-height', ($(window).height() - (tocTopOffset + secondNavbar + 18)) + 'px');
+    $('#sidebar-toc > .nav').css('max-height', ($(window).height() - (tocTopOffset + secondNavbar + 18) - (navMaxHeightAd?285:0)) + 'px');
 
     lastScrollTop = $(window).scrollTop();
 }

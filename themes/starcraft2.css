@@ -7554,3 +7554,12 @@ body#top.ns--1.mw-special-Ask #mw-content-text table {
 .portal-pills a {
   display: block;
 }
+/* spacing for editing buttons */
+.editButtons > * {
+  margin-bottom: 10px;
+}
+@media (max-width: 767px) {
+  .editButtons {
+    line-height: 2em;
+  }
+}

@@ -62,6 +62,7 @@ class LiquiFlowTemplate extends BaseTemplate {
 	private $adminDropdown = [
 		'about' => [
 			[ 'page' => 'Special:Statistics', 'title' => 'statistics' , 'id' => 'ad-statistics'],
+			[ 'page' => 'Special:ValidationStatistics', 'title' => 'validationstatistics' , 'id' => 'ad-validation-statistics'],
 			[ 'page' => 'Special:Version?detail=1', 'title' => 'version', 'id' => 'ad-version'],
 			[ 'page' => 'Special:Log', 'title' => 'log', 'id' => 'ad-logs'],
 		],
@@ -992,6 +993,7 @@ $footerLinks = $this->getFooterLinks();
 								<li class="dropdown-header"><?php $this->msg( 'liquiflow-general' ); ?></li>
 								<li><a href="<?php echo Title::newFromText('RecentChanges', NS_SPECIAL)->getLocalURL(); ?>" <?php echo Xml::expandAttributes( Linker::tooltipAndAccesskeyAttribs( 'n-recentchanges' ) ); ?>><span class="fa fa-fw fa-clock-o"></span><?php $this->msg( 'recentchanges' ); ?></a></li>
 								<li><a href="<?php echo Title::newFromText('PendingChanges', NS_SPECIAL)->getLocalURL(); ?>"><span class="fa fa-fw fa-circle-o"></span><?php $this->msg( 'revreview-current' ); ?></a></li>
+								<li><a href="<?php echo Title::newFromText('UnreviewedPages', NS_SPECIAL)->getLocalURL(); ?>"><span class="fa fa-fw fa-circle-o"></span><?php $this->msg( 'unreviewedpages' ); ?></a></li>
 								<li><a href="<?php echo Title::newFromText('Random', NS_SPECIAL)->getLocalURL(); ?>" <?php echo Xml::expandAttributes( Linker::tooltipAndAccesskeyAttribs( 'n-randompage' ) ); ?>><span class="fa fa-fw fa-random"></span><?php $this->msg( 'randompage' ); ?></a></li>
 
 								<li class="divider"></li>

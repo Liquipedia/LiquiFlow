@@ -942,7 +942,7 @@ $footerLinks = $this->getFooterLinks();
                                                         if (isset($this->data['action_urls']['protect'])) {$this->data['action_urls']['default'] = Array(
                                                             'class' => '',
                                                             'text' => $this->getMsg( 'liquiflow-stability' ),
-                                                            'href' => $wgScriptPath. '/index.php?title=Special:Stabilization&page=' . $this->getSkin()->getTitle(),
+                                                            'href' => SpecialPage::getTitleFor( 'Stabilization' )->getLocalUrl( 'page=' . $this->getSkin()->getTitle() ),
                                                             'id' => 'ca-default',
                                                             'attributes' => ' id="ca-default"',
                                                             'key' => ' title="'. $this->getMsg( 'liquiflow-stability-tooltip' ) .'"'

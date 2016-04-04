@@ -52,6 +52,8 @@
 	"liquiflow-interface": "Oberfläche",
 	"liquiflow-edit-common-css": "Common.css bearbeiten",
 	"liquiflow-edit-common-js": "Common.js bearbeiten",
+	"liquiflow-edit-liquiflow-css": "Liquiflow.css bearbeiten",
+	"liquiflow-edit-liquiflow-js": "Liquiflow.js bearbeiten",
 	"liquiflow-edit-sidebar": "Navigationsleiste bearbeiten",
 	"liquiflow-other": "Weiteres",
 	"liquiflow-import": "Import",

@@ -73,6 +73,8 @@ class LiquiFlowTemplate extends BaseTemplate {
 		'liquiflow-interface' => [
 			[ 'page' => 'MediaWiki:Common.css', 'title' => 'liquiflow-edit-common-css', 'id' => 'ad-edit-css'],
 			[ 'page' => 'MediaWiki:Common.js', 'title' => 'liquiflow-edit-common-js', 'id' => 'ad-edit-js'],
+			[ 'page' => 'MediaWiki:Liquiflow.css', 'title' => 'liquiflow-edit-liquiflow-css', 'id' => 'ad-edit-css-skin'],
+			[ 'page' => 'MediaWiki:Liquiflow.js', 'title' => 'liquiflow-edit-liquiflow-js', 'id' => 'ad-edit-js-skin'],
 			[ 'page' => 'MediaWiki:Sidebar', 'title' => 'liquiflow-edit-sidebar', 'id' => 'ad-sidebar'],
 		],
 		'liquiflow-other' => [

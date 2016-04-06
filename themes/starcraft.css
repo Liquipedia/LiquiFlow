@@ -1689,6 +1689,9 @@ table th[class*="col-"] {
     border-bottom: 0;
   }
 }
+.table {
+  width: auto;
+}
 .table-responsive > table {
   white-space: nowrap;
   margin-bottom: 0;

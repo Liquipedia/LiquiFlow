@@ -284,12 +284,10 @@ class LiquiFlowTemplate extends BaseTemplate {
 									<?php
 									}
 								}
-                                                                global $wgScriptPath;
-                                                                global $wgContLang;
 								?>
 							     	</div>
 							     	<div class="row">
-							     		<div style="float:right; margin-right:23px"><a href="<?php echo $wgScriptPath ?>/index.php?title=<?php echo $wgContLang->getFormattedNsText(4); ?>:Tournaments">[edit]</a></div>
+							     		<div style="float:right; margin-right:23px"><a href="<?php echo Title::newFromText('Tournaments', NS_PROJECT)->getLocalURL(); ?>">[edit]</a></div>
 							     	</div>
 								</div>
 							</li>
@@ -984,6 +982,7 @@ $footerLinks = $this->getFooterLinks();
 
 				case 'TOOLBOX':
 						$toolbox = $this->getToolbox();
+						global $wgUser;
 					?>
 						<li class="dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="#">
@@ -993,7 +992,7 @@ $footerLinks = $this->getFooterLinks();
 								<li class="dropdown-header"><?php $this->msg( 'liquiflow-general' ); ?></li>
 								<li><a href="<?php echo Title::newFromText('RecentChanges', NS_SPECIAL)->getLocalURL(); ?>" <?php echo Xml::expandAttributes( Linker::tooltipAndAccesskeyAttribs( 'n-recentchanges' ) ); ?>><span class="fa fa-fw fa-clock-o"></span><?php $this->msg( 'recentchanges' ); ?></a></li>
 								<li><a href="<?php echo Title::newFromText('PendingChanges', NS_SPECIAL)->getLocalURL(); ?>"><span class="fa fa-fw fa-circle-o"></span><?php $this->msg( 'revreview-current' ); ?></a></li>
-								<?php if ( in_array( 'editor', $wgUser->getEffectiveGroups()) ) { ?><li><a href="<?php echo Title::newFromText('UnreviewedPages', NS_SPECIAL)->getLocalURL(); ?>"><span class="fa fa-fw fa-circle-o"></span><?php $this->msg( 'unreviewedpages' ); ?></a></li>
+								<?php if ( in_array( 'editor', $wgUser->getEffectiveGroups()) ) { ?><li><a href="<?php echo Title::newFromText('UnreviewedPages', NS_SPECIAL)->getLocalURL(); ?>"><span class="fa fa-fw fa-circle-o"></span><?php $this->msg( 'unreviewedpages' ); ?></a></li><?php } ?>
 								<li><a href="<?php echo Title::newFromText('Random', NS_SPECIAL)->getLocalURL(); ?>" <?php echo Xml::expandAttributes( Linker::tooltipAndAccesskeyAttribs( 'n-randompage' ) ); ?>><span class="fa fa-fw fa-random"></span><?php $this->msg( 'randompage' ); ?></a></li>
 
 								<li class="divider"></li>

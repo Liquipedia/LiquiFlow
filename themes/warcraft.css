@@ -7339,14 +7339,6 @@ body.slide-active {
 .wiki-bordercolor-light {
   border-color: #440404;
 }
-/* Underlining for abbreviations */
-@supports (text-decoration: underline dotted) {
-  abbr[title],
-  .explain[title] {
-    border-bottom: none;
-    text-decoration: underline dotted;
-  }
-}
 /* Keeping the anchor color and cursor for abbreviations in anchors */
 a > abbr {
   color: inherit;
@@ -7566,5 +7558,17 @@ body#top.ns--1.mw-special-Ask #mw-content-text table {
 @media (max-width: 767px) {
   .editButtons {
     line-height: 2em;
+  }
+}
+/* fix preview tab of editor */
+.wikiEditor-ui * {
+  box-sizing: inherit;
+}
+/* Underlining for abbreviations */
+@supports (text-decoration: underline dotted) {
+  abbr[title],
+  .explain[title] {
+    border-bottom: none;
+    text-decoration: underline dotted;
   }
 }

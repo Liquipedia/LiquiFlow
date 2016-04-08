@@ -17,10 +17,12 @@ function adjustSidebar() {
 
     var secondNavbar = 0;
     var tocTopOffset = 57;
-    mw.loader.using('mediawiki.user').done(function() {
-        secondNavbar = mw.user.isAnon() ? $('#wiki-nav').outerHeight() : 0;
+    
+    /* second navbar for logged in people */
+    secondNavbar = ((typeof mw.user.isAnon == 'function') && mw.user.isAnon()) ? $('#wiki-nav').outerHeight() : 0;
+    if(secondNavbar != 0) {
         tocTopOffset = 89;
-    });
+    }
 
     if (scrollTop >= secondNavbar && isScrollingDown && currentState == 'top') {
         $('#sidebar-toc').removeClass('affix-top');

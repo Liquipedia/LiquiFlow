@@ -580,7 +580,7 @@ class LiquiFlowTemplate extends BaseTemplate {
 				<?php endif; ?>
 
 				<h1 id="firstHeading" class="firstHeading">
-					<span dir="auto"><?php $this->html( 'title' ) ?> </span>
+					<span dir="auto"><?php $this->html( 'title' ) ?></span>
 				</h1>
 
 				<?php $this->html( 'prebodyhtml' ) ?>

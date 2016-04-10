@@ -547,7 +547,6 @@ class LiquiFlowTemplate extends BaseTemplate {
 
 <div id="wrap">
 
-		<!-- @TODO: Sidebar ad box -->
         <div id="sidebar-toc-column" style="display: none;">
             <div id="sidebar-toc"
                      class="sidebar-toc bs-docs-sidebar hidden-print hidden-xs hidden-sm affix-top <?php if(isset($toclimit)) {echo 'toclimit-'.$toclimit;} ?>"

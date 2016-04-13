@@ -19,7 +19,7 @@ function adjustSidebar() {
     var tocTopOffset = 57;
     
     /* second navbar for logged in people */
-    secondNavbar = ((typeof mw.user.isAnon == 'function') && mw.user.isAnon()) ? $('#wiki-nav').outerHeight() : 0;
+    secondNavbar = ((typeof mw.user.isAnon == 'function') && mw.user.isAnon()) ? 0 : $('#wiki-nav').outerHeight();
     if(secondNavbar != 0) {
         tocTopOffset = 89;
     }

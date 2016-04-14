@@ -918,6 +918,16 @@ $footerLinks = $this->getFooterLinks();
                                      		echo '<span class="visible-xs"><span class="fa fa-fw ' . $this->icons[$key] . '"></span> ' .
                                      			htmlspecialchars( $link['text'] ) . '</span>';
                                      		echo '<span class="hidden-xs"><span class="fa fa-fw ' . $this->icons[$key] . '"></span></span>';
+                                     	} elseif (in_array( 'reviewer', $this->getSkin()->getUser()->getEffectiveGroups())
+                                     		&& in_array($key, ['current'])) {
+                                     		echo '<span class="visible-xs"><span class="fa fa-fw ' . $this->icons[$key] . '"></span> ' .
+                                     			htmlspecialchars( $link['text'] ) . '</span>';
+                                     		echo '<span class="hidden-xs"><span class="fa fa-fw ' . $this->icons[$key] . '"></span></span>';
+                                     	} elseif (in_array( 'editor', $this->getSkin()->getUser()->getEffectiveGroups())
+                                     		&& in_array($key, ['current'])) {
+                                     		echo '<span class="visible-xs"><span class="fa fa-fw ' . $this->icons[$key] . '"></span> ' .
+                                     			htmlspecialchars( $link['text'] ) . '</span>';
+                                     		echo '<span class="hidden-xs"><span class="fa fa-fw ' . $this->icons[$key] . '"></span></span>';
                                      	} else {
                                      		echo '<span class="fa fa-fw ' . $this->icons[$key] . '"></span> ' .
                                      			'<span class="hidden-sm">' . htmlspecialchars( $link['text'] ) . '</span>';

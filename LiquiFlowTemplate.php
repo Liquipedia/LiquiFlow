@@ -363,6 +363,26 @@ class LiquiFlowTemplate extends BaseTemplate {
 							<?php $this->renderNavigation(array('NAMESPACES', 'VIEWS', 'ACTIONS')) ?>
 							</ul>
 						</li>
+						<li class="dropdown visible-xs">
+							<a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="#">
+								<span class="fa fa-fw fa-share-alt"></span> <span class="hidden-sm"><?php $this->msg( 'liquiflow-share' ); ?></span> <span class="caret"></span>
+							</a>
+							<?php $this->renderNavigation( 'SHARE' ); ?>
+						</li>
+						<li class="dropdown visible-xs">
+							<a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="#">
+								<span class="fa fa-fw fa-wrench"></span> <span class="hidden-sm"><?php $this->msg( 'toolbox' ); ?></span> <span class="caret"></span>
+							</a>
+							<?php $this->renderNavigation( 'TOOLBOX' ); ?>
+						</li>
+						<?php if ( in_array( 'sysop', $wgUser->getEffectiveGroups()) ) : ?>
+						<li class="dropdown visible-xs">
+							<a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="#">
+								<span class="fa fa-fw fa-gavel"></span> <span>Admin Links</span> <span class="caret"></span>
+							</a>
+							<?php $this->renderNavigation( 'ADMIN' ); ?>
+						</li>
+						<?php endif; ?>		
 							<?php
 								if ( !$wgUser->isLoggedIn() ) {
 									$personalTools = $this->getPersonalTools();
@@ -466,76 +486,21 @@ class LiquiFlowTemplate extends BaseTemplate {
 							<a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="#">
 								<span class="fa fa-fw fa-share-alt"></span> <span class="hidden-sm"><?php $this->msg( 'liquiflow-share' ); ?></span> <span class="caret"></span>
 							</a>
-							<ul class="dropdown-menu">
-							<?php
-								$externalLink = $this->data['serverurl'] . str_replace('$1', $this->data['title'], $this->data['articlepath']);
-							?>
-								<li>
-									<a onclick="Share.twitter('<?php echo  $externalLink; ?>','<?php echo $this->data['title']; ?>')">
-										<span class="fa fa-fw fa-twitter"></span> Twitter
-									</a>
+							<?php $this->renderNavigation( 'SHARE' ); ?>
 								</li>
-								<li>
-									<a onclick="Share.facebook('<?php echo  $externalLink; ?>','<?php echo $this->data['title']; ?>')">
-										<span class="fa fa-fw fa-facebook"></span> Facebook
-									</a>
-								</li>
-								<li>
-									<a onclick="Share.reddit('<?php echo  $externalLink; ?>','<?php echo $this->data['title']; ?>')">
-										<span class="fa fa-fw fa-reddit-alien"></span> Reddit
-									</a>
-								</li>
-								<li>
-									<a onclick="Share.googleplus('<?php echo  $externalLink; ?>')">
-										<span class="fa fa-fw fa-google-plus"></span> Google+
-									</a>
-								</li>
-								<li>
-									<a onclick="Share.qq('<?php echo  $externalLink; ?>','<?php echo $this->data['title']; ?>')">
-										<span class="fa fa-fw fa-qq"></span> Tencent QQ
-									</a>
-								</li>
-								<li>
-									<a onclick="Share.vk('<?php echo  $externalLink; ?>','<?php echo $this->data['title']; ?>')">
-										<span class="fa fa-fw fa-vk"></span> VKontakte
-									</a>
-								</li>
-								<li>
-									<a onclick="Share.weibo('<?php echo  $externalLink; ?>','<?php echo $this->data['title']; ?>')">
-										<span class="fa fa-fw fa-weibo"></span> Weibo
-									</a>
-								</li>
-							</ul>
-						</li>
-
-						<?php $this->renderNavigation( 'TOOLBOX' ); ?>
-
+						<li class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="#">
+								<span class="fa fa-fw fa-wrench"></span> <span class="hidden-sm"><?php $this->msg( 'toolbox' ); ?></span> <span class="caret"></span>
+							</a>
+							<?php $this->renderNavigation( 'TOOLBOX' ); ?>
+						</li>						
 						<?php if ( in_array( 'sysop', $wgUser->getEffectiveGroups()) ) : ?>
 						<li class="dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="#">
 								<span class="fa fa-fw fa-gavel"></span> <span class="caret"></span>
 							</a>
-							<ul class="dropdown-menu">
-								<?php
-								$adminDropdownLength = sizeof($this->adminDropdown);
-								$count = 0;
-								foreach ($this->adminDropdown as $header => $items) :
-									$count++;
-								?>
-									<li class="dropdown-header"><?php $this->msg( $header ); ?></li>
-									<?php foreach ($items as $key => $item) : ?>
-										<li id="<?php echo $items['id']; ?>">
-											<a href="<?php echo $this->data['serverurl'] . str_replace('$1', $item['page'], $this->data['articlepath']) ?>">
-												<?php $this->msg( $item['title'] )?>
-											</a>
-										</li>
-									<?php endforeach; ?>
-									<?php if ($count < $adminDropdownLength) : ?>
-										<li class="divider"></li>
-									<?php endif; ?>
-								<?php endforeach; ?>
-							</ul>
-						</li>
+							<?php $this->renderNavigation( 'ADMIN' ); ?>
+						</li>									
 						<?php endif; ?>
 						<?php $this->renderNavigation( 'PERSONAL' ); ?>
 					</ul><!-- /.navbar-right -->
@@ -987,15 +952,61 @@ $footerLinks = $this->getFooterLinks();
 							<?php endforeach; ?>
 					<?php
 					break;
-
+				case 'SHARE': ?>
+					
+							<ul class="dropdown-menu">
+							<?php
+								$externalLink = $this->data['serverurl'] . str_replace('$1', $this->data['title'], $this->data['articlepath']);
+							?>
+							<li>
+								<a onclick="Share.twitter('<?php echo  $externalLink; ?>','<?php echo $this->data['title']; ?>')">
+									<span class="fa fa-fw fa-twitter"></span> Twitter
+								</a>
+							</li>
+							<li>
+								<a onclick="Share.facebook('<?php echo  $externalLink; ?>','<?php echo $this->data['title']; ?>')">
+									<span class="fa fa-fw fa-facebook"></span> Facebook
+								</a>
+							</li>
+							<li>
+								<a onclick="Share.reddit('<?php echo  $externalLink; ?>','<?php echo $this->data['title']; ?>')">
+									<span class="fa fa-fw fa-reddit-alien"></span> Reddit
+								</a>
+							</li>
+							<li>
+								<a onclick="Share.googleplus('<?php echo  $externalLink; ?>')">
+									<span class="fa fa-fw fa-google-plus"></span> Google+
+								</a>
+							</li>
+							<li>
+								<a onclick="Share.qq('<?php echo  $externalLink; ?>','<?php echo $this->data['title']; ?>')">
+									<span class="fa fa-fw fa-qq"></span> Tencent QQ
+								</a>
+							</li>
+							<li>
+								<a onclick="Share.vk('<?php echo  $externalLink; ?>','<?php echo $this->data['title']; ?>')">
+									<span class="fa fa-fw fa-vk"></span> VKontakte
+								</a>
+							</li>
+							<li>
+								<a onclick="Share.weibo('<?php echo  $externalLink; ?>','<?php echo $this->data['title']; ?>')">
+									<span class="fa fa-fw fa-weibo"></span> Weibo
+								</a>
+							</li>
+							<li class="hidden-lg">
+								<a onclick="Share.whatsapp('<?php echo  $externalLink; ?>','<?php echo $this->data['title']; ?>')">
+									<span class="fa fa-fw fa-whatsapp"></span> WhatsApp
+								</a>
+							</li>
+						</ul>
+						
+					<?php 
+					break;
+				
 				case 'TOOLBOX':
 						$toolbox = $this->getToolbox();
 						global $wgUser;
 					?>
-						<li class="dropdown">
-							<a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="#">
-								<span class="fa fa-fw fa-wrench"></span> <span class="hidden-sm"><?php $this->msg( 'toolbox' ); ?></span> <span class="caret"></span>
-							</a>
 							<ul class="dropdown-menu">
 								<li class="dropdown-header"><?php $this->msg( 'liquiflow-general' ); ?></li>
 								<li><a href="<?php echo Title::newFromText('RecentChanges', NS_SPECIAL)->getLocalURL(); ?>" <?php echo Xml::expandAttributes( Linker::tooltipAndAccesskeyAttribs( 'n-recentchanges' ) ); ?>><span class="fa fa-fw fa-clock-o"></span><?php $this->msg( 'recentchanges' ); ?></a></li>
@@ -1011,8 +1022,7 @@ $footerLinks = $this->getFooterLinks();
 								}
 							?>
 							</ul>
-						</li>
-					<?php
+								<?php
 					break;
 				case 'PERSONAL':
 					?>
@@ -1041,6 +1051,29 @@ $footerLinks = $this->getFooterLinks();
 
 					<?php
 					break;
+				case 'ADMIN': ?>
+					<ul class="dropdown-menu">
+						<?php
+						$adminDropdownLength = sizeof($this->adminDropdown);
+						$count = 0;
+						foreach ($this->adminDropdown as $header => $items) :
+							$count++;
+						?>
+							<li class="dropdown-header"><?php $this->msg( $header ); ?></li>
+							<?php foreach ($items as $key => $item) : ?>
+								<li id="<?php echo $items['id']; ?>">
+									<a href="<?php echo $this->data['serverurl'] . str_replace('$1', $item['page'], $this->data['articlepath']) ?>">
+										<?php $this->msg( $item['title'] )?>
+									</a>
+								</li>
+							<?php endforeach; ?>
+							<?php if ($count < $adminDropdownLength) : ?>
+								<li class="divider"></li>
+							<?php endif; ?>
+						<?php endforeach; ?>
+					</ul>
+					<?php break;
+				
 				case 'SEARCH':
 				    global $wgLiquiFlowWikiTitle;
 					?>

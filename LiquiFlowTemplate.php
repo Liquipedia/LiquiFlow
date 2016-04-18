@@ -460,15 +460,13 @@ class LiquiFlowTemplate extends BaseTemplate {
 <nav id="mobile-search-bar" class="navbar visible-xs noprint" style="display:none;">
 	<form action="<?php $this->text( 'wgScript' ) ?>" id="mobile-search-form" class="navbar-form navbar-left" role="search">
 		<div class="input-group">
-        	<input id="searchInput" type="search" accesskey="f"
-               title="Search Liquipedia <?php echo $wgLiquiFlowWikiTitle; ?> Wiki [alt-shift-f]" placeholder="Search Liquipedia"
-               name="search" autocomplete="off" class="form-control">
-            <div class="input-group-btn">
-            	<button class="btn navbar-search-btn searchButton" type="submit" id="searchButton">
-                	<i class="fa fa-arrow-right"></i>
-                 </button>
-            </div>
-    	</div>
+			<input id="searchInput" type="search" accesskey="f" title="Search Liquipedia <?php echo $wgLiquiFlowWikiTitle; ?> Wiki [alt-shift-f]" placeholder="Search Liquipedia" name="search" autocomplete="off" class="form-control">
+			<div class="input-group-btn">
+				<button class="btn navbar-search-btn searchButton" type="submit" id="searchButton">
+					<i class="fa fa-arrow-right"></i>
+				</button>
+			</div>
+		</div>
 	</form>
 </nav><!-- /#mobile-search-bar -->
 
@@ -512,18 +510,16 @@ class LiquiFlowTemplate extends BaseTemplate {
 
 <div id="wrap">
 
-        <div id="sidebar-toc-column" style="display: none;">
-            <div id="sidebar-toc"
-                     class="sidebar-toc bs-docs-sidebar hidden-print hidden-xs hidden-sm affix-top <?php if(isset($toclimit)) {echo 'toclimit-'.$toclimit;} ?>"
-                     style="" role="complementary">
-                    <?php if (strlen($toc) > 0) : ?>
-                    <?php echo $toc; ?>
-                    <?php endif;?>
-		<div id="sidebar-ad">
-			<?php include ('TeamLiquidStickyAd.inc'); ?>
-                </div>
-            </div>
-        </div><!-- /#sidebar-toc-colum -->
+	<div id="sidebar-toc-column" style="display: none;">
+		<div id="sidebar-toc" class="sidebar-toc bs-docs-sidebar hidden-print hidden-xs hidden-sm affix-top <?php if(isset($toclimit)) {echo 'toclimit-'.$toclimit;} ?>" style="" role="complementary">
+			<?php if (strlen($toc) > 0) : ?>
+			<?php echo $toc; ?>
+			<?php endif;?>
+			<div id="sidebar-ad">
+				<?php include ('TeamLiquidStickyAd.inc'); ?>
+			</div>
+		</div>
+	</div><!-- /#sidebar-toc-colum -->
 
 
 <div class="container-fluid main-content">
@@ -532,9 +528,9 @@ class LiquiFlowTemplate extends BaseTemplate {
 		<div id="main-content-column" class="col-md-12">
 			<div id="main-content" class="mw-body">
 
-                <div class="top-ad">
+		<div class="top-ad">
 			<?php include ('TeamLiquidTopAd.inc'); ?>
-                </div>
+         			       </div>
 
 				<?php if ( $this->data['sitenotice'] ) : ?>
 				<div id="siteNotice">
@@ -625,7 +621,7 @@ $footerLinks = $this->getFooterLinks();
               			</div>
             		</div>
 
-        			<div class="col-md-2 col-sm-3 col-xs-12">
+        		<div class="col-md-2 col-sm-3 col-xs-12">
             			<h4><?php $this->msg( 'about') ?></h4>
             			<ul>
    							<?php foreach ( $footerLinks['places'] as $link ) :	?>
@@ -634,8 +630,8 @@ $footerLinks = $this->getFooterLinks();
 								</li>
 							<?php endforeach; ?>
 						</ul>
-                    </div>
-                    <div class="col-md-2 col-sm-3 hidden-xs">
+			</div>
+			<div class="col-md-2 col-sm-3 hidden-xs">
             			<h4><?php $this->msg( 'liquiflow-contact-us') ?></h4>
             			<ul>
                     		<li><a href="mailto:liquipedia@teamliquid.net"><?php $this->msg( 'liquiflow-send-an-email') ?></a></li>
@@ -651,38 +647,38 @@ $footerLinks = $this->getFooterLinks();
                     		<li><a href="http://www.liquiddota.com" target="_blank">LiquidDota.com</a></li>
                     		<li><a href="http://www.liquidhearth.com" target="_blank">LiquidHearth.com</a></li>
                     		<li><a href="http://www.liquidlegends.net" target="_blank">LiquidLegends.net</a></li>
-                    	</ul>
+			</ul>
                 	</div>
 
                 	<div class="col-md-2 col-sm-3 hidden-xs">
             			<h4><?php $this->msg( 'liquiflow-follow-us') ?></h4>
             			<ul id="footer-social-media">
                     		<li>
-                                        <a target="_blank" href="http://twitter.com/LiquipediaNet" class="social-icon twitter-icon">
+					<a target="_blank" href="http://twitter.com/LiquipediaNet" class="social-icon twitter-icon">
                     				<span class="social-link">Twitter</span>
                     			</a>
                     		</li>
                     		<li>
-                                        <a target="_blank" href="https://www.facebook.com/Liquipedia" class="social-icon facebook-icon">
-                                                <span class="social-link">Facebook</span>
+					<a target="_blank" href="https://www.facebook.com/Liquipedia" class="social-icon facebook-icon">
+						<span class="social-link">Facebook</span>
                     			</a>
                     		</li>
                     		<li>
                     			<a target="_blank" href="https://www.youtube.com/user/Liquipedia" class="social-icon youtube-icon">
-                                                <span class="social-link">Youtube</span>
+						<span class="social-link">Youtube</span>
                     			</a>
                     		</li>
                     		<li>
                     			<a target="_blank" href="http://www.twitch.tv/liquipedia" class="social-icon twitch-icon">
-                                                <span class="social-link">Twitch</span>
+						<span class="social-link">Twitch</span>
                     			</a>
                     		</li>
-                    		<li>
+				<li>
                     			<a target="_blank" href="http://www.github.com/Liquipedia" class="social-icon github-icon">
-                                                <span class="social-link">GitHub</span>
+						<span class="social-link">GitHub</span>
                     			</a>
-                    		</li>
-                    	</ul>
+				</li>
+			</ul>
                 	</div>
              	</div><!-- ./footer-links -->
         	</div><!-- ./row -->
@@ -910,24 +906,24 @@ $footerLinks = $this->getFooterLinks();
 					break;
 				case 'ACTIONS':
 					?>
-                                                        <?php global $wgScriptPath;
-                                                        if (isset($this->data['action_urls']['protect'])) {$this->data['action_urls']['default'] = Array(
-                                                            'class' => '',
-                                                            'text' => $this->getMsg( 'liquiflow-stability' ),
-                                                            'href' => SpecialPage::getTitleFor( 'Stabilization' )->getLocalUrl( 'page=' . $this->getSkin()->getTitle() ),
-                                                            'id' => 'ca-default',
-                                                            'attributes' => ' id="ca-default"',
-                                                            'key' => ' title="'. $this->getMsg( 'liquiflow-stability-tooltip' ) .'"'
-                                                        );}
-                                                        if (isset($this->data['action_urls']['purge'])) {$this->data['action_urls']['purge']  = Array(
-                                                            'class' => '',
-                                                            'text' => $this->getMsg( 'liquiflow-purge' ),
-                                                            'href' => $wgScriptPath. '/index.php?title=' . $this->getSkin()->getTitle() . '&action=purge',
-                                                            'id' => 'ca-purge',
-                                                            'attributes' => ' id="ca-purge"',
-                                                            'key' => ' title="'. $this->getMsg( 'liquiflow-purge-tooltip' ) .'"'
-                                                        );}
-                                                        foreach ( $this->data['action_urls'] as $key => $link ) :	?>
+							<?php global $wgScriptPath;
+							if (isset($this->data['action_urls']['protect'])) {$this->data['action_urls']['default'] = Array(
+								'class' => '',
+								'text' => $this->getMsg( 'liquiflow-stability' ),
+								'href' => SpecialPage::getTitleFor( 'Stabilization' )->getLocalUrl( 'page=' . $this->getSkin()->getTitle() ),
+								'id' => 'ca-default',
+								'attributes' => ' id="ca-default"',
+								'key' => ' title="'. $this->getMsg( 'liquiflow-stability-tooltip' ) .'"'
+							);}
+							if (isset($this->data['action_urls']['purge'])) {$this->data['action_urls']['purge']  = Array(
+								'class' => '',
+								'text' => $this->getMsg( 'liquiflow-purge' ),
+								'href' => $wgScriptPath. '/index.php?title=' . $this->getSkin()->getTitle() . '&action=purge',
+								'id' => 'ca-purge',
+								'attributes' => ' id="ca-purge"',
+								'key' => ' title="'. $this->getMsg( 'liquiflow-purge-tooltip' ) .'"'
+							);}
+							foreach ( $this->data['action_urls'] as $key => $link ) :	?>
 								<li <?php echo $link['attributes']; ?>>
 									<a href="<?php echo htmlspecialchars( $link['href'] );?>"
 									<?php echo $link['key'] ?>>

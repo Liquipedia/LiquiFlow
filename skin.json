@@ -27,12 +27,13 @@
                 "LiquiFlowHooks": "LiquiFlowHooks.php"
 	},
 	"Hooks": {
-		"GetPreferences": "LiquiFlowHooks::onGetPreferences"
+		"GetPreferences": "LiquiFlowHooks::onGetPreferences",
+		"MakeGlobalVariablesScript": "LiquiFlowHooks::onMakeGlobalVariablesScript"
 	},
 	"ResourceModules": {
 		"skins.liquiflow": {
 			"styles": [
-				"font-awesome/css/font-awesome.css"
+				"vendor/font-awesome/css/font-awesome.css"
                         ],
 			"scripts": [
 				"js/jquery.min.js",
@@ -48,7 +49,35 @@
 		},
 		"skins.liquiflow.loggedin": {
 			"styles": [
-				"themes/loggedin.css"
+				"css/loggedin.css"
+			],
+			"position": "top",
+			"dependencies": [
+				"skins.liquiflow"
+			]
+		},
+		"skins.liquiflow.codemirror": {
+			"styles": [
+				"vendor/codemirror/lib/codemirror.css",
+				"vendor/codemirror/addon/dialog/dialog.css",
+				"vendor/codemirror/addon/display/fullscreen.css",
+				"vendor/codemirror-mode/mediawiki/mediawiki.css",
+				"css/codemirror.css"
+			],
+			"scripts": [
+				"vendor/codemirror/lib/codemirror.js",
+				"vendor/codemirror/addon/dialog/dialog.js",
+				"vendor/codemirror/addon/search/search.js",
+				"vendor/codemirror/addon/search/searchcursor.js",
+				"vendor/codemirror/addon/display/fullscreen.js",
+				"vendor/codemirror/addon/edit/matchbrackets.js",
+				"vendor/codemirror/mode/xml/xml.js",
+				"vendor/codemirror/mode/css/css.js",
+				"vendor/codemirror/mode/javascript/javascript.js",
+				"vendor/codemirror/mode/htmlmixed/htmlmixed.js",
+				"vendor/codemirror/mode/lua/lua.js",
+				"vendor/codemirror-mode/mediawiki/mediawiki.js",
+				"js/codemirror.js"
 			],
 			"position": "top",
 			"dependencies": [

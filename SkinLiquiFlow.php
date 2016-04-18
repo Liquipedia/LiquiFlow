@@ -28,21 +28,24 @@ class SkinLiquiFlow extends SkinTemplate {
 		$out->addHeadItem( 'ie-edge',  "<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">");
 		$out->addHeadItem( 'x-ie8-fix',
 			"<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->\n" .
-    		"<!--[if lt IE 9]>\n" .
-      		"<script src=\"https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js\"></script>\n" .
-      		"<script src=\"https://oss.maxcdn.com/respond/1.4.2/respond.min.js\"></script>\n" .
-    		"<![endif]-->");
+		"<!--[if lt IE 9]>\n" .
+		"<script src=\"https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js\"></script>\n" .
+		"<script src=\"https://oss.maxcdn.com/respond/1.4.2/respond.min.js\"></script>\n" .
+		"<![endif]-->");
 		$out->addHeadItem( 'responsive', "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">");
 
 		global $tlAdCode;
 		include ('TLAdHeader.inc');
 		$out->addHeadItem( 'tlads', $tlAdCode);
-                
+		
 		$out->addModuleScripts( 'skins.liquiflow' );
-                if ($this->getSkin()->getUser()->getOption ( 'liquiflow-prefs-show-dropdown-on-hover' ) == true) {
-                    $out->addModuleScripts( 'skins.liquiflow.hoverdropdown' );
-                }
-        }
+		if ($this->getSkin()->getUser()->getOption ( 'liquiflow-prefs-show-dropdown-on-hover' ) == true) {
+			$out->addModuleScripts( 'skins.liquiflow.hoverdropdown' );
+		}
+		if ($this->getSkin()->getUser()->getOption ( 'liquiflow-prefs-use-codemirror' ) == true) {
+			$out->addModuleScripts( 'skins.liquiflow.codemirror' );
+		}
+	}
 	/**
 	 * Loads skin and user CSS files.
 	 * @param OutputPage $out
@@ -53,10 +56,13 @@ class SkinLiquiFlow extends SkinTemplate {
 		$out->addStyle( 'https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,700,700italic|Roboto:500' );
 		$styles = array( 'mediawiki.skinning.interface', 'skins.liquiflow' );
 		$out->addModuleStyles( $styles );
-                global $wgScriptPath;
+		global $wgScriptPath;
 		$out->addModuleStyles( 'skins.liquiflow.theme.' . substr($wgScriptPath, 1));
 		if ($this->getSkin()->getUser()->isLoggedIn()) {
 			$out->addModuleStyles( 'skins.liquiflow.loggedin' );
+		}
+		if ($this->getSkin()->getUser()->getOption ( 'liquiflow-prefs-use-codemirror' ) == true) {
+			$out->addModuleStyles( 'skins.liquiflow.codemirror' );
 		}
 	}
 

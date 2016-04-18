@@ -1,0 +1,9 @@
+.CodeMirror-fullscreen {
+	z-index:1000000;
+}
+.CodeMirror {
+	height:600px;
+}
+.cm-mw-htmltag-attribute {
+	color:#8a5700;
+}

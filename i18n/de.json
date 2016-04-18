@@ -32,6 +32,7 @@
         "liquiflow-send-an-email": "Sende eine Email",
         "liquiflow-share": "Teilen",
         "liquiflow-prefs-show-dropdown-on-hover": "Zeige ausgeklapptes Menü bei schwebendem Mauszeiger",
+        "liquiflow-prefs-use-codemirror": "Verwende CodeMirror Editor",
         "liquiflow-stability": "Stabilität",
         "liquiflow-stability-tooltip": "Einstellungen zur Qualitätssicherung",
         "liquiflow-tools": "Werkzeuge",

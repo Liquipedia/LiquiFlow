@@ -9,53 +9,53 @@ class LiquiFlowTemplate extends BaseTemplate {
 
 	private $icons = [
 			// Wiki actions
-			'subject' => 'fa-file-text-o',
-			'main' => 'fa-file-text-o',
-			'view' => 'fa-file-text-o',
-			'talk' => 'fa-comments-o',
-			'history' => 'fa-history',
-			'edit' => 'fa-pencil',
-			'watch' => 'fa-bookmark-o',
-			'unwatch' => 'fa-bookmark',
-			'delete' => 'fa-trash-o',
-			'undelete' => 'fa-undo',
-			'move' => 'fa-exchange',
-			'protect' => 'fa-unlock-alt',
-			'unprotect' => 'fa-lock',
-			'purge' => 'fa-repeat',
-			'addsection' => 'fa-plus',
-			'stability' => 'fa-check-circle-o',
-			'viewsource' => 'fa-code',
-			'current' => 'fa-circle-o-notch',
-			'default' => 'fa-pause-circle-o',
-			'view-foreign' => 'fa-hdd-o',
+			'subject' => 'fa fa-fw fa-file-text-o',
+			'main' => 'fa fa-fw fa-file-text-o',
+			'view' => 'fa fa-fw fa-file-text-o',
+			'talk' => 'fa fa-fw fa-comments-o',
+			'history' => 'fa fa-fw fa-history',
+			'edit' => 'fa fa-fw fa-pencil',
+			'watch' => 'fa fa-fw fa-bookmark-o',
+			'unwatch' => 'fa fa-fw fa-bookmark',
+			'delete' => 'fa fa-fw fa-trash-o',
+			'undelete' => 'fa fa-fw fa-undo',
+			'move' => 'fa fa-fw fa-exchange',
+			'protect' => 'fa fa-fw fa-unlock-alt',
+			'unprotect' => 'fa fa-fw fa-lock',
+			'purge' => 'fa fa-fw fa-repeat',
+			'addsection' => 'fa fa-fw fa-plus',
+			'stability' => 'fa fa-fw fa-check-circle-o',
+			'viewsource' => 'fa fa-fw fa-code',
+			'current' => 'fa fa-fw fa-circle-o-notch',
+			'default' => 'fa fa-fw fa-pause-circle-o',
+			'view-foreign' => 'fa fa-fw fa-hdd-o',
 
 			// Tools
-			't-whatlinkshere' => 'fa-link',
-			't-print' => 'fa-print',
-			't-recentchangeslinked' => 'fa-related',
-			't-specialpages' => 'fa-magic',
-			't-permalink' => 'fa-dot-circle-o',
-			't-info' => 'fa-info',
-			't-smwbrowselink' => 'fa-thumb-tack',
-			't-upload' => 'fa-upload',
-			't-blockip' => 'fa-ban',
-			't-log' => 'fa-book',
-			't-contributions' => 'fa-puzzle-piece',
-			't-userrights' => 'fa-list-alt',
-			'feed-atom' => 'fa-rss',
+			't-whatlinkshere' => 'fa fa-fw fa-link',
+			't-print' => 'fa fa-fw fa-print',
+			't-recentchangeslinked' => 'liquipedia-custom-icon liquipedia-custom-icon-related-changes',
+			't-specialpages' => 'fa fa-fw fa-magic',
+			't-permalink' => 'fa fa-fw fa-dot-circle-o',
+			't-info' => 'fa fa-fw fa-info',
+			't-smwbrowselink' => 'fa fa-fw fa-thumb-tack',
+			't-upload' => 'fa fa-fw fa-upload',
+			't-blockip' => 'fa fa-fw fa-ban',
+			't-log' => 'fa fa-fw fa-book',
+			't-contributions' => 'fa fa-fw fa-puzzle-piece',
+			't-userrights' => 'fa fa-fw fa-list-alt',
+			'feed-atom' => 'fa fa-fw fa-rss',
 
 			// Personal
-			'pt-user' => 'fa-user',
-			'pt-userpage' => 'fa-home',
-			'pt-mytalk' => 'fa-inbox',
-			'pt-preferences' => 'fa-sliders',
-			'pt-watchlist' => 'fa-bookmark',
-			'pt-mycontris' => 'fa-puzzle-piece',
-			'pt-createaccount' => 'fa-user-plus',
-			'pt-logout' => 'fa-sign-out',
-			'pt-login' => 'fa-sign-in',
-			'pt-adminlinks' => 'fa-gavel',
+			'pt-user' => 'fa fa-fw fa-user',
+			'pt-userpage' => 'fa fa-fw fa-home',
+			'pt-mytalk' => 'fa fa-fw fa-inbox',
+			'pt-preferences' => 'fa fa-fw fa-sliders',
+			'pt-watchlist' => 'fa fa-fw fa-bookmark',
+			'pt-mycontris' => 'fa fa-fw fa-puzzle-piece',
+			'pt-createaccount' => 'fa fa-fw fa-user-plus',
+			'pt-logout' => 'fa fa-fw fa-sign-out',
+			'pt-login' => 'fa fa-fw fa-sign-in',
+			'pt-adminlinks' => 'fa fa-fw fa-gavel',
 
 	];
 
@@ -853,7 +853,7 @@ $footerLinks = $this->getFooterLinks();
                             	<?php echo $link['key'] ?>>
 								<?php
 								if (isset($this->icons[$link['context']]) && $this->icons[$link['context']] !== false) {
-                                	echo '<span class="fa fa-fw ' . $this->icons[$link['context']] . '"></span> <span class="hidden-sm">' . htmlspecialchars( $link['text'] ) . '</span>';
+                                	echo '<span class="' . $this->icons[$link['context']] . '"></span> <span class="hidden-sm">' . htmlspecialchars( $link['text'] ) . '</span>';
                                 } else {
                                 	echo htmlspecialchars( $link['text'] );
                                 }
@@ -876,21 +876,21 @@ $footerLinks = $this->getFooterLinks();
 									 if (isset($this->icons[$key]) && $this->icons[$key] !== false) {
                                      	if (in_array( 'sysop', $this->getSkin()->getUser()->getEffectiveGroups())
                                      		&& in_array($key, ['watch', 'unwatch', 'current', 'addsection'])) {
-                                     		echo '<span class="visible-xs"><span class="fa fa-fw ' . $this->icons[$key] . '"></span> ' .
+                                     		echo '<span class="visible-xs"><span class="' . $this->icons[$key] . '"></span> ' .
                                      			htmlspecialchars( $link['text'] ) . '</span>';
-                                     		echo '<span class="hidden-xs"><span class="fa fa-fw ' . $this->icons[$key] . '"></span></span>';
+                                     		echo '<span class="hidden-xs"><span class="' . $this->icons[$key] . '"></span></span>';
                                      	} elseif (in_array( 'reviewer', $this->getSkin()->getUser()->getEffectiveGroups())
                                      		&& in_array($key, ['current'])) {
-                                     		echo '<span class="visible-xs"><span class="fa fa-fw ' . $this->icons[$key] . '"></span> ' .
+                                     		echo '<span class="visible-xs"><span class="' . $this->icons[$key] . '"></span> ' .
                                      			htmlspecialchars( $link['text'] ) . '</span>';
-                                     		echo '<span class="hidden-xs"><span class="fa fa-fw ' . $this->icons[$key] . '"></span></span>';
+                                     		echo '<span class="hidden-xs"><span class="' . $this->icons[$key] . '"></span></span>';
                                      	} elseif (in_array( 'editor', $this->getSkin()->getUser()->getEffectiveGroups())
                                      		&& in_array($key, ['current'])) {
-                                     		echo '<span class="visible-xs"><span class="fa fa-fw ' . $this->icons[$key] . '"></span> ' .
+                                     		echo '<span class="visible-xs"><span class="' . $this->icons[$key] . '"></span> ' .
                                      			htmlspecialchars( $link['text'] ) . '</span>';
-                                     		echo '<span class="hidden-xs"><span class="fa fa-fw ' . $this->icons[$key] . '"></span></span>';
+                                     		echo '<span class="hidden-xs"><span class="' . $this->icons[$key] . '"></span></span>';
                                      	} else {
-                                     		echo '<span class="fa fa-fw ' . $this->icons[$key] . '"></span> ' .
+                                     		echo '<span class="' . $this->icons[$key] . '"></span> ' .
                                      			'<span class="hidden-sm">' . htmlspecialchars( $link['text'] ) . '</span>';
                                      	}
                                      } else {
@@ -931,11 +931,11 @@ $footerLinks = $this->getFooterLinks();
 									if (isset($this->icons[$key]) && $this->icons[$key] !== false) {
                                      	if (in_array( 'sysop', $this->getSkin()->getUser()->getEffectiveGroups())
                                      		&& in_array($key, ['purge', 'delete', 'undelete', 'protect', 'unprotect', 'default', 'move'])) {
-                                     		echo '<span class="visible-xs"><span class="fa fa-fw ' . $this->icons[$key] . '"></span> ' .
+                                     		echo '<span class="visible-xs"><span class="' . $this->icons[$key] . '"></span> ' .
                                      			htmlspecialchars( $link['text'] ) . '</span>';
-                                     		echo '<span class="hidden-xs"><span class="fa fa-fw ' . $this->icons[$key] . '"></span></span>';
+                                     		echo '<span class="hidden-xs"><span class="' . $this->icons[$key] . '"></span></span>';
                                      	} else {
-                                     		echo '<span class="fa fa-fw ' . $this->icons[$key] . '"></span> '.
+                                     		echo '<span class="' . $this->icons[$key] . '"></span> '.
                                      			'<span class="hidden-sm">' . htmlspecialchars( $link['text'] ) . '</span>';
                                      	}
                                      } else {
@@ -1145,9 +1145,9 @@ $footerLinks = $this->getFooterLinks();
 		}
 
 		if ( isset($item['single-id']) && isset($this->icons[$item['single-id']]) ) {
-			$html = '<span class="fa fa-fw ' . $this->icons[$item['single-id']] .'"></span> ' . htmlspecialchars( $text );
+			$html = '<span class="' . $this->icons[$item['single-id']] .'"></span> ' . htmlspecialchars( $text );
 		} elseif ( isset($item['id']) && isset($this->icons[$item['id']]) ) {
-			$html = '<span class="fa fa-fw ' . $this->icons[$item['id']] .'"></span> ' . htmlspecialchars( $text );
+			$html = '<span class="' . $this->icons[$item['id']] .'"></span> ' . htmlspecialchars( $text );
 		} else {
 			$html = htmlspecialchars( $text );
 		}

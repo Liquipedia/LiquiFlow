@@ -1,12 +1,12 @@
 $(document).ready(function() {
 	if($('#wpTextbox1').length) {
 		var editmode;
-		var location = window.location.href;
-		if((location.endsWith('.js')) || (location.includes('.js&'))) {
+		var locationStr = window.location.href;
+		if((locationStr.endsWith('.js')) || (locationStr.includes('.js&'))) {
 			editmode = 'text/javascript';
-		} else if((location.endsWith('.css')) || (location.includes('.css&'))) {
+		} else if((locationStr.endsWith('.css')) || (locationStr.includes('.css&'))) {
 			editmode = 'text/css';
-		} else if((location.endsWith('.lua')) || (location.includes('.lua&'))) {
+		} else if((locationStr.endsWith('.lua')) || (locationStr.includes('.lua&'))) {
 			editmode = 'text/x-lua';
 		} else {
 			editmode = 'text/mediawiki';

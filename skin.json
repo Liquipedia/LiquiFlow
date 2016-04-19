@@ -10,6 +10,9 @@
 	"namemsg": "skinname-liquiflow",
 	"license-name": "GPL-2.0+",
 	"type": "skin",
+	"config": {
+		"liquiflow-prefs-show-dropdown-on-hover": false
+	},
 	"ConfigRegistry": {
 		"liquiflow": "GlobalVarConfig::newInstance"
 	},

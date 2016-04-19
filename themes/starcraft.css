@@ -1692,6 +1692,9 @@ table th[class*="col-"] {
 .table {
   width: auto;
 }
+.table-full-width {
+  width: 100%;
+}
 .table-responsive > table {
   white-space: nowrap;
   margin-bottom: 0;
@@ -7502,15 +7505,6 @@ div.wikitext-quote {
   100% {
     transform: rotate(360deg);
   }
-}
-/* related changes icon */
-.fa.fa-fw.fa-related {
-  height: 16px;
-  width: 18px;
-  background-image: url('../images/related-changes.svg');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: bottom center;
 }
 /* top ad */
 .top-ad {

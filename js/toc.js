@@ -4,6 +4,7 @@ var currentState = 'top';
 function adjustSidebar() {
 	var secondNavbar = 0;
 	var tocBottomOffset = 0;
+	var tocHeightModifier = 30;
 	var tocTopOffset = 57;
 	
 	/* second navbar for logged in people */
@@ -11,6 +12,7 @@ function adjustSidebar() {
 	if(secondNavbar != 0) {
 		tocTopOffset = 89;
 		tocBottomOffset = 32;
+		tocHeightModifier = 25;
 	}
 	
 	var scrollTop = $(window).scrollTop();
@@ -49,7 +51,7 @@ function adjustSidebar() {
 		$('#sidebar-toc').css('bottom', ($('#footer').outerHeight() + 10) - distanceToBottom - $('#sidebar-ad').outerHeight() - 18);
 	}
 	
-	$('#sidebar-toc > .nav').css('max-height', ($(window).height() - (tocTopOffset + secondNavbar + 18) - (navMaxHeightAd?285:0) + tocBottomOffset) + 'px');
+	$('#sidebar-toc > .nav').css('max-height', ($(window).height() - (tocTopOffset + secondNavbar + 18) - (navMaxHeightAd?285:tocHeightModifier) + tocBottomOffset) + 'px');
 
 	lastScrollTop = $(window).scrollTop();
 }

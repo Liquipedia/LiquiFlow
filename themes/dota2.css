@@ -7104,6 +7104,12 @@ p {
 .lp-icon.lp-tlpd-hots:hover {
   background-position: calc(-96px) -64px;
 }
+.lp-icon.lp-tlpd {
+  background-position: calc(-128px) -96px;
+}
+.lp-icon.lp-tlpd:hover {
+  background-position: calc(-128px) -64px;
+}
 .lp-icon.lp-tlpd-wol {
   background-position: calc(-128px) -96px;
 }

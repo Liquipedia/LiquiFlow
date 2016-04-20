@@ -2,6 +2,17 @@
 var lastScrollTop = 0;
 var currentState = 'top';
 function adjustSidebar() {
+	var secondNavbar = 0;
+	var tocBottomOffset = 0;
+	var tocTopOffset = 57;
+	
+	/* second navbar for logged in people */
+	secondNavbar = ((typeof mw.user.isAnon == 'function') && mw.user.isAnon()) ? 0 : $('#wiki-nav').outerHeight();
+	if(secondNavbar != 0) {
+		tocTopOffset = 89;
+		tocBottomOffset = 32;
+	}
+	
 	var scrollTop = $(window).scrollTop();
 	var navMaxHeightAd = true;
 	if($(window).height() < 600) {
@@ -9,20 +20,11 @@ function adjustSidebar() {
 	}
 
 	var distanceToFooter = $(document).height() - $('#slide-nav').outerHeight() - $(window).scrollTop()
-		- $('#sidebar-toc').outerHeight() - $('#footer').outerHeight() + $('#sidebar-ad').outerHeight();
+		- $('#sidebar-toc').outerHeight() - $('#footer').outerHeight() + $('#sidebar-ad').outerHeight() - tocBottomOffset;
 	var distanceToBottom = $(document).height() - $(window).height() - $(window).scrollTop();
 	var isScrollingDown = ((scrollTop - lastScrollTop) > 0) ? true : false;
 	var offsetTop = $('#sidebar-toc').offset().top - scrollTop;
 	var offsetBottom = $('#sidebar-toc').offset().bottom;
-
-	var secondNavbar = 0;
-	var tocTopOffset = 57;
-	
-	/* second navbar for logged in people */
-	secondNavbar = ((typeof mw.user.isAnon == 'function') && mw.user.isAnon()) ? 0 : $('#wiki-nav').outerHeight();
-	if(secondNavbar != 0) {
-		tocTopOffset = 89;
-	}
 
 	if (scrollTop >= secondNavbar && isScrollingDown && currentState == 'top') {
 		$('#sidebar-toc').removeClass('affix-top');
@@ -41,12 +43,13 @@ function adjustSidebar() {
 		$('#sidebar-toc').addClass('affix');
 		currentState = 'middle';
 	}
+	console.log(currentState);
 
 	if (currentState == 'bottom') {
 		$('#sidebar-toc').css('bottom', ($('#footer').outerHeight() + 10) - distanceToBottom - $('#sidebar-ad').outerHeight() - 18);
 	}
 	
-	$('#sidebar-toc > .nav').css('max-height', ($(window).height() - (tocTopOffset + secondNavbar + 18) - (navMaxHeightAd?285:0)) + 'px');
+	$('#sidebar-toc > .nav').css('max-height', ($(window).height() - (tocTopOffset + secondNavbar + 18) - (navMaxHeightAd?285:0) + tocBottomOffset) + 'px');
 
 	lastScrollTop = $(window).scrollTop();
 }

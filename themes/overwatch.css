@@ -6557,7 +6557,7 @@ ul#footer-social-media li > a {
 }
 a.social-icon {
   background-image: url('../images/infoboxicon_sprite.png');
-  background-size: auto 64px;
+  background-size: auto 128px;
   width: 32px;
   height: 32px;
 }

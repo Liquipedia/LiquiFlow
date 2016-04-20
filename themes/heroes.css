@@ -6909,7 +6909,7 @@ p {
   width: 32px;
   height: 32px;
   overflow: hidden;
-  background-size: auto 64px;
+  background-size: auto 128px;
   vertical-align: middle;
 }
 .lp-icon.lp-afreeca {
@@ -7079,6 +7079,48 @@ p {
 }
 .lp-icon.lp-instagram:hover {
   background-position: calc(-864px) 0;
+}
+.lp-icon.lp-stream {
+  background-position: 0 -96px;
+}
+.lp-icon.lp-stream:hover {
+  background-position: 0 -64px;
+}
+.lp-icon.lp-tlstream {
+  background-position: calc(-32px) -96px;
+}
+.lp-icon.lp-tlstream:hover {
+  background-position: calc(-32px) -64px;
+}
+.lp-icon.lp-fanclub {
+  background-position: calc(-64px) -96px;
+}
+.lp-icon.lp-fanclub:hover {
+  background-position: calc(-64px) -64px;
+}
+.lp-icon.lp-tlpd-hots {
+  background-position: calc(-96px) -96px;
+}
+.lp-icon.lp-tlpd-hots:hover {
+  background-position: calc(-96px) -64px;
+}
+.lp-icon.lp-tlpd-wol {
+  background-position: calc(-128px) -96px;
+}
+.lp-icon.lp-tlpd-wol:hover {
+  background-position: calc(-128px) -64px;
+}
+.lp-icon.lp-tlpd-wol-korea {
+  background-position: calc(-160px) -96px;
+}
+.lp-icon.lp-tlpd-wol-korea:hover {
+  background-position: calc(-160px) -64px;
+}
+.lp-icon.lp-tlpd-sospa {
+  background-position: calc(-192px) -96px;
+}
+.lp-icon.lp-tlpd-sospa:hover {
+  background-position: calc(-192px) -64px;
 }
 @media (max-width: 767px) {
   .navbar-brand {

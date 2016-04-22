@@ -6912,12 +6912,6 @@ p {
   background-size: auto 128px;
   vertical-align: middle;
 }
-.lp-icon.lp-afreeca {
-  background-position: 0 -32px;
-}
-.lp-icon.lp-afreeca:hover {
-  background-position: 0 0;
-}
 .lp-icon.lp-aligulac {
   background-position: calc(-32px) -32px;
 }
@@ -7127,6 +7121,24 @@ p {
 }
 .lp-icon.lp-tlpd-sospa:hover {
   background-position: calc(-192px) -64px;
+}
+.lp-icon.lp-gosugamers {
+  background-position: calc(-224px) -96px;
+}
+.lp-icon.lp-gosugamers:hover {
+  background-position: calc(-224px) -64px;
+}
+.lp-icon.lp-bracket {
+  background-position: calc(-256px) -96px;
+}
+.lp-icon.lp-bracket:hover {
+  background-position: calc(-256px) -64px;
+}
+.lp-icon.lp-afreeca {
+  background-position: calc(-288px) -96px;
+}
+.lp-icon.lp-afreeca:hover {
+  background-position: calc(-288px) -64px;
 }
 @media (max-width: 767px) {
   .navbar-brand {

@@ -45,7 +45,6 @@ function adjustSidebar() {
 		$('#sidebar-toc').addClass('affix');
 		currentState = 'middle';
 	}
-	console.log(currentState);
 
 	if (currentState == 'bottom') {
 		$('#sidebar-toc').css('bottom', ($('#footer').outerHeight() + 10) - distanceToBottom - $('#sidebar-ad').outerHeight() - 18);

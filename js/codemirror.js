@@ -6,7 +6,7 @@ $(document).ready(function() {
 			editmode = 'text/javascript';
 		} else if((locationStr.endsWith('.css')) || (locationStr.includes('.css&'))) {
 			editmode = 'text/css';
-		} else if((locationStr.endsWith('.lua')) || (locationStr.includes('.lua&'))) {
+		} else if(locationStr.includes('/index.php?title=Module:')) {
 			editmode = 'text/x-lua';
 		} else {
 			editmode = 'text/mediawiki';

@@ -12,7 +12,7 @@
 	"type": "skin",
 	"config": {
 		"liquiflow-prefs-show-dropdown-on-hover": false,
-		"liquiflow-prefs-use-codemirror": false
+		"liquiflow-prefs-use-codemirror": true
 	},
 	"ConfigRegistry": {
 		"liquiflow": "GlobalVarConfig::newInstance"

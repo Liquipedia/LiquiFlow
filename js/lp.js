@@ -99,9 +99,7 @@ $(document).ready(function () {
 	/* Add fancy popup reference boxes */
 	$('sup.reference').each(function() {
 		var href = $(this).children('a').attr('href');
-		console.log(href);
 		href = href.replace(/\./g,"\\\.").replace(/\:/g,"\\\:");
-		console.log(href);
 		var reference = $(href + ' > .reference-text').html();
 		$(this).children('a').attr('href', 'javascript:;');
 		$(this)

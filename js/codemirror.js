@@ -36,5 +36,28 @@ $(document).ready(function() {
 		$('#wpTextbox1').change(function() {
 			editor.setCode($(this).val());
 		});
+		$('.CodeMirror').on('click', '.cm-mw-template-name', function(e) {
+			if (e.altKey){
+				var templatename = $(this).text();
+				var index = $(this).index();
+				var counter;
+
+				counter = index - 1;
+				while($(this).parent().children().eq(counter).hasClass('cm-mw-template-name')) {
+					templatename = $(this).parent().children().eq(counter).text() + templatename;
+					counter--;
+				}
+
+				counter = index + 1;
+				while($(this).parent().children().eq(counter).hasClass('cm-mw-template-name')) {
+					templatename = templatename + $(this).parent().children().eq(counter).text();
+					counter++;
+				}
+
+				templatename = templatename.substr(0, 1).toUpperCase() + templatename.substr(1);
+
+				window.open(mw.config.get('wgScriptPath') + '/Template:' + templatename)
+			}
+		});
 	}
 });

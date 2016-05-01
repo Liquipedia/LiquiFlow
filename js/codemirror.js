@@ -36,27 +36,38 @@ $(document).ready(function() {
 		$('#wpTextbox1').change(function() {
 			editor.setCode($(this).val());
 		});
+		
+		function openPageOnClick( cssClass, namespace, element){
+			var pagename = element.text();
+			var index = element.index();
+			var counter;
+
+			counter = index - 1;
+			while(element.parent().children().eq(counter).hasClass(cssClass)) {
+				pagename = element.parent().children().eq(counter).text() + pagename;
+				counter--;
+			}
+
+			counter = index + 1;
+			while(element.parent().children().eq(counter).hasClass(cssClass)) {
+				pagename = pagename + element.parent().children().eq(counter).text();
+				counter++;
+			}
+
+			pagename = pagename.substr(0, 1).toUpperCase() + pagename.substr(1);
+
+			window.open(mw.config.get('wgScriptPath') + '/'+ namespace + pagename);
+		}
+		
 		$('.CodeMirror').on('click', '.cm-mw-template-name', function(e) {
 			if (e.altKey){
-				var templatename = $(this).text();
-				var index = $(this).index();
-				var counter;
-
-				counter = index - 1;
-				while($(this).parent().children().eq(counter).hasClass('cm-mw-template-name')) {
-					templatename = $(this).parent().children().eq(counter).text() + templatename;
-					counter--;
-				}
-
-				counter = index + 1;
-				while($(this).parent().children().eq(counter).hasClass('cm-mw-template-name')) {
-					templatename = templatename + $(this).parent().children().eq(counter).text();
-					counter++;
-				}
-
-				templatename = templatename.substr(0, 1).toUpperCase() + templatename.substr(1);
-
-				window.open(mw.config.get('wgScriptPath') + '/Template:' + templatename)
+				openPageOnClick('cm-mw-template-name', 'Template:', $(this));
+			}
+		});
+		
+		$('.CodeMirror').on('click', '.cm-mw-link-pagename', function(e) {
+			if (e.altKey){
+				openPageOnClick('cm-mw-link-pagename', '', $(this));
 			}
 		});
 	}

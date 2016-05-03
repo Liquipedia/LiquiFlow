@@ -20,12 +20,27 @@ class SkinLiquiFlow extends SkinTemplate {
 		
 		parent::initPage( $out );
 
+		// add text to recruit people from landing page
+		$out->addHeadItem('recruitment', 
+			"<!-- \n" .
+			"\t _ _             _                _ _       \n" .
+			"\t| (_) __ _ _   _(_)_ __   ___  __| (_) __ _ \n" .
+			"\t| | |/ _` | | | | | '_ \ / _ \/ _` | |/ _` |\n" .
+			"\t| | | (_| | |_| | | |_) |  __/ (_| | | (_| |\n" .
+			"\t|_|_|\__, |\__,_|_| .__/ \___|\__,_|_|\__,_|\n" .
+			"\t        |_|       |_|                       \n" .
+			"\n" .
+			"\tHi you, yes you who's looking at our source code! Are you a website specialist?\n" .
+			"\tWe are looking for people to help us with our templates, especially with mobile development.\n" .
+			"\tIf you want to help, be sure to visit us on our IRC channel #liquipedia on QuakeNet!\n" .
+			"-->");
+
 		// Append CSS which includes IE only behavior fixes for hover support -
 		// this is better than including this in a CSS file since it doesn't
 		// wait for the CSS file to load before fetching the HTC file.
 		// $min = $this->getRequest()->getFuzzyBool( 'debug' ) ? '' : '.min';
 		
-		$out->addHeadItem( 'ie-edge',  "<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">");
+		$out->addHeadItem( 'ie-edge', "<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">");
 		$out->addHeadItem( 'x-ie8-fix',
 			"<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->\n" .
 		"<!--[if lt IE 9]>\n" .

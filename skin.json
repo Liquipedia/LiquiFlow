@@ -28,7 +28,7 @@
 	"AutoloadClasses": {
 		"SkinLiquiFlow": "SkinLiquiFlow.php",
 		"LiquiFlowTemplate": "LiquiFlowTemplate.php",
-                "LiquiFlowHooks": "LiquiFlowHooks.php"
+		"LiquiFlowHooks": "LiquiFlowHooks.php"
 	},
 	"Hooks": {
 		"GetPreferences": "LiquiFlowHooks::onGetPreferences",
@@ -39,7 +39,7 @@
 			"styles": [
 				"vendor/font-awesome/css/font-awesome.css",
 				"vendor/liquipedia-custom-icons/css/Liquipedia-Custom-Icons.css"
-                        ],
+			],
 			"scripts": [
 				"js/jquery.min.js",
 				"js/bootstrap.min.js",
@@ -89,19 +89,19 @@
 				"skins.liquiflow"
 			]
 		},
-                "skins.liquiflow.hoverdropdown": {
-                        "scripts": [
-                                "js/hover-dropdown.js"
-                        ],
+		"skins.liquiflow.hoverdropdown": {
+			"scripts": [
+				"js/hover-dropdown.js"
+			],
 			"position": "top",
 			"dependencies": [
 				"skins.liquiflow"
 			]
-                },
+		},
 		"skins.liquiflow.theme.commons": {
 			"styles": [
 				"themes/commons.css"
-                        ],
+			],
 			"position": "top",
 			"dependencies": [
 				"skins.liquiflow"

@@ -32,7 +32,8 @@ class SkinLiquiFlow extends SkinTemplate {
 			"\n" .
 			"\tHi you, yes you who's looking at our source code! Are you a website specialist?\n" .
 			"\tWe are looking for people to help us with our templates, especially with mobile development.\n" .
-			"\tIf you want to help, be sure to visit us on our IRC channel #liquipedia on QuakeNet!\n" .
+			"\tIf you want to help, be sure to visit us on our IRC channel #liquipedia on QuakeNet,\n" .
+			"\tor send us an email to liquipedia <at> teamliquid <dot> net!\n" .
 			"-->");
 
 		// Append CSS which includes IE only behavior fixes for hover support -

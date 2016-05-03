@@ -6425,7 +6425,7 @@ a#back-to-top:hover {
 }
 /* uncommenting this toggles the toc going smaller
 #sidebar-toc .nav .nav {
-  display: none;
+	display: none;
 }
 */
 #sidebar-toc .nav > .active > ul {
@@ -6802,7 +6802,7 @@ label[for=wpRemember] {
 }
 /*
 ul#pagehistory > .mw-history-histlinks {
-  margin-right: 5px;
+	margin-right: 5px;
 }
 */
 ul#pagehistory input {
@@ -6910,7 +6910,10 @@ p {
   height: 32px;
   overflow: hidden;
   background-size: auto 128px;
+  /* also change in footer.less at a.social-icon, 4 * @lp-icon-size */
   vertical-align: middle;
+  /* row 1, first icon (index 0) is error to prevent typos */
+  /* row 2 */
 }
 .lp-icon.lp-aligulac {
   background-position: calc(-32px) -32px;
@@ -7075,70 +7078,70 @@ p {
   background-position: calc(-864px) 0;
 }
 .lp-icon.lp-stream {
-  background-position: 0 -96px;
+  background-position: 0 calc(-96px);
 }
 .lp-icon.lp-stream:hover {
-  background-position: 0 -64px;
+  background-position: 0 calc(-64px);
 }
 .lp-icon.lp-tlstream {
-  background-position: calc(-32px) -96px;
+  background-position: calc(-32px) calc(-96px);
 }
 .lp-icon.lp-tlstream:hover {
-  background-position: calc(-32px) -64px;
+  background-position: calc(-32px) calc(-64px);
 }
 .lp-icon.lp-fanclub {
-  background-position: calc(-64px) -96px;
+  background-position: calc(-64px) calc(-96px);
 }
 .lp-icon.lp-fanclub:hover {
-  background-position: calc(-64px) -64px;
+  background-position: calc(-64px) calc(-64px);
 }
 .lp-icon.lp-tlpd-hots {
-  background-position: calc(-96px) -96px;
+  background-position: calc(-96px) calc(-96px);
 }
 .lp-icon.lp-tlpd-hots:hover {
-  background-position: calc(-96px) -64px;
+  background-position: calc(-96px) calc(-64px);
 }
 .lp-icon.lp-tlpd {
-  background-position: calc(-128px) -96px;
+  background-position: calc(-128px) calc(-96px);
 }
 .lp-icon.lp-tlpd:hover {
-  background-position: calc(-128px) -64px;
+  background-position: calc(-128px) calc(-64px);
 }
 .lp-icon.lp-tlpd-wol {
-  background-position: calc(-128px) -96px;
+  background-position: calc(-128px) calc(-96px);
 }
 .lp-icon.lp-tlpd-wol:hover {
-  background-position: calc(-128px) -64px;
+  background-position: calc(-128px) calc(-64px);
 }
 .lp-icon.lp-tlpd-wol-korea {
-  background-position: calc(-160px) -96px;
+  background-position: calc(-160px) calc(-96px);
 }
 .lp-icon.lp-tlpd-wol-korea:hover {
-  background-position: calc(-160px) -64px;
+  background-position: calc(-160px) calc(-64px);
 }
 .lp-icon.lp-tlpd-sospa {
-  background-position: calc(-192px) -96px;
+  background-position: calc(-192px) calc(-96px);
 }
 .lp-icon.lp-tlpd-sospa:hover {
-  background-position: calc(-192px) -64px;
+  background-position: calc(-192px) calc(-64px);
 }
 .lp-icon.lp-gosugamers {
-  background-position: calc(-224px) -96px;
+  background-position: calc(-224px) calc(-96px);
 }
 .lp-icon.lp-gosugamers:hover {
-  background-position: calc(-224px) -64px;
+  background-position: calc(-224px) calc(-64px);
 }
 .lp-icon.lp-bracket {
-  background-position: calc(-256px) -96px;
+  background-position: calc(-256px) calc(-96px);
 }
 .lp-icon.lp-bracket:hover {
-  background-position: calc(-256px) -64px;
+  background-position: calc(-256px) calc(-64px);
 }
 .lp-icon.lp-afreeca {
-  background-position: calc(-288px) -96px;
+  background-position: calc(-288px) calc(-96px);
 }
 .lp-icon.lp-afreeca:hover {
-  background-position: calc(-288px) -64px;
+  background-position: calc(-288px) calc(-64px);
 }
 @media (max-width: 767px) {
   .navbar-brand {

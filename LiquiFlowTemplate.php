@@ -727,7 +727,7 @@ $footerLinks = $this->getFooterLinks();
 <!-- Bootstrap core JavaScript -->
 <?php $this->printTrail(); ?>
 
-
+<?php include ('TeamLiquidFooter.inc'); ?>
 </body>
 </html>
 

@@ -90,7 +90,7 @@ class LiquiFlowTemplate extends BaseTemplate {
 	public function execute() {
 		global $wgUser;
 		global $wgLiquiFlowWikiTitle;
-                
+
 		// Build additional attributes for navigation urls
 		$nav = $this->data['content_navigation'];
 
@@ -159,7 +159,7 @@ class LiquiFlowTemplate extends BaseTemplate {
 			$toc = substr($match[0], 0, -6);
 			$toc = str_replace('<ul>', '<ul class="nav">', $toc);
 			
-                        // Adjust Data-Targets in menu so scrollspy works properly with special characters
+			// Adjust Data-Targets in menu so scrollspy works properly with special characters
 			preg_match_all('/\<a href=\"(.*?)\"\>/', $toc, $toc_matches);
 			foreach($toc_matches[1] as $match) {
 				$toc = str_replace('<a href="' . $match . '"', '<a data-target="' . preg_replace('/\./', '\\\\.', preg_replace('/\:/', '\\\\:', $match)) . '" href="' . $match . '"', $toc);
@@ -624,61 +624,61 @@ $footerLinks = $this->getFooterLinks();
 			<div class="col-md-2 col-sm-3 col-xs-12">
 				<h4><?php $this->msg( 'about') ?></h4>
 				<ul>
-							<?php foreach ( $footerLinks['places'] as $link ) :	?>
-								<li id="footer-places-<?php echo $link; ?>">
-									<?php $this->html( $link );?>
-								</li>
-							<?php endforeach; ?>
-						</ul>
+					<?php foreach ( $footerLinks['places'] as $link ) :	?>
+						<li id="footer-places-<?php echo $link; ?>">
+							<?php $this->html( $link );?>
+						</li>
+					<?php endforeach; ?>
+				</ul>
 			</div>
 			<div class="col-md-2 col-sm-3 hidden-xs">
 				<h4><?php $this->msg( 'liquiflow-contact-us') ?></h4>
 				<ul>
-				<li><a href="mailto:liquipedia@teamliquid.net"><?php $this->msg( 'liquiflow-send-an-email') ?></a></li>
-				<li><a href="http://www.teamliquid.net/forum/website-feedback/94785-liquipedia-feedback-thread" target="_blank"><?php $this->msg( 'liquiflow-post-feedback') ?></a></li>
-				<li><a href="http://webchat.quakenet.org/?channels=%23liquipedia" target="_blank"><?php $this->msg( 'liquiflow-chat-with-us') ?></a></li>
-			</ul>
+					<li><a href="mailto:liquipedia@teamliquid.net"><?php $this->msg( 'liquiflow-send-an-email') ?></a></li>
+					<li><a href="http://www.teamliquid.net/forum/website-feedback/94785-liquipedia-feedback-thread" target="_blank"><?php $this->msg( 'liquiflow-post-feedback') ?></a></li>
+					<li><a href="http://webchat.quakenet.org/?channels=%23liquipedia" target="_blank"><?php $this->msg( 'liquiflow-chat-with-us') ?></a></li>
+				</ul>
 			</div>
 
 			<div class="col-md-2 hidden-sm hidden-xs">
 				<h4><?php $this->msg( 'liquiflow-affiliated-sites') ?></h4>
 				<ul>
-				<li><a href="http://www.teamliquid.net" target="_blank">TeamLiquid.net</a></li>
-				<li><a href="http://www.liquiddota.com" target="_blank">LiquidDota.com</a></li>
-				<li><a href="http://www.liquidhearth.com" target="_blank">LiquidHearth.com</a></li>
-				<li><a href="http://www.liquidlegends.net" target="_blank">LiquidLegends.net</a></li>
-			</ul>
+					<li><a href="http://www.teamliquid.net" target="_blank">TeamLiquid.net</a></li>
+					<li><a href="http://www.liquiddota.com" target="_blank">LiquidDota.com</a></li>
+					<li><a href="http://www.liquidhearth.com" target="_blank">LiquidHearth.com</a></li>
+					<li><a href="http://www.liquidlegends.net" target="_blank">LiquidLegends.net</a></li>
+				</ul>
 			</div>
 
 			<div class="col-md-2 col-sm-3 hidden-xs">
 				<h4><?php $this->msg( 'liquiflow-follow-us') ?></h4>
 				<ul id="footer-social-media">
-				<li>
-					<a target="_blank" href="http://twitter.com/LiquipediaNet" class="social-icon twitter-icon">
-						<span class="social-link">Twitter</span>
-					</a>
-				</li>
-				<li>
-					<a target="_blank" href="https://www.facebook.com/Liquipedia" class="social-icon facebook-icon">
-						<span class="social-link">Facebook</span>
-					</a>
-				</li>
-				<li>
-					<a target="_blank" href="https://www.youtube.com/user/Liquipedia" class="social-icon youtube-icon">
-						<span class="social-link">Youtube</span>
-					</a>
-				</li>
-				<li>
-					<a target="_blank" href="http://www.twitch.tv/liquipedia" class="social-icon twitch-icon">
-						<span class="social-link">Twitch</span>
-					</a>
-				</li>
-				<li>
-					<a target="_blank" href="http://www.github.com/Liquipedia" class="social-icon github-icon">
-						<span class="social-link">GitHub</span>
-					</a>
-				</li>
-			</ul>
+					<li>
+						<a target="_blank" href="http://twitter.com/LiquipediaNet" class="social-icon twitter-icon">
+							<span class="social-link">Twitter</span>
+						</a>
+					</li>
+					<li>
+						<a target="_blank" href="https://www.facebook.com/Liquipedia" class="social-icon facebook-icon">
+							<span class="social-link">Facebook</span>
+						</a>
+					</li>
+					<li>
+						<a target="_blank" href="https://www.youtube.com/user/Liquipedia" class="social-icon youtube-icon">
+							<span class="social-link">Youtube</span>
+						</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://www.twitch.tv/liquipedia" class="social-icon twitch-icon">
+							<span class="social-link">Twitch</span>
+						</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://www.github.com/Liquipedia" class="social-icon github-icon">
+							<span class="social-link">GitHub</span>
+						</a>
+					</li>
+				</ul>
 			</div>
 		</div><!-- ./footer-links -->
 		</div><!-- ./row -->
@@ -1075,8 +1075,8 @@ $footerLinks = $this->getFooterLinks();
 					<li class="hidden-xs">
 						<form action="<?php $this->text( 'wgScript' ) ?>" id="searchform" class="navbar-form" role="search">
 							<div class="input-group">
-								<input  id="searchInput" type="search" accesskey="f"
-									title="<?php $this->msg( 'liquiflow-search' ); ?> Liquipedia <?php echo $wgLiquiFlowWikiTitle;?> Wiki [alt-shift-f]" placeholder="<?php $this->msg( 'liquiflow-search-placeholder' ); ?>"
+								<input  id="searchInput" type="search" accesskey="<?php $this->msg( 'accesskey-search' ); ?>"
+									title="<?php $this->msg( 'liquiflow-search' ); ?> Liquipedia <?php echo $wgLiquiFlowWikiTitle;?> Wiki [alt-shift-<?php $this->msg( 'accesskey-search' ); ?>]" placeholder="<?php $this->msg( 'liquiflow-search-placeholder' ); ?>"
 									name="search" autocomplete="off" class="form-control">
 								<div class="input-group-btn">
 									<button class="btn btn-default searchButton" type="submit" id="searchButton">

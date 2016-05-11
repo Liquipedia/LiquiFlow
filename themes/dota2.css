@@ -7442,6 +7442,9 @@ h1 .mw-editsection {
 h2 .mw-editsection {
   padding-top: 15px;
 }
+h3 .mw-editsection {
+  padding-top: 13px;
+}
 /* restrict maximum image size in content */
 .img-responsive img,
 #file img {

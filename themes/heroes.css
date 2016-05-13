@@ -7215,6 +7215,12 @@ p {
 .lp-icon.lp-music:hover {
   background-position: -672px -64px;
 }
+.lp-icon.lp-pandatv {
+  background-position: -704px -96px;
+}
+.lp-icon.lp-pandatv:hover {
+  background-position: -704px -64px;
+}
 @media (max-width: 767px) {
   .navbar-brand {
     font-size: 16pt;

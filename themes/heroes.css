@@ -7143,6 +7143,78 @@ p {
 .lp-icon.lp-afreeca:hover {
   background-position: -288px -64px;
 }
+.lp-icon.lp-rules {
+  background-position: -320px -96px;
+}
+.lp-icon.lp-rules:hover {
+  background-position: -320px -64px;
+}
+.lp-icon.lp-iccup {
+  background-position: -352px -96px;
+}
+.lp-icon.lp-iccup:hover {
+  background-position: -352px -64px;
+}
+.lp-icon.lp-esl {
+  background-position: -384px -96px;
+}
+.lp-icon.lp-esl:hover {
+  background-position: -384px -64px;
+}
+.lp-icon.lp-esea {
+  background-position: -416px -96px;
+}
+.lp-icon.lp-esea:hover {
+  background-position: -416px -64px;
+}
+.lp-icon.lp-skgaming {
+  background-position: -448px -96px;
+}
+.lp-icon.lp-skgaming:hover {
+  background-position: -448px -64px;
+}
+.lp-icon.lp-douyutv {
+  background-position: -480px -96px;
+}
+.lp-icon.lp-douyutv:hover {
+  background-position: -480px -64px;
+}
+.lp-icon.lp-tlprofile {
+  background-position: -512px -96px;
+}
+.lp-icon.lp-tlprofile:hover {
+  background-position: -512px -64px;
+}
+.lp-icon.lp-cafe-daum {
+  background-position: -544px -96px;
+}
+.lp-icon.lp-cafe-daum:hover {
+  background-position: -544px -64px;
+}
+.lp-icon.lp-abios {
+  background-position: -576px -96px;
+}
+.lp-icon.lp-abios:hover {
+  background-position: -576px -64px;
+}
+.lp-icon.lp-youku {
+  background-position: -608px -96px;
+}
+.lp-icon.lp-youku:hover {
+  background-position: -608px -64px;
+}
+.lp-icon.lp-hitbox {
+  background-position: -640px -96px;
+}
+.lp-icon.lp-hitbox:hover {
+  background-position: -640px -64px;
+}
+.lp-icon.lp-music {
+  background-position: -672px -96px;
+}
+.lp-icon.lp-music:hover {
+  background-position: -672px -64px;
+}
 @media (max-width: 767px) {
   .navbar-brand {
     font-size: 16pt;

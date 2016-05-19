@@ -22,7 +22,7 @@ function adjustSidebar() {
 	}
 
 	var distanceToFooter = $(document).height() - $('#slide-nav').outerHeight() - $(window).scrollTop()
-		- $('#sidebar-toc').outerHeight() - $('#footer').outerHeight() + $('#sidebar-ad').outerHeight() - tocBottomOffset;
+		- $('#sidebar-toc').outerHeight() - $('#footer').outerHeight() + ($('#sidebar-ad').length?$('#sidebar-ad').outerHeight():0) - tocBottomOffset;
 	var distanceToBottom = $(document).height() - $(window).height() - $(window).scrollTop();
 	var isScrollingDown = ((scrollTop - lastScrollTop) > 0) ? true : false;
 	var offsetTop = $('#sidebar-toc').offset().top - scrollTop;
@@ -47,7 +47,7 @@ function adjustSidebar() {
 	}
 
 	if (currentState == 'bottom') {
-		$('#sidebar-toc').css('bottom', ($('#footer').outerHeight() + 10) - distanceToBottom - $('#sidebar-ad').outerHeight() - 18);
+		$('#sidebar-toc').css('bottom', ($('#footer').outerHeight() + 10) - distanceToBottom - ($('#sidebar-ad').length?$('#sidebar-ad').outerHeight():0) - 18);
 	}
 	
 	$('#sidebar-toc > .nav').css('max-height', ($(window).height() - (tocTopOffset + secondNavbar + 18) - (navMaxHeightAd?285:tocHeightModifier) + tocBottomOffset) + 'px');

@@ -515,9 +515,7 @@ class LiquiFlowTemplate extends BaseTemplate {
 			<?php if (strlen($toc) > 0) : ?>
 			<?php echo $toc; ?>
 			<?php endif;?>
-			<div id="sidebar-ad">
-				<?php include ('TeamLiquidStickyAd.inc'); ?>
-			</div>
+			<?php Hooks::run( 'LiquiFlowAdSidebar', array( __DIR__ ) ); ?>
 		</div>
 	</div><!-- /#sidebar-toc-colum -->
 
@@ -528,9 +526,7 @@ class LiquiFlowTemplate extends BaseTemplate {
 		<div id="main-content-column" class="col-md-12">
 			<div id="main-content" class="mw-body">
 
-		<div class="top-ad">
-			<?php include ('TeamLiquidTopAd.inc'); ?>
-				</div>
+				<?php Hooks::run( 'LiquiFlowAdTop', array( __DIR__ ) ); ?>
 
 				<?php if ( $this->data['sitenotice'] ) : ?>
 				<div id="siteNotice">
@@ -727,7 +723,7 @@ $footerLinks = $this->getFooterLinks();
 <!-- Bootstrap core JavaScript -->
 <?php $this->printTrail(); ?>
 
-<?php include ('TeamLiquidFooter.inc'); ?>
+<?php Hooks::run( 'LiquiFlowAdEndCode', array( __DIR__ ) ); ?>
 </body>
 </html>
 

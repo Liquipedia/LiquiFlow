@@ -50,9 +50,7 @@ class SkinLiquiFlow extends SkinTemplate {
 		"<![endif]-->");
 		$out->addHeadItem( 'responsive', "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">");
 
-		global $tlAdCode;
-		include ('TLAdHeader.inc');
-		$out->addHeadItem( 'tlads', $tlAdCode);
+		Hooks::run( 'LiquiFlowAdStartCode', array( __DIR__, &$out ) );
 		
 		$out->addModuleScripts( 'skins.liquiflow' );
 		if ($this->getSkin()->getUser()->getOption ( 'liquiflow-prefs-show-dropdown-on-hover' ) == true) {

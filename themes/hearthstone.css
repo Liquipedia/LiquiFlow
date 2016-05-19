@@ -7663,6 +7663,9 @@ div.wikitext-quote {
     width: 280px;
   }
 }
+.input-group-btn > .searchButton {
+  height: 26pt;
+}
 .flaggedrevs_reviewform {
   background-color: transparent !important;
 }
@@ -7708,6 +7711,10 @@ body#top.ns--1.mw-special-Ask #mw-content-text table {
 /* fix preview tab of editor */
 .wikiEditor-ui * {
   box-sizing: inherit;
+}
+/* remove unnecessary margin */
+.firstHeading {
+  margin-top: 0;
 }
 /* Underlining for abbreviations */
 @supports (text-decoration: underline dotted) {

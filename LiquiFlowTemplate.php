@@ -207,248 +207,251 @@ class LiquiFlowTemplate extends BaseTemplate {
 				<?php if (strlen($toc) > 0) { ?>
 					<div id="slide-toc" class="visible-xs">
 						<div id="scroll-wrapper-toc" class="<?php if(isset($toclimit)) {echo 'toclimit-'.$toclimit;} ?>">
-						<ul class="nav navbar-nav">
-							<?php echo $toc; ?>
-						</ul>
-					</div>
+							<div class="nav navbar-nav">
+								<?php echo str_replace('id="toctitle"', 'id="toctitle-mobile"', $toc); ?>
+							</div>
+						</div>
 					</div>
 				<?php }	?>
 
 				<div id="slidemenu">
 					<div id="scroll-wrapper-menu">
-					<ul class="nav navbar-nav">
-					<?php
-					$currentWikiTitle = key($this->data['sidebar']);
-					$wikiNavigation = array_shift($this->data['sidebar']);
-					?>
-						<li class="dropdown dropdown-brand hidden-xs">
-							<a class="dropdown-toggle brand-title" data-toggle="dropdown" data-hover="dropdown" href="#">
-								<span class="brand-name logotype" style="font-size: 18px;">liquipedia</span> <span class="caret"></span> <br>
-								<span class="hidden-xs brand-subtitle">
-									<?php echo $currentWikiTitle; ?>
-								</span>
-							</a>
-							<ul class="dropdown-menu">
-							<?php
-								foreach ($wikiNavigation as $wikiNavigationEntry) {
-									echo '<li><a href="'.$wikiNavigationEntry['href'].'">'.$wikiNavigationEntry['text'].'</a></li>';
-								}
-							?>
-							</ul>
-						</li>
-
-					<?php
-
-					foreach ($this->data['sidebar'] as $navHeader => $navEntryArray) {
-
-
-						if ($navHeader == 'TRENDING') {
-							?>
-							<li class="dropdown icon-tablet">
-								<a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="#">
-									<div class="visible-xl visible-lg visible-md visible-xs"><span class="fa fa-fw fa-line-chart"></span> Trending <span class="caret"></span></div>
-									<div class="visible-sm">
-										<span class="fa fa-fw fa-line-chart"></span> <span class="caret"></span>
-									</div>
+						<ul class="nav navbar-nav">
+						<?php
+						$currentWikiTitle = key($this->data['sidebar']);
+						$wikiNavigation = array_shift($this->data['sidebar']);
+						?>
+							<li class="dropdown dropdown-brand hidden-xs">
+								<a class="dropdown-toggle brand-title" data-toggle="dropdown" data-hover="dropdown" href="#">
+									<span class="brand-name logotype" style="font-size: 18px;">liquipedia</span> <span class="caret"></span> <br>
+									<span class="hidden-xs brand-subtitle">
+										<?php echo $currentWikiTitle; ?>
+									</span>
 								</a>
-								<ul id="trending-pages-menu" class="dropdown-menu"></ul>
-							</li>
-							<?php
-						} elseif ($navHeader == 'TOURNAMENTS') {
-							?>
-							<li class="dropdown hidden-xs icon-tablet">
-								<a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="#">
-									<div class="visible-xl visible-lg visible-md visible-xs"><span class="fa fa-fw fa-trophy"></span> Tournaments <span class="caret"></span></div>
-									<div class="visible-sm">
-										<span class="fa fa-fw fa-trophy"></span> <span class="caret"></span>
-									</div>
-								</a>
-								<div class="dropdown-menu multi-column columns-3">
-					<div class="row">
+								<ul class="dropdown-menu">
 								<?php
-								if (is_array($navEntryArray)) {
-									foreach ($navEntryArray as $subNavHeader => $navSubEntryArray) {
-										?>
-										<div class="col-sm-4">
-											<ul class="multi-column-dropdown">
-											<li class="dropdown-header"><?php echo $subNavHeader; ?></li>
+									foreach ($wikiNavigation as $wikiNavigationEntry) {
+										echo '<li><a href="'.$wikiNavigationEntry['href'].'">'.$wikiNavigationEntry['text'].'</a></li>';
+									}
+								?>
+								</ul>
+							</li>
+
+						<?php
+
+						foreach ($this->data['sidebar'] as $navHeader => $navEntryArray) {
+
+
+							if ($navHeader == 'TRENDING') {
+								?>
+								<li class="dropdown icon-tablet">
+									<a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="#">
+										<div class="visible-xl visible-lg visible-md visible-xs"><span class="fa fa-fw fa-line-chart"></span> Trending <span class="caret"></span></div>
+										<div class="visible-sm">
+											<span class="fa fa-fw fa-line-chart"></span> <span class="caret"></span>
+										</div>
+									</a>
+									<ul id="trending-pages-menu" class="dropdown-menu"></ul>
+								</li>
+								<?php
+							} elseif ($navHeader == 'TOURNAMENTS') {
+								?>
+								<li class="dropdown hidden-xs icon-tablet">
+									<a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="#">
+										<div class="visible-xl visible-lg visible-md visible-xs"><span class="fa fa-fw fa-trophy"></span> Tournaments <span class="caret"></span></div>
+										<div class="visible-sm">
+											<span class="fa fa-fw fa-trophy"></span> <span class="caret"></span>
+										</div>
+									</a>
+									<div class="dropdown-menu multi-column columns-3">
+										<div class="row">
 										<?php
-										if (is_array($navSubEntryArray)) {
-											foreach ($navSubEntryArray as $navEntry) {
-												echo '<li><a href="'.$navEntry['href'].'">'.$navEntry['text'].'</a></li>';
+										if (is_array($navEntryArray)) {
+											foreach ($navEntryArray as $subNavHeader => $navSubEntryArray) {
+												?>
+												<div class="col-sm-4">
+													<ul class="multi-column-dropdown">
+													<li class="dropdown-header"><?php echo $subNavHeader; ?></li>
+												<?php
+												if (is_array($navSubEntryArray)) {
+													foreach ($navSubEntryArray as $navEntry) {
+														echo '<li><a href="'.$navEntry['href'].'">'.$navEntry['text'].'</a></li>';
+													}
+												}
+												?>
+													</ul>
+												</div>
+											<?php
 											}
 										}
 										?>
-											</ul>
 										</div>
+										<div class="row">
+											<div style="float:right; margin-right:23px"><a href="<?php echo Title::newFromText('Tournaments', NS_PROJECT)->getLocalURL(); ?>">[edit]</a></div>
+										</div>
+									</div>
+								</li>
+								<li class="visible-xs mobile-divider"></li>
 									<?php
+									if (is_array($navEntryArray)) {
+										foreach ($navEntryArray as $subNavHeader => $navSubEntryArray) {
+											?>
+									<li class="dropdown visible-xs">
+										<a class="dropdown-toggle"	data-toggle="dropdown" href="#">
+											<span class="fa fa-fw fa-trophy"></span> <?php echo $subNavHeader; ?> <span class="caret"></span>
+										</a>
+										<ul class="dropdown-menu">
+										<?php
+											if (is_array($navSubEntryArray)) {
+												foreach ($navSubEntryArray as $navEntry) {
+													echo '<li><a href="'.$navEntry['href'].'">'.$navEntry['text'].'</a></li>';
+												}
+											}
+											?>
+
+											</ul>
+										</li>
+										<?php
+										}
 									}
-								}
+							} elseif ($navHeader == 'Contribute') {
 								?>
-								</div>
-								<div class="row">
-									<div style="float:right; margin-right:23px"><a href="<?php echo Title::newFromText('Tournaments', NS_PROJECT)->getLocalURL(); ?>">[edit]</a></div>
-								</div>
-								</div>
-							</li>
-							<li class="visible-xs mobile-divider"></li>
-								<?php
-								if (is_array($navEntryArray)) {
-									foreach ($navEntryArray as $subNavHeader => $navSubEntryArray) {
-										?>
-								<li class="dropdown visible-xs">
-									<a class="dropdown-toggle"	data-toggle="dropdown" href="#">
-										<span class="fa fa-fw fa-trophy"></span> <?php echo $subNavHeader; ?> <span class="caret"></span>
+								<li class="visible-xs mobile-divider"></li>
+								<li class="dropdown icon-tablet">
+									<a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="#">
+										<div class="visible-xl visible-lg visible-md visible-xs"><span class="fa fa-fw fa-puzzle-piece"></span> <?php echo $navHeader; ?> <span class="caret"></span></div>
+										<div class="visible-sm">
+											<span class="fa fa-fw fa-puzzle-piece"></span> <span class="caret"></span>
+										</div>
 									</a>
 									<ul class="dropdown-menu">
 									<?php
-										if (is_array($navSubEntryArray)) {
-											foreach ($navSubEntryArray as $navEntry) {
-												echo '<li><a href="'.$navEntry['href'].'">'.$navEntry['text'].'</a></li>';
-											}
-										}
-										?>
+									foreach ($navEntryArray as $navEntry) {
+										echo '<li><a href="'.$navEntry['href'].'">'.$navEntry['text'].'</a></li>';
+									}
+									?>
+									</ul>
+								</li>
+								<?php
+							} else {
+								?>
+								<li class="visible-xs mobile-divider"></li>
+								<li class="dropdown icon-tablet">
+									<a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="#">
+										 '<?php echo $navHeader; ?>' <span class="caret"></span>
+									</a>
+									<ul class="dropdown-menu">
+									<?php
+									foreach ($navEntryArray as $navEntry) {
+										echo '<li><a href="'.$navEntry['href'].'">'.$navEntry['text'].'</a></li>';
+									}
+									?>
+									</ul>
+								</li>
+								<?php
+							}
 
-										</ul>
-									</li>
+						}
+
+						?>
+							<li class="visible-xs mobile-divider"></li>
+							<li class="dropdown visible-xs">
+								<a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="#">
+									<span class="fa fa-fw fa-gavel"></span> Actions <span class="caret"></span>
+								</a>
+								<ul class="dropdown-menu">
+								<?php $this->renderNavigation(array('NAMESPACES', 'VIEWS', 'ACTIONS'), 'mobile') ?>
+								</ul>
+							</li>
+							<li class="dropdown visible-xs">
+								<a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="#">
+									<span class="fa fa-fw fa-share-alt"></span> <span class="hidden-sm"><?php $this->msg( 'liquiflow-share' ); ?></span> <span class="caret"></span>
+								</a>
+								<?php $this->renderNavigation( 'SHARE' ); ?>
+							</li>
+							<li class="dropdown visible-xs">
+								<a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="#">
+									<span class="fa fa-fw fa-wrench"></span> <span class="hidden-sm"><?php $this->msg( 'toolbox' ); ?></span> <span class="caret"></span>
+								</a>
+								<?php $this->renderNavigation( 'TOOLBOX', 'mobile' ); ?>
+							</li>
+							<?php if ( in_array( 'sysop', $wgUser->getEffectiveGroups()) ) : ?>
+							<li class="dropdown visible-xs">
+								<a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="#">
+									<span class="fa fa-fw fa-gavel"></span> <span>Admin Links</span> <span class="caret"></span>
+								</a>
+								<?php $this->renderNavigation( 'ADMIN' ); ?>
+							</li>
+							<?php endif; ?>		
+								<?php
+									if ( !$wgUser->isLoggedIn() ) {
+										$personalTools = $this->getPersonalTools();
+										$personalTools['createaccount']['class'] = "visible-xs";
+										$personalTools['createaccount']['id'] = $personalTools['createaccount']['id'] . "-mobile";
+										$personalTools['login']['class'] = "visible-xs";
+										$personalTools['login']['id'] = $personalTools['login']['id'] . "-mobile";
+										echo $this->makeListItem( 'createaccount', $personalTools['createaccount'] );
+										echo $this->makeListItem( 'login', $personalTools['login'] );
+									} else {
+										$personalTools = $this->getPersonalTools();
+										?>
+										<li class="dropdown visible-xs">
+											<a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="#">
+												<span class="fa fa-fw fa-user"></span> <?php echo $personalTools["userpage"]["links"][0]["text"]; ?>
+												<span class="caret"></span>
+											</a>
+											<ul class="dropdown-menu">
+												<?php
+												$personalTools["userpage"]["links"][0]["text"] = "Userpage";
+												foreach ( $personalTools as $key => $item ) {
+													echo $this->makeListItem( $key, $item );
+												}
+												?>
+											</ul>
+										</li>
 									<?php
 									}
-								}
-						} elseif ($navHeader == 'Contribute') {
-							?>
-							<li class="visible-xs mobile-divider"></li>
-							<li class="dropdown icon-tablet">
-								<a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="#">
-									<div class="visible-xl visible-lg visible-md visible-xs"><span class="fa fa-fw fa-puzzle-piece"></span> <?php echo $navHeader; ?> <span class="caret"></span></div>
-									<div class="visible-sm">
-										<span class="fa fa-fw fa-puzzle-piece"></span> <span class="caret"></span>
-									</div>
-								</a>
-								<ul class="dropdown-menu">
-								<?php
-								foreach ($navEntryArray as $navEntry) {
-									echo '<li><a href="'.$navEntry['href'].'">'.$navEntry['text'].'</a></li>';
-								}
-								?>
-								</ul>
-							</li>
-							<?php
-						} else {
-							?>
-							<li class="visible-xs mobile-divider"></li>
-							<li class="dropdown icon-tablet">
-								<a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="#">
-									 '<?php echo $navHeader; ?>' <span class="caret"></span>
-								</a>
-								<ul class="dropdown-menu">
-								<?php
-								foreach ($navEntryArray as $navEntry) {
-									echo '<li><a href="'.$navEntry['href'].'">'.$navEntry['text'].'</a></li>';
-								}
-								?>
-								</ul>
-							</li>
-							<?php
-						}
-
-					}
-
-					?>
-						<li class="visible-xs mobile-divider"></li>
-						<li class="dropdown visible-xs">
-							<a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="#">
-								<span class="fa fa-fw fa-gavel"></span> Actions <span class="caret"></span>
-							</a>
-							<ul class="dropdown-menu">
-							<?php $this->renderNavigation(array('NAMESPACES', 'VIEWS', 'ACTIONS')) ?>
-							</ul>
-						</li>
-						<li class="dropdown visible-xs">
-							<a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="#">
-								<span class="fa fa-fw fa-share-alt"></span> <span class="hidden-sm"><?php $this->msg( 'liquiflow-share' ); ?></span> <span class="caret"></span>
-							</a>
-							<?php $this->renderNavigation( 'SHARE' ); ?>
-						</li>
-						<li class="dropdown visible-xs">
-							<a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="#">
-								<span class="fa fa-fw fa-wrench"></span> <span class="hidden-sm"><?php $this->msg( 'toolbox' ); ?></span> <span class="caret"></span>
-							</a>
-							<?php $this->renderNavigation( 'TOOLBOX' ); ?>
-						</li>
-						<?php if ( in_array( 'sysop', $wgUser->getEffectiveGroups()) ) : ?>
-						<li class="dropdown visible-xs">
-							<a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="#">
-								<span class="fa fa-fw fa-gavel"></span> <span>Admin Links</span> <span class="caret"></span>
-							</a>
-							<?php $this->renderNavigation( 'ADMIN' ); ?>
-						</li>
-						<?php endif; ?>		
-							<?php
-								if ( !$wgUser->isLoggedIn() ) {
-									$personalTools = $this->getPersonalTools();
-									$personalTools['createaccount']['class'] = "visible-xs";
-									$personalTools['login']['class'] = "visible-xs";
-									echo $this->makeListItem( 'createaccount', $personalTools['createaccount'] );
-									echo $this->makeListItem( 'login', $personalTools['login'] );
-								} else {
-									$personalTools = $this->getPersonalTools();
 									?>
-									<li class="dropdown visible-xs">
-										<a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="#">
-											<span class="fa fa-fw fa-user"></span> <?php echo $personalTools["userpage"]["links"][0]["text"]; ?>
-											<span class="caret"></span>
-										</a>
-										<ul class="dropdown-menu">
-											<?php
-											$personalTools["userpage"]["links"][0]["text"] = "Userpage";
-											foreach ( $personalTools as $key => $item ) {
-												echo $this->makeListItem( $key, $item );
-											}
-											?>
-										</ul>
-									</li>
+
+							<li class="visible-xs mobile-divider"></li>
+							<li class="dropdown visible-xs">
+								<a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="#">
+									<span class="fa fa-fw fa-puzzle-piece"></span> Other Wikis <span class="caret"></span>
+								</a>
+								<ul class="dropdown-menu">
 								<?php
-								}
+									foreach ($wikiNavigation as $wikiNavigationEntry) {
+										echo '<li><a href="'.$wikiNavigationEntry['href'].'">'.$wikiNavigationEntry['text'].'</a></li>';
+									}
 								?>
+								</ul>
+							</li>
+							<li class="dropdown visible-xs">
+								<a href="#top">
+									<span class="fa fa-fw fa-arrow-up"></span> Back to top
+								</a>
+							</li>
 
-						<li class="visible-xs mobile-divider"></li>
-						<li class="dropdown visible-xs">
-							<a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="#">
-								<span class="fa fa-fw fa-puzzle-piece"></span> Other Wikis <span class="caret"></span>
-							</a>
-							<ul class="dropdown-menu">
+						</ul><!-- /.navbar-nav -->
+
+						<ul class="nav navbar-nav navbar-right tablet-personal">
 							<?php
-								foreach ($wikiNavigation as $wikiNavigationEntry) {
-									echo '<li><a href="'.$wikiNavigationEntry['href'].'">'.$wikiNavigationEntry['text'].'</a></li>';
-								}
+							if ( !$wgUser->isLoggedIn() ) {
+								$personalTools = $this->getPersonalTools();
+								$personalTools['createaccount']['links'][0]['text'] = "";
+								$personalTools['createaccount']['class'] = "hidden-sm hidden-xs";
+
+								$personalTools['login']['links'][0]['text'] = "";
+								$personalTools['login']['class'] = "icon-tablet hidden-xs";
+								
+								echo $this->makeListItem( 'createaccount', $personalTools['createaccount'] );
+								echo $this->makeListItem( 'login', $personalTools['login'] );
+							}
 							?>
-							</ul>
-						</li>
-						<li class="dropdown visible-xs">
-							<a href="#top">
-								<span class="fa fa-fw fa-arrow-up"></span> Back to top
-							</a>
-						</li>
-
-					</ul><!-- /.navbar-nav -->
-
-					<ul class="nav navbar-nav navbar-right tablet-personal">
-						<?php
-						if ( !$wgUser->isLoggedIn() ) {
-							$personalTools = $this->getPersonalTools();
-							$personalTools['createaccount']['links'][0]['text'] = "";
-							$personalTools['createaccount']['class'] = "hidden-sm hidden-xs";
-
-							$personalTools['login']['links'][0]['text'] = "";
-							$personalTools['login']['class'] = "icon-tablet hidden-xs";
-							echo $this->makeListItem( 'createaccount', $personalTools['createaccount'] );
-							echo $this->makeListItem( 'login', $personalTools['login'] );
-						}
-						?>
-					</ul><!-- /.navbar-nav .navbar-right -->
-					<ul class="nav navbar-nav navbar-right">
-						<?php $this->renderNavigation( 'SEARCH' ); ?>
-					</ul><!-- /.navbar-nav .navbar-right -->
+						</ul><!-- /.navbar-nav .navbar-right -->
+						<ul class="nav navbar-nav navbar-right">
+							<?php $this->renderNavigation( 'SEARCH' ); ?>
+						</ul><!-- /.navbar-nav .navbar-right -->
 
 					</div>	<!-- /#scroll-wrapper-menu -->
 				</div><!-- /#slide-menu -->
@@ -460,9 +463,9 @@ class LiquiFlowTemplate extends BaseTemplate {
 <nav id="mobile-search-bar" class="navbar visible-xs noprint" style="display:none;">
 	<form action="<?php $this->text( 'wgScript' ) ?>" id="mobile-search-form" class="navbar-form navbar-left" role="search">
 		<div class="input-group">
-			<input id="searchInput" type="search" accesskey="f" title="Search Liquipedia <?php echo $wgLiquiFlowWikiTitle; ?> Wiki [alt-shift-f]" placeholder="Search Liquipedia" name="search" autocomplete="off" class="form-control">
+			<input id="searchInput-mobile" type="search" accesskey="f" title="Search Liquipedia <?php echo $wgLiquiFlowWikiTitle; ?> Wiki [alt-shift-f]" placeholder="Search Liquipedia" name="search" autocomplete="off" class="form-control">
 			<div class="input-group-btn">
-				<button class="btn navbar-search-btn searchButton" type="submit" id="searchButton">
+				<button class="btn navbar-search-btn searchButton" type="submit" id="searchButton-mobile">
 					<i class="fa fa-arrow-right"></i>
 				</button>
 			</div>
@@ -513,7 +516,7 @@ class LiquiFlowTemplate extends BaseTemplate {
 	<div id="sidebar-toc-column" style="display: none;">
 		<div id="sidebar-toc" class="sidebar-toc bs-docs-sidebar hidden-print hidden-xs hidden-sm affix-top <?php if(isset($toclimit)) {echo 'toclimit-'.$toclimit;} ?>" style="" role="complementary">
 			<?php if (strlen($toc) > 0) : ?>
-			<?php echo $toc; ?>
+			<?php echo str_replace('id="toctitle"', 'id="toctitle-sidebar"', $toc); ?>
 			<?php endif;?>
 			<?php Hooks::run( 'LiquiFlowAdSidebar', array( __DIR__ ) ); ?>
 		</div>
@@ -843,7 +846,8 @@ $footerLinks = $this->getFooterLinks();
 
 				case 'NAMESPACES':
 					?>
-					<?php foreach ( $this->data['namespace_urls'] as $key => $link ) :   ?>
+					<?php foreach ( $this->data['namespace_urls'] as $key => $link ) : ?>
+						<?php if($view == 'mobile') { $link['attributes'] = preg_replace('/id="([^\"]*)"/', 'id="$1-mobile"', $link['attributes']); } ?>
 						<li <?php echo $link['attributes']; ?>>
 							<a href="<?php echo htmlspecialchars( $link['href'] );?>"
 							<?php echo $link['key'] ?>>
@@ -864,7 +868,8 @@ $footerLinks = $this->getFooterLinks();
 					break;
 				case 'VIEWS':
 					?>
-					<?php foreach ( $this->data['view_urls'] as $key => $link ) :	?>
+					<?php foreach ( $this->data['view_urls'] as $key => $link ) : ?>
+						<?php if($view == 'mobile') { $link['attributes'] = preg_replace('/id="([^\"]*)"/', 'id="$1-mobile"', $link['attributes']); } ?>
 						<li <?php echo $link['attributes']; ?>>
 							<a href="<?php echo htmlspecialchars( $link['href'] );?>"
 							<?php echo $link['key'] ?>>
@@ -919,7 +924,8 @@ $footerLinks = $this->getFooterLinks();
 						'attributes' => ' id="ca-purge"',
 						'key' => ' title="'. $this->getMsg( 'liquiflow-purge-tooltip' ) .'"'
 					);}
-					foreach ( $this->data['action_urls'] as $key => $link ) :	?>
+					foreach ( $this->data['action_urls'] as $key => $link ) : ?>
+						<?php if($view == 'mobile') { $link['attributes'] = preg_replace('/id="([^\"]*)"/', 'id="$1-mobile"', $link['attributes']); } ?>
 						<li <?php echo $link['attributes']; ?>>
 							<a href="<?php echo htmlspecialchars( $link['href'] );?>"
 							<?php echo $link['key'] ?>>
@@ -997,8 +1003,8 @@ $footerLinks = $this->getFooterLinks();
 					break;
 				
 				case 'TOOLBOX':
-					$toolbox = $this->getToolbox();
 					global $wgUser;
+					$toolbox = $this->getToolbox();
 					?>
 						<ul class="dropdown-menu">
 							<li class="dropdown-header"><?php $this->msg( 'liquiflow-general' ); ?></li>
@@ -1011,6 +1017,7 @@ $footerLinks = $this->getFooterLinks();
 							<li class="dropdown-header"><?php $this->msg( 'liquiflow-tools-specific' ); ?></li>
 							<?php
 							foreach ( $toolbox as $key => $item ) {
+								if($view == 'mobile') { $item['id'] = $item['id'] . "-mobile"; }
 								echo $this->makeListItem( $key, $item );
 							}
 							?>
@@ -1052,7 +1059,7 @@ $footerLinks = $this->getFooterLinks();
 						?>
 							<li class="dropdown-header"><?php $this->msg( $header ); ?></li>
 							<?php foreach ($items as $key => $item) : ?>
-								<li id="<?php echo $items['id']; ?>">
+								<li id="<?php echo $item['id']; ?>">
 									<a href="<?php echo $this->data['serverurl'] . str_replace('$1', $item['page'], $this->data['articlepath']) ?>">
 										<?php $this->msg( $item['title'] )?>
 									</a>

@@ -6372,7 +6372,7 @@ h2 {
   position: fixed;
   bottom: 300px;
 }
-#sidebar-toc > #toctitle > h2 {
+#sidebar-toc > #toctitle-sidebar > h2 {
   margin-top: 5px;
   margin-bottom: 7px;
   padding-top: 0px;
@@ -6463,7 +6463,15 @@ a#back-to-top:hover {
 #toc #toctitle,
 .toc #toctitle,
 #toc .toctitle,
-.toc .toctitle {
+.toc .toctitle,
+#toc #toctitle-mobile,
+.toc #toctitle-mobile,
+#toc .toctitle-mobile,
+.toc .toctitle-mobile,
+#toc #toctitle-sidebar,
+.toc #toctitle-sidebar,
+#toc .toctitle-sidebar,
+.toc .toctitle-sidebar {
   padding: 5px 10px;
   border-bottom: 1px solid #ddd;
   border-top-right-radius: -1px;
@@ -6477,7 +6485,15 @@ a#back-to-top:hover {
 #toc #toctitle > a,
 .toc #toctitle > a,
 #toc .toctitle > a,
-.toc .toctitle > a {
+.toc .toctitle > a,
+#toc #toctitle-mobile > a,
+.toc #toctitle-mobile > a,
+#toc .toctitle-mobile > a,
+.toc .toctitle-mobile > a,
+#toc #toctitle-sidebar > a,
+.toc #toctitle-sidebar > a,
+#toc .toctitle-sidebar > a,
+.toc .toctitle-sidebar > a {
   color: inherit;
 }
 #toc ul ul,
@@ -6796,9 +6812,13 @@ label[for=wpPassword1] {
 label[for=wpRemember] {
   padding-left: 2px;
 }
-.input-group-btn > .searchButton {
+.input-group-btn > .searchButton,
+.input-group-btn > .searchButton-mobile {
   font-size: 14px;
   line-height: 15pt;
+}
+.input-group-btn > .searchButton {
+  height: 26pt;
 }
 /*
 ul#pagehistory > .mw-history-histlinks {
@@ -7271,7 +7291,7 @@ p {
 .navbar-search-btn:focus {
   background-color: #ECD5CB;
 }
-#mobile-search-form #searchInput {
+#mobile-search-form #searchInput-mobile {
   border-top: 0;
   border-left: 0;
   border-right: 0;
@@ -7280,10 +7300,10 @@ p {
   height: 50px;
   position: absolute;
 }
-#slide-toc > #scroll-wrapper-toc > ul > ul {
+#slide-toc > #scroll-wrapper-toc > div.nav.navbar-nav > ul {
   margin-left: 0;
 }
-#slide-toc #toctitle > h2 {
+#slide-toc #toctitle-mobile > h2 {
   padding-top: 0;
   padding-left: 5px;
   color: #ECD5CB;
@@ -7662,9 +7682,6 @@ div.wikitext-quote {
   #searchInput {
     width: 280px;
   }
-}
-.input-group-btn > .searchButton {
-  height: 26pt;
 }
 .flaggedrevs_reviewform {
   background-color: transparent !important;

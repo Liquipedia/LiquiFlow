@@ -181,24 +181,24 @@ class LiquiFlowTemplate extends BaseTemplate {
 			<div class="col-md-12 navbar-main-column">
 				<div class="navbar-header">
 					<button class="navbar-toggle" id="main-nav-toggler">
-				<span class="sr-only">Toggle navigation</span>
-				<span class="fa fa-bars fa-2x"></span>
-				</button>
+						<span class="sr-only">Toggle navigation</span>
+						<span class="fa fa-bars fa-2x"></span>
+					</button>
 
 					<a class="navbar-brand" href="<?php echo htmlspecialchars( $this->data['nav_urls']['mainpage']['href'] )?>"
-					<?php echo Xml::expandAttributes( Linker::tooltipAndAccesskeyAttribs( 'p-logo' ) )?>>
-					<div style="display: inline-block;">
-							<div style="float: left;"><img src="<?php $this->text( 'logopath' ) ?>" style="margin-top: -8px; height:40px; float:left; "></div>
+						<?php echo Xml::expandAttributes( Linker::tooltipAndAccesskeyAttribs( 'p-logo' ) )?>>
+						<div style="display: inline-block;">
+							<div style="float: left;"><img src="<?php $this->text( 'logopath' ) ?>" alt="Wiki-Logo" style="margin-top: -8px; height: 40px; float: left; "></div>
 							<div class="brand-name visible-xs logotype" style="white-space: nowrap; margin-left: 5px; float: left;">liquipedia</div>
-							</div>
+						</div>
 					</a>
 
 					<?php if (strlen($toc) > 0) { ?>
 					<button class="navbar-toggle pull-right" id="toc-toggler">
-				<span class="sr-only">Toggle navigation</span>
-				<span style="padding-top:4px;" class="fa fa-list fa-2x"></span>
-				</button>
-				<?php }	?>
+						<span class="sr-only">Toggle navigation</span>
+						<span style="padding-top:4px;" class="fa fa-list fa-2x"></span>
+					</button>
+					<?php }	?>
 					<button id="mobile-search-button" class="navbar-toggle navbar-search-toggle pull-right visible-xs">
 						<span class="fa fa-search fa-2x"></span>
 					</button>
@@ -828,7 +828,7 @@ $footerLinks = $this->getFooterLinks();
 	 *
 	 * @param array $elements
 	 */
-	protected function renderNavigation( $elements ) {
+	protected function renderNavigation( $elements, $view = 'desktop' ) {
 		// If only one element was given, wrap it in an array, allowing more
 		// flexible arguments
 		if ( !is_array( $elements ) ) {

@@ -383,35 +383,35 @@ class LiquiFlowTemplate extends BaseTemplate {
 								<?php $this->renderNavigation( 'ADMIN', 'mobile' ); ?>
 							</li>
 							<?php endif; ?>		
-								<?php
-									if ( !$wgUser->isLoggedIn() ) {
-										$personalTools = $this->getPersonalTools();
-										$personalTools['createaccount']['class'] = "visible-xs";
-										$personalTools['createaccount']['id'] = $personalTools['createaccount']['id'] . "-mobile";
-										$personalTools['login']['class'] = "visible-xs";
-										$personalTools['login']['id'] = $personalTools['login']['id'] . "-mobile";
-										echo $this->makeListItem( 'createaccount', $personalTools['createaccount'] );
-										echo $this->makeListItem( 'login', $personalTools['login'] );
-									} else {
-										$personalTools = $this->getPersonalTools();
-										?>
-										<li class="dropdown visible-xs">
-											<a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="#">
-												<span class="fa fa-fw fa-user"></span> <?php echo $personalTools["userpage"]["links"][0]["text"]; ?>
-												<span class="caret"></span>
-											</a>
-											<ul class="dropdown-menu">
-												<?php
-												$personalTools["userpage"]["links"][0]["text"] = "Userpage";
-												foreach ( $personalTools as $key => $item ) {
-													echo $this->makeListItem( $key, $item );
-												}
-												?>
-											</ul>
-										</li>
-									<?php
-									}
+							<?php
+								if ( !$wgUser->isLoggedIn() ) {
+									$personalTools = $this->getPersonalTools();
+									$personalTools['createaccount']['class'] = "visible-xs";
+									$personalTools['createaccount']['id'] = $personalTools['createaccount']['id'] . "-mobile";
+									$personalTools['login']['class'] = "visible-xs";
+									$personalTools['login']['id'] = $personalTools['login']['id'] . "-mobile";
+									echo $this->makeListItem( 'createaccount', $personalTools['createaccount'] );
+									echo $this->makeListItem( 'login', $personalTools['login'] );
+								} else {
+									$personalTools = $this->getPersonalTools();
 									?>
+									<li class="dropdown visible-xs">
+										<a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="#">
+											<span class="fa fa-fw fa-user"></span> <?php echo $personalTools["userpage"]["links"][0]["text"]; ?>
+											<span class="caret"></span>
+										</a>
+										<ul class="dropdown-menu">
+											<?php
+											$personalTools["userpage"]["links"][0]["text"] = "Userpage";
+											foreach ( $personalTools as $key => $item ) {
+												echo $this->makeListItem( $key, $item );
+											}
+											?>
+										</ul>
+									</li>
+								<?php
+								}
+								?>
 
 							<li class="visible-xs mobile-divider"></li>
 							<li class="dropdown visible-xs">

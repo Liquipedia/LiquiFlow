@@ -67,7 +67,7 @@ class SkinLiquiFlow extends SkinTemplate {
 	function setupSkinUserCss( OutputPage $out ) {
 		parent::setupSkinUserCss( $out );
 
-		$out->addStyle( 'https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,700,700italic|Roboto:500' );
+		$out->addStyle( 'https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,700,700italic%7CRoboto:500' );
 		$styles = array( 'mediawiki.skinning.interface', 'skins.liquiflow' );
 		$out->addModuleStyles( $styles );
 		global $wgScriptPath;

@@ -380,7 +380,7 @@ class LiquiFlowTemplate extends BaseTemplate {
 								<a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="#">
 									<span class="fa fa-fw fa-gavel"></span> <span>Admin Links</span> <span class="caret"></span>
 								</a>
-								<?php $this->renderNavigation( 'ADMIN' ); ?>
+								<?php $this->renderNavigation( 'ADMIN', 'mobile' ); ?>
 							</li>
 							<?php endif; ?>		
 								<?php
@@ -1059,7 +1059,7 @@ $footerLinks = $this->getFooterLinks();
 						?>
 							<li class="dropdown-header"><?php $this->msg( $header ); ?></li>
 							<?php foreach ($items as $key => $item) : ?>
-								<li id="<?php echo $item['id']; ?>">
+								<li id="<?php echo $item['id'] . (($view == 'mobile')?'-mobile':''); ?>">
 									<a href="<?php echo $this->data['serverurl'] . str_replace('$1', $item['page'], $this->data['articlepath']) ?>">
 										<?php $this->msg( $item['title'] )?>
 									</a>

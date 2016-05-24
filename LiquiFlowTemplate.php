@@ -292,28 +292,28 @@ class LiquiFlowTemplate extends BaseTemplate {
 									</div>
 								</li>
 								<li class="visible-xs mobile-divider"></li>
+								<?php
+								if (is_array($navEntryArray)) {
+									foreach ($navEntryArray as $subNavHeader => $navSubEntryArray) {
+										?>
+								<li class="dropdown visible-xs">
+									<a class="dropdown-toggle"	data-toggle="dropdown" href="#">
+										<span class="fa fa-fw fa-trophy"></span> <?php echo $subNavHeader; ?> <span class="caret"></span>
+									</a>
+									<ul class="dropdown-menu">
 									<?php
-									if (is_array($navEntryArray)) {
-										foreach ($navEntryArray as $subNavHeader => $navSubEntryArray) {
-											?>
-									<li class="dropdown visible-xs">
-										<a class="dropdown-toggle"	data-toggle="dropdown" href="#">
-											<span class="fa fa-fw fa-trophy"></span> <?php echo $subNavHeader; ?> <span class="caret"></span>
-										</a>
-										<ul class="dropdown-menu">
-										<?php
-											if (is_array($navSubEntryArray)) {
-												foreach ($navSubEntryArray as $navEntry) {
-													echo '<li><a href="'.$navEntry['href'].'">'.$navEntry['text'].'</a></li>';
-												}
+										if (is_array($navSubEntryArray)) {
+											foreach ($navSubEntryArray as $navEntry) {
+												echo '<li><a href="'.$navEntry['href'].'">'.$navEntry['text'].'</a></li>';
 											}
-											?>
+										}
+										?>
 
 											</ul>
-										</li>
-										<?php
-										}
+									</li>
+									<?php
 									}
+								}
 							} elseif ($navHeader == 'Contribute') {
 								?>
 								<li class="visible-xs mobile-divider"></li>

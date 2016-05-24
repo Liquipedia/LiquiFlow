@@ -80,7 +80,7 @@ function adjustSidebar() {
 
 		$(window).resize(function() {
 			$('#sidebar-toc-column').css('height', $('#main-content-column').height() + 12);
-			$('#sidebar-toc-column').css('margin-left', Math.max($('#main-content-column').offset().left - 10 - ($('#sidebar-ad').length?$('#sidebar-ad').outerHeight():0), 0));
+			$('#sidebar-toc-column').css('margin-left', Math.max($('#main-content-column').offset().left - 310, 0));
 			adjustSidebar();
 		});
 

@@ -338,7 +338,7 @@ class LiquiFlowTemplate extends BaseTemplate {
 								<li class="visible-xs mobile-divider"></li>
 								<li class="dropdown icon-tablet">
 									<a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="#">
-										 '<?php echo $navHeader; ?>' <span class="caret"></span>
+										 <?php echo $navHeader; ?> <span class="caret"></span>
 									</a>
 									<ul class="dropdown-menu">
 									<?php
@@ -984,7 +984,7 @@ $footerLinks = $this->getFooterLinks();
 							</li>
 							<li>
 								<a onclick="Share.vk('<?php echo  $externalLink; ?>','<?php echo $this->data['title']; ?>')">
-									<span class="fa fa-fw fa-vk"></span> VKontakte
+									<span class="fa fa-fw fa-vk"></span> VK
 								</a>
 							</li>
 							<li>

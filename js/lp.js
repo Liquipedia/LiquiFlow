@@ -139,6 +139,7 @@ Share = {
 		Share.popup(url);
 	},
 	twitter: function(purl, ptitle) {
+		purl = purl.replace(/ /g, '_');
 		url = 'http://twitter.com/share?';
 		url += 'text=' + encodeURIComponent(ptitle);
 		url += '&url=' + encodeURIComponent(purl);

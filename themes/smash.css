@@ -9092,28 +9092,38 @@ body.slide-active {
 .mobile-divider {
   border-bottom: 1px solid #000;
 }
-.wiki-color-dark {
+.wiki-color-dark,
+.c-dark {
   color: #179C68;
 }
-.wiki-color-light {
+.wiki-color-light,
+.c-light {
   color: #BDF2D1;
 }
 .wiki-backgroundcolor-dark,
-.wiki-backgroundcolor-dark-hover:hover {
+.wiki-backgroundcolor-dark-hover:hover,
+.bgc-dark,
+.bgc-dark-hover:hover {
   background-color: #179C68;
 }
 .wiki-backgroundcolor-light,
-.wiki-backgroundcolor-light-hover:hover {
+.wiki-backgroundcolor-light-hover:hover,
+.bgc-light,
+.bgc-light-hover:hover {
   background-color: #BDF2D1;
 }
 .wiki-backgroundcolor-light-2,
-.wiki-backgroundcolor-light-2-hover:hover {
+.wiki-backgroundcolor-light-2-hover:hover,
+.bgc-light2,
+.bgc-light2-hover:hover {
   background-color: #ffffff;
 }
-.wiki-bordercolor-dark {
+.wiki-bordercolor-dark,
+.bdc-dark {
   border-color: #179C68;
 }
-.wiki-bordercolor-light {
+.wiki-bordercolor-light,
+.bdc-light {
   border-color: #92eab3;
 }
 /* Keeping the anchor color and cursor for abbreviations in anchors */

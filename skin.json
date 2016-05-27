@@ -179,6 +179,15 @@
 				"skins.liquiflow"
 			]
 		},
+		"skins.liquiflow.theme.streetfighter": {
+			"styles": [
+				"themes/streetfighter.css"
+			],
+			"position": "top",
+			"dependencies": [
+				"skins.liquiflow"
+			]
+		},
 		"skins.liquiflow.theme.warcraft": {
 			"styles": [
 				"themes/warcraft.css"

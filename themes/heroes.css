@@ -9106,6 +9106,10 @@ body.slide-active {
 .wiki-backgroundcolor-light-hover:hover {
   background-color: #EADCF5;
 }
+.wiki-backgroundcolor-light-2,
+.wiki-backgroundcolor-light-2-hover:hover {
+  background-color: #ffffff;
+}
 .wiki-bordercolor-dark {
   border-color: #6B2D93;
 }

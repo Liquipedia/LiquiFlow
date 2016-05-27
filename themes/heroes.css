@@ -7063,6 +7063,12 @@ p {
 .lp-icon.lp-twitter:hover {
   background-position: -672px 0;
 }
+.lp-icon.lp-vk {
+  background-position: -704px -32px;
+}
+.lp-icon.lp-vk:hover {
+  background-position: -704px 0;
+}
 .lp-icon.lp-vkontakte {
   background-position: -704px -32px;
 }
@@ -7378,6 +7384,12 @@ p {
 .lp-icon.lp-icon-25.lp-twitter:hover {
   background-position: -525px 0;
 }
+.lp-icon.lp-icon-25.lp-vk {
+  background-position: -550px -25px;
+}
+.lp-icon.lp-icon-25.lp-vk:hover {
+  background-position: -550px 0;
+}
 .lp-icon.lp-icon-25.lp-vkontakte {
   background-position: -550px -25px;
 }
@@ -7691,6 +7703,12 @@ p {
 }
 .lp-icon.lp-icon-50.lp-twitter:hover {
   background-position: -1050px 0;
+}
+.lp-icon.lp-icon-50.lp-vk {
+  background-position: -1100px -50px;
+}
+.lp-icon.lp-icon-50.lp-vk:hover {
+  background-position: -1100px 0;
 }
 .lp-icon.lp-icon-50.lp-vkontakte {
   background-position: -1100px -50px;
@@ -8006,6 +8024,12 @@ p {
 .lp-icon.lp-icon-64.lp-twitter:hover {
   background-position: -1344px 0;
 }
+.lp-icon.lp-icon-64.lp-vk {
+  background-position: -1408px -64px;
+}
+.lp-icon.lp-icon-64.lp-vk:hover {
+  background-position: -1408px 0;
+}
 .lp-icon.lp-icon-64.lp-vkontakte {
   background-position: -1408px -64px;
 }
@@ -8320,6 +8344,12 @@ p {
 .lp-icon.lp-icon-100.lp-twitter:hover {
   background-position: -2100px 0;
 }
+.lp-icon.lp-icon-100.lp-vk {
+  background-position: -2200px -100px;
+}
+.lp-icon.lp-icon-100.lp-vk:hover {
+  background-position: -2200px 0;
+}
 .lp-icon.lp-icon-100.lp-vkontakte {
   background-position: -2200px -100px;
 }
@@ -8633,6 +8663,12 @@ p {
 }
 .lp-icon.lp-icon-256.lp-twitter:hover {
   background-position: -5376px 0;
+}
+.lp-icon.lp-icon-256.lp-vk {
+  background-position: -5632px -256px;
+}
+.lp-icon.lp-icon-256.lp-vk:hover {
+  background-position: -5632px 0;
 }
 .lp-icon.lp-icon-256.lp-vkontakte {
   background-position: -5632px -256px;

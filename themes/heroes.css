@@ -9115,7 +9115,9 @@ body.slide-active {
 .wiki-backgroundcolor-light-2,
 .wiki-backgroundcolor-light-2-hover:hover,
 .bgc-light2,
-.bgc-light2-hover:hover {
+.bgc-lighter,
+.bgc-light2-hover:hover,
+.bgc-lighter-hover:hover {
   background-color: #ffffff;
 }
 .wiki-bordercolor-dark,

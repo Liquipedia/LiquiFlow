@@ -9343,6 +9343,9 @@ div.wikitext-quote {
   #searchInput {
     width: 280px;
   }
+  .alphawiki #searchInput {
+    width: 248px;
+  }
 }
 .flaggedrevs_reviewform {
   background-color: transparent !important;

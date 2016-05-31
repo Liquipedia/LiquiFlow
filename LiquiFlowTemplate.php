@@ -175,7 +175,7 @@ class LiquiFlowTemplate extends BaseTemplate {
 		}
 ?>
 
-<nav class="navbar navbar-default navbar-fixed-top noprint" role="navigation" id="slide-nav">
+<nav class="navbar navbar-default navbar-fixed-top noprint<?php global $wgLiquiFlowAlphawiki; echo (isset($wgLiquiFlowAlphawiki) && $wgLiquiFlowAlphawiki)?' alphawiki':''; ?>" role="navigation" id="slide-nav">
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-md-12 navbar-main-column">
@@ -189,7 +189,7 @@ class LiquiFlowTemplate extends BaseTemplate {
 						<?php echo Xml::expandAttributes( Linker::tooltipAndAccesskeyAttribs( 'p-logo' ) )?>>
 						<div style="display: inline-block;">
 							<div style="float: left;"><img src="<?php $this->text( 'logopath' ) ?>" alt="Wiki-Logo" style="margin-top: -8px; height: 40px; float: left; "></div>
-							<div class="brand-name visible-xs logotype" style="white-space: nowrap; margin-left: 5px; float: left;">liquipedia</div>
+							<div class="brand-name visible-xs logotype" style="white-space: nowrap; margin-left: 5px; float: left;"><?php global $wgLiquiFlowAlphawiki; echo (isset($wgLiquiFlowAlphawiki) && $wgLiquiFlowAlphawiki)?'<small>liquipedia</small> alpha':'liquipedia'; ?></div>
 						</div>
 					</a>
 
@@ -223,7 +223,7 @@ class LiquiFlowTemplate extends BaseTemplate {
 						?>
 							<li class="dropdown dropdown-brand hidden-xs">
 								<a class="dropdown-toggle brand-title" data-toggle="dropdown" data-hover="dropdown" href="#">
-									<span class="brand-name logotype" style="font-size: 18px;">liquipedia</span> <span class="caret"></span> <br>
+									<span class="brand-name logotype" style="font-size: 18px;"><?php global $wgLiquiFlowAlphawiki; echo (isset($wgLiquiFlowAlphawiki) && $wgLiquiFlowAlphawiki)?'<small>liquipedia</small> alpha':'liquipedia'; ?></span> <span class="caret"></span> <br>
 									<span class="hidden-xs brand-subtitle">
 										<?php echo $currentWikiTitle; ?>
 									</span>

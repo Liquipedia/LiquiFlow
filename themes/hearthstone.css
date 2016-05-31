@@ -7249,6 +7249,12 @@ p {
 .lp-icon.lp-pandatv:hover {
   background-position: -704px -64px;
 }
+.lp-icon.lp-masteroverwatch {
+  background-position: -736px -96px;
+}
+.lp-icon.lp-masteroverwatch:hover {
+  background-position: -736px -64px;
+}
 /* standard size, needs to stay first so it does not overwrite the modified versions */
 .lp-icon.lp-icon-25 {
   width: 25px;
@@ -7570,6 +7576,12 @@ p {
 .lp-icon.lp-icon-25.lp-pandatv:hover {
   background-position: -550px -50px;
 }
+.lp-icon.lp-icon-25.lp-masteroverwatch {
+  background-position: -575px -75px;
+}
+.lp-icon.lp-icon-25.lp-masteroverwatch:hover {
+  background-position: -575px -50px;
+}
 .lp-icon.lp-icon-50 {
   width: 50px;
   height: 50px;
@@ -7889,6 +7901,12 @@ p {
 }
 .lp-icon.lp-icon-50.lp-pandatv:hover {
   background-position: -1100px -100px;
+}
+.lp-icon.lp-icon-50.lp-masteroverwatch {
+  background-position: -1150px -150px;
+}
+.lp-icon.lp-icon-50.lp-masteroverwatch:hover {
+  background-position: -1150px -100px;
 }
 .lp-icon.lp-icon-64 {
   width: 64px;
@@ -8210,6 +8228,12 @@ p {
 .lp-icon.lp-icon-64.lp-pandatv:hover {
   background-position: -1408px -128px;
 }
+.lp-icon.lp-icon-64.lp-masteroverwatch {
+  background-position: -1472px -192px;
+}
+.lp-icon.lp-icon-64.lp-masteroverwatch:hover {
+  background-position: -1472px -128px;
+}
 .lp-icon.lp-icon-100 {
   width: 100px;
   height: 100px;
@@ -8530,6 +8554,12 @@ p {
 .lp-icon.lp-icon-100.lp-pandatv:hover {
   background-position: -2200px -200px;
 }
+.lp-icon.lp-icon-100.lp-masteroverwatch {
+  background-position: -2300px -300px;
+}
+.lp-icon.lp-icon-100.lp-masteroverwatch:hover {
+  background-position: -2300px -200px;
+}
 .lp-icon.lp-icon-256 {
   width: 256px;
   height: 256px;
@@ -8849,6 +8879,12 @@ p {
 }
 .lp-icon.lp-icon-256.lp-pandatv:hover {
   background-position: -5632px -512px;
+}
+.lp-icon.lp-icon-256.lp-masteroverwatch {
+  background-position: -5888px -768px;
+}
+.lp-icon.lp-icon-256.lp-masteroverwatch:hover {
+  background-position: -5888px -512px;
 }
 @media (max-width: 767px) {
   .navbar-brand {

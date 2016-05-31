@@ -98,6 +98,15 @@
 				"skins.liquiflow"
 			]
 		},
+		"skins.liquiflow.theme.clashroyale": {
+			"styles": [
+				"themes/clashroyale.css"
+			],
+			"position": "top",
+			"dependencies": [
+				"skins.liquiflow"
+			]
+		},
 		"skins.liquiflow.theme.commons": {
 			"styles": [
 				"themes/commons.css"
@@ -146,6 +155,15 @@
 		"skins.liquiflow.theme.overwatch": {
 			"styles": [
 				"themes/overwatch.css"
+			],
+			"position": "top",
+			"dependencies": [
+				"skins.liquiflow"
+			]
+		},
+		"skins.liquiflow.theme.rocketleague": {
+			"styles": [
+				"themes/rocketleague.css"
 			],
 			"position": "top",
 			"dependencies": [

@@ -241,7 +241,6 @@ class LiquiFlowTemplate extends BaseTemplate {
 
 						foreach ($this->data['sidebar'] as $navHeader => $navEntryArray) {
 
-
 							if ($navHeader == 'TRENDING') {
 								?>
 								<li class="dropdown icon-tablet">
@@ -386,10 +385,10 @@ class LiquiFlowTemplate extends BaseTemplate {
 							<?php
 								if ( !$wgUser->isLoggedIn() ) {
 									$personalTools = $this->getPersonalTools();
-									$personalTools['createaccount']['class'] = "visible-xs";
-									$personalTools['createaccount']['id'] = $personalTools['createaccount']['id'] . "-mobile";
-									$personalTools['login']['class'] = "visible-xs";
-									$personalTools['login']['id'] = $personalTools['login']['id'] . "-mobile";
+									$personalTools['createaccount']['class'] = 'visible-xs';
+									$personalTools['createaccount']['id'] = $personalTools['createaccount']['id'] . '-mobile';
+									$personalTools['login']['class'] = 'visible-xs';
+									$personalTools['login']['id'] = $personalTools['login']['id'] . '-mobile';
 									echo $this->makeListItem( 'createaccount', $personalTools['createaccount'] );
 									echo $this->makeListItem( 'login', $personalTools['login'] );
 								} else {
@@ -402,8 +401,10 @@ class LiquiFlowTemplate extends BaseTemplate {
 										</a>
 										<ul class="dropdown-menu">
 											<?php
-											$personalTools["userpage"]["links"][0]["text"] = "Userpage";
+											$personalTools["userpage"]["links"][0]["text"] = 'Userpage';
 											foreach ( $personalTools as $key => $item ) {
+												$item['id'] = $item['id'] . '-mobile';
+												unset( $item['links'][0]['single-id'] );
 												echo $this->makeListItem( $key, $item );
 											}
 											?>
@@ -847,7 +848,10 @@ $footerLinks = $this->getFooterLinks();
 				case 'NAMESPACES':
 					?>
 					<?php foreach ( $this->data['namespace_urls'] as $key => $link ) : ?>
-						<?php if($view == 'mobile') { $link['attributes'] = preg_replace('/id="([^\"]*)"/', 'id="$1-mobile"', $link['attributes']); } ?>
+						<?php if($view == 'mobile') {
+							$link['attributes'] = preg_replace('/id="([^\"]*)"/', 'id="$1-mobile"', $link['attributes']);
+							$link['key'] = preg_replace('/ accesskey="[^\"]*"/', '', $link['key']);
+						} ?>
 						<li <?php echo $link['attributes']; ?>>
 							<a href="<?php echo htmlspecialchars( $link['href'] );?>"
 							<?php echo $link['key'] ?>>
@@ -869,7 +873,10 @@ $footerLinks = $this->getFooterLinks();
 				case 'VIEWS':
 					?>
 					<?php foreach ( $this->data['view_urls'] as $key => $link ) : ?>
-						<?php if($view == 'mobile') { $link['attributes'] = preg_replace('/id="([^\"]*)"/', 'id="$1-mobile"', $link['attributes']); } ?>
+						<?php if($view == 'mobile') {
+							$link['attributes'] = preg_replace('/id="([^\"]*)"/', 'id="$1-mobile"', $link['attributes']);
+							$link['key'] = preg_replace('/ accesskey="[^\"]*"/', '', $link['key']);
+						} ?>
 						<li <?php echo $link['attributes']; ?>>
 							<a href="<?php echo htmlspecialchars( $link['href'] );?>"
 							<?php echo $link['key'] ?>>
@@ -925,7 +932,10 @@ $footerLinks = $this->getFooterLinks();
 						'key' => ' title="'. $this->getMsg( 'liquiflow-purge-tooltip' ) .'"'
 					);}
 					foreach ( $this->data['action_urls'] as $key => $link ) : ?>
-						<?php if($view == 'mobile') { $link['attributes'] = preg_replace('/id="([^\"]*)"/', 'id="$1-mobile"', $link['attributes']); } ?>
+						<?php if($view == 'mobile') {
+							$link['attributes'] = preg_replace('/id="([^\"]*)"/', 'id="$1-mobile"', $link['attributes']);
+							$link['key'] = preg_replace('/ accesskey="[^\"]*"/', '', $link['key']);
+						} ?>
 						<li <?php echo $link['attributes']; ?>>
 							<a href="<?php echo htmlspecialchars( $link['href'] );?>"
 							<?php echo $link['key'] ?>>

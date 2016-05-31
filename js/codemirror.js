@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	if($('#wpTextbox1').length) {
+	function invoke_codemirror(codemirror_id) {
 		var editmode;
 		var locationStr = window.location.href;
 		if((locationStr.endsWith('.js')) || (locationStr.includes('.js&'))) {
@@ -11,7 +11,7 @@ $(document).ready(function() {
 		} else {
 			editmode = 'text/mediawiki';
 		}
-		var editor = CodeMirror.fromTextArea(document.getElementById("wpTextbox1"), {
+		var editor = CodeMirror.fromTextArea(document.getElementById(codemirror_id), {
 			mwextFunctionSynonyms: mw.config.get( 'liquiflowCodemirrorFunctionSynonyms' ),
 			mwextTags: mw.config.get( 'liquiflowCodemirrorTags' ),
 			mwextDoubleUnderscore: mw.config.get( 'liquiflowCodemirrorDoubleUnderscore' ),
@@ -33,7 +33,7 @@ $(document).ready(function() {
 			},
 			readOnly: document.getElementById("wpTextbox1").readOnly
 		});
-		$('#wpTextbox1').change(function() {
+		$(codemirror_id).change(function() {
 			editor.setCode($(this).val());
 		});
 		
@@ -70,5 +70,11 @@ $(document).ready(function() {
 				openPageOnClick('cm-mw-link-pagename', '', $(this));
 			}
 		});
+	}
+	if($('#wpTextbox1').length) {
+		invoke_codemirror('#wpTextbox1');
+	}
+	if($('#wpTextbox2').length) {
+		invoke_codemirror('#wpTextbox2');
 	}
 });

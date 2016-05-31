@@ -622,6 +622,10 @@ $footerLinks = $this->getFooterLinks();
 			</div>
 
 			<div class="col-md-2 col-sm-3 col-xs-12">
+				<h4><?php $this->msg( 'liquiflow-alpha-wikis') ?></h4>
+				<ul>
+					<li><a href="http://wiki.teamliquid.net/warcraft/" target="_blank">Warcraft</a></li>
+				</ul>
 				<h4><?php $this->msg( 'about') ?></h4>
 				<ul>
 					<?php foreach ( $footerLinks['places'] as $link ) :	?>

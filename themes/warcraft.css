@@ -6932,7 +6932,7 @@ p {
 .lp-icon {
   width: 32px;
   height: 32px;
-  background-size: auto 128px;
+  background-size: auto 192px;
   /* also change in footer.less at a.social-icon, @icon-row-number * @icon-size */
   /* row 1, first icon (index 0) is error to prevent typos */
   /* row 2 */
@@ -7259,7 +7259,7 @@ p {
 .lp-icon.lp-icon-25 {
   width: 25px;
   height: 25px;
-  background-size: auto 100px;
+  background-size: auto 150px;
   /* also change in footer.less at a.social-icon, @icon-row-number * @icon-size */
   /* row 1, first icon (index 0) is error to prevent typos */
   /* row 2 */
@@ -7585,7 +7585,7 @@ p {
 .lp-icon.lp-icon-50 {
   width: 50px;
   height: 50px;
-  background-size: auto 200px;
+  background-size: auto 300px;
   /* also change in footer.less at a.social-icon, @icon-row-number * @icon-size */
   /* row 1, first icon (index 0) is error to prevent typos */
   /* row 2 */
@@ -7911,7 +7911,7 @@ p {
 .lp-icon.lp-icon-64 {
   width: 64px;
   height: 64px;
-  background-size: auto 256px;
+  background-size: auto 384px;
   /* also change in footer.less at a.social-icon, @icon-row-number * @icon-size */
   /* row 1, first icon (index 0) is error to prevent typos */
   /* row 2 */
@@ -8237,7 +8237,7 @@ p {
 .lp-icon.lp-icon-100 {
   width: 100px;
   height: 100px;
-  background-size: auto 400px;
+  background-size: auto 600px;
   /* also change in footer.less at a.social-icon, @icon-row-number * @icon-size */
   /* row 1, first icon (index 0) is error to prevent typos */
   /* row 2 */
@@ -8563,7 +8563,7 @@ p {
 .lp-icon.lp-icon-256 {
   width: 256px;
   height: 256px;
-  background-size: auto 1024px;
+  background-size: auto 1536px;
   /* also change in footer.less at a.social-icon, @icon-row-number * @icon-size */
   /* row 1, first icon (index 0) is error to prevent typos */
   /* row 2 */

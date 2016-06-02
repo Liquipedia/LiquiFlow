@@ -72,9 +72,9 @@ $(document).ready(function() {
 		});
 	}
 	if($('#wpTextbox1').length) {
-		invoke_codemirror('#wpTextbox1');
+		invoke_codemirror('wpTextbox1');
 	}
 	if($('#wpTextbox2').length) {
-		invoke_codemirror('#wpTextbox2');
+		invoke_codemirror('wpTextbox2');
 	}
 });

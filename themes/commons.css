@@ -9334,7 +9334,7 @@ div.wikitext-quote {
 /* top ad */
 .top-ad {
   overflow: hidden;
-  height: 100px;
+  height: 110px;
   width: 100%;
   padding-top: 10px;
 }
@@ -9379,7 +9379,7 @@ body#top.ns--1.mw-special-Ask #mw-content-text table {
 .portal-pills a {
   display: block;
   padding: 15px;
-  color: #e5e5e5;
+  color: #636363;
 }
 /* spacing for editing buttons */
 .editButtons > * {

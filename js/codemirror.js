@@ -31,7 +31,7 @@ $(document).ready(function() {
 					if (cm.getOption("fullScreen")) cm.setOption("fullScreen", false);
 				}
 			},
-			readOnly: document.getElementById("wpTextbox1").readOnly
+			readOnly: document.getElementById(codemirror_id).readOnly
 		});
 		$(codemirror_id).change(function() {
 			editor.setCode($(this).val());

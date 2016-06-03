@@ -6572,49 +6572,32 @@ ul#footer-social-media li > a {
   display: block;
 }
 a.social-icon {
-  background-image: url('../images/infoboxicon_sprite.png');
-  background-size: auto 128px;
   width: 32px;
   height: 32px;
+  background-size: 32px 64px;
+  background-position: 0 -32px;
+}
+a.social-icon:hover {
+  background-position: 0 0;
 }
 a.social-icon > span.social-link {
   line-height: 32px;
   padding-left: 36px;
 }
 a.facebook-icon {
-  background-position: -288px -32px;
-}
-a.facebook-icon:hover,
-a.facebook-icon:active {
-  background-position: -288px 0;
+  background-image: url(../images/lp-icons/InfoboxIcon_Facebook.png);
 }
 a.twitch-icon {
-  background-position: -640px -32px;
-}
-a.twitch-icon:hover,
-a.twitch-icon:active {
-  background-position: -640px 0;
+  background-image: url(../images/lp-icons/InfoboxIcon_Twitch.png);
 }
 a.twitter-icon {
-  background-position: -672px -32px;
-}
-a.twitter-icon:hover,
-a.twitter-icon:active {
-  background-position: -672px 0;
+  background-image: url(../images/lp-icons/InfoboxIcon_Twitter.png);
 }
 a.youtube-icon {
-  background-position: -800px -32px;
-}
-a.youtube-icon:hover,
-a.youtube-icon:active {
-  background-position: -800px 0;
+  background-image: url(../images/lp-icons/InfoboxIcon_YouTube.png);
 }
 a.github-icon {
-  background-position: -832px -32px;
-}
-a.github-icon:hover,
-a.github-icon:active {
-  background-position: -832px 0;
+  background-image: url(../images/lp-icons/InfoboxIcon_GitHub.png);
 }
 /* This file is for overwriting some of Mediawiki's default styling */
 /* Preferences */

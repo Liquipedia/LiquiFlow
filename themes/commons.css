@@ -6924,1967 +6924,213 @@ p {
   padding-bottom: 10px;
 }
 .lp-icon {
-  background: url('../images/infoboxicon_sprite.png') no-repeat 0 0;
+  background: url('../images/lp-icons/infoboxicon_sprite.png') no-repeat 0 0;
   display: inline-block;
   overflow: hidden;
   vertical-align: middle;
-}
-.lp-icon {
   width: 32px;
   height: 32px;
-  background-size: auto 192px;
-  /* also change in footer.less at a.social-icon, @icon-row-number * @icon-size */
-  /* row 1, first icon (index 0) is error to prevent typos */
-  /* row 2 */
+  background-image: url(../images/lp-icons/InfoboxIcon_Alert.png);
+  background-size: 32px 64px;
+  background-position: 0 -32px;
 }
-.lp-icon.lp-aligulac {
-  background-position: -32px -32px;
-}
-.lp-icon.lp-aligulac:hover {
-  background-position: -32px 0;
-}
-.lp-icon.lp-ask-fm {
-  background-position: -64px -32px;
-}
-.lp-icon.lp-ask-fm:hover {
-  background-position: -64px 0;
-}
-.lp-icon.lp-azubu {
-  background-position: -96px -32px;
-}
-.lp-icon.lp-azubu:hover {
-  background-position: -96px 0;
-}
-.lp-icon.lp-binary-beast {
-  background-position: -128px -32px;
-}
-.lp-icon.lp-binary-beast:hover {
-  background-position: -128px 0;
-}
-.lp-icon.lp-challonge {
-  background-position: -160px -32px;
-}
-.lp-icon.lp-challonge:hover {
-  background-position: -160px 0;
-}
-.lp-icon.lp-datdota {
-  background-position: -192px -32px;
-}
-.lp-icon.lp-datdota:hover {
-  background-position: -192px 0;
-}
-.lp-icon.lp-dotabuff {
-  background-position: -224px -32px;
-}
-.lp-icon.lp-dotabuff:hover {
-  background-position: -224px 0;
-}
-.lp-icon.lp-email {
-  background-position: -256px -32px;
-}
-.lp-icon.lp-email:hover {
-  background-position: -256px 0;
-}
-.lp-icon.lp-facebook {
-  background-position: -288px -32px;
-}
-.lp-icon.lp-facebook:hover {
-  background-position: -288px 0;
-}
-.lp-icon.lp-faceit {
-  background-position: -320px -32px;
-}
-.lp-icon.lp-faceit:hover {
-  background-position: -320px 0;
-}
-.lp-icon.lp-google-plus {
-  background-position: -352px -32px;
-}
-.lp-icon.lp-google-plus:hover {
-  background-position: -352px 0;
-}
-.lp-icon.lp-reddit {
-  background-position: -384px -32px;
-}
-.lp-icon.lp-reddit:hover {
-  background-position: -384px 0;
-}
-.lp-icon.lp-skype {
-  background-position: -416px -32px;
-}
-.lp-icon.lp-skype:hover {
-  background-position: -416px 0;
-}
-.lp-icon.lp-smashboards {
-  background-position: -448px -32px;
-}
-.lp-icon.lp-smashboards:hover {
-  background-position: -448px 0;
-}
-.lp-icon.lp-smash-gg {
-  background-position: -480px -32px;
-}
-.lp-icon.lp-smash-gg:hover {
-  background-position: -480px 0;
-}
-.lp-icon.lp-steam {
-  background-position: -512px -32px;
-}
-.lp-icon.lp-steam:hover {
-  background-position: -512px 0;
-}
-.lp-icon.lp-tencent {
-  background-position: -544px -32px;
-}
-.lp-icon.lp-tencent:hover {
-  background-position: -544px 0;
-}
-.lp-icon.lp-toornament {
-  background-position: -576px -32px;
-}
-.lp-icon.lp-toornament:hover {
-  background-position: -576px 0;
-}
-.lp-icon.lp-tournament {
-  background-position: -608px -32px;
-}
-.lp-icon.lp-tournament:hover {
-  background-position: -608px 0;
-}
-.lp-icon.lp-twitch {
-  background-position: -640px -32px;
-}
-.lp-icon.lp-twitch:hover {
-  background-position: -640px 0;
-}
-.lp-icon.lp-twitter {
-  background-position: -672px -32px;
-}
-.lp-icon.lp-twitter:hover {
-  background-position: -672px 0;
-}
-.lp-icon.lp-vk {
-  background-position: -704px -32px;
-}
-.lp-icon.lp-vk:hover {
-  background-position: -704px 0;
-}
-.lp-icon.lp-vkontakte {
-  background-position: -704px -32px;
-}
-.lp-icon.lp-vkontakte:hover {
-  background-position: -704px 0;
-}
-.lp-icon.lp-home {
-  background-position: -736px -32px;
-}
-.lp-icon.lp-home:hover {
-  background-position: -736px 0;
-}
-.lp-icon.lp-weibo {
-  background-position: -768px -32px;
-}
-.lp-icon.lp-weibo:hover {
-  background-position: -768px 0;
-}
-.lp-icon.lp-youtube {
-  background-position: -800px -32px;
-}
-.lp-icon.lp-youtube:hover {
-  background-position: -800px 0;
-}
-.lp-icon.lp-github {
-  background-position: -832px -32px;
-}
-.lp-icon.lp-github:hover {
-  background-position: -832px 0;
-}
-.lp-icon.lp-instagram {
-  background-position: -864px -32px;
-}
-.lp-icon.lp-instagram:hover {
-  background-position: -864px 0;
-}
-.lp-icon.lp-stream {
-  background-position: 0 -96px;
-}
-.lp-icon.lp-stream:hover {
-  background-position: 0 -64px;
-}
-.lp-icon.lp-tlstream {
-  background-position: -32px -96px;
-}
-.lp-icon.lp-tlstream:hover {
-  background-position: -32px -64px;
-}
-.lp-icon.lp-fanclub {
-  background-position: -64px -96px;
-}
-.lp-icon.lp-fanclub:hover {
-  background-position: -64px -64px;
-}
-.lp-icon.lp-tlpd-hots {
-  background-position: -96px -96px;
-}
-.lp-icon.lp-tlpd-hots:hover {
-  background-position: -96px -64px;
-}
-.lp-icon.lp-tlpd {
-  background-position: -128px -96px;
-}
-.lp-icon.lp-tlpd:hover {
-  background-position: -128px -64px;
-}
-.lp-icon.lp-tlpd-wol {
-  background-position: -128px -96px;
-}
-.lp-icon.lp-tlpd-wol:hover {
-  background-position: -128px -64px;
-}
-.lp-icon.lp-tlpd-wol-korea {
-  background-position: -160px -96px;
-}
-.lp-icon.lp-tlpd-wol-korea:hover {
-  background-position: -160px -64px;
-}
-.lp-icon.lp-tlpd-sospa {
-  background-position: -192px -96px;
-}
-.lp-icon.lp-tlpd-sospa:hover {
-  background-position: -192px -64px;
-}
-.lp-icon.lp-gosugamers {
-  background-position: -224px -96px;
-}
-.lp-icon.lp-gosugamers:hover {
-  background-position: -224px -64px;
-}
-.lp-icon.lp-bracket {
-  background-position: -256px -96px;
-}
-.lp-icon.lp-bracket:hover {
-  background-position: -256px -64px;
-}
-.lp-icon.lp-afreeca {
-  background-position: -288px -96px;
-}
-.lp-icon.lp-afreeca:hover {
-  background-position: -288px -64px;
-}
-.lp-icon.lp-rules {
-  background-position: -320px -96px;
-}
-.lp-icon.lp-rules:hover {
-  background-position: -320px -64px;
-}
-.lp-icon.lp-iccup {
-  background-position: -352px -96px;
-}
-.lp-icon.lp-iccup:hover {
-  background-position: -352px -64px;
-}
-.lp-icon.lp-esl {
-  background-position: -384px -96px;
-}
-.lp-icon.lp-esl:hover {
-  background-position: -384px -64px;
-}
-.lp-icon.lp-esea {
-  background-position: -416px -96px;
-}
-.lp-icon.lp-esea:hover {
-  background-position: -416px -64px;
-}
-.lp-icon.lp-skgaming {
-  background-position: -448px -96px;
-}
-.lp-icon.lp-skgaming:hover {
-  background-position: -448px -64px;
-}
-.lp-icon.lp-douyutv {
-  background-position: -480px -96px;
-}
-.lp-icon.lp-douyutv:hover {
-  background-position: -480px -64px;
-}
-.lp-icon.lp-tlprofile {
-  background-position: -512px -96px;
-}
-.lp-icon.lp-tlprofile:hover {
-  background-position: -512px -64px;
-}
-.lp-icon.lp-cafe-daum {
-  background-position: -544px -96px;
-}
-.lp-icon.lp-cafe-daum:hover {
-  background-position: -544px -64px;
-}
-.lp-icon.lp-abios {
-  background-position: -576px -96px;
-}
-.lp-icon.lp-abios:hover {
-  background-position: -576px -64px;
-}
-.lp-icon.lp-youku {
-  background-position: -608px -96px;
-}
-.lp-icon.lp-youku:hover {
-  background-position: -608px -64px;
-}
-.lp-icon.lp-hitbox {
-  background-position: -640px -96px;
-}
-.lp-icon.lp-hitbox:hover {
-  background-position: -640px -64px;
-}
-.lp-icon.lp-music {
-  background-position: -672px -96px;
-}
-.lp-icon.lp-music:hover {
-  background-position: -672px -64px;
-}
-.lp-icon.lp-pandatv {
-  background-position: -704px -96px;
-}
-.lp-icon.lp-pandatv:hover {
-  background-position: -704px -64px;
-}
-.lp-icon.lp-masteroverwatch {
-  background-position: -736px -96px;
-}
-.lp-icon.lp-masteroverwatch:hover {
-  background-position: -736px -64px;
-}
-/* standard size, needs to stay first so it does not overwrite the modified versions */
 .lp-icon.lp-icon-25 {
   width: 25px;
   height: 25px;
-  background-size: auto 150px;
-  /* also change in footer.less at a.social-icon, @icon-row-number * @icon-size */
-  /* row 1, first icon (index 0) is error to prevent typos */
-  /* row 2 */
-}
-.lp-icon.lp-icon-25.lp-aligulac {
-  background-position: -25px -25px;
-}
-.lp-icon.lp-icon-25.lp-aligulac:hover {
-  background-position: -25px 0;
-}
-.lp-icon.lp-icon-25.lp-ask-fm {
-  background-position: -50px -25px;
-}
-.lp-icon.lp-icon-25.lp-ask-fm:hover {
-  background-position: -50px 0;
-}
-.lp-icon.lp-icon-25.lp-azubu {
-  background-position: -75px -25px;
-}
-.lp-icon.lp-icon-25.lp-azubu:hover {
-  background-position: -75px 0;
-}
-.lp-icon.lp-icon-25.lp-binary-beast {
-  background-position: -100px -25px;
-}
-.lp-icon.lp-icon-25.lp-binary-beast:hover {
-  background-position: -100px 0;
-}
-.lp-icon.lp-icon-25.lp-challonge {
-  background-position: -125px -25px;
-}
-.lp-icon.lp-icon-25.lp-challonge:hover {
-  background-position: -125px 0;
-}
-.lp-icon.lp-icon-25.lp-datdota {
-  background-position: -150px -25px;
-}
-.lp-icon.lp-icon-25.lp-datdota:hover {
-  background-position: -150px 0;
-}
-.lp-icon.lp-icon-25.lp-dotabuff {
-  background-position: -175px -25px;
-}
-.lp-icon.lp-icon-25.lp-dotabuff:hover {
-  background-position: -175px 0;
-}
-.lp-icon.lp-icon-25.lp-email {
-  background-position: -200px -25px;
-}
-.lp-icon.lp-icon-25.lp-email:hover {
-  background-position: -200px 0;
-}
-.lp-icon.lp-icon-25.lp-facebook {
-  background-position: -225px -25px;
-}
-.lp-icon.lp-icon-25.lp-facebook:hover {
-  background-position: -225px 0;
-}
-.lp-icon.lp-icon-25.lp-faceit {
-  background-position: -250px -25px;
-}
-.lp-icon.lp-icon-25.lp-faceit:hover {
-  background-position: -250px 0;
-}
-.lp-icon.lp-icon-25.lp-google-plus {
-  background-position: -275px -25px;
-}
-.lp-icon.lp-icon-25.lp-google-plus:hover {
-  background-position: -275px 0;
-}
-.lp-icon.lp-icon-25.lp-reddit {
-  background-position: -300px -25px;
-}
-.lp-icon.lp-icon-25.lp-reddit:hover {
-  background-position: -300px 0;
-}
-.lp-icon.lp-icon-25.lp-skype {
-  background-position: -325px -25px;
-}
-.lp-icon.lp-icon-25.lp-skype:hover {
-  background-position: -325px 0;
-}
-.lp-icon.lp-icon-25.lp-smashboards {
-  background-position: -350px -25px;
-}
-.lp-icon.lp-icon-25.lp-smashboards:hover {
-  background-position: -350px 0;
-}
-.lp-icon.lp-icon-25.lp-smash-gg {
-  background-position: -375px -25px;
-}
-.lp-icon.lp-icon-25.lp-smash-gg:hover {
-  background-position: -375px 0;
-}
-.lp-icon.lp-icon-25.lp-steam {
-  background-position: -400px -25px;
-}
-.lp-icon.lp-icon-25.lp-steam:hover {
-  background-position: -400px 0;
-}
-.lp-icon.lp-icon-25.lp-tencent {
-  background-position: -425px -25px;
-}
-.lp-icon.lp-icon-25.lp-tencent:hover {
-  background-position: -425px 0;
-}
-.lp-icon.lp-icon-25.lp-toornament {
-  background-position: -450px -25px;
-}
-.lp-icon.lp-icon-25.lp-toornament:hover {
-  background-position: -450px 0;
-}
-.lp-icon.lp-icon-25.lp-tournament {
-  background-position: -475px -25px;
-}
-.lp-icon.lp-icon-25.lp-tournament:hover {
-  background-position: -475px 0;
-}
-.lp-icon.lp-icon-25.lp-twitch {
-  background-position: -500px -25px;
-}
-.lp-icon.lp-icon-25.lp-twitch:hover {
-  background-position: -500px 0;
-}
-.lp-icon.lp-icon-25.lp-twitter {
-  background-position: -525px -25px;
-}
-.lp-icon.lp-icon-25.lp-twitter:hover {
-  background-position: -525px 0;
-}
-.lp-icon.lp-icon-25.lp-vk {
-  background-position: -550px -25px;
-}
-.lp-icon.lp-icon-25.lp-vk:hover {
-  background-position: -550px 0;
-}
-.lp-icon.lp-icon-25.lp-vkontakte {
-  background-position: -550px -25px;
-}
-.lp-icon.lp-icon-25.lp-vkontakte:hover {
-  background-position: -550px 0;
-}
-.lp-icon.lp-icon-25.lp-home {
-  background-position: -575px -25px;
-}
-.lp-icon.lp-icon-25.lp-home:hover {
-  background-position: -575px 0;
-}
-.lp-icon.lp-icon-25.lp-weibo {
-  background-position: -600px -25px;
-}
-.lp-icon.lp-icon-25.lp-weibo:hover {
-  background-position: -600px 0;
-}
-.lp-icon.lp-icon-25.lp-youtube {
-  background-position: -625px -25px;
-}
-.lp-icon.lp-icon-25.lp-youtube:hover {
-  background-position: -625px 0;
-}
-.lp-icon.lp-icon-25.lp-github {
-  background-position: -650px -25px;
-}
-.lp-icon.lp-icon-25.lp-github:hover {
-  background-position: -650px 0;
-}
-.lp-icon.lp-icon-25.lp-instagram {
-  background-position: -675px -25px;
-}
-.lp-icon.lp-icon-25.lp-instagram:hover {
-  background-position: -675px 0;
-}
-.lp-icon.lp-icon-25.lp-stream {
-  background-position: 0 -75px;
-}
-.lp-icon.lp-icon-25.lp-stream:hover {
-  background-position: 0 -50px;
-}
-.lp-icon.lp-icon-25.lp-tlstream {
-  background-position: -25px -75px;
-}
-.lp-icon.lp-icon-25.lp-tlstream:hover {
-  background-position: -25px -50px;
-}
-.lp-icon.lp-icon-25.lp-fanclub {
-  background-position: -50px -75px;
-}
-.lp-icon.lp-icon-25.lp-fanclub:hover {
-  background-position: -50px -50px;
-}
-.lp-icon.lp-icon-25.lp-tlpd-hots {
-  background-position: -75px -75px;
-}
-.lp-icon.lp-icon-25.lp-tlpd-hots:hover {
-  background-position: -75px -50px;
-}
-.lp-icon.lp-icon-25.lp-tlpd {
-  background-position: -100px -75px;
-}
-.lp-icon.lp-icon-25.lp-tlpd:hover {
-  background-position: -100px -50px;
-}
-.lp-icon.lp-icon-25.lp-tlpd-wol {
-  background-position: -100px -75px;
-}
-.lp-icon.lp-icon-25.lp-tlpd-wol:hover {
-  background-position: -100px -50px;
-}
-.lp-icon.lp-icon-25.lp-tlpd-wol-korea {
-  background-position: -125px -75px;
-}
-.lp-icon.lp-icon-25.lp-tlpd-wol-korea:hover {
-  background-position: -125px -50px;
-}
-.lp-icon.lp-icon-25.lp-tlpd-sospa {
-  background-position: -150px -75px;
-}
-.lp-icon.lp-icon-25.lp-tlpd-sospa:hover {
-  background-position: -150px -50px;
-}
-.lp-icon.lp-icon-25.lp-gosugamers {
-  background-position: -175px -75px;
-}
-.lp-icon.lp-icon-25.lp-gosugamers:hover {
-  background-position: -175px -50px;
-}
-.lp-icon.lp-icon-25.lp-bracket {
-  background-position: -200px -75px;
-}
-.lp-icon.lp-icon-25.lp-bracket:hover {
-  background-position: -200px -50px;
-}
-.lp-icon.lp-icon-25.lp-afreeca {
-  background-position: -225px -75px;
-}
-.lp-icon.lp-icon-25.lp-afreeca:hover {
-  background-position: -225px -50px;
-}
-.lp-icon.lp-icon-25.lp-rules {
-  background-position: -250px -75px;
-}
-.lp-icon.lp-icon-25.lp-rules:hover {
-  background-position: -250px -50px;
-}
-.lp-icon.lp-icon-25.lp-iccup {
-  background-position: -275px -75px;
-}
-.lp-icon.lp-icon-25.lp-iccup:hover {
-  background-position: -275px -50px;
-}
-.lp-icon.lp-icon-25.lp-esl {
-  background-position: -300px -75px;
-}
-.lp-icon.lp-icon-25.lp-esl:hover {
-  background-position: -300px -50px;
-}
-.lp-icon.lp-icon-25.lp-esea {
-  background-position: -325px -75px;
-}
-.lp-icon.lp-icon-25.lp-esea:hover {
-  background-position: -325px -50px;
-}
-.lp-icon.lp-icon-25.lp-skgaming {
-  background-position: -350px -75px;
-}
-.lp-icon.lp-icon-25.lp-skgaming:hover {
-  background-position: -350px -50px;
-}
-.lp-icon.lp-icon-25.lp-douyutv {
-  background-position: -375px -75px;
-}
-.lp-icon.lp-icon-25.lp-douyutv:hover {
-  background-position: -375px -50px;
-}
-.lp-icon.lp-icon-25.lp-tlprofile {
-  background-position: -400px -75px;
-}
-.lp-icon.lp-icon-25.lp-tlprofile:hover {
-  background-position: -400px -50px;
-}
-.lp-icon.lp-icon-25.lp-cafe-daum {
-  background-position: -425px -75px;
-}
-.lp-icon.lp-icon-25.lp-cafe-daum:hover {
-  background-position: -425px -50px;
-}
-.lp-icon.lp-icon-25.lp-abios {
-  background-position: -450px -75px;
-}
-.lp-icon.lp-icon-25.lp-abios:hover {
-  background-position: -450px -50px;
-}
-.lp-icon.lp-icon-25.lp-youku {
-  background-position: -475px -75px;
-}
-.lp-icon.lp-icon-25.lp-youku:hover {
-  background-position: -475px -50px;
-}
-.lp-icon.lp-icon-25.lp-hitbox {
-  background-position: -500px -75px;
-}
-.lp-icon.lp-icon-25.lp-hitbox:hover {
-  background-position: -500px -50px;
-}
-.lp-icon.lp-icon-25.lp-music {
-  background-position: -525px -75px;
-}
-.lp-icon.lp-icon-25.lp-music:hover {
-  background-position: -525px -50px;
-}
-.lp-icon.lp-icon-25.lp-pandatv {
-  background-position: -550px -75px;
-}
-.lp-icon.lp-icon-25.lp-pandatv:hover {
-  background-position: -550px -50px;
-}
-.lp-icon.lp-icon-25.lp-masteroverwatch {
-  background-position: -575px -75px;
-}
-.lp-icon.lp-icon-25.lp-masteroverwatch:hover {
-  background-position: -575px -50px;
+  background-size: 25px 50px;
+  background-position: 0 -25px;
 }
 .lp-icon.lp-icon-50 {
   width: 50px;
   height: 50px;
-  background-size: auto 300px;
-  /* also change in footer.less at a.social-icon, @icon-row-number * @icon-size */
-  /* row 1, first icon (index 0) is error to prevent typos */
-  /* row 2 */
-}
-.lp-icon.lp-icon-50.lp-aligulac {
-  background-position: -50px -50px;
-}
-.lp-icon.lp-icon-50.lp-aligulac:hover {
-  background-position: -50px 0;
-}
-.lp-icon.lp-icon-50.lp-ask-fm {
-  background-position: -100px -50px;
-}
-.lp-icon.lp-icon-50.lp-ask-fm:hover {
-  background-position: -100px 0;
-}
-.lp-icon.lp-icon-50.lp-azubu {
-  background-position: -150px -50px;
-}
-.lp-icon.lp-icon-50.lp-azubu:hover {
-  background-position: -150px 0;
-}
-.lp-icon.lp-icon-50.lp-binary-beast {
-  background-position: -200px -50px;
-}
-.lp-icon.lp-icon-50.lp-binary-beast:hover {
-  background-position: -200px 0;
-}
-.lp-icon.lp-icon-50.lp-challonge {
-  background-position: -250px -50px;
-}
-.lp-icon.lp-icon-50.lp-challonge:hover {
-  background-position: -250px 0;
-}
-.lp-icon.lp-icon-50.lp-datdota {
-  background-position: -300px -50px;
-}
-.lp-icon.lp-icon-50.lp-datdota:hover {
-  background-position: -300px 0;
-}
-.lp-icon.lp-icon-50.lp-dotabuff {
-  background-position: -350px -50px;
-}
-.lp-icon.lp-icon-50.lp-dotabuff:hover {
-  background-position: -350px 0;
-}
-.lp-icon.lp-icon-50.lp-email {
-  background-position: -400px -50px;
-}
-.lp-icon.lp-icon-50.lp-email:hover {
-  background-position: -400px 0;
-}
-.lp-icon.lp-icon-50.lp-facebook {
-  background-position: -450px -50px;
-}
-.lp-icon.lp-icon-50.lp-facebook:hover {
-  background-position: -450px 0;
-}
-.lp-icon.lp-icon-50.lp-faceit {
-  background-position: -500px -50px;
-}
-.lp-icon.lp-icon-50.lp-faceit:hover {
-  background-position: -500px 0;
-}
-.lp-icon.lp-icon-50.lp-google-plus {
-  background-position: -550px -50px;
-}
-.lp-icon.lp-icon-50.lp-google-plus:hover {
-  background-position: -550px 0;
-}
-.lp-icon.lp-icon-50.lp-reddit {
-  background-position: -600px -50px;
-}
-.lp-icon.lp-icon-50.lp-reddit:hover {
-  background-position: -600px 0;
-}
-.lp-icon.lp-icon-50.lp-skype {
-  background-position: -650px -50px;
-}
-.lp-icon.lp-icon-50.lp-skype:hover {
-  background-position: -650px 0;
-}
-.lp-icon.lp-icon-50.lp-smashboards {
-  background-position: -700px -50px;
-}
-.lp-icon.lp-icon-50.lp-smashboards:hover {
-  background-position: -700px 0;
-}
-.lp-icon.lp-icon-50.lp-smash-gg {
-  background-position: -750px -50px;
-}
-.lp-icon.lp-icon-50.lp-smash-gg:hover {
-  background-position: -750px 0;
-}
-.lp-icon.lp-icon-50.lp-steam {
-  background-position: -800px -50px;
-}
-.lp-icon.lp-icon-50.lp-steam:hover {
-  background-position: -800px 0;
-}
-.lp-icon.lp-icon-50.lp-tencent {
-  background-position: -850px -50px;
-}
-.lp-icon.lp-icon-50.lp-tencent:hover {
-  background-position: -850px 0;
-}
-.lp-icon.lp-icon-50.lp-toornament {
-  background-position: -900px -50px;
-}
-.lp-icon.lp-icon-50.lp-toornament:hover {
-  background-position: -900px 0;
-}
-.lp-icon.lp-icon-50.lp-tournament {
-  background-position: -950px -50px;
-}
-.lp-icon.lp-icon-50.lp-tournament:hover {
-  background-position: -950px 0;
-}
-.lp-icon.lp-icon-50.lp-twitch {
-  background-position: -1000px -50px;
-}
-.lp-icon.lp-icon-50.lp-twitch:hover {
-  background-position: -1000px 0;
-}
-.lp-icon.lp-icon-50.lp-twitter {
-  background-position: -1050px -50px;
-}
-.lp-icon.lp-icon-50.lp-twitter:hover {
-  background-position: -1050px 0;
-}
-.lp-icon.lp-icon-50.lp-vk {
-  background-position: -1100px -50px;
-}
-.lp-icon.lp-icon-50.lp-vk:hover {
-  background-position: -1100px 0;
-}
-.lp-icon.lp-icon-50.lp-vkontakte {
-  background-position: -1100px -50px;
-}
-.lp-icon.lp-icon-50.lp-vkontakte:hover {
-  background-position: -1100px 0;
-}
-.lp-icon.lp-icon-50.lp-home {
-  background-position: -1150px -50px;
-}
-.lp-icon.lp-icon-50.lp-home:hover {
-  background-position: -1150px 0;
-}
-.lp-icon.lp-icon-50.lp-weibo {
-  background-position: -1200px -50px;
-}
-.lp-icon.lp-icon-50.lp-weibo:hover {
-  background-position: -1200px 0;
-}
-.lp-icon.lp-icon-50.lp-youtube {
-  background-position: -1250px -50px;
-}
-.lp-icon.lp-icon-50.lp-youtube:hover {
-  background-position: -1250px 0;
-}
-.lp-icon.lp-icon-50.lp-github {
-  background-position: -1300px -50px;
-}
-.lp-icon.lp-icon-50.lp-github:hover {
-  background-position: -1300px 0;
-}
-.lp-icon.lp-icon-50.lp-instagram {
-  background-position: -1350px -50px;
-}
-.lp-icon.lp-icon-50.lp-instagram:hover {
-  background-position: -1350px 0;
-}
-.lp-icon.lp-icon-50.lp-stream {
-  background-position: 0 -150px;
-}
-.lp-icon.lp-icon-50.lp-stream:hover {
-  background-position: 0 -100px;
-}
-.lp-icon.lp-icon-50.lp-tlstream {
-  background-position: -50px -150px;
-}
-.lp-icon.lp-icon-50.lp-tlstream:hover {
-  background-position: -50px -100px;
-}
-.lp-icon.lp-icon-50.lp-fanclub {
-  background-position: -100px -150px;
-}
-.lp-icon.lp-icon-50.lp-fanclub:hover {
-  background-position: -100px -100px;
-}
-.lp-icon.lp-icon-50.lp-tlpd-hots {
-  background-position: -150px -150px;
-}
-.lp-icon.lp-icon-50.lp-tlpd-hots:hover {
-  background-position: -150px -100px;
-}
-.lp-icon.lp-icon-50.lp-tlpd {
-  background-position: -200px -150px;
-}
-.lp-icon.lp-icon-50.lp-tlpd:hover {
-  background-position: -200px -100px;
-}
-.lp-icon.lp-icon-50.lp-tlpd-wol {
-  background-position: -200px -150px;
-}
-.lp-icon.lp-icon-50.lp-tlpd-wol:hover {
-  background-position: -200px -100px;
-}
-.lp-icon.lp-icon-50.lp-tlpd-wol-korea {
-  background-position: -250px -150px;
-}
-.lp-icon.lp-icon-50.lp-tlpd-wol-korea:hover {
-  background-position: -250px -100px;
-}
-.lp-icon.lp-icon-50.lp-tlpd-sospa {
-  background-position: -300px -150px;
-}
-.lp-icon.lp-icon-50.lp-tlpd-sospa:hover {
-  background-position: -300px -100px;
-}
-.lp-icon.lp-icon-50.lp-gosugamers {
-  background-position: -350px -150px;
-}
-.lp-icon.lp-icon-50.lp-gosugamers:hover {
-  background-position: -350px -100px;
-}
-.lp-icon.lp-icon-50.lp-bracket {
-  background-position: -400px -150px;
-}
-.lp-icon.lp-icon-50.lp-bracket:hover {
-  background-position: -400px -100px;
-}
-.lp-icon.lp-icon-50.lp-afreeca {
-  background-position: -450px -150px;
-}
-.lp-icon.lp-icon-50.lp-afreeca:hover {
-  background-position: -450px -100px;
-}
-.lp-icon.lp-icon-50.lp-rules {
-  background-position: -500px -150px;
-}
-.lp-icon.lp-icon-50.lp-rules:hover {
-  background-position: -500px -100px;
-}
-.lp-icon.lp-icon-50.lp-iccup {
-  background-position: -550px -150px;
-}
-.lp-icon.lp-icon-50.lp-iccup:hover {
-  background-position: -550px -100px;
-}
-.lp-icon.lp-icon-50.lp-esl {
-  background-position: -600px -150px;
-}
-.lp-icon.lp-icon-50.lp-esl:hover {
-  background-position: -600px -100px;
-}
-.lp-icon.lp-icon-50.lp-esea {
-  background-position: -650px -150px;
-}
-.lp-icon.lp-icon-50.lp-esea:hover {
-  background-position: -650px -100px;
-}
-.lp-icon.lp-icon-50.lp-skgaming {
-  background-position: -700px -150px;
-}
-.lp-icon.lp-icon-50.lp-skgaming:hover {
-  background-position: -700px -100px;
-}
-.lp-icon.lp-icon-50.lp-douyutv {
-  background-position: -750px -150px;
-}
-.lp-icon.lp-icon-50.lp-douyutv:hover {
-  background-position: -750px -100px;
-}
-.lp-icon.lp-icon-50.lp-tlprofile {
-  background-position: -800px -150px;
-}
-.lp-icon.lp-icon-50.lp-tlprofile:hover {
-  background-position: -800px -100px;
-}
-.lp-icon.lp-icon-50.lp-cafe-daum {
-  background-position: -850px -150px;
-}
-.lp-icon.lp-icon-50.lp-cafe-daum:hover {
-  background-position: -850px -100px;
-}
-.lp-icon.lp-icon-50.lp-abios {
-  background-position: -900px -150px;
-}
-.lp-icon.lp-icon-50.lp-abios:hover {
-  background-position: -900px -100px;
-}
-.lp-icon.lp-icon-50.lp-youku {
-  background-position: -950px -150px;
-}
-.lp-icon.lp-icon-50.lp-youku:hover {
-  background-position: -950px -100px;
-}
-.lp-icon.lp-icon-50.lp-hitbox {
-  background-position: -1000px -150px;
-}
-.lp-icon.lp-icon-50.lp-hitbox:hover {
-  background-position: -1000px -100px;
-}
-.lp-icon.lp-icon-50.lp-music {
-  background-position: -1050px -150px;
-}
-.lp-icon.lp-icon-50.lp-music:hover {
-  background-position: -1050px -100px;
-}
-.lp-icon.lp-icon-50.lp-pandatv {
-  background-position: -1100px -150px;
-}
-.lp-icon.lp-icon-50.lp-pandatv:hover {
-  background-position: -1100px -100px;
-}
-.lp-icon.lp-icon-50.lp-masteroverwatch {
-  background-position: -1150px -150px;
-}
-.lp-icon.lp-icon-50.lp-masteroverwatch:hover {
-  background-position: -1150px -100px;
+  background-size: 50px 100px;
+  background-position: 0 -50px;
 }
 .lp-icon.lp-icon-64 {
   width: 64px;
   height: 64px;
-  background-size: auto 384px;
-  /* also change in footer.less at a.social-icon, @icon-row-number * @icon-size */
-  /* row 1, first icon (index 0) is error to prevent typos */
-  /* row 2 */
-}
-.lp-icon.lp-icon-64.lp-aligulac {
-  background-position: -64px -64px;
-}
-.lp-icon.lp-icon-64.lp-aligulac:hover {
-  background-position: -64px 0;
-}
-.lp-icon.lp-icon-64.lp-ask-fm {
-  background-position: -128px -64px;
-}
-.lp-icon.lp-icon-64.lp-ask-fm:hover {
-  background-position: -128px 0;
-}
-.lp-icon.lp-icon-64.lp-azubu {
-  background-position: -192px -64px;
-}
-.lp-icon.lp-icon-64.lp-azubu:hover {
-  background-position: -192px 0;
-}
-.lp-icon.lp-icon-64.lp-binary-beast {
-  background-position: -256px -64px;
-}
-.lp-icon.lp-icon-64.lp-binary-beast:hover {
-  background-position: -256px 0;
-}
-.lp-icon.lp-icon-64.lp-challonge {
-  background-position: -320px -64px;
-}
-.lp-icon.lp-icon-64.lp-challonge:hover {
-  background-position: -320px 0;
-}
-.lp-icon.lp-icon-64.lp-datdota {
-  background-position: -384px -64px;
-}
-.lp-icon.lp-icon-64.lp-datdota:hover {
-  background-position: -384px 0;
-}
-.lp-icon.lp-icon-64.lp-dotabuff {
-  background-position: -448px -64px;
-}
-.lp-icon.lp-icon-64.lp-dotabuff:hover {
-  background-position: -448px 0;
-}
-.lp-icon.lp-icon-64.lp-email {
-  background-position: -512px -64px;
-}
-.lp-icon.lp-icon-64.lp-email:hover {
-  background-position: -512px 0;
-}
-.lp-icon.lp-icon-64.lp-facebook {
-  background-position: -576px -64px;
-}
-.lp-icon.lp-icon-64.lp-facebook:hover {
-  background-position: -576px 0;
-}
-.lp-icon.lp-icon-64.lp-faceit {
-  background-position: -640px -64px;
-}
-.lp-icon.lp-icon-64.lp-faceit:hover {
-  background-position: -640px 0;
-}
-.lp-icon.lp-icon-64.lp-google-plus {
-  background-position: -704px -64px;
-}
-.lp-icon.lp-icon-64.lp-google-plus:hover {
-  background-position: -704px 0;
-}
-.lp-icon.lp-icon-64.lp-reddit {
-  background-position: -768px -64px;
-}
-.lp-icon.lp-icon-64.lp-reddit:hover {
-  background-position: -768px 0;
-}
-.lp-icon.lp-icon-64.lp-skype {
-  background-position: -832px -64px;
-}
-.lp-icon.lp-icon-64.lp-skype:hover {
-  background-position: -832px 0;
-}
-.lp-icon.lp-icon-64.lp-smashboards {
-  background-position: -896px -64px;
-}
-.lp-icon.lp-icon-64.lp-smashboards:hover {
-  background-position: -896px 0;
-}
-.lp-icon.lp-icon-64.lp-smash-gg {
-  background-position: -960px -64px;
-}
-.lp-icon.lp-icon-64.lp-smash-gg:hover {
-  background-position: -960px 0;
-}
-.lp-icon.lp-icon-64.lp-steam {
-  background-position: -1024px -64px;
-}
-.lp-icon.lp-icon-64.lp-steam:hover {
-  background-position: -1024px 0;
-}
-.lp-icon.lp-icon-64.lp-tencent {
-  background-position: -1088px -64px;
-}
-.lp-icon.lp-icon-64.lp-tencent:hover {
-  background-position: -1088px 0;
-}
-.lp-icon.lp-icon-64.lp-toornament {
-  background-position: -1152px -64px;
-}
-.lp-icon.lp-icon-64.lp-toornament:hover {
-  background-position: -1152px 0;
-}
-.lp-icon.lp-icon-64.lp-tournament {
-  background-position: -1216px -64px;
-}
-.lp-icon.lp-icon-64.lp-tournament:hover {
-  background-position: -1216px 0;
-}
-.lp-icon.lp-icon-64.lp-twitch {
-  background-position: -1280px -64px;
-}
-.lp-icon.lp-icon-64.lp-twitch:hover {
-  background-position: -1280px 0;
-}
-.lp-icon.lp-icon-64.lp-twitter {
-  background-position: -1344px -64px;
-}
-.lp-icon.lp-icon-64.lp-twitter:hover {
-  background-position: -1344px 0;
-}
-.lp-icon.lp-icon-64.lp-vk {
-  background-position: -1408px -64px;
-}
-.lp-icon.lp-icon-64.lp-vk:hover {
-  background-position: -1408px 0;
-}
-.lp-icon.lp-icon-64.lp-vkontakte {
-  background-position: -1408px -64px;
-}
-.lp-icon.lp-icon-64.lp-vkontakte:hover {
-  background-position: -1408px 0;
-}
-.lp-icon.lp-icon-64.lp-home {
-  background-position: -1472px -64px;
-}
-.lp-icon.lp-icon-64.lp-home:hover {
-  background-position: -1472px 0;
-}
-.lp-icon.lp-icon-64.lp-weibo {
-  background-position: -1536px -64px;
-}
-.lp-icon.lp-icon-64.lp-weibo:hover {
-  background-position: -1536px 0;
-}
-.lp-icon.lp-icon-64.lp-youtube {
-  background-position: -1600px -64px;
-}
-.lp-icon.lp-icon-64.lp-youtube:hover {
-  background-position: -1600px 0;
-}
-.lp-icon.lp-icon-64.lp-github {
-  background-position: -1664px -64px;
-}
-.lp-icon.lp-icon-64.lp-github:hover {
-  background-position: -1664px 0;
-}
-.lp-icon.lp-icon-64.lp-instagram {
-  background-position: -1728px -64px;
-}
-.lp-icon.lp-icon-64.lp-instagram:hover {
-  background-position: -1728px 0;
-}
-.lp-icon.lp-icon-64.lp-stream {
-  background-position: 0 -192px;
-}
-.lp-icon.lp-icon-64.lp-stream:hover {
-  background-position: 0 -128px;
-}
-.lp-icon.lp-icon-64.lp-tlstream {
-  background-position: -64px -192px;
-}
-.lp-icon.lp-icon-64.lp-tlstream:hover {
-  background-position: -64px -128px;
-}
-.lp-icon.lp-icon-64.lp-fanclub {
-  background-position: -128px -192px;
-}
-.lp-icon.lp-icon-64.lp-fanclub:hover {
-  background-position: -128px -128px;
-}
-.lp-icon.lp-icon-64.lp-tlpd-hots {
-  background-position: -192px -192px;
-}
-.lp-icon.lp-icon-64.lp-tlpd-hots:hover {
-  background-position: -192px -128px;
-}
-.lp-icon.lp-icon-64.lp-tlpd {
-  background-position: -256px -192px;
-}
-.lp-icon.lp-icon-64.lp-tlpd:hover {
-  background-position: -256px -128px;
-}
-.lp-icon.lp-icon-64.lp-tlpd-wol {
-  background-position: -256px -192px;
-}
-.lp-icon.lp-icon-64.lp-tlpd-wol:hover {
-  background-position: -256px -128px;
-}
-.lp-icon.lp-icon-64.lp-tlpd-wol-korea {
-  background-position: -320px -192px;
-}
-.lp-icon.lp-icon-64.lp-tlpd-wol-korea:hover {
-  background-position: -320px -128px;
-}
-.lp-icon.lp-icon-64.lp-tlpd-sospa {
-  background-position: -384px -192px;
-}
-.lp-icon.lp-icon-64.lp-tlpd-sospa:hover {
-  background-position: -384px -128px;
-}
-.lp-icon.lp-icon-64.lp-gosugamers {
-  background-position: -448px -192px;
-}
-.lp-icon.lp-icon-64.lp-gosugamers:hover {
-  background-position: -448px -128px;
-}
-.lp-icon.lp-icon-64.lp-bracket {
-  background-position: -512px -192px;
-}
-.lp-icon.lp-icon-64.lp-bracket:hover {
-  background-position: -512px -128px;
-}
-.lp-icon.lp-icon-64.lp-afreeca {
-  background-position: -576px -192px;
-}
-.lp-icon.lp-icon-64.lp-afreeca:hover {
-  background-position: -576px -128px;
-}
-.lp-icon.lp-icon-64.lp-rules {
-  background-position: -640px -192px;
-}
-.lp-icon.lp-icon-64.lp-rules:hover {
-  background-position: -640px -128px;
-}
-.lp-icon.lp-icon-64.lp-iccup {
-  background-position: -704px -192px;
-}
-.lp-icon.lp-icon-64.lp-iccup:hover {
-  background-position: -704px -128px;
-}
-.lp-icon.lp-icon-64.lp-esl {
-  background-position: -768px -192px;
-}
-.lp-icon.lp-icon-64.lp-esl:hover {
-  background-position: -768px -128px;
-}
-.lp-icon.lp-icon-64.lp-esea {
-  background-position: -832px -192px;
-}
-.lp-icon.lp-icon-64.lp-esea:hover {
-  background-position: -832px -128px;
-}
-.lp-icon.lp-icon-64.lp-skgaming {
-  background-position: -896px -192px;
-}
-.lp-icon.lp-icon-64.lp-skgaming:hover {
-  background-position: -896px -128px;
-}
-.lp-icon.lp-icon-64.lp-douyutv {
-  background-position: -960px -192px;
-}
-.lp-icon.lp-icon-64.lp-douyutv:hover {
-  background-position: -960px -128px;
-}
-.lp-icon.lp-icon-64.lp-tlprofile {
-  background-position: -1024px -192px;
-}
-.lp-icon.lp-icon-64.lp-tlprofile:hover {
-  background-position: -1024px -128px;
-}
-.lp-icon.lp-icon-64.lp-cafe-daum {
-  background-position: -1088px -192px;
-}
-.lp-icon.lp-icon-64.lp-cafe-daum:hover {
-  background-position: -1088px -128px;
-}
-.lp-icon.lp-icon-64.lp-abios {
-  background-position: -1152px -192px;
-}
-.lp-icon.lp-icon-64.lp-abios:hover {
-  background-position: -1152px -128px;
-}
-.lp-icon.lp-icon-64.lp-youku {
-  background-position: -1216px -192px;
-}
-.lp-icon.lp-icon-64.lp-youku:hover {
-  background-position: -1216px -128px;
-}
-.lp-icon.lp-icon-64.lp-hitbox {
-  background-position: -1280px -192px;
-}
-.lp-icon.lp-icon-64.lp-hitbox:hover {
-  background-position: -1280px -128px;
-}
-.lp-icon.lp-icon-64.lp-music {
-  background-position: -1344px -192px;
-}
-.lp-icon.lp-icon-64.lp-music:hover {
-  background-position: -1344px -128px;
-}
-.lp-icon.lp-icon-64.lp-pandatv {
-  background-position: -1408px -192px;
-}
-.lp-icon.lp-icon-64.lp-pandatv:hover {
-  background-position: -1408px -128px;
-}
-.lp-icon.lp-icon-64.lp-masteroverwatch {
-  background-position: -1472px -192px;
-}
-.lp-icon.lp-icon-64.lp-masteroverwatch:hover {
-  background-position: -1472px -128px;
+  background-size: 64px 128px;
+  background-position: 0 -64px;
 }
 .lp-icon.lp-icon-100 {
   width: 100px;
   height: 100px;
-  background-size: auto 600px;
-  /* also change in footer.less at a.social-icon, @icon-row-number * @icon-size */
-  /* row 1, first icon (index 0) is error to prevent typos */
-  /* row 2 */
-}
-.lp-icon.lp-icon-100.lp-aligulac {
-  background-position: -100px -100px;
-}
-.lp-icon.lp-icon-100.lp-aligulac:hover {
-  background-position: -100px 0;
-}
-.lp-icon.lp-icon-100.lp-ask-fm {
-  background-position: -200px -100px;
-}
-.lp-icon.lp-icon-100.lp-ask-fm:hover {
-  background-position: -200px 0;
-}
-.lp-icon.lp-icon-100.lp-azubu {
-  background-position: -300px -100px;
-}
-.lp-icon.lp-icon-100.lp-azubu:hover {
-  background-position: -300px 0;
-}
-.lp-icon.lp-icon-100.lp-binary-beast {
-  background-position: -400px -100px;
-}
-.lp-icon.lp-icon-100.lp-binary-beast:hover {
-  background-position: -400px 0;
-}
-.lp-icon.lp-icon-100.lp-challonge {
-  background-position: -500px -100px;
-}
-.lp-icon.lp-icon-100.lp-challonge:hover {
-  background-position: -500px 0;
-}
-.lp-icon.lp-icon-100.lp-datdota {
-  background-position: -600px -100px;
-}
-.lp-icon.lp-icon-100.lp-datdota:hover {
-  background-position: -600px 0;
-}
-.lp-icon.lp-icon-100.lp-dotabuff {
-  background-position: -700px -100px;
-}
-.lp-icon.lp-icon-100.lp-dotabuff:hover {
-  background-position: -700px 0;
-}
-.lp-icon.lp-icon-100.lp-email {
-  background-position: -800px -100px;
-}
-.lp-icon.lp-icon-100.lp-email:hover {
-  background-position: -800px 0;
-}
-.lp-icon.lp-icon-100.lp-facebook {
-  background-position: -900px -100px;
-}
-.lp-icon.lp-icon-100.lp-facebook:hover {
-  background-position: -900px 0;
-}
-.lp-icon.lp-icon-100.lp-faceit {
-  background-position: -1000px -100px;
-}
-.lp-icon.lp-icon-100.lp-faceit:hover {
-  background-position: -1000px 0;
-}
-.lp-icon.lp-icon-100.lp-google-plus {
-  background-position: -1100px -100px;
-}
-.lp-icon.lp-icon-100.lp-google-plus:hover {
-  background-position: -1100px 0;
-}
-.lp-icon.lp-icon-100.lp-reddit {
-  background-position: -1200px -100px;
-}
-.lp-icon.lp-icon-100.lp-reddit:hover {
-  background-position: -1200px 0;
-}
-.lp-icon.lp-icon-100.lp-skype {
-  background-position: -1300px -100px;
-}
-.lp-icon.lp-icon-100.lp-skype:hover {
-  background-position: -1300px 0;
-}
-.lp-icon.lp-icon-100.lp-smashboards {
-  background-position: -1400px -100px;
-}
-.lp-icon.lp-icon-100.lp-smashboards:hover {
-  background-position: -1400px 0;
-}
-.lp-icon.lp-icon-100.lp-smash-gg {
-  background-position: -1500px -100px;
-}
-.lp-icon.lp-icon-100.lp-smash-gg:hover {
-  background-position: -1500px 0;
-}
-.lp-icon.lp-icon-100.lp-steam {
-  background-position: -1600px -100px;
-}
-.lp-icon.lp-icon-100.lp-steam:hover {
-  background-position: -1600px 0;
-}
-.lp-icon.lp-icon-100.lp-tencent {
-  background-position: -1700px -100px;
-}
-.lp-icon.lp-icon-100.lp-tencent:hover {
-  background-position: -1700px 0;
-}
-.lp-icon.lp-icon-100.lp-toornament {
-  background-position: -1800px -100px;
-}
-.lp-icon.lp-icon-100.lp-toornament:hover {
-  background-position: -1800px 0;
-}
-.lp-icon.lp-icon-100.lp-tournament {
-  background-position: -1900px -100px;
-}
-.lp-icon.lp-icon-100.lp-tournament:hover {
-  background-position: -1900px 0;
-}
-.lp-icon.lp-icon-100.lp-twitch {
-  background-position: -2000px -100px;
-}
-.lp-icon.lp-icon-100.lp-twitch:hover {
-  background-position: -2000px 0;
-}
-.lp-icon.lp-icon-100.lp-twitter {
-  background-position: -2100px -100px;
-}
-.lp-icon.lp-icon-100.lp-twitter:hover {
-  background-position: -2100px 0;
-}
-.lp-icon.lp-icon-100.lp-vk {
-  background-position: -2200px -100px;
-}
-.lp-icon.lp-icon-100.lp-vk:hover {
-  background-position: -2200px 0;
-}
-.lp-icon.lp-icon-100.lp-vkontakte {
-  background-position: -2200px -100px;
-}
-.lp-icon.lp-icon-100.lp-vkontakte:hover {
-  background-position: -2200px 0;
-}
-.lp-icon.lp-icon-100.lp-home {
-  background-position: -2300px -100px;
-}
-.lp-icon.lp-icon-100.lp-home:hover {
-  background-position: -2300px 0;
-}
-.lp-icon.lp-icon-100.lp-weibo {
-  background-position: -2400px -100px;
-}
-.lp-icon.lp-icon-100.lp-weibo:hover {
-  background-position: -2400px 0;
-}
-.lp-icon.lp-icon-100.lp-youtube {
-  background-position: -2500px -100px;
-}
-.lp-icon.lp-icon-100.lp-youtube:hover {
-  background-position: -2500px 0;
-}
-.lp-icon.lp-icon-100.lp-github {
-  background-position: -2600px -100px;
-}
-.lp-icon.lp-icon-100.lp-github:hover {
-  background-position: -2600px 0;
-}
-.lp-icon.lp-icon-100.lp-instagram {
-  background-position: -2700px -100px;
-}
-.lp-icon.lp-icon-100.lp-instagram:hover {
-  background-position: -2700px 0;
-}
-.lp-icon.lp-icon-100.lp-stream {
-  background-position: 0 -300px;
-}
-.lp-icon.lp-icon-100.lp-stream:hover {
-  background-position: 0 -200px;
-}
-.lp-icon.lp-icon-100.lp-tlstream {
-  background-position: -100px -300px;
-}
-.lp-icon.lp-icon-100.lp-tlstream:hover {
-  background-position: -100px -200px;
-}
-.lp-icon.lp-icon-100.lp-fanclub {
-  background-position: -200px -300px;
-}
-.lp-icon.lp-icon-100.lp-fanclub:hover {
-  background-position: -200px -200px;
-}
-.lp-icon.lp-icon-100.lp-tlpd-hots {
-  background-position: -300px -300px;
-}
-.lp-icon.lp-icon-100.lp-tlpd-hots:hover {
-  background-position: -300px -200px;
-}
-.lp-icon.lp-icon-100.lp-tlpd {
-  background-position: -400px -300px;
-}
-.lp-icon.lp-icon-100.lp-tlpd:hover {
-  background-position: -400px -200px;
-}
-.lp-icon.lp-icon-100.lp-tlpd-wol {
-  background-position: -400px -300px;
-}
-.lp-icon.lp-icon-100.lp-tlpd-wol:hover {
-  background-position: -400px -200px;
-}
-.lp-icon.lp-icon-100.lp-tlpd-wol-korea {
-  background-position: -500px -300px;
-}
-.lp-icon.lp-icon-100.lp-tlpd-wol-korea:hover {
-  background-position: -500px -200px;
-}
-.lp-icon.lp-icon-100.lp-tlpd-sospa {
-  background-position: -600px -300px;
-}
-.lp-icon.lp-icon-100.lp-tlpd-sospa:hover {
-  background-position: -600px -200px;
-}
-.lp-icon.lp-icon-100.lp-gosugamers {
-  background-position: -700px -300px;
-}
-.lp-icon.lp-icon-100.lp-gosugamers:hover {
-  background-position: -700px -200px;
-}
-.lp-icon.lp-icon-100.lp-bracket {
-  background-position: -800px -300px;
-}
-.lp-icon.lp-icon-100.lp-bracket:hover {
-  background-position: -800px -200px;
-}
-.lp-icon.lp-icon-100.lp-afreeca {
-  background-position: -900px -300px;
-}
-.lp-icon.lp-icon-100.lp-afreeca:hover {
-  background-position: -900px -200px;
-}
-.lp-icon.lp-icon-100.lp-rules {
-  background-position: -1000px -300px;
-}
-.lp-icon.lp-icon-100.lp-rules:hover {
-  background-position: -1000px -200px;
-}
-.lp-icon.lp-icon-100.lp-iccup {
-  background-position: -1100px -300px;
-}
-.lp-icon.lp-icon-100.lp-iccup:hover {
-  background-position: -1100px -200px;
-}
-.lp-icon.lp-icon-100.lp-esl {
-  background-position: -1200px -300px;
-}
-.lp-icon.lp-icon-100.lp-esl:hover {
-  background-position: -1200px -200px;
-}
-.lp-icon.lp-icon-100.lp-esea {
-  background-position: -1300px -300px;
-}
-.lp-icon.lp-icon-100.lp-esea:hover {
-  background-position: -1300px -200px;
-}
-.lp-icon.lp-icon-100.lp-skgaming {
-  background-position: -1400px -300px;
-}
-.lp-icon.lp-icon-100.lp-skgaming:hover {
-  background-position: -1400px -200px;
-}
-.lp-icon.lp-icon-100.lp-douyutv {
-  background-position: -1500px -300px;
-}
-.lp-icon.lp-icon-100.lp-douyutv:hover {
-  background-position: -1500px -200px;
-}
-.lp-icon.lp-icon-100.lp-tlprofile {
-  background-position: -1600px -300px;
-}
-.lp-icon.lp-icon-100.lp-tlprofile:hover {
-  background-position: -1600px -200px;
-}
-.lp-icon.lp-icon-100.lp-cafe-daum {
-  background-position: -1700px -300px;
-}
-.lp-icon.lp-icon-100.lp-cafe-daum:hover {
-  background-position: -1700px -200px;
-}
-.lp-icon.lp-icon-100.lp-abios {
-  background-position: -1800px -300px;
-}
-.lp-icon.lp-icon-100.lp-abios:hover {
-  background-position: -1800px -200px;
-}
-.lp-icon.lp-icon-100.lp-youku {
-  background-position: -1900px -300px;
-}
-.lp-icon.lp-icon-100.lp-youku:hover {
-  background-position: -1900px -200px;
-}
-.lp-icon.lp-icon-100.lp-hitbox {
-  background-position: -2000px -300px;
-}
-.lp-icon.lp-icon-100.lp-hitbox:hover {
-  background-position: -2000px -200px;
-}
-.lp-icon.lp-icon-100.lp-music {
-  background-position: -2100px -300px;
-}
-.lp-icon.lp-icon-100.lp-music:hover {
-  background-position: -2100px -200px;
-}
-.lp-icon.lp-icon-100.lp-pandatv {
-  background-position: -2200px -300px;
-}
-.lp-icon.lp-icon-100.lp-pandatv:hover {
-  background-position: -2200px -200px;
-}
-.lp-icon.lp-icon-100.lp-masteroverwatch {
-  background-position: -2300px -300px;
-}
-.lp-icon.lp-icon-100.lp-masteroverwatch:hover {
-  background-position: -2300px -200px;
+  background-size: 100px 200px;
+  background-position: 0 -100px;
+}
+.lp-icon.lp-icon-128 {
+  width: 128px;
+  height: 128px;
+  background-size: 128px 256px;
+  background-position: 0 -128px;
 }
 .lp-icon.lp-icon-256 {
   width: 256px;
   height: 256px;
-  background-size: auto 1536px;
-  /* also change in footer.less at a.social-icon, @icon-row-number * @icon-size */
-  /* row 1, first icon (index 0) is error to prevent typos */
-  /* row 2 */
+  background-size: 256px 512px;
+  background-position: 0 -256px;
 }
-.lp-icon.lp-icon-256.lp-aligulac {
-  background-position: -256px -256px;
+.lp-icon:hover {
+  background-position: 0 0;
 }
-.lp-icon.lp-icon-256.lp-aligulac:hover {
-  background-position: -256px 0;
+.lp-icon.lp-abios {
+  background-image: url(../images/lp-icons/InfoboxIcon_Abios.png);
 }
-.lp-icon.lp-icon-256.lp-ask-fm {
-  background-position: -512px -256px;
+.lp-icon.lp-afreeca {
+  background-image: url(../images/lp-icons/InfoboxIcon_Afreeca.png);
 }
-.lp-icon.lp-icon-256.lp-ask-fm:hover {
-  background-position: -512px 0;
+.lp-icon.lp-aligulac {
+  background-image: url(../images/lp-icons/InfoboxIcon_Aligulac.png);
 }
-.lp-icon.lp-icon-256.lp-azubu {
-  background-position: -768px -256px;
+.lp-icon.lp-ask-fm {
+  background-image: url(../images/lp-icons/InfoboxIcon_AskFM.png);
 }
-.lp-icon.lp-icon-256.lp-azubu:hover {
-  background-position: -768px 0;
+.lp-icon.lp-azubu {
+  background-image: url(../images/lp-icons/InfoboxIcon_Azubu.png);
 }
-.lp-icon.lp-icon-256.lp-binary-beast {
-  background-position: -1024px -256px;
+.lp-icon.lp-binary-beast {
+  background-image: url(../images/lp-icons/InfoboxIcon_BinaryBeast.png);
 }
-.lp-icon.lp-icon-256.lp-binary-beast:hover {
-  background-position: -1024px 0;
+.lp-icon.lp-bracket {
+  background-image: url(../images/lp-icons/InfoboxIcon_Bracket.png);
 }
-.lp-icon.lp-icon-256.lp-challonge {
-  background-position: -1280px -256px;
+.lp-icon.lp-cafe-daum {
+  background-image: url(../images/lp-icons/InfoboxIcon_Daum.png);
 }
-.lp-icon.lp-icon-256.lp-challonge:hover {
-  background-position: -1280px 0;
+.lp-icon.lp-challonge {
+  background-image: url(../images/lp-icons/InfoboxIcon_Challonge.png);
 }
-.lp-icon.lp-icon-256.lp-datdota {
-  background-position: -1536px -256px;
+.lp-icon.lp-datdota {
+  background-image: url(../images/lp-icons/InfoboxIcon_Datdota.png);
 }
-.lp-icon.lp-icon-256.lp-datdota:hover {
-  background-position: -1536px 0;
+.lp-icon.lp-dotabuff {
+  background-image: url(../images/lp-icons/InfoboxIcon_Dotabuff.png);
 }
-.lp-icon.lp-icon-256.lp-dotabuff {
-  background-position: -1792px -256px;
+.lp-icon.lp-douyutv {
+  background-image: url(../images/lp-icons/InfoboxIcon_DouyuTV.png);
 }
-.lp-icon.lp-icon-256.lp-dotabuff:hover {
-  background-position: -1792px 0;
+.lp-icon.lp-email {
+  background-image: url(../images/lp-icons/InfoboxIcon_Email.png);
 }
-.lp-icon.lp-icon-256.lp-email {
-  background-position: -2048px -256px;
+.lp-icon.lp-esea {
+  background-image: url(../images/lp-icons/InfoboxIcon_ESEA.png);
 }
-.lp-icon.lp-icon-256.lp-email:hover {
-  background-position: -2048px 0;
+.lp-icon.lp-esl {
+  background-image: url(../images/lp-icons/InfoboxIcon_ESL.png);
 }
-.lp-icon.lp-icon-256.lp-facebook {
-  background-position: -2304px -256px;
+.lp-icon.lp-facebook {
+  background-image: url(../images/lp-icons/InfoboxIcon_Facebook.png);
 }
-.lp-icon.lp-icon-256.lp-facebook:hover {
-  background-position: -2304px 0;
+.lp-icon.lp-faceit {
+  background-image: url(../images/lp-icons/InfoboxIcon_FACEIT.png);
 }
-.lp-icon.lp-icon-256.lp-faceit {
-  background-position: -2560px -256px;
+.lp-icon.lp-fanclub {
+  background-image: url(../images/lp-icons/InfoboxIcon_TLFanPage.png);
 }
-.lp-icon.lp-icon-256.lp-faceit:hover {
-  background-position: -2560px 0;
+.lp-icon.lp-github {
+  background-image: url(../images/lp-icons/InfoboxIcon_GitHub.png);
 }
-.lp-icon.lp-icon-256.lp-google-plus {
-  background-position: -2816px -256px;
+.lp-icon.lp-google-plus {
+  background-image: url(../images/lp-icons/InfoboxIcon_Google+.png);
 }
-.lp-icon.lp-icon-256.lp-google-plus:hover {
-  background-position: -2816px 0;
+.lp-icon.lp-gosugamers {
+  background-image: url(../images/lp-icons/InfoboxIcon_GosuGamers.png);
 }
-.lp-icon.lp-icon-256.lp-reddit {
-  background-position: -3072px -256px;
+.lp-icon.lp-hitbox {
+  background-image: url(../images/lp-icons/InfoboxIcon_HitboxTV.png);
 }
-.lp-icon.lp-icon-256.lp-reddit:hover {
-  background-position: -3072px 0;
+.lp-icon.lp-home {
+  background-image: url(../images/lp-icons/InfoboxIcon_Website.png);
 }
-.lp-icon.lp-icon-256.lp-skype {
-  background-position: -3328px -256px;
+.lp-icon.lp-iccup {
+  background-image: url(../images/lp-icons/InfoboxIcon_ICCUP.png);
 }
-.lp-icon.lp-icon-256.lp-skype:hover {
-  background-position: -3328px 0;
+.lp-icon.lp-instagram {
+  background-image: url(../images/lp-icons/InfoboxIcon_Instagram.png);
 }
-.lp-icon.lp-icon-256.lp-smashboards {
-  background-position: -3584px -256px;
+.lp-icon.lp-masteroverwatch {
+  background-image: url(../images/lp-icons/InfoboxIcon_MasterOverwatch.png);
 }
-.lp-icon.lp-icon-256.lp-smashboards:hover {
-  background-position: -3584px 0;
+.lp-icon.lp-music {
+  background-image: url(../images/lp-icons/InfoboxIcon_Music.png);
 }
-.lp-icon.lp-icon-256.lp-smash-gg {
-  background-position: -3840px -256px;
+.lp-icon.lp-pandatv {
+  background-image: url(../images/lp-icons/InfoboxIcon_PandaTV.png);
 }
-.lp-icon.lp-icon-256.lp-smash-gg:hover {
-  background-position: -3840px 0;
+.lp-icon.lp-reddit {
+  background-image: url(../images/lp-icons/InfoboxIcon_Reddit.png);
 }
-.lp-icon.lp-icon-256.lp-steam {
-  background-position: -4096px -256px;
+.lp-icon.lp-rules {
+  background-image: url(../images/lp-icons/InfoboxIcon_Rules.png);
 }
-.lp-icon.lp-icon-256.lp-steam:hover {
-  background-position: -4096px 0;
+.lp-icon.lp-skgaming {
+  background-image: url(../images/lp-icons/InfoboxIcon_SK.png);
 }
-.lp-icon.lp-icon-256.lp-tencent {
-  background-position: -4352px -256px;
+.lp-icon.lp-skype {
+  background-image: url(../images/lp-icons/InfoboxIcon_Skype.png);
 }
-.lp-icon.lp-icon-256.lp-tencent:hover {
-  background-position: -4352px 0;
+.lp-icon.lp-smashboards {
+  background-image: url(../images/lp-icons/InfoboxIcon_SmashBoards.png);
 }
-.lp-icon.lp-icon-256.lp-toornament {
-  background-position: -4608px -256px;
+.lp-icon.lp-smash-gg {
+  background-image: url(../images/lp-icons/InfoboxIcon_SmashGG.png);
 }
-.lp-icon.lp-icon-256.lp-toornament:hover {
-  background-position: -4608px 0;
+.lp-icon.lp-steam {
+  background-image: url(../images/lp-icons/InfoboxIcon_Steam.png);
 }
-.lp-icon.lp-icon-256.lp-tournament {
-  background-position: -4864px -256px;
+.lp-icon.lp-stream {
+  background-image: url(../images/lp-icons/InfoboxIcon_Stream.png);
 }
-.lp-icon.lp-icon-256.lp-tournament:hover {
-  background-position: -4864px 0;
+.lp-icon.lp-tencent {
+  background-image: url(../images/lp-icons/InfoboxIcon_Tencent.png);
 }
-.lp-icon.lp-icon-256.lp-twitch {
-  background-position: -5120px -256px;
+.lp-icon.lp-tlpd-hots {
+  background-image: url(../images/lp-icons/InfoboxIcon_TLPDHoTS.png);
 }
-.lp-icon.lp-icon-256.lp-twitch:hover {
-  background-position: -5120px 0;
+.lp-icon.lp-tlpd {
+  background-image: url(../images/lp-icons/InfoboxIcon_TLPDInt.png);
 }
-.lp-icon.lp-icon-256.lp-twitter {
-  background-position: -5376px -256px;
+.lp-icon.lp-tlpd-wol {
+  background-image: url(../images/lp-icons/InfoboxIcon_TLPDInt.png);
 }
-.lp-icon.lp-icon-256.lp-twitter:hover {
-  background-position: -5376px 0;
+.lp-icon.lp-tlpd-wol-korea {
+  background-image: url(../images/lp-icons/InfoboxIcon_TLPDKor.png);
 }
-.lp-icon.lp-icon-256.lp-vk {
-  background-position: -5632px -256px;
+.lp-icon.lp-tlpd-sospa {
+  background-image: url(../images/lp-icons/InfoboxIcon_TLPDSonic.png);
 }
-.lp-icon.lp-icon-256.lp-vk:hover {
-  background-position: -5632px 0;
+.lp-icon.lp-tlprofile {
+  background-image: url(../images/lp-icons/InfoboxIcon_TLProfile.png);
 }
-.lp-icon.lp-icon-256.lp-vkontakte {
-  background-position: -5632px -256px;
+.lp-icon.lp-tlstream {
+  background-image: url(../images/lp-icons/InfoboxIcon_TLStream.png);
 }
-.lp-icon.lp-icon-256.lp-vkontakte:hover {
-  background-position: -5632px 0;
+.lp-icon.lp-toornament {
+  background-image: url(../images/lp-icons/InfoboxIcon_Toornament.png);
 }
-.lp-icon.lp-icon-256.lp-home {
-  background-position: -5888px -256px;
+.lp-icon.lp-tournament {
+  background-image: url(../images/lp-icons/InfoboxIcon_Trophy.png);
 }
-.lp-icon.lp-icon-256.lp-home:hover {
-  background-position: -5888px 0;
+.lp-icon.lp-twitch {
+  background-image: url(../images/lp-icons/InfoboxIcon_Twitch.png);
 }
-.lp-icon.lp-icon-256.lp-weibo {
-  background-position: -6144px -256px;
+.lp-icon.lp-twitter {
+  background-image: url(../images/lp-icons/InfoboxIcon_Twitter.png);
 }
-.lp-icon.lp-icon-256.lp-weibo:hover {
-  background-position: -6144px 0;
+.lp-icon.lp-vk {
+  background-image: url(../images/lp-icons/InfoboxIcon_VK.png);
 }
-.lp-icon.lp-icon-256.lp-youtube {
-  background-position: -6400px -256px;
+.lp-icon.lp-vkontakte {
+  background-image: url(../images/lp-icons/InfoboxIcon_VK.png);
 }
-.lp-icon.lp-icon-256.lp-youtube:hover {
-  background-position: -6400px 0;
+.lp-icon.lp-weibo {
+  background-image: url(../images/lp-icons/InfoboxIcon_Weibo.png);
 }
-.lp-icon.lp-icon-256.lp-github {
-  background-position: -6656px -256px;
+.lp-icon.lp-youku {
+  background-image: url(../images/lp-icons/InfoboxIcon_Youku.png);
 }
-.lp-icon.lp-icon-256.lp-github:hover {
-  background-position: -6656px 0;
-}
-.lp-icon.lp-icon-256.lp-instagram {
-  background-position: -6912px -256px;
-}
-.lp-icon.lp-icon-256.lp-instagram:hover {
-  background-position: -6912px 0;
-}
-.lp-icon.lp-icon-256.lp-stream {
-  background-position: 0 -768px;
-}
-.lp-icon.lp-icon-256.lp-stream:hover {
-  background-position: 0 -512px;
-}
-.lp-icon.lp-icon-256.lp-tlstream {
-  background-position: -256px -768px;
-}
-.lp-icon.lp-icon-256.lp-tlstream:hover {
-  background-position: -256px -512px;
-}
-.lp-icon.lp-icon-256.lp-fanclub {
-  background-position: -512px -768px;
-}
-.lp-icon.lp-icon-256.lp-fanclub:hover {
-  background-position: -512px -512px;
-}
-.lp-icon.lp-icon-256.lp-tlpd-hots {
-  background-position: -768px -768px;
-}
-.lp-icon.lp-icon-256.lp-tlpd-hots:hover {
-  background-position: -768px -512px;
-}
-.lp-icon.lp-icon-256.lp-tlpd {
-  background-position: -1024px -768px;
-}
-.lp-icon.lp-icon-256.lp-tlpd:hover {
-  background-position: -1024px -512px;
-}
-.lp-icon.lp-icon-256.lp-tlpd-wol {
-  background-position: -1024px -768px;
-}
-.lp-icon.lp-icon-256.lp-tlpd-wol:hover {
-  background-position: -1024px -512px;
-}
-.lp-icon.lp-icon-256.lp-tlpd-wol-korea {
-  background-position: -1280px -768px;
-}
-.lp-icon.lp-icon-256.lp-tlpd-wol-korea:hover {
-  background-position: -1280px -512px;
-}
-.lp-icon.lp-icon-256.lp-tlpd-sospa {
-  background-position: -1536px -768px;
-}
-.lp-icon.lp-icon-256.lp-tlpd-sospa:hover {
-  background-position: -1536px -512px;
-}
-.lp-icon.lp-icon-256.lp-gosugamers {
-  background-position: -1792px -768px;
-}
-.lp-icon.lp-icon-256.lp-gosugamers:hover {
-  background-position: -1792px -512px;
-}
-.lp-icon.lp-icon-256.lp-bracket {
-  background-position: -2048px -768px;
-}
-.lp-icon.lp-icon-256.lp-bracket:hover {
-  background-position: -2048px -512px;
-}
-.lp-icon.lp-icon-256.lp-afreeca {
-  background-position: -2304px -768px;
-}
-.lp-icon.lp-icon-256.lp-afreeca:hover {
-  background-position: -2304px -512px;
-}
-.lp-icon.lp-icon-256.lp-rules {
-  background-position: -2560px -768px;
-}
-.lp-icon.lp-icon-256.lp-rules:hover {
-  background-position: -2560px -512px;
-}
-.lp-icon.lp-icon-256.lp-iccup {
-  background-position: -2816px -768px;
-}
-.lp-icon.lp-icon-256.lp-iccup:hover {
-  background-position: -2816px -512px;
-}
-.lp-icon.lp-icon-256.lp-esl {
-  background-position: -3072px -768px;
-}
-.lp-icon.lp-icon-256.lp-esl:hover {
-  background-position: -3072px -512px;
-}
-.lp-icon.lp-icon-256.lp-esea {
-  background-position: -3328px -768px;
-}
-.lp-icon.lp-icon-256.lp-esea:hover {
-  background-position: -3328px -512px;
-}
-.lp-icon.lp-icon-256.lp-skgaming {
-  background-position: -3584px -768px;
-}
-.lp-icon.lp-icon-256.lp-skgaming:hover {
-  background-position: -3584px -512px;
-}
-.lp-icon.lp-icon-256.lp-douyutv {
-  background-position: -3840px -768px;
-}
-.lp-icon.lp-icon-256.lp-douyutv:hover {
-  background-position: -3840px -512px;
-}
-.lp-icon.lp-icon-256.lp-tlprofile {
-  background-position: -4096px -768px;
-}
-.lp-icon.lp-icon-256.lp-tlprofile:hover {
-  background-position: -4096px -512px;
-}
-.lp-icon.lp-icon-256.lp-cafe-daum {
-  background-position: -4352px -768px;
-}
-.lp-icon.lp-icon-256.lp-cafe-daum:hover {
-  background-position: -4352px -512px;
-}
-.lp-icon.lp-icon-256.lp-abios {
-  background-position: -4608px -768px;
-}
-.lp-icon.lp-icon-256.lp-abios:hover {
-  background-position: -4608px -512px;
-}
-.lp-icon.lp-icon-256.lp-youku {
-  background-position: -4864px -768px;
-}
-.lp-icon.lp-icon-256.lp-youku:hover {
-  background-position: -4864px -512px;
-}
-.lp-icon.lp-icon-256.lp-hitbox {
-  background-position: -5120px -768px;
-}
-.lp-icon.lp-icon-256.lp-hitbox:hover {
-  background-position: -5120px -512px;
-}
-.lp-icon.lp-icon-256.lp-music {
-  background-position: -5376px -768px;
-}
-.lp-icon.lp-icon-256.lp-music:hover {
-  background-position: -5376px -512px;
-}
-.lp-icon.lp-icon-256.lp-pandatv {
-  background-position: -5632px -768px;
-}
-.lp-icon.lp-icon-256.lp-pandatv:hover {
-  background-position: -5632px -512px;
-}
-.lp-icon.lp-icon-256.lp-masteroverwatch {
-  background-position: -5888px -768px;
-}
-.lp-icon.lp-icon-256.lp-masteroverwatch:hover {
-  background-position: -5888px -512px;
+.lp-icon.lp-youtube {
+  background-image: url(../images/lp-icons/InfoboxIcon_YouTube.png);
 }
 @media (max-width: 767px) {
   .navbar-brand {
@@ -9376,7 +7622,8 @@ body#top.ns--1.mw-special-Ask #mw-content-text table {
 .portal-pills .panel-body {
   padding: 0;
 }
-.portal-pills a {
+.portal-pills a,
+.portal-pills a:visited {
   display: block;
   padding: 15px;
   color: #636363;

@@ -5,14 +5,17 @@ function adjustSidebar() {
 	var secondNavbar = 0;
 	var tocBottomOffset = 0;
 	var tocHeightModifier = 30;
+	var tocScrollTopOffset = 30;
 	var tocTopOffset = 57;
 	
 	/* second navbar for logged in people */
 	secondNavbar = ((typeof mw.user.isAnon == 'function') && mw.user.isAnon()) ? 0 : $('#wiki-nav').outerHeight();
 	if(secondNavbar != 0) {
+		tocScrollTopOffset = -secondNavbar;
 		tocTopOffset = 89;
 		tocBottomOffset = 32;
 		tocHeightModifier = 25;
+		console.log('h');
 	}
 	
 	var scrollTop = $(window).scrollTop();
@@ -28,11 +31,11 @@ function adjustSidebar() {
 	var offsetTop = $('#sidebar-toc').offset().top - scrollTop;
 	var offsetBottom = $('#sidebar-toc').offset().bottom;
 
-	if (scrollTop >= secondNavbar && isScrollingDown && currentState == 'top') {
+	if (scrollTop >= (secondNavbar + tocScrollTopOffset) && isScrollingDown && currentState == 'top') {
 		$('#sidebar-toc').removeClass('affix-top');
 		$('#sidebar-toc').addClass('affix');
 		currentState = 'middle';
-	} else if (scrollTop <= secondNavbar && !isScrollingDown && currentState == 'middle') {
+	} else if (scrollTop <= (secondNavbar + tocScrollTopOffset) && !isScrollingDown && currentState == 'middle') {
 		$('#sidebar-toc').removeClass('affix');
 		$('#sidebar-toc').addClass('affix-top');
 		currentState = 'top';

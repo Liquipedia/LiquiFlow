@@ -23,6 +23,7 @@ $(document).ready(function() {
 			autofocus: true,
 			flattenSpans: false,
 			matchBrackets: true,
+			viewportMargin: 5000,
 			extraKeys: {
 				"F11": function(cm) {
 					cm.setOption("fullScreen", !cm.getOption("fullScreen"));

@@ -71,7 +71,11 @@ class SkinLiquiFlow extends SkinTemplate {
 		$styles = array( 'mediawiki.skinning.interface', 'skins.liquiflow' );
 		$out->addModuleStyles( $styles );
 		global $wgScriptPath;
-		$out->addModuleStyles( 'skins.liquiflow.theme.' . substr($wgScriptPath, 1));
+		if( $out->getResourceLoader()->isModuleRegistered( 'skins.liquiflow.theme.' . substr($wgScriptPath, 1) ) ) {
+			$out->addModuleStyles( 'skins.liquiflow.theme.' . substr($wgScriptPath, 1) );
+		} else {
+			$out->addModuleStyles( 'skins.liquiflow.theme.commons' );
+		}
 		if ($this->getSkin()->getUser()->isLoggedIn()) {
 			$out->addModuleStyles( 'skins.liquiflow.loggedin' );
 		}

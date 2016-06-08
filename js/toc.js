@@ -15,7 +15,6 @@ function adjustSidebar() {
 		tocTopOffset = 89;
 		tocBottomOffset = 32;
 		tocHeightModifier = 25;
-		console.log('h');
 	}
 	
 	var scrollTop = $(window).scrollTop();

@@ -134,6 +134,15 @@
 				"skins.liquiflow"
 			]
 		},
+		"skins.liquiflow.theme.fighters": {
+			"styles": [
+				"themes/fighters.css"
+			],
+			"position": "top",
+			"dependencies": [
+				"skins.liquiflow"
+			]
+		},
 		"skins.liquiflow.theme.hearthstone": {
 			"styles": [
 				"themes/hearthstone.css"
@@ -191,15 +200,6 @@
 		"skins.liquiflow.theme.starcraft2": {
 			"styles": [
 				"themes/starcraft2.css"
-			],
-			"position": "top",
-			"dependencies": [
-				"skins.liquiflow"
-			]
-		},
-		"skins.liquiflow.theme.streetfighter": {
-			"styles": [
-				"themes/streetfighter.css"
 			],
 			"position": "top",
 			"dependencies": [

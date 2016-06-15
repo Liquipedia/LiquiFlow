@@ -624,7 +624,8 @@ $footerLinks = $this->getFooterLinks();
 			<div class="col-md-2 col-sm-3 col-xs-12">
 				<h4><?php $this->msg( 'liquiflow-alpha-wikis') ?></h4>
 				<ul>
-					<li><a href="http://wiki.teamliquid.net/warcraft/" target="_blank">Warcraft</a></li>
+					<li><a href="http://wiki.teamliquid.net/warcraft/" target="_blank">Warcraft III</a></li>
+					<li><a href="http://wiki.teamliquid.net/fighters/" target="_blank">Fighting Games</a></li>
 				</ul>
 				<h4><?php $this->msg( 'about') ?></h4>
 				<ul>

@@ -597,96 +597,96 @@ $footerLinks = $this->getFooterLinks();
 	<div class="container-fluid">
 		<div class="col-md-12">
 			<div class="row">
-			<div class="footer-links">
-				<div class="col-md-2 hidden-sm hidden-xs">
-				<div class="col">
-					<div id="footer-logo-big"></div>
-				</div>
-			</div>
+				<div class="footer-links">
+					<div class="col-md-2 hidden-sm hidden-xs">
+						<div class="col">
+							<div id="footer-logo-big"></div>
+						</div>
+					</div>
 
-			<div class="col-md-2 col-sm-3 col-xs-12">
-				<div class="col">
-					<h4><?php $this->msg( 'liquiflow-our-wikis') ?></h4>
-					<ul>
-						<li><a href="http://wiki.teamliquid.net/starcraft/" target="_blank">Brood War</a></li>
-						<li><a href="http://wiki.teamliquid.net/counterstrike/" target="_blank">Counter-Strike</a></li>
-						<li><a href="http://wiki.teamliquid.net/dota2/" target="_blank">Dota 2</a></li>
-						<li><a href="http://wiki.teamliquid.net/hearthstone/" target="_blank">Hearthstone</a></li>
-						<li><a href="http://wiki.teamliquid.net/heroes/" target="_blank">Heroes of the Storm</a></li>
-						<li><a href="http://wiki.teamliquid.net/overwatch/" target="_blank">Overwatch</a></li>
-						<li><a href="http://wiki.teamliquid.net/smash/" target="_blank">Smash</a></li>
-						<li><a href="http://wiki.teamliquid.net/starcraft2/" target="_blank">StarCraft II</a></li>
-						<li><a href="http://wiki.teamliquid.net/commons/" target="_blank">Commons</a></li>
-					</ul>
-				</div>
-			</div>
+					<div class="col-md-2 col-sm-3 col-xs-12">
+						<div class="col">
+							<h4><?php $this->msg( 'liquiflow-our-wikis') ?></h4>
+							<ul>
+								<li><a href="http://wiki.teamliquid.net/starcraft/" target="_blank">Brood War</a></li>
+								<li><a href="http://wiki.teamliquid.net/counterstrike/" target="_blank">Counter-Strike</a></li>
+								<li><a href="http://wiki.teamliquid.net/dota2/" target="_blank">Dota 2</a></li>
+								<li><a href="http://wiki.teamliquid.net/hearthstone/" target="_blank">Hearthstone</a></li>
+								<li><a href="http://wiki.teamliquid.net/heroes/" target="_blank">Heroes of the Storm</a></li>
+								<li><a href="http://wiki.teamliquid.net/overwatch/" target="_blank">Overwatch</a></li>
+								<li><a href="http://wiki.teamliquid.net/smash/" target="_blank">Smash</a></li>
+								<li><a href="http://wiki.teamliquid.net/starcraft2/" target="_blank">StarCraft II</a></li>
+								<li><a href="http://wiki.teamliquid.net/commons/" target="_blank">Commons</a></li>
+							</ul>
+						</div>
+					</div>
 
-			<div class="col-md-2 col-sm-3 col-xs-12">
-				<h4><?php $this->msg( 'liquiflow-alpha-wikis') ?></h4>
-				<ul>
-					<li><a href="http://wiki.teamliquid.net/warcraft/" target="_blank">Warcraft III</a></li>
-					<li><a href="http://wiki.teamliquid.net/fighters/" target="_blank">Fighting Games</a></li>
-				</ul>
-				<h4><?php $this->msg( 'about') ?></h4>
-				<ul>
-					<?php foreach ( $footerLinks['places'] as $link ) :	?>
-						<li id="footer-places-<?php echo $link; ?>">
-							<?php $this->html( $link );?>
-						</li>
-					<?php endforeach; ?>
-				</ul>
-			</div>
-			<div class="col-md-2 col-sm-3 hidden-xs">
-				<h4><?php $this->msg( 'liquiflow-contact-us') ?></h4>
-				<ul>
-					<li><a href="mailto:liquipedia@teamliquid.net"><?php $this->msg( 'liquiflow-send-an-email') ?></a></li>
-					<li><a href="http://www.teamliquid.net/forum/website-feedback/94785-liquipedia-feedback-thread" target="_blank"><?php $this->msg( 'liquiflow-post-feedback') ?></a></li>
-					<li><a href="http://webchat.quakenet.org/?channels=%23liquipedia" target="_blank"><?php $this->msg( 'liquiflow-chat-with-us') ?></a></li>
-				</ul>
-			</div>
+					<div class="col-md-2 col-sm-3 col-xs-12">
+						<h4><?php $this->msg( 'liquiflow-alpha-wikis') ?></h4>
+						<ul>
+							<li><a href="http://wiki.teamliquid.net/warcraft/" target="_blank">Warcraft III</a></li>
+							<li><a href="http://wiki.teamliquid.net/fighters/" target="_blank">Fighting Games</a></li>
+						</ul>
+						<h4><?php $this->msg( 'about') ?></h4>
+						<ul>
+							<?php foreach ( $footerLinks['places'] as $link ) :	?>
+								<li id="footer-places-<?php echo $link; ?>">
+									<?php $this->html( $link );?>
+								</li>
+							<?php endforeach; ?>
+						</ul>
+					</div>
+					<div class="col-md-2 col-sm-3 hidden-xs">
+						<h4><?php $this->msg( 'liquiflow-contact-us') ?></h4>
+						<ul>
+							<li><a href="mailto:liquipedia@teamliquid.net"><?php $this->msg( 'liquiflow-send-an-email') ?></a></li>
+							<li><a href="http://www.teamliquid.net/forum/website-feedback/94785-liquipedia-feedback-thread" target="_blank"><?php $this->msg( 'liquiflow-post-feedback') ?></a></li>
+							<li><a href="http://webchat.quakenet.org/?channels=%23liquipedia" target="_blank"><?php $this->msg( 'liquiflow-chat-with-us') ?></a></li>
+						</ul>
+					</div>
 
-			<div class="col-md-2 hidden-sm hidden-xs">
-				<h4><?php $this->msg( 'liquiflow-affiliated-sites') ?></h4>
-				<ul>
-					<li><a href="http://www.teamliquid.net" target="_blank">TeamLiquid.net</a></li>
-					<li><a href="http://www.liquiddota.com" target="_blank">LiquidDota.com</a></li>
-					<li><a href="http://www.liquidhearth.com" target="_blank">LiquidHearth.com</a></li>
-					<li><a href="http://www.liquidlegends.net" target="_blank">LiquidLegends.net</a></li>
-				</ul>
-			</div>
+					<div class="col-md-2 hidden-sm hidden-xs">
+						<h4><?php $this->msg( 'liquiflow-affiliated-sites') ?></h4>
+						<ul>
+							<li><a href="http://www.teamliquid.net" target="_blank">TeamLiquid.net</a></li>
+							<li><a href="http://www.liquiddota.com" target="_blank">LiquidDota.com</a></li>
+							<li><a href="http://www.liquidhearth.com" target="_blank">LiquidHearth.com</a></li>
+							<li><a href="http://www.liquidlegends.net" target="_blank">LiquidLegends.net</a></li>
+						</ul>
+					</div>
 
-			<div class="col-md-2 col-sm-3 hidden-xs">
-				<h4><?php $this->msg( 'liquiflow-follow-us') ?></h4>
-				<ul id="footer-social-media">
-					<li>
-						<a target="_blank" href="http://twitter.com/LiquipediaNet" class="social-icon twitter-icon">
-							<span class="social-link">Twitter</span>
-						</a>
-					</li>
-					<li>
-						<a target="_blank" href="https://www.facebook.com/Liquipedia" class="social-icon facebook-icon">
-							<span class="social-link">Facebook</span>
-						</a>
-					</li>
-					<li>
-						<a target="_blank" href="https://www.youtube.com/user/Liquipedia" class="social-icon youtube-icon">
-							<span class="social-link">Youtube</span>
-						</a>
-					</li>
-					<li>
-						<a target="_blank" href="http://www.twitch.tv/liquipedia" class="social-icon twitch-icon">
-							<span class="social-link">Twitch</span>
-						</a>
-					</li>
-					<li>
-						<a target="_blank" href="http://www.github.com/Liquipedia" class="social-icon github-icon">
-							<span class="social-link">GitHub</span>
-						</a>
-					</li>
-				</ul>
-			</div>
-		</div><!-- ./footer-links -->
-		</div><!-- ./row -->
+					<div class="col-md-2 col-sm-3 hidden-xs">
+						<h4><?php $this->msg( 'liquiflow-follow-us') ?></h4>
+						<ul id="footer-social-media">
+							<li>
+								<a target="_blank" href="http://twitter.com/LiquipediaNet" class="social-icon twitter-icon">
+									<span class="social-link">Twitter</span>
+								</a>
+							</li>
+							<li>
+								<a target="_blank" href="https://www.facebook.com/Liquipedia" class="social-icon facebook-icon">
+									<span class="social-link">Facebook</span>
+								</a>
+							</li>
+							<li>
+								<a target="_blank" href="https://www.youtube.com/user/Liquipedia" class="social-icon youtube-icon">
+									<span class="social-link">Youtube</span>
+								</a>
+							</li>
+							<li>
+								<a target="_blank" href="http://www.twitch.tv/liquipedia" class="social-icon twitch-icon">
+									<span class="social-link">Twitch</span>
+								</a>
+							</li>
+							<li>
+								<a target="_blank" href="http://www.github.com/Liquipedia" class="social-icon github-icon">
+									<span class="social-link">GitHub</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div><!-- ./footer-links -->
+			</div><!-- ./row -->
 		</div><!-- ./col-lg-8 -->
 
 		<div style="text-align:center;" class="col-md-12 hidden-xs">

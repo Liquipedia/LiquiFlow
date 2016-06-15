@@ -1032,7 +1032,11 @@ $footerLinks = $this->getFooterLinks();
 							<li class="dropdown-header"><?php $this->msg( 'liquiflow-tools-specific' ); ?></li>
 							<?php
 							foreach ( $toolbox as $key => $item ) {
-								if($view == 'mobile') { $item['id'] = $item['id'] . "-mobile"; }
+								if($view == 'mobile') { 
+									$item['single-id'] = $item['id'];
+									$item['id'] = $item['id'] . "-mobile"; 
+								
+								}
 								echo $this->makeListItem( $key, $item );
 							}
 							?>

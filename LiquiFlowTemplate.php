@@ -604,7 +604,7 @@ $footerLinks = $this->getFooterLinks();
 				</div>
 			</div>
 
-				<div class="col-md-2 col-sm-3 col-xs-12">
+			<div class="col-md-2 col-sm-3 col-xs-12">
 				<div class="col">
 				<h4><?php $this->msg( 'liquiflow-our-wikis') ?></h4>
 				<ul>

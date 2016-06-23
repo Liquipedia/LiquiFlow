@@ -1158,7 +1158,7 @@ $footerLinks = $this->getFooterLinks();
 	 *
 	 * @return string
 	 */
-	function makeLink( $key, $item, $options = array() ) {
+	function makeLink( $key, $item, $options = [] ) {
 		if ( isset( $item['text'] ) ) {
 			$text = $item['text'];
 		} else {
@@ -1176,7 +1176,7 @@ $footerLinks = $this->getFooterLinks();
 		if ( isset( $options['text-wrapper'] ) ) {
 			$wrapper = $options['text-wrapper'];
 			if ( isset( $wrapper['tag'] ) ) {
-				$wrapper = array( $wrapper );
+				$wrapper = [ $wrapper ];
 			}
 			while ( count( $wrapper ) > 0 ) {
 				$element = array_pop( $wrapper );
@@ -1188,21 +1188,28 @@ $footerLinks = $this->getFooterLinks();
 
 		if ( isset( $item['href'] ) || isset( $options['link-fallback'] ) ) {
 			$attrs = $item;
-			foreach ( array( 'single-id', 'text', 'msg', 'tooltiponly', 'context', 'primary' ) as $k ) {
+			foreach ( [ 'single-id', 'text', 'msg', 'tooltiponly', 'context', 'primary',
+				'tooltip-params' ] as $k ) {
 				unset( $attrs[$k] );
 			}
 
 			if ( isset( $item['id'] ) && !isset( $item['single-id'] ) ) {
 				$item['single-id'] = $item['id'];
 			}
+
+			$tooltipParams = [];
+			if ( isset( $item['tooltip-params'] ) ) {
+				$tooltipParams = $item['tooltip-params'];
+			}
+
 			if ( isset( $item['single-id'] ) ) {
 				if ( isset( $item['tooltiponly'] ) && $item['tooltiponly'] ) {
-					$title = Linker::titleAttrib( $item['single-id'] );
+					$title = Linker::titleAttrib( $item['single-id'], null, $tooltipParams );
 					if ( $title !== false ) {
 						$attrs['title'] = $title;
 					}
 				} else {
-					$tip = Linker::tooltipAndAccesskeyAttribs( $item['single-id'] );
+					$tip = Linker::tooltipAndAccesskeyAttribs( $item['single-id'], $tooltipParams );
 					if ( isset( $tip['title'] ) && $tip['title'] !== false ) {
 						$attrs['title'] = $tip['title'];
 					}

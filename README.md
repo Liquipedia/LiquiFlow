@@ -16,3 +16,7 @@ Credits
 * CodeMirror (License: MIT)
 * Bootstrap (License: MIT)
 * Font Awesome (License: SIL OFL 1.1, MIT)
+
+Version
+=======
+This version is for MediaWiki 1.27, for a MediaWiki 1.25 version go to the 1.25 branch.

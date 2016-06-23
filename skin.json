@@ -44,11 +44,11 @@
 				"vendor/liquipedia-custom-icons/css/Liquipedia-Custom-Icons.css"
 			],
 			"scripts": [
-				"js/jquery.min.js",
-				"js/bootstrap.min.js",
-				"js/toc.js",
-				"js/lp.js",			
-				"js/ie10-viewport-bug-workaround.js"
+				"scripts/jquery.min.js",
+				"scripts/bootstrap.min.js",
+				"scripts/toc.js",
+				"scripts/lp.js",			
+				"scripts/ie10-viewport-bug-workaround.js"
 			],
 			"position": "top",
 			"dependencies": [
@@ -57,7 +57,7 @@
 		},
 		"skins.liquiflow.loggedin": {
 			"styles": [
-				"css/loggedin.css"
+				"styles/loggedin.css"
 			],
 			"position": "top",
 			"dependencies": [
@@ -70,7 +70,7 @@
 				"vendor/codemirror/addon/dialog/dialog.css",
 				"vendor/codemirror/addon/display/fullscreen.css",
 				"vendor/codemirror-mode/mediawiki/mediawiki.css",
-				"css/codemirror.css"
+				"styles/codemirror.css"
 			],
 			"scripts": [
 				"vendor/codemirror/lib/codemirror.js",
@@ -85,7 +85,7 @@
 				"vendor/codemirror/mode/htmlmixed/htmlmixed.js",
 				"vendor/codemirror/mode/lua/lua.js",
 				"vendor/codemirror-mode/mediawiki/mediawiki.js",
-				"js/codemirror.js"
+				"scripts/codemirror.js"
 			],
 			"position": "top",
 			"dependencies": [
@@ -94,7 +94,7 @@
 		},
 		"skins.liquiflow.hoverdropdown": {
 			"scripts": [
-				"js/hover-dropdown.js"
+				"scripts/hover-dropdown.js"
 			],
 			"position": "top",
 			"dependencies": [
@@ -103,7 +103,7 @@
 		},
 		"skins.liquiflow.theme.clashroyale": {
 			"styles": [
-				"themes/clashroyale.css"
+				"styles/themes/clashroyale.css"
 			],
 			"position": "top",
 			"dependencies": [
@@ -112,7 +112,7 @@
 		},
 		"skins.liquiflow.theme.commons": {
 			"styles": [
-				"themes/commons.css"
+				"styles/themes/commons.css"
 			],
 			"position": "top",
 			"dependencies": [
@@ -121,7 +121,7 @@
 		},
 		"skins.liquiflow.theme.counterstrike": {
 			"styles": [
-				"themes/counterstrike.css"
+				"styles/themes/counterstrike.css"
 			],
 			"position": "top",
 			"dependencies": [
@@ -130,7 +130,7 @@
 		},
 		"skins.liquiflow.theme.dota2": {
 			"styles": [
-				"themes/dota2.css"
+				"styles/themes/dota2.css"
 			],
 			"position": "top",
 			"dependencies": [
@@ -139,7 +139,7 @@
 		},
 		"skins.liquiflow.theme.fighters": {
 			"styles": [
-				"themes/fighters.css"
+				"styles/themes/fighters.css"
 			],
 			"position": "top",
 			"dependencies": [
@@ -148,7 +148,7 @@
 		},
 		"skins.liquiflow.theme.hearthstone": {
 			"styles": [
-				"themes/hearthstone.css"
+				"styles/themes/hearthstone.css"
 			],
 			"position": "top",
 			"dependencies": [
@@ -157,7 +157,7 @@
 		},
 		"skins.liquiflow.theme.heroes": {
 			"styles": [
-				"themes/heroes.css"
+				"styles/themes/heroes.css"
 			],
 			"position": "top",
 			"dependencies": [
@@ -166,7 +166,7 @@
 		},
 		"skins.liquiflow.theme.overwatch": {
 			"styles": [
-				"themes/overwatch.css"
+				"styles/themes/overwatch.css"
 			],
 			"position": "top",
 			"dependencies": [
@@ -175,7 +175,7 @@
 		},
 		"skins.liquiflow.theme.rocketleague": {
 			"styles": [
-				"themes/rocketleague.css"
+				"styles/themes/rocketleague.css"
 			],
 			"position": "top",
 			"dependencies": [
@@ -184,7 +184,7 @@
 		},
 		"skins.liquiflow.theme.smash": {
 			"styles": [
-				"themes/smash.css"
+				"styles/themes/smash.css"
 			],
 			"position": "top",
 			"dependencies": [
@@ -193,7 +193,7 @@
 		},
 		"skins.liquiflow.theme.starcraft": {
 			"styles": [
-				"themes/starcraft.css"
+				"styles/themes/starcraft.css"
 			],
 			"position": "top",
 			"dependencies": [
@@ -202,7 +202,7 @@
 		},
 		"skins.liquiflow.theme.starcraft2": {
 			"styles": [
-				"themes/starcraft2.css"
+				"styles/themes/starcraft2.css"
 			],
 			"position": "top",
 			"dependencies": [
@@ -211,7 +211,7 @@
 		},
 		"skins.liquiflow.theme.warcraft": {
 			"styles": [
-				"themes/warcraft.css"
+				"styles/themes/warcraft.css"
 			],
 			"position": "top",
 			"dependencies": [

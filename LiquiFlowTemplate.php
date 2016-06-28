@@ -626,6 +626,7 @@ $footerLinks = $this->getFooterLinks();
 						<ul>
 							<li><a href="http://wiki.teamliquid.net/warcraft/" target="_blank">Warcraft III</a></li>
 							<li><a href="http://wiki.teamliquid.net/fighters/" target="_blank">Fighting Games</a></li>
+							<li><a href="http://wiki.teamliquid.net/rocketleague/" target="_blank">Rocket League</a></li>
 						</ul>
 						<h4><?php $this->msg( 'about') ?></h4>
 						<ul>

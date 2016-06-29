@@ -6981,9 +6981,6 @@ button.close {
   left: -100%;
   margin-left: 10px;
 }
-.multi-column-dropdown {
-  padding-left: 0px;
-}
 .dropdown-menu {
   min-width: 200px;
 }
@@ -6998,6 +6995,7 @@ button.close {
 .dropdown-menu.columns-3 {
   margin-left: -250px;
   min-width: 700px;
+  padding: 5px 10px;
 }
 @media (max-width: 991px) {
   .dropdown-menu.columns-3 {
@@ -7005,13 +7003,13 @@ button.close {
     min-width: 700px;
   }
 }
-.multi-column-dropdown li a {
-  padding: 5px 10px;
-}
 .multi-column-dropdown {
+  padding-left: 0px;
+  margin-left: 0px;
   list-style: none;
 }
 .multi-column-dropdown li a {
+  padding: 5px 10px;
   display: block;
   clear: both;
   line-height: 1.428571429;
@@ -8400,7 +8398,7 @@ body#top.ns--1.mw-special-Ask #mw-content-text table {
   padding: 0;
 }
 .portal-pills a,
-.portal-pills a:not(.new):visited {
+.portal-pills a:visited {
   display: block;
   padding: 15px;
   color: #636363;

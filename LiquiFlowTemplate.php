@@ -523,71 +523,70 @@ class LiquiFlowTemplate extends BaseTemplate {
 		</div>
 	</div><!-- /#sidebar-toc-colum -->
 
+	<div class="container-fluid main-content">
+		<div class="row">
 
-<div class="container-fluid main-content">
-	<div class="row">
+			<div id="main-content-column" class="col-md-12">
+				<div id="main-content" class="mw-body">
 
-		<div id="main-content-column" class="col-md-12">
-			<div id="main-content" class="mw-body">
+					<?php Hooks::run( 'LiquiFlowAdTop', array( __DIR__ ) ); ?>
 
-				<?php Hooks::run( 'LiquiFlowAdTop', array( __DIR__ ) ); ?>
-
-				<?php if ( $this->data['sitenotice'] ) : ?>
-				<div id="siteNotice">
-					<?php $this->html( 'sitenotice' ) ?>
-				</div>
-				<?php endif; ?>
-
-				<h1 id="firstHeading" class="firstHeading">
-					<span dir="auto"><?php $this->html( 'title' ) ?></span>
-				</h1>
-
-				<?php $this->html( 'prebodyhtml' ) ?>
-				<div id="bodyContent" class="mw-body-content">
-					<?php if ( $this->data['isarticle'] ) : ?>
-						<div id="siteSub">
-							<?php $this->msg( 'tagline' ) ?>
-						</div>
-					<?php endif; ?>
-
-					<div id="contentSub">
-						<?php $this->html( 'subtitle' ) ?>
+					<?php if ( $this->data['sitenotice'] ) : ?>
+					<div id="siteNotice">
+						<?php $this->html( 'sitenotice' ) ?>
 					</div>
-
-					<?php if ( $this->data['undelete'] ) : ?>
-					<div id="contentSub2">
-							<?php $this->html( 'undelete' ) ?>
-						</div>
 					<?php endif; ?>
 
-					<?php if ( $this->data['newtalk'] ) :	?>
-						<div class="usermessage">
-							<?php $this->html( 'newtalk' ) ?>
-						</div>
-					<?php endif; ?>
+					<h1 id="firstHeading" class="firstHeading">
+						<span dir="auto"><?php $this->html( 'title' ) ?></span>
+					</h1>
 
-					<?php $this->html( 'bodycontent' ) ?>
+					<?php $this->html( 'prebodyhtml' ) ?>
+					<div id="bodyContent" class="mw-body-content">
+						<?php if ( $this->data['isarticle'] ) : ?>
+							<div id="siteSub">
+								<?php $this->msg( 'tagline' ) ?>
+							</div>
+						<?php endif; ?>
 
-					<?php if ( $this->data['printfooter'] ) : ?>
-						<div class="printfooter">
-							<?php $this->html( 'printfooter' ); ?>
+						<div id="contentSub">
+							<?php $this->html( 'subtitle' ) ?>
 						</div>
-					<?php endif; ?>
-					<?php
-					if ( $this->data['catlinks'] ) {
-						$this->html( 'catlinks' );
-					}
-					if ( $this->data['dataAfterContent'] ) {
-						$this->html( 'dataAfterContent' );
-					}
-					?>
-					<div class="visualClear"></div>
-					<?php $this->html( 'debughtml' ); ?>
+
+						<?php if ( $this->data['undelete'] ) : ?>
+						<div id="contentSub2">
+								<?php $this->html( 'undelete' ) ?>
+							</div>
+						<?php endif; ?>
+
+						<?php if ( $this->data['newtalk'] ) :	?>
+							<div class="usermessage">
+								<?php $this->html( 'newtalk' ) ?>
+							</div>
+						<?php endif; ?>
+
+						<?php $this->html( 'bodycontent' ) ?>
+
+						<?php if ( $this->data['printfooter'] ) : ?>
+							<div class="printfooter">
+								<?php $this->html( 'printfooter' ); ?>
+							</div>
+						<?php endif; ?>
+						<?php
+						if ( $this->data['catlinks'] ) {
+							$this->html( 'catlinks' );
+						}
+						if ( $this->data['dataAfterContent'] ) {
+							$this->html( 'dataAfterContent' );
+						}
+						?>
+						<div class="visualClear"></div>
+						<?php $this->html( 'debughtml' ); ?>
+					</div>
 				</div>
-			</div>
-		</div><!-- /#main-content-column -->
-	</div><!-- /.row -->
-</div><!-- /.container -->
+			</div><!-- /#main-content-column -->
+		</div><!-- /.row -->
+	</div><!-- /.container -->
 </div><!-- /#wrap -->
 
 <?php

@@ -12,3 +12,24 @@
 	outline:none !important;
 	border:none;
 }
+
+.cm-mw-template-bracket {
+	color: #fd00ff ;
+	font-weight: bold;
+}
+.cm-mw-template-name {
+	color: #e66c00 ;
+	font-weight: bold;
+} 
+.cm-mw-template-delimiter {
+	color: #112198 ;
+	font-weight: bold;
+}
+.cm-mw-template-argument-name {
+	color: #f00;
+	font-weight: bold;
+}
+.cm-mw-template {
+	color: #1169aa ;
+	font-weight: normal;
+}

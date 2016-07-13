@@ -604,7 +604,7 @@ $footerLinks = $this->getFooterLinks();
 						</div>
 					</div>
 
-					<div class="col-md-2 col-sm-3 col-xs-12">
+					<div class="col-md-2 col-sm-3 col-xs-6">
 						<div class="col">
 							<h4><?php $this->msg( 'liquiflow-our-wikis') ?></h4>
 							<ul>
@@ -621,7 +621,7 @@ $footerLinks = $this->getFooterLinks();
 						</div>
 					</div>
 
-					<div class="col-md-2 col-sm-3 col-xs-12">
+					<div class="col-md-2 col-sm-3 col-xs-6">
 						<h4><?php $this->msg( 'liquiflow-alpha-wikis') ?></h4>
 						<ul>
 							<li><a href="http://wiki.teamliquid.net/warcraft/" target="_blank">Warcraft III</a></li>
@@ -646,7 +646,7 @@ $footerLinks = $this->getFooterLinks();
 						</ul>
 					</div>
 
-					<div class="col-md-2 hidden-sm hidden-xs">
+					<div class="col-md-2 hidden-sm col-xs-6">
 						<h4><?php $this->msg( 'liquiflow-affiliated-sites') ?></h4>
 						<ul>
 							<li><a href="http://www.teamliquid.net" target="_blank">TeamLiquid.net</a></li>
@@ -656,8 +656,8 @@ $footerLinks = $this->getFooterLinks();
 						</ul>
 					</div>
 
-					<div class="col-md-2 col-sm-3 hidden-xs">
-						<h4><?php $this->msg( 'liquiflow-follow-us') ?></h4>
+					<div class="col-md-2 col-sm-3 col-xs-12">
+						<h4 class="hidden-xs"><?php $this->msg( 'liquiflow-follow-us') ?></h4>
 						<ul id="footer-social-media">
 							<li>
 								<a target="_blank" href="http://twitter.com/LiquipediaNet" class="social-icon twitter-icon">
@@ -680,7 +680,7 @@ $footerLinks = $this->getFooterLinks();
 								</a>
 							</li>
 							<li>
-								<a target="_blank" href="http://www.github.com/Liquipedia" class="social-icon github-icon">
+								<a target="_blank" href="http://github.com/Liquipedia" class="social-icon github-icon">
 									<span class="social-link">GitHub</span>
 								</a>
 							</li>
@@ -690,7 +690,7 @@ $footerLinks = $this->getFooterLinks();
 			</div><!-- ./row -->
 		</div><!-- ./col-lg-8 -->
 
-		<div style="text-align:center;" class="col-md-12 hidden-xs">
+		<div style="text-align:center;" class="col-md-12 col-xs-12">
 			<ul id="f-list">
 				<?php
 				if (isset($footerLinks['info']) && is_array($footerLinks['info'])) {

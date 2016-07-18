@@ -92,5 +92,10 @@ class SkinLiquiFlow extends SkinTemplate {
 	 */
 	function addToBodyAttributes( $out, &$bodyAttrs ) {
 		$bodyAttrs['id'] = static::$bodyId;
+		if ($this->getSkin()->getUser()->isLoggedIn()) {
+			$bodyAttrs['class'] .= ' logged-in';
+		} else {
+			$bodyAttrs['class'] .= ' logged-out';
+		}
 	}
 }

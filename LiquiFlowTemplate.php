@@ -690,7 +690,7 @@ $footerLinks = $this->getFooterLinks();
 			</div><!-- ./row -->
 		</div><!-- ./col-lg-8 -->
 
-		<div style="text-align:center;" class="col-md-12 col-xs-12">
+		<div style="text-align:center;padding-bottom:1em;" class="col-md-12 col-xs-12">
 			<ul id="f-list">
 				<?php
 				if (isset($footerLinks['info']) && is_array($footerLinks['info'])) {

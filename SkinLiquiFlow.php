@@ -91,11 +91,13 @@ class SkinLiquiFlow extends SkinTemplate {
 	 * @param array &$bodyAttrs Array of attributes that will be set on the body element
 	 */
 	function addToBodyAttributes( $out, &$bodyAttrs ) {
+		global $wgScriptPath;
 		$bodyAttrs['id'] = static::$bodyId;
 		if ($this->getSkin()->getUser()->isLoggedIn()) {
 			$bodyAttrs['class'] .= ' logged-in';
 		} else {
 			$bodyAttrs['class'] .= ' logged-out';
 		}
+		$bodyAttrs['class'] .= 'scriptpath-' . substr($wgScriptPath, 1);
 	}
 }

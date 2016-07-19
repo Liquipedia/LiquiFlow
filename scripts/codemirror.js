@@ -1,3 +1,10 @@
+if (!String.prototype.startsWith) {
+	String.prototype.startsWith = function(searchString, position){
+		position = position || 0;
+		return this.substr(position, searchString.length) === searchString;
+	};
+}
+
 if (!String.prototype.endsWith) {
 	String.prototype.endsWith = function(searchString, position) {
 		var subjectString = this.toString();
@@ -63,7 +70,7 @@ $(document).ready(function() {
 			editor.setCode($(this).val());
 		});
 		
-		function openPageOnClick( cssClass, namespace, element){
+		function openPageOnClick(cssClass, element) {
 			var pagename = element.text();
 			var index = element.index();
 			var counter;
@@ -82,18 +89,26 @@ $(document).ready(function() {
 
 			pagename = pagename.substr(0, 1).toUpperCase() + pagename.substr(1);
 
-			window.open(mw.config.get('wgScriptPath') + '/'+ namespace + pagename);
+			if(cssClass == 'cm-mw-template-name') {
+				if(pagename.startsWith(':')) {
+					pagename = pagename.substr(1);
+				} else if(!pagename.includes(':')) {
+					pagename = 'Template:' + pagename;
+				}
+			}
+
+			window.open(mw.config.get('wgScriptPath') + '/'+ pagename);
 		}
-		
+
 		$('.CodeMirror').on('click', '.cm-mw-template-name', function(e) {
 			if (e.altKey){
-				openPageOnClick('cm-mw-template-name', 'Template:', $(this));
+				openPageOnClick('cm-mw-template-name', $(this));
 			}
 		});
-		
+
 		$('.CodeMirror').on('click', '.cm-mw-link-pagename', function(e) {
 			if (e.altKey){
-				openPageOnClick('cm-mw-link-pagename', '', $(this));
+				openPageOnClick('cm-mw-link-pagename', $(this));
 			}
 		});
 	}

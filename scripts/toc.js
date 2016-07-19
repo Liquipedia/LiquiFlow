@@ -9,7 +9,7 @@ function adjustSidebar() {
 	var tocTopOffset = 57;
 	
 	/* second navbar for logged in people */
-	secondNavbar = ((typeof mw.user.isAnon == 'function') && mw.user.isAnon()) ? 0 : $('#wiki-nav').outerHeight();
+	secondNavbar = ($('body').eq(0).hasClass('logged-in')) ? $('#wiki-nav').outerHeight(): 0;
 	if(secondNavbar != 0) {
 		tocScrollTopOffset = -secondNavbar;
 		tocTopOffset = 89;

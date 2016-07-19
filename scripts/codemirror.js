@@ -34,15 +34,20 @@ if (!String.prototype.includes) {
 $(document).ready(function() {
 	function invoke_codemirror(codemirror_id) {
 		var editmode;
+		var indentmode;
 		var locationStr = window.location.href;
 		if((locationStr.endsWith('.js')) || (locationStr.includes('.js&'))) {
 			editmode = 'text/javascript';
+			indentmode = true;
 		} else if((locationStr.endsWith('.css')) || (locationStr.includes('.css&'))) {
 			editmode = 'text/css';
+			indentmode = true;
 		} else if(locationStr.includes('/index.php?title=Module:')) {
 			editmode = 'text/x-lua';
+			indentmode = true;
 		} else {
 			editmode = 'text/mediawiki';
+			indentmode = false;
 		}
 		var editor = CodeMirror.fromTextArea(document.getElementById(codemirror_id), {
 			mwextFunctionSynonyms: mw.config.get( 'liquiflowCodemirrorFunctionSynonyms' ),
@@ -56,6 +61,7 @@ $(document).ready(function() {
 			flattenSpans: false,
 			matchBrackets: true,
 			viewportMargin: 5000,
+			indentWithTabs: indentmode,
 			extraKeys: {
 				"F11": function(cm) {
 					cm.setOption("fullScreen", !cm.getOption("fullScreen"));

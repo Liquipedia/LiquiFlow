@@ -97,5 +97,6 @@ class SkinLiquiFlow extends SkinTemplate {
 		} else {
 			$bodyAttrs['class'] .= ' logged-out';
 		}
+		$bodyAttrs['class'] .= 'scriptpath-' . substr($wgScriptPath, 1);
 	}
 }

@@ -3904,6 +3904,108 @@ fieldset[disabled] #prefcontrol.focus {
   box-shadow: none;
 }
 /* taken from bootstrap */
+#mw-content-text textarea {
+  vertical-align: middle;
+  height: 26pt;
+  padding: 6px 12px;
+  font-size: 11pt;
+  line-height: 1.42857143;
+  color: #555555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 0px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+#mw-content-text textarea:focus {
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+#mw-content-text textarea::-moz-placeholder {
+  color: #999;
+  opacity: 1;
+}
+#mw-content-text textarea:-ms-input-placeholder {
+  color: #999;
+}
+#mw-content-text textarea::-webkit-input-placeholder {
+  color: #999;
+}
+#mw-content-text textarea::-ms-expand {
+  border: 0;
+  background-color: transparent;
+}
+#mw-content-text textarea[disabled],
+#mw-content-text textarea[readonly],
+fieldset[disabled] #mw-content-text textarea {
+  background-color: #eeeeee;
+  opacity: 1;
+}
+#mw-content-text textarea[disabled],
+fieldset[disabled] #mw-content-text textarea {
+  cursor: not-allowed;
+}
+textarea#mw-content-text textarea {
+  height: auto;
+}
+/* taken from bootstrap */
+#mw-content-text select {
+  vertical-align: middle;
+  height: 26pt;
+  padding: 6px 12px;
+  font-size: 11pt;
+  line-height: 1.42857143;
+  color: #555555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 0px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+#mw-content-text select:focus {
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+#mw-content-text select::-moz-placeholder {
+  color: #999;
+  opacity: 1;
+}
+#mw-content-text select:-ms-input-placeholder {
+  color: #999;
+}
+#mw-content-text select::-webkit-input-placeholder {
+  color: #999;
+}
+#mw-content-text select::-ms-expand {
+  border: 0;
+  background-color: transparent;
+}
+#mw-content-text select[disabled],
+#mw-content-text select[readonly],
+fieldset[disabled] #mw-content-text select {
+  background-color: #eeeeee;
+  opacity: 1;
+}
+#mw-content-text select[disabled],
+fieldset[disabled] #mw-content-text select {
+  cursor: not-allowed;
+}
+textarea#mw-content-text select {
+  height: auto;
+}
+/* taken from bootstrap */
 #mw-fr-commentbox {
   vertical-align: middle;
   height: 26pt;
@@ -4207,6 +4309,108 @@ fieldset[disabled] #wpReason {
   cursor: not-allowed;
 }
 textarea#wpReason {
+  height: auto;
+}
+/* taken from bootstrap */
+#wpDeleteReasonList {
+  vertical-align: middle;
+  height: 26pt;
+  padding: 6px 12px;
+  font-size: 11pt;
+  line-height: 1.42857143;
+  color: #555555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 0px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+#wpDeleteReasonList:focus {
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+#wpDeleteReasonList::-moz-placeholder {
+  color: #999;
+  opacity: 1;
+}
+#wpDeleteReasonList:-ms-input-placeholder {
+  color: #999;
+}
+#wpDeleteReasonList::-webkit-input-placeholder {
+  color: #999;
+}
+#wpDeleteReasonList::-ms-expand {
+  border: 0;
+  background-color: transparent;
+}
+#wpDeleteReasonList[disabled],
+#wpDeleteReasonList[readonly],
+fieldset[disabled] #wpDeleteReasonList {
+  background-color: #eeeeee;
+  opacity: 1;
+}
+#wpDeleteReasonList[disabled],
+fieldset[disabled] #wpDeleteReasonList {
+  cursor: not-allowed;
+}
+textarea#wpDeleteReasonList {
+  height: auto;
+}
+/* taken from bootstrap */
+#wpComment {
+  vertical-align: middle;
+  height: 26pt;
+  padding: 6px 12px;
+  font-size: 11pt;
+  line-height: 1.42857143;
+  color: #555555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 0px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+#wpComment:focus {
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+#wpComment::-moz-placeholder {
+  color: #999;
+  opacity: 1;
+}
+#wpComment:-ms-input-placeholder {
+  color: #999;
+}
+#wpComment::-webkit-input-placeholder {
+  color: #999;
+}
+#wpComment::-ms-expand {
+  border: 0;
+  background-color: transparent;
+}
+#wpComment[disabled],
+#wpComment[readonly],
+fieldset[disabled] #wpComment {
+  background-color: #eeeeee;
+  opacity: 1;
+}
+#wpComment[disabled],
+fieldset[disabled] #wpComment {
+  cursor: not-allowed;
+}
+textarea#wpComment {
   height: auto;
 }
 /* taken from bootstrap */
@@ -4516,7 +4720,7 @@ textarea#wpLicense {
   height: auto;
 }
 /* taken from bootstrap */
-#username {
+#wpNewTitleNs {
   vertical-align: middle;
   height: 26pt;
   padding: 6px 12px;
@@ -4533,37 +4737,700 @@ textarea#wpLicense {
   -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 }
-#username:focus {
+#wpNewTitleNs:focus {
   border-color: #66afe9;
   outline: 0;
   -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
   box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
 }
-#username::-moz-placeholder {
+#wpNewTitleNs::-moz-placeholder {
   color: #999;
   opacity: 1;
 }
-#username:-ms-input-placeholder {
+#wpNewTitleNs:-ms-input-placeholder {
   color: #999;
 }
-#username::-webkit-input-placeholder {
+#wpNewTitleNs::-webkit-input-placeholder {
   color: #999;
 }
-#username::-ms-expand {
+#wpNewTitleNs::-ms-expand {
   border: 0;
   background-color: transparent;
 }
-#username[disabled],
-#username[readonly],
-fieldset[disabled] #username {
+#wpNewTitleNs[disabled],
+#wpNewTitleNs[readonly],
+fieldset[disabled] #wpNewTitleNs {
   background-color: #eeeeee;
   opacity: 1;
 }
-#username[disabled],
-fieldset[disabled] #username {
+#wpNewTitleNs[disabled],
+fieldset[disabled] #wpNewTitleNs {
   cursor: not-allowed;
 }
-textarea#username {
+textarea#wpNewTitleNs {
+  height: auto;
+}
+/* taken from bootstrap */
+#wpNewTitleMain {
+  vertical-align: middle;
+  height: 26pt;
+  padding: 6px 12px;
+  font-size: 11pt;
+  line-height: 1.42857143;
+  color: #555555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 0px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+#wpNewTitleMain:focus {
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+#wpNewTitleMain::-moz-placeholder {
+  color: #999;
+  opacity: 1;
+}
+#wpNewTitleMain:-ms-input-placeholder {
+  color: #999;
+}
+#wpNewTitleMain::-webkit-input-placeholder {
+  color: #999;
+}
+#wpNewTitleMain::-ms-expand {
+  border: 0;
+  background-color: transparent;
+}
+#wpNewTitleMain[disabled],
+#wpNewTitleMain[readonly],
+fieldset[disabled] #wpNewTitleMain {
+  background-color: #eeeeee;
+  opacity: 1;
+}
+#wpNewTitleMain[disabled],
+fieldset[disabled] #wpNewTitleMain {
+  cursor: not-allowed;
+}
+textarea#wpNewTitleMain {
+  height: auto;
+}
+/* taken from bootstrap */
+#mwProtect-level-edit {
+  vertical-align: middle;
+  height: 26pt;
+  padding: 6px 12px;
+  font-size: 11pt;
+  line-height: 1.42857143;
+  color: #555555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 0px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+#mwProtect-level-edit:focus {
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+#mwProtect-level-edit::-moz-placeholder {
+  color: #999;
+  opacity: 1;
+}
+#mwProtect-level-edit:-ms-input-placeholder {
+  color: #999;
+}
+#mwProtect-level-edit::-webkit-input-placeholder {
+  color: #999;
+}
+#mwProtect-level-edit::-ms-expand {
+  border: 0;
+  background-color: transparent;
+}
+#mwProtect-level-edit[disabled],
+#mwProtect-level-edit[readonly],
+fieldset[disabled] #mwProtect-level-edit {
+  background-color: #eeeeee;
+  opacity: 1;
+}
+#mwProtect-level-edit[disabled],
+fieldset[disabled] #mwProtect-level-edit {
+  cursor: not-allowed;
+}
+textarea#mwProtect-level-edit {
+  height: auto;
+}
+/* taken from bootstrap */
+#mwProtectExpirySelection-edit {
+  vertical-align: middle;
+  height: 26pt;
+  padding: 6px 12px;
+  font-size: 11pt;
+  line-height: 1.42857143;
+  color: #555555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 0px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+#mwProtectExpirySelection-edit:focus {
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+#mwProtectExpirySelection-edit::-moz-placeholder {
+  color: #999;
+  opacity: 1;
+}
+#mwProtectExpirySelection-edit:-ms-input-placeholder {
+  color: #999;
+}
+#mwProtectExpirySelection-edit::-webkit-input-placeholder {
+  color: #999;
+}
+#mwProtectExpirySelection-edit::-ms-expand {
+  border: 0;
+  background-color: transparent;
+}
+#mwProtectExpirySelection-edit[disabled],
+#mwProtectExpirySelection-edit[readonly],
+fieldset[disabled] #mwProtectExpirySelection-edit {
+  background-color: #eeeeee;
+  opacity: 1;
+}
+#mwProtectExpirySelection-edit[disabled],
+fieldset[disabled] #mwProtectExpirySelection-edit {
+  cursor: not-allowed;
+}
+textarea#mwProtectExpirySelection-edit {
+  height: auto;
+}
+/* taken from bootstrap */
+#mwProtect-edit-expires {
+  vertical-align: middle;
+  height: 26pt;
+  padding: 6px 12px;
+  font-size: 11pt;
+  line-height: 1.42857143;
+  color: #555555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 0px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+#mwProtect-edit-expires:focus {
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+#mwProtect-edit-expires::-moz-placeholder {
+  color: #999;
+  opacity: 1;
+}
+#mwProtect-edit-expires:-ms-input-placeholder {
+  color: #999;
+}
+#mwProtect-edit-expires::-webkit-input-placeholder {
+  color: #999;
+}
+#mwProtect-edit-expires::-ms-expand {
+  border: 0;
+  background-color: transparent;
+}
+#mwProtect-edit-expires[disabled],
+#mwProtect-edit-expires[readonly],
+fieldset[disabled] #mwProtect-edit-expires {
+  background-color: #eeeeee;
+  opacity: 1;
+}
+#mwProtect-edit-expires[disabled],
+fieldset[disabled] #mwProtect-edit-expires {
+  cursor: not-allowed;
+}
+textarea#mwProtect-edit-expires {
+  height: auto;
+}
+/* taken from bootstrap */
+#mwProtect-level-move {
+  vertical-align: middle;
+  height: 26pt;
+  padding: 6px 12px;
+  font-size: 11pt;
+  line-height: 1.42857143;
+  color: #555555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 0px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+#mwProtect-level-move:focus {
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+#mwProtect-level-move::-moz-placeholder {
+  color: #999;
+  opacity: 1;
+}
+#mwProtect-level-move:-ms-input-placeholder {
+  color: #999;
+}
+#mwProtect-level-move::-webkit-input-placeholder {
+  color: #999;
+}
+#mwProtect-level-move::-ms-expand {
+  border: 0;
+  background-color: transparent;
+}
+#mwProtect-level-move[disabled],
+#mwProtect-level-move[readonly],
+fieldset[disabled] #mwProtect-level-move {
+  background-color: #eeeeee;
+  opacity: 1;
+}
+#mwProtect-level-move[disabled],
+fieldset[disabled] #mwProtect-level-move {
+  cursor: not-allowed;
+}
+textarea#mwProtect-level-move {
+  height: auto;
+}
+/* taken from bootstrap */
+#mwProtectExpirySelection-move {
+  vertical-align: middle;
+  height: 26pt;
+  padding: 6px 12px;
+  font-size: 11pt;
+  line-height: 1.42857143;
+  color: #555555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 0px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+#mwProtectExpirySelection-move:focus {
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+#mwProtectExpirySelection-move::-moz-placeholder {
+  color: #999;
+  opacity: 1;
+}
+#mwProtectExpirySelection-move:-ms-input-placeholder {
+  color: #999;
+}
+#mwProtectExpirySelection-move::-webkit-input-placeholder {
+  color: #999;
+}
+#mwProtectExpirySelection-move::-ms-expand {
+  border: 0;
+  background-color: transparent;
+}
+#mwProtectExpirySelection-move[disabled],
+#mwProtectExpirySelection-move[readonly],
+fieldset[disabled] #mwProtectExpirySelection-move {
+  background-color: #eeeeee;
+  opacity: 1;
+}
+#mwProtectExpirySelection-move[disabled],
+fieldset[disabled] #mwProtectExpirySelection-move {
+  cursor: not-allowed;
+}
+textarea#mwProtectExpirySelection-move {
+  height: auto;
+}
+/* taken from bootstrap */
+#mwProtect-move-expires {
+  vertical-align: middle;
+  height: 26pt;
+  padding: 6px 12px;
+  font-size: 11pt;
+  line-height: 1.42857143;
+  color: #555555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 0px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+#mwProtect-move-expires:focus {
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+#mwProtect-move-expires::-moz-placeholder {
+  color: #999;
+  opacity: 1;
+}
+#mwProtect-move-expires:-ms-input-placeholder {
+  color: #999;
+}
+#mwProtect-move-expires::-webkit-input-placeholder {
+  color: #999;
+}
+#mwProtect-move-expires::-ms-expand {
+  border: 0;
+  background-color: transparent;
+}
+#mwProtect-move-expires[disabled],
+#mwProtect-move-expires[readonly],
+fieldset[disabled] #mwProtect-move-expires {
+  background-color: #eeeeee;
+  opacity: 1;
+}
+#mwProtect-move-expires[disabled],
+fieldset[disabled] #mwProtect-move-expires {
+  cursor: not-allowed;
+}
+textarea#mwProtect-move-expires {
+  height: auto;
+}
+/* taken from bootstrap */
+#wpProtectReasonSelection {
+  vertical-align: middle;
+  height: 26pt;
+  padding: 6px 12px;
+  font-size: 11pt;
+  line-height: 1.42857143;
+  color: #555555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 0px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+#wpProtectReasonSelection:focus {
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+#wpProtectReasonSelection::-moz-placeholder {
+  color: #999;
+  opacity: 1;
+}
+#wpProtectReasonSelection:-ms-input-placeholder {
+  color: #999;
+}
+#wpProtectReasonSelection::-webkit-input-placeholder {
+  color: #999;
+}
+#wpProtectReasonSelection::-ms-expand {
+  border: 0;
+  background-color: transparent;
+}
+#wpProtectReasonSelection[disabled],
+#wpProtectReasonSelection[readonly],
+fieldset[disabled] #wpProtectReasonSelection {
+  background-color: #eeeeee;
+  opacity: 1;
+}
+#wpProtectReasonSelection[disabled],
+fieldset[disabled] #wpProtectReasonSelection {
+  cursor: not-allowed;
+}
+textarea#wpProtectReasonSelection {
+  height: auto;
+}
+/* taken from bootstrap */
+#mwProtect-reason {
+  vertical-align: middle;
+  height: 26pt;
+  padding: 6px 12px;
+  font-size: 11pt;
+  line-height: 1.42857143;
+  color: #555555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 0px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+#mwProtect-reason:focus {
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+#mwProtect-reason::-moz-placeholder {
+  color: #999;
+  opacity: 1;
+}
+#mwProtect-reason:-ms-input-placeholder {
+  color: #999;
+}
+#mwProtect-reason::-webkit-input-placeholder {
+  color: #999;
+}
+#mwProtect-reason::-ms-expand {
+  border: 0;
+  background-color: transparent;
+}
+#mwProtect-reason[disabled],
+#mwProtect-reason[readonly],
+fieldset[disabled] #mwProtect-reason {
+  background-color: #eeeeee;
+  opacity: 1;
+}
+#mwProtect-reason[disabled],
+fieldset[disabled] #mwProtect-reason {
+  cursor: not-allowed;
+}
+textarea#mwProtect-reason {
+  height: auto;
+}
+/* taken from bootstrap */
+#mwProtect-level-autoreview {
+  vertical-align: middle;
+  height: 26pt;
+  padding: 6px 12px;
+  font-size: 11pt;
+  line-height: 1.42857143;
+  color: #555555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 0px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+#mwProtect-level-autoreview:focus {
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+#mwProtect-level-autoreview::-moz-placeholder {
+  color: #999;
+  opacity: 1;
+}
+#mwProtect-level-autoreview:-ms-input-placeholder {
+  color: #999;
+}
+#mwProtect-level-autoreview::-webkit-input-placeholder {
+  color: #999;
+}
+#mwProtect-level-autoreview::-ms-expand {
+  border: 0;
+  background-color: transparent;
+}
+#mwProtect-level-autoreview[disabled],
+#mwProtect-level-autoreview[readonly],
+fieldset[disabled] #mwProtect-level-autoreview {
+  background-color: #eeeeee;
+  opacity: 1;
+}
+#mwProtect-level-autoreview[disabled],
+fieldset[disabled] #mwProtect-level-autoreview {
+  cursor: not-allowed;
+}
+textarea#mwProtect-level-autoreview {
+  height: auto;
+}
+/* taken from bootstrap */
+#mwStabilizeExpirySelection {
+  vertical-align: middle;
+  height: 26pt;
+  padding: 6px 12px;
+  font-size: 11pt;
+  line-height: 1.42857143;
+  color: #555555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 0px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+#mwStabilizeExpirySelection:focus {
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+#mwStabilizeExpirySelection::-moz-placeholder {
+  color: #999;
+  opacity: 1;
+}
+#mwStabilizeExpirySelection:-ms-input-placeholder {
+  color: #999;
+}
+#mwStabilizeExpirySelection::-webkit-input-placeholder {
+  color: #999;
+}
+#mwStabilizeExpirySelection::-ms-expand {
+  border: 0;
+  background-color: transparent;
+}
+#mwStabilizeExpirySelection[disabled],
+#mwStabilizeExpirySelection[readonly],
+fieldset[disabled] #mwStabilizeExpirySelection {
+  background-color: #eeeeee;
+  opacity: 1;
+}
+#mwStabilizeExpirySelection[disabled],
+fieldset[disabled] #mwStabilizeExpirySelection {
+  cursor: not-allowed;
+}
+textarea#mwStabilizeExpirySelection {
+  height: auto;
+}
+/* taken from bootstrap */
+#mwStabilizeExpiryOther {
+  vertical-align: middle;
+  height: 26pt;
+  padding: 6px 12px;
+  font-size: 11pt;
+  line-height: 1.42857143;
+  color: #555555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 0px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+#mwStabilizeExpiryOther:focus {
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+#mwStabilizeExpiryOther::-moz-placeholder {
+  color: #999;
+  opacity: 1;
+}
+#mwStabilizeExpiryOther:-ms-input-placeholder {
+  color: #999;
+}
+#mwStabilizeExpiryOther::-webkit-input-placeholder {
+  color: #999;
+}
+#mwStabilizeExpiryOther::-ms-expand {
+  border: 0;
+  background-color: transparent;
+}
+#mwStabilizeExpiryOther[disabled],
+#mwStabilizeExpiryOther[readonly],
+fieldset[disabled] #mwStabilizeExpiryOther {
+  background-color: #eeeeee;
+  opacity: 1;
+}
+#mwStabilizeExpiryOther[disabled],
+fieldset[disabled] #mwStabilizeExpiryOther {
+  cursor: not-allowed;
+}
+textarea#mwStabilizeExpiryOther {
+  height: auto;
+}
+/* taken from bootstrap */
+#wpReasonSelection {
+  vertical-align: middle;
+  height: 26pt;
+  padding: 6px 12px;
+  font-size: 11pt;
+  line-height: 1.42857143;
+  color: #555555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 0px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+#wpReasonSelection:focus {
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+#wpReasonSelection::-moz-placeholder {
+  color: #999;
+  opacity: 1;
+}
+#wpReasonSelection:-ms-input-placeholder {
+  color: #999;
+}
+#wpReasonSelection::-webkit-input-placeholder {
+  color: #999;
+}
+#wpReasonSelection::-ms-expand {
+  border: 0;
+  background-color: transparent;
+}
+#wpReasonSelection[disabled],
+#wpReasonSelection[readonly],
+fieldset[disabled] #wpReasonSelection {
+  background-color: #eeeeee;
+  opacity: 1;
+}
+#wpReasonSelection[disabled],
+fieldset[disabled] #wpReasonSelection {
+  cursor: not-allowed;
+}
+textarea#wpReasonSelection {
   height: auto;
 }
 /* taken from bootstrap */
@@ -5383,6 +6250,261 @@ textarea#mw-input-wpwllimit {
   height: auto;
 }
 /* taken from bootstrap */
+#mw-input-wpExpiry {
+  vertical-align: middle;
+  height: 26pt;
+  padding: 6px 12px;
+  font-size: 11pt;
+  line-height: 1.42857143;
+  color: #555555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 0px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+#mw-input-wpExpiry:focus {
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+#mw-input-wpExpiry::-moz-placeholder {
+  color: #999;
+  opacity: 1;
+}
+#mw-input-wpExpiry:-ms-input-placeholder {
+  color: #999;
+}
+#mw-input-wpExpiry::-webkit-input-placeholder {
+  color: #999;
+}
+#mw-input-wpExpiry::-ms-expand {
+  border: 0;
+  background-color: transparent;
+}
+#mw-input-wpExpiry[disabled],
+#mw-input-wpExpiry[readonly],
+fieldset[disabled] #mw-input-wpExpiry {
+  background-color: #eeeeee;
+  opacity: 1;
+}
+#mw-input-wpExpiry[disabled],
+fieldset[disabled] #mw-input-wpExpiry {
+  cursor: not-allowed;
+}
+textarea#mw-input-wpExpiry {
+  height: auto;
+}
+/* taken from bootstrap */
+#mw-input-wpExpiry-other {
+  vertical-align: middle;
+  height: 26pt;
+  padding: 6px 12px;
+  font-size: 11pt;
+  line-height: 1.42857143;
+  color: #555555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 0px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+#mw-input-wpExpiry-other:focus {
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+#mw-input-wpExpiry-other::-moz-placeholder {
+  color: #999;
+  opacity: 1;
+}
+#mw-input-wpExpiry-other:-ms-input-placeholder {
+  color: #999;
+}
+#mw-input-wpExpiry-other::-webkit-input-placeholder {
+  color: #999;
+}
+#mw-input-wpExpiry-other::-ms-expand {
+  border: 0;
+  background-color: transparent;
+}
+#mw-input-wpExpiry-other[disabled],
+#mw-input-wpExpiry-other[readonly],
+fieldset[disabled] #mw-input-wpExpiry-other {
+  background-color: #eeeeee;
+  opacity: 1;
+}
+#mw-input-wpExpiry-other[disabled],
+fieldset[disabled] #mw-input-wpExpiry-other {
+  cursor: not-allowed;
+}
+textarea#mw-input-wpExpiry-other {
+  height: auto;
+}
+/* taken from bootstrap */
+#mw-input-wpReason {
+  vertical-align: middle;
+  height: 26pt;
+  padding: 6px 12px;
+  font-size: 11pt;
+  line-height: 1.42857143;
+  color: #555555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 0px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+#mw-input-wpReason:focus {
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+#mw-input-wpReason::-moz-placeholder {
+  color: #999;
+  opacity: 1;
+}
+#mw-input-wpReason:-ms-input-placeholder {
+  color: #999;
+}
+#mw-input-wpReason::-webkit-input-placeholder {
+  color: #999;
+}
+#mw-input-wpReason::-ms-expand {
+  border: 0;
+  background-color: transparent;
+}
+#mw-input-wpReason[disabled],
+#mw-input-wpReason[readonly],
+fieldset[disabled] #mw-input-wpReason {
+  background-color: #eeeeee;
+  opacity: 1;
+}
+#mw-input-wpReason[disabled],
+fieldset[disabled] #mw-input-wpReason {
+  cursor: not-allowed;
+}
+textarea#mw-input-wpReason {
+  height: auto;
+}
+/* taken from bootstrap */
+#mw-input-wpReason-other {
+  vertical-align: middle;
+  height: 26pt;
+  padding: 6px 12px;
+  font-size: 11pt;
+  line-height: 1.42857143;
+  color: #555555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 0px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+#mw-input-wpReason-other:focus {
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+#mw-input-wpReason-other::-moz-placeholder {
+  color: #999;
+  opacity: 1;
+}
+#mw-input-wpReason-other:-ms-input-placeholder {
+  color: #999;
+}
+#mw-input-wpReason-other::-webkit-input-placeholder {
+  color: #999;
+}
+#mw-input-wpReason-other::-ms-expand {
+  border: 0;
+  background-color: transparent;
+}
+#mw-input-wpReason-other[disabled],
+#mw-input-wpReason-other[readonly],
+fieldset[disabled] #mw-input-wpReason-other {
+  background-color: #eeeeee;
+  opacity: 1;
+}
+#mw-input-wpReason-other[disabled],
+fieldset[disabled] #mw-input-wpReason-other {
+  cursor: not-allowed;
+}
+textarea#mw-input-wpReason-other {
+  height: auto;
+}
+/* taken from bootstrap */
+#username {
+  vertical-align: middle;
+  height: 26pt;
+  padding: 6px 12px;
+  font-size: 11pt;
+  line-height: 1.42857143;
+  color: #555555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 0px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+#username:focus {
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+#username::-moz-placeholder {
+  color: #999;
+  opacity: 1;
+}
+#username:-ms-input-placeholder {
+  color: #999;
+}
+#username::-webkit-input-placeholder {
+  color: #999;
+}
+#username::-ms-expand {
+  border: 0;
+  background-color: transparent;
+}
+#username[disabled],
+#username[readonly],
+fieldset[disabled] #username {
+  background-color: #eeeeee;
+  opacity: 1;
+}
+#username[disabled],
+fieldset[disabled] #username {
+  cursor: not-allowed;
+}
+textarea#username {
+  height: auto;
+}
+/* taken from bootstrap */
 #namespace {
   vertical-align: middle;
   height: 26pt;
@@ -5482,6 +6604,516 @@ fieldset[disabled] #category {
   cursor: not-allowed;
 }
 textarea#category {
+  height: auto;
+}
+/* taken from bootstrap */
+#catname {
+  vertical-align: middle;
+  height: 26pt;
+  padding: 6px 12px;
+  font-size: 11pt;
+  line-height: 1.42857143;
+  color: #555555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 0px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+#catname:focus {
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+#catname::-moz-placeholder {
+  color: #999;
+  opacity: 1;
+}
+#catname:-ms-input-placeholder {
+  color: #999;
+}
+#catname::-webkit-input-placeholder {
+  color: #999;
+}
+#catname::-ms-expand {
+  border: 0;
+  background-color: transparent;
+}
+#catname[disabled],
+#catname[readonly],
+fieldset[disabled] #catname {
+  background-color: #eeeeee;
+  opacity: 1;
+}
+#catname[disabled],
+fieldset[disabled] #catname {
+  cursor: not-allowed;
+}
+textarea#catname {
+  height: auto;
+}
+/* taken from bootstrap */
+#offset {
+  vertical-align: middle;
+  height: 26pt;
+  padding: 6px 12px;
+  font-size: 11pt;
+  line-height: 1.42857143;
+  color: #555555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 0px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+#offset:focus {
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+#offset::-moz-placeholder {
+  color: #999;
+  opacity: 1;
+}
+#offset:-ms-input-placeholder {
+  color: #999;
+}
+#offset::-webkit-input-placeholder {
+  color: #999;
+}
+#offset::-ms-expand {
+  border: 0;
+  background-color: transparent;
+}
+#offset[disabled],
+#offset[readonly],
+fieldset[disabled] #offset {
+  background-color: #eeeeee;
+  opacity: 1;
+}
+#offset[disabled],
+fieldset[disabled] #offset {
+  cursor: not-allowed;
+}
+textarea#offset {
+  height: auto;
+}
+/* taken from bootstrap */
+#group {
+  vertical-align: middle;
+  height: 26pt;
+  padding: 6px 12px;
+  font-size: 11pt;
+  line-height: 1.42857143;
+  color: #555555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 0px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+#group:focus {
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+#group::-moz-placeholder {
+  color: #999;
+  opacity: 1;
+}
+#group:-ms-input-placeholder {
+  color: #999;
+}
+#group::-webkit-input-placeholder {
+  color: #999;
+}
+#group::-ms-expand {
+  border: 0;
+  background-color: transparent;
+}
+#group[disabled],
+#group[readonly],
+fieldset[disabled] #group {
+  background-color: #eeeeee;
+  opacity: 1;
+}
+#group[disabled],
+fieldset[disabled] #group {
+  cursor: not-allowed;
+}
+textarea#group {
+  height: auto;
+}
+/* taken from bootstrap */
+#mw-import-comment {
+  vertical-align: middle;
+  height: 26pt;
+  padding: 6px 12px;
+  font-size: 11pt;
+  line-height: 1.42857143;
+  color: #555555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 0px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+#mw-import-comment:focus {
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+#mw-import-comment::-moz-placeholder {
+  color: #999;
+  opacity: 1;
+}
+#mw-import-comment:-ms-input-placeholder {
+  color: #999;
+}
+#mw-import-comment::-webkit-input-placeholder {
+  color: #999;
+}
+#mw-import-comment::-ms-expand {
+  border: 0;
+  background-color: transparent;
+}
+#mw-import-comment[disabled],
+#mw-import-comment[readonly],
+fieldset[disabled] #mw-import-comment {
+  background-color: #eeeeee;
+  opacity: 1;
+}
+#mw-import-comment[disabled],
+fieldset[disabled] #mw-import-comment {
+  cursor: not-allowed;
+}
+textarea#mw-import-comment {
+  height: auto;
+}
+/* taken from bootstrap */
+#mw-interwiki-rootpage-upload {
+  vertical-align: middle;
+  height: 26pt;
+  padding: 6px 12px;
+  font-size: 11pt;
+  line-height: 1.42857143;
+  color: #555555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 0px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+#mw-interwiki-rootpage-upload:focus {
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+#mw-interwiki-rootpage-upload::-moz-placeholder {
+  color: #999;
+  opacity: 1;
+}
+#mw-interwiki-rootpage-upload:-ms-input-placeholder {
+  color: #999;
+}
+#mw-interwiki-rootpage-upload::-webkit-input-placeholder {
+  color: #999;
+}
+#mw-interwiki-rootpage-upload::-ms-expand {
+  border: 0;
+  background-color: transparent;
+}
+#mw-interwiki-rootpage-upload[disabled],
+#mw-interwiki-rootpage-upload[readonly],
+fieldset[disabled] #mw-interwiki-rootpage-upload {
+  background-color: #eeeeee;
+  opacity: 1;
+}
+#mw-interwiki-rootpage-upload[disabled],
+fieldset[disabled] #mw-interwiki-rootpage-upload {
+  cursor: not-allowed;
+}
+textarea#mw-interwiki-rootpage-upload {
+  height: auto;
+}
+/* taken from bootstrap */
+#mw-bi-target {
+  vertical-align: middle;
+  height: 26pt;
+  padding: 6px 12px;
+  font-size: 11pt;
+  line-height: 1.42857143;
+  color: #555555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 0px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+#mw-bi-target:focus {
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+#mw-bi-target::-moz-placeholder {
+  color: #999;
+  opacity: 1;
+}
+#mw-bi-target:-ms-input-placeholder {
+  color: #999;
+}
+#mw-bi-target::-webkit-input-placeholder {
+  color: #999;
+}
+#mw-bi-target::-ms-expand {
+  border: 0;
+  background-color: transparent;
+}
+#mw-bi-target[disabled],
+#mw-bi-target[readonly],
+fieldset[disabled] #mw-bi-target {
+  background-color: #eeeeee;
+  opacity: 1;
+}
+#mw-bi-target[disabled],
+fieldset[disabled] #mw-bi-target {
+  cursor: not-allowed;
+}
+textarea#mw-bi-target {
+  height: auto;
+}
+/* taken from bootstrap */
+#mw-log-user {
+  vertical-align: middle;
+  height: 26pt;
+  padding: 6px 12px;
+  font-size: 11pt;
+  line-height: 1.42857143;
+  color: #555555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 0px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+#mw-log-user:focus {
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+#mw-log-user::-moz-placeholder {
+  color: #999;
+  opacity: 1;
+}
+#mw-log-user:-ms-input-placeholder {
+  color: #999;
+}
+#mw-log-user::-webkit-input-placeholder {
+  color: #999;
+}
+#mw-log-user::-ms-expand {
+  border: 0;
+  background-color: transparent;
+}
+#mw-log-user[disabled],
+#mw-log-user[readonly],
+fieldset[disabled] #mw-log-user {
+  background-color: #eeeeee;
+  opacity: 1;
+}
+#mw-log-user[disabled],
+fieldset[disabled] #mw-log-user {
+  cursor: not-allowed;
+}
+textarea#mw-log-user {
+  height: auto;
+}
+/* taken from bootstrap */
+#mw-log-page {
+  vertical-align: middle;
+  height: 26pt;
+  padding: 6px 12px;
+  font-size: 11pt;
+  line-height: 1.42857143;
+  color: #555555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 0px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+#mw-log-page:focus {
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+#mw-log-page::-moz-placeholder {
+  color: #999;
+  opacity: 1;
+}
+#mw-log-page:-ms-input-placeholder {
+  color: #999;
+}
+#mw-log-page::-webkit-input-placeholder {
+  color: #999;
+}
+#mw-log-page::-ms-expand {
+  border: 0;
+  background-color: transparent;
+}
+#mw-log-page[disabled],
+#mw-log-page[readonly],
+fieldset[disabled] #mw-log-page {
+  background-color: #eeeeee;
+  opacity: 1;
+}
+#mw-log-page[disabled],
+fieldset[disabled] #mw-log-page {
+  cursor: not-allowed;
+}
+textarea#mw-log-page {
+  height: auto;
+}
+/* taken from bootstrap */
+#year {
+  vertical-align: middle;
+  height: 26pt;
+  padding: 6px 12px;
+  font-size: 11pt;
+  line-height: 1.42857143;
+  color: #555555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 0px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+#year:focus {
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+#year::-moz-placeholder {
+  color: #999;
+  opacity: 1;
+}
+#year:-ms-input-placeholder {
+  color: #999;
+}
+#year::-webkit-input-placeholder {
+  color: #999;
+}
+#year::-ms-expand {
+  border: 0;
+  background-color: transparent;
+}
+#year[disabled],
+#year[readonly],
+fieldset[disabled] #year {
+  background-color: #eeeeee;
+  opacity: 1;
+}
+#year[disabled],
+fieldset[disabled] #year {
+  cursor: not-allowed;
+}
+textarea#year {
+  height: auto;
+}
+/* taken from bootstrap */
+#month {
+  vertical-align: middle;
+  height: 26pt;
+  padding: 6px 12px;
+  font-size: 11pt;
+  line-height: 1.42857143;
+  color: #555555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 0px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+#month:focus {
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+#month::-moz-placeholder {
+  color: #999;
+  opacity: 1;
+}
+#month:-ms-input-placeholder {
+  color: #999;
+}
+#month::-webkit-input-placeholder {
+  color: #999;
+}
+#month::-ms-expand {
+  border: 0;
+  background-color: transparent;
+}
+#month[disabled],
+#month[readonly],
+fieldset[disabled] #month {
+  background-color: #eeeeee;
+  opacity: 1;
+}
+#month[disabled],
+fieldset[disabled] #month {
+  cursor: not-allowed;
+}
+textarea#month {
   height: auto;
 }
 .input-group {
@@ -10100,6 +11732,14 @@ body#top.ns--1.mw-special-Ask #mw-content-text table {
 /* fix for flagged revs */
 #mw-fr-revisiondetails {
   z-index: 1000;
+}
+/* SMW fact box */
+.smwfact {
+  word-break: break-all;
+}
+/* hide overflow on everything but special pages */
+body:not(.ns-special) #mw-content-text {
+  overflow: hidden;
 }
 /* Underlining for abbreviations */
 @supports (text-decoration: underline dotted) {

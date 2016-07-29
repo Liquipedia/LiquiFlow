@@ -11741,6 +11741,11 @@ body#top.ns--1.mw-special-Ask #mw-content-text table {
 body:not(.ns-special) #mw-content-text {
   overflow: hidden;
 }
+/* hide stuff on logged in/out status */
+body.logged-in .hide-logged-in,
+body.logged-out .hide-logged-out {
+  display: none;
+}
 /* Underlining for abbreviations */
 @supports (text-decoration: underline dotted) {
   abbr[title],

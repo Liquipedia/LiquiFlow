@@ -11147,6 +11147,9 @@ p {
 .lp-icon.lp-skype {
   background-image: url(../images/lp-icons/InfoboxIcon_Skype.png);
 }
+.lp-icon.lp-snapchat {
+  background-image: url(http://wiki.teamliquid.net/commons/images/f/fc/InfoboxIcon_Snapchat.png);
+}
 .lp-icon.lp-smashboards {
   background-image: url(../images/lp-icons/InfoboxIcon_SmashBoards.png);
 }
@@ -11674,9 +11677,11 @@ div.wikitext-quote {
 }
 #filetoc,
 #catlinks,
-.mw-search-profile-tabs {
+.mw-search-profile-tabs,
+#mw-fr-revisiontag-old {
   border: 1px solid #dddddd !important;
   background-color: transparent !important;
+  margin-right: 0;
 }
 /* quotes should not overflow infoboxes or other floating stuff */
 blockquote.quote {

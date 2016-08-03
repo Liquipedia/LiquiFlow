@@ -1,4 +1,3 @@
-
 var lastScrollTop = 0;
 var currentState = 'top';
 function adjustSidebar() {
@@ -9,7 +8,7 @@ function adjustSidebar() {
 	var tocTopOffset = 57;
 	
 	/* second navbar for logged in people */
-	secondNavbar = ($('body')[0].hasClass('logged-in')) ? $('#wiki-nav').outerHeight(): 0;
+	secondNavbar = ($('body').eq(0).hasClass('logged-in')) ? $('#wiki-nav').outerHeight(): 0;
 	if(secondNavbar != 0) {
 		tocScrollTopOffset = -secondNavbar;
 		tocTopOffset = 89;

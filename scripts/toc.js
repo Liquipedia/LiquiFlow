@@ -1,4 +1,3 @@
-
 var lastScrollTop = 0;
 var currentState = 'top';
 function adjustSidebar() {

@@ -4008,7 +4008,7 @@ fieldset[disabled] #mw-content-text select {
 textarea#mw-content-text select {
   height: auto;
 }
-#mw-content-text select {
+#mw-content-text select[size] {
   height: initial;
 }
 /* taken from bootstrap */

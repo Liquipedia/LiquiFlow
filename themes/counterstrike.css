@@ -1460,39 +1460,55 @@ caption {
 th {
   text-align: center;
 }
-.table {
+.table,
+.wikitable {
   width: 100%;
   max-width: 100%;
   margin-bottom: 15pt;
 }
 .table > thead > tr > th,
+.wikitable > thead > tr > th,
 .table > tbody > tr > th,
+.wikitable > tbody > tr > th,
 .table > tfoot > tr > th,
+.wikitable > tfoot > tr > th,
 .table > thead > tr > td,
+.wikitable > thead > tr > td,
 .table > tbody > tr > td,
-.table > tfoot > tr > td {
+.wikitable > tbody > tr > td,
+.table > tfoot > tr > td,
+.wikitable > tfoot > tr > td {
   padding: 5px;
   line-height: 1.42857143;
   vertical-align: top;
   border-top: 1px solid #ddd;
 }
-.table > thead > tr > th {
+.table > thead > tr > th,
+.wikitable > thead > tr > th {
   background-color: #f5f5f5;
   vertical-align: bottom;
   border-bottom: 2px solid #ddd;
 }
 .table > caption + thead > tr:first-child > th,
+.wikitable > caption + thead > tr:first-child > th,
 .table > colgroup + thead > tr:first-child > th,
+.wikitable > colgroup + thead > tr:first-child > th,
 .table > thead:first-child > tr:first-child > th,
+.wikitable > thead:first-child > tr:first-child > th,
 .table > caption + thead > tr:first-child > td,
+.wikitable > caption + thead > tr:first-child > td,
 .table > colgroup + thead > tr:first-child > td,
-.table > thead:first-child > tr:first-child > td {
+.wikitable > colgroup + thead > tr:first-child > td,
+.table > thead:first-child > tr:first-child > td,
+.wikitable > thead:first-child > tr:first-child > td {
   border-top: 0;
 }
-.table > tbody + tbody {
+.table > tbody + tbody,
+.wikitable > tbody + tbody {
   border-top: 2px solid #ddd;
 }
-.table .table {
+.table .table,
+.wikitable .table {
   background-color: #e5e5e5;
 }
 .table-condensed > thead > tr > th,
@@ -1503,19 +1519,28 @@ th {
 .table-condensed > tfoot > tr > td {
   padding: 2px;
 }
-.table-bordered {
+.table-bordered,
+.wikitable {
   border: 1px solid #ddd;
 }
 .table-bordered > thead > tr > th,
+.wikitable > thead > tr > th,
 .table-bordered > tbody > tr > th,
+.wikitable > tbody > tr > th,
 .table-bordered > tfoot > tr > th,
+.wikitable > tfoot > tr > th,
 .table-bordered > thead > tr > td,
+.wikitable > thead > tr > td,
 .table-bordered > tbody > tr > td,
-.table-bordered > tfoot > tr > td {
+.wikitable > tbody > tr > td,
+.table-bordered > tfoot > tr > td,
+.wikitable > tfoot > tr > td {
   border: 1px solid #ddd;
 }
 .table-bordered > thead > tr > th,
-.table-bordered > thead > tr > td {
+.wikitable > thead > tr > th,
+.table-bordered > thead > tr > td,
+.wikitable > thead > tr > td {
   border-bottom-width: 2px;
 }
 .table-striped > tbody > tr:nth-child(odd) {
@@ -1688,6 +1713,14 @@ table th[class*="col-"] {
   .table-responsive > .table-bordered > tfoot > tr:last-child > td {
     border-bottom: 0;
   }
+}
+.wikitable {
+  background: transparent !important;
+  border: 1px solid #ddd !important;
+  color: inherit !important;
+}
+.wikitable > caption {
+  font-weight: normal !important;
 }
 .table {
   width: auto;

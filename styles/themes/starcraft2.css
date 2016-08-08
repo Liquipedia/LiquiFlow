@@ -1722,7 +1722,8 @@ table th[class*="col-"] {
 .wikitable > caption {
   font-weight: normal !important;
 }
-.table {
+.table,
+.wikitable {
   width: auto;
 }
 .table-full-width {

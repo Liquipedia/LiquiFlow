@@ -9,7 +9,16 @@ class LiquiFlowTemplate extends BaseTemplate {
 
 	private $icons = [
 			// Wiki actions
-			'subject' => 'fa fa-fw fa-file-text-o',
+			'subject' => [
+				'subject-0' => 'fa fa-fw fa-file-text-o',
+				'subject-2' => 'fa fa-fw fa-user',
+				'subject-6' => 'fa fa-fw fa-file-image-o',
+				'subject-8' => 'fa fa-fw fa-file-code-o',
+				'subject-10' => 'fa fa-fw fa-file-code-o',
+				'subject-12' => 'fa fa-fw fa-question-circle-o',
+				'subject-14' => 'fa fa-fw fa-folder-o',
+			],
+			'subjectdefault' => 'fa fa-fw fa-file-text-o',
 			'main' => 'fa fa-fw fa-file-text-o',
 			'view' => 'fa fa-fw fa-file-text-o',
 			'talk' => 'fa fa-fw fa-comments-o',
@@ -857,12 +866,19 @@ $footerLinks = $this->getFooterLinks();
 						<?php if($view == 'mobile') {
 							$link['attributes'] = preg_replace('/id="([^\"]*)"/', 'id="$1-mobile"', $link['attributes']);
 							$link['key'] = preg_replace('/ accesskey="[^\"]*"/', '', $link['key']);
-						} ?>
+						}
+						$namespace = $this->getSkin()->getTitle()->getNamespace();
+						$namespace -= $namespace % 2;
+						?>
 						<li <?php echo $link['attributes']; ?>>
 							<a href="<?php echo htmlspecialchars( $link['href'] );?>"
 							<?php echo $link['key'] ?>>
 							<?php
-							if (isset($this->icons[$link['context']]) && $this->icons[$link['context']] !== false) {
+							if (isset($this->icons[$link['context']]) && $link['context'] == 'subject' && isset($this->icons[$link['context']]['subject-' . $namespace]) && $this->icons[$link['context']]['subject-' . $namespace] !== false) {
+								echo '<span class="' . $this->icons['subject']['subject-' . $namespace] . '"></span> <span class="hidden-sm">' . htmlspecialchars( $link['text'] ) . '</span>';
+							} elseif ($link['context'] == 'subject') {
+								echo '<span class="' . $this->icons['subjectdefault'] . '"></span> <span class="hidden-sm">' . htmlspecialchars( $link['text'] ) . '</span>';
+							} elseif (isset($this->icons[$link['context']]) && $this->icons[$link['context']] !== false) {
 								echo '<span class="' . $this->icons[$link['context']] . '"></span> <span class="hidden-sm">' . htmlspecialchars( $link['text'] ) . '</span>';
 							} else {
 								echo htmlspecialchars( $link['text'] );

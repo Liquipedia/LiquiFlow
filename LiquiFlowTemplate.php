@@ -65,7 +65,6 @@ class LiquiFlowTemplate extends BaseTemplate {
 			'pt-logout' => 'fa fa-fw fa-sign-out',
 			'pt-login' => 'fa fa-fw fa-sign-in',
 			'pt-adminlinks' => 'fa fa-fw fa-gavel',
-
 	];
 
 	private $adminDropdown = [

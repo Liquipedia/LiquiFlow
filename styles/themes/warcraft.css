@@ -4046,6 +4046,57 @@ textarea#mw-content-text select {
   height: initial;
 }
 /* taken from bootstrap */
+#mw-content-text input[type=text] {
+  vertical-align: middle;
+  height: 26pt;
+  padding: 6px 12px;
+  font-size: 11pt;
+  line-height: 1.42857143;
+  color: #555555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 0px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+#mw-content-text input[type=text]:focus {
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+#mw-content-text input[type=text]::-moz-placeholder {
+  color: #999;
+  opacity: 1;
+}
+#mw-content-text input[type=text]:-ms-input-placeholder {
+  color: #999;
+}
+#mw-content-text input[type=text]::-webkit-input-placeholder {
+  color: #999;
+}
+#mw-content-text input[type=text]::-ms-expand {
+  border: 0;
+  background-color: transparent;
+}
+#mw-content-text input[type=text][disabled],
+#mw-content-text input[type=text][readonly],
+fieldset[disabled] #mw-content-text input[type=text] {
+  background-color: #eeeeee;
+  opacity: 1;
+}
+#mw-content-text input[type=text][disabled],
+fieldset[disabled] #mw-content-text input[type=text] {
+  cursor: not-allowed;
+}
+textarea#mw-content-text input[type=text] {
+  height: auto;
+}
+/* taken from bootstrap */
 #mw-fr-commentbox {
   vertical-align: middle;
   height: 26pt;
@@ -10574,6 +10625,9 @@ body {
 html {
   height: 100%;
 }
+#mw-content-text {
+  clear: both;
+}
 /* Correct offset to top for anchors */
 .mw-headline {
   padding-top: 60px;
@@ -11916,13 +11970,20 @@ div.wikitext-quote {
     width: 243px;
   }
 }
+#searchText {
+  max-width: 100%;
+}
 .flaggedrevs_reviewform {
   background-color: transparent !important;
 }
 #filetoc,
 #catlinks,
 .mw-search-profile-tabs,
-#mw-fr-revisiontag-old {
+#mw-fr-revisiontag-old,
+.flaggedrevs_basic,
+.flaggedrevs_quality,
+.flaggedrevs_pristine,
+.flaggedrevs_notice {
   border: 1px solid #dddddd !important;
   background-color: transparent !important;
   margin-right: 0;

@@ -231,7 +231,7 @@ class LiquiFlowTemplate extends BaseTemplate {
 						?>
 							<li class="dropdown dropdown-brand hidden-xs">
 								<a class="dropdown-toggle brand-title" data-toggle="dropdown" data-hover="dropdown" href="#">
-									<span class="brand-name logotype" style="font-size: 18px;"><?php global $wgLiquiFlowAlphawiki; echo (isset($wgLiquiFlowAlphawiki) && $wgLiquiFlowAlphawiki)?'<small>liquipedia</small> alpha':'liquipedia'; ?></span> <span class="caret"></span> <br>
+									<span id="brand-desktop" class="brand-name logotype" style="font-size: 18px;"><?php global $wgLiquiFlowAlphawiki; echo (isset($wgLiquiFlowAlphawiki) && $wgLiquiFlowAlphawiki)?'<small>liquipedia</small> alpha':'liquipedia'; ?></span> <span class="caret"></span> <br>
 									<span class="hidden-xs brand-subtitle">
 										<?php echo $currentWikiTitle; ?>
 									</span>

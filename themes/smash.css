@@ -11781,6 +11781,9 @@ body.slide-active {
 .bgc-lighter-hover:hover {
   background-color: #ffffff;
 }
+.wiki-backgroundcolor-navbar-badge {
+  background-color: #10704a;
+}
 .wiki-bordercolor-dark,
 .bdc-dark {
   border-color: #179C68;
@@ -11854,6 +11857,9 @@ h3 .mw-editsection {
 /* review box */
 #mw-fr-commentbox {
   margin-right: 3px !important;
+}
+#fr-rating-controls {
+  line-height: 3.3em;
 }
 @media (max-width: 900px) {
   #mw-fr-confirmreview > :not(script),

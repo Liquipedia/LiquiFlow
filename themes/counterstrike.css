@@ -7772,6 +7772,9 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   border-top: 2px solid #b3d890;
   border-right: 2px solid #b3d890;
 }
+.nav-tabs > li:last-of-type {
+  margin-right: 0px;
+}
 .nav-tabs > li.active > a,
 .nav-tabs > li.active > a:hover,
 .nav-tabs > li.active > a:focus {
@@ -12054,7 +12057,7 @@ body#top.ns--1.mw-special-Ask #mw-content-text table {
   word-break: break-all;
 }
 /* hide overflow on everything but special pages */
-body:not(.ns-special) #mw-content-text {
+body:not(.ns-special) #main-content-column {
   overflow: auto;
 }
 /* hide stuff on logged in/out status */

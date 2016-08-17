@@ -909,12 +909,16 @@ $footerLinks = $this->getFooterLinks();
 										htmlspecialchars( $link['text'] ) . '</span>';
 									echo '<span class="hidden-xs"><span class="' . $this->icons[$key] . '"></span></span>';
 								} elseif (in_array( 'reviewer', $this->getSkin()->getUser()->getEffectiveGroups())
-									&& in_array($key, ['current'])) {
+									&& in_array($key, ['watch', 'unwatch', 'current'])) {
 									echo '<span class="visible-xs"><span class="' . $this->icons[$key] . '"></span> ' .
 										htmlspecialchars( $link['text'] ) . '</span>';
 									echo '<span class="hidden-xs"><span class="' . $this->icons[$key] . '"></span></span>';
 								} elseif (in_array( 'editor', $this->getSkin()->getUser()->getEffectiveGroups())
 									&& in_array($key, ['current'])) {
+									echo '<span class="visible-xs"><span class="' . $this->icons[$key] . '"></span> ' .
+										htmlspecialchars( $link['text'] ) . '</span>';
+									echo '<span class="hidden-xs"><span class="' . $this->icons[$key] . '"></span></span>';
+								} elseif (in_array($key, ['current'])) {
 									echo '<span class="visible-xs"><span class="' . $this->icons[$key] . '"></span> ' .
 										htmlspecialchars( $link['text'] ) . '</span>';
 									echo '<span class="hidden-xs"><span class="' . $this->icons[$key] . '"></span></span>';
@@ -964,6 +968,20 @@ $footerLinks = $this->getFooterLinks();
 							if (isset($this->icons[$key]) && $this->icons[$key] !== false) {
 								if (in_array( 'sysop', $this->getSkin()->getUser()->getEffectiveGroups())
 									&& in_array($key, ['purge', 'delete', 'undelete', 'protect', 'unprotect', 'default', 'move'])) {
+									echo '<span class="visible-xs"><span class="' . $this->icons[$key] . '"></span> ' .
+									htmlspecialchars( $link['text'] ) . '</span>';
+									echo '<span class="hidden-xs"><span class="' . $this->icons[$key] . '"></span></span>';
+								} elseif (in_array( 'reviewer', $this->getSkin()->getUser()->getEffectiveGroups())
+									&& in_array($key, ['purge', 'move'])) {
+									echo '<span class="visible-xs"><span class="' . $this->icons[$key] . '"></span> ' .
+									htmlspecialchars( $link['text'] ) . '</span>';
+									echo '<span class="hidden-xs"><span class="' . $this->icons[$key] . '"></span></span>';
+								} elseif (in_array( 'editor', $this->getSkin()->getUser()->getEffectiveGroups())
+									&& in_array($key, ['purge'])) {
+									echo '<span class="visible-xs"><span class="' . $this->icons[$key] . '"></span> ' .
+									htmlspecialchars( $link['text'] ) . '</span>';
+									echo '<span class="hidden-xs"><span class="' . $this->icons[$key] . '"></span></span>';
+								} elseif (in_array($key, ['purge'])) {
 									echo '<span class="visible-xs"><span class="' . $this->icons[$key] . '"></span> ' .
 									htmlspecialchars( $link['text'] ) . '</span>';
 									echo '<span class="hidden-xs"><span class="' . $this->icons[$key] . '"></span></span>';

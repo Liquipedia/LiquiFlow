@@ -12054,7 +12054,8 @@ body#top.ns--1.mw-special-Ask #mw-content-text table {
   z-index: 1000;
 }
 /* SMW fact box */
-.smwfact {
+.smwfact,
+.smwb-factbox {
   word-break: break-all;
 }
 /* hide overflow on everything but special pages */

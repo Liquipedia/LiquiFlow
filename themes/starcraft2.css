@@ -1743,7 +1743,9 @@ table th[class*="col-"] {
 .table > tfoot > tr > th,
 .table > thead > tr > td,
 .table > tbody > tr > td,
-.table > tfoot > tr > td,
+.table > tfoot > tr > td {
+  vertical-align: middle;
+}
 .wikitable > thead > tr > th,
 .wikitable > tbody > tr > th,
 .wikitable > tfoot > tr > th,
@@ -1751,6 +1753,7 @@ table th[class*="col-"] {
 .wikitable > tbody > tr > td,
 .wikitable > tfoot > tr > td {
   vertical-align: middle;
+  border-color: #ddd;
 }
 @media (max-width: 767px) {
   .table-responsive {

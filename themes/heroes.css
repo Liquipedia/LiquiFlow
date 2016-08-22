@@ -3840,6 +3840,113 @@ fieldset[disabled] #mw-content-text input[type=submit].focus {
   box-shadow: none;
 }
 /* taken from bootstrap */
+#mw-content-text input[type=button] {
+  color: #6B2D93;
+  background-color: #EADCF5;
+  border-color: #d2b4ea;
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: normal;
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  padding: 6px 12px;
+  font-size: 11pt;
+  line-height: 1.42857143;
+  border-radius: 0px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+#mw-content-text input[type=button]:focus,
+#mw-content-text input[type=button].focus {
+  color: #6B2D93;
+  background-color: #d2b4ea;
+  border-color: #9751cd;
+}
+#mw-content-text input[type=button]:hover {
+  color: #6B2D93;
+  background-color: #d2b4ea;
+  border-color: #b685dc;
+}
+#mw-content-text input[type=button]:active,
+#mw-content-text input[type=button].active,
+.open > .dropdown-toggle#mw-content-text input[type=button] {
+  color: #6B2D93;
+  background-color: #d2b4ea;
+  border-color: #b685dc;
+}
+#mw-content-text input[type=button]:active:hover,
+#mw-content-text input[type=button].active:hover,
+.open > .dropdown-toggle#mw-content-text input[type=button]:hover,
+#mw-content-text input[type=button]:active:focus,
+#mw-content-text input[type=button].active:focus,
+.open > .dropdown-toggle#mw-content-text input[type=button]:focus,
+#mw-content-text input[type=button]:active.focus,
+#mw-content-text input[type=button].active.focus,
+.open > .dropdown-toggle#mw-content-text input[type=button].focus {
+  color: #6B2D93;
+  background-color: #c299e2;
+  border-color: #9751cd;
+}
+#mw-content-text input[type=button]:active,
+#mw-content-text input[type=button].active,
+.open > .dropdown-toggle#mw-content-text input[type=button] {
+  background-image: none;
+}
+#mw-content-text input[type=button].disabled:hover,
+#mw-content-text input[type=button][disabled]:hover,
+fieldset[disabled] #mw-content-text input[type=button]:hover,
+#mw-content-text input[type=button].disabled:focus,
+#mw-content-text input[type=button][disabled]:focus,
+fieldset[disabled] #mw-content-text input[type=button]:focus,
+#mw-content-text input[type=button].disabled.focus,
+#mw-content-text input[type=button][disabled].focus,
+fieldset[disabled] #mw-content-text input[type=button].focus {
+  background-color: #EADCF5;
+  border-color: #d2b4ea;
+}
+#mw-content-text input[type=button] .badge {
+  color: #EADCF5;
+  background-color: #6B2D93;
+}
+#mw-content-text input[type=button]:focus,
+#mw-content-text input[type=button]:active:focus,
+#mw-content-text input[type=button].active:focus,
+#mw-content-text input[type=button].focus,
+#mw-content-text input[type=button]:active.focus,
+#mw-content-text input[type=button].active.focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+#mw-content-text input[type=button]:hover,
+#mw-content-text input[type=button]:focus,
+#mw-content-text input[type=button].focus {
+  color: #333;
+  text-decoration: none;
+}
+#mw-content-text input[type=button]:active,
+#mw-content-text input[type=button].active {
+  outline: 0;
+  background-image: none;
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+#mw-content-text input[type=button].disabled,
+#mw-content-text input[type=button][disabled] {
+  cursor: not-allowed;
+  opacity: 0.65;
+  filter: alpha(opacity=65);
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+/* taken from bootstrap */
 #prefcontrol {
   color: #6B2D93;
   background-color: #EADCF5;

@@ -67,7 +67,9 @@ $(document).ready(function() {
 					cm.setOption("fullScreen", !cm.getOption("fullScreen"));
 				},
 				"Esc": function(cm) {
-					if (cm.getOption("fullScreen")) cm.setOption("fullScreen", false);
+					if (cm.getOption("fullScreen")) {
+						cm.setOption("fullScreen", false);
+					}
 				}
 			},
 			readOnly: document.getElementById(codemirror_id).readOnly

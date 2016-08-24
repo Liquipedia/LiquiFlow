@@ -12065,6 +12065,10 @@ div.wikitext-quote {
   background: #f0f0f0;
   overflow: auto;
 }
+/* quotes should not overflow infoboxes or other floating stuff */
+blockquote.quote {
+  overflow: hidden;
+}
 /* spinning pending changes logo */
 .fa-circle-o-notch {
   animation-duration: 7s;
@@ -12113,10 +12117,6 @@ div.wikitext-quote {
   border: 1px solid #dddddd !important;
   background-color: transparent !important;
   margin-right: 0;
-}
-/* quotes should not overflow infoboxes or other floating stuff */
-blockquote.quote {
-  overflow: hidden;
 }
 .mw-special-Version #mw-content-text > h2 {
   width: 100%;
@@ -12175,8 +12175,10 @@ body#top.ns--1.mw-special-Ask #mw-content-text table {
   word-break: break-all;
 }
 /* hide overflow on everything but special pages */
-body:not(.ns-special) #main-content-column {
-  overflow: auto;
+@media (max-width: 991px) {
+  body:not(.ns-special) #main-content-column {
+    overflow: auto;
+  }
 }
 /* hide stuff on logged in/out status */
 body.logged-in .hide-logged-in,

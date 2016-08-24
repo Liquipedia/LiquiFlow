@@ -2917,7 +2917,7 @@ tbody.collapse.in {
 /* Add a pointer cursor for share menu points which don't have an href but onclick js-event */
 .dropdown-menu > li > a:hover,
 .dropdown-menu > li > a:focus {
-  cursor: Pointer;
+  cursor: pointer;
 }
 .btn-group,
 .btn-group-vertical {
@@ -3179,7 +3179,7 @@ fieldset[disabled] #mw-content-text button.focus {
 #mw-content-text button:hover,
 #mw-content-text button:focus,
 #mw-content-text button.focus {
-  color: #333;
+  color: #333333;
   text-decoration: none;
 }
 #mw-content-text button:active,
@@ -3286,7 +3286,7 @@ fieldset[disabled] #mw-content-text input[type=submit].focus {
 #mw-content-text input[type=submit]:hover,
 #mw-content-text input[type=submit]:focus,
 #mw-content-text input[type=submit].focus {
-  color: #333;
+  color: #333333;
   text-decoration: none;
 }
 #mw-content-text input[type=submit]:active,
@@ -3393,7 +3393,7 @@ fieldset[disabled] #mw-content-text input[type=button].focus {
 #mw-content-text input[type=button]:hover,
 #mw-content-text input[type=button]:focus,
 #mw-content-text input[type=button].focus {
-  color: #333;
+  color: #333333;
   text-decoration: none;
 }
 #mw-content-text input[type=button]:active,
@@ -5322,7 +5322,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 }
 /* Red link (in particular for not existing talk pages */
 .navbar-nav > li.new > a {
-  color: #A05555;
+  color: #a05555;
 }
 .navbar-form {
   padding-right: 0;
@@ -7449,7 +7449,7 @@ button.close {
   margin-right: -10px;
 }
 .dropdown-submenu:hover > a:after {
-  border-left-color: #fff;
+  border-left-color: #ffffff;
 }
 .dropdown-submenu.pull-left {
   float: none;
@@ -7531,9 +7531,9 @@ html {
   /* required for webkit browsers */
 }
 hr {
-  background-color: #ddd;
+  background-color: #dddddd;
   border: 0 none;
-  color: #aaa;
+  color: #aaaaaa;
   height: 1px;
   margin: 0.2em 0;
 }
@@ -7544,7 +7544,7 @@ h4,
 h5,
 h6 {
   background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #dddddd;
   margin-top: 0.33em;
   margin-bottom: 0.33em;
 }
@@ -7615,7 +7615,7 @@ h2 {
 #sidebar-ad {
   width: 300px;
   height: 250px;
-  background-color: #444;
+  background-color: #444444;
   color: #ffa800;
   display: block;
   text-align: center;
@@ -7693,7 +7693,7 @@ a#back-to-top:hover {
 }
 /* uncommenting this toggles the toc going smaller
 #sidebar-toc .nav .nav {
-	display: none;
+	display:none;
 }
 */
 #sidebar-toc .nav > .active > ul {
@@ -7909,8 +7909,8 @@ a.github-icon {
   display: inline-block;
 }
 #preftoc li.selected a {
-  background-color: white;
-  border: 1px solid #ccc;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
   border-bottom: none;
   color: inherit;
   cursor: default;
@@ -7929,13 +7929,13 @@ a.github-icon {
 #preferences .mw-label label {
   white-space: nowrap;
   margin: 0;
-  color: #777;
+  color: #777777;
 }
 #preferences td {
   padding: 5px;
 }
 #preferences .htmlform-tip {
-  color: #999;
+  color: #999999;
   padding: 1em 0 3em 12em;
 }
 #preferences div.mw-prefs-buttons {
@@ -8089,7 +8089,7 @@ label[for=wpRemember] {
 }
 /*
 ul#pagehistory > .mw-history-histlinks {
-	margin-right: 5px;
+	margin-right:5px;
 }
 */
 ul#pagehistory input {
@@ -8494,7 +8494,7 @@ p {
 body.slide-active {
   overflow-x: hidden;
 }
-/* put toggle bars on the left :: not using button */
+/* put toggle bars on the left ::not using button */
 #slide-nav .navbar-toggle {
   cursor: pointer;
   position: relative;
@@ -8799,7 +8799,7 @@ ul.mw-gallery-packed-hover li.gallerybox.mw-gallery-focused div.gallerytextwrapp
   opacity: .8;
   filter: alpha(opacity=80);
   zoom: 1;
-  background-color: white;
+  background-color: #ffffff;
   padding: 5px 10px;
   bottom: 0;
   left: 0;
@@ -8962,7 +8962,7 @@ body.logged-out .hide-logged-out {
   display: none;
 }
 /* Underlining for abbreviations */
-@supports (text-decoration: underline dotted) {
+@supports (text-decoration:underline dotted) {
   abbr[title],
   .explain[title] {
     border-bottom: none;

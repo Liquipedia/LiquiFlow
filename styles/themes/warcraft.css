@@ -3520,6 +3520,516 @@ textarea#mw-content-text select {
   height: initial;
 }
 /* taken from bootstrap */
+#mw-content-text input[type=date] {
+  vertical-align: middle;
+  height: 26pt;
+  padding: 6px 12px;
+  font-size: 11pt;
+  line-height: 1.42857143;
+  color: #555555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 0px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+#mw-content-text input[type=date]:focus {
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+#mw-content-text input[type=date]::-moz-placeholder {
+  color: #999;
+  opacity: 1;
+}
+#mw-content-text input[type=date]:-ms-input-placeholder {
+  color: #999;
+}
+#mw-content-text input[type=date]::-webkit-input-placeholder {
+  color: #999;
+}
+#mw-content-text input[type=date]::-ms-expand {
+  border: 0;
+  background-color: transparent;
+}
+#mw-content-text input[type=date][disabled],
+#mw-content-text input[type=date][readonly],
+fieldset[disabled] #mw-content-text input[type=date] {
+  background-color: #eeeeee;
+  opacity: 1;
+}
+#mw-content-text input[type=date][disabled],
+fieldset[disabled] #mw-content-text input[type=date] {
+  cursor: not-allowed;
+}
+textarea#mw-content-text input[type=date] {
+  height: auto;
+}
+/* taken from bootstrap */
+#mw-content-text input[type=datetime] {
+  vertical-align: middle;
+  height: 26pt;
+  padding: 6px 12px;
+  font-size: 11pt;
+  line-height: 1.42857143;
+  color: #555555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 0px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+#mw-content-text input[type=datetime]:focus {
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+#mw-content-text input[type=datetime]::-moz-placeholder {
+  color: #999;
+  opacity: 1;
+}
+#mw-content-text input[type=datetime]:-ms-input-placeholder {
+  color: #999;
+}
+#mw-content-text input[type=datetime]::-webkit-input-placeholder {
+  color: #999;
+}
+#mw-content-text input[type=datetime]::-ms-expand {
+  border: 0;
+  background-color: transparent;
+}
+#mw-content-text input[type=datetime][disabled],
+#mw-content-text input[type=datetime][readonly],
+fieldset[disabled] #mw-content-text input[type=datetime] {
+  background-color: #eeeeee;
+  opacity: 1;
+}
+#mw-content-text input[type=datetime][disabled],
+fieldset[disabled] #mw-content-text input[type=datetime] {
+  cursor: not-allowed;
+}
+textarea#mw-content-text input[type=datetime] {
+  height: auto;
+}
+/* taken from bootstrap */
+#mw-content-text input[type=datetime-local] {
+  vertical-align: middle;
+  height: 26pt;
+  padding: 6px 12px;
+  font-size: 11pt;
+  line-height: 1.42857143;
+  color: #555555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 0px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+#mw-content-text input[type=datetime-local]:focus {
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+#mw-content-text input[type=datetime-local]::-moz-placeholder {
+  color: #999;
+  opacity: 1;
+}
+#mw-content-text input[type=datetime-local]:-ms-input-placeholder {
+  color: #999;
+}
+#mw-content-text input[type=datetime-local]::-webkit-input-placeholder {
+  color: #999;
+}
+#mw-content-text input[type=datetime-local]::-ms-expand {
+  border: 0;
+  background-color: transparent;
+}
+#mw-content-text input[type=datetime-local][disabled],
+#mw-content-text input[type=datetime-local][readonly],
+fieldset[disabled] #mw-content-text input[type=datetime-local] {
+  background-color: #eeeeee;
+  opacity: 1;
+}
+#mw-content-text input[type=datetime-local][disabled],
+fieldset[disabled] #mw-content-text input[type=datetime-local] {
+  cursor: not-allowed;
+}
+textarea#mw-content-text input[type=datetime-local] {
+  height: auto;
+}
+/* taken from bootstrap */
+#mw-content-text input[type=email] {
+  vertical-align: middle;
+  height: 26pt;
+  padding: 6px 12px;
+  font-size: 11pt;
+  line-height: 1.42857143;
+  color: #555555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 0px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+#mw-content-text input[type=email]:focus {
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+#mw-content-text input[type=email]::-moz-placeholder {
+  color: #999;
+  opacity: 1;
+}
+#mw-content-text input[type=email]:-ms-input-placeholder {
+  color: #999;
+}
+#mw-content-text input[type=email]::-webkit-input-placeholder {
+  color: #999;
+}
+#mw-content-text input[type=email]::-ms-expand {
+  border: 0;
+  background-color: transparent;
+}
+#mw-content-text input[type=email][disabled],
+#mw-content-text input[type=email][readonly],
+fieldset[disabled] #mw-content-text input[type=email] {
+  background-color: #eeeeee;
+  opacity: 1;
+}
+#mw-content-text input[type=email][disabled],
+fieldset[disabled] #mw-content-text input[type=email] {
+  cursor: not-allowed;
+}
+textarea#mw-content-text input[type=email] {
+  height: auto;
+}
+/* taken from bootstrap */
+#mw-content-text input[type=month] {
+  vertical-align: middle;
+  height: 26pt;
+  padding: 6px 12px;
+  font-size: 11pt;
+  line-height: 1.42857143;
+  color: #555555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 0px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+#mw-content-text input[type=month]:focus {
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+#mw-content-text input[type=month]::-moz-placeholder {
+  color: #999;
+  opacity: 1;
+}
+#mw-content-text input[type=month]:-ms-input-placeholder {
+  color: #999;
+}
+#mw-content-text input[type=month]::-webkit-input-placeholder {
+  color: #999;
+}
+#mw-content-text input[type=month]::-ms-expand {
+  border: 0;
+  background-color: transparent;
+}
+#mw-content-text input[type=month][disabled],
+#mw-content-text input[type=month][readonly],
+fieldset[disabled] #mw-content-text input[type=month] {
+  background-color: #eeeeee;
+  opacity: 1;
+}
+#mw-content-text input[type=month][disabled],
+fieldset[disabled] #mw-content-text input[type=month] {
+  cursor: not-allowed;
+}
+textarea#mw-content-text input[type=month] {
+  height: auto;
+}
+/* taken from bootstrap */
+#mw-content-text input[type=number] {
+  vertical-align: middle;
+  height: 26pt;
+  padding: 6px 12px;
+  font-size: 11pt;
+  line-height: 1.42857143;
+  color: #555555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 0px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+#mw-content-text input[type=number]:focus {
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+#mw-content-text input[type=number]::-moz-placeholder {
+  color: #999;
+  opacity: 1;
+}
+#mw-content-text input[type=number]:-ms-input-placeholder {
+  color: #999;
+}
+#mw-content-text input[type=number]::-webkit-input-placeholder {
+  color: #999;
+}
+#mw-content-text input[type=number]::-ms-expand {
+  border: 0;
+  background-color: transparent;
+}
+#mw-content-text input[type=number][disabled],
+#mw-content-text input[type=number][readonly],
+fieldset[disabled] #mw-content-text input[type=number] {
+  background-color: #eeeeee;
+  opacity: 1;
+}
+#mw-content-text input[type=number][disabled],
+fieldset[disabled] #mw-content-text input[type=number] {
+  cursor: not-allowed;
+}
+textarea#mw-content-text input[type=number] {
+  height: auto;
+}
+/* taken from bootstrap */
+#mw-content-text input[type=password] {
+  vertical-align: middle;
+  height: 26pt;
+  padding: 6px 12px;
+  font-size: 11pt;
+  line-height: 1.42857143;
+  color: #555555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 0px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+#mw-content-text input[type=password]:focus {
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+#mw-content-text input[type=password]::-moz-placeholder {
+  color: #999;
+  opacity: 1;
+}
+#mw-content-text input[type=password]:-ms-input-placeholder {
+  color: #999;
+}
+#mw-content-text input[type=password]::-webkit-input-placeholder {
+  color: #999;
+}
+#mw-content-text input[type=password]::-ms-expand {
+  border: 0;
+  background-color: transparent;
+}
+#mw-content-text input[type=password][disabled],
+#mw-content-text input[type=password][readonly],
+fieldset[disabled] #mw-content-text input[type=password] {
+  background-color: #eeeeee;
+  opacity: 1;
+}
+#mw-content-text input[type=password][disabled],
+fieldset[disabled] #mw-content-text input[type=password] {
+  cursor: not-allowed;
+}
+textarea#mw-content-text input[type=password] {
+  height: auto;
+}
+/* taken from bootstrap */
+#mw-content-text input[type=range] {
+  vertical-align: middle;
+  height: 26pt;
+  padding: 6px 12px;
+  font-size: 11pt;
+  line-height: 1.42857143;
+  color: #555555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 0px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+#mw-content-text input[type=range]:focus {
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+#mw-content-text input[type=range]::-moz-placeholder {
+  color: #999;
+  opacity: 1;
+}
+#mw-content-text input[type=range]:-ms-input-placeholder {
+  color: #999;
+}
+#mw-content-text input[type=range]::-webkit-input-placeholder {
+  color: #999;
+}
+#mw-content-text input[type=range]::-ms-expand {
+  border: 0;
+  background-color: transparent;
+}
+#mw-content-text input[type=range][disabled],
+#mw-content-text input[type=range][readonly],
+fieldset[disabled] #mw-content-text input[type=range] {
+  background-color: #eeeeee;
+  opacity: 1;
+}
+#mw-content-text input[type=range][disabled],
+fieldset[disabled] #mw-content-text input[type=range] {
+  cursor: not-allowed;
+}
+textarea#mw-content-text input[type=range] {
+  height: auto;
+}
+/* taken from bootstrap */
+#mw-content-text input[type=search] {
+  vertical-align: middle;
+  height: 26pt;
+  padding: 6px 12px;
+  font-size: 11pt;
+  line-height: 1.42857143;
+  color: #555555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 0px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+#mw-content-text input[type=search]:focus {
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+#mw-content-text input[type=search]::-moz-placeholder {
+  color: #999;
+  opacity: 1;
+}
+#mw-content-text input[type=search]:-ms-input-placeholder {
+  color: #999;
+}
+#mw-content-text input[type=search]::-webkit-input-placeholder {
+  color: #999;
+}
+#mw-content-text input[type=search]::-ms-expand {
+  border: 0;
+  background-color: transparent;
+}
+#mw-content-text input[type=search][disabled],
+#mw-content-text input[type=search][readonly],
+fieldset[disabled] #mw-content-text input[type=search] {
+  background-color: #eeeeee;
+  opacity: 1;
+}
+#mw-content-text input[type=search][disabled],
+fieldset[disabled] #mw-content-text input[type=search] {
+  cursor: not-allowed;
+}
+textarea#mw-content-text input[type=search] {
+  height: auto;
+}
+/* taken from bootstrap */
+#mw-content-text input[type=tel] {
+  vertical-align: middle;
+  height: 26pt;
+  padding: 6px 12px;
+  font-size: 11pt;
+  line-height: 1.42857143;
+  color: #555555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 0px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+#mw-content-text input[type=tel]:focus {
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+#mw-content-text input[type=tel]::-moz-placeholder {
+  color: #999;
+  opacity: 1;
+}
+#mw-content-text input[type=tel]:-ms-input-placeholder {
+  color: #999;
+}
+#mw-content-text input[type=tel]::-webkit-input-placeholder {
+  color: #999;
+}
+#mw-content-text input[type=tel]::-ms-expand {
+  border: 0;
+  background-color: transparent;
+}
+#mw-content-text input[type=tel][disabled],
+#mw-content-text input[type=tel][readonly],
+fieldset[disabled] #mw-content-text input[type=tel] {
+  background-color: #eeeeee;
+  opacity: 1;
+}
+#mw-content-text input[type=tel][disabled],
+fieldset[disabled] #mw-content-text input[type=tel] {
+  cursor: not-allowed;
+}
+textarea#mw-content-text input[type=tel] {
+  height: auto;
+}
+/* taken from bootstrap */
 #mw-content-text input[type=text] {
   vertical-align: middle;
   height: 26pt;
@@ -3568,6 +4078,159 @@ fieldset[disabled] #mw-content-text input[type=text] {
   cursor: not-allowed;
 }
 textarea#mw-content-text input[type=text] {
+  height: auto;
+}
+/* taken from bootstrap */
+#mw-content-text input[type=time] {
+  vertical-align: middle;
+  height: 26pt;
+  padding: 6px 12px;
+  font-size: 11pt;
+  line-height: 1.42857143;
+  color: #555555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 0px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+#mw-content-text input[type=time]:focus {
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+#mw-content-text input[type=time]::-moz-placeholder {
+  color: #999;
+  opacity: 1;
+}
+#mw-content-text input[type=time]:-ms-input-placeholder {
+  color: #999;
+}
+#mw-content-text input[type=time]::-webkit-input-placeholder {
+  color: #999;
+}
+#mw-content-text input[type=time]::-ms-expand {
+  border: 0;
+  background-color: transparent;
+}
+#mw-content-text input[type=time][disabled],
+#mw-content-text input[type=time][readonly],
+fieldset[disabled] #mw-content-text input[type=time] {
+  background-color: #eeeeee;
+  opacity: 1;
+}
+#mw-content-text input[type=time][disabled],
+fieldset[disabled] #mw-content-text input[type=time] {
+  cursor: not-allowed;
+}
+textarea#mw-content-text input[type=time] {
+  height: auto;
+}
+/* taken from bootstrap */
+#mw-content-text input[type=url] {
+  vertical-align: middle;
+  height: 26pt;
+  padding: 6px 12px;
+  font-size: 11pt;
+  line-height: 1.42857143;
+  color: #555555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 0px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+#mw-content-text input[type=url]:focus {
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+#mw-content-text input[type=url]::-moz-placeholder {
+  color: #999;
+  opacity: 1;
+}
+#mw-content-text input[type=url]:-ms-input-placeholder {
+  color: #999;
+}
+#mw-content-text input[type=url]::-webkit-input-placeholder {
+  color: #999;
+}
+#mw-content-text input[type=url]::-ms-expand {
+  border: 0;
+  background-color: transparent;
+}
+#mw-content-text input[type=url][disabled],
+#mw-content-text input[type=url][readonly],
+fieldset[disabled] #mw-content-text input[type=url] {
+  background-color: #eeeeee;
+  opacity: 1;
+}
+#mw-content-text input[type=url][disabled],
+fieldset[disabled] #mw-content-text input[type=url] {
+  cursor: not-allowed;
+}
+textarea#mw-content-text input[type=url] {
+  height: auto;
+}
+/* taken from bootstrap */
+#mw-content-text input[type=week] {
+  vertical-align: middle;
+  height: 26pt;
+  padding: 6px 12px;
+  font-size: 11pt;
+  line-height: 1.42857143;
+  color: #555555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 0px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+#mw-content-text input[type=week]:focus {
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+#mw-content-text input[type=week]::-moz-placeholder {
+  color: #999;
+  opacity: 1;
+}
+#mw-content-text input[type=week]:-ms-input-placeholder {
+  color: #999;
+}
+#mw-content-text input[type=week]::-webkit-input-placeholder {
+  color: #999;
+}
+#mw-content-text input[type=week]::-ms-expand {
+  border: 0;
+  background-color: transparent;
+}
+#mw-content-text input[type=week][disabled],
+#mw-content-text input[type=week][readonly],
+fieldset[disabled] #mw-content-text input[type=week] {
+  background-color: #eeeeee;
+  opacity: 1;
+}
+#mw-content-text input[type=week][disabled],
+fieldset[disabled] #mw-content-text input[type=week] {
+  cursor: not-allowed;
+}
+textarea#mw-content-text input[type=week] {
   height: auto;
 }
 /* taken from bootstrap */
@@ -3620,6 +4283,25 @@ fieldset[disabled] #mw-content-text input:not([type]) {
 }
 textarea#mw-content-text input:not([type]) {
   height: auto;
+}
+#mw-content-text textarea,
+#mw-content-text select,
+#mw-content-text input[type=date],
+#mw-content-text input[type=datetime],
+#mw-content-text input[type=datetime-local],
+#mw-content-text input[type=email],
+#mw-content-text input[type=month],
+#mw-content-text input[type=number],
+#mw-content-text input[type=password],
+#mw-content-text input[type=range],
+#mw-content-text input[type=search],
+#mw-content-text input[type=tel],
+#mw-content-text input[type=text],
+#mw-content-text input[type=time],
+#mw-content-text input[type=url],
+#mw-content-text input[type=week],
+#mw-content-text input:not([type]) {
+  max-width: 100%;
 }
 .input-group {
   position: relative;

@@ -32,7 +32,7 @@ if (!String.prototype.includes) {
 }
 
 $(document).ready(function() {
-	function invoke_codemirror(codemirror_id) {
+	function invoke_codemirror(textarea_id) {
 		var editmode;
 		var indentmode;
 		var locationStr = window.location.href;
@@ -49,7 +49,7 @@ $(document).ready(function() {
 			editmode = 'text/mediawiki';
 			indentmode = false;
 		}
-		var editor = CodeMirror.fromTextArea(document.getElementById(codemirror_id), {
+		var editor = CodeMirror.fromTextArea(document.getElementById(textarea_id), {
 			mwextFunctionSynonyms: mw.config.get( 'liquiflowCodemirrorFunctionSynonyms' ),
 			mwextTags: mw.config.get( 'liquiflowCodemirrorTags' ),
 			mwextDoubleUnderscore: mw.config.get( 'liquiflowCodemirrorDoubleUnderscore' ),
@@ -72,12 +72,23 @@ $(document).ready(function() {
 					}
 				}
 			},
-			readOnly: document.getElementById(codemirror_id).readOnly
+			readOnly: document.getElementById(textarea_id).readOnly
 		});
-		$(codemirror_id).change(function() {
-			editor.setCode($(this).val());
+
+		editor.on('change', function(cm, change) {
+			cm.getTextArea().value = cm.getValue();
 		});
-		
+
+		if(textarea_id == 'wpTextbox1') {
+			window.codemirror = editor;
+		} else if(textarea_id == 'wpTextbox2') {
+			window.codemirror2 = editor;
+		}
+
+		$('#' + textarea_id).change(function() {
+			editor.setValue($(this).val());
+		});
+
 		function openPageOnClick(cssClass, element) {
 			var pagename = element.text();
 			var index = element.index();

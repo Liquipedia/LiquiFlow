@@ -7835,7 +7835,7 @@ ul#f-list li {
   margin: 0 1.3em;
 }
 #footer-logo-big {
-  background-image: url('../images/lp_logo_big.png');
+  background-image: url('../../images/lp_logo_big.png');
   background-repeat: no-repeat;
   background-size: 150px;
   display: block;
@@ -7867,19 +7867,19 @@ a.social-icon > span.social-link {
   padding-left: 36px;
 }
 a.facebook-icon {
-  background-image: url(../images/lp-icons/InfoboxIcon_Facebook.png);
+  background-image: url(../../images/lp-icons/InfoboxIcon_Facebook.png);
 }
 a.twitch-icon {
-  background-image: url(../images/lp-icons/InfoboxIcon_Twitch.png);
+  background-image: url(../../images/lp-icons/InfoboxIcon_Twitch.png);
 }
 a.twitter-icon {
-  background-image: url(../images/lp-icons/InfoboxIcon_Twitter.png);
+  background-image: url(../../images/lp-icons/InfoboxIcon_Twitter.png);
 }
 a.youtube-icon {
-  background-image: url(../images/lp-icons/InfoboxIcon_YouTube.png);
+  background-image: url(../../images/lp-icons/InfoboxIcon_YouTube.png);
 }
 a.github-icon {
-  background-image: url(../images/lp-icons/InfoboxIcon_GitHub.png);
+  background-image: url(../../images/lp-icons/InfoboxIcon_GitHub.png);
 }
 @media (max-width: 767px) {
   span.social-link {
@@ -8212,7 +8212,7 @@ p {
   vertical-align: middle;
   width: 32px;
   height: 32px;
-  background-image: url(../images/lp-icons/InfoboxIcon_Alert.png);
+  background-image: url(../../images/lp-icons/InfoboxIcon_Alert.png);
   background-size: 32px 64px;
   background-position: 0 -32px;
 }
@@ -8256,166 +8256,166 @@ p {
   background-position: 0 0;
 }
 .lp-icon.lp-abios {
-  background-image: url(../images/lp-icons/InfoboxIcon_Abios.png);
+  background-image: url(../../images/lp-icons/InfoboxIcon_Abios.png);
 }
 .lp-icon.lp-afreeca {
-  background-image: url(../images/lp-icons/InfoboxIcon_Afreeca.png);
+  background-image: url(../../images/lp-icons/InfoboxIcon_Afreeca.png);
 }
 .lp-icon.lp-aligulac {
-  background-image: url(../images/lp-icons/InfoboxIcon_Aligulac.png);
+  background-image: url(../../images/lp-icons/InfoboxIcon_Aligulac.png);
 }
 .lp-icon.lp-ask-fm {
-  background-image: url(../images/lp-icons/InfoboxIcon_AskFM.png);
+  background-image: url(../../images/lp-icons/InfoboxIcon_AskFM.png);
 }
 .lp-icon.lp-azubu {
-  background-image: url(../images/lp-icons/InfoboxIcon_Azubu.png);
+  background-image: url(../../images/lp-icons/InfoboxIcon_Azubu.png);
 }
 .lp-icon.lp-binary-beast {
-  background-image: url(../images/lp-icons/InfoboxIcon_BinaryBeast.png);
+  background-image: url(../../images/lp-icons/InfoboxIcon_BinaryBeast.png);
 }
 .lp-icon.lp-bracket {
-  background-image: url(../images/lp-icons/InfoboxIcon_Bracket.png);
+  background-image: url(../../images/lp-icons/InfoboxIcon_Bracket.png);
 }
 .lp-icon.lp-cafe-daum {
-  background-image: url(../images/lp-icons/InfoboxIcon_Daum.png);
+  background-image: url(../../images/lp-icons/InfoboxIcon_Daum.png);
 }
 .lp-icon.lp-challonge {
-  background-image: url(../images/lp-icons/InfoboxIcon_Challonge.png);
+  background-image: url(../../images/lp-icons/InfoboxIcon_Challonge.png);
 }
 .lp-icon.lp-datdota {
-  background-image: url(../images/lp-icons/InfoboxIcon_Datdota.png);
+  background-image: url(../../images/lp-icons/InfoboxIcon_Datdota.png);
 }
 .lp-icon.lp-dotabuff {
-  background-image: url(../images/lp-icons/InfoboxIcon_Dotabuff.png);
+  background-image: url(../../images/lp-icons/InfoboxIcon_Dotabuff.png);
 }
 .lp-icon.lp-douyutv {
-  background-image: url(../images/lp-icons/InfoboxIcon_DouyuTV.png);
+  background-image: url(../../images/lp-icons/InfoboxIcon_DouyuTV.png);
 }
 .lp-icon.lp-email {
-  background-image: url(../images/lp-icons/InfoboxIcon_Email.png);
+  background-image: url(../../images/lp-icons/InfoboxIcon_Email.png);
 }
 .lp-icon.lp-esea {
-  background-image: url(../images/lp-icons/InfoboxIcon_ESEA.png);
+  background-image: url(../../images/lp-icons/InfoboxIcon_ESEA.png);
 }
 .lp-icon.lp-esl {
-  background-image: url(../images/lp-icons/InfoboxIcon_ESL.png);
+  background-image: url(../../images/lp-icons/InfoboxIcon_ESL.png);
 }
 .lp-icon.lp-facebook {
-  background-image: url(../images/lp-icons/InfoboxIcon_Facebook.png);
+  background-image: url(../../images/lp-icons/InfoboxIcon_Facebook.png);
 }
 .lp-icon.lp-faceit {
-  background-image: url(../images/lp-icons/InfoboxIcon_FACEIT.png);
+  background-image: url(../../images/lp-icons/InfoboxIcon_FACEIT.png);
 }
 .lp-icon.lp-fanclub {
-  background-image: url(../images/lp-icons/InfoboxIcon_TLFanPage.png);
+  background-image: url(../../images/lp-icons/InfoboxIcon_TLFanPage.png);
 }
 .lp-icon.lp-github {
-  background-image: url(../images/lp-icons/InfoboxIcon_GitHub.png);
+  background-image: url(../../images/lp-icons/InfoboxIcon_GitHub.png);
 }
 .lp-icon.lp-google-plus {
-  background-image: url(../images/lp-icons/InfoboxIcon_Google+.png);
+  background-image: url(../../images/lp-icons/InfoboxIcon_Google+.png);
 }
 .lp-icon.lp-gosugamers {
-  background-image: url(../images/lp-icons/InfoboxIcon_GosuGamers.png);
+  background-image: url(../../images/lp-icons/InfoboxIcon_GosuGamers.png);
 }
 .lp-icon.lp-hitbox {
-  background-image: url(../images/lp-icons/InfoboxIcon_HitboxTV.png);
+  background-image: url(../../images/lp-icons/InfoboxIcon_HitboxTV.png);
 }
 .lp-icon.lp-home {
-  background-image: url(../images/lp-icons/InfoboxIcon_Website.png);
+  background-image: url(../../images/lp-icons/InfoboxIcon_Website.png);
 }
 .lp-icon.lp-iccup {
-  background-image: url(../images/lp-icons/InfoboxIcon_ICCUP.png);
+  background-image: url(../../images/lp-icons/InfoboxIcon_ICCUP.png);
 }
 .lp-icon.lp-instagram {
-  background-image: url(../images/lp-icons/InfoboxIcon_Instagram.png);
+  background-image: url(../../images/lp-icons/InfoboxIcon_Instagram.png);
 }
 .lp-icon.lp-masteroverwatch {
-  background-image: url(../images/lp-icons/InfoboxIcon_MasterOverwatch.png);
+  background-image: url(../../images/lp-icons/InfoboxIcon_MasterOverwatch.png);
 }
 .lp-icon.lp-music {
-  background-image: url(../images/lp-icons/InfoboxIcon_Music.png);
+  background-image: url(../../images/lp-icons/InfoboxIcon_Music.png);
 }
 .lp-icon.lp-pandatv {
-  background-image: url(../images/lp-icons/InfoboxIcon_PandaTV.png);
+  background-image: url(../../images/lp-icons/InfoboxIcon_PandaTV.png);
 }
 .lp-icon.lp-reddit {
-  background-image: url(../images/lp-icons/InfoboxIcon_Reddit.png);
+  background-image: url(../../images/lp-icons/InfoboxIcon_Reddit.png);
 }
 .lp-icon.lp-rules {
-  background-image: url(../images/lp-icons/InfoboxIcon_Rules.png);
+  background-image: url(../../images/lp-icons/InfoboxIcon_Rules.png);
 }
 .lp-icon.lp-skgaming {
-  background-image: url(../images/lp-icons/InfoboxIcon_SK.png);
+  background-image: url(../../images/lp-icons/InfoboxIcon_SK.png);
 }
 .lp-icon.lp-skype {
-  background-image: url(../images/lp-icons/InfoboxIcon_Skype.png);
+  background-image: url(../../images/lp-icons/InfoboxIcon_Skype.png);
 }
 .lp-icon.lp-smashboards {
-  background-image: url(../images/lp-icons/InfoboxIcon_SmashBoards.png);
+  background-image: url(../../images/lp-icons/InfoboxIcon_SmashBoards.png);
 }
 .lp-icon.lp-smash-gg {
-  background-image: url(../images/lp-icons/InfoboxIcon_SmashGG.png);
+  background-image: url(../../images/lp-icons/InfoboxIcon_SmashGG.png);
 }
 .lp-icon.lp-snapchat {
   background-image: url(http://wiki.teamliquid.net/commons/images/f/fc/InfoboxIcon_Snapchat.png);
 }
 .lp-icon.lp-steam {
-  background-image: url(../images/lp-icons/InfoboxIcon_Steam.png);
+  background-image: url(../../images/lp-icons/InfoboxIcon_Steam.png);
 }
 .lp-icon.lp-stream {
-  background-image: url(../images/lp-icons/InfoboxIcon_Stream.png);
+  background-image: url(../../images/lp-icons/InfoboxIcon_Stream.png);
 }
 .lp-icon.lp-tencent {
-  background-image: url(../images/lp-icons/InfoboxIcon_Tencent.png);
+  background-image: url(../../images/lp-icons/InfoboxIcon_Tencent.png);
 }
 .lp-icon.lp-tlpd-hots {
-  background-image: url(../images/lp-icons/InfoboxIcon_TLPDHoTS.png);
+  background-image: url(../../images/lp-icons/InfoboxIcon_TLPDHoTS.png);
 }
 .lp-icon.lp-tlpd {
-  background-image: url(../images/lp-icons/InfoboxIcon_TLPDInt.png);
+  background-image: url(../../images/lp-icons/InfoboxIcon_TLPDInt.png);
 }
 .lp-icon.lp-tlpd-wol {
-  background-image: url(../images/lp-icons/InfoboxIcon_TLPDInt.png);
+  background-image: url(../../images/lp-icons/InfoboxIcon_TLPDInt.png);
 }
 .lp-icon.lp-tlpd-wol-korea {
-  background-image: url(../images/lp-icons/InfoboxIcon_TLPDKor.png);
+  background-image: url(../../images/lp-icons/InfoboxIcon_TLPDKor.png);
 }
 .lp-icon.lp-tlpd-sospa {
-  background-image: url(../images/lp-icons/InfoboxIcon_TLPDSonic.png);
+  background-image: url(../../images/lp-icons/InfoboxIcon_TLPDSonic.png);
 }
 .lp-icon.lp-tlprofile {
-  background-image: url(../images/lp-icons/InfoboxIcon_TLProfile.png);
+  background-image: url(../../images/lp-icons/InfoboxIcon_TLProfile.png);
 }
 .lp-icon.lp-tlstream {
-  background-image: url(../images/lp-icons/InfoboxIcon_TLStream.png);
+  background-image: url(../../images/lp-icons/InfoboxIcon_TLStream.png);
 }
 .lp-icon.lp-toornament {
-  background-image: url(../images/lp-icons/InfoboxIcon_Toornament.png);
+  background-image: url(../../images/lp-icons/InfoboxIcon_Toornament.png);
 }
 .lp-icon.lp-tournament {
-  background-image: url(../images/lp-icons/InfoboxIcon_Trophy.png);
+  background-image: url(../../images/lp-icons/InfoboxIcon_Trophy.png);
 }
 .lp-icon.lp-twitch {
-  background-image: url(../images/lp-icons/InfoboxIcon_Twitch.png);
+  background-image: url(../../images/lp-icons/InfoboxIcon_Twitch.png);
 }
 .lp-icon.lp-twitter {
-  background-image: url(../images/lp-icons/InfoboxIcon_Twitter.png);
+  background-image: url(../../images/lp-icons/InfoboxIcon_Twitter.png);
 }
 .lp-icon.lp-vk {
-  background-image: url(../images/lp-icons/InfoboxIcon_VK.png);
+  background-image: url(../../images/lp-icons/InfoboxIcon_VK.png);
 }
 .lp-icon.lp-vkontakte {
-  background-image: url(../images/lp-icons/InfoboxIcon_VK.png);
+  background-image: url(../../images/lp-icons/InfoboxIcon_VK.png);
 }
 .lp-icon.lp-weibo {
-  background-image: url(../images/lp-icons/InfoboxIcon_Weibo.png);
+  background-image: url(../../images/lp-icons/InfoboxIcon_Weibo.png);
 }
 .lp-icon.lp-youku {
-  background-image: url(../images/lp-icons/InfoboxIcon_Youku.png);
+  background-image: url(../../images/lp-icons/InfoboxIcon_Youku.png);
 }
 .lp-icon.lp-youtube {
-  background-image: url(../images/lp-icons/InfoboxIcon_YouTube.png);
+  background-image: url(../../images/lp-icons/InfoboxIcon_YouTube.png);
 }
 @media (max-width: 767px) {
   .navbar-brand {

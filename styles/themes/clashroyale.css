@@ -8901,7 +8901,8 @@ blockquote.quote {
 .flaggedrevs_quality,
 .flaggedrevs_pristine,
 .flaggedrevs_notice,
-.mw-warning {
+.mw-warning,
+#mw-searchoptions {
   border: 1px solid #dddddd !important;
   background-color: transparent !important;
   margin-left: 0;

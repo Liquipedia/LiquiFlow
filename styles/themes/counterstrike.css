@@ -8892,9 +8892,11 @@ blockquote.quote {
 .flaggedrevs_basic,
 .flaggedrevs_quality,
 .flaggedrevs_pristine,
-.flaggedrevs_notice {
+.flaggedrevs_notice,
+.mw-warning {
   border: 1px solid #dddddd !important;
   background-color: transparent !important;
+  margin-left: 0;
   margin-right: 0;
 }
 .mw-special-Version #mw-content-text > h2 {

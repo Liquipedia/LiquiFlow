@@ -100,7 +100,7 @@
 		},
 		"skins.liquiflow.theme.clashroyale": {
 			"styles": [
-				"themes/clashroyale.css"
+				"css/themes/clashroyale.css"
 			],
 			"position": "top",
 			"dependencies": [
@@ -109,7 +109,7 @@
 		},
 		"skins.liquiflow.theme.commons": {
 			"styles": [
-				"themes/commons.css"
+				"css/themes/commons.css"
 			],
 			"position": "top",
 			"dependencies": [
@@ -118,7 +118,7 @@
 		},
 		"skins.liquiflow.theme.counterstrike": {
 			"styles": [
-				"themes/counterstrike.css"
+				"css/themes/counterstrike.css"
 			],
 			"position": "top",
 			"dependencies": [
@@ -127,7 +127,7 @@
 		},
 		"skins.liquiflow.theme.dota2": {
 			"styles": [
-				"themes/dota2.css"
+				"css/themes/dota2.css"
 			],
 			"position": "top",
 			"dependencies": [
@@ -136,7 +136,7 @@
 		},
 		"skins.liquiflow.theme.fighters": {
 			"styles": [
-				"themes/fighters.css"
+				"css/themes/fighters.css"
 			],
 			"position": "top",
 			"dependencies": [
@@ -145,7 +145,7 @@
 		},
 		"skins.liquiflow.theme.hearthstone": {
 			"styles": [
-				"themes/hearthstone.css"
+				"css/themes/hearthstone.css"
 			],
 			"position": "top",
 			"dependencies": [
@@ -154,7 +154,7 @@
 		},
 		"skins.liquiflow.theme.heroes": {
 			"styles": [
-				"themes/heroes.css"
+				"css/themes/heroes.css"
 			],
 			"position": "top",
 			"dependencies": [
@@ -163,7 +163,7 @@
 		},
 		"skins.liquiflow.theme.overwatch": {
 			"styles": [
-				"themes/overwatch.css"
+				"css/themes/overwatch.css"
 			],
 			"position": "top",
 			"dependencies": [
@@ -172,7 +172,7 @@
 		},
 		"skins.liquiflow.theme.rocketleague": {
 			"styles": [
-				"themes/rocketleague.css"
+				"css/themes/rocketleague.css"
 			],
 			"position": "top",
 			"dependencies": [
@@ -181,7 +181,7 @@
 		},
 		"skins.liquiflow.theme.smash": {
 			"styles": [
-				"themes/smash.css"
+				"css/themes/smash.css"
 			],
 			"position": "top",
 			"dependencies": [
@@ -190,7 +190,7 @@
 		},
 		"skins.liquiflow.theme.starcraft": {
 			"styles": [
-				"themes/starcraft.css"
+				"css/themes/starcraft.css"
 			],
 			"position": "top",
 			"dependencies": [
@@ -199,7 +199,7 @@
 		},
 		"skins.liquiflow.theme.starcraft2": {
 			"styles": [
-				"themes/starcraft2.css"
+				"css/themes/starcraft2.css"
 			],
 			"position": "top",
 			"dependencies": [
@@ -208,7 +208,7 @@
 		},
 		"skins.liquiflow.theme.warcraft": {
 			"styles": [
-				"themes/warcraft.css"
+				"css/themes/warcraft.css"
 			],
 			"position": "top",
 			"dependencies": [

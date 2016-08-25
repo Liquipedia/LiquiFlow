@@ -1764,7 +1764,7 @@ table th[class*="col-"] {
   }
 }
 td.mw-label {
-  vertical-align: middle;
+  vertical-align: middle !important;
 }
 fieldset {
   padding: 0;

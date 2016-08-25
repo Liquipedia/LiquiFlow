@@ -7835,7 +7835,7 @@ ul#f-list li {
   margin: 0 1.3em;
 }
 #footer-logo-big {
-  background-image: url('../../images/lp_logo_big.png');
+  background-image: url(../../images/lp_logo_big.png);
   background-repeat: no-repeat;
   background-size: 150px;
   display: block;

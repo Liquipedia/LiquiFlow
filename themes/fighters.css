@@ -3094,7 +3094,7 @@ tbody.collapse.in {
   pointer-events: none;
 }
 /* taken from bootstrap */
-#mw-content-text button {
+#main-content-column button {
   color: #444444;
   background-color: #ffa800;
   border-color: #cc8600;
@@ -3117,83 +3117,83 @@ tbody.collapse.in {
   -ms-user-select: none;
   user-select: none;
 }
-#mw-content-text button:focus,
-#mw-content-text button.focus {
+#main-content-column button:focus,
+#main-content-column button.focus {
   color: #444444;
   background-color: #cc8600;
   border-color: #4d3200;
 }
-#mw-content-text button:hover {
+#main-content-column button:hover {
   color: #444444;
   background-color: #cc8600;
   border-color: #8f5e00;
 }
-#mw-content-text button:active,
-#mw-content-text button.active,
-.open > .dropdown-toggle#mw-content-text button {
+#main-content-column button:active,
+#main-content-column button.active,
+.open > .dropdown-toggle#main-content-column button {
   color: #444444;
   background-color: #cc8600;
   border-color: #8f5e00;
 }
-#mw-content-text button:active:hover,
-#mw-content-text button.active:hover,
-.open > .dropdown-toggle#mw-content-text button:hover,
-#mw-content-text button:active:focus,
-#mw-content-text button.active:focus,
-.open > .dropdown-toggle#mw-content-text button:focus,
-#mw-content-text button:active.focus,
-#mw-content-text button.active.focus,
-.open > .dropdown-toggle#mw-content-text button.focus {
+#main-content-column button:active:hover,
+#main-content-column button.active:hover,
+.open > .dropdown-toggle#main-content-column button:hover,
+#main-content-column button:active:focus,
+#main-content-column button.active:focus,
+.open > .dropdown-toggle#main-content-column button:focus,
+#main-content-column button:active.focus,
+#main-content-column button.active.focus,
+.open > .dropdown-toggle#main-content-column button.focus {
   color: #444444;
   background-color: #a86f00;
   border-color: #4d3200;
 }
-#mw-content-text button:active,
-#mw-content-text button.active,
-.open > .dropdown-toggle#mw-content-text button {
+#main-content-column button:active,
+#main-content-column button.active,
+.open > .dropdown-toggle#main-content-column button {
   background-image: none;
 }
-#mw-content-text button.disabled:hover,
-#mw-content-text button[disabled]:hover,
-fieldset[disabled] #mw-content-text button:hover,
-#mw-content-text button.disabled:focus,
-#mw-content-text button[disabled]:focus,
-fieldset[disabled] #mw-content-text button:focus,
-#mw-content-text button.disabled.focus,
-#mw-content-text button[disabled].focus,
-fieldset[disabled] #mw-content-text button.focus {
+#main-content-column button.disabled:hover,
+#main-content-column button[disabled]:hover,
+fieldset[disabled] #main-content-column button:hover,
+#main-content-column button.disabled:focus,
+#main-content-column button[disabled]:focus,
+fieldset[disabled] #main-content-column button:focus,
+#main-content-column button.disabled.focus,
+#main-content-column button[disabled].focus,
+fieldset[disabled] #main-content-column button.focus {
   background-color: #ffa800;
   border-color: #cc8600;
 }
-#mw-content-text button .badge {
+#main-content-column button .badge {
   color: #ffa800;
   background-color: #444444;
 }
-#mw-content-text button:focus,
-#mw-content-text button:active:focus,
-#mw-content-text button.active:focus,
-#mw-content-text button.focus,
-#mw-content-text button:active.focus,
-#mw-content-text button.active.focus {
+#main-content-column button:focus,
+#main-content-column button:active:focus,
+#main-content-column button.active:focus,
+#main-content-column button.focus,
+#main-content-column button:active.focus,
+#main-content-column button.active.focus {
   outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
-#mw-content-text button:hover,
-#mw-content-text button:focus,
-#mw-content-text button.focus {
+#main-content-column button:hover,
+#main-content-column button:focus,
+#main-content-column button.focus {
   color: #333333;
   text-decoration: none;
 }
-#mw-content-text button:active,
-#mw-content-text button.active {
+#main-content-column button:active,
+#main-content-column button.active {
   outline: 0;
   background-image: none;
   -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
 }
-#mw-content-text button.disabled,
-#mw-content-text button[disabled] {
+#main-content-column button.disabled,
+#main-content-column button[disabled] {
   cursor: not-allowed;
   opacity: 0.65;
   filter: alpha(opacity=65);
@@ -3201,7 +3201,7 @@ fieldset[disabled] #mw-content-text button.focus {
   box-shadow: none;
 }
 /* taken from bootstrap */
-#mw-content-text input[type=submit] {
+#main-content-column input[type=submit] {
   color: #444444;
   background-color: #ffa800;
   border-color: #cc8600;
@@ -3224,83 +3224,83 @@ fieldset[disabled] #mw-content-text button.focus {
   -ms-user-select: none;
   user-select: none;
 }
-#mw-content-text input[type=submit]:focus,
-#mw-content-text input[type=submit].focus {
+#main-content-column input[type=submit]:focus,
+#main-content-column input[type=submit].focus {
   color: #444444;
   background-color: #cc8600;
   border-color: #4d3200;
 }
-#mw-content-text input[type=submit]:hover {
+#main-content-column input[type=submit]:hover {
   color: #444444;
   background-color: #cc8600;
   border-color: #8f5e00;
 }
-#mw-content-text input[type=submit]:active,
-#mw-content-text input[type=submit].active,
-.open > .dropdown-toggle#mw-content-text input[type=submit] {
+#main-content-column input[type=submit]:active,
+#main-content-column input[type=submit].active,
+.open > .dropdown-toggle#main-content-column input[type=submit] {
   color: #444444;
   background-color: #cc8600;
   border-color: #8f5e00;
 }
-#mw-content-text input[type=submit]:active:hover,
-#mw-content-text input[type=submit].active:hover,
-.open > .dropdown-toggle#mw-content-text input[type=submit]:hover,
-#mw-content-text input[type=submit]:active:focus,
-#mw-content-text input[type=submit].active:focus,
-.open > .dropdown-toggle#mw-content-text input[type=submit]:focus,
-#mw-content-text input[type=submit]:active.focus,
-#mw-content-text input[type=submit].active.focus,
-.open > .dropdown-toggle#mw-content-text input[type=submit].focus {
+#main-content-column input[type=submit]:active:hover,
+#main-content-column input[type=submit].active:hover,
+.open > .dropdown-toggle#main-content-column input[type=submit]:hover,
+#main-content-column input[type=submit]:active:focus,
+#main-content-column input[type=submit].active:focus,
+.open > .dropdown-toggle#main-content-column input[type=submit]:focus,
+#main-content-column input[type=submit]:active.focus,
+#main-content-column input[type=submit].active.focus,
+.open > .dropdown-toggle#main-content-column input[type=submit].focus {
   color: #444444;
   background-color: #a86f00;
   border-color: #4d3200;
 }
-#mw-content-text input[type=submit]:active,
-#mw-content-text input[type=submit].active,
-.open > .dropdown-toggle#mw-content-text input[type=submit] {
+#main-content-column input[type=submit]:active,
+#main-content-column input[type=submit].active,
+.open > .dropdown-toggle#main-content-column input[type=submit] {
   background-image: none;
 }
-#mw-content-text input[type=submit].disabled:hover,
-#mw-content-text input[type=submit][disabled]:hover,
-fieldset[disabled] #mw-content-text input[type=submit]:hover,
-#mw-content-text input[type=submit].disabled:focus,
-#mw-content-text input[type=submit][disabled]:focus,
-fieldset[disabled] #mw-content-text input[type=submit]:focus,
-#mw-content-text input[type=submit].disabled.focus,
-#mw-content-text input[type=submit][disabled].focus,
-fieldset[disabled] #mw-content-text input[type=submit].focus {
+#main-content-column input[type=submit].disabled:hover,
+#main-content-column input[type=submit][disabled]:hover,
+fieldset[disabled] #main-content-column input[type=submit]:hover,
+#main-content-column input[type=submit].disabled:focus,
+#main-content-column input[type=submit][disabled]:focus,
+fieldset[disabled] #main-content-column input[type=submit]:focus,
+#main-content-column input[type=submit].disabled.focus,
+#main-content-column input[type=submit][disabled].focus,
+fieldset[disabled] #main-content-column input[type=submit].focus {
   background-color: #ffa800;
   border-color: #cc8600;
 }
-#mw-content-text input[type=submit] .badge {
+#main-content-column input[type=submit] .badge {
   color: #ffa800;
   background-color: #444444;
 }
-#mw-content-text input[type=submit]:focus,
-#mw-content-text input[type=submit]:active:focus,
-#mw-content-text input[type=submit].active:focus,
-#mw-content-text input[type=submit].focus,
-#mw-content-text input[type=submit]:active.focus,
-#mw-content-text input[type=submit].active.focus {
+#main-content-column input[type=submit]:focus,
+#main-content-column input[type=submit]:active:focus,
+#main-content-column input[type=submit].active:focus,
+#main-content-column input[type=submit].focus,
+#main-content-column input[type=submit]:active.focus,
+#main-content-column input[type=submit].active.focus {
   outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
-#mw-content-text input[type=submit]:hover,
-#mw-content-text input[type=submit]:focus,
-#mw-content-text input[type=submit].focus {
+#main-content-column input[type=submit]:hover,
+#main-content-column input[type=submit]:focus,
+#main-content-column input[type=submit].focus {
   color: #333333;
   text-decoration: none;
 }
-#mw-content-text input[type=submit]:active,
-#mw-content-text input[type=submit].active {
+#main-content-column input[type=submit]:active,
+#main-content-column input[type=submit].active {
   outline: 0;
   background-image: none;
   -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
 }
-#mw-content-text input[type=submit].disabled,
-#mw-content-text input[type=submit][disabled] {
+#main-content-column input[type=submit].disabled,
+#main-content-column input[type=submit][disabled] {
   cursor: not-allowed;
   opacity: 0.65;
   filter: alpha(opacity=65);
@@ -3308,7 +3308,7 @@ fieldset[disabled] #mw-content-text input[type=submit].focus {
   box-shadow: none;
 }
 /* taken from bootstrap */
-#mw-content-text input[type=button] {
+#main-content-column input[type=button] {
   color: #444444;
   background-color: #ffa800;
   border-color: #cc8600;
@@ -3331,83 +3331,83 @@ fieldset[disabled] #mw-content-text input[type=submit].focus {
   -ms-user-select: none;
   user-select: none;
 }
-#mw-content-text input[type=button]:focus,
-#mw-content-text input[type=button].focus {
+#main-content-column input[type=button]:focus,
+#main-content-column input[type=button].focus {
   color: #444444;
   background-color: #cc8600;
   border-color: #4d3200;
 }
-#mw-content-text input[type=button]:hover {
+#main-content-column input[type=button]:hover {
   color: #444444;
   background-color: #cc8600;
   border-color: #8f5e00;
 }
-#mw-content-text input[type=button]:active,
-#mw-content-text input[type=button].active,
-.open > .dropdown-toggle#mw-content-text input[type=button] {
+#main-content-column input[type=button]:active,
+#main-content-column input[type=button].active,
+.open > .dropdown-toggle#main-content-column input[type=button] {
   color: #444444;
   background-color: #cc8600;
   border-color: #8f5e00;
 }
-#mw-content-text input[type=button]:active:hover,
-#mw-content-text input[type=button].active:hover,
-.open > .dropdown-toggle#mw-content-text input[type=button]:hover,
-#mw-content-text input[type=button]:active:focus,
-#mw-content-text input[type=button].active:focus,
-.open > .dropdown-toggle#mw-content-text input[type=button]:focus,
-#mw-content-text input[type=button]:active.focus,
-#mw-content-text input[type=button].active.focus,
-.open > .dropdown-toggle#mw-content-text input[type=button].focus {
+#main-content-column input[type=button]:active:hover,
+#main-content-column input[type=button].active:hover,
+.open > .dropdown-toggle#main-content-column input[type=button]:hover,
+#main-content-column input[type=button]:active:focus,
+#main-content-column input[type=button].active:focus,
+.open > .dropdown-toggle#main-content-column input[type=button]:focus,
+#main-content-column input[type=button]:active.focus,
+#main-content-column input[type=button].active.focus,
+.open > .dropdown-toggle#main-content-column input[type=button].focus {
   color: #444444;
   background-color: #a86f00;
   border-color: #4d3200;
 }
-#mw-content-text input[type=button]:active,
-#mw-content-text input[type=button].active,
-.open > .dropdown-toggle#mw-content-text input[type=button] {
+#main-content-column input[type=button]:active,
+#main-content-column input[type=button].active,
+.open > .dropdown-toggle#main-content-column input[type=button] {
   background-image: none;
 }
-#mw-content-text input[type=button].disabled:hover,
-#mw-content-text input[type=button][disabled]:hover,
-fieldset[disabled] #mw-content-text input[type=button]:hover,
-#mw-content-text input[type=button].disabled:focus,
-#mw-content-text input[type=button][disabled]:focus,
-fieldset[disabled] #mw-content-text input[type=button]:focus,
-#mw-content-text input[type=button].disabled.focus,
-#mw-content-text input[type=button][disabled].focus,
-fieldset[disabled] #mw-content-text input[type=button].focus {
+#main-content-column input[type=button].disabled:hover,
+#main-content-column input[type=button][disabled]:hover,
+fieldset[disabled] #main-content-column input[type=button]:hover,
+#main-content-column input[type=button].disabled:focus,
+#main-content-column input[type=button][disabled]:focus,
+fieldset[disabled] #main-content-column input[type=button]:focus,
+#main-content-column input[type=button].disabled.focus,
+#main-content-column input[type=button][disabled].focus,
+fieldset[disabled] #main-content-column input[type=button].focus {
   background-color: #ffa800;
   border-color: #cc8600;
 }
-#mw-content-text input[type=button] .badge {
+#main-content-column input[type=button] .badge {
   color: #ffa800;
   background-color: #444444;
 }
-#mw-content-text input[type=button]:focus,
-#mw-content-text input[type=button]:active:focus,
-#mw-content-text input[type=button].active:focus,
-#mw-content-text input[type=button].focus,
-#mw-content-text input[type=button]:active.focus,
-#mw-content-text input[type=button].active.focus {
+#main-content-column input[type=button]:focus,
+#main-content-column input[type=button]:active:focus,
+#main-content-column input[type=button].active:focus,
+#main-content-column input[type=button].focus,
+#main-content-column input[type=button]:active.focus,
+#main-content-column input[type=button].active.focus {
   outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
-#mw-content-text input[type=button]:hover,
-#mw-content-text input[type=button]:focus,
-#mw-content-text input[type=button].focus {
+#main-content-column input[type=button]:hover,
+#main-content-column input[type=button]:focus,
+#main-content-column input[type=button].focus {
   color: #333333;
   text-decoration: none;
 }
-#mw-content-text input[type=button]:active,
-#mw-content-text input[type=button].active {
+#main-content-column input[type=button]:active,
+#main-content-column input[type=button].active {
   outline: 0;
   background-image: none;
   -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
 }
-#mw-content-text input[type=button].disabled,
-#mw-content-text input[type=button][disabled] {
+#main-content-column input[type=button].disabled,
+#main-content-column input[type=button][disabled] {
   cursor: not-allowed;
   opacity: 0.65;
   filter: alpha(opacity=65);
@@ -3415,7 +3415,7 @@ fieldset[disabled] #mw-content-text input[type=button].focus {
   box-shadow: none;
 }
 /* taken from bootstrap */
-#mw-content-text textarea {
+#main-content-column textarea {
   vertical-align: middle;
   height: 26pt;
   padding: 6px 12px;
@@ -3432,44 +3432,44 @@ fieldset[disabled] #mw-content-text input[type=button].focus {
   -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 }
-#mw-content-text textarea:focus {
+#main-content-column textarea:focus {
   border-color: #66afe9;
   outline: 0;
   -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
   box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
 }
-#mw-content-text textarea::-moz-placeholder {
+#main-content-column textarea::-moz-placeholder {
   color: #999;
   opacity: 1;
 }
-#mw-content-text textarea:-ms-input-placeholder {
+#main-content-column textarea:-ms-input-placeholder {
   color: #999;
 }
-#mw-content-text textarea::-webkit-input-placeholder {
+#main-content-column textarea::-webkit-input-placeholder {
   color: #999;
 }
-#mw-content-text textarea::-ms-expand {
+#main-content-column textarea::-ms-expand {
   border: 0;
   background-color: transparent;
 }
-#mw-content-text textarea[disabled],
-#mw-content-text textarea[readonly],
-fieldset[disabled] #mw-content-text textarea {
+#main-content-column textarea[disabled],
+#main-content-column textarea[readonly],
+fieldset[disabled] #main-content-column textarea {
   background-color: #eeeeee;
   opacity: 1;
 }
-#mw-content-text textarea[disabled],
-fieldset[disabled] #mw-content-text textarea {
+#main-content-column textarea[disabled],
+fieldset[disabled] #main-content-column textarea {
   cursor: not-allowed;
 }
-textarea#mw-content-text textarea {
+textarea#main-content-column textarea {
   height: auto;
 }
-#mw-content-text textarea {
+#main-content-column textarea {
   height: initial;
 }
 /* taken from bootstrap */
-#mw-content-text select {
+#main-content-column select {
   vertical-align: middle;
   height: 26pt;
   padding: 6px 12px;
@@ -3486,44 +3486,44 @@ textarea#mw-content-text textarea {
   -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 }
-#mw-content-text select:focus {
+#main-content-column select:focus {
   border-color: #66afe9;
   outline: 0;
   -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
   box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
 }
-#mw-content-text select::-moz-placeholder {
+#main-content-column select::-moz-placeholder {
   color: #999;
   opacity: 1;
 }
-#mw-content-text select:-ms-input-placeholder {
+#main-content-column select:-ms-input-placeholder {
   color: #999;
 }
-#mw-content-text select::-webkit-input-placeholder {
+#main-content-column select::-webkit-input-placeholder {
   color: #999;
 }
-#mw-content-text select::-ms-expand {
+#main-content-column select::-ms-expand {
   border: 0;
   background-color: transparent;
 }
-#mw-content-text select[disabled],
-#mw-content-text select[readonly],
-fieldset[disabled] #mw-content-text select {
+#main-content-column select[disabled],
+#main-content-column select[readonly],
+fieldset[disabled] #main-content-column select {
   background-color: #eeeeee;
   opacity: 1;
 }
-#mw-content-text select[disabled],
-fieldset[disabled] #mw-content-text select {
+#main-content-column select[disabled],
+fieldset[disabled] #main-content-column select {
   cursor: not-allowed;
 }
-textarea#mw-content-text select {
+textarea#main-content-column select {
   height: auto;
 }
-#mw-content-text select[size] {
+#mmain-content-column select[size] {
   height: initial;
 }
 /* taken from bootstrap */
-#mw-content-text input[type=date] {
+#main-content-column input[type=date] {
   vertical-align: middle;
   height: 26pt;
   padding: 6px 12px;
@@ -3540,41 +3540,41 @@ textarea#mw-content-text select {
   -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 }
-#mw-content-text input[type=date]:focus {
+#main-content-column input[type=date]:focus {
   border-color: #66afe9;
   outline: 0;
   -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
   box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
 }
-#mw-content-text input[type=date]::-moz-placeholder {
+#main-content-column input[type=date]::-moz-placeholder {
   color: #999;
   opacity: 1;
 }
-#mw-content-text input[type=date]:-ms-input-placeholder {
+#main-content-column input[type=date]:-ms-input-placeholder {
   color: #999;
 }
-#mw-content-text input[type=date]::-webkit-input-placeholder {
+#main-content-column input[type=date]::-webkit-input-placeholder {
   color: #999;
 }
-#mw-content-text input[type=date]::-ms-expand {
+#main-content-column input[type=date]::-ms-expand {
   border: 0;
   background-color: transparent;
 }
-#mw-content-text input[type=date][disabled],
-#mw-content-text input[type=date][readonly],
-fieldset[disabled] #mw-content-text input[type=date] {
+#main-content-column input[type=date][disabled],
+#main-content-column input[type=date][readonly],
+fieldset[disabled] #main-content-column input[type=date] {
   background-color: #eeeeee;
   opacity: 1;
 }
-#mw-content-text input[type=date][disabled],
-fieldset[disabled] #mw-content-text input[type=date] {
+#main-content-column input[type=date][disabled],
+fieldset[disabled] #main-content-column input[type=date] {
   cursor: not-allowed;
 }
-textarea#mw-content-text input[type=date] {
+textarea#main-content-column input[type=date] {
   height: auto;
 }
 /* taken from bootstrap */
-#mw-content-text input[type=datetime] {
+#main-content-column input[type=datetime] {
   vertical-align: middle;
   height: 26pt;
   padding: 6px 12px;
@@ -3591,41 +3591,41 @@ textarea#mw-content-text input[type=date] {
   -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 }
-#mw-content-text input[type=datetime]:focus {
+#main-content-column input[type=datetime]:focus {
   border-color: #66afe9;
   outline: 0;
   -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
   box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
 }
-#mw-content-text input[type=datetime]::-moz-placeholder {
+#main-content-column input[type=datetime]::-moz-placeholder {
   color: #999;
   opacity: 1;
 }
-#mw-content-text input[type=datetime]:-ms-input-placeholder {
+#main-content-column input[type=datetime]:-ms-input-placeholder {
   color: #999;
 }
-#mw-content-text input[type=datetime]::-webkit-input-placeholder {
+#main-content-column input[type=datetime]::-webkit-input-placeholder {
   color: #999;
 }
-#mw-content-text input[type=datetime]::-ms-expand {
+#main-content-column input[type=datetime]::-ms-expand {
   border: 0;
   background-color: transparent;
 }
-#mw-content-text input[type=datetime][disabled],
-#mw-content-text input[type=datetime][readonly],
-fieldset[disabled] #mw-content-text input[type=datetime] {
+#main-content-column input[type=datetime][disabled],
+#main-content-column input[type=datetime][readonly],
+fieldset[disabled] #main-content-column input[type=datetime] {
   background-color: #eeeeee;
   opacity: 1;
 }
-#mw-content-text input[type=datetime][disabled],
-fieldset[disabled] #mw-content-text input[type=datetime] {
+#main-content-column input[type=datetime][disabled],
+fieldset[disabled] #main-content-column input[type=datetime] {
   cursor: not-allowed;
 }
-textarea#mw-content-text input[type=datetime] {
+textarea#main-content-column input[type=datetime] {
   height: auto;
 }
 /* taken from bootstrap */
-#mw-content-text input[type=datetime-local] {
+#main-content-column input[type=datetime-local] {
   vertical-align: middle;
   height: 26pt;
   padding: 6px 12px;
@@ -3642,41 +3642,41 @@ textarea#mw-content-text input[type=datetime] {
   -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 }
-#mw-content-text input[type=datetime-local]:focus {
+#main-content-column input[type=datetime-local]:focus {
   border-color: #66afe9;
   outline: 0;
   -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
   box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
 }
-#mw-content-text input[type=datetime-local]::-moz-placeholder {
+#main-content-column input[type=datetime-local]::-moz-placeholder {
   color: #999;
   opacity: 1;
 }
-#mw-content-text input[type=datetime-local]:-ms-input-placeholder {
+#main-content-column input[type=datetime-local]:-ms-input-placeholder {
   color: #999;
 }
-#mw-content-text input[type=datetime-local]::-webkit-input-placeholder {
+#main-content-column input[type=datetime-local]::-webkit-input-placeholder {
   color: #999;
 }
-#mw-content-text input[type=datetime-local]::-ms-expand {
+#main-content-column input[type=datetime-local]::-ms-expand {
   border: 0;
   background-color: transparent;
 }
-#mw-content-text input[type=datetime-local][disabled],
-#mw-content-text input[type=datetime-local][readonly],
-fieldset[disabled] #mw-content-text input[type=datetime-local] {
+#main-content-column input[type=datetime-local][disabled],
+#main-content-column input[type=datetime-local][readonly],
+fieldset[disabled] #main-content-column input[type=datetime-local] {
   background-color: #eeeeee;
   opacity: 1;
 }
-#mw-content-text input[type=datetime-local][disabled],
-fieldset[disabled] #mw-content-text input[type=datetime-local] {
+#main-content-column input[type=datetime-local][disabled],
+fieldset[disabled] #main-content-column input[type=datetime-local] {
   cursor: not-allowed;
 }
-textarea#mw-content-text input[type=datetime-local] {
+textarea#main-content-column input[type=datetime-local] {
   height: auto;
 }
 /* taken from bootstrap */
-#mw-content-text input[type=email] {
+#main-content-column input[type=email] {
   vertical-align: middle;
   height: 26pt;
   padding: 6px 12px;
@@ -3693,41 +3693,41 @@ textarea#mw-content-text input[type=datetime-local] {
   -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 }
-#mw-content-text input[type=email]:focus {
+#main-content-column input[type=email]:focus {
   border-color: #66afe9;
   outline: 0;
   -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
   box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
 }
-#mw-content-text input[type=email]::-moz-placeholder {
+#main-content-column input[type=email]::-moz-placeholder {
   color: #999;
   opacity: 1;
 }
-#mw-content-text input[type=email]:-ms-input-placeholder {
+#main-content-column input[type=email]:-ms-input-placeholder {
   color: #999;
 }
-#mw-content-text input[type=email]::-webkit-input-placeholder {
+#main-content-column input[type=email]::-webkit-input-placeholder {
   color: #999;
 }
-#mw-content-text input[type=email]::-ms-expand {
+#main-content-column input[type=email]::-ms-expand {
   border: 0;
   background-color: transparent;
 }
-#mw-content-text input[type=email][disabled],
-#mw-content-text input[type=email][readonly],
-fieldset[disabled] #mw-content-text input[type=email] {
+#main-content-column input[type=email][disabled],
+#main-content-column input[type=email][readonly],
+fieldset[disabled] #main-content-column input[type=email] {
   background-color: #eeeeee;
   opacity: 1;
 }
-#mw-content-text input[type=email][disabled],
-fieldset[disabled] #mw-content-text input[type=email] {
+#main-content-column input[type=email][disabled],
+fieldset[disabled] #main-content-column input[type=email] {
   cursor: not-allowed;
 }
-textarea#mw-content-text input[type=email] {
+textarea#main-content-column input[type=email] {
   height: auto;
 }
 /* taken from bootstrap */
-#mw-content-text input[type=month] {
+#main-content-column input[type=month] {
   vertical-align: middle;
   height: 26pt;
   padding: 6px 12px;
@@ -3744,41 +3744,41 @@ textarea#mw-content-text input[type=email] {
   -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 }
-#mw-content-text input[type=month]:focus {
+#main-content-column input[type=month]:focus {
   border-color: #66afe9;
   outline: 0;
   -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
   box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
 }
-#mw-content-text input[type=month]::-moz-placeholder {
+#main-content-column input[type=month]::-moz-placeholder {
   color: #999;
   opacity: 1;
 }
-#mw-content-text input[type=month]:-ms-input-placeholder {
+#main-content-column input[type=month]:-ms-input-placeholder {
   color: #999;
 }
-#mw-content-text input[type=month]::-webkit-input-placeholder {
+#main-content-column input[type=month]::-webkit-input-placeholder {
   color: #999;
 }
-#mw-content-text input[type=month]::-ms-expand {
+#main-content-column input[type=month]::-ms-expand {
   border: 0;
   background-color: transparent;
 }
-#mw-content-text input[type=month][disabled],
-#mw-content-text input[type=month][readonly],
-fieldset[disabled] #mw-content-text input[type=month] {
+#main-content-column input[type=month][disabled],
+#main-content-column input[type=month][readonly],
+fieldset[disabled] #main-content-column input[type=month] {
   background-color: #eeeeee;
   opacity: 1;
 }
-#mw-content-text input[type=month][disabled],
-fieldset[disabled] #mw-content-text input[type=month] {
+#main-content-column input[type=month][disabled],
+fieldset[disabled] #main-content-column input[type=month] {
   cursor: not-allowed;
 }
-textarea#mw-content-text input[type=month] {
+textarea#main-content-column input[type=month] {
   height: auto;
 }
 /* taken from bootstrap */
-#mw-content-text input[type=number] {
+#main-content-column input[type=number] {
   vertical-align: middle;
   height: 26pt;
   padding: 6px 12px;
@@ -3795,41 +3795,41 @@ textarea#mw-content-text input[type=month] {
   -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 }
-#mw-content-text input[type=number]:focus {
+#main-content-column input[type=number]:focus {
   border-color: #66afe9;
   outline: 0;
   -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
   box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
 }
-#mw-content-text input[type=number]::-moz-placeholder {
+#main-content-column input[type=number]::-moz-placeholder {
   color: #999;
   opacity: 1;
 }
-#mw-content-text input[type=number]:-ms-input-placeholder {
+#main-content-column input[type=number]:-ms-input-placeholder {
   color: #999;
 }
-#mw-content-text input[type=number]::-webkit-input-placeholder {
+#main-content-column input[type=number]::-webkit-input-placeholder {
   color: #999;
 }
-#mw-content-text input[type=number]::-ms-expand {
+#main-content-column input[type=number]::-ms-expand {
   border: 0;
   background-color: transparent;
 }
-#mw-content-text input[type=number][disabled],
-#mw-content-text input[type=number][readonly],
-fieldset[disabled] #mw-content-text input[type=number] {
+#main-content-column input[type=number][disabled],
+#main-content-column input[type=number][readonly],
+fieldset[disabled] #main-content-column input[type=number] {
   background-color: #eeeeee;
   opacity: 1;
 }
-#mw-content-text input[type=number][disabled],
-fieldset[disabled] #mw-content-text input[type=number] {
+#main-content-column input[type=number][disabled],
+fieldset[disabled] #main-content-column input[type=number] {
   cursor: not-allowed;
 }
-textarea#mw-content-text input[type=number] {
+textarea#main-content-column input[type=number] {
   height: auto;
 }
 /* taken from bootstrap */
-#mw-content-text input[type=password] {
+#main-content-column input[type=password] {
   vertical-align: middle;
   height: 26pt;
   padding: 6px 12px;
@@ -3846,41 +3846,41 @@ textarea#mw-content-text input[type=number] {
   -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 }
-#mw-content-text input[type=password]:focus {
+#main-content-column input[type=password]:focus {
   border-color: #66afe9;
   outline: 0;
   -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
   box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
 }
-#mw-content-text input[type=password]::-moz-placeholder {
+#main-content-column input[type=password]::-moz-placeholder {
   color: #999;
   opacity: 1;
 }
-#mw-content-text input[type=password]:-ms-input-placeholder {
+#main-content-column input[type=password]:-ms-input-placeholder {
   color: #999;
 }
-#mw-content-text input[type=password]::-webkit-input-placeholder {
+#main-content-column input[type=password]::-webkit-input-placeholder {
   color: #999;
 }
-#mw-content-text input[type=password]::-ms-expand {
+#main-content-column input[type=password]::-ms-expand {
   border: 0;
   background-color: transparent;
 }
-#mw-content-text input[type=password][disabled],
-#mw-content-text input[type=password][readonly],
-fieldset[disabled] #mw-content-text input[type=password] {
+#main-content-column input[type=password][disabled],
+#main-content-column input[type=password][readonly],
+fieldset[disabled] #main-content-column input[type=password] {
   background-color: #eeeeee;
   opacity: 1;
 }
-#mw-content-text input[type=password][disabled],
-fieldset[disabled] #mw-content-text input[type=password] {
+#main-content-column input[type=password][disabled],
+fieldset[disabled] #main-content-column input[type=password] {
   cursor: not-allowed;
 }
-textarea#mw-content-text input[type=password] {
+textarea#main-content-column input[type=password] {
   height: auto;
 }
 /* taken from bootstrap */
-#mw-content-text input[type=range] {
+#main-content-column input[type=range] {
   vertical-align: middle;
   height: 26pt;
   padding: 6px 12px;
@@ -3897,41 +3897,41 @@ textarea#mw-content-text input[type=password] {
   -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 }
-#mw-content-text input[type=range]:focus {
+#main-content-column input[type=range]:focus {
   border-color: #66afe9;
   outline: 0;
   -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
   box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
 }
-#mw-content-text input[type=range]::-moz-placeholder {
+#main-content-column input[type=range]::-moz-placeholder {
   color: #999;
   opacity: 1;
 }
-#mw-content-text input[type=range]:-ms-input-placeholder {
+#main-content-column input[type=range]:-ms-input-placeholder {
   color: #999;
 }
-#mw-content-text input[type=range]::-webkit-input-placeholder {
+#main-content-column input[type=range]::-webkit-input-placeholder {
   color: #999;
 }
-#mw-content-text input[type=range]::-ms-expand {
+#main-content-column input[type=range]::-ms-expand {
   border: 0;
   background-color: transparent;
 }
-#mw-content-text input[type=range][disabled],
-#mw-content-text input[type=range][readonly],
-fieldset[disabled] #mw-content-text input[type=range] {
+#main-content-column input[type=range][disabled],
+#main-content-column input[type=range][readonly],
+fieldset[disabled] #main-content-column input[type=range] {
   background-color: #eeeeee;
   opacity: 1;
 }
-#mw-content-text input[type=range][disabled],
-fieldset[disabled] #mw-content-text input[type=range] {
+#main-content-column input[type=range][disabled],
+fieldset[disabled] #main-content-column input[type=range] {
   cursor: not-allowed;
 }
-textarea#mw-content-text input[type=range] {
+textarea#main-content-column input[type=range] {
   height: auto;
 }
 /* taken from bootstrap */
-#mw-content-text input[type=search] {
+#main-content-column input[type=search] {
   vertical-align: middle;
   height: 26pt;
   padding: 6px 12px;
@@ -3948,41 +3948,41 @@ textarea#mw-content-text input[type=range] {
   -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 }
-#mw-content-text input[type=search]:focus {
+#main-content-column input[type=search]:focus {
   border-color: #66afe9;
   outline: 0;
   -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
   box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
 }
-#mw-content-text input[type=search]::-moz-placeholder {
+#main-content-column input[type=search]::-moz-placeholder {
   color: #999;
   opacity: 1;
 }
-#mw-content-text input[type=search]:-ms-input-placeholder {
+#main-content-column input[type=search]:-ms-input-placeholder {
   color: #999;
 }
-#mw-content-text input[type=search]::-webkit-input-placeholder {
+#main-content-column input[type=search]::-webkit-input-placeholder {
   color: #999;
 }
-#mw-content-text input[type=search]::-ms-expand {
+#main-content-column input[type=search]::-ms-expand {
   border: 0;
   background-color: transparent;
 }
-#mw-content-text input[type=search][disabled],
-#mw-content-text input[type=search][readonly],
-fieldset[disabled] #mw-content-text input[type=search] {
+#main-content-column input[type=search][disabled],
+#main-content-column input[type=search][readonly],
+fieldset[disabled] #main-content-column input[type=search] {
   background-color: #eeeeee;
   opacity: 1;
 }
-#mw-content-text input[type=search][disabled],
-fieldset[disabled] #mw-content-text input[type=search] {
+#main-content-column input[type=search][disabled],
+fieldset[disabled] #main-content-column input[type=search] {
   cursor: not-allowed;
 }
-textarea#mw-content-text input[type=search] {
+textarea#main-content-column input[type=search] {
   height: auto;
 }
 /* taken from bootstrap */
-#mw-content-text input[type=tel] {
+#main-content-column input[type=tel] {
   vertical-align: middle;
   height: 26pt;
   padding: 6px 12px;
@@ -3999,41 +3999,41 @@ textarea#mw-content-text input[type=search] {
   -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 }
-#mw-content-text input[type=tel]:focus {
+#main-content-column input[type=tel]:focus {
   border-color: #66afe9;
   outline: 0;
   -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
   box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
 }
-#mw-content-text input[type=tel]::-moz-placeholder {
+#main-content-column input[type=tel]::-moz-placeholder {
   color: #999;
   opacity: 1;
 }
-#mw-content-text input[type=tel]:-ms-input-placeholder {
+#main-content-column input[type=tel]:-ms-input-placeholder {
   color: #999;
 }
-#mw-content-text input[type=tel]::-webkit-input-placeholder {
+#main-content-column input[type=tel]::-webkit-input-placeholder {
   color: #999;
 }
-#mw-content-text input[type=tel]::-ms-expand {
+#main-content-column input[type=tel]::-ms-expand {
   border: 0;
   background-color: transparent;
 }
-#mw-content-text input[type=tel][disabled],
-#mw-content-text input[type=tel][readonly],
-fieldset[disabled] #mw-content-text input[type=tel] {
+#main-content-column input[type=tel][disabled],
+#main-content-column input[type=tel][readonly],
+fieldset[disabled] #main-content-column input[type=tel] {
   background-color: #eeeeee;
   opacity: 1;
 }
-#mw-content-text input[type=tel][disabled],
-fieldset[disabled] #mw-content-text input[type=tel] {
+#main-content-column input[type=tel][disabled],
+fieldset[disabled] #main-content-column input[type=tel] {
   cursor: not-allowed;
 }
-textarea#mw-content-text input[type=tel] {
+textarea#main-content-column input[type=tel] {
   height: auto;
 }
 /* taken from bootstrap */
-#mw-content-text input[type=text] {
+#main-content-column input[type=text] {
   vertical-align: middle;
   height: 26pt;
   padding: 6px 12px;
@@ -4050,41 +4050,41 @@ textarea#mw-content-text input[type=tel] {
   -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 }
-#mw-content-text input[type=text]:focus {
+#main-content-column input[type=text]:focus {
   border-color: #66afe9;
   outline: 0;
   -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
   box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
 }
-#mw-content-text input[type=text]::-moz-placeholder {
+#main-content-column input[type=text]::-moz-placeholder {
   color: #999;
   opacity: 1;
 }
-#mw-content-text input[type=text]:-ms-input-placeholder {
+#main-content-column input[type=text]:-ms-input-placeholder {
   color: #999;
 }
-#mw-content-text input[type=text]::-webkit-input-placeholder {
+#main-content-column input[type=text]::-webkit-input-placeholder {
   color: #999;
 }
-#mw-content-text input[type=text]::-ms-expand {
+#main-content-column input[type=text]::-ms-expand {
   border: 0;
   background-color: transparent;
 }
-#mw-content-text input[type=text][disabled],
-#mw-content-text input[type=text][readonly],
-fieldset[disabled] #mw-content-text input[type=text] {
+#main-content-column input[type=text][disabled],
+#main-content-column input[type=text][readonly],
+fieldset[disabled] #main-content-column input[type=text] {
   background-color: #eeeeee;
   opacity: 1;
 }
-#mw-content-text input[type=text][disabled],
-fieldset[disabled] #mw-content-text input[type=text] {
+#main-content-column input[type=text][disabled],
+fieldset[disabled] #main-content-column input[type=text] {
   cursor: not-allowed;
 }
-textarea#mw-content-text input[type=text] {
+textarea#main-content-column input[type=text] {
   height: auto;
 }
 /* taken from bootstrap */
-#mw-content-text input[type=time] {
+#main-content-column input[type=time] {
   vertical-align: middle;
   height: 26pt;
   padding: 6px 12px;
@@ -4101,41 +4101,41 @@ textarea#mw-content-text input[type=text] {
   -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 }
-#mw-content-text input[type=time]:focus {
+#main-content-column input[type=time]:focus {
   border-color: #66afe9;
   outline: 0;
   -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
   box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
 }
-#mw-content-text input[type=time]::-moz-placeholder {
+#main-content-column input[type=time]::-moz-placeholder {
   color: #999;
   opacity: 1;
 }
-#mw-content-text input[type=time]:-ms-input-placeholder {
+#main-content-column input[type=time]:-ms-input-placeholder {
   color: #999;
 }
-#mw-content-text input[type=time]::-webkit-input-placeholder {
+#main-content-column input[type=time]::-webkit-input-placeholder {
   color: #999;
 }
-#mw-content-text input[type=time]::-ms-expand {
+#main-content-column input[type=time]::-ms-expand {
   border: 0;
   background-color: transparent;
 }
-#mw-content-text input[type=time][disabled],
-#mw-content-text input[type=time][readonly],
-fieldset[disabled] #mw-content-text input[type=time] {
+#main-content-column input[type=time][disabled],
+#main-content-column input[type=time][readonly],
+fieldset[disabled] #main-content-column input[type=time] {
   background-color: #eeeeee;
   opacity: 1;
 }
-#mw-content-text input[type=time][disabled],
-fieldset[disabled] #mw-content-text input[type=time] {
+#main-content-column input[type=time][disabled],
+fieldset[disabled] #main-content-column input[type=time] {
   cursor: not-allowed;
 }
-textarea#mw-content-text input[type=time] {
+textarea#main-content-column input[type=time] {
   height: auto;
 }
 /* taken from bootstrap */
-#mw-content-text input[type=url] {
+#main-content-column input[type=url] {
   vertical-align: middle;
   height: 26pt;
   padding: 6px 12px;
@@ -4152,41 +4152,41 @@ textarea#mw-content-text input[type=time] {
   -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 }
-#mw-content-text input[type=url]:focus {
+#main-content-column input[type=url]:focus {
   border-color: #66afe9;
   outline: 0;
   -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
   box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
 }
-#mw-content-text input[type=url]::-moz-placeholder {
+#main-content-column input[type=url]::-moz-placeholder {
   color: #999;
   opacity: 1;
 }
-#mw-content-text input[type=url]:-ms-input-placeholder {
+#main-content-column input[type=url]:-ms-input-placeholder {
   color: #999;
 }
-#mw-content-text input[type=url]::-webkit-input-placeholder {
+#main-content-column input[type=url]::-webkit-input-placeholder {
   color: #999;
 }
-#mw-content-text input[type=url]::-ms-expand {
+#main-content-column input[type=url]::-ms-expand {
   border: 0;
   background-color: transparent;
 }
-#mw-content-text input[type=url][disabled],
-#mw-content-text input[type=url][readonly],
-fieldset[disabled] #mw-content-text input[type=url] {
+#main-content-column input[type=url][disabled],
+#main-content-column input[type=url][readonly],
+fieldset[disabled] #main-content-column input[type=url] {
   background-color: #eeeeee;
   opacity: 1;
 }
-#mw-content-text input[type=url][disabled],
-fieldset[disabled] #mw-content-text input[type=url] {
+#main-content-column input[type=url][disabled],
+fieldset[disabled] #main-content-column input[type=url] {
   cursor: not-allowed;
 }
-textarea#mw-content-text input[type=url] {
+textarea#main-content-column input[type=url] {
   height: auto;
 }
 /* taken from bootstrap */
-#mw-content-text input[type=week] {
+#main-content-column input[type=week] {
   vertical-align: middle;
   height: 26pt;
   padding: 6px 12px;
@@ -4203,41 +4203,41 @@ textarea#mw-content-text input[type=url] {
   -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 }
-#mw-content-text input[type=week]:focus {
+#main-content-column input[type=week]:focus {
   border-color: #66afe9;
   outline: 0;
   -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
   box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
 }
-#mw-content-text input[type=week]::-moz-placeholder {
+#main-content-column input[type=week]::-moz-placeholder {
   color: #999;
   opacity: 1;
 }
-#mw-content-text input[type=week]:-ms-input-placeholder {
+#main-content-column input[type=week]:-ms-input-placeholder {
   color: #999;
 }
-#mw-content-text input[type=week]::-webkit-input-placeholder {
+#main-content-column input[type=week]::-webkit-input-placeholder {
   color: #999;
 }
-#mw-content-text input[type=week]::-ms-expand {
+#main-content-column input[type=week]::-ms-expand {
   border: 0;
   background-color: transparent;
 }
-#mw-content-text input[type=week][disabled],
-#mw-content-text input[type=week][readonly],
-fieldset[disabled] #mw-content-text input[type=week] {
+#main-content-column input[type=week][disabled],
+#main-content-column input[type=week][readonly],
+fieldset[disabled] #main-content-column input[type=week] {
   background-color: #eeeeee;
   opacity: 1;
 }
-#mw-content-text input[type=week][disabled],
-fieldset[disabled] #mw-content-text input[type=week] {
+#main-content-column input[type=week][disabled],
+fieldset[disabled] #main-content-column input[type=week] {
   cursor: not-allowed;
 }
-textarea#mw-content-text input[type=week] {
+textarea#main-content-column input[type=week] {
   height: auto;
 }
 /* taken from bootstrap */
-#mw-content-text input:not([type]) {
+#main-content-column input:not([type]) {
   vertical-align: middle;
   height: 26pt;
   padding: 6px 12px;
@@ -4254,56 +4254,56 @@ textarea#mw-content-text input[type=week] {
   -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 }
-#mw-content-text input:not([type]):focus {
+#main-content-column input:not([type]):focus {
   border-color: #66afe9;
   outline: 0;
   -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
   box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
 }
-#mw-content-text input:not([type])::-moz-placeholder {
+#main-content-column input:not([type])::-moz-placeholder {
   color: #999;
   opacity: 1;
 }
-#mw-content-text input:not([type]):-ms-input-placeholder {
+#main-content-column input:not([type]):-ms-input-placeholder {
   color: #999;
 }
-#mw-content-text input:not([type])::-webkit-input-placeholder {
+#main-content-column input:not([type])::-webkit-input-placeholder {
   color: #999;
 }
-#mw-content-text input:not([type])::-ms-expand {
+#main-content-column input:not([type])::-ms-expand {
   border: 0;
   background-color: transparent;
 }
-#mw-content-text input:not([type])[disabled],
-#mw-content-text input:not([type])[readonly],
-fieldset[disabled] #mw-content-text input:not([type]) {
+#main-content-column input:not([type])[disabled],
+#main-content-column input:not([type])[readonly],
+fieldset[disabled] #main-content-column input:not([type]) {
   background-color: #eeeeee;
   opacity: 1;
 }
-#mw-content-text input:not([type])[disabled],
-fieldset[disabled] #mw-content-text input:not([type]) {
+#main-content-column input:not([type])[disabled],
+fieldset[disabled] #main-content-column input:not([type]) {
   cursor: not-allowed;
 }
-textarea#mw-content-text input:not([type]) {
+textarea#main-content-column input:not([type]) {
   height: auto;
 }
-#mw-content-text textarea,
-#mw-content-text select,
-#mw-content-text input[type=date],
-#mw-content-text input[type=datetime],
-#mw-content-text input[type=datetime-local],
-#mw-content-text input[type=email],
-#mw-content-text input[type=month],
-#mw-content-text input[type=number],
-#mw-content-text input[type=password],
-#mw-content-text input[type=range],
-#mw-content-text input[type=search],
-#mw-content-text input[type=tel],
-#mw-content-text input[type=text],
-#mw-content-text input[type=time],
-#mw-content-text input[type=url],
-#mw-content-text input[type=week],
-#mw-content-text input:not([type]) {
+#main-content-column textarea,
+#main-content-column select,
+#main-content-column input[type=date],
+#main-content-column input[type=datetime],
+#main-content-column input[type=datetime-local],
+#main-content-column input[type=email],
+#main-content-column input[type=month],
+#main-content-column input[type=number],
+#main-content-column input[type=password],
+#main-content-column input[type=range],
+#main-content-column input[type=search],
+#main-content-column input[type=tel],
+#main-content-column input[type=text],
+#main-content-column input[type=time],
+#main-content-column input[type=url],
+#main-content-column input[type=week],
+#main-content-column input:not([type]) {
   max-width: 100%;
 }
 .input-group {

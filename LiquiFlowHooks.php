@@ -6,12 +6,12 @@
  * @author Marco Ammon <ammon.marco@t-online.de>
  */
 class LiquiFlowHooks {
-	
+
 	function __construct(){
 		global $wgHooks;
 		$wgHooks['GetPreferences'][] = 'LiquiFlowHooks::onGetPreferences';
 	}
-	
+
 	//Add skin-specific user preferences (registered in skin.json)    
 	public static function onGetPreferences($user, &$preferences) {
 		//Toggle setting to show dropdown menus on hover instead of click
@@ -28,7 +28,7 @@ class LiquiFlowHooks {
 		//Default return value for hooks
 		return true;
 	}
-	
+
 	public static function onMakeGlobalVariablesScript( array &$vars, OutputPage $out ) {
 		$context = $out->getContext();
 		global $wgParser;
@@ -77,6 +77,11 @@ class LiquiFlowHooks {
 				}
 			}
 		}
+	}
+
+	public static function onLinkerMakeExternalLink( &$url, &$text, &$link, &$attribs, $linktype ) {
+		$attribs['rel'] .= ' noopener';
+		return true;
 	}
 
 }

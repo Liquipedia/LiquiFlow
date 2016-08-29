@@ -35,7 +35,8 @@
 	},
 	"Hooks": {
 		"GetPreferences": "LiquiFlowHooks::onGetPreferences",
-		"MakeGlobalVariablesScript": "LiquiFlowHooks::onMakeGlobalVariablesScript"
+		"MakeGlobalVariablesScript": "LiquiFlowHooks::onMakeGlobalVariablesScript",
+		"LinkerMakeExternalLink": "LiquiFlowHooks::onLinkerMakeExternalLink"
 	},
 	"ResourceModules": {
 		"skins.liquiflow": {

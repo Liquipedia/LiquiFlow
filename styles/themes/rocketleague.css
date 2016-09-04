@@ -3519,7 +3519,7 @@ fieldset[disabled] #main-content-column select {
 textarea#main-content-column select {
   height: auto;
 }
-#mmain-content-column select[size] {
+#main-content-column select[size] {
   height: initial;
 }
 /* taken from bootstrap */

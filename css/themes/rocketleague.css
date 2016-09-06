@@ -8767,6 +8767,9 @@ h3 .mw-editsection {
 #fr-rating-controls {
   line-height: 3.3em;
 }
+#mw-fr-confirmreview {
+  white-space: normal !important;
+}
 @media (max-width: 900px) {
   #mw-fr-confirmreview > :not(script),
   #mw-fr-ratingselects > :not(script) {

@@ -5,7 +5,7 @@ MediaWiki Skin for Liquipedia
 
 Installation
 ============
-* Extract the skin folder to skins/
+* Extract the skin folder to skins/LiquiFlow/
 * Add the following line to LocalSettings.php:
 
 	wfLoadSkin('LiquiFlow');

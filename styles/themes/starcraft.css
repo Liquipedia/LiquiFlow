@@ -7534,6 +7534,17 @@ html {
 #mw-content-text {
   clear: both;
 }
+/* responsive floats */
+@media (min-width: 768px) {
+  .pull-right-md {
+    float: right;
+  }
+}
+@media (min-width: 992px) {
+  .pull-right-lg {
+    float: right;
+  }
+}
 /* Correct offset to top for anchors */
 .mw-headline {
   padding-top: 60px;
@@ -8835,7 +8846,9 @@ ul.mw-gallery-packed-overlay div.gallerytext {
   position: relative;
   /* Resets opacity in old IE */
 }
-li.gallerybox {
+ul.gallery li.gallerybox,
+ul.gallery li.gallerybox > div,
+ul.gallery li.gallerybox .thumb {
   max-width: 100%;
 }
 /* So that floating [edit] tags don't get pushed down by "float-right/clear-right" divs (such as thumbnail pictures) */

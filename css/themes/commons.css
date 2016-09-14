@@ -8709,6 +8709,14 @@ body.slide-active {
 .bdc-light {
   border-color: #b7b7b7;
 }
+pre,
+code,
+tt,
+kbd,
+samp,
+.mw-code {
+  font-family: 'Droid Sans Mono', monospace;
+}
 /* Keeping the anchor color and cursor for abbreviations in anchors */
 a > abbr {
   color: inherit;

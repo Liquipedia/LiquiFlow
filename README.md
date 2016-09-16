@@ -16,6 +16,7 @@ Credits
 * CodeMirror (License: MIT)
 * Bootstrap (License: MIT)
 * Font Awesome (License: SIL OFL 1.1, MIT)
+* Chosen skin for bootstrap 3 https://gist.github.com/koenpunt/6424137
 
 License
 =======

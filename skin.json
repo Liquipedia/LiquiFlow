@@ -48,12 +48,26 @@
 				"scripts/jquery.min.js",
 				"scripts/bootstrap.min.js",
 				"scripts/toc.js",
-				"scripts/lp.js",			
+				"scripts/lp.js",
 				"scripts/ie10-viewport-bug-workaround.js"
 			],
 			"position": "top",
 			"dependencies": [
-				"mediawiki.user"
+				"mediawiki.user",
+				"jquery.chosen"
+			]
+		},
+		"skins.liquiflow.bottom": {
+			"styles": [
+				"vendor/chosen/chosen.css"
+			],
+			"scripts": [
+				"scripts/chosen.js"
+			],
+			"position": "bottom",
+			"dependencies": [
+				"skins.liquiflow",
+				"jquery.chosen"
 			]
 		},
 		"skins.liquiflow.loggedin": {

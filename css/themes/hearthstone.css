@@ -3895,6 +3895,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   background-color: #f2eec7;
   margin-right: 2px;
   margin-bottom: -2px;
+  margin-top: 2px;
   border-left: 2px solid #e8e19e;
   border-top: 2px solid #e8e19e;
   border-right: 2px solid #e8e19e;
@@ -5750,6 +5751,12 @@ html {
   .pull-right-lg {
     float: right;
   }
+}
+/* confirmation bubbles */
+.postedit,
+.postedit-container {
+  z-index: 1040 !important;
+  top: 50px !important;
 }
 /* Correct offset to top for anchors */
 .mw-headline {

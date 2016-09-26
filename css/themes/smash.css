@@ -5759,7 +5759,8 @@ html {
   top: 50px !important;
 }
 /* Correct offset to top for anchors */
-.mw-headline {
+.mw-headline,
+.reference {
   padding-top: 60px;
   margin-top: -60px;
   display: inline-block;

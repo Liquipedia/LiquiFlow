@@ -196,7 +196,7 @@ class LiquiFlowTemplate extends BaseTemplate {
 					<a class="navbar-brand" href="<?php echo htmlspecialchars( $this->data['nav_urls']['mainpage']['href'] )?>"
 						<?php echo Xml::expandAttributes( Linker::tooltipAndAccesskeyAttribs( 'p-logo' ) )?>>
 						<div style="display: inline-block;">
-							<div style="float: left;"><img id="brand-logo" src="<?php $this->text( 'logopath' ) ?>" alt="Wiki-Logo" style="margin-top: -8px; height: 40px; float: left; "></div>
+							<div style="float: left;"><img id="brand-logo" src="<?php $this->text( 'logopath' ) ?>" alt="Logo" style="margin-top: -8px; height: 40px; float: left; "></div>
 							<div class="brand-name visible-xs logotype" style="white-space: nowrap; margin-left: 5px; float: left;"><?php global $wgLiquiFlowAlphawiki; echo (isset($wgLiquiFlowAlphawiki) && $wgLiquiFlowAlphawiki)?'<small>liquipedia</small> alpha':'liquipedia'; ?></div>
 						</div>
 					</a>

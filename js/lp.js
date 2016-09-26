@@ -20,7 +20,7 @@ $(document).ready(function () {
 			$('#toc-toggler').trigger('click');
 		}
 		e.preventDefault();
-		$("#mobile-search-bar, #mobile-search-form").toggle();
+		$("#mobile-search-bar").toggleClass('hidden');
 		$('#mobile-search-button').toggleClass('active');
 	});
 

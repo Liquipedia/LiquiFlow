@@ -469,7 +469,7 @@ class LiquiFlowTemplate extends BaseTemplate {
 	</div><!-- /.container-fluid -->
 </nav><!-- /.navbar -->
 
-<nav id="mobile-search-bar" class="navbar visible-xs noprint" style="display:none;">
+<nav id="mobile-search-bar" class="navbar visible-xs noprint">
 	<form action="<?php $this->text( 'wgScript' ) ?>" id="mobile-search-form" class="navbar-form navbar-left" role="search">
 		<div class="input-group">
 			<input id="searchInput-mobile" type="search" accesskey="f" title="Search Liquipedia <?php echo $wgLiquiFlowWikiTitle; ?> Wiki [alt-shift-f]" placeholder="Search Liquipedia" name="search" autocomplete="off" class="form-control">

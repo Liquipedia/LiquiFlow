@@ -6319,6 +6319,7 @@ label[for=wpRemember] {
 .input-group-btn > .searchButton-mobile {
   font-size: 14px;
   line-height: 15pt;
+  z-index: 4 !important;
 }
 .input-group-btn > .searchButton {
   height: 26pt;
@@ -6673,9 +6674,11 @@ p {
   left: 0px;
   right: 0px;
 }
+#mobile-search-bar.hidden {
+  display: none !important;
+}
 #mobile-search-form {
   margin: 0;
-  display: none;
 }
 .navbar-search-btn {
   background-color: transparent;

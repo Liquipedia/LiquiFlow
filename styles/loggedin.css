@@ -23,7 +23,8 @@
 
 @media (min-width: 768px) {
 	/* Correct offset to top for anchors */
-	.mw-headline {
+	.mw-headline,
+	.reference {
 		padding-top: 92px !important;
 		margin-top: -92px !important;
 		display: inline-block !important; /* required for webkit browsers */

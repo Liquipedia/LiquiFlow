@@ -85,6 +85,7 @@ class LiquiFlowTemplate extends BaseTemplate {
 			[ 'page' => 'MediaWiki:Liquiflow.css', 'title' => 'liquiflow-edit-liquiflow-css', 'id' => 'ad-edit-css-skin'],
 			[ 'page' => 'MediaWiki:Liquiflow.js', 'title' => 'liquiflow-edit-liquiflow-js', 'id' => 'ad-edit-js-skin'],
 			[ 'page' => 'MediaWiki:Sidebar', 'title' => 'liquiflow-edit-sidebar', 'id' => 'ad-sidebar'],
+			[ 'page' => 'MediaWiki:Sitenotice', 'title' => 'liquiflow-edit-sitenotice', 'id' => 'ad-sitenotice'],
 		],
 		'liquiflow-other' => [
 			[ 'page' => 'Special:Import', 'title' => 'liquiflow-import', 'id' => 'ad-import'],

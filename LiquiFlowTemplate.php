@@ -616,15 +616,15 @@ $footerLinks = $this->getFooterLinks();
 						<div class="col">
 							<h4><?php $this->msg( 'liquiflow-our-wikis') ?></h4>
 							<ul>
-								<li><a href="http://wiki.teamliquid.net/starcraft/" target="_blank">Brood War</a></li>
-								<li><a href="http://wiki.teamliquid.net/counterstrike/" target="_blank">Counter-Strike</a></li>
-								<li><a href="http://wiki.teamliquid.net/dota2/" target="_blank">Dota 2</a></li>
-								<li><a href="http://wiki.teamliquid.net/hearthstone/" target="_blank">Hearthstone</a></li>
-								<li><a href="http://wiki.teamliquid.net/heroes/" target="_blank">Heroes of the Storm</a></li>
-								<li><a href="http://wiki.teamliquid.net/overwatch/" target="_blank">Overwatch</a></li>
-								<li><a href="http://wiki.teamliquid.net/smash/" target="_blank">Smash</a></li>
-								<li><a href="http://wiki.teamliquid.net/starcraft2/" target="_blank">StarCraft II</a></li>
-								<li><a href="http://wiki.teamliquid.net/commons/" target="_blank">Commons</a></li>
+								<li><a href="/starcraft/" target="_blank">Brood War</a></li>
+								<li><a href="/counterstrike/" target="_blank">Counter-Strike</a></li>
+								<li><a href="/dota2/" target="_blank">Dota 2</a></li>
+								<li><a href="/hearthstone/" target="_blank">Hearthstone</a></li>
+								<li><a href="/heroes/" target="_blank">Heroes of the Storm</a></li>
+								<li><a href="/overwatch/" target="_blank">Overwatch</a></li>
+								<li><a href="/smash/" target="_blank">Smash</a></li>
+								<li><a href="/starcraft2/" target="_blank">StarCraft II</a></li>
+								<li><a href="/commons/" target="_blank">Commons</a></li>
 							</ul>
 						</div>
 					</div>
@@ -632,9 +632,9 @@ $footerLinks = $this->getFooterLinks();
 					<div class="col-md-2 col-sm-3 col-xs-6">
 						<h4><?php $this->msg( 'liquiflow-alpha-wikis') ?></h4>
 						<ul>
-							<li><a href="http://wiki.teamliquid.net/warcraft/" target="_blank">Warcraft III</a></li>
-							<li><a href="http://wiki.teamliquid.net/fighters/" target="_blank">Fighting Games</a></li>
-							<li><a href="http://wiki.teamliquid.net/rocketleague/" target="_blank">Rocket League</a></li>
+							<li><a href="/warcraft/" target="_blank">Warcraft III</a></li>
+							<li><a href="/fighters/" target="_blank">Fighting Games</a></li>
+							<li><a href="/rocketleague/" target="_blank">Rocket League</a></li>
 						</ul>
 						<h4><?php $this->msg( 'about') ?></h4>
 						<ul>

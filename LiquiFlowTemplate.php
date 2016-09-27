@@ -613,48 +613,48 @@ $footerLinks = $this->getFooterLinks();
 
 					<div class="col-md-2 col-sm-3 col-xs-6">
 						<div class="col">
-							<h4><?php $this->msg( 'liquiflow-our-wikis') ?></h4>
+							<h4><?php echo $this->msg( 'liquiflow-our-wikis'); ?></h4>
 							<ul>
-								<li><a href="http://wiki.teamliquid.net/starcraft/" target="_blank">Brood War</a></li>
-								<li><a href="http://wiki.teamliquid.net/counterstrike/" target="_blank">Counter-Strike</a></li>
-								<li><a href="http://wiki.teamliquid.net/dota2/" target="_blank">Dota 2</a></li>
-								<li><a href="http://wiki.teamliquid.net/hearthstone/" target="_blank">Hearthstone</a></li>
-								<li><a href="http://wiki.teamliquid.net/heroes/" target="_blank">Heroes of the Storm</a></li>
-								<li><a href="http://wiki.teamliquid.net/overwatch/" target="_blank">Overwatch</a></li>
-								<li><a href="http://wiki.teamliquid.net/smash/" target="_blank">Smash</a></li>
-								<li><a href="http://wiki.teamliquid.net/starcraft2/" target="_blank">StarCraft II</a></li>
-								<li><a href="http://wiki.teamliquid.net/commons/" target="_blank">Commons</a></li>
+								<li><a href="/starcraft/" target="_blank">Brood War</a></li>
+								<li><a href="/counterstrike/" target="_blank">Counter-Strike</a></li>
+								<li><a href="/dota2/" target="_blank">Dota 2</a></li>
+								<li><a href="/hearthstone/" target="_blank">Hearthstone</a></li>
+								<li><a href="/heroes/" target="_blank">Heroes of the Storm</a></li>
+								<li><a href="/overwatch/" target="_blank">Overwatch</a></li>
+								<li><a href="/smash/" target="_blank">Smash</a></li>
+								<li><a href="/starcraft2/" target="_blank">StarCraft II</a></li>
+								<li><a href="/commons/" target="_blank">Commons</a></li>
 							</ul>
 						</div>
 					</div>
 
 					<div class="col-md-2 col-sm-3 col-xs-6">
-						<h4><?php $this->msg( 'liquiflow-alpha-wikis') ?></h4>
+						<h4><?php echo $this->msg( 'liquiflow-alpha-wikis'); ?></h4>
 						<ul>
-							<li><a href="http://wiki.teamliquid.net/warcraft/" target="_blank">Warcraft III</a></li>
-							<li><a href="http://wiki.teamliquid.net/fighters/" target="_blank">Fighting Games</a></li>
-							<li><a href="http://wiki.teamliquid.net/rocketleague/" target="_blank">Rocket League</a></li>
+							<li><a href="/warcraft/" target="_blank">Warcraft III</a></li>
+							<li><a href="/fighters/" target="_blank">Fighting Games</a></li>
+							<li><a href="/rocketleague/" target="_blank">Rocket League</a></li>
 						</ul>
-						<h4><?php $this->msg( 'about') ?></h4>
+						<h4><?php echo $this->msg( 'about'); ?></h4>
 						<ul>
 							<?php foreach ( $footerLinks['places'] as $link ) :	?>
 								<li id="footer-places-<?php echo $link; ?>">
-									<?php $this->html( $link );?>
+									<?php echo $this->html( $link );?>
 								</li>
 							<?php endforeach; ?>
 						</ul>
 					</div>
 					<div class="col-md-2 col-sm-3 hidden-xs">
-						<h4><?php $this->msg( 'liquiflow-contact-us') ?></h4>
+						<h4><?php echo $this->msg( 'liquiflow-contact-us'); ?></h4>
 						<ul>
-							<li><a href="mailto:liquipedia@teamliquid.net"><?php $this->msg( 'liquiflow-send-an-email') ?></a></li>
-							<li><a href="http://www.teamliquid.net/forum/website-feedback/94785-liquipedia-feedback-thread" target="_blank"><?php $this->msg( 'liquiflow-post-feedback') ?></a></li>
-							<li><a href="http://webchat.quakenet.org/?channels=%23liquipedia" target="_blank"><?php $this->msg( 'liquiflow-chat-with-us') ?></a></li>
+							<li><a href="mailto:liquipedia@teamliquid.net"><?php echo $this->msg( 'liquiflow-send-an-email'); ?></a></li>
+							<li><a href="http://www.teamliquid.net/forum/website-feedback/94785-liquipedia-feedback-thread" target="_blank"><?php echo $this->msg( 'liquiflow-post-feedback'); ?></a></li>
+							<li><a href="http://webchat.quakenet.org/?channels=%23liquipedia" target="_blank"><?php echo $this->msg( 'liquiflow-chat-with-us'); ?></a></li>
 						</ul>
 					</div>
 
 					<div class="col-md-2 hidden-sm col-xs-6">
-						<h4><?php $this->msg( 'liquiflow-affiliated-sites') ?></h4>
+						<h4><?php echo $this->msg( 'liquiflow-affiliated-sites'); ?></h4>
 						<ul>
 							<li><a href="http://www.teamliquid.net" target="_blank">TeamLiquid.net</a></li>
 							<li><a href="http://www.liquiddota.com" target="_blank">LiquidDota.com</a></li>
@@ -664,10 +664,10 @@ $footerLinks = $this->getFooterLinks();
 					</div>
 
 					<div class="col-md-2 col-sm-3 col-xs-12">
-						<h4 class="hidden-xs"><?php $this->msg( 'liquiflow-follow-us') ?></h4>
+						<h4 class="hidden-xs"><?php echo $this->msg( 'liquiflow-follow-us'); ?></h4>
 						<ul id="footer-social-media">
 							<li>
-								<a target="_blank" href="http://twitter.com/LiquipediaNet" class="social-icon twitter-icon">
+								<a target="_blank" href="https://twitter.com/LiquipediaNet" class="social-icon twitter-icon">
 									<span class="social-link">Twitter</span>
 								</a>
 							</li>
@@ -682,12 +682,12 @@ $footerLinks = $this->getFooterLinks();
 								</a>
 							</li>
 							<li>
-								<a target="_blank" href="http://www.twitch.tv/liquipedia" class="social-icon twitch-icon">
+								<a target="_blank" href="https://www.twitch.tv/liquipedia" class="social-icon twitch-icon">
 									<span class="social-link">Twitch</span>
 								</a>
 							</li>
 							<li>
-								<a target="_blank" href="http://github.com/Liquipedia" class="social-icon github-icon">
+								<a target="_blank" href="https://github.com/Liquipedia" class="social-icon github-icon">
 									<span class="social-link">GitHub</span>
 								</a>
 							</li>
@@ -703,7 +703,7 @@ $footerLinks = $this->getFooterLinks();
 				if (isset($footerLinks['info']) && is_array($footerLinks['info'])) {
 					foreach ( $footerLinks['info'] as $link ) {	?>
 						<li id="footer-info-<?php echo $link; ?>">
-							<?php $this->html( $link );?>
+							<?php echo $this->html( $link );;?>
 						</li>
 				<?php
 					}
@@ -804,7 +804,7 @@ $footerLinks = $this->getFooterLinks();
 		?>
 		<div class="portal" role="navigation" id='<?php echo Sanitizer::escapeId( "p-$name" )?>'<?php echo Linker::tooltip( 'p-' . $name )?>
 			 aria-labelledby='<?php echo Sanitizer::escapeId( "p-$name-label" ) ?>'>
-			<h3 <?php $this->html( 'userlangattributes' )?> id='<?php echo Sanitizer::escapeId( "p-$name-label" ) ?>'>
+			<h3 <?php echo $this->html( 'userlangattributes' ); ?> id='<?php echo Sanitizer::escapeId( "p-$name-label" ) ?>'>
 				<?php echo htmlspecialchars( $msgObj->exists() ? $msgObj->text() : $msg ); ?>
 			</h3>
 
@@ -1055,14 +1055,14 @@ $footerLinks = $this->getFooterLinks();
 					$toolbox = $this->getToolbox();
 					?>
 						<ul class="dropdown-menu">
-							<li class="dropdown-header"><?php $this->msg( 'liquiflow-general' ); ?></li>
+							<li class="dropdown-header"><?php echo $this->msg( 'liquiflow-general' ); ?></li>
 							<li><a href="<?php echo Title::newFromText('RecentChanges', NS_SPECIAL)->getLocalURL(); ?>" <?php echo Xml::expandAttributes( Linker::tooltipAndAccesskeyAttribs( 'n-recentchanges' ) ); ?>><span class="fa fa-fw fa-clock-o"></span><?php $this->msg( 'recentchanges' ); ?></a></li>
 							<li><a href="<?php echo Title::newFromText('PendingChanges', NS_SPECIAL)->getLocalURL(); ?>"><span class="fa fa-fw fa-circle-o-notch"></span><?php $this->msg( 'revreview-current' ); ?></a></li>
 							<?php if ( in_array( 'editor', $wgUser->getEffectiveGroups()) ) { ?><li><a href="<?php echo Title::newFromText('UnreviewedPages', NS_SPECIAL)->getLocalURL(); ?>"><span class="fa fa-fw fa-circle-o"></span><?php $this->msg( 'unreviewedpages' ); ?></a></li><?php } ?>
 							<li><a href="<?php echo Title::newFromText('Random', NS_SPECIAL)->getLocalURL(); ?>" <?php echo Xml::expandAttributes( Linker::tooltipAndAccesskeyAttribs( 'n-randompage' ) ); ?>><span class="fa fa-fw fa-random"></span><?php $this->msg( 'randompage' ); ?></a></li>
 
 							<li class="divider"></li>
-							<li class="dropdown-header"><?php $this->msg( 'liquiflow-tools-specific' ); ?></li>
+							<li class="dropdown-header"><?php echo $this->msg( 'liquiflow-tools-specific' ); ?></li>
 							<?php
 							foreach ( $toolbox as $key => $item ) {
 								if($view == 'mobile') { 
@@ -1109,11 +1109,11 @@ $footerLinks = $this->getFooterLinks();
 						foreach ($this->adminDropdown as $header => $items) :
 							$count++;
 						?>
-							<li class="dropdown-header"><?php $this->msg( $header ); ?></li>
+							<li class="dropdown-header"><?php echo $this->msg( $header ); ?></li>
 							<?php foreach ($items as $key => $item) : ?>
 								<li id="<?php echo $item['id'] . (($view == 'mobile')?'-mobile':''); ?>">
 									<a href="<?php echo $this->data['serverurl'] . str_replace('$1', $item['page'], $this->data['articlepath']) ?>">
-										<?php $this->msg( $item['title'] )?>
+										<?php echo $this->msg( $item['title'] ); ?>
 									</a>
 								</li>
 							<?php endforeach; ?>
@@ -1128,10 +1128,10 @@ $footerLinks = $this->getFooterLinks();
 					global $wgLiquiFlowWikiTitle;
 					?>
 					<li class="hidden-xs">
-						<form action="<?php $this->text( 'wgScript' ) ?>" id="searchform" class="navbar-form" role="search">
+						<form action="<?php echo $this->text( 'wgScript' ); ?>" id="searchform" class="navbar-form" role="search">
 							<div class="input-group">
-								<input  id="searchInput" type="search" accesskey="<?php $this->msg( 'accesskey-search' ); ?>"
-									title="<?php $this->msg( 'liquiflow-search' ); ?> Liquipedia <?php echo $wgLiquiFlowWikiTitle;?> Wiki [alt-shift-<?php $this->msg( 'accesskey-search' ); ?>]" placeholder="<?php $this->msg( 'liquiflow-search-placeholder' ); ?>"
+								<input  id="searchInput" type="search" accesskey="<?php echo $this->msg( 'accesskey-search' ); ?>"
+									title="<?php echo $this->msg( 'liquiflow-search' ); ?> Liquipedia <?php echo $wgLiquiFlowWikiTitle;?> Wiki [alt-shift-<?php echo $this->msg( 'accesskey-search' ); ?>]" placeholder="<?php echo $this->msg( 'liquiflow-search-placeholder' ); ?>"
 									name="search" autocomplete="off" class="form-control">
 								<div class="input-group-btn">
 									<button class="btn btn-default searchButton" type="submit" id="searchButton">

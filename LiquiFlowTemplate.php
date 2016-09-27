@@ -539,13 +539,13 @@ class LiquiFlowTemplate extends BaseTemplate {
 		<div id="main-content-column" class="col-md-12">
 			<div id="main-content" class="mw-body">
 
-				<?php Hooks::run( 'LiquiFlowAdTop', array( __DIR__ ) ); ?>
-
 				<?php if ( $this->data['sitenotice'] ) : ?>
 				<div id="siteNotice">
 					<?php $this->html( 'sitenotice' ) ?>
 				</div>
 				<?php endif; ?>
+
+				<?php Hooks::run( 'LiquiFlowAdTop', array( __DIR__ ) ); ?>
 
 				<h1 id="firstHeading" class="firstHeading">
 					<span dir="auto"><?php $this->html( 'title' ) ?></span>

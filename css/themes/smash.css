@@ -6430,8 +6430,10 @@ p {
 }
 #main-content-column {
   background: #fff;
-  padding-top: 10px;
   padding-bottom: 10px;
+}
+#siteNotice {
+  margin-top: 10px;
 }
 .lp-icon {
   display: inline-block;
@@ -6887,6 +6889,14 @@ body.slide-active {
 }
 .mobile-divider {
   border-bottom: 1px solid #000;
+}
+#brand-logo {
+  margin-top: -8px;
+  height: 40px;
+  float: left;
+}
+@media (max-width: 331px) {
+  padding: 15px 9px;
 }
 .wiki-color-dark,
 .c-dark {

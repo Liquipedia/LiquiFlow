@@ -133,14 +133,14 @@ $(document).click(function (e) {
 /* Social media share links */
 Share = {
 	facebook: function(purl, ptitle) {
-		url = 'http://www.facebook.com/sharer.php?s=100';
+		url = 'https://www.facebook.com/sharer.php?s=100';
 		url += '&p[title]=' + encodeURIComponent(ptitle);
 		url += '&p[url]=' + encodeURIComponent(purl);
 		Share.popup(url);
 	},
 	twitter: function(purl, ptitle) {
 		purl = purl.replace(/ /g, '_');
-		url = 'http://twitter.com/share?';
+		url = 'https://twitter.com/share?';
 		url += 'text=' + encodeURIComponent(ptitle);
 		url += '&url=' + encodeURIComponent(purl);
 		url += '&counturl=' + encodeURIComponent(purl);
@@ -153,7 +153,7 @@ Share = {
 		Share.popup(url);
 	},
 	googleplus: function(purl) {
-		url = 'http://plus.google.com/share?';
+		url = 'https://plus.google.com/share?';
 		url += 'url=' + encodeURIComponent(purl);
 		Share.popup(url);
 	},

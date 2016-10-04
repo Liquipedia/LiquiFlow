@@ -3917,12 +3917,16 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   color: #444;
 }
 .nav-tabs > li > a:not(.new) {
-  color: #444;
+  color: #337ab7;
+  margin-right: 0;
+}
+.nav-tabs > li > a:not(.new):hover {
+  color: #23527c;
   margin-right: 0;
 }
 .nav-tabs > li:hover > span > span > a:not(.new) {
   background-color: #eebc14;
-  color: #444;
+  color: #23527c;
 }
 .tabs-static .nav-tabs > li > a {
   margin-right: 0;

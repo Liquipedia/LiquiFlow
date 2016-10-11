@@ -3291,7 +3291,7 @@ fieldset[disabled] #main-content-column input[type=button].focus {
 #main-content-column input[type=number],
 #main-content-column input[type=password],
 #main-content-column input[type=range],
-#main-content-column input[type=search],
+#main-content-column input[type=search]:not(#searchInput),
 #main-content-column input[type=tel],
 #main-content-column input[type=text],
 #main-content-column input[type=time],
@@ -3325,7 +3325,7 @@ fieldset[disabled] #main-content-column input[type=button].focus {
 #main-content-column input[type=number]:focus,
 #main-content-column input[type=password]:focus,
 #main-content-column input[type=range]:focus,
-#main-content-column input[type=search]:focus,
+#main-content-column input[type=search]:not(#searchInput):focus,
 #main-content-column input[type=tel]:focus,
 #main-content-column input[type=text]:focus,
 #main-content-column input[type=time]:focus,
@@ -3347,7 +3347,7 @@ fieldset[disabled] #main-content-column input[type=button].focus {
 #main-content-column input[type=number]::-moz-placeholder,
 #main-content-column input[type=password]::-moz-placeholder,
 #main-content-column input[type=range]::-moz-placeholder,
-#main-content-column input[type=search]::-moz-placeholder,
+#main-content-column input[type=search]:not(#searchInput)::-moz-placeholder,
 #main-content-column input[type=tel]::-moz-placeholder,
 #main-content-column input[type=text]::-moz-placeholder,
 #main-content-column input[type=time]::-moz-placeholder,
@@ -3367,7 +3367,7 @@ fieldset[disabled] #main-content-column input[type=button].focus {
 #main-content-column input[type=number]:-ms-input-placeholder,
 #main-content-column input[type=password]:-ms-input-placeholder,
 #main-content-column input[type=range]:-ms-input-placeholder,
-#main-content-column input[type=search]:-ms-input-placeholder,
+#main-content-column input[type=search]:not(#searchInput):-ms-input-placeholder,
 #main-content-column input[type=tel]:-ms-input-placeholder,
 #main-content-column input[type=text]:-ms-input-placeholder,
 #main-content-column input[type=time]:-ms-input-placeholder,
@@ -3386,7 +3386,7 @@ fieldset[disabled] #main-content-column input[type=button].focus {
 #main-content-column input[type=number]::-webkit-input-placeholder,
 #main-content-column input[type=password]::-webkit-input-placeholder,
 #main-content-column input[type=range]::-webkit-input-placeholder,
-#main-content-column input[type=search]::-webkit-input-placeholder,
+#main-content-column input[type=search]:not(#searchInput)::-webkit-input-placeholder,
 #main-content-column input[type=tel]::-webkit-input-placeholder,
 #main-content-column input[type=text]::-webkit-input-placeholder,
 #main-content-column input[type=time]::-webkit-input-placeholder,
@@ -3405,7 +3405,7 @@ fieldset[disabled] #main-content-column input[type=button].focus {
 #main-content-column input[type=number]::-ms-expand,
 #main-content-column input[type=password]::-ms-expand,
 #main-content-column input[type=range]::-ms-expand,
-#main-content-column input[type=search]::-ms-expand,
+#main-content-column input[type=search]:not(#searchInput)::-ms-expand,
 #main-content-column input[type=tel]::-ms-expand,
 #main-content-column input[type=text]::-ms-expand,
 #main-content-column input[type=time]::-ms-expand,
@@ -3425,7 +3425,7 @@ fieldset[disabled] #main-content-column input[type=button].focus {
 #main-content-column input[type=number][disabled],
 #main-content-column input[type=password][disabled],
 #main-content-column input[type=range][disabled],
-#main-content-column input[type=search][disabled],
+#main-content-column input[type=search]:not(#searchInput)[disabled],
 #main-content-column input[type=tel][disabled],
 #main-content-column input[type=text][disabled],
 #main-content-column input[type=time][disabled],
@@ -3442,7 +3442,7 @@ fieldset[disabled] #main-content-column input[type=button].focus {
 #main-content-column input[type=number][readonly],
 #main-content-column input[type=password][readonly],
 #main-content-column input[type=range][readonly],
-#main-content-column input[type=search][readonly],
+#main-content-column input[type=search]:not(#searchInput)[readonly],
 #main-content-column input[type=tel][readonly],
 #main-content-column input[type=text][readonly],
 #main-content-column input[type=time][readonly],
@@ -3459,7 +3459,7 @@ fieldset[disabled] #main-content-column input[type=month],
 fieldset[disabled] #main-content-column input[type=number],
 fieldset[disabled] #main-content-column input[type=password],
 fieldset[disabled] #main-content-column input[type=range],
-fieldset[disabled] #main-content-column input[type=search],
+fieldset[disabled] #main-content-column input[type=search]:not(#searchInput),
 fieldset[disabled] #main-content-column input[type=tel],
 fieldset[disabled] #main-content-column input[type=text],
 fieldset[disabled] #main-content-column input[type=time],
@@ -3479,7 +3479,7 @@ fieldset[disabled] #main-content-column input:not([type]) {
 #main-content-column input[type=number][disabled],
 #main-content-column input[type=password][disabled],
 #main-content-column input[type=range][disabled],
-#main-content-column input[type=search][disabled],
+#main-content-column input[type=search]:not(#searchInput)[disabled],
 #main-content-column input[type=tel][disabled],
 #main-content-column input[type=text][disabled],
 #main-content-column input[type=time][disabled],
@@ -3496,7 +3496,7 @@ fieldset[disabled] #main-content-column input[type=month],
 fieldset[disabled] #main-content-column input[type=number],
 fieldset[disabled] #main-content-column input[type=password],
 fieldset[disabled] #main-content-column input[type=range],
-fieldset[disabled] #main-content-column input[type=search],
+fieldset[disabled] #main-content-column input[type=search]:not(#searchInput),
 fieldset[disabled] #main-content-column input[type=tel],
 fieldset[disabled] #main-content-column input[type=text],
 fieldset[disabled] #main-content-column input[type=time],
@@ -3515,13 +3515,58 @@ textarea#main-content-column input[type=month],
 textarea#main-content-column input[type=number],
 textarea#main-content-column input[type=password],
 textarea#main-content-column input[type=range],
-textarea#main-content-column input[type=search],
+textarea#main-content-column input[type=search]:not(#searchInput),
 textarea#main-content-column input[type=tel],
 textarea#main-content-column input[type=text],
 textarea#main-content-column input[type=time],
 textarea#main-content-column input[type=url],
 textarea#main-content-column input[type=week],
 textarea#main-content-column input:not([type]) {
+  height: auto;
+}
+#searchInput {
+  max-width: 100%;
+  vertical-align: middle;
+  height: 26pt;
+  padding: 6px 12px;
+  font-size: 11pt;
+  line-height: 1.42857143;
+  color: #555555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 0px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+#searchInput::-moz-placeholder {
+  color: #999;
+  opacity: 1;
+}
+#searchInput:-ms-input-placeholder {
+  color: #999;
+}
+#searchInput::-webkit-input-placeholder {
+  color: #999;
+}
+#searchInput::-ms-expand {
+  border: 0;
+  background-color: transparent;
+}
+#searchInput[disabled],
+#searchInput[readonly],
+fieldset[disabled] #searchInput {
+  background-color: #eeeeee;
+  opacity: 1;
+}
+#searchInput[disabled],
+fieldset[disabled] #searchInput {
+  cursor: not-allowed;
+}
+textarea#searchInput {
   height: auto;
 }
 #main-content-column textarea {

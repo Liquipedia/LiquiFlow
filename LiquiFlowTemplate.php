@@ -1131,9 +1131,9 @@ $footerLinks = $this->getFooterLinks();
 					<li class="hidden-xs">
 						<form action="<?php echo $this->text( 'wgScript' ); ?>" id="searchform" class="navbar-form" role="search">
 							<div class="input-group">
-								<input  id="searchInput" type="search" accesskey="<?php echo $this->msg( 'accesskey-search' ); ?>"
+								<input id="searchInput" type="search" accesskey="<?php echo $this->msg( 'accesskey-search' ); ?>"
 									title="<?php echo $this->msg( 'liquiflow-search' ); ?> Liquipedia <?php echo $wgLiquiFlowWikiTitle;?> Wiki [alt-shift-<?php echo $this->msg( 'accesskey-search' ); ?>]" placeholder="<?php echo $this->msg( 'liquiflow-search-placeholder' ); ?>"
-									name="search" autocomplete="off" class="form-control">
+									name="search" autocomplete="off">
 								<div class="input-group-btn">
 									<button class="btn btn-default searchButton" type="submit" id="searchButton">
 										<i class="fa fa-fw fa-search"></i>

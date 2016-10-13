@@ -1,42 +1,44 @@
 /* Fix second navbar for logged-in users */
-@media (min-width: 768px) {
+@media (min-width:768px) {
 	#wiki-nav {
-		position: fixed;
-		left: 0px;
-		right: 0px;
-		z-index: 990;
+		position:fixed;
+		left:0px;
+		right:0px;
+		z-index:990;
 	}
 }
 
 /* Push content down below the second navbar */
 /* Second navbar is hidden on mobile */
-@media (min-width: 768px) and (max-width: 991px) {
+@media (min-width:768px) and (max-width:991px) {
 	.container-fluid.main-content {
-		margin-top: 40px !important;
+		margin-top:40px !important;
 	}
 }
-@media (min-width: 992px) {
+@media (min-width:992px) {
 	.container-fluid.main-content {
-		margin-top: 38px !important;
+		margin-top:38px !important;
 	}
 }
 
-@media (min-width: 768px) {
+@media (min-width:768px) {
 	/* Correct offset to top for anchors */
 	.mw-headline,
 	.reference {
-		padding-top: 92px !important;
-		margin-top: -92px !important;
-		display: inline-block !important; /* required for webkit browsers */
+		padding-top:92px !important;
+		margin-top:-92px !important;
+		display:inline-block !important; /* required for webkit browsers */
 	}
 }
 #sidebar-toc.affix-top {
-	margin-top: 8px !important;
+	margin-top:0 !important;
+	position:fixed !important;
+	top:89px !important;
 }
 #sidebar-toc.affix {
-	top: 89px !important;
+	top:89px !important;
 }
 
 #sidebar-toc-column {
-	margin-top: -2px !important;
+	margin-top:-2px !important;
 }

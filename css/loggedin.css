@@ -31,7 +31,8 @@
     }
 }
 #sidebar-toc.affix-top {
-    margin-top: 8px !important;
+    position:fixed;
+    top:89px !important;
 }
 #sidebar-toc.affix {
     top: 89px !important;

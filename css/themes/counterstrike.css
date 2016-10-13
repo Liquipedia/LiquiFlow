@@ -5914,12 +5914,14 @@ h2 {
   width: 300px;
 }
 #sidebar-toc.affix-top {
-  margin-top: 8px;
-  position: inherit;
+  position: fixed;
+  top: 89px;
+  transition: .5s;
 }
 #sidebar-toc.affix {
   position: fixed;
   top: 57px;
+  transition: .5s;
 }
 #sidebar-toc.affix-bottom {
   position: fixed;
@@ -5934,6 +5936,7 @@ h2 {
 /* less margin for the first ul-level of the sidebar-toc */
 #sidebar-toc > ul {
   margin-left: 0px;
+  transition: .5s;
 }
 #sidebar-toc ul li {
   list-style: outside none none;

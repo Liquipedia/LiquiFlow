@@ -51,7 +51,7 @@ function adjustSidebar() {
 		$('#sidebar-toc').css('bottom', ($('#footer').outerHeight() + 10) - distanceToBottom - ($('#sidebar-ad').length?$('#sidebar-ad').outerHeight():-10) - 18);
 	}
 	
-	$('#sidebar-toc > .nav').css('max-height', ($(window).height() - (tocTopOffset + secondNavbar + 18) - (navMaxHeightAd?($('#sidebar-ad').length?($('#sidebar-ad').outerHeight() + 35):35):tocHeightModifier) + tocBottomOffset - ($('#sidebar-toc').hasClass('affix-top') && $('body').hasClass('logged-out')?40:0)) + 'px');
+	$('#sidebar-toc > .nav').css('max-height', ($(window).height() - (tocTopOffset + secondNavbar + 18) - (navMaxHeightAd?($('#sidebar-ad').length?($('#sidebar-ad').outerHeight() + 35):35):tocHeightModifier) + tocBottomOffset - ($('#sidebar-toc').hasClass('affix-top') && $('body').hasClass('logged-out')?32:0)) + 'px');
 
 	lastScrollTop = $(window).scrollTop();
 }

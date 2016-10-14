@@ -6,11 +6,6 @@
  * @author Marco Ammon <ammon.marco@t-online.de>
  */
 class LiquiFlowHooks {
-	
-	function __construct(){
-		global $wgHooks;
-		$wgHooks['GetPreferences'][] = 'LiquiFlowHooks::onGetPreferences';
-	}
 
 	//Add skin-specific user preferences (registered in skin.json)    
 	public static function onGetPreferences($user, &$preferences) {
@@ -23,6 +18,11 @@ class LiquiFlowHooks {
 		$preferences['liquiflow-prefs-use-codemirror'] = array(
 			'type' => 'check',
 			'label-message' => 'liquiflow-prefs-use-codemirror', // a system message
+			'section' => 'editing/liquiflow'
+		);
+		$preferences['liquiflow-prefs-show-buggy-editor-tabs'] = array(
+			'type' => 'check',
+			'label-message' => 'liquiflow-prefs-show-buggy-editor-tabs', // a system message
 			'section' => 'editing/liquiflow'
 		);
 		//Default return value for hooks

@@ -76,6 +76,15 @@
 				"skins.liquiflow"
 			]
 		},
+		"skins.liquiflow.removebuggyeditortabs": {
+			"styles": [
+				"styles/removebuggyeditortabs.css"
+			],
+			"position": "top",
+			"dependencies": [
+				"skins.liquiflow"
+			]
+		},
 		"skins.liquiflow.codemirror": {
 			"styles": [
 				"vendor/codemirror/lib/codemirror.css",

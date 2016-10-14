@@ -81,7 +81,7 @@
 		},
 		"skins.liquiflow.removebuggyeditortabs": {
 			"styles": [
-				"styles/removebuggyeditortabs.css"
+				"css/removebuggyeditortabs.css"
 			],
 			"position": "top",
 			"dependencies": [

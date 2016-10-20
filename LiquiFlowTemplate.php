@@ -8,63 +8,63 @@
 class LiquiFlowTemplate extends BaseTemplate {
 
 	private $icons = [
-			// Wiki actions
-			'subject' => [
-				'subject-0' => 'fa fa-fw fa-file-text-o',
-				'subject-2' => 'fa fa-fw fa-user',
-				'subject-6' => 'fa fa-fw fa-file-image-o',
-				'subject-8' => 'fa fa-fw fa-file-code-o',
-				'subject-10' => 'fa fa-fw fa-file-code-o',
-				'subject-12' => 'fa fa-fw fa-question-circle-o',
-				'subject-14' => 'fa fa-fw fa-folder-o',
-			],
-			'subjectdefault' => 'fa fa-fw fa-file-text-o',
-			'main' => 'fa fa-fw fa-file-text-o',
-			'view' => 'fa fa-fw fa-file-text-o',
-			'talk' => 'fa fa-fw fa-comments-o',
-			'history' => 'fa fa-fw fa-history',
-			'edit' => 'fa fa-fw fa-pencil',
-			'watch' => 'fa fa-fw fa-bookmark-o',
-			'unwatch' => 'fa fa-fw fa-bookmark',
-			'delete' => 'fa fa-fw fa-trash-o',
-			'undelete' => 'fa fa-fw fa-undo',
-			'move' => 'fa fa-fw fa-exchange',
-			'protect' => 'fa fa-fw fa-unlock-alt',
-			'unprotect' => 'fa fa-fw fa-lock',
-			'purge' => 'fa fa-fw fa-repeat',
-			'addsection' => 'fa fa-fw fa-plus',
-			'stability' => 'fa fa-fw fa-check-circle-o',
-			'viewsource' => 'fa fa-fw fa-code',
-			'current' => 'fa fa-fw fa-circle-o-notch',
-			'default' => 'fa fa-fw fa-pause-circle-o',
-			'view-foreign' => 'fa fa-fw fa-hdd-o',
+		// Wiki actions
+		'subject' => [
+			'subject-0' => 'fa fa-fw fa-file-text-o',
+			'subject-2' => 'fa fa-fw fa-user',
+			'subject-6' => 'fa fa-fw fa-file-image-o',
+			'subject-8' => 'fa fa-fw fa-file-code-o',
+			'subject-10' => 'fa fa-fw fa-file-code-o',
+			'subject-12' => 'fa fa-fw fa-question-circle-o',
+			'subject-14' => 'fa fa-fw fa-folder-o',
+		],
+		'subjectdefault' => 'fa fa-fw fa-file-text-o',
+		'main' => 'fa fa-fw fa-file-text-o',
+		'view' => 'fa fa-fw fa-file-text-o',
+		'talk' => 'fa fa-fw fa-comments-o',
+		'history' => 'fa fa-fw fa-history',
+		'edit' => 'fa fa-fw fa-pencil',
+		'watch' => 'fa fa-fw fa-bookmark-o',
+		'unwatch' => 'fa fa-fw fa-bookmark',
+		'delete' => 'fa fa-fw fa-trash-o',
+		'undelete' => 'fa fa-fw fa-undo',
+		'move' => 'fa fa-fw fa-exchange',
+		'protect' => 'fa fa-fw fa-unlock-alt',
+		'unprotect' => 'fa fa-fw fa-lock',
+		'purge' => 'fa fa-fw fa-repeat',
+		'addsection' => 'fa fa-fw fa-plus',
+		'stability' => 'fa fa-fw fa-check-circle-o',
+		'viewsource' => 'fa fa-fw fa-code',
+		'current' => 'fa fa-fw fa-circle-o-notch',
+		'default' => 'fa fa-fw fa-pause-circle-o',
+		'view-foreign' => 'fa fa-fw fa-hdd-o',
 
-			// Tools
-			't-whatlinkshere' => 'fa fa-fw fa-link',
-			't-print' => 'fa fa-fw fa-print',
-			't-recentchangeslinked' => 'liquipedia-custom-icon liquipedia-custom-icon-related-changes',
-			't-specialpages' => 'fa fa-fw fa-magic',
-			't-permalink' => 'fa fa-fw fa-dot-circle-o',
-			't-info' => 'fa fa-fw fa-info',
-			't-smwbrowselink' => 'fa fa-fw fa-thumb-tack',
-			't-upload' => 'fa fa-fw fa-upload',
-			't-blockip' => 'fa fa-fw fa-ban',
-			't-log' => 'fa fa-fw fa-book',
-			't-contributions' => 'fa fa-fw fa-puzzle-piece',
-			't-userrights' => 'fa fa-fw fa-list-alt',
-			'feed-atom' => 'fa fa-fw fa-rss',
+		// Tools
+		't-whatlinkshere' => 'fa fa-fw fa-link',
+		't-print' => 'fa fa-fw fa-print',
+		't-recentchangeslinked' => 'liquipedia-custom-icon liquipedia-custom-icon-related-changes',
+		't-specialpages' => 'fa fa-fw fa-magic',
+		't-permalink' => 'fa fa-fw fa-dot-circle-o',
+		't-info' => 'fa fa-fw fa-info',
+		't-smwbrowselink' => 'fa fa-fw fa-thumb-tack',
+		't-upload' => 'fa fa-fw fa-upload',
+		't-blockip' => 'fa fa-fw fa-ban',
+		't-log' => 'fa fa-fw fa-book',
+		't-contributions' => 'fa fa-fw fa-puzzle-piece',
+		't-userrights' => 'fa fa-fw fa-list-alt',
+		'feed-atom' => 'fa fa-fw fa-rss',
 
-			// Personal
-			'pt-user' => 'fa fa-fw fa-user',
-			'pt-userpage' => 'fa fa-fw fa-home',
-			'pt-mytalk' => 'fa fa-fw fa-inbox',
-			'pt-preferences' => 'fa fa-fw fa-sliders',
-			'pt-watchlist' => 'fa fa-fw fa-bookmark',
-			'pt-mycontris' => 'fa fa-fw fa-puzzle-piece',
-			'pt-createaccount' => 'fa fa-fw fa-user-plus',
-			'pt-logout' => 'fa fa-fw fa-sign-out',
-			'pt-login' => 'fa fa-fw fa-sign-in',
-			'pt-adminlinks' => 'fa fa-fw fa-gavel',
+		// Personal
+		'pt-user' => 'fa fa-fw fa-user',
+		'pt-userpage' => 'fa fa-fw fa-home',
+		'pt-mytalk' => 'fa fa-fw fa-inbox',
+		'pt-preferences' => 'fa fa-fw fa-sliders',
+		'pt-watchlist' => 'fa fa-fw fa-bookmark',
+		'pt-mycontris' => 'fa fa-fw fa-puzzle-piece',
+		'pt-createaccount' => 'fa fa-fw fa-user-plus',
+		'pt-logout' => 'fa fa-fw fa-sign-out',
+		'pt-login' => 'fa fa-fw fa-sign-in',
+		'pt-adminlinks' => 'fa fa-fw fa-gavel',
 	];
 
 	private $adminDropdown = [
@@ -167,7 +167,7 @@ class LiquiFlowTemplate extends BaseTemplate {
 		if (isset($match[0])) {
 			$toc = substr($match[0], 0, -6);
 			$toc = str_replace('<ul>', '<ul class="nav">', $toc);
-			
+
 			// Adjust Data-Targets in menu so scrollspy works properly with special characters
 			preg_match_all('/\<a href=\"(.*?)\"\>/', $toc, $toc_matches);
 			foreach($toc_matches[1] as $match) {
@@ -390,7 +390,7 @@ class LiquiFlowTemplate extends BaseTemplate {
 								</a>
 								<?php $this->renderNavigation( 'ADMIN', 'mobile' ); ?>
 							</li>
-							<?php endif; ?>		
+							<?php endif; ?>
 							<?php
 								if ( !$wgUser->isLoggedIn() ) {
 									$personalTools = $this->getPersonalTools();
@@ -453,7 +453,7 @@ class LiquiFlowTemplate extends BaseTemplate {
 
 								$personalTools['login']['links'][0]['text'] = "";
 								$personalTools['login']['class'] = "icon-tablet hidden-xs";
-								
+
 								echo $this->makeListItem( 'createaccount', $personalTools['createaccount'] );
 								echo $this->makeListItem( 'login', $personalTools['login'] );
 							}
@@ -504,14 +504,14 @@ class LiquiFlowTemplate extends BaseTemplate {
 								<span class="fa fa-fw fa-wrench"></span> <span class="hidden-sm"><?php $this->msg( 'toolbox' ); ?></span> <span class="caret"></span>
 							</a>
 							<?php $this->renderNavigation( 'TOOLBOX' ); ?>
-						</li>						
+						</li>
 						<?php if ( in_array( 'sysop', $wgUser->getEffectiveGroups()) ) : ?>
 						<li class="dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="#">
 								<span class="fa fa-fw fa-gavel"></span> <span class="caret"></span>
 							</a>
 							<?php $this->renderNavigation( 'ADMIN' ); ?>
-						</li>									
+						</li>
 						<?php endif; ?>
 						<?php $this->renderNavigation( 'PERSONAL' ); ?>
 					</ul><!-- /.navbar-right -->
@@ -1001,7 +1001,7 @@ $footerLinks = $this->getFooterLinks();
 					<?php
 					break;
 				case 'SHARE': ?>
-					
+
 						<ul class="dropdown-menu">
 							<?php
 								$externalLink = $this->data['serverurl'] . str_replace('$1', $this->data['title'], $this->data['articlepath']);
@@ -1047,10 +1047,10 @@ $footerLinks = $this->getFooterLinks();
 								</a>
 							</li>
 						</ul>
-						
-					<?php 
+
+					<?php
 					break;
-				
+
 				case 'TOOLBOX':
 					global $wgUser;
 					$toolbox = $this->getToolbox();
@@ -1066,10 +1066,10 @@ $footerLinks = $this->getFooterLinks();
 							<li class="dropdown-header"><?php echo $this->msg( 'liquiflow-tools-specific' ); ?></li>
 							<?php
 							foreach ( $toolbox as $key => $item ) {
-								if($view == 'mobile') { 
+								if($view == 'mobile') {
 									$item['single-id'] = $item['id'];
-									$item['id'] = $item['id'] . "-mobile"; 
-								
+									$item['id'] = $item['id'] . "-mobile";
+
 								}
 								echo $this->makeListItem( $key, $item );
 							}
@@ -1124,7 +1124,7 @@ $footerLinks = $this->getFooterLinks();
 						<?php endforeach; ?>
 					</ul>
 					<?php break;
-				
+
 				case 'SEARCH':
 					global $wgLiquiFlowWikiTitle;
 					?>

@@ -7279,6 +7279,10 @@ body.logged-in .hide-logged-in,
 body.logged-out .hide-logged-out {
   display: none;
 }
+/* SMW concept pages */
+a[name="SMWResults"] + #mw-pages table td {
+  word-break: break-all;
+}
 /* Underlining for abbreviations */
 @supports (text-decoration:underline dotted) {
   abbr[title],

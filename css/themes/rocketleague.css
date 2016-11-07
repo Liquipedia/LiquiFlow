@@ -1477,13 +1477,13 @@ th {
   padding: 5px;
   line-height: 1.42857143;
   vertical-align: top;
-  border-top: 1px solid #ddd;
+  border-top: 1px solid #ddd !important;
 }
 .table > thead > tr > th,
 .wikitable > thead > tr > th {
   background-color: #f5f5f5;
   vertical-align: bottom;
-  border-bottom: 2px solid #ddd;
+  border-bottom: 2px solid #ddd !important;
 }
 .table > caption + thead > tr:first-child > th,
 .wikitable > caption + thead > tr:first-child > th,
@@ -1501,11 +1501,11 @@ th {
 }
 .table > tbody + tbody,
 .wikitable > tbody + tbody {
-  border-top: 2px solid #ddd;
+  border-top: 2px solid #ddd !important;
 }
 .table .table,
 .wikitable .table {
-  background-color: #e5e5e5;
+  background-color: #e5e5e5 !important;
 }
 .table-condensed > thead > tr > th,
 .table-condensed > tbody > tr > th,
@@ -1517,7 +1517,7 @@ th {
 }
 .table-bordered,
 .wikitable {
-  border: 1px solid #ddd;
+  border: 1px solid #ddd !important;
 }
 .table-bordered > thead > tr > th,
 .wikitable > thead > tr > th,
@@ -1531,7 +1531,7 @@ th {
 .wikitable > tbody > tr > td,
 .table-bordered > tfoot > tr > td,
 .wikitable > tfoot > tr > td {
-  border: 1px solid #ddd;
+  border: 1px solid #ddd !important;
 }
 .table-bordered > thead > tr > th,
 .wikitable > thead > tr > th,
@@ -1682,7 +1682,7 @@ table th[class*="col-"] {
   .table-responsive > .table > thead > tr > td,
   .table-responsive > .table > tbody > tr > td,
   .table-responsive > .table > tfoot > tr > td {
-    white-space: nowrap;
+    /*white-space:nowrap;*/
   }
   .table-responsive > .table-bordered {
     border: 0;

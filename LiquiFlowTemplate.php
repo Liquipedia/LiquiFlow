@@ -29,7 +29,7 @@ class LiquiFlowTemplate extends BaseTemplate {
 		'delete' => 'fa fa-fw fa-trash-o',
 		'undelete' => 'fa fa-fw fa-undo',
 		'move' => 'fa fa-fw fa-exchange',
-		'protect' => 'fa fa-fw fa-unlock-alt',
+		'protect' => 'fa fa-fw fa-unlock',
 		'unprotect' => 'fa fa-fw fa-lock',
 		'purge' => 'fa fa-fw fa-repeat',
 		'addsection' => 'fa fa-fw fa-plus',

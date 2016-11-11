@@ -1084,7 +1084,7 @@ $footerLinks = $this->getFooterLinks();
 						?>
 						<li class="dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="#">
-								<span class="fa fa-fw fa-user"></span> <span class="hidden-sm"><?php echo $personalTools["userpage"]["links"][0]["text"]; ?></span>
+								<span class="fa fa-fw fa-user-circle-o"></span> <span class="hidden-sm"><?php echo $personalTools["userpage"]["links"][0]["text"]; ?></span>
 								<span class="caret"></span>
 							</a>
 							<ul class="dropdown-menu multi-level">

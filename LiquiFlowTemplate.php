@@ -198,7 +198,7 @@ class LiquiFlowTemplate extends BaseTemplate {
 						<?php echo Xml::expandAttributes( Linker::tooltipAndAccesskeyAttribs( 'p-logo' ) )?>>
 						<div style="display: inline-block;">
 							<div style="float:left;"><img id="brand-logo" src="<?php $this->text( 'logopath' ) ?>" alt="Logo"></div>
-							<div class="brand-name visible-xs logotype" style="white-space: nowrap; margin-left: 5px; float: left;"><?php global $wgLiquiFlowAlphawiki; echo (isset($wgLiquiFlowAlphawiki) && $wgLiquiFlowAlphawiki)?'<small>liquipedia</small> alpha':'liquipedia'; ?></div>
+							<div class="brand-name visible-xs logotype" style="white-space: nowrap; margin-left: 5px; float: left;"><?php global $wgLiquiFlowAlphawiki; echo (isset($wgLiquiFlowAlphawiki) && $wgLiquiFlowAlphawiki)?'<small>' . wfMessage( 'liquiflow-brand' )->inContentLanguage()->parse() . '</small> alpha':wfMessage( 'liquiflow-brand' )->inContentLanguage()->parse(); ?></div>
 						</div>
 					</a>
 
@@ -232,7 +232,7 @@ class LiquiFlowTemplate extends BaseTemplate {
 						?>
 							<li class="dropdown dropdown-brand hidden-xs">
 								<a class="dropdown-toggle brand-title" data-toggle="dropdown" data-hover="dropdown" href="#">
-									<span id="brand-desktop" class="brand-name logotype" style="font-size: 18px;"><?php global $wgLiquiFlowAlphawiki; echo (isset($wgLiquiFlowAlphawiki) && $wgLiquiFlowAlphawiki)?'<small>liquipedia</small> alpha':'liquipedia'; ?></span> <span class="caret"></span> <br>
+									<span id="brand-desktop" class="brand-name logotype" style="font-size: 18px;"><?php global $wgLiquiFlowAlphawiki; echo (isset($wgLiquiFlowAlphawiki) && $wgLiquiFlowAlphawiki)?'<small>' . wfMessage( 'liquiflow-brand' )->inContentLanguage()->parse() . '</small> alpha':wfMessage( 'liquiflow-brand' )->inContentLanguage()->parse(); ?></span> <span class="caret"></span> <br>
 									<span class="hidden-xs brand-subtitle">
 										<?php echo $currentWikiTitle; ?>
 									</span>
@@ -473,7 +473,7 @@ class LiquiFlowTemplate extends BaseTemplate {
 <nav id="mobile-search-bar" class="navbar visible-xs noprint hidden">
 	<form action="<?php $this->text( 'wgScript' ) ?>" id="mobile-search-form" class="navbar-form navbar-left" role="search">
 		<div class="input-group">
-			<input id="searchInput-mobile" type="search" accesskey="f" title="Search Liquipedia <?php echo $wgLiquiFlowWikiTitle; ?> Wiki [alt-shift-f]" placeholder="Search Liquipedia" name="search" autocomplete="off" class="form-control">
+			<input id="searchInput-mobile" type="search" accesskey="f" title="Search <?php echo wfMessage( 'liquiflow-brand' )->inContentLanguage()->parse() . ' ' . $wgLiquiFlowWikiTitle; ?> Wiki [alt-shift-f]" placeholder="Search <?php echo wfMessage( 'liquiflow-brand' )->inContentLanguage()->parse() ?>" name="search" autocomplete="off" class="form-control">
 			<div class="input-group-btn">
 				<button class="btn navbar-search-btn searchButton" type="submit" id="searchButton-mobile">
 					<i class="fa fa-arrow-right"></i>
@@ -1133,7 +1133,7 @@ $footerLinks = $this->getFooterLinks();
 						<form action="<?php $this->text( 'wgScript' ) ?>" id="searchform" class="navbar-form" role="search">
 							<div class="input-group">
 								<input id="searchInput" type="search" accesskey="<?php $this->msg( 'accesskey-search' ); ?>"
-									title="<?php $this->msg( 'liquiflow-search' ); ?> Liquipedia <?php echo $wgLiquiFlowWikiTitle;?> Wiki [alt-shift-<?php $this->msg( 'accesskey-search' ); ?>]" placeholder="<?php $this->msg( 'liquiflow-search-placeholder' ); ?>"
+									title="<?php $this->msg( 'liquiflow-search' ) . ' ' . wfMessage( 'liquiflow-brand' )->inContentLanguage()->parse() . ' ' . $wgLiquiFlowWikiTitle;?> Wiki [alt-shift-<?php $this->msg( 'accesskey-search' ); ?>]" placeholder="<?php $this->msg( 'liquiflow-search-placeholder' ); ?>"
 									name="search" autocomplete="off">
 								<div class="input-group-btn">
 									<button class="btn btn-default searchButton" type="submit" id="searchButton">

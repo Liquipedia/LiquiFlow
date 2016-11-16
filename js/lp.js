@@ -112,6 +112,18 @@ $(document).ready(function () {
 			.popover();
 	});
 
+	/* Popover achievements */
+	$('[data-toggle="popover-hover"]').hover(function() {
+		$(this).popover('show');
+	}, function() {
+		$(this).popover('hide');
+	});
+
+	/* Popover for other things 8on click) */
+	$(function() {
+		$('[data-toggle="popover"]').popover()
+	})
+
 });
 
 /* Hide the slide-in nav/toc if an area outside of it is clicked */

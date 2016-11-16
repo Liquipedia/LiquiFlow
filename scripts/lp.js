@@ -124,6 +124,11 @@ $(document).ready(function () {
 		$('[data-toggle="popover"]').popover()
 	})
 
+	/* Tooltips */
+	$(function() {
+		$('[data-toggle="tooltip"]').tooltip()
+	});
+
 });
 
 /* Hide the slide-in nav/toc if an area outside of it is clicked */

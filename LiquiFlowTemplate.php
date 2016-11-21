@@ -614,7 +614,7 @@ $footerLinks = $this->getFooterLinks();
 
 					<div class="col-md-2 col-sm-3 col-xs-6">
 						<div class="col">
-							<h4><?php echo $this->msg( 'liquiflow-our-wikis'); ?></h4>
+							<h4><?php echo $this->msg( 'liquiflow-our-wikis' ); ?></h4>
 							<ul>
 								<li><a href="/starcraft/" target="_blank">Brood War</a></li>
 								<li><a href="/counterstrike/" target="_blank">Counter-Strike</a></li>
@@ -631,7 +631,7 @@ $footerLinks = $this->getFooterLinks();
 					</div>
 
 					<div class="col-md-2 col-sm-3 col-xs-6">
-						<h4><?php echo $this->msg( 'liquiflow-alpha-wikis'); ?></h4>
+						<h4><?php echo $this->msg( 'liquiflow-alpha-wikis' ); ?></h4>
 						<ul>
 							<li><a href="/warcraft/" target="_blank">Warcraft III</a></li>
 							<li><a href="/fighters/" target="_blank">Fighting Games</a></li>

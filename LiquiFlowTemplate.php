@@ -646,7 +646,7 @@ $footerLinks = $this->getFooterLinks();
 						</ul>
 					</div>
 					<div class="col-md-2 col-sm-3 hidden-xs">
-						<h4><?php echo $this->msg( 'liquiflow-contact-us'); ?></h4>
+						<h4><?php echo $this->msg( 'liquiflow-contact-us' ); ?></h4>
 						<ul>
 							<li><a href="mailto:liquipedia@teamliquid.net"><?php echo $this->msg( 'liquiflow-send-an-email'); ?></a></li>
 							<li><a href="http://www.teamliquid.net/forum/website-feedback/94785-liquipedia-feedback-thread" target="_blank"><?php echo $this->msg( 'liquiflow-post-feedback'); ?></a></li>
@@ -655,7 +655,7 @@ $footerLinks = $this->getFooterLinks();
 					</div>
 
 					<div class="col-md-2 hidden-sm col-xs-6">
-						<h4><?php echo $this->msg( 'liquiflow-affiliated-sites'); ?></h4>
+						<h4><?php echo $this->msg( 'liquiflow-affiliated-sites' ); ?></h4>
 						<ul>
 							<li><a href="http://www.teamliquid.net" target="_blank">TeamLiquid.net</a></li>
 							<li><a href="http://www.liquiddota.com" target="_blank">LiquidDota.com</a></li>
@@ -665,7 +665,7 @@ $footerLinks = $this->getFooterLinks();
 					</div>
 
 					<div class="col-md-2 col-sm-3 col-xs-12">
-						<h4 class="hidden-xs"><?php echo $this->msg( 'liquiflow-follow-us'); ?></h4>
+						<h4 class="hidden-xs"><?php echo $this->msg( 'liquiflow-follow-us' ); ?></h4>
 						<ul id="footer-social-media">
 							<li>
 								<a target="_blank" href="https://twitter.com/LiquipediaNet" class="social-icon twitter-icon">

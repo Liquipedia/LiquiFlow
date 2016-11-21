@@ -623,6 +623,7 @@ $footerLinks = $this->getFooterLinks();
 								<li><a href="/hearthstone/" target="_blank">Hearthstone</a></li>
 								<li><a href="/heroes/" target="_blank">Heroes of the Storm</a></li>
 								<li><a href="/overwatch/" target="_blank">Overwatch</a></li>
+								<li><a href="/rocketleague/" target="_blank">Rocket League</a></li>
 								<li><a href="/smash/" target="_blank">Smash</a></li>
 								<li><a href="/starcraft2/" target="_blank">StarCraft II</a></li>
 								<li><a href="/commons/" target="_blank">Commons</a></li>
@@ -635,7 +636,6 @@ $footerLinks = $this->getFooterLinks();
 						<ul>
 							<li><a href="/warcraft/" target="_blank">Warcraft III</a></li>
 							<li><a href="/fighters/" target="_blank">Fighting Games</a></li>
-							<li><a href="/rocketleague/" target="_blank">Rocket League</a></li>
 						</ul>
 						<h4><?php $this->msg( 'about') ?></h4>
 						<ul>

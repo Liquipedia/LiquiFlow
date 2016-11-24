@@ -1,0 +1,10 @@
+.liquipedia-custom-icon-box {
+	width:1.28571429em;
+	text-align:center;
+	display: inline-block;
+	font:normal normal normal 14px/1 'Liquipedia Custom Icons';
+	text-rendering:auto;
+	-webkit-font-smoothing:antialiased;
+	-moz-osx-font-smoothing:grayscale;
+	font-size:53px;
+}

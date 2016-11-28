@@ -1,4 +1,3 @@
-div[rel=wikiEditor-ui-view-preview],
-div[rel=wikiEditor-ui-view-changes] {
+.wikiEditor-ui-controls {
 	display:none;
 }

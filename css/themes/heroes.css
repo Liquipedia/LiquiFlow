@@ -5926,6 +5926,12 @@ html {
   display: inline-block;
   /* required for webkit browsers */
 }
+.reference {
+  pointer-events: none;
+}
+.reference > * {
+  pointer-events: auto;
+}
 hr {
   background-color: #dddddd;
   border: 0 none;

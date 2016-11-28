@@ -1,0 +1,296 @@
+/* This file is for overwriting some of Mediawiki's default styling */
+
+/* Preferences */
+#preferences .mainLegend {
+	display:none;
+}
+
+#preftoc {
+	margin:0px 0px -2px;
+}
+
+#preferences {
+	border:1px solid #ccc;
+	margin:0 0px;
+}
+
+#preftoc ul,
+#preftoc li {
+	display:inline;
+	list-style:none;
+}
+#preftoc li a {
+	position:relative;
+	z-index:2;
+	font:inherit;
+	margin:0;
+	padding:8px 15px;
+	display:inline-block;
+}
+#preftoc li.selected a {
+	background-color:#ffffff;
+	border:1px solid #cccccc;
+	border-bottom:none;
+	color:inherit;
+	cursor:default;
+	padding:7px 14px;
+}
+#preferences fieldset.prefsection {
+	margin:0;
+	padding:40px;
+}
+
+#preferences legend {
+	border-bottom:none;
+}
+
+#preferences fieldset + fieldset > legend {
+	padding-top:40px;
+}
+
+#preferences .mw-label label {
+	white-space:nowrap;
+	margin:0;
+	color:#777777;
+}
+
+#preferences td {
+	padding:5px;
+}
+
+#preferences .htmlform-tip {
+	color:#999999;
+	padding:1em 0 3em 12em;
+}
+
+#preferences div.mw-prefs-buttons {
+	margin:20px auto 0;
+	padding:40px 40px 20px;
+	text-align:center;
+	overflow:hidden;
+}
+.mw-prefs-buttons a,
+.mw-prefs-buttons input {
+	font:inherit;
+	padding:3px 15px;
+}
+.mw-prefs-buttons a {
+	padding:8px 20px;
+	float:left;
+}
+.mw-prefs-buttons input {
+	float:right;
+}
+
+@media(max-width:800px) {
+	#preferences table {
+		table-layout:fixed;
+	}
+	#preferences td {
+		display:block;;
+		padding:0;
+	}
+	td.mw-label {
+		text-align:left;
+	}
+	.prefsection {
+		padding:5px !important;
+		width:calc(100% - 10px) !important;
+		max-width:calc(100% - 10px) !important;
+		white-space:pre-wrap;
+	}
+	.htmlform-tip {
+		padding:5px !important;
+	}
+	.mw-prefs-buttons {
+		padding:5px !important;
+	}
+	.prefsection fieldset {
+		width:100%;
+	}
+	#preferences .mw-label label {
+		word-wrap:normal !important;
+		white-space:pre !important;
+		width:100%;
+		max-width:100%;
+	}
+	#mw-input-wpnickname,
+	.mw-input input[type="text"],
+	.mw-input input[type="number"] {
+		width:100% !important;
+		min-width:0;
+		box-sizing:border-box;
+	}
+}
+
+/* History */
+
+#contentSub br {
+	display:none;
+}
+
+#mw-revision-info,
+#mw-revision-nav {
+	background:#f6f6f6;
+	border:1px solid #eee;
+	display:block;
+	margin:0 auto;
+	padding:20px;
+	text-align:center;
+	width:auto;
+}
+
+#mw-revision-info {
+	border-bottom:none;
+	font-size:16px;
+	padding-bottom:0.25em;
+}
+#mw-revision-nav {
+	border-top:none;
+	margin-top:0;
+	padding-top:0;
+}
+
+
+/* Add some extra vertical spacing for phones */
+@media (max-width:767px) {
+	[class*="span"] + [class*="span"] {
+		clear:both;
+		margin-top:40px;
+	}
+}
+
+/* Extra padding */
+@media (min-width:768px) {
+	.pad-left-small,
+	.pad-right-small,
+	.pad-sides-small,
+	.pad-left,
+	.pad-right,
+	.pad-sides {
+		-moz-box-sizing:border-box;
+		-webkit-box-sizing:border-box;
+		box-sizing:border-box;
+	}
+	.pad-left-small,
+	.pad-sides-small {
+		padding-left:10px;
+	}
+	.pad-right-small,
+	.pad-sides-small {
+		padding-right:10px;
+	}
+	.pad-left,
+	.pad-sides {
+		padding-left:20px;
+	}
+	.pad-right,
+	.pad-sides {
+		padding-right:20px;
+	}
+	.pad-left-small .column-split,
+	.pad-right-small .column-split,
+	.pad-sides-small .column-split {
+		-moz-column-gap:30px;
+		-webkit-column-gap:30px;
+		column-gap:30px;
+	}
+	.pad-left .column-split,
+	.pad-right .column-split,
+	.pad-sides .column-split {
+		-moz-column-gap:40px;
+		-webkit-column-gap:40px;
+		column-gap:40px;
+	}
+}
+
+.mw-changeslist-legend dd {
+	line-height:1.5em;
+}
+
+label[for=wpPassword1]{
+	width:100%;
+}
+
+label[for=wpRemember]{
+	padding-left:2px;
+}
+.input-group-btn > .searchButton,
+.input-group-btn > .searchButton-mobile {
+	font-size:14px;
+	line-height:@line-height-computed;
+	z-index:4 !important;
+}
+.input-group-btn > .searchButton {
+	height:26pt;
+}
+
+/*
+ul#pagehistory > .mw-history-histlinks {
+	margin-right:5px;
+}
+*/
+
+ul#pagehistory input {
+	margin-left:5px;
+	margin-right:3px;
+}
+
+.mw-history-compareselectedversions-button {
+	margin-bottom:5px;
+}
+a.new:hover,
+a.new:focus {
+	color:#ba0000;
+}
+
+td.mw-label {
+	padding:2px;
+	vertical-align:top;
+}
+
+/* Padding for input fields */
+td.mw-input {
+	padding:2px;
+}
+
+/* Fix overlapping thumbnails */
+div.thumbinner {
+	box-sizing:content-box;
+}
+
+@media (max-width:480px) {
+	div.thumb {
+		width:100%;
+	}
+}
+
+.mw-content-ltr ul.nav-tabs,
+.mw-content-rtl .mw-content-ltr ul.nav-tabs {
+	margin:0.3em 0 0.3em 0;
+}
+
+.wikiEditor-ui * {
+	box-sizing:content-box;
+}
+
+.wikiEditor-ui-bottom * {
+	box-sizing:border-box;
+}
+
+#upload-div * {
+	box-sizing:content-box;
+}
+
+#contentSub,
+#contentSub2 {
+	margin:0 0 1.4em 0;
+}
+
+.mw-specialpages-table {
+	margin-top:-5px;
+}
+
+a.feedlink {
+	background-image:none;
+}

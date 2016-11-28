@@ -1,0 +1,132 @@
+#footer h4 {
+	font-family:'Roboto', sans-serif;
+	font-weight:500;
+	font-size:12pt;
+	color:#7c7c7c;
+	padding-bottom:0;
+	margin-bottom:0;
+	line-height:1.4;
+}
+
+#footer {
+	color:@text-color;
+	background:@navbar-inverse-bg;
+	border-top:1px solid darken(@navbar-inverse-bg, 10%);
+	height:330px;
+	width:100%;
+	margin-top:0;
+}
+#footer > * {
+	background:@navbar-inverse-bg;
+	//border-top:1px solid darken(@navbar-inverse-bg, 10%);
+}
+
+@media (max-width:1310px) {
+	#footer {
+		margin-top:10px;
+	}
+}
+
+@media (max-width:767px) {
+	#footer {
+		height:400px;
+	}
+}
+
+#footer a,
+#footer a:visited {
+	color:@navbar-inverse-link-color;
+}
+
+#footer a:active,
+#footer a:hover {
+	// color:@navbar-inverse-link-hover-color
+}
+
+#footer ul {
+	display:block;
+	margin:0 auto 1em;
+}
+
+#footer ul, #footer li {
+	list-style:outside none none;
+	padding:0;
+}
+
+ul#f-list {
+	line-height:1.6em;
+	list-style-type:none;
+	margin-left:0;
+	margin-bottom:0;
+}
+
+ul#f-list li {
+	margin:0 1.3em;
+}
+
+#footer-logo-big {
+	background-image:url(../../images/lp_logo_big.png);
+	background-repeat:no-repeat;
+	background-size:150px;
+	display:block;
+	height:150px;
+	text-align:center;
+	margin-top:13px;
+}
+
+ul#footer-social-media li {
+	max-height:32px;
+	height:32px;
+	line-height:34px;
+	overflow:hidden; // important, fixing bug (?) in FF
+
+	&> a {
+		background-repeat:no-repeat;
+		display:block;
+	}
+}
+
+a.social-icon {
+	width:32px;
+	height:32px;
+	background-size:32px 64px;
+	background-position:0 -32px;
+
+	&:hover {
+		background-position:0 0;
+	}
+
+	&> span.social-link {
+		line-height:32px;
+		padding-left:36px;
+	}
+}
+
+a.facebook-icon {
+	background-image:url(../../images/footer-icons/InfoboxIcon_Facebook.png);
+}
+a.twitch-icon {
+	background-image:url(../../images/footer-icons/InfoboxIcon_Twitch.png);
+}
+a.twitter-icon {
+	background-image:url(../../images/footer-icons/InfoboxIcon_Twitter.png);
+}
+a.youtube-icon {
+	background-image:url(../../images/footer-icons/InfoboxIcon_YouTube.png);
+}
+a.github-icon {
+	background-image:url(../../images/footer-icons/InfoboxIcon_GitHub.png);
+}
+@media(max-width:767px) {
+	span.social-link {
+		display:none;
+	}
+	#footer-social-media {
+		display:flex !important;
+		justify-content:space-around;
+	}
+	#footer li {
+		line-height:120%;
+		margin-bottom:5%;
+	}
+}

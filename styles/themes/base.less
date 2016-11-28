@@ -1,0 +1,1104 @@
+// Core variables and mixins
+@import "variables.less";
+@import "../../vendor/bootstrap/less/mixins.less";
+
+// Reset and dependencies
+@import "../../vendor/bootstrap/less/normalize.less";
+@import "../../vendor/bootstrap/less/print.less";
+//@import "../../vendor/bootstrap/less/glyphicons.less";
+
+// Core CSS
+@import "../../vendor/bootstrap/less/scaffolding.less";
+@import "../../vendor/bootstrap/less/type.less";
+@import "../../vendor/bootstrap/less/code.less";
+@import "../../vendor/bootstrap/less/grid.less";
+@media (min-width:@screen-md-min) {
+	.container-fluid {
+		margin-left:auto;
+		margin-right:auto;
+		max-width:990px;
+	}
+}
+@media (min-width:@screen-lg-min) {
+	.container-fluid {
+		margin-left:310px;
+		max-width:990px;
+	}
+}
+@media (min-width:@screen-xl-min) {
+	.container-fluid {
+		margin-left:auto;
+		margin-right:auto;
+		max-width:990px;
+	}
+}
+
+@import "components/tables.less";
+.table,
+.wikitable {
+	width:auto;
+}
+.table-full-width {
+	width:100%;
+}
+
+.table-responsive > table {
+	white-space:nowrap;
+	margin-bottom:0;
+}
+.table-responsive {
+	@media screen and (max-width:@screen-xs-max) {
+		margin-bottom:0;
+	}
+}
+.table > thead > tr > th, 
+.table > tbody > tr > th, 
+.table > tfoot > tr > th, 
+.table > thead > tr > td, 
+.table > tbody > tr > td, 
+.table > tfoot > tr > td {
+	vertical-align:middle;
+}
+.wikitable > thead > tr > th, 
+.wikitable > tbody > tr > th, 
+.wikitable > tfoot > tr > th, 
+.wikitable > thead > tr > td, 
+.wikitable > tbody > tr > td, 
+.wikitable > tfoot > tr > td {
+	vertical-align:middle;
+	border-color:@table-border-color;
+}
+@media(max-width:767px) {
+	.table-responsive {
+		border:0;
+	}
+	.table-responsive > .table-bordered {
+		border:1px solid #dddddd;
+	}
+}
+td.mw-label {
+	vertical-align:middle !important;
+}
+
+@import "../../vendor/bootstrap/less/forms.less";
+@import "../../vendor/bootstrap/less/buttons.less";
+
+// Components
+@import "../../vendor/bootstrap/less/component-animations.less";
+@import "../../vendor/bootstrap/less/dropdowns.less";
+/* Add a pointer cursor for share menu points which don't have an href but onclick js-event */
+.dropdown-menu > li > a {
+	&:hover,
+	&:focus {
+		cursor:pointer;
+	}
+}
+
+@import "../../vendor/bootstrap/less/button-groups.less";
+
+/* taken from bootstrap */
+#main-content-column button,
+#main-content-column input[type=submit],
+#main-content-column input[type=button] {
+	.button-variant(@btn-primary-color; @btn-primary-bg; @btn-primary-border);
+	display:inline-block;
+	margin-bottom:0;
+	font-weight:normal;
+	text-align:center;
+	vertical-align:middle;
+	touch-action:manipulation;
+	cursor:pointer;
+	background-image:none;
+	border:1px solid transparent;
+	white-space:nowrap;
+	padding:6px 12px;
+	font-size:11pt;
+	line-height:1.42857143;
+	border-radius:0px;
+	-webkit-user-select:none;
+	-moz-user-select:none;
+	-ms-user-select:none;
+	user-select:none;
+	&:focus,
+	&:active:focus,
+	&.active:focus,
+	&.focus,
+	&:active.focus,
+	&.active.focus {
+		outline:thin dotted;
+		outline:5px auto -webkit-focus-ring-color;
+		outline-offset:-2px;
+	}
+	&:hover,
+	&:focus,
+	&.focus {
+		color:#333333;
+		text-decoration:none;
+	}
+	&:active,
+	&.active {
+		outline:0;
+		background-image:none;
+		-webkit-box-shadow:inset 0 3px 5px rgba(0, 0, 0, 0.125);
+		box-shadow:inset 0 3px 5px rgba(0, 0, 0, 0.125);
+	}
+	&.disabled,
+	&[disabled] {
+		cursor:not-allowed;
+		opacity:0.65;
+		filter:alpha(opacity=65);
+		-webkit-box-shadow:none;
+		box-shadow:none;
+	}
+}
+
+/* taken from bootstrap */
+#main-content-column textarea,
+#main-content-column select,
+#main-content-column input[type=date],
+#main-content-column input[type=datetime],
+#main-content-column input[type=datetime-local],
+#main-content-column input[type=email],
+#main-content-column input[type=month],
+#main-content-column input[type=number],
+#main-content-column input[type=password],
+#main-content-column input[type=range],
+#main-content-column input[type=search]:not(#searchInput),
+#main-content-column input[type=tel],
+#main-content-column input[type=text],
+#main-content-column input[type=time],
+#main-content-column input[type=url],
+#main-content-column input[type=week],
+#main-content-column input:not([type]) {
+	max-width:100%;
+	vertical-align:middle;
+	height:@input-height-base; // Make inputs at least the height of their button counterpart (base line-height + padding + border)
+	padding:@padding-base-vertical @padding-base-horizontal;
+	font-size:@font-size-base;
+	line-height:@line-height-base;
+	color:@input-color;
+	background-color:@input-bg;
+	background-image:none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+	border:1px solid @input-border;
+	border-radius:@input-border-radius; // Note: This has no effect on <select>s in some browsers, due to the limited stylability of <select>s in CSS.
+	.box-shadow(inset 0 1px 1px rgba(0,0,0,.075));
+	.transition(~"border-color ease-in-out .15s, box-shadow ease-in-out .15s");
+
+	// Customize the `:focus` state to imitate native WebKit styles.
+	.form-control-focus();
+
+	// Placeholder
+	.placeholder();
+
+	// Unstyle the caret on `<select>`s in IE10+.
+	&::-ms-expand {
+		border:0;
+		background-color:transparent;
+	}
+
+	// Disabled and read-only inputs
+	//
+	// HTML5 says that controls under a fieldset > legend:first-child won't be
+	// disabled if the fieldset is disabled. Due to implementation difficulty, we
+	// don't honor that edge case; we style them as disabled anyway.
+	&[disabled],
+	&[readonly],
+	fieldset[disabled] & {
+		background-color:@input-bg-disabled;
+		opacity:1; // iOS fix for unreadable disabled content; see https://github.com/twbs/bootstrap/issues/11655
+	}
+
+	&[disabled],
+	fieldset[disabled] & {
+		cursor:@cursor-disabled;
+	}
+
+	// Reset height for `textarea`s
+	textarea& {
+		height:auto;
+	}
+}
+#searchInput {
+	max-width:100%;
+	vertical-align:middle;
+	height:@input-height-base; // Make inputs at least the height of their button counterpart (base line-height + padding + border)
+	padding:@padding-base-vertical @padding-base-horizontal;
+	font-size:@font-size-base;
+	line-height:@line-height-base;
+	color:@input-color;
+	background-color:@input-bg;
+	background-image:none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+	border:1px solid @input-border;
+	border-radius:@input-border-radius; // Note: This has no effect on <select>s in some browsers, due to the limited stylability of <select>s in CSS.
+	.box-shadow(inset 0 1px 1px rgba(0,0,0,.075));
+	.transition(~"border-color ease-in-out .15s, box-shadow ease-in-out .15s");
+
+	// Placeholder
+	.placeholder();
+
+	// Unstyle the caret on `<select>`s in IE10+.
+	&::-ms-expand {
+		border:0;
+		background-color:transparent;
+	}
+
+	// Disabled and read-only inputs
+	//
+	// HTML5 says that controls under a fieldset > legend:first-child won't be
+	// disabled if the fieldset is disabled. Due to implementation difficulty, we
+	// don't honor that edge case; we style them as disabled anyway.
+	&[disabled],
+	&[readonly],
+	fieldset[disabled] & {
+		background-color:@input-bg-disabled;
+		opacity:1; // iOS fix for unreadable disabled content; see https://github.com/twbs/bootstrap/issues/11655
+	}
+
+	&[disabled],
+	fieldset[disabled] & {
+		cursor:@cursor-disabled;
+	}
+
+	// Reset height for `textarea`s
+	textarea& {
+		height:auto;
+	}
+}
+#main-content-column textarea {
+	height:initial;
+}
+#main-content-column select[size] {
+	height:initial;
+}
+.oo-ui-textInputWidget.oo-ui-indicatorElement input, .oo-ui-textInputWidget.oo-ui-indicatorElement textarea {
+	padding-right:2.4875em !important;
+}
+.oo-ui-textInputWidget.oo-ui-iconElement input, .oo-ui-textInputWidget.oo-ui-iconElement textarea {
+	padding-left:2.875em !important;
+}
+
+@import "../../vendor/bootstrap/less/input-groups.less";
+@import "../../vendor/bootstrap/less/navs.less";
+
+.nav-tabs {
+	border-bottom:2px solid @wiki-primary-border;
+}
+
+.nav-tabs > li {
+	background-color:@tab-background-color;
+	margin-right:2px;
+	margin-bottom:-2px;
+	margin-top:2px;
+	border-left:2px solid @wiki-primary-border;
+	border-top:2px solid @wiki-primary-border;
+	border-right:2px solid @wiki-primary-border;
+}
+
+.nav-tabs > li:last-of-type {
+	margin-right:0px;
+}
+
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+	background:#fff;
+	cursor:pointer;
+	border:1px solid transparent;
+	font-weight:700;
+}
+
+.nav-tabs > li.active > a:not(.new),
+.nav-tabs > li.active > a:not(.new):hover,
+.nav-tabs > li.active > a:not(.new):focus {
+	color:@text-color;
+}
+
+.nav-tabs > li > a:not(.new) {
+	color:@link-color;
+	margin-right:0;
+}
+.nav-tabs > li > a:not(.new):hover {
+	color:@link-hover-color;
+	margin-right:0;
+}
+
+.nav-tabs > li:hover > span > span > a:not(.new) {
+	background-color:@tab-background-color-hover;
+	color:@link-hover-color;
+}
+.tabs-static .nav-tabs > li > a {
+	margin-right:0;
+	float:left;
+}
+.tabs-static .nav-tabs > li > strong {
+	float:left;
+}
+.nav-tabs > li:hover > a,
+.nav-tabs > li:hover > span,
+.nav-tabs > li:hover > span > span {
+	background-color:@tab-background-color-hover;
+	text-decoration:none !important;
+}
+
+.nav-tabs > li > strong {
+	background-color:#fff;
+	color:@text-color;
+}
+.nav-tabs > li.active {
+	background-color:#fff;
+	color:@text-color;
+}
+
+.nav-tabs > li > strong {
+	border:1px solid transparent;
+	border-radius:0;
+	line-height:1.42857;
+	margin-right:0;
+}
+.nav-tabs > li > span > span > strong {
+	background-color:#fff;
+	color:@text-color;
+}
+
+.nav-tabs > li > span > span > strong {
+	border:1px solid transparent;
+	border-radius:0;
+	line-height:1.42857;
+	margin-right:0;
+}
+.nav > li > strong {
+	display:block;
+	padding:5px 10px;
+	position:relative;
+}
+
+@media (max-width:767px) {
+	.nav-tabs > li {
+		float:none;
+		border:1px solid @wiki-primary-border;
+	}
+	.nav-tabs > li.active > a{
+		border:none;
+	}
+	.nav > li > a:hover, .nav > li > a:focus,
+	.nav > li > a:hover, .nav > li > a:focus {
+		background:none;
+		border:none;
+	}
+}
+
+@import "../../vendor/bootstrap/less/navbar.less";
+
+.navbar-main-column {
+	padding:0;
+}
+#wiki-nav-main-column {
+	padding:0;
+}
+
+
+.open > .dropdown-menu {
+	display:block;
+}
+
+.navbar {
+	font-size:14px;
+}
+
+/* Bigger icons for tablet */
+@media (min-width:768px) and (max-width:991px) {
+	.navbar-inverse {
+		font-size:1.5em;
+	}
+}
+
+/* Smaller second navbar */
+.navbar-inverse {
+	min-height:36px;
+}
+@media (min-width:992px) {
+	.navbar-nav-2 > li > a {
+		padding-top:7px;
+		padding-bottom:7px;
+	}
+}
+@media (min-width:768px) and (max-width:991px) {
+	.navbar-inverse {
+		min-height:38px;
+	}
+	.navbar-nav-2 > li > a {
+		padding-top:8px;
+		padding-bottom:8px;
+	}
+	.navbar-nav > li.icon-tablet > a {
+		padding:11px 10px;
+		font-size:2em;
+	}
+}
+
+.navbar-nav > li {
+	margin-bottom:0px;
+}
+
+@media (max-width:767px) {
+	.navbar-nav-2 .open .dropdown-menu > li > a,
+	.navbar-nav-2 .open .dropdown-menu .dropdown-header {
+		padding:5px 15px 5px 25px;
+	}
+}
+
+/* Red link (in particular for not existing talk pages */
+.navbar-nav > li.new > a {
+	color:#a05555;
+}
+
+.navbar-form {
+	padding-right:0;
+}
+
+@media (max-width:767px) {
+	.navbar-form {
+		border-bottom:none;
+		border-top:none;
+		padding:0;
+		box-shadow:none;
+		margin-left:0;
+	}
+}
+
+@media (min-width:768px) {
+	.navbar-right {
+		margin-right:0;
+	}
+}
+
+/* Adjustments for liquipedia brand dropdown */
+.navbar-nav > li.dropdown-brand > a {
+	padding-top:12px;
+	padding-bottom:18px;
+}
+.brand-title {
+	padding-top:13px;
+	padding-bottom:15px;
+	height:50px;
+}
+.brand-subtitle {
+	position:absolute;
+	margin-top:-5px;
+	right:24px;
+	font-size:10px;
+}
+
+.navbar > .container .navbar-brand,
+.navbar > .container-fluid .navbar-brand {
+	margin-left:0px;
+}
+
+//@import "../../vendor/bootstrap/less/breadcrumbs.less";
+//@import "../../vendor/bootstrap/less/pagination.less";
+//@import "../../vendor/bootstrap/less/pager.less";
+@import "../../vendor/bootstrap/less/labels.less";
+.label-light {
+	background-color:@gray-lighter;
+	color:@text-color;
+}
+@import "../../vendor/bootstrap/less/badges.less";
+//@import "../../vendor/bootstrap/less/jumbotron.less";
+//@import "../../vendor/bootstrap/less/thumbnails.less";
+
+@import "../../vendor/bootstrap/less/alerts.less";
+.alert {
+	margin-bottom:5px;
+}
+
+@import "../../vendor/bootstrap/less/progress-bars.less";
+//@import "../../vendor/bootstrap/less/media.less";
+//@import "../../vendor/bootstrap/less/list-group.less";
+
+@import "../../vendor/bootstrap/less/panels.less";
+.panel {
+	margin-bottom:10px;
+}
+
+//@import "../../vendor/bootstrap/less/responsive-embed.less";
+//@import "../../vendor/bootstrap/less/wells.less";
+//@import "../../vendor/bootstrap/less/close.less";
+
+
+// Components w/ JavaScript
+//@import "../../vendor/bootstrap/less/modals.less";
+@import "../../vendor/bootstrap/less/tooltip.less";
+@import "../../vendor/bootstrap/less/popovers.less";
+//@import "../../vendor/bootstrap/less/carousel.less";
+
+// Utility classes
+@import "../../vendor/bootstrap/less/utilities.less";
+@import "../../vendor/bootstrap/less/responsive-utilities.less";
+
+.dropdown-submenu {
+	position:relative;
+}
+.dropdown-submenu > .dropdown-menu {
+	top:0;
+	left:100%;
+	margin-top:-6px;
+	margin-left:-1px;
+}
+
+.dropdown-submenu:hover > .dropdown-menu {
+	display:block;
+}
+
+.dropdown-submenu > a:after {
+	display:block;
+	content:" ";
+	float:right;
+	width:0;
+	height:0;
+	border-color:transparent;
+	border-style:solid;
+	border-width:5px 0 5px 5px;
+	border-left-color:#ccc;
+	margin-top:5px;
+	margin-right:-10px;
+}
+.dropdown-submenu:hover > a:after {
+	border-left-color:#ffffff;
+}
+.dropdown-submenu.pull-left {
+	float:none;
+}
+.dropdown-submenu.pull-left > .dropdown-menu {
+	left:-100%;
+	margin-left:10px;
+}
+.dropdown-menu {
+	min-width:200px;
+}
+.dropdown-menu > .active > a,
+.dropdown-menu > .active:hover > a,
+.dropdown-menu > .active:focus > a {
+		color:@gray-dark;
+}
+.dropdown-menu.columns-2 {
+	min-width:500px;
+}
+.dropdown-menu.columns-3 {
+	 margin-left:-250px;
+	 min-width:700px;
+	 padding:5px 10px;
+ }
+
+@media (max-width:991px) {
+	.dropdown-menu.columns-3 {
+		margin-left:-220px;
+		min-width:700px;
+	}
+}
+.multi-column-dropdown {
+	padding-left:0px;
+	margin-left:0px;
+	list-style:none;
+}
+.multi-column-dropdown li a {
+	padding:5px 10px;
+	display:block;
+	clear:both;
+	line-height:1.428571429;
+	color:@dropdown-link-color;
+	white-space:normal;
+}
+
+.multi-column-dropdown li a:hover {
+	text-decoration:none;
+	color:@dropdown-link-hover-color;
+	background-color:@dropdown-link-hover-bg;
+}
+@media (max-width:767px) {
+	.dropdown-menu.multi-column {
+		min-width:3000px !important;
+		overflow-x:hidden;
+	}
+}
+.multi-column-dropdown .dropdown-header {
+	padding:3px 0px;
+}
+
+@media (min-width:768px) {
+	body {
+		padding-top:50px;
+	}
+}
+
+/* Push body down because of fixed navbar */
+@body-padding :50px;
+body {
+	padding-top:@body-padding;
+	height:~"calc(100% - @{body-padding})";
+}
+
+html {
+	height:100%;
+}
+
+#mw-content-text {
+	clear:both;
+}
+
+/* responsive floats */
+@media(min-width:768px) {
+	.pull-right-md {
+		float:right;
+	}
+}
+@media(min-width:992px) {
+	.pull-right-lg {
+		float:right;
+	}
+}
+
+/* confirmation bubbles */
+.postedit,
+.postedit-container {
+	z-index:1040 !important;
+	top:50px !important;
+}
+
+/* Correct offset to top for anchors */
+.mw-headline,
+.reference {
+	padding-top:60px;
+	margin-top:-60px;
+	display:inline-block; /* required for webkit browsers */
+}
+
+@import "components/headers.less";
+@import "components/toc.less";
+@import "components/footer.less";
+@import "components/mediawiki.less";
+
+/* Flush footer to the bottom even if page is not long enough */
+#wrap {
+	min-height:100%;
+	height:auto !important;
+	height:100%;
+	/* Negative indent footer by its height */
+	margin:0 auto -330px;
+	/* Pad bottom by footer height */
+	padding:0 0 330px;
+}
+
+.logotype {
+	font-family:'Roboto', sans-serif;
+	font-weight:500;
+}
+@media(max-width:400px) {
+	.brand-name small {
+		display:none;
+	}
+}
+
+.collapsible-block {
+	width:100%;
+	display:none;
+}
+
+p {
+	line-height:1.7;
+}
+
+/** Internet Explorer 10 in Windows 8 and Windows Phone 8 fix */
+@-webkit-viewport   { width:device-width; }
+@-moz-viewport      { width:device-width; }
+@-ms-viewport       { width:device-width; }
+@-o-viewport        { width:device-width; }
+@viewport           { width:device-width; }
+
+/* Align the search form with the second navbar on desktop. */
+@media (min-width:992px) {
+	.navbar-search-right-logged-in {
+		margin-right:-5px !important;
+	}
+}
+
+#main-content-column {
+	background:#fff;
+	padding-bottom:10px;
+}
+#siteNotice {
+	margin-top:10px;
+}
+
+
+@import "components/lp-icons.less";
+@import "components/mobile-navbar.less";
+
+.wiki-color-dark,
+.c-dark {
+	color:@wiki-color-dark;
+}
+.wiki-color-light,
+.c-light {
+	color:@wiki-color-light;
+}
+.wiki-backgroundcolor-dark,
+.wiki-backgroundcolor-dark-hover:hover,
+.bgc-dark, 
+.bgc-dark-hover:hover {
+	background-color:@wiki-color-dark;
+}
+.wiki-backgroundcolor-light,
+.wiki-backgroundcolor-light-hover:hover,
+.bgc-light, 
+.bgc-light-hover:hover {
+	background-color:@wiki-color-light;
+}
+.wiki-backgroundcolor-light-2,
+.wiki-backgroundcolor-light-2-hover:hover,
+.bgc-light2,
+.bgc-lighter,
+.bgc-light2-hover:hover,
+.bgc-lighter-hover:hover {
+	background-color:lighten(@wiki-color-light, 50%);
+}
+.wiki-backgroundcolor-navbar-badge {
+	background-color:darken(@navbar-default-bg, 10%);
+}
+.wiki-bordercolor-dark, 
+.bdc-dark {
+	border-color:@wiki-color-dark;
+}
+.wiki-bordercolor-light, 
+.bdc-light {
+	border-color:@wiki-primary-border;
+}
+
+pre, code, tt, kbd, samp, .mw-code {
+	font-family:'Droid Sans Mono', monospace;
+}
+
+/* Keeping the anchor color and cursor for abbreviations in anchors */
+a > abbr {
+	color:inherit;
+	cursor:inherit;
+}
+
+html .thumbcaption {
+	border:none;
+	line-height:1.4em;
+	padding:3px;
+	font-size:94%;
+	background-color:#f5f5f5 ;
+	margin-top:5px;
+}
+div.thumbinner {
+	border-top:2px solid @wiki-primary-border;
+	border-bottom:2px solid @wiki-primary-border;
+	border-right:0px;
+	border-left:0px; 
+	padding:10px 0;
+	margin:0;
+}
+
+/* hide "Edit local description" button for remote wiki files */
+#ca-view-foreign + .divider-vertical, 
+#ca-view-foreign ~ #ca-edit {
+	display:none;
+}
+
+/* change editlinks */
+.mw-content-ltr .mw-editsection, 
+.mw-content-rtl .mw-content-ltr .mw-editsection {
+	float:right;
+}
+ 
+h1 .mw-editsection {
+	padding-top:18px;
+}
+ 
+h2 .mw-editsection {
+	padding-top:15px;
+}
+ 
+h3 .mw-editsection {
+	padding-top:13px;
+}
+
+/* restrict maximum image size in content */
+.img-responsive img,
+#file img {
+	max-width:100%;
+	height:auto;
+}
+@media(max-width:600px) {
+	.thumb {
+		margin:0;
+	}
+	.thumb img {
+		width:100%;
+		height:auto;
+	}
+}
+.thumbimage {
+	border:0;
+}
+
+/* visited links */
+.main-content :not(.nav.nav-tabs) a:visited:not(.new) {
+	color:@link-visited-color;
+}
+
+/* review box */
+#mw-fr-commentbox {
+	margin-right:3px !important;
+}
+#fr-rating-controls {
+	line-height:3.3em;
+}
+#mw-fr-confirmreview {
+	white-space:normal !important;
+}
+@media(max-width:900px) {
+	#mw-fr-confirmreview > :not(script),
+	#mw-fr-ratingselects > :not(script) {
+		display:block;
+		width:100%;
+	}
+	#mw-fr-confirmreview > label,
+	#mw-fr-ratingselects > label {
+		display:inline-block;
+		width:auto;
+	}
+	#mw-fr-ratingselects > label[for="wpaccuracy"],
+	#mw-fr-confirmreview > label[for="mw-fr-commentbox"] {
+		margin-left:10px;
+	}
+}
+
+/* enables additional gallery modes */
+ul.mw-gallery-packed li.gallerybox div.thumb,
+ul.mw-gallery-packed-overlay li.gallerybox div.thumb,
+ul.mw-gallery-packed-hover li.gallerybox div.thumb {
+	background-color:transparent;
+	border:none;
+}
+ul.mw-gallery-packed li.gallerybox div.thumb img,
+ul.mw-gallery-packed-overlay li.gallerybox div.thumb img,
+ul.mw-gallery-packed-hover li.gallerybox div.thumb img {
+	margin:0 auto;
+}
+ul.mw-gallery-packed-hover li.gallerybox,
+ul.mw-gallery-packed-overlay li.gallerybox {
+	position:relative;
+}
+ul.mw-gallery-packed-hover div.gallerytextwrapper {
+	overflow:hidden;
+	height:0;
+}
+ul.mw-gallery-packed-hover li.gallerybox:hover div.gallerytextwrapper,
+ul.mw-gallery-packed-overlay li.gallerybox div.gallerytextwrapper,
+ul.mw-gallery-packed-hover li.gallerybox.mw-gallery-focused div.gallerytextwrapper {
+	position:absolute;
+	opacity:.8;
+	filter:alpha(opacity=80);
+	zoom:1;
+	background-color:#ffffff;
+	padding:5px 10px;
+	bottom:0;
+	left:0; /* Needed for IE */
+	height:auto;
+	font-weight:bold;
+	margin:2px; /* correspond to style on div.thumb */
+	width:100% !important;
+}
+ul.mw-gallery-packed-hover,
+ul.mw-gallery-packed-overlay,
+ul.mw-gallery-packed {
+	text-align:center;
+}
+ul.mw-gallery-packed-hover div.gallerytext,
+ul.mw-gallery-packed-overlay div.gallerytext {
+	opacity:1;
+	position:relative; /* Resets opacity in old IE */
+}
+ul.gallery li.gallerybox,
+ul.gallery li.gallerybox > div,
+ul.gallery li.gallerybox .thumb {
+	max-width:100%;
+}
+
+/* So that floating [edit] tags don't get pushed down by "float-right/clear-right" divs (such as thumbnail pictures) */
+#mw-content-text h1,
+#mw-content-text h2,
+#mw-content-text h3,
+#mw-content-text h4,
+#mw-content-text h5,
+#mw-content-text h6 {
+	overflow:hidden;
+}
+
+/* CSS to display wikitext in good-looking monospace font, in tutorials*/
+div.wikitext-quote {
+	font-family:monospace, "Courier New";
+	font-size:1.1em;
+	white-space:pre;
+	background:#f0f0f0;
+	overflow:auto;
+}
+
+/* quotes should not overflow infoboxes or other floating stuff */
+blockquote.quote {
+	overflow:hidden;
+}
+
+/* spinning pending changes logo */
+.fa-circle-o-notch {
+	animation-duration:7s;
+	animation-name:rotate;
+	animation-iteration-count:infinite;
+	animation-timing-function:linear;
+}
+@keyframes rotate {
+	0% {
+		transform:rotate(0deg);
+	}
+	100% {
+		transform:rotate(360deg);
+	}
+}
+
+/* top ad */
+.top-ad {
+	overflow:hidden;
+	//height:110px;
+	width:100%;
+	padding-top:10px;
+}
+
+/* search bar */
+@media(min-width:992px) {
+	#searchInput {
+		width:280px;
+	}
+	.alphawiki #searchInput {
+		width:243px;
+	}
+}
+#searchText {
+	max-width:100%;
+}
+
+.flaggedrevs_reviewform {
+	background-color:transparent !important;
+}
+
+#filetoc,
+#catlinks,
+.mw-search-profile-tabs,
+#mw-fr-revisiontag-old,
+#mw-fr-revisiontag,
+.flaggedrevs_basic,
+.flaggedrevs_quality,
+.flaggedrevs_pristine,
+.flaggedrevs_notice,
+.mw-warning,
+#mw-searchoptions {
+	border:1px solid #dddddd !important;
+	background-color:transparent !important;
+	margin-left:0;
+	margin-right:0;
+}
+
+.mw-special-Version #mw-content-text > h2 {
+	width:100%;
+}
+
+.tright .thumbinner {
+	min-width:100px;
+}
+
+/* wikitables shouold break words in order to not overflow in the Special: namespace */
+body#top.ns--1.mw-special-Ask #mw-content-text table {
+	word-break:break-all;
+}
+
+.portal-pills {
+	padding:0;
+}
+.portal-pills .panel-body {
+	padding:0;
+}
+.portal-pills a,
+.portal-pills a:visited {
+	display:block;
+	padding:15px;
+	color:@portal-pill-color;
+}
+
+/* spacing for editing buttons */
+.editButtons > * {
+	margin-bottom:10px;
+}
+@media(max-width:767px) {
+	.editButtons {
+		line-height:2em;
+	}
+}
+
+/* fix preview tab of editor */
+.wikiEditor-ui * {
+	box-sizing:inherit;
+}
+
+/* remove unnecessary margin */
+.firstHeading {
+	margin-top:0;
+}
+
+/* reason field on Special:UserRights is too long */
+.page-Special_UserRights #wpReason {
+	width:100%;
+}
+
+/* file history tables */
+#mw-imagepage-section-filehistory {
+	overflow:auto;
+}
+
+/* fix for flagged revs */
+#mw-fr-revisiondetails {
+	z-index:1000;
+}
+
+/* SMW fact box */
+.smwfact,
+.smwb-factbox {
+	word-break:break-all;
+}
+
+/* hide overflow on everything but special pages */
+@media(max-width:991px) {
+	body:not(.ns-special) #main-content-column {
+		overflow:auto;
+	}
+}
+
+/* hide stuff on logged in/out status */
+body.logged-in .hide-logged-in,
+body.logged-out .hide-logged-out {
+	display:none;
+}
+
+/* SMW concept pages */
+a[name="SMWResults"] + #mw-pages table td {
+	word-break:break-all;
+}
+
+/* Underlining for abbreviations */
+@supports (text-decoration:underline dotted) {
+	abbr[title],
+	.explain[title] {
+		border-bottom:none;
+		text-decoration:underline dotted;
+	}
+}

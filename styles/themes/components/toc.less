@@ -1,0 +1,182 @@
+.sidebar-toc-if (@wiki-dark, @wiki-light) when (lightness(@wiki-dark) < lightness(@wiki-light)) {
+	color:@wiki-dark;
+}
+.sidebar-toc-if (@wiki-dark, @wiki-light) when (lightness(@wiki-dark) >= lightness(@wiki-light)) {
+	color:@wiki-light;
+}
+
+/** No standard TOC on mobile */
+@media (max-width:767px) {
+	#toc {
+		display:none;
+	}
+}
+
+#sidebar-toc-column {
+	float:left;
+	width:300px;
+	background-color:@body-bg;
+	margin-top:0px;
+}
+
+#sidebar-ad {
+	width:300px;
+	height:250px;
+	background-color:#444444;
+	color:@wiki-light;
+	display:block;
+	text-align:center;
+	margin:5px 0 5px -10px;
+}
+
+/* Positioning of sidebar toc */
+#sidebar-toc {
+	box-sizing:border-box;
+	padding-top:0px;
+	padding-left:10px;
+	width:300px;
+
+	&.affix-top {
+		position:fixed;
+		top:89px;
+		transition:.5s;
+	}
+	&.affix {
+		position:fixed;
+		top:57px;
+		transition:.5s;
+	}
+	&.affix-bottom {
+		position:fixed;
+		bottom:300px;
+	}
+}
+#sidebar-toc > #toctitle-sidebar > h2 {
+//  font-size:150%;
+	margin-top:5px;
+	margin-bottom:7px;
+	padding-top:0px;
+	padding-bottom:3px;
+}
+/* less margin for the first ul-level of the sidebar-toc */
+#sidebar-toc > ul {
+	margin-left:0px;
+	transition:.5s;
+}
+#sidebar-toc ul li {
+	list-style:outside none none;
+}
+#sidebar-toc ul li.active > a,
+#sidebar-toc ul li.active:hover > a,
+#sidebar-toc ul li.active:focus > a {
+	background-color:darken(@body-bg, 5%);
+	border-right:2px solid @wiki-primary-border;
+	.sidebar-toc-if (@wiki-dark, @wiki-light);
+	font-weight:700;
+	width:100%;
+}
+
+#sidebar-toc ul li > a {
+	.sidebar-toc-if (@wiki-dark, @wiki-light);
+	display:block;
+	font-size:14px;
+	font-weight:500;
+	padding:2px 10px;
+	position:relative;
+}
+#sidebar-toc ul li ul li > a {
+	font-size:12px;
+}
+a#back-to-top,
+a#back-to-top:visited,
+a#back-to-top:focus,
+a#back-to-top:hover, {
+	.sidebar-toc-if (@wiki-dark, @wiki-light);
+}
+
+#sidebar-toc ul li > a:hover,
+#sidebar-toc ul li > a:focus {
+	background:darken(@body-bg, 5%);
+	.sidebar-toc-if (@wiki-dark, @wiki-light);
+	text-decoration:@link-hover-decoration;
+}
+/** display only 3 levels deep for the sidebar toc */
+#sidebar-toc .toclevel-4,
+#sidebar-toc .toclevel-5,
+#sidebar-toc .toclevel-6 {
+	display:none;
+}
+
+/* uncommenting this toggles the toc going smaller
+#sidebar-toc .nav .nav {
+	display:none;
+}
+*/
+
+#sidebar-toc .nav > .active > ul {
+	display:block;
+}
+
+#toc,
+.toc {
+	margin-bottom:0;
+	padding:0;
+	list-style:none;
+	border:1px solid @panel-inner-border;
+	.box-shadow(0 1px 1px rgba(0,0,0,.05));
+}
+#toc > li,
+.toc > li {
+	color:#337ab7;
+	position:relative;
+	display:block;
+}
+.toc > li > a:hover,
+.toc > li > a:focus {
+	color:#337ab7;
+}
+
+#toc ul, .toc ul {
+	margin:0;
+	background-color:@panel-bg;
+	border-bottom:1px solid transparent;
+	.border-top-radius((@panel-border-radius - 1));
+	border-radius:@panel-border-radius;
+	padding:@panel-body-padding;
+}
+
+// Within heading, strip any `h*` tag of its default margins for spacing.
+#toc #toctitle,
+.toc #toctitle,
+#toc .toctitle,
+.toc .toctitle,
+#toc #toctitle-mobile,
+.toc #toctitle-mobile,
+#toc .toctitle-mobile,
+.toc .toctitle-mobile,
+#toc #toctitle-sidebar,
+.toc #toctitle-sidebar,
+#toc .toctitle-sidebar,
+.toc .toctitle-sidebar {
+	padding:@panel-heading-padding;
+	border-bottom:1px solid @panel-inner-border;
+	.border-top-radius((@panel-border-radius - 1));
+	text-align:left;
+	font-size:ceil((@font-size-base * 1.125));
+	margin-top:0;
+	margin-bottom:0;
+	color:inherit;
+
+	> a {
+		color:inherit;
+	}
+}
+
+#toc ul ul,
+.toc ul ul {
+	padding:2px;
+}
+
+#sidebar-toc > .nav {
+	overflow:auto;
+}

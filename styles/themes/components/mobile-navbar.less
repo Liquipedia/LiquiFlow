@@ -1,0 +1,272 @@
+@media (max-width:767px) {
+	.navbar-brand {
+		font-size:16pt;
+		line-height:16pt;
+		padding-top:16px;
+		padding-bottom:14px;
+	}
+}
+
+.navbar-toggle {
+	margin:0;
+	padding:17px 13px;
+}
+
+.navbar-search-toggle {
+	background-color:transparent;
+	background-image:none;
+	border:1px solid transparent;
+	border-radius:0;
+	color:@navbar-default-color;
+	margin:0;
+	padding:14px 18px 13px 17px;
+}
+
+#mobile-search-button.active {
+	background:@navbar-default-link-hover-bg;
+}
+
+#mobile-search-bar {
+	display:block;
+	position:fixed;
+	z-index:1000;
+	left:0px;
+	right:0px;
+}
+#mobile-search-bar.hidden {
+	display:none !important;
+}
+
+#mobile-search-form {
+	margin:0;
+}
+
+.navbar-search-btn {
+	background-color:transparent;
+	background-image:none;
+	border:0;
+	border-radius:0;
+	color:#555555;
+	margin:0 0 0 -50px;
+	padding:15px 18px 14px 17px;
+	position:relative;
+	z-index:1000;
+}
+
+.navbar-search-btn:active,
+.navbar-search-btn:focus {
+	background-color:@wiki-light;
+}
+
+#mobile-search-form #searchInput-mobile {
+	border-top:0;
+	border-left:0;
+	border-right:0;
+	margin:0;
+	padding:13px 62px 13px 12px;
+	height:50px;
+	position:absolute;
+}
+
+#slide-toc > #scroll-wrapper-toc > div.nav.navbar-nav > ul {
+	margin-left:0;
+}
+
+#slide-toc #toctitle-mobile > h2 {
+	padding-top:0;
+	padding-left:5px;
+	color:@wiki-light;
+	border-color:#000;
+}
+
+#slide-toc a {
+	color:@wiki-light;
+}
+
+#slide-toc a:hover,
+#slide-toc a:focus {
+	color:darken(@wiki-light, 10%);
+}
+
+#toc-toggler > span.fa,
+#mobile-search-button > span.fa,
+#main-nav-toggler > span.fa {
+	color:@wiki-light;
+}
+.slide-active > span.fa,
+.navbar-search-toggle.active > span.fa {
+	color:@navbar-button-active-color !important;
+}
+
+/* adjust body when menu is open */
+body.slide-active {
+	overflow-x:hidden;
+}
+/* put toggle bars on the left ::not using button */
+#slide-nav .navbar-toggle {
+	cursor:pointer;
+	position:relative;
+	line-height:0;
+	float:left;
+	margin:0;
+	width:50px;
+	height:50px;
+	padding:7px 10px 8px 10px;
+	border:1px solid transparent;
+}
+/* icon bar prettyup - optional */
+#slide-nav .navbar-toggle > .icon-bar {
+	width:100%;
+	display:block;
+	height:3px;
+	margin:5px 0 0 0;
+}
+#slide-nav .navbar-toggle.slide-active{
+	background:@navbar-default-link-hover-bg;
+}
+.navbar-header {
+	position:relative;
+}
+
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+	background:@wiki-dark;
+}
+
+/* un fix the navbar when active so that all the menu items are accessible */
+.navbar.navbar-fixed-top.slide-active {
+	 position:fixed;
+}
+/* screw writing importants and shit, just stick it in max width since these classes are not shared between sizes */
+@media (max-width:767px) {
+	#slide-nav .container {
+		margin:0!important;
+		padding:0!important;
+		height:100%;
+	}
+	#slide-nav .navbar-header {
+		margin:0 auto;
+		padding:0;
+	}
+	#slide-nav .navbar.slide-active {
+		position:absolute;
+		width:80%;
+		top:-1px;
+		z-index:1000;
+	}
+	#slide-nav #slidemenu {
+		background:@xs-menu-bg;
+		top:50px;
+		left:-100%;
+		width:80%;
+		min-width:0;
+		position:absolute;
+		padding-left:0;
+		z-index:@zindex-navbar;
+		margin:0;
+		display:flex;
+		flex-direction:column;
+		overflow:auto;
+		height:calc(~"100vh - 50px");
+	}
+
+	#slide-nav #slide-toc {
+		background:@xs-menu-bg;
+		top:50px;
+		right:-100%;
+		width:80%;
+		min-width:0;
+		position:absolute;
+		padding-right:0;
+		z-index:@zindex-navbar;
+		margin:0;
+		display:flex;
+		flex-direction:column;
+		overflow:auto;
+		height:calc(~"100vh - 50px");
+	}
+
+	#slide-nav #slidemenu .navbar-nav,
+	#slide-nav #slide-toc .navbar-nav {
+		min-width:0;
+		width:100%;
+		margin:0;
+	}
+	#slide-nav #slidemenu .navbar-nav .dropdown-menu li a,
+	#slide-nav #slide-toc .navbar-nav .dropdown-menu li a  {
+		color:#9d9d9d;
+		min-width:0;
+		width:100%;
+		white-space:normal;
+	}
+	#slide-nav {
+		border-top:0;
+	}
+
+	/* this is behind the navigation but the navigation is not inside it so that the navigation is accessible and scrolls*/
+	#navbar-height-col {
+		position:fixed;
+		top:0;
+		height:100%;
+		bottom:0;
+		width:80%;
+		left:-80%;
+		background:@xs-menu-bg;
+		z-index:@zindex-navbar;
+	}
+	#toc-height-col {
+		position:fixed;
+		top:0;
+		height:100%;
+		bottom:0;
+		width:80%;
+		right:-80%;
+		background:@xs-menu-bg;
+		z-index:@zindex-navbar;
+	}
+	#slide-nav .navbar-form {
+		width:100%;
+		margin:8px 0;
+		text-align:center;
+		overflow:hidden;
+		/*fast clearfixer*/
+	}
+	#slide-nav .navbar-form .form-control {
+		text-align:center;
+	}
+	#slide-nav .navbar-form .btn {
+		width:100%;
+	}
+	#scroll-wrapper-menu.slide-active,
+	#scroll-wrapper-toc.slide-active {
+		overflow:auto;
+		height:auto;
+		-webkit-overflow-scrolling:touch;
+		-ms-overflow-style:none;
+	}
+	#slide-toc a,
+	#slide-toc h2,
+	#slidemenu a {
+		color:@mobile-menu-color !important;
+	}
+}
+@media (min-width:768px) {
+	.navbar.navbar-fixed-top.slide-active {
+		position:fixed;
+	}
+	.navbar-header {
+		left:0!important;
+	}
+}
+
+.mobile-divider {
+	border-bottom:1px solid #000;
+}
+
+#brand-logo {
+	margin-top:-8px;
+	height:40px;
+	float:left;
+}
+@media(max-width:331px) {
+	padding: 15px 9px;
+}

@@ -671,6 +671,12 @@ html {
 	margin-top:-60px;
 	display:inline-block; /* required for webkit browsers */
 }
+.reference {
+	pointer-events:none;
+	> * {
+		pointer-events:auto;
+	}
+}
 
 @import "components/headers.less";
 @import "components/toc.less";

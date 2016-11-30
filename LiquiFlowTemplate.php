@@ -295,7 +295,7 @@ class LiquiFlowTemplate extends BaseTemplate {
 										?>
 										</div>
 										<div class="row">
-											<div style="float:right; margin-right:23px"><a href="<?php echo Title::newFromText('Tournaments', NS_PROJECT)->getLocalURL(); ?>">[edit]</a></div>
+											<div style="float:right; margin-right:23px"><a href="<?php echo Title::newFromText('Tournaments', NS_PROJECT)->getEditURL(); ?>">[edit]</a></div>
 										</div>
 									</div>
 								</li>

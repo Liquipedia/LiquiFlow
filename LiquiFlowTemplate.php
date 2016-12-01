@@ -668,6 +668,11 @@ $footerLinks = $this->getFooterLinks();
 						<h4 class="hidden-xs"><?php echo $this->msg( 'liquiflow-follow-us' ); ?></h4>
 						<ul id="footer-social-media">
 							<li>
+								<a target="_blank" href="http://liquipedia.net/discord" class="social-icon discord-icon">
+									<span class="social-link">Discord</span>
+								</a>
+							</li>
+							<li>
 								<a target="_blank" href="https://twitter.com/LiquipediaNet" class="social-icon twitter-icon">
 									<span class="social-link">Twitter</span>
 								</a>

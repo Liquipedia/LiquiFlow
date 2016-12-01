@@ -6653,6 +6653,9 @@ p {
 .lp-icon:hover {
   background-position: 0 0;
 }
+.lp-icon.lp-5ewin {
+  background-image: url(//wiki.teamliquid.net/commons/images/c/cf/InfoboxIcon_5Ewin.png);
+}
 .lp-icon.lp-abios {
   background-image: url(//wiki.teamliquid.net/commons/images/2/21/InfoboxIcon_Abios.png);
 }

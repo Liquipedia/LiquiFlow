@@ -6263,6 +6263,12 @@ a.social-icon > span.social-link {
 a.facebook-icon {
   background-image: url(../../images/footer-icons/InfoboxIcon_Facebook.png);
 }
+a.discord-icon {
+  background-image: url(../../images/footer-icons/InfoboxIcon_Discord.png);
+}
+a.github-icon {
+  background-image: url(../../images/footer-icons/InfoboxIcon_GitHub.png);
+}
 a.twitch-icon {
   background-image: url(../../images/footer-icons/InfoboxIcon_Twitch.png);
 }
@@ -6271,9 +6277,6 @@ a.twitter-icon {
 }
 a.youtube-icon {
   background-image: url(../../images/footer-icons/InfoboxIcon_YouTube.png);
-}
-a.github-icon {
-  background-image: url(../../images/footer-icons/InfoboxIcon_GitHub.png);
 }
 @media (max-width: 767px) {
   span.social-link {
@@ -6685,6 +6688,9 @@ p {
 }
 .lp-icon.lp-datdota {
   background-image: url(//wiki.teamliquid.net/commons/images/2/24/InfoboxIcon_Datdota.png);
+}
+.lp-icon.lp-discord {
+  background-image: url(//wiki.teamliquid.net/commons/images/c/c6/InfoboxIcon_Discord.png);
 }
 .lp-icon.lp-dotabuff {
   background-image: url(//wiki.teamliquid.net/commons/images/9/90/InfoboxIcon_Dotabuff.png);

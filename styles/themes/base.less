@@ -850,8 +850,16 @@ h3 .mw-editsection {
 }
 
 /* visited links */
-.main-content :not(.nav.nav-tabs) a:visited:not(.new) {
+.mw-body a.extiw:visited,
+.mw-body a.external:visited,
+.main-content a:visited:not(.new) {
 	color:@link-visited-color;
+}
+a.new {
+	color:#ba0000;
+}
+a.new:visited {
+	color:#a55858;
 }
 
 /* review box */

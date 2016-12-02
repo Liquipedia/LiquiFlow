@@ -650,7 +650,7 @@ $footerLinks = $this->getFooterLinks();
 						<ul>
 							<li><a href="mailto:liquipedia@teamliquid.net"><?php echo $this->msg( 'liquiflow-send-an-email'); ?></a></li>
 							<li><a href="http://www.teamliquid.net/forum/website-feedback/94785-liquipedia-feedback-thread" target="_blank"><?php echo $this->msg( 'liquiflow-post-feedback'); ?></a></li>
-							<li><a href="http://webchat.quakenet.org/?channels=%23liquipedia" target="_blank"><?php echo $this->msg( 'liquiflow-chat-with-us'); ?></a></li>
+							<li><a href="http://liquipedia.net/discord" target="_blank"><?php echo $this->msg( 'liquiflow-chat-with-us'); ?></a></li>
 						</ul>
 					</div>
 

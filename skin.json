@@ -234,6 +234,15 @@
 				"skins.liquiflow"
 			]
 		},
+		"skins.liquiflow.theme.teamfortress": {
+			"styles": [
+				"styles/themes/theme-teamfortress.less"
+			],
+			"position": "top",
+			"dependencies": [
+				"skins.liquiflow"
+			]
+		},
 		"skins.liquiflow.theme.warcraft": {
 			"styles": [
 				"styles/themes/theme-warcraft.less"

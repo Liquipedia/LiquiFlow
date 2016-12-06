@@ -182,6 +182,7 @@ class LiquiFlowTemplate extends BaseTemplate {
 			// Hide standard toc on big screens when the sidebar toc is shown
 			$this->data['bodycontent'] = str_replace('<div id="toc" class="toc">', '<div id="toc" class="toc hidden-lg hidden-xl">', $this->data['bodycontent']);
 		}
+		Hooks::run( 'LiquiFlowBodyFirst' );
 ?>
 
 <nav class="navbar navbar-default navbar-fixed-top noprint<?php global $wgLiquiFlowAlphawiki; echo (isset($wgLiquiFlowAlphawiki) && $wgLiquiFlowAlphawiki)?' alphawiki':''; ?>" role="navigation" id="slide-nav">

@@ -7366,14 +7366,14 @@ blockquote.quote {
 body#top.ns--1.mw-special-Ask #mw-content-text table {
   word-break: break-all;
 }
-.portal-pills {
+.main-content .portal-pills {
   padding: 0;
 }
-.portal-pills .panel-body {
+.main-content .portal-pills .panel-body {
   padding: 0;
 }
-.portal-pills a,
-.portal-pills a:visited {
+.main-content .portal-pills a,
+.main-content .portal-pills a:visited {
   display: block;
   padding: 15px;
   color: #2d5f93;

@@ -1443,7 +1443,7 @@ pre code {
     max-width: 990px;
   }
 }
-/* FIX: Chrome is weird if there is an element with negative margins overflowing out of a p element */
+/* FIX: Chrome is weird with text selections if there is an element with negative margins overflowing out of a p element */
 p {
   overflow: auto;
 }

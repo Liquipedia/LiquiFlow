@@ -18,6 +18,6 @@
    -webkit-font-smoothing: antialiased;
    -moz-osx-font-smoothing: grayscale
 }
-.icon-related-changes:before{content:'\0041';}
-.icon-patch:before{content:'\0042';}
-.icon-cards-o:before{content:'\0043';}
+.liquipedia-custom-icon-related-changes:before{content:'\0041';}
+.liquipedia-custom-icon-patch:before{content:'\0042';}
+.liquipedia-custom-icon-cards-o:before{content:'\0043';}

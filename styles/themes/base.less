@@ -33,6 +33,11 @@
 	}
 }
 
+/* FIX: Chrome is weird if there is an element with negative margins overflowing out of a p element */
+p {
+	overflow:auto;
+}
+
 @import "components/tables.less";
 .table,
 .wikitable {

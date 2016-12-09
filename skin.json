@@ -153,6 +153,15 @@
 				"skins.liquiflow"
 			]
 		},
+		"skins.liquiflow.theme.crossfire": {
+			"styles": [
+				"styles/themes/theme-crossfire.less"
+			],
+			"position": "top",
+			"dependencies": [
+				"skins.liquiflow"
+			]
+		},
 		"skins.liquiflow.theme.dota2": {
 			"styles": [
 				"styles/themes/theme-dota2.less"
@@ -237,6 +246,15 @@
 		"skins.liquiflow.theme.teamfortress": {
 			"styles": [
 				"styles/themes/theme-teamfortress.less"
+			],
+			"position": "top",
+			"dependencies": [
+				"skins.liquiflow"
+			]
+		},
+		"skins.liquiflow.theme.trackmania": {
+			"styles": [
+				"styles/themes/theme-trackmania.less"
 			],
 			"position": "top",
 			"dependencies": [

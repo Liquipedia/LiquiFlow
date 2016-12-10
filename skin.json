@@ -126,6 +126,15 @@
 				"skins.liquiflow"
 			]
 		},
+		"skins.liquiflow.theme.battlerite": {
+			"styles": [
+				"css/themes/battlerite.css"
+			],
+			"position": "top",
+			"dependencies": [
+				"skins.liquiflow"
+			]
+		},
 		"skins.liquiflow.theme.clashroyale": {
 			"styles": [
 				"css/themes/clashroyale.css"

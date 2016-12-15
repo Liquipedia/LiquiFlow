@@ -5904,6 +5904,19 @@ html {
 #mw-content-text {
   clear: both;
 }
+/* change colors in diff view to red/green */
+td.diff-deletedline {
+  border-color: #f1c0c0;
+}
+td.diff-deletedline .diffchange {
+  background: #f8cbcb;
+}
+td.diff-addedline {
+  border-color: #c1e9c1;
+}
+td.diff-addedline .diffchange {
+  background: #a6f3a6;
+}
 /* responsive floats */
 @media (min-width: 768px) {
   .pull-right-md {

@@ -7492,16 +7492,16 @@ blockquote.quote {
 /* search bar */
 @media (min-width: 992px) {
   #searchInput {
-    width: 280px;
+    width: 275px;
   }
   body.logged-in #searchInput {
-    width: 365px;
+    width: 360px;
   }
   .alphawiki #searchInput {
-    width: 243px;
+    width: 240px;
   }
   body.logged-in .alphawiki #searchInput {
-    width: 320px;
+    width: 315px;
   }
 }
 #searchText {

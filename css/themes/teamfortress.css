@@ -7478,7 +7478,7 @@ blockquote.quote {
   overflow: hidden;
 }
 /* spinning pending changes logo */
-.fa-circle-o-notch {
+.fa-spinner-7s {
   animation-duration: 7s;
   animation-name: rotate;
   animation-iteration-count: infinite;

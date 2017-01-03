@@ -4120,7 +4120,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   color: #444;
 }
 .nav-tabs > li > a:not(.new) {
-  color: #337ab7;
+  color: #0645ad;
   margin-right: 0;
 }
 .nav-tabs > li > a:not(.new):hover {
@@ -6064,16 +6064,16 @@ html {
 }
 /* change colors in diff view to red/green */
 td.diff-deletedline {
-  border-color: #f1c0c0;
+  border-color: #f1c0c0 !important;
 }
 td.diff-deletedline .diffchange {
-  background: #f8cbcb;
+  background: #f8cbcb !important;
 }
 td.diff-addedline {
-  border-color: #c1e9c1;
+  border-color: #c1e9c1 !important;
 }
 td.diff-addedline .diffchange {
-  background: #a6f3a6;
+  background: #a6f3a6 !important;
 }
 /* responsive floats */
 @media (min-width: 768px) {
@@ -6845,6 +6845,9 @@ p {
 .lp-icon.lp-azubu {
   background-image: url(//wiki.teamliquid.net/commons/images/6/62/InfoboxIcon_Azubu.png);
 }
+.lp-icon.lp-b5csgo {
+  background-image: url(//wiki.teamliquid.net/commons/images/5/52/InfoboxIcon_B5csgo.png);
+}
 .lp-icon.lp-binary-beast {
   background-image: url(//wiki.teamliquid.net/commons/images/a/af/InfoboxIcon_BinaryBeast.png);
 }
@@ -6902,8 +6905,11 @@ p {
 .lp-icon.lp-home {
   background-image: url(//wiki.teamliquid.net/commons/images/2/2f/InfoboxIcon_Website.png);
 }
-.lp-icon .lp-icon.lp-huomaotv {
+.lp-icon.lp-huomaotv {
   background-image: url(//wiki.teamliquid.net/commons/images/4/46/InfoboxIcon_HuomaoTV.png);
+}
+.lp-icon.lp-huyatv {
+  background-image: url(//wiki.teamliquid.net/commons/images/0/05/InfoboxIcon_HuyaTV.png);
 }
 .lp-icon.lp-iccup {
   background-image: url(//wiki.teamliquid.net/commons/images/2/2c/InfoboxIcon_ICCUP.png);
@@ -6997,6 +7003,9 @@ p {
 }
 .lp-icon.lp-youtube {
   background-image: url(//wiki.teamliquid.net/commons/images/6/6c/InfoboxIcon_YouTube.png);
+}
+.lp-icon.lp-zhangyutv {
+  background-image: url(//wiki.teamliquid.net/commons/images/c/cf/InfoboxIcon_ZhangyuTV.png);
 }
 @media (max-width: 767px) {
   .navbar-brand {
@@ -7487,7 +7496,7 @@ blockquote.quote {
 .top-ad {
   overflow: hidden;
   width: 100%;
-  padding-top: 10px;
+  padding-top: 0px;
 }
 /* search bar */
 @media (min-width: 992px) {
@@ -7495,7 +7504,7 @@ blockquote.quote {
     width: 275px;
   }
   body.logged-in #searchInput {
-    width: 360px;
+    width: 355px;
   }
   .alphawiki #searchInput {
     width: 240px;

@@ -529,7 +529,7 @@ class LiquiFlowTemplate extends BaseTemplate {
 			<?php if (strlen($toc) > 0) : ?>
 			<?php echo str_replace('id="toctitle"', 'id="toctitle-sidebar"', $toc); ?>
 			<?php endif;?>
-			<?php Hooks::run( 'LiquiFlowAdSidebar', array( __DIR__ ) ); ?>
+			<?php Hooks::run( 'LiquiFlowAdSidebar' ); ?>
 		</div>
 	</div><!-- /#sidebar-toc-colum -->
 
@@ -545,7 +545,7 @@ class LiquiFlowTemplate extends BaseTemplate {
 					</div>
 					<?php endif; ?>
 
-					<?php Hooks::run( 'LiquiFlowAdTop', array( __DIR__ ) ); ?>
+					<?php Hooks::run( 'LiquiFlowAdTop' ); ?>
 
 					<h1 id="firstHeading" class="firstHeading">
 						<span dir="auto"><?php $this->html( 'title' ) ?></span>

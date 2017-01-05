@@ -7514,12 +7514,6 @@ div.wikitext-quote {
 blockquote.quote {
   overflow: hidden;
 }
-/* top ad */
-.top-ad {
-  overflow: hidden;
-  width: 100%;
-  padding-top: 0px;
-}
 /* search bar */
 @media (min-width: 992px) {
   #searchInput {

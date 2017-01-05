@@ -1619,7 +1619,6 @@ th {
 }
 .table,
 .wikitable {
-  width: 100%;
   max-width: 100%;
   margin-bottom: 15pt;
 }
@@ -1878,10 +1877,6 @@ table th[class*="col-"] {
 }
 .wikitable > caption {
   font-weight: normal !important;
-}
-.table,
-.wikitable {
-  width: auto;
 }
 .table-full-width {
   width: 100%;

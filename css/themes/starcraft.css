@@ -6212,15 +6212,6 @@ h2 {
   background-color: #e5e5e5;
   margin-top: 0px;
 }
-#sidebar-ad {
-  width: 300px;
-  height: 250px;
-  background-color: #444444;
-  color: #e1e1e1;
-  display: block;
-  text-align: center;
-  margin: 5px 0 5px -10px;
-}
 /* Positioning of sidebar toc */
 #sidebar-toc {
   box-sizing: border-box;

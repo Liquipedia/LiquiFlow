@@ -317,6 +317,16 @@ h3 .mw-editsection {
 	padding-top:13px;
 }
 
+/* So that floating [edit] tags don't get pushed down by "float-right/clear-right" divs (such as thumbnail pictures) */
+#mw-content-text h1,
+#mw-content-text h2,
+#mw-content-text h3,
+#mw-content-text h4,
+#mw-content-text h5,
+#mw-content-text h6 {
+	overflow:hidden;
+}
+
 /* restrict maximum image size in content */
 .img-responsive img,
 #file img {
@@ -426,16 +436,6 @@ ul.gallery li.gallerybox,
 ul.gallery li.gallerybox > div,
 ul.gallery li.gallerybox .thumb {
 	max-width:100%;
-}
-
-/* So that floating [edit] tags don't get pushed down by "float-right/clear-right" divs (such as thumbnail pictures) */
-#mw-content-text h1,
-#mw-content-text h2,
-#mw-content-text h3,
-#mw-content-text h4,
-#mw-content-text h5,
-#mw-content-text h6 {
-	overflow:hidden;
 }
 
 /* CSS to display wikitext in good-looking monospace font, in tutorials*/

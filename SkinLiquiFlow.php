@@ -50,7 +50,7 @@ class SkinLiquiFlow extends SkinTemplate {
 		"<![endif]-->");
 		$out->addHeadItem( 'responsive', "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">");
 
-		Hooks::run( 'LiquiFlowAdStartCode', array( __DIR__, &$out ) );
+		Hooks::run( 'LiquiFlowAdStartCode', array( &$out ) );
 
 		$scripts = array( 'skins.liquiflow', 'skins.liquiflow.bottom' );
 		$out->addModuleScripts( $scripts );

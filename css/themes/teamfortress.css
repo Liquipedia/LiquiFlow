@@ -7340,6 +7340,60 @@ body.slide-active {
 .bdc-light {
   border-color: #957131;
 }
+/* enables additional gallery modes */
+ul.mw-gallery-packed li.gallerybox div.thumb,
+ul.mw-gallery-packed-overlay li.gallerybox div.thumb,
+ul.mw-gallery-packed-hover li.gallerybox div.thumb {
+  background-color: transparent;
+  border: none;
+}
+ul.mw-gallery-packed li.gallerybox div.thumb img,
+ul.mw-gallery-packed-overlay li.gallerybox div.thumb img,
+ul.mw-gallery-packed-hover li.gallerybox div.thumb img {
+  margin: 0 auto;
+}
+ul.mw-gallery-packed-hover li.gallerybox,
+ul.mw-gallery-packed-overlay li.gallerybox {
+  position: relative;
+}
+ul.mw-gallery-packed-hover div.gallerytextwrapper {
+  overflow: hidden;
+  height: 0;
+}
+ul.mw-gallery-packed-hover li.gallerybox:hover div.gallerytextwrapper,
+ul.mw-gallery-packed-overlay li.gallerybox div.gallerytextwrapper,
+ul.mw-gallery-packed-hover li.gallerybox.mw-gallery-focused div.gallerytextwrapper {
+  position: absolute;
+  opacity: .8;
+  filter: alpha(opacity=80);
+  zoom: 1;
+  background-color: #ffffff;
+  padding: 5px 10px;
+  bottom: 0;
+  left: 0;
+  /* Needed for IE */
+  height: auto;
+  font-weight: bold;
+  margin: 2px;
+  /* correspond to style on div.thumb */
+  width: 100% !important;
+}
+ul.mw-gallery-packed-hover,
+ul.mw-gallery-packed-overlay,
+ul.mw-gallery-packed {
+  text-align: center;
+}
+ul.mw-gallery-packed-hover div.gallerytext,
+ul.mw-gallery-packed-overlay div.gallerytext {
+  opacity: 1;
+  position: relative;
+  /* Resets opacity in old IE */
+}
+ul.gallery li.gallerybox,
+ul.gallery li.gallerybox > div,
+ul.gallery li.gallerybox .thumb {
+  max-width: 100%;
+}
 pre,
 code,
 tt,
@@ -7452,60 +7506,6 @@ a.new:visited {
   #mw-fr-confirmreview > label[for="mw-fr-commentbox"] {
     margin-left: 10px;
   }
-}
-/* enables additional gallery modes */
-ul.mw-gallery-packed li.gallerybox div.thumb,
-ul.mw-gallery-packed-overlay li.gallerybox div.thumb,
-ul.mw-gallery-packed-hover li.gallerybox div.thumb {
-  background-color: transparent;
-  border: none;
-}
-ul.mw-gallery-packed li.gallerybox div.thumb img,
-ul.mw-gallery-packed-overlay li.gallerybox div.thumb img,
-ul.mw-gallery-packed-hover li.gallerybox div.thumb img {
-  margin: 0 auto;
-}
-ul.mw-gallery-packed-hover li.gallerybox,
-ul.mw-gallery-packed-overlay li.gallerybox {
-  position: relative;
-}
-ul.mw-gallery-packed-hover div.gallerytextwrapper {
-  overflow: hidden;
-  height: 0;
-}
-ul.mw-gallery-packed-hover li.gallerybox:hover div.gallerytextwrapper,
-ul.mw-gallery-packed-overlay li.gallerybox div.gallerytextwrapper,
-ul.mw-gallery-packed-hover li.gallerybox.mw-gallery-focused div.gallerytextwrapper {
-  position: absolute;
-  opacity: .8;
-  filter: alpha(opacity=80);
-  zoom: 1;
-  background-color: #ffffff;
-  padding: 5px 10px;
-  bottom: 0;
-  left: 0;
-  /* Needed for IE */
-  height: auto;
-  font-weight: bold;
-  margin: 2px;
-  /* correspond to style on div.thumb */
-  width: 100% !important;
-}
-ul.mw-gallery-packed-hover,
-ul.mw-gallery-packed-overlay,
-ul.mw-gallery-packed {
-  text-align: center;
-}
-ul.mw-gallery-packed-hover div.gallerytext,
-ul.mw-gallery-packed-overlay div.gallerytext {
-  opacity: 1;
-  position: relative;
-  /* Resets opacity in old IE */
-}
-ul.gallery li.gallerybox,
-ul.gallery li.gallerybox > div,
-ul.gallery li.gallerybox .thumb {
-  max-width: 100%;
 }
 /* CSS to display wikitext in good-looking monospace font, in tutorials*/
 div.wikitext-quote {

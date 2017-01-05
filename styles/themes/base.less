@@ -264,46 +264,7 @@ p {
 
 @import "components/lp-icons.less";
 @import "components/mobile-navbar.less";
-
-.wiki-color-dark,
-.c-dark {
-	color:@wiki-color-dark;
-}
-.wiki-color-light,
-.c-light {
-	color:@wiki-color-light;
-}
-.wiki-backgroundcolor-dark,
-.wiki-backgroundcolor-dark-hover:hover,
-.bgc-dark, 
-.bgc-dark-hover:hover {
-	background-color:@wiki-color-dark;
-}
-.wiki-backgroundcolor-light,
-.wiki-backgroundcolor-light-hover:hover,
-.bgc-light, 
-.bgc-light-hover:hover {
-	background-color:@wiki-color-light;
-}
-.wiki-backgroundcolor-light-2,
-.wiki-backgroundcolor-light-2-hover:hover,
-.bgc-light2,
-.bgc-lighter,
-.bgc-light2-hover:hover,
-.bgc-lighter-hover:hover {
-	background-color:lighten(@wiki-color-light, 50%);
-}
-.wiki-backgroundcolor-navbar-badge {
-	background-color:darken(@navbar-default-bg, 10%);
-}
-.wiki-bordercolor-dark, 
-.bdc-dark {
-	border-color:@wiki-color-dark;
-}
-.wiki-bordercolor-light, 
-.bdc-light {
-	border-color:@wiki-primary-border;
-}
+@import "components/wiki-colors.less";
 
 pre, code, tt, kbd, samp, .mw-code {
 	font-family:'Droid Sans Mono', monospace;

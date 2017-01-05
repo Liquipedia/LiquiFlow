@@ -39,51 +39,6 @@
 }
 
 @import "components/tables.less";
-.table,
-.wikitable {
-	width:auto;
-}
-.table-full-width {
-	width:100%;
-}
-
-.table-responsive > table {
-	//white-space:nowrap;
-	margin-bottom:0;
-}
-.table-responsive {
-	@media screen and (max-width:@screen-xs-max) {
-		margin-bottom:0;
-	}
-}
-.table > thead > tr > th, 
-.table > tbody > tr > th, 
-.table > tfoot > tr > th, 
-.table > thead > tr > td, 
-.table > tbody > tr > td, 
-.table > tfoot > tr > td {
-	vertical-align:middle;
-}
-.wikitable > thead > tr > th, 
-.wikitable > tbody > tr > th, 
-.wikitable > tfoot > tr > th, 
-.wikitable > thead > tr > td, 
-.wikitable > tbody > tr > td, 
-.wikitable > tfoot > tr > td {
-	vertical-align:middle;
-	border-color:@table-border-color;
-}
-@media(max-width:767px) {
-	.table-responsive {
-		border:0;
-	}
-	.table-responsive > .table-bordered {
-		border:1px solid #dddddd;
-	}
-}
-td.mw-label {
-	vertical-align:middle !important;
-}
 
 @import "../../vendor/bootstrap/less/forms.less";
 @import "../../vendor/bootstrap/less/buttons.less";

@@ -7617,10 +7617,6 @@ body.logged-out .hide-logged-out {
 a[name="SMWResults"] + #mw-pages table td {
   word-break: break-all;
 }
-/* adjust sub elements */
-sup {
-  top: 0em;
-}
 /* Underlining for abbreviations */
 @supports (text-decoration:underline dotted) {
   abbr[title],

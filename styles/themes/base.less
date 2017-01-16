@@ -445,9 +445,23 @@ body#top.ns--1.mw-special-Ask #mw-content-text table {
 }
 
 /* SMW fact box */
-.smwfact,
-.smwb-factbox {
+.smwfact {
 	word-break:break-all;
+}
+.smwb-factbox .smwb-propvalue td,
+.smwb-ifactbox .smwb-ipropvalue td {
+	word-break:break-all;
+}
+@media(min-width:@screen-sm-min) {
+	.smwb-factbox .smwb-propvalue,
+	.smwb-ifactbox .smwb-ipropvalue {
+		th {
+			width:250px;
+		}
+		td {
+			width:auto;
+		}
+	}
 }
 
 /* hide overflow on everything but special pages */

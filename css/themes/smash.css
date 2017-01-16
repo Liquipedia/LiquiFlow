@@ -7598,9 +7598,33 @@ body#top.ns--1.mw-special-Ask #mw-content-text table {
   z-index: 1000;
 }
 /* SMW fact box */
-.smwfact,
-.smwb-factbox {
+.smwfact {
   word-break: break-all;
+}
+.smwb-factbox .smwb-propvalue td,
+.smwb-ifactbox .smwb-ipropvalue td {
+  word-break: break-all;
+}
+@media (max-width: 767px) {
+  .smwb-factbox .smwb-propvalue th,
+  .smwb-ifactbox .smwb-ipropvalue th {
+    word-break: break-all;
+    width: 150px;
+  }
+  .smwb-factbox .smwb-propvalue td,
+  .smwb-ifactbox .smwb-ipropvalue td {
+    width: initial;
+  }
+}
+@media (min-width: 768px) {
+  .smwb-factbox .smwb-propvalue th,
+  .smwb-ifactbox .smwb-ipropvalue th {
+    width: 250px;
+  }
+  .smwb-factbox .smwb-propvalue td,
+  .smwb-ifactbox .smwb-ipropvalue td {
+    width: initial;
+  }
 }
 /* hide overflow on everything but special pages */
 @media (max-width: 991px) {

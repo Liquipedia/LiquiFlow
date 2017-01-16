@@ -453,6 +453,12 @@ body#top.ns--1.mw-special-Ask #mw-content-text table {
 	word-break:break-all;
 }
 @media(min-width:@screen-sm-min) {
+	.smwb-factbox .smwb-propvalue th,
+	.smwb-ifactbox .smwb-ipropvalue th {
+		word-break:break-all;
+	}
+}
+@media(max-width:(@screen-sm-min - 1)) {
 	.smwb-factbox .smwb-propvalue,
 	.smwb-ifactbox .smwb-ipropvalue {
 		th {

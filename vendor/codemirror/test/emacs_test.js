@@ -19,7 +19,7 @@
     var code;
     for (var c in CodeMirror.keyNames)
       if (CodeMirror.keyNames[c] == key) { code = c; break; }
-    if (c == null) throw new Error("Unknown key: " + key);
+    if (code == null) throw new Error("Unknown key: " + key);
 
     return eventCache[keyName] = {
       type: "keydown", keyCode: code, ctrlKey: ctrl, shiftKey: shift, altKey: alt,
@@ -111,7 +111,7 @@
   sim("transposeChar", "abcd\ne",
       "Ctrl-F", "Ctrl-T", "Ctrl-T", txt("bcad\ne"), at(0, 3),
       "Ctrl-F", "Ctrl-T", "Ctrl-T", "Ctrl-T", txt("bcda\ne"), at(0, 4),
-      "Ctrl-F", "Ctrl-T", txt("bcde\na"), at(1, 0));
+      "Ctrl-F", "Ctrl-T", txt("bcde\na"), at(1, 1));
 
   sim("manipWordCase", "foo BAR bAZ",
       "Alt-C", "Alt-L", "Alt-U", txt("Foo bar BAZ"),

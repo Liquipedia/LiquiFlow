@@ -34,3 +34,6 @@
 	color: #1169aa ;
 	font-weight: normal;
 }
+.wikiEditor-ui .options {
+	z-index:10000;
+}

@@ -17,13 +17,13 @@
 	width:300px;
 	background-color:@body-bg;
 	margin-top:0px;
+	margin-left:10px;
 }
 
 /* Positioning of sidebar toc */
 #sidebar-toc {
 	box-sizing:border-box;
 	padding-top:0px;
-	padding-left:10px;
 	width:300px;
 
 	&.affix-top {
@@ -169,4 +169,9 @@ a#back-to-top:hover, {
 
 #sidebar-toc > .nav {
 	overflow:auto;
+	height:calc(~"100vh - 396px");
+}
+
+#sidebar-ad {
+	margin-left:0 !important;
 }

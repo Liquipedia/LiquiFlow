@@ -31,6 +31,40 @@
 		max-width:990px;
 	}
 }
+/*WIDESCREEN*/
+//FIXME: This code needs cleanup
+@media (min-width:@screen-lg-min) {
+	.container-fluid {
+		margin-left:320px;
+		max-width:calc(~"100% - 330px");
+		.navbar &,
+		.footer & {
+			margin-left:310px;
+			max-width:990px;
+		}
+		#mw-content-text {
+			> p {
+				max-width:990px;
+			}
+			> ul,
+			> ol  {
+				> li {
+					max-width:965px;
+				}
+			}
+		}
+	}
+}
+@media (min-width:@screen-xl-min) {
+	.container-fluid {
+		.navbar &,
+		.footer & {
+			margin-left:310px;
+			margin-right:310px;
+			max-width:calc(~"100% - 620px");
+		}
+	}
+}
 
 /* FIX: Chrome is weird with text selections if there is an element with negative margins overflowing out of a p element */
 #mw-content-text p {
@@ -111,13 +145,23 @@ html {
 }
 
 /* responsive floats */
-@media(min-width:768px) {
+@media(min-width:@screen-sm-min) {
+	.pull-right-sm {
+		float:right;
+	}
+}
+@media(min-width:@screen-md-min) {
 	.pull-right-md {
 		float:right;
 	}
 }
-@media(min-width:992px) {
+@media(min-width:@screen-lg-min) {
 	.pull-right-lg {
+		float:right;
+	}
+}
+@media(min-width:@screen-xl-min) {
+	.pull-right-xl {
 		float:right;
 	}
 }

@@ -1,6 +1,7 @@
 var lastScrollTop = 0;
 var currentState = 'top';
 function adjustSidebar() {
+	$('#sidebar-toc-column .nav').css('height', 'auto');
 	var secondNavbar = 0;
 	var tocBottomOffset = 0;
 	var tocHeightModifier = 30;
@@ -71,8 +72,8 @@ function adjustSidebar() {
 		$window.on('load', function () {
 			$body.scrollspy('refresh');
 			$('#sidebar-toc-column').css('height', $('#main-content-column').height() + 12);
-			$('#sidebar-toc-column').css('margin-left', $('#main-content-column').offset().left - 310);
-			$('#sidebar-toc-column').addClass('visible-lg visible-xl');
+			//$('#sidebar-toc-column').css('margin-left', $('#main-content-column').offset().left - 310);
+			//$('#sidebar-toc-column').addClass('visible-lg visible-xl');
 		});
 
 		$(window).scroll(function() {
@@ -81,7 +82,11 @@ function adjustSidebar() {
 
 		$(window).resize(function() {
 			$('#sidebar-toc-column').css('height', $('#main-content-column').height() + 12);
-			$('#sidebar-toc-column').css('margin-left', Math.max($('#main-content-column').offset().left - 310, 0));
+			//$('#sidebar-toc-column').css('margin-left', Math.max($('#main-content-column').offset().left - 310, 0));
+			adjustSidebar();
+		});
+
+		$(window).load(function() {
 			adjustSidebar();
 		});
 

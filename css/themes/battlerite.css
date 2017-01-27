@@ -1601,6 +1601,33 @@ pre code {
     max-width: 990px;
   }
 }
+/*WIDESCREEN*/
+@media (min-width: 1320px) {
+  .container-fluid {
+    margin-left: 320px;
+    max-width: calc(100% - 330px);
+  }
+  .navbar .container-fluid,
+  .footer .container-fluid {
+    margin-left: 310px;
+    max-width: 990px;
+  }
+  .container-fluid #mw-content-text > p {
+    max-width: 990px;
+  }
+  .container-fluid #mw-content-text > ul > li,
+  .container-fluid #mw-content-text > ol > li {
+    max-width: 965px;
+  }
+}
+@media (min-width: 1620px) {
+  .navbar .container-fluid,
+  .footer .container-fluid {
+    margin-left: 310px;
+    margin-right: 310px;
+    max-width: calc(100% - 620px);
+  }
+}
 /* FIX: Chrome is weird with text selections if there is an element with negative margins overflowing out of a p element */
 #mw-content-text p {
   overflow: auto;
@@ -6101,12 +6128,22 @@ html {
 }
 /* responsive floats */
 @media (min-width: 768px) {
-  .pull-right-md {
+  .pull-right-sm {
     float: right;
   }
 }
 @media (min-width: 992px) {
+  .pull-right-md {
+    float: right;
+  }
+}
+@media (min-width: 1320px) {
   .pull-right-lg {
+    float: right;
+  }
+}
+@media (min-width: 1620px) {
+  .pull-right-xl {
     float: right;
   }
 }
@@ -6211,12 +6248,12 @@ h2 {
   width: 300px;
   background-color: #dee2ec;
   margin-top: 0px;
+  margin-left: 10px;
 }
 /* Positioning of sidebar toc */
 #sidebar-toc {
   box-sizing: border-box;
   padding-top: 0px;
-  padding-left: 10px;
   width: 300px;
 }
 #sidebar-toc.affix-top {
@@ -6364,6 +6401,10 @@ a#back-to-top:hover {
 }
 #sidebar-toc > .nav {
   overflow: auto;
+  height: calc(100vh - 396px);
+}
+#sidebar-ad {
+  margin-left: 0 !important;
 }
 #footer h4 {
   font-family: 'Roboto', sans-serif;
@@ -6887,6 +6928,9 @@ p {
 }
 .lp-icon.lp-challonge {
   background-image: url(//wiki.teamliquid.net/commons/images/c/cd/InfoboxIcon_Challonge.png);
+}
+.lp-icon.lp-cybergamer {
+  background-image: url(//wiki.teamliquid.net/commons/images/4/4e/InfoboxIcon_CyberGamer.png);
 }
 .lp-icon.lp-datdota {
   background-image: url(//wiki.teamliquid.net/commons/images/2/24/InfoboxIcon_Datdota.png);

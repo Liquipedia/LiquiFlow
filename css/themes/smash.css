@@ -1629,9 +1629,9 @@ pre code {
   }
 }
 /* FIX: Chrome is weird with text selections if there is an element with negative margins overflowing out of a p element */
-#mw-content-text p {
-  overflow: auto;
-}
+/*#mw-content-text p {
+	overflow:auto;
+}*/
 table {
   background-color: transparent;
 }
@@ -1664,13 +1664,13 @@ th {
   padding: 5px;
   line-height: 1.42857143;
   vertical-align: top;
-  border-top: 1px solid #ddd !important;
+  border-top: 1px solid #bbb !important;
 }
 .table > thead > tr > th,
 .wikitable > thead > tr > th {
   background-color: #f5f5f5;
   vertical-align: bottom;
-  border-bottom: 2px solid #ddd !important;
+  border-bottom: 2px solid #bbb !important;
 }
 .table > caption + thead > tr:first-child > th,
 .wikitable > caption + thead > tr:first-child > th,
@@ -1688,7 +1688,7 @@ th {
 }
 .table > tbody + tbody,
 .wikitable > tbody + tbody {
-  border-top: 2px solid #ddd !important;
+  border-top: 2px solid #bbb !important;
 }
 .table .table,
 .wikitable .table {
@@ -1704,7 +1704,7 @@ th {
 }
 .table-bordered,
 .wikitable {
-  border: 1px solid #ddd !important;
+  border: 1px solid #bbb !important;
 }
 .table-bordered > thead > tr > th,
 .wikitable > thead > tr > th,
@@ -1718,7 +1718,7 @@ th {
 .wikitable > tbody > tr > td,
 .table-bordered > tfoot > tr > td,
 .wikitable > tfoot > tr > td {
-  border: 1px solid #ddd !important;
+  border: 1px solid #bbb !important;
 }
 .table-bordered > thead > tr > th,
 .wikitable > thead > tr > th,
@@ -1858,7 +1858,7 @@ table th[class*="col-"] {
     margin-bottom: 11.25pt;
     overflow-y: hidden;
     -ms-overflow-style: -ms-autohiding-scrollbar;
-    border: 1px solid #ddd;
+    border: 1px solid #bbb;
   }
   .table-responsive > .table {
     margin-bottom: 0;
@@ -1899,7 +1899,7 @@ table th[class*="col-"] {
 }
 .wikitable {
   background: transparent !important;
-  border: 1px solid #ddd !important;
+  border: 1px solid #bbb !important;
   color: inherit !important;
 }
 .wikitable > caption {
@@ -1931,7 +1931,7 @@ table th[class*="col-"] {
 .wikitable > tbody > tr > td,
 .wikitable > tfoot > tr > td {
   vertical-align: middle;
-  border-color: #ddd;
+  border-color: #bbb;
 }
 @media (max-width: 767px) {
   .table-responsive {
@@ -5302,7 +5302,7 @@ a.badge:focus {
 .panel > .panel-body + .table-responsive,
 .panel > .table + .panel-body,
 .panel > .table-responsive + .panel-body {
-  border-top: 1px solid #ddd;
+  border-top: 1px solid #bbb;
 }
 .panel > .table > tbody:first-child > tr:first-child th,
 .panel > .table > tbody:first-child > tr:first-child td {
@@ -7527,6 +7527,7 @@ a.new:visited {
 }
 #fr-rating-controls {
   line-height: 3.3em;
+  overflow: hidden !important;
 }
 #mw-fr-confirmreview {
   white-space: normal !important;

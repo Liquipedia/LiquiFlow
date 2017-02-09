@@ -208,6 +208,15 @@
 				"skins.liquiflow"
 			]
 		},
+		"skins.liquiflow.theme.leagueoflegends": {
+			"styles": [
+				"css/themes/leagueoflegends.css"
+			],
+			"position": "top",
+			"dependencies": [
+				"skins.liquiflow"
+			]
+		},
 		"skins.liquiflow.theme.overwatch": {
 			"styles": [
 				"css/themes/overwatch.css"

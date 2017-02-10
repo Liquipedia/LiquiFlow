@@ -539,9 +539,12 @@ a[name="SMWResults"] + #mw-pages table td {
 	word-break:break-all;
 }
 
-/* hide subpages (breadcrumbs) in mainspace */
-body.ns-0 .subpages {
-	display:none;
+/* hide subpages (breadcrumbs) in mainspace and templatespace */
+body.ns-0,
+body.ns-10 {
+	.subpages {
+		display:none;
+	}
 }
 
 /* Underlining for abbreviations */

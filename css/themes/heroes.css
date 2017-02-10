@@ -7700,6 +7700,11 @@ body.logged-out .hide-logged-out {
 a[name="SMWResults"] + #mw-pages table td {
   word-break: break-all;
 }
+/* hide subpages (breadcrumbs) in mainspace and templatespace */
+body.ns-0 .subpages,
+body.ns-10 .subpages {
+  display: none;
+}
 /* Underlining for abbreviations */
 @supports (text-decoration:underline dotted) {
   abbr[title],

@@ -6159,18 +6159,11 @@ html {
   top: 50px !important;
 }
 /* Correct offset to top for anchors */
-.mw-headline,
-.reference {
+.mw-headline {
   padding-top: 60px;
   margin-top: -60px;
   display: inline-block;
   /* required for webkit browsers */
-}
-.reference {
-  pointer-events: none;
-}
-.reference > * {
-  pointer-events: auto;
 }
 hr {
   background-color: #dddddd;

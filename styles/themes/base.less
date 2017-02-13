@@ -174,17 +174,10 @@ html {
 }
 
 /* Correct offset to top for anchors */
-.mw-headline,
-.reference {
+.mw-headline {
 	padding-top:60px;
 	margin-top:-60px;
 	display:inline-block; /* required for webkit browsers */
-}
-.reference {
-	pointer-events:none;
-	> * {
-		pointer-events:auto;
-	}
 }
 
 @import "components/headers.less";

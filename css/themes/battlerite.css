@@ -7701,6 +7701,10 @@ body.ns-0 #contentSub .subpages,
 body.ns-10 #contentSub .subpages {
   display: none;
 }
+/* sup */
+sup {
+  top: -3px;
+}
 /* Underlining for abbreviations */
 @supports (text-decoration:underline dotted) {
   abbr[title],

@@ -741,7 +741,6 @@ $footerLinks = $this->getFooterLinks();
 	</div><!-- /.container-fluid -->
 </div><!-- /.footer -->
 
-<!-- Bootstrap core JavaScript -->
 <?php $this->printTrail(); ?>
 
 <?php Hooks::run( 'LiquiFlowAdEndCode', array( __DIR__ ) ); ?>

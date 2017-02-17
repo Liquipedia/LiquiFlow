@@ -23,11 +23,19 @@
 
 @media (min-width:768px) {
 	/* Correct offset to top for anchors */
-	.mw-headline,
-	.reference {
+	.mw-headline {
 		padding-top:92px !important;
 		margin-top:-92px !important;
 		display:inline-block !important; /* required for webkit browsers */
+	}
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		padding-top:calc(.5em + 92px) !important;
+		margin-top:-92px !important;
 	}
 }
 #sidebar-toc.affix-top {

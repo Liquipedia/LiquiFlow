@@ -4161,11 +4161,12 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav-tabs > li {
   background-color: #f3d05b;
   margin-right: 2px;
-  margin-bottom: -2px;
+  margin-bottom: 0;
   margin-top: 2px;
   border-left: 2px solid #440404;
   border-top: 2px solid #440404;
   border-right: 2px solid #440404;
+  height: 34px;
 }
 .nav-tabs > li:last-of-type {
   margin-right: 0px;
@@ -4216,6 +4217,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav-tabs > li.active {
   background-color: #fff;
   color: #444;
+  margin-bottom: -2px;
+  height: 36px;
 }
 .nav-tabs > li > strong {
   border: 1px solid transparent;

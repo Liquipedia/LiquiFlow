@@ -74,7 +74,7 @@
 		},
 		"skins.liquiflow.loggedin": {
 			"styles": [
-				"css/loggedin.css"
+				"css/loggedin.less"
 			],
 			"position": "top",
 			"dependencies": [

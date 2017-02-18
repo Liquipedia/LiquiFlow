@@ -6180,6 +6180,15 @@ h6 {
   padding-top: calc(.5em + 60px);
   margin-top: -60px;
 }
+.popover h1,
+.popover h2,
+.popover h3,
+.popover h4,
+.popover h5,
+.popover h6 {
+  margin-top: 0 !important;
+  padding-top: .5em !important;
+}
 hr {
   background-color: #dddddd;
   border: 0 none;

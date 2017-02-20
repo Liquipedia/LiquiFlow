@@ -187,9 +187,13 @@ h5,
 h6 {
 	padding-top:calc(~".5em + 60px");
 	margin-top:-60px;
+	pointer-events:none;
 	.popover & {
 		margin-top:0 !important;
 		padding-top:.5em !important;
+	}
+	a {
+		pointer-events:auto;
 	}
 }
 

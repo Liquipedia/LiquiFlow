@@ -6179,6 +6179,7 @@ h5,
 h6 {
   padding-top: calc(.5em + 60px);
   margin-top: -60px;
+  pointer-events: none;
 }
 .popover h1,
 .popover h2,
@@ -6188,6 +6189,14 @@ h6 {
 .popover h6 {
   margin-top: 0 !important;
   padding-top: .5em !important;
+}
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+  pointer-events: auto;
 }
 hr {
   background-color: #dddddd;

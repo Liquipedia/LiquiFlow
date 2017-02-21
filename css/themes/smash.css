@@ -6171,31 +6171,31 @@ html {
   display: inline-block;
   /* required for webkit browsers */
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+#mw-content-text h1,
+#mw-content-text h2,
+#mw-content-text h3,
+#mw-content-text h4,
+#mw-content-text h5,
+#mw-content-text h6 {
   padding-top: calc(.5em + 60px);
   margin-top: -60px;
   pointer-events: none;
 }
-.popover h1,
-.popover h2,
-.popover h3,
-.popover h4,
-.popover h5,
-.popover h6 {
+.popover #mw-content-text h1,
+.popover #mw-content-text h2,
+.popover #mw-content-text h3,
+.popover #mw-content-text h4,
+.popover #mw-content-text h5,
+.popover #mw-content-text h6 {
   margin-top: 0 !important;
   padding-top: .5em !important;
 }
-h1 a,
-h2 a,
-h3 a,
-h4 a,
-h5 a,
-h6 a {
+#mw-content-text h1 a,
+#mw-content-text h2 a,
+#mw-content-text h3 a,
+#mw-content-text h4 a,
+#mw-content-text h5 a,
+#mw-content-text h6 a {
   pointer-events: auto;
 }
 hr {

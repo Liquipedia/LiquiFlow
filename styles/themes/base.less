@@ -179,21 +179,23 @@ html {
 	margin-top:-60px;
 	display:inline-block; /* required for webkit browsers */
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	padding-top:calc(~".5em + 60px");
-	margin-top:-60px;
-	pointer-events:none;
-	.popover & {
-		margin-top:0 !important;
-		padding-top:.5em !important;
-	}
-	a {
-		pointer-events:auto;
+#mw-content-text {
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		padding-top:calc(~".5em + 60px");
+		margin-top:-60px;
+		pointer-events:none;
+		.popover & {
+			margin-top:0 !important;
+			padding-top:.5em !important;
+		}
+		a {
+			pointer-events:auto;
+		}
 	}
 }
 

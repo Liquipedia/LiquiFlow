@@ -13,10 +13,6 @@
 	"requires": {
 		"MediaWiki": ">= 1.27.0"
 	},
-	"config": {
-		"liquiflow-prefs-show-dropdown-on-hover": false,
-		"liquiflow-prefs-use-codemirror": true
-	},
 	"ConfigRegistry": {
 		"liquiflow": "GlobalVarConfig::newInstance"
 	},
@@ -85,7 +81,7 @@
 			"styles": [
 				"styles/removebuggyeditortabs.css"
 			],
-			"position": "top",
+			"position": "bottom",
 			"dependencies": [
 				"skins.liquiflow"
 			]
@@ -129,7 +125,7 @@
 		},
 		"skins.liquiflow.theme.battlerite": {
 			"styles": [
-				"styles/themes/theme-battlerite.less"
+				"styles/themes/theme/battlerite.less"
 			],
 			"position": "top",
 			"dependencies": [
@@ -138,7 +134,7 @@
 		},
 		"skins.liquiflow.theme.clashroyale": {
 			"styles": [
-				"styles/themes/theme-clashroyale.less"
+				"styles/themes/theme/clashroyale.less"
 			],
 			"position": "top",
 			"dependencies": [
@@ -147,7 +143,7 @@
 		},
 		"skins.liquiflow.theme.commons": {
 			"styles": [
-				"styles/themes/theme-commons.less"
+				"styles/themes/theme/commons.less"
 			],
 			"position": "top",
 			"dependencies": [
@@ -156,7 +152,7 @@
 		},
 		"skins.liquiflow.theme.counterstrike": {
 			"styles": [
-				"styles/themes/theme-counterstrike.less"
+				"styles/themes/theme/counterstrike.less"
 			],
 			"position": "top",
 			"dependencies": [
@@ -165,7 +161,7 @@
 		},
 		"skins.liquiflow.theme.crossfire": {
 			"styles": [
-				"styles/themes/theme-crossfire.less"
+				"styles/themes/theme/crossfire.less"
 			],
 			"position": "top",
 			"dependencies": [
@@ -174,7 +170,7 @@
 		},
 		"skins.liquiflow.theme.dota2": {
 			"styles": [
-				"styles/themes/theme-dota2.less"
+				"styles/themes/theme/dota2.less"
 			],
 			"position": "top",
 			"dependencies": [
@@ -183,7 +179,7 @@
 		},
 		"skins.liquiflow.theme.fighters": {
 			"styles": [
-				"styles/themes/theme-fighters.less"
+				"styles/themes/theme/fighters.less"
 			],
 			"position": "top",
 			"dependencies": [
@@ -192,7 +188,7 @@
 		},
 		"skins.liquiflow.theme.hearthstone": {
 			"styles": [
-				"styles/themes/theme-hearthstone.less"
+				"styles/themes/theme/hearthstone.less"
 			],
 			"position": "top",
 			"dependencies": [
@@ -201,7 +197,7 @@
 		},
 		"skins.liquiflow.theme.heroes": {
 			"styles": [
-				"styles/themes/theme-heroes.less"
+				"styles/themes/theme/heroes.less"
 			],
 			"position": "top",
 			"dependencies": [
@@ -210,7 +206,7 @@
 		},
 		"skins.liquiflow.theme.leagueoflegends": {
 			"styles": [
-				"styles/themes/theme-leagueoflegends.less"
+				"styles/themes/theme/leagueoflegends.less"
 			],
 			"position": "top",
 			"dependencies": [
@@ -219,7 +215,7 @@
 		},
 		"skins.liquiflow.theme.overwatch": {
 			"styles": [
-				"styles/themes/theme-overwatch.less"
+				"styles/themes/theme/overwatch.less"
 			],
 			"position": "top",
 			"dependencies": [
@@ -228,7 +224,7 @@
 		},
 		"skins.liquiflow.theme.rocketleague": {
 			"styles": [
-				"styles/themes/theme-rocketleague.less"
+				"styles/themes/theme/rocketleague.less"
 			],
 			"position": "top",
 			"dependencies": [
@@ -237,7 +233,7 @@
 		},
 		"skins.liquiflow.theme.smash": {
 			"styles": [
-				"styles/themes/theme-smash.less"
+				"styles/themes/theme/smash.less"
 			],
 			"position": "top",
 			"dependencies": [
@@ -246,7 +242,7 @@
 		},
 		"skins.liquiflow.theme.starcraft": {
 			"styles": [
-				"styles/themes/theme-starcraft.less"
+				"styles/themes/theme/starcraft.less"
 			],
 			"position": "top",
 			"dependencies": [
@@ -255,7 +251,7 @@
 		},
 		"skins.liquiflow.theme.starcraft2": {
 			"styles": [
-				"styles/themes/theme-starcraft2.less"
+				"styles/themes/theme/starcraft2.less"
 			],
 			"position": "top",
 			"dependencies": [
@@ -264,7 +260,7 @@
 		},
 		"skins.liquiflow.theme.teamfortress": {
 			"styles": [
-				"styles/themes/theme-teamfortress.less"
+				"styles/themes/theme/teamfortress.less"
 			],
 			"position": "top",
 			"dependencies": [
@@ -273,7 +269,7 @@
 		},
 		"skins.liquiflow.theme.trackmania": {
 			"styles": [
-				"styles/themes/theme-trackmania.less"
+				"styles/themes/theme/trackmania.less"
 			],
 			"position": "top",
 			"dependencies": [
@@ -282,7 +278,7 @@
 		},
 		"skins.liquiflow.theme.warcraft": {
 			"styles": [
-				"styles/themes/theme-warcraft.less"
+				"styles/themes/theme/warcraft.less"
 			],
 			"position": "top",
 			"dependencies": [

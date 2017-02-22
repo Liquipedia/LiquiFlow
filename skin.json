@@ -109,7 +109,7 @@
 				"vendor/codemirror-mode/mediawiki/mediawiki.js",
 				"js/codemirror.js"
 			],
-			"position": "top",
+			"position": "bottom",
 			"dependencies": [
 				"skins.liquiflow"
 			]

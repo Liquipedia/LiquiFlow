@@ -81,7 +81,7 @@
 			"styles": [
 				"styles/removebuggyeditortabs.css"
 			],
-			"position": "bottom",
+			"position": "top",
 			"dependencies": [
 				"skins.liquiflow"
 			]
@@ -109,7 +109,7 @@
 				"vendor/codemirror-mode/mediawiki/mediawiki.js",
 				"scripts/codemirror.js"
 			],
-			"position": "top",
+			"position": "bottom",
 			"dependencies": [
 				"skins.liquiflow"
 			]

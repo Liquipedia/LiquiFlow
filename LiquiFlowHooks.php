@@ -19,7 +19,12 @@ class LiquiFlowHooks {
 			'type' => 'check',
 			'label-message' => 'liquiflow-prefs-use-codemirror', // a system message
 			'section' => 'editing/liquiflow'
-		);
+		);/*
+		$preferences['liquiflow-prefs-use-codemirror-linewrap'] = array(
+			'type' => 'check',
+			'label-message' => 'liquiflow-prefs-use-codemirror-linewrap', // a system message
+			'section' => 'editing/liquiflow'
+		);*/
 		$preferences['liquiflow-prefs-show-buggy-editor-tabs'] = array(
 			'type' => 'check',
 			'label-message' => 'liquiflow-prefs-show-buggy-editor-tabs', // a system message
@@ -82,6 +87,12 @@ class LiquiFlowHooks {
 	public static function onLinkerMakeExternalLink( &$url, &$text, &$link, &$attribs, $linktype ) {
 		$attribs['rel'] .= ' noopener';
 		return true;
+	}
+
+	public static function onBeforePageDisplay( OutputPage &$out, Skin &$skin ) {
+		if ($skin->getUser()->getOption ( 'liquiflow-prefs-use-codemirror' ) == true) {
+			$out->addModules( 'skins.liquiflow.codemirror' );
+		}
 	}
 
 }

@@ -32,7 +32,8 @@
 	"Hooks": {
 		"GetPreferences": "LiquiFlowHooks::onGetPreferences",
 		"MakeGlobalVariablesScript": "LiquiFlowHooks::onMakeGlobalVariablesScript",
-		"LinkerMakeExternalLink": "LiquiFlowHooks::onLinkerMakeExternalLink"
+		"LinkerMakeExternalLink": "LiquiFlowHooks::onLinkerMakeExternalLink",
+		"BeforePageDisplay": "LiquiFlowHooks::onBeforePageDisplay"
 	},
 	"ResourceModules": {
 		"skins.liquiflow": {
@@ -87,6 +88,17 @@
 			]
 		},
 		"skins.liquiflow.codemirror": {
+			"scripts": [
+				"js/codemirror.js"
+			],
+			"position": "bottom",
+			"dependencies": [
+				"skins.liquiflow.codemirror.lib",
+				"user.options",
+				"ext.wikiEditor"
+			]
+		},
+		"skins.liquiflow.codemirror.lib": {
 			"styles": [
 				"vendor/codemirror/lib/codemirror.css",
 				"vendor/codemirror/addon/dialog/dialog.css",
@@ -101,18 +113,15 @@
 				"vendor/codemirror/addon/search/searchcursor.js",
 				"vendor/codemirror/addon/display/fullscreen.js",
 				"vendor/codemirror/addon/edit/matchbrackets.js",
+				"vendor/codemirror/addon/selection/active-line.js",
 				"vendor/codemirror/mode/xml/xml.js",
 				"vendor/codemirror/mode/css/css.js",
 				"vendor/codemirror/mode/javascript/javascript.js",
 				"vendor/codemirror/mode/htmlmixed/htmlmixed.js",
 				"vendor/codemirror/mode/lua/lua.js",
-				"vendor/codemirror-mode/mediawiki/mediawiki.js",
-				"js/codemirror.js"
+				"vendor/codemirror-mode/mediawiki/mediawiki.js"
 			],
-			"position": "bottom",
-			"dependencies": [
-				"skins.liquiflow"
-			]
+			"position": "bottom"
 		},
 		"skins.liquiflow.hoverdropdown": {
 			"scripts": [

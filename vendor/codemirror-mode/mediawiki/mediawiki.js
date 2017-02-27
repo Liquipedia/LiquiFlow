@@ -1,3 +1,8 @@
+/*
+ * Adapted from https://www.mediawiki.org/wiki/Extension:CodeMirror
+ * License: GPL 2.0 or later
+ */
+
 /* global CodeMirror */
 (function( mod ) { mod( CodeMirror ); })(function( CodeMirror ) {
 'use strict';

@@ -35,6 +35,7 @@
 	"liquiflow-share": "Share",
 	"liquiflow-prefs-show-dropdown-on-hover": "Show menu dropdown on mouse hover",
 	"liquiflow-prefs-use-codemirror": "Use CodeMirror editor",
+	"liquiflow-prefs-use-codemirror-linewrap": "Enable line-wrapping in CodeMirror editor",
 	"liquiflow-prefs-show-buggy-editor-tabs": "Show buggy editor tabs",
 	"liquiflow-stability": "Stability",
 	"liquiflow-stability-tooltip": "Quality assurance settings",

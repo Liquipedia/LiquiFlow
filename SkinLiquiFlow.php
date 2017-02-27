@@ -57,9 +57,6 @@ class SkinLiquiFlow extends SkinTemplate {
 		if ($this->getSkin()->getUser()->getOption ( 'liquiflow-prefs-show-dropdown-on-hover' ) == true) {
 			$out->addModuleScripts( 'skins.liquiflow.hoverdropdown' );
 		}
-		if ($this->getSkin()->getUser()->getOption ( 'liquiflow-prefs-use-codemirror' ) == true) {
-			$out->addModuleScripts( 'skins.liquiflow.codemirror' );
-		}
 	}
 	/**
 	 * Loads skin and user CSS files.
@@ -79,9 +76,6 @@ class SkinLiquiFlow extends SkinTemplate {
 		}
 		if ($this->getSkin()->getUser()->isLoggedIn()) {
 			$out->addModuleStyles( 'skins.liquiflow.loggedin' );
-		}
-		if ($this->getSkin()->getUser()->getOption ( 'liquiflow-prefs-use-codemirror' )) {
-			$out->addModuleStyles( 'skins.liquiflow.codemirror' );
 		}
 		if (!$this->getSkin()->getUser()->getOption ( 'liquiflow-prefs-show-buggy-editor-tabs' )) {
 			$out->addModuleStyles( 'skins.liquiflow.removebuggyeditortabs' );

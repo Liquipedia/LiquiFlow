@@ -6181,15 +6181,6 @@ html {
   margin-top: -60px;
   pointer-events: none;
 }
-.popover #mw-content-text h1,
-.popover #mw-content-text h2,
-.popover #mw-content-text h3,
-.popover #mw-content-text h4,
-.popover #mw-content-text h5,
-.popover #mw-content-text h6 {
-  margin-top: 0 !important;
-  padding-top: .5em !important;
-}
 #mw-content-text h1 a,
 #mw-content-text h2 a,
 #mw-content-text h3 a,
@@ -6197,6 +6188,15 @@ html {
 #mw-content-text h5 a,
 #mw-content-text h6 a {
   pointer-events: auto;
+}
+#mw-content-text .popover h1,
+#mw-content-text .popover h2,
+#mw-content-text .popover h3,
+#mw-content-text .popover h4,
+#mw-content-text .popover h5,
+#mw-content-text .popover h6 {
+  margin-top: 0 !important;
+  padding-top: .5em !important;
 }
 hr {
   background-color: #dddddd;

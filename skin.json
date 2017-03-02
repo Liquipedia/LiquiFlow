@@ -101,16 +101,12 @@
 		"skins.liquiflow.codemirror.lib": {
 			"styles": [
 				"vendor/codemirror/lib/codemirror.css",
-				"vendor/codemirror/addon/dialog/dialog.css",
 				"vendor/codemirror/addon/display/fullscreen.css",
 				"vendor/codemirror-mode/mediawiki/mediawiki.css",
 				"styles/codemirror.css"
 			],
 			"scripts": [
 				"vendor/codemirror/lib/codemirror.js",
-				"vendor/codemirror/addon/dialog/dialog.js",
-				"vendor/codemirror/addon/search/search.js",
-				"vendor/codemirror/addon/search/searchcursor.js",
 				"vendor/codemirror/addon/display/fullscreen.js",
 				"vendor/codemirror/addon/edit/matchbrackets.js",
 				"vendor/codemirror/addon/selection/active-line.js",

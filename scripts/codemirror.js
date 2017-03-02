@@ -323,8 +323,7 @@ if (!String.prototype.includes) {
 				},
 				readOnly: textbox1[ 0 ].readOnly,
 				lineWrapping: linewrapping,
-				styleActiveLine: true,
-				pollInterval: 10000
+				styleActiveLine: true
 			} );
 		// Our best friend, IE, needs some special css
 		if ( window.navigator.userAgent.indexOf( 'Trident/' ) > -1 ) {

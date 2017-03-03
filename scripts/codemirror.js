@@ -334,6 +334,48 @@ if (!String.prototype.includes) {
 		codeMirror.setSize( null, textbox1.height() );
 		// Overwrite default textselection of WikiEditor to work with CodeMirror, too
 		$.fn.textSelection = cmTextSelection;
+		
+		function openPageOnClick(cssClass, element) {
+			var pagename = element.text();
+			var index = element.index();
+			var counter;
+
+			counter = index - 1;
+			while(element.parent().children().eq(counter).hasClass(cssClass)) {
+				pagename = element.parent().children().eq(counter).text() + pagename;
+				counter--;
+			}
+
+			counter = index + 1;
+			while(element.parent().children().eq(counter).hasClass(cssClass)) {
+				pagename = pagename + element.parent().children().eq(counter).text();
+				counter++;
+			}
+
+			pagename = pagename.substr(0, 1).toUpperCase() + pagename.substr(1);
+
+			if(cssClass == 'cm-mw-template-name') {
+				if(pagename.startsWith(':')) {
+					pagename = pagename.substr(1);
+				} else if(!pagename.includes(':')) {
+					pagename = 'Template:' + pagename;
+				}
+			}
+
+			window.open(mw.config.get('wgScriptPath') + '/'+ pagename);
+		}
+
+		$('.CodeMirror').on('click', '.cm-mw-template-name', function(e) {
+			if (e.altKey){
+				openPageOnClick('cm-mw-template-name', $(this));
+			}
+		});
+
+		$('.CodeMirror').on('click', '.cm-mw-link-pagename', function(e) {
+			if (e.altKey){
+				openPageOnClick('cm-mw-link-pagename', $(this));
+			}
+		});
 	}
 
 	// enable CodeMirror

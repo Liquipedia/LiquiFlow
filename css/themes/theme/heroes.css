@@ -7617,7 +7617,8 @@ blockquote.quote {
 .flaggedrevs_reviewform {
   background-color: transparent !important;
 }
-#mw-fr-reviewformlegend {
+#mw-fr-reviewformlegend,
+.rcoptions legend {
   color: #6b2d93;
   border-bottom: 2px solid #d2b4ea;
 }

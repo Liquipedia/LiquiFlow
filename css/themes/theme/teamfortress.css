@@ -7643,7 +7643,7 @@ blockquote.quote {
 .tright .thumbinner {
   min-width: 100px;
 }
-/* wikitables shouold break words in order to not overflow in the Special: namespace */
+/* wikitables should break words in order to not overflow in the Special: namespace */
 body#top.ns--1.mw-special-Ask #mw-content-text table {
   word-break: break-all;
 }

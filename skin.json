@@ -227,6 +227,15 @@
 				"skins.liquiflow"
 			]
 		},
+		"skins.liquiflow.theme.pokemon": {
+			"styles": [
+				"css/themes/theme/pokemon.css"
+			],
+			"position": "top",
+			"dependencies": [
+				"skins.liquiflow"
+			]
+		},
 		"skins.liquiflow.theme.rocketleague": {
 			"styles": [
 				"css/themes/theme/rocketleague.css"

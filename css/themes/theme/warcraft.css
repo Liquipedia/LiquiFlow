@@ -7131,6 +7131,7 @@ p {
     line-height: 16pt;
     padding-top: 16px;
     padding-bottom: 14px;
+    padding-left: 5px;
   }
 }
 .navbar-toggle {

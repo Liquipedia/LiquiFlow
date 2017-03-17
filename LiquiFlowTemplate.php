@@ -705,9 +705,9 @@ $footerLinks = $this->getFooterLinks();
 			<ul id="f-list">
 				<?php
 				if (isset($footerLinks['info']) && is_array($footerLinks['info'])) {
-					foreach ( $footerLinks['info'] as $link ) {	?>
+					foreach ( $footerLinks['info'] as $link ) { ?>
 						<li id="footer-info-<?php echo $link; ?>">
-							<?php $this->html( $link );?>
+							<?php $this->html( $link ); ?>
 						</li>
 				<?php
 					}

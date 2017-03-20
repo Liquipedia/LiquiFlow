@@ -17,7 +17,6 @@ class SkinLiquiFlow extends SkinTemplate {
 	 */
 	public function initPage( OutputPage $out ) {
 
-		
 		parent::initPage( $out );
 
 		// add text to recruit people from landing page

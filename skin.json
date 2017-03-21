@@ -33,7 +33,8 @@
 		"GetPreferences": "LiquiFlowHooks::onGetPreferences",
 		"MakeGlobalVariablesScript": "LiquiFlowHooks::onMakeGlobalVariablesScript",
 		"LinkerMakeExternalLink": "LiquiFlowHooks::onLinkerMakeExternalLink",
-		"BeforePageDisplay": "LiquiFlowHooks::onBeforePageDisplay"
+		"BeforePageDisplay": "LiquiFlowHooks::onBeforePageDisplay",
+		"OutputPageParserOutput": "LiquiFlowHooks::onOutputPageParserOutput"
 	},
 	"ResourceModules": {
 		"skins.liquiflow": {

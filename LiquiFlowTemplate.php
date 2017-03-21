@@ -34,7 +34,7 @@ class LiquiFlowTemplate extends BaseTemplate {
 		'purge' => 'fa fa-fw fa-repeat',
 		'addsection' => 'fa fa-fw fa-plus',
 		'stability' => 'fa fa-fw fa-check-circle-o',
-		'viewsource' => 'fa fa-fw fa-code',
+		'viewsource' => 'fa fa-fw fa-pencil',
 		'current' => 'fa fa-fw fa-circle-o-notch fa-spinner-7s',
 		'default' => 'fa fa-fw fa-pause-circle-o',
 		'view-foreign' => 'fa fa-fw fa-hdd-o',

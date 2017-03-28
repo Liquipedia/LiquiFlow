@@ -84,8 +84,9 @@ class SkinLiquiFlow extends SkinTemplate {
 			$urlStyles = wfMessage( 'liquiflow-css-urls' )->plain();
 			$urlStyles = explode( "\n", $urlStyles );
 			foreach( $urlStyles as $urlStyle ) {
-				if ( strpos( $urlStyle, '*' ) !== 0 )
+				if ( strpos( $urlStyle, '*' ) !== 0 ) {
 					continue;
+				}
 				$urlStyle = trim( $urlStyle, '* ' );
 				if( !empty( $urlStyle ) && strlen( $urlStyle ) > 0 ) {
 					$out->addStyle( $urlStyle );

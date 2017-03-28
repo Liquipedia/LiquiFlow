@@ -79,6 +79,17 @@ class SkinLiquiFlow extends SkinTemplate {
 		if (!$this->getSkin()->getUser()->getOption ( 'liquiflow-prefs-show-buggy-editor-tabs' )) {
 			$out->addModuleStyles( 'skins.liquiflow.removebuggyeditortabs' );
 		}
+
+		if( wfMessage( 'liquiflow-css-urls' )->exists() ) {
+			$urlStyles = wfMessage( 'liquiflow-css-urls' )->plain();
+			$urlStyles = explode( "\n", $urlStyles );
+			foreach( $urlStyles as $urlStyle ) {
+				$urlStyle = trim($urlStyle, '* ');
+				if( !empty( $urlStyle ) && strlen( $urlStyle ) > 0 ) {
+					$out->addStyle( $urlStyle );
+				}
+			}
+		}
 	}
 
 	/**

@@ -1008,42 +1008,42 @@ $footerLinks = $this->getFooterLinks();
 								$externalLink = $this->data['serverurl'] . str_replace('$1', $this->data['title'], $this->data['articlepath']);
 							?>
 							<li>
-								<a onclick="Share.twitter('<?php echo $externalLink; ?>','<?php echo $this->data['title']; ?>')">
+								<a data-type="twitter" onclick="Share.twitter('<?php echo $externalLink; ?>','<?php echo $this->data['title']; ?>')">
 									<span class="fa fa-fw fa-twitter"></span> Twitter
 								</a>
 							</li>
 							<li>
-								<a onclick="Share.facebook('<?php echo $externalLink; ?>','<?php echo $this->data['title']; ?>')">
+								<a data-type="facebook" onclick="Share.facebook('<?php echo $externalLink; ?>','<?php echo $this->data['title']; ?>')">
 									<span class="fa fa-fw fa-facebook"></span> Facebook
 								</a>
 							</li>
 							<li>
-								<a onclick="Share.reddit('<?php echo $externalLink; ?>','<?php echo $this->data['title']; ?>')">
+								<a data-type="reddit" onclick="Share.reddit('<?php echo $externalLink; ?>','<?php echo $this->data['title']; ?>')">
 									<span class="fa fa-fw fa-reddit-alien"></span> Reddit
 								</a>
 							</li>
 							<li>
-								<a onclick="Share.googleplus('<?php echo $externalLink; ?>')">
+								<a data-type="googleplus" onclick="Share.googleplus('<?php echo $externalLink; ?>')">
 									<span class="fa fa-fw fa-google-plus"></span> Google+
 								</a>
 							</li>
 							<li>
-								<a onclick="Share.qq('<?php echo $externalLink; ?>','<?php echo $this->data['title']; ?>')">
+								<a data-type="qq" onclick="Share.qq('<?php echo $externalLink; ?>','<?php echo $this->data['title']; ?>')">
 									<span class="fa fa-fw fa-qq"></span> Tencent QQ
 								</a>
 							</li>
 							<li>
-								<a onclick="Share.vk('<?php echo $externalLink; ?>','<?php echo $this->data['title']; ?>')">
+								<a data-type="vk" onclick="Share.vk('<?php echo $externalLink; ?>','<?php echo $this->data['title']; ?>')">
 									<span class="fa fa-fw fa-vk"></span> VK
 								</a>
 							</li>
 							<li>
-								<a onclick="Share.weibo('<?php echo $externalLink; ?>','<?php echo $this->data['title']; ?>')">
+								<a data-type="weibo" onclick="Share.weibo('<?php echo $externalLink; ?>','<?php echo $this->data['title']; ?>')">
 									<span class="fa fa-fw fa-weibo"></span> Weibo
 								</a>
 							</li>
 							<li class="hidden-lg">
-								<a onclick="Share.whatsapp('<?php echo $externalLink; ?>','<?php echo $this->data['title']; ?>')">
+								<a data-type="whatsapp" onclick="Share.whatsapp('<?php echo $externalLink; ?>','<?php echo $this->data['title']; ?>')">
 									<span class="fa fa-fw fa-whatsapp"></span> WhatsApp
 								</a>
 							</li>

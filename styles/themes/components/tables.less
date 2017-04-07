@@ -117,6 +117,18 @@ th {
 	> tbody > tr:nth-child(odd) {
 		background-color:@table-bg-accent;
 	}
+	> thead,
+	> tbody,
+	> tfoot {
+		> tr {
+			> th,
+			> td {
+				&:last-child {
+					border-right:1px solid @table-border-color;
+				}
+			}
+		}
+	}
 }
 
 

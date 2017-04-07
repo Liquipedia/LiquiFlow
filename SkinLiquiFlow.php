@@ -56,6 +56,18 @@ class SkinLiquiFlow extends SkinTemplate {
 		if ($this->getSkin()->getUser()->getOption ( 'liquiflow-prefs-show-dropdown-on-hover' ) == true) {
 			$out->addModuleScripts( 'skins.liquiflow.hoverdropdown' );
 		}
+
+		if( wfMessage( 'liquiflow-js-urls' )->exists() ) {
+			$urlScripts = wfMessage( 'liquiflow-js-urls' )->plain();
+			$urlScripts = explode( "\n", $urlScripts );
+			foreach( $urlScripts as $urlId => $urlScript ) {
+				if ( strpos( trim( $urlScript) , '*' ) !== 0 ) {
+					continue;
+				}
+				$urlScript = ltrim( trim( $urlScript ), '* ' );
+				$out->addHeadItem( 'liquiflow-script-' . $urlId, "<script src=\"" . $urlScript . "\"></script>\n" );
+			}
+		}
 	}
 	/**
 	 * Loads skin and user CSS files.

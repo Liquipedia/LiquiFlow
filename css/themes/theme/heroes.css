@@ -7580,7 +7580,7 @@ a.new:visited {
 #mw-fr-confirmreview {
   white-space: normal !important;
 }
-@media (max-width: 900px) {
+@media (max-width: 991px) {
   #mw-fr-confirmreview > :not(script),
   #mw-fr-ratingselects > :not(script) {
     display: block;

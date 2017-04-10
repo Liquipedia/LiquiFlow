@@ -249,7 +249,7 @@ p {
 @viewport           { width:device-width; }
 
 /* Align the search form with the second navbar on desktop. */
-@media(min-width:992px) {
+@media(min-width:@screen-md-min) {
 	.navbar-search-right-logged-in {
 		margin-right:-5px !important;
 	}
@@ -372,7 +372,7 @@ a.new:visited {
 #mw-fr-confirmreview {
 	white-space:normal !important;
 }
-@media(max-width:900px) {
+@media(max-width:@screen-sm-max) {
 	#mw-fr-confirmreview > :not(script),
 	#mw-fr-ratingselects > :not(script) {
 		display:block;
@@ -404,7 +404,7 @@ blockquote.quote {
 }
 
 /* search bar */
-@media(min-width:992px) {
+@media(min-width:@screen-md-min) {
 	#searchInput {
 		width:275px;
 	}
@@ -542,7 +542,7 @@ body#top.ns--1.mw-special-Ask #mw-content-text table {
 }
 
 /* hide overflow on everything but special pages */
-@media(max-width:991px) {
+@media(max-width:@screen-sm-max) {
 	body:not(.ns-special) #main-content-column {
 		overflow:auto;
 	}

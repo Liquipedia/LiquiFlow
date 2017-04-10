@@ -829,8 +829,6 @@ $footerLinks = $this->getFooterLinks();
 					</ul>
 				<?php
 				} else {
-					?>
-					<?php
 					echo $content; /* Allow raw HTML block to be defined by extensions */
 				}
 

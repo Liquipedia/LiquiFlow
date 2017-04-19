@@ -7511,6 +7511,13 @@ div.thumbinner {
   padding: 10px 0;
   margin: 0;
 }
+@media (max-width: 991px) {
+  div.tright,
+  div.floatright,
+  table.floatright {
+    float: none;
+  }
+}
 /* hide "Edit local description" button for remote wiki files */
 #ca-view-foreign + .divider-vertical,
 #ca-view-foreign ~ #ca-edit {

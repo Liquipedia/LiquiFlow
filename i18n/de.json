@@ -8,7 +8,6 @@
 	"skinname-liquiflow": "LiquiFlow",
 	"liquiflow-brand": "liquipedia",
 	"liquiflow-skin-desc": "Moderner Skin für [http://wiki.teamliquid.net/ Liquipedia], basierend auf Bootstrap.",
-	"liquiflow-skin-desc": "Moderner, auf Bootstrap basierender Skin erstellt für [http://wiki.teamliquid.net/ Liquipedia], mit vielen Verbesserungen gegenüber des bisherigen.",
 	"liquiflow.css": "/* Hier platziertes CSS beeinflusst alle Benutzer des LiquiFlow Skins */",
 	"liquiflow.js": "/* Hier platziertes JavaScript wird für alle Benutzer des LiquiFlow Skins geladen. */",
 	"liquiflow-about": "Über",

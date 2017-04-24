@@ -1115,10 +1115,13 @@ $footerLinks = $this->getFooterLinks();
 					<ul class="dropdown-menu">
 						<?php
 						if( !wfMessage( 'flaggedrevs-desc' )->exists() ) {
-							foreach( $this->adminDropdown['about'] as $adminDropDownItem ) {
-								Special:ValidationStatistics
+							foreach( $this->adminDropdown['about'] as $i => $adminDropDownItem ) {
+								if( $adminDropDownItem['page'] == 'Special:ValidationStatistics' ) {
+									unset( $this->adminDropdown['about'][$i] );
+								}
 							}
 						}
+						$this->adminDropdown['about'] = array_values( $this->adminDropdown['about'] );
 						$adminDropdownLength = sizeof($this->adminDropdown);
 						$count = 0;
 						foreach ($this->adminDropdown as $header => $items) :

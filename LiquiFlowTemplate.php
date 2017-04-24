@@ -1057,11 +1057,15 @@ $footerLinks = $this->getFooterLinks();
 						<ul class="dropdown-menu">
 							<li class="dropdown-header"><?php echo $this->msg( 'liquiflow-general' ); ?></li>
 							<li><a href="<?php echo Title::newFromText('RecentChanges', NS_SPECIAL)->getLocalURL(); ?>" <?php echo Xml::expandAttributes( Linker::tooltipAndAccesskeyAttribs( 'n-recentchanges' ) ); ?>><span class="fa fa-fw fa-clock-o"></span><?php $this->msg( 'recentchanges' ); ?></a></li>
+
+							<?php if( wfMessage( 'flaggedrevs-desc' )->exists() ) { ?>
 							<li><a href="<?php echo Title::newFromText('PendingChanges', NS_SPECIAL)->getLocalURL(); ?>"><span class="fa fa-fw fa-circle-o-notch"></span><?php $this->msg( 'revreview-current' ); ?></a></li>
 							<?php if ( in_array( 'editor', $wgUser->getEffectiveGroups()) ) { ?><li><a href="<?php echo Title::newFromText('UnreviewedPages', NS_SPECIAL)->getLocalURL(); ?>"><span class="fa fa-fw fa-circle-o"></span><?php $this->msg( 'unreviewedpages' ); ?></a></li><?php } ?>
+							<?php } ?>
+
 							<li><a href="<?php echo Title::newFromText('Random', NS_SPECIAL)->getLocalURL(); ?>" <?php echo Xml::expandAttributes( Linker::tooltipAndAccesskeyAttribs( 'n-randompage' ) ); ?>><span class="fa fa-fw fa-random"></span><?php $this->msg( 'randompage' ); ?></a></li>
 
-							<?php if( wfMessage( 'createteams' )->exists() ) { ?>
+							<?php if( ExtensionRegistry::getInstance()->isLoaded( 'CreateTeams' ) ) { ?>
 								<li class="divider"></li>
 								<li><a href="<?php echo Title::newFromText('CreateTeams', NS_SPECIAL)->getLocalURL(); ?>"><span class="fa fa-fw fa-code"></span><?php $this->msg( 'createteams' ); ?></a></li>
 							<?php } ?>
@@ -1109,6 +1113,14 @@ $footerLinks = $this->getFooterLinks();
 				case 'ADMIN': ?>
 					<ul class="dropdown-menu">
 						<?php
+						if( !wfMessage( 'flaggedrevs-desc' )->exists() ) {
+							foreach( $this->adminDropdown['about'] as $i => $adminDropDownItem ) {
+								if( $adminDropDownItem['page'] == 'Special:ValidationStatistics' ) {
+									unset( $this->adminDropdown['about'][$i] );
+								}
+							}
+						}
+						$this->adminDropdown['about'] = array_values( $this->adminDropdown['about'] );
 						$adminDropdownLength = sizeof($this->adminDropdown);
 						$count = 0;
 						foreach ($this->adminDropdown as $header => $items) :

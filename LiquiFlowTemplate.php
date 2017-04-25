@@ -185,7 +185,7 @@ class LiquiFlowTemplate extends BaseTemplate {
 		Hooks::run( 'LiquiFlowBodyFirst' );
 ?>
 
-<nav class="navbar navbar-default navbar-fixed-top noprint<?php global $wgLiquiFlowAlphawiki; echo (isset($wgLiquiFlowAlphawiki) && $wgLiquiFlowAlphawiki)?' alphawiki':''; ?>" role="navigation" id="slide-nav">
+<nav class="navbar navbar-default navbar-fixed-top noprint<?php global $wgLiquiFlowAlphawiki; echo (isset($wgLiquiFlowAlphawiki) && $wgLiquiFlowAlphawiki)?' alphawiki':''; ?>" id="slide-nav">
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-md-12 navbar-main-column">

@@ -114,6 +114,10 @@ th {
 
 .table-striped {
 	border:1px solid @table-border-color;
+	.panel & {
+		border-left:0;
+		border-right:0;
+	}
 	> tbody > tr:nth-child(odd) {
 		background-color:@table-bg-accent;
 	}
@@ -125,6 +129,9 @@ th {
 			> td {
 				&:last-child {
 					border-right:1px solid @table-border-color;
+					.panel & {
+						border-right:0;
+					}
 				}
 			}
 		}

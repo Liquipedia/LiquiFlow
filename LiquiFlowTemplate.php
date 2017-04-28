@@ -169,7 +169,7 @@ class LiquiFlowTemplate extends BaseTemplate {
 			$toc = str_replace('<ul>', '<ul class="nav">', $toc);
 
 			// Adjust Data-Targets in menu so scrollspy works properly with special characters
-			preg_match_all('/\<a href=\"(.*?)\"\>/', $toc, $toc_matches);
+			preg_match_all('/\<a href=\"([^"]*?)\"\>/', $toc, $toc_matches);
 			foreach($toc_matches[1] as $match) {
 				$toc = str_replace('<a href="' . $match . '"', '<a data-target="' . preg_replace('/\./', '\\\\.', preg_replace('/\:/', '\\\\:', $match)) . '" href="' . $match . '"', $toc);
 			}

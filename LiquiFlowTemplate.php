@@ -199,7 +199,7 @@ class LiquiFlowTemplate extends BaseTemplate {
 						<?php echo Xml::expandAttributes( Linker::tooltipAndAccesskeyAttribs( 'p-logo' ) )?>>
 						<div style="display: inline-block;">
 							<div style="float:left;"><img id="brand-logo" src="<?php $this->text( 'logopath' ) ?>" alt="Logo"></div>
-							<div class="brand-name visible-xs logotype" style="white-space: nowrap; margin-left: 5px; float: left;"><?php global $wgLiquiFlowAlphawiki; echo (isset($wgLiquiFlowAlphawiki) && $wgLiquiFlowAlphawiki)?'<small>' . $this->msg( 'liquiflow-brand' ) . '</small> alpha':$this->msg( 'liquiflow-brand' ); ?></div>
+							<div class="brand-name visible-xs logotype" style="white-space: nowrap; margin-left: 5px; float: left;"><?php global $wgLiquiFlowAlphawiki; echo (isset($wgLiquiFlowAlphawiki) && $wgLiquiFlowAlphawiki)?'<small>' . wfMessage( 'liquiflow-brand' )->text() . '</small> alpha':$this->msg( 'liquiflow-brand' ); ?></div>
 						</div>
 					</a>
 

@@ -20,7 +20,7 @@ class SkinLiquiFlow extends SkinTemplate {
 		parent::initPage( $out );
 
 		// add text to recruit people from landing page
-		$out->addHeadItem('recruitment', 
+		$out->addHeadItem('recruitment',
 			"<!-- \n" .
 			"\t _ _             _                _ _       \n" .
 			"\t| (_) __ _ _   _(_)_ __   ___  __| (_) __ _ \n" .
@@ -39,7 +39,7 @@ class SkinLiquiFlow extends SkinTemplate {
 		// this is better than including this in a CSS file since it doesn't
 		// wait for the CSS file to load before fetching the HTC file.
 		// $min = $this->getRequest()->getFuzzyBool( 'debug' ) ? '' : '.min';
-		
+
 		$out->addHeadItem( 'ie-edge', "<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">");
 		$out->addHeadItem( 'x-ie8-fix',
 			"<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->\n" .

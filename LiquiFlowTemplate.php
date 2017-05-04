@@ -1004,7 +1004,7 @@ $footerLinks = $this->getFooterLinks();
 					
 						<ul class="dropdown-menu liquiflow-menu-share">
 							<?php
-								$externalLink = $this->data['serverurl'] . str_replace('$1', $this->data['title'], $this->data['articlepath']);
+								$externalLink = $this->getSkin()->getTitle()->getFullURL();
 							?>
 							<li>
 								<a data-type="twitter" onclick="Share.twitter('<?php echo $externalLink; ?>','<?php echo $this->data['title']; ?>')">

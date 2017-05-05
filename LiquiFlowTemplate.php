@@ -1063,7 +1063,7 @@ $footerLinks = $this->getFooterLinks();
 							<?php if ( in_array( 'editor', $wgUser->getEffectiveGroups()) ) { ?><li><a href="<?php echo Title::newFromText('UnreviewedPages', NS_SPECIAL)->getLocalURL(); ?>"><span class="fa fa-fw fa-circle-o"></span><?php $this->msg( 'unreviewedpages' ); ?></a></li><?php } ?>
 							<?php } ?>
 
-							<li><a href="<?php echo Title::newFromText('Random', NS_SPECIAL)->getLocalURL(); ?>" <?php echo Xml::expandAttributes( Linker::tooltipAndAccesskeyAttribs( 'n-randompage' ) ); ?>><span class="fa fa-fw fa-random"></span><?php $this->msg( 'randompage' ); ?></a></li>
+							<li><a href="<?php echo Title::newFromText('Random', NS_SPECIAL)->getLocalURL(); ?>"<?php echo ($view == 'mobile'?'':' '.Xml::expandAttributes( Linker::tooltipAndAccesskeyAttribs( 'n-randompage' ) ) ); ?>><span class="fa fa-fw fa-random"></span><?php $this->msg( 'randompage' ); ?></a></li>
 
 							<?php if( ExtensionRegistry::getInstance()->isLoaded( 'CreateTeams' ) ) { ?>
 								<li class="divider"></li>

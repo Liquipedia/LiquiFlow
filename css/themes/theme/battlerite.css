@@ -6470,9 +6470,10 @@ a#back-to-top:hover {
   color: #444;
   background: #f8f8f8;
   border-top: 1px solid #dfdfdf;
-  height: 330px;
+  height: 340px;
   width: 100%;
   margin-top: 0;
+  clear: both;
 }
 #footer > * {
   background: #f8f8f8;
@@ -6852,12 +6853,11 @@ body.logged-out .show-when-logged-in {
 /* Flush footer to the bottom even if page is not long enough */
 #wrap {
   min-height: 100%;
-  height: auto !important;
-  height: 100%;
+  height: calc(100vh - 88px) !important;
   /* Negative indent footer by its height */
-  margin: 0 auto -330px;
+  margin: 0 auto -340px;
   /* Pad bottom by footer height */
-  padding: 0 0 330px;
+  padding: 0 0 340px;
 }
 .logotype {
   font-family: 'Roboto', sans-serif;

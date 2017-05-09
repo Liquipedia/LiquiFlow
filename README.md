@@ -22,3 +22,7 @@ License
 =======
 * All original code is under the GPLv3
 * Licenses for images vary
+
+Disclaimer
+==========
+This branch is not updated anymore, do use at own risk!

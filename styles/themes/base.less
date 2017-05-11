@@ -453,6 +453,14 @@ legend {
 	margin-right:0;
 }
 
+/* Chrome need some special snowflake CSS here */
+.mw-category-group {
+	pointer-events:none;
+	> * {
+		pointer-events:auto;
+	}
+}
+
 .mw-special-Version #mw-content-text > h2 {
 	width:100%;
 }

@@ -18,6 +18,7 @@ class SkinLiquiFlow extends SkinTemplate {
 	public function initPage( OutputPage $out ) {
 
 		parent::initPage( $out );
+		global $wgStylePath;
 
 		// add text to recruit people from landing page
 		$out->addHeadItem('recruitment',
@@ -48,6 +49,9 @@ class SkinLiquiFlow extends SkinTemplate {
 		"<script src=\"https://oss.maxcdn.com/respond/1.4.2/respond.min.js\"></script>\n" .
 		"<![endif]-->");
 		$out->addHeadItem( 'responsive', "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">");
+		$out->addHeadItem( 'mobile-head-color', "<meta name=\"theme-color\" content=\"#052b4c\">" );
+		$out->addHeadItem( 'icon', "<link rel=\"icon\" href=\"" . $wgStylePath . "/LiquiFlow/images/favicon/favicon.ico\">" );
+		//$out->addHeadItem( 'icon-192x192', "<link rel=\"icon\" sizes=\"192x192\" href=\"" . $wgStylePath . "/LiquiFlow/images/favicon/liquipedia_logo_192x192.png\">" );
 
 		Hooks::run( 'LiquiFlowAdStartCode', array( &$out ) );
 

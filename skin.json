@@ -246,6 +246,15 @@
 				"skins.liquiflow"
 			]
 		},
+		"skins.liquiflow.theme.quake": {
+			"styles": [
+				"styles/themes/theme/quake.less"
+			],
+			"position": "top",
+			"dependencies": [
+				"skins.liquiflow"
+			]
+		},
 		"skins.liquiflow.theme.smash": {
 			"styles": [
 				"styles/themes/theme/smash.less"

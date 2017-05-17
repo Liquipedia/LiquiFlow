@@ -57,7 +57,7 @@ class SkinLiquiFlow extends SkinTemplate {
 
 		$scripts = array( 'skins.liquiflow', 'skins.liquiflow.bottom', 'jquery.chosen' );
 		$out->addModuleScripts( $scripts );
-		if ($this->getSkin()->getUser()->getOption ( 'liquiflow-prefs-show-dropdown-on-hover' ) == true) {
+		if ($this->getSkin()->getUser()->getOption( 'liquiflow-prefs-show-dropdown-on-hover' ) == true) {
 			$out->addModuleScripts( 'skins.liquiflow.hoverdropdown' );
 		}
 
@@ -65,7 +65,7 @@ class SkinLiquiFlow extends SkinTemplate {
 			$urlScripts = wfMessage( 'liquiflow-js-urls' )->plain();
 			$urlScripts = explode( "\n", $urlScripts );
 			foreach( $urlScripts as $urlId => $urlScript ) {
-				if ( strpos( trim( $urlScript) , '*' ) !== 0 ) {
+				if( strpos( trim( $urlScript) , '*' ) !== 0 ) {
 					continue;
 				}
 				$urlScript = ltrim( trim( $urlScript ), '* ' );
@@ -89,10 +89,10 @@ class SkinLiquiFlow extends SkinTemplate {
 		} else {
 			$out->addModuleStyles( 'skins.liquiflow.theme.commons' );
 		}
-		if ($this->getSkin()->getUser()->isLoggedIn()) {
+		if ( $this->getSkin()->getUser()->isLoggedIn() ) {
 			$out->addModuleStyles( 'skins.liquiflow.loggedin' );
 		}
-		if (!$this->getSkin()->getUser()->getOption ( 'liquiflow-prefs-show-buggy-editor-tabs' )) {
+		if ( !$this->getSkin()->getUser()->getOption ( 'liquiflow-prefs-show-buggy-editor-tabs' ) ) {
 			$out->addModuleStyles( 'skins.liquiflow.removebuggyeditortabs' );
 		}
 
@@ -100,7 +100,7 @@ class SkinLiquiFlow extends SkinTemplate {
 			$urlStyles = wfMessage( 'liquiflow-css-urls' )->plain();
 			$urlStyles = explode( "\n", $urlStyles );
 			foreach( $urlStyles as $urlStyle ) {
-				if ( strpos( trim( $urlStyle) , '*' ) !== 0 ) {
+				if ( strpos( trim( $urlStyle ) , '*' ) !== 0 ) {
 					continue;
 				}
 				$urlStyle = ltrim( trim( $urlStyle ), '* ' );

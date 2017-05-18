@@ -40,7 +40,7 @@
 		"skins.liquiflow": {
 			"styles": [
 				"vendor/font-awesome/css/font-awesome.css",
-				"vendor/font-awesome/css.css",
+				"vendor/font-awesome/font-awesome-custom.css",
 				"vendor/liquipedia-custom-icons/css.css",
 				"vendor/liquipedia-custom-icons/css/Liquipedia-Custom-Icons.css"
 			],
@@ -59,7 +59,8 @@
 		},
 		"skins.liquiflow.bottom": {
 			"styles": [
-				"vendor/chosen/chosen.css"
+				"vendor/chosen/chosen.css",
+				"vendor/chosen/chosen-custom.css"
 			],
 			"scripts": [
 				"scripts/chosen.js"

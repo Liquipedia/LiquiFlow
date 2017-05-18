@@ -591,6 +591,25 @@ sup {
 	padding-left:5px;
 }
 
+/* Preferences page */
+#preferences .prefsection {
+	width:100% !important;
+	max-width:100% !important;
+	//800px instead of normal breakpointdue to Mediawiki core CSS
+	@media(max-width:800px) {
+		white-space:normal;
+		.mw-label{
+			width:auto !important;
+			label {
+				white-space:pre-wrap !important;
+			}
+		}
+	}
+}
+#mw-htmlform-tokenwatchlist .mw-input {
+	word-break:break-all;
+}
+
 /* Underlining for abbreviations */
 @supports(text-decoration:underline dotted) {
 	abbr[title],

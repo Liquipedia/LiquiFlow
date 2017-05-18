@@ -16,6 +16,8 @@ class SkinLiquiFlow extends SkinTemplate {
 	 * @param OutputPage $out Object to initialize
 	 */
 	public function initPage( OutputPage $out ) {
+		global $wgHtml5Version;
+		$wgHtml5Version = 'HTML+RDFa';
 
 		parent::initPage( $out );
 		global $wgStylePath, $wgServer, $wgSitename;
@@ -161,7 +163,7 @@ class SkinLiquiFlow extends SkinTemplate {
 	}
 
 	/**
-	 * Adds classes to the body element.
+	 * Adds stuff to the body element.
 	 *
 	 * @param OutputPage $out
 	 * @param array &$bodyAttrs Array of attributes that will be set on the body element
@@ -175,5 +177,19 @@ class SkinLiquiFlow extends SkinTemplate {
 			$bodyAttrs['class'] .= ' logged-out';
 		}
 		$bodyAttrs['class'] .= ' wiki-' . substr( $wgScriptPath, 1 );
+	}
+
+	/**
+	 * Return values for <html> element
+	 * @return array Array of associative name-to-value elements for <html> element
+	 */
+	public function getHtmlElementAttributes() {
+		$lang = $this->getLanguage();
+		return [
+			'lang' => $lang->getHtmlCode(),
+			'dir' => $lang->getDir(),
+			'class' => 'client-nojs pizza',
+			'xmlns:og' => 'http://opengraphprotocol.org/schema/',
+		];
 	}
 }

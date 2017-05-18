@@ -31,31 +31,31 @@ class SkinLiquiFlow extends SkinTemplate {
 
 		// add text to recruit people from landing page
 		$out->addHeadItem('recruitment',
-			"<!-- \n" .
-			"\t _ _             _                _ _       \n" .
-			"\t| (_) __ _ _   _(_)_ __   ___  __| (_) __ _ \n" .
-			"\t| | |/ _` | | | | | '_ \ / _ \/ _` | |/ _` |\n" .
-			"\t| | | (_| | |_| | | |_) |  __/ (_| | | (_| |\n" .
-			"\t|_|_|\__, |\__,_|_| .__/ \___|\__,_|_|\__,_|\n" .
-			"\t        |_|       |_|                       \n" .
-			"\n" .
-			"\tHi you, yes you who's looking at our source code! Are you a website specialist?\n" .
-			"\tWe are looking for people to help us with our templates, especially with mobile development.\n" .
-			"\tIf you want to help, be sure to visit us on our IRC channel #liquipedia on QuakeNet,\n" .
-			"\tjoin us on discord (http://liquipedia.net/discord), or send us an email to\n" .
-			"liquipedia <at> teamliquid <dot> net!\n" .
-			"-->");
+			"<!-- \n"
+			. "\t _ _             _                _ _       \n"
+			. "\t| (_) __ _ _   _(_)_ __   ___  __| (_) __ _ \n"
+			. "\t| | |/ _` | | | | | '_ \ / _ \/ _` | |/ _` |\n"
+			. "\t| | | (_| | |_| | | |_) |  __/ (_| | | (_| |\n"
+			. "\t|_|_|\__, |\__,_|_| .__/ \___|\__,_|_|\__,_|\n"
+			. "\t        |_|       |_|                       \n"
+			. "\n"
+			. "\tHi you, yes you who's looking at our source code! Are you a website specialist?\n"
+			. "\tWe are looking for people to help us with our templates, especially with mobile development.\n"
+			. "\tIf you want to help, be sure to visit us on our IRC channel #liquipedia on QuakeNet,\n"
+			. "\tjoin us on discord (http://liquipedia.net/discord), or send us an email to\n"
+			. "liquipedia <at> teamliquid <dot> net!\n"
+			. "-->");
 
 		// Append CSS which includes IE only behavior fixes for hover support -
 		// this is better than including this in a CSS file since it doesn't
 		// wait for the CSS file to load before fetching the HTC file.
 		$out->addHeadItem( 'ie-edge', '<meta http-equiv="X-UA-Compatible" content="IE=edge">');
 		$out->addHeadItem( 'x-ie8-fix',
-			"<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->\n" .
-			"<!--[if lt IE 9]>\n" .
-			"<script src=\"https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js\"></script>\n" .
-			"<script src=\"https://oss.maxcdn.com/respond/1.4.2/respond.min.js\"></script>\n" .
-			"<![endif]-->");
+			"<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->\n"
+			. "<!--[if lt IE 9]>\n"
+			. "<script src=\"https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js\"></script>\n"
+			. "<script src=\"https://oss.maxcdn.com/respond/1.4.2/respond.min.js\"></script>\n"
+			. "<![endif]-->");
 
 		// Meta tags for mobile
 		$out->addHeadItem( 'responsive', '<meta name="viewport" content="width=device-width, initial-scale=1.0">');
@@ -90,7 +90,8 @@ class SkinLiquiFlow extends SkinTemplate {
 			. '<meta property="og:image" content="' . $wgServer . $faviconPath . 'mstile-310x310.png" />'
 			. '<meta property="og:url" content="' . $title->getFullURL() . '" />'
 			. '<meta property="og:title" content="' . htmlspecialchars( $out->getPageTitle() ) . '" />'
-			. '<meta property="og:description" content="' . $description . '" />' );
+			. '<meta property="og:description" content="' . $description . '" />'
+			. '<meta property="og:site_name" content="' . $wgSitename . '" />' );
 		$addAutoMeta = true;
 		foreach( $out->getMetaTags() as $metaTag) {
 			if( $metaTag[0] == 'description' ) {
@@ -174,5 +175,19 @@ class SkinLiquiFlow extends SkinTemplate {
 			$bodyAttrs['class'] .= ' logged-out';
 		}
 		$bodyAttrs['class'] .= ' wiki-' . substr( $wgScriptPath, 1 );
+	}
+
+	/**
+	 * Return values for <html> element
+	 * @return array Array of associative name-to-value elements for <html> element
+	 */
+	public function getHtmlElementAttributes() {
+		$lang = $this->getLanguage();
+		return [
+			'lang' => $lang->getHtmlCode(),
+			'dir' => $lang->getDir(),
+			'class' => 'client-nojs pizza',
+			'prefix' => 'og: http://ogp.me/ns#',
+		];
 	}
 }

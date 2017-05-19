@@ -22,6 +22,7 @@ class SkinLiquiFlow extends SkinTemplate {
 		$title = $this->getTitle();
 		$description = trim( htmlspecialchars( substr( str_replace( array( "\n", "\r", "\n", '[edit]', '  ', '  ', '  ' ), ' ', strip_tags( $out->getHTML() ) ), 0, 150 ) ) ) . '...';
 		$domain = str_replace( array( '/', 'http', 'https', ':' ), '', $wgServer );
+		$twitterAccount = '@LiquipediaNet';
 		$addAutoMeta = true;
 		foreach( $out->getMetaTags() as $metaTag) {
 			if( $metaTag[0] == 'description' ) {
@@ -36,7 +37,7 @@ class SkinLiquiFlow extends SkinTemplate {
 		}
 		$out->addHeadItem( 'twitterproperties', 
 			'<meta name="twitter:card" content="summary" />' . "\n"
-			. '<meta name="twitter:site" content="@LiquipediaNet" />' . "\n"
+			. '<meta name="twitter:site" content="' . $twitterAccount . '" />' . "\n"
 			. '<meta name="twitter:title" content="' . htmlspecialchars( $out->getPageTitle() ) . '" />' . "\n"
 			. '<meta name="twitter:description" content="' . $description . '" />' . "\n"
 			. '<meta name="twitter:image:src" content="' . $wgServer . $faviconPath . 'mstile-310x310.png" />' . "\n"
@@ -48,6 +49,7 @@ class SkinLiquiFlow extends SkinTemplate {
 			. '<meta property="og:title" content="' . htmlspecialchars( $out->getPageTitle() ) . '" />' . "\n"
 			. '<meta property="og:description" content="' . $description . '" />' . "\n"
 			. '<meta property="og:site_name" content="' . $wgSitename . '" />' );
+		$out->addHeadItem( 'canonicallink', '<link rel="canonical" href="' . $title->getFullURL() . '">' );
 
 		// add text to recruit people from landing page
 		$out->addHeadItem('recruitment',

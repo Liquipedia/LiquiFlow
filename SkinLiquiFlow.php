@@ -30,6 +30,9 @@ class SkinLiquiFlow extends SkinTemplate {
 				preg_match_all( '/class="infobox-image".*?src="([^\\\"]+)"/' , $out->getHTML(), $matches );
 				if( isset( $matches[1] ) && isset( $matches[1][0] ) ) {
 					$image = $matches[1][0];
+					if( strpos( $image, 'http') !== 0 ) {
+						$image = $wgServer . $image;
+					}
 					// add meta description tag if doesn't exist already
 					$api = new ApiMain(
 						new DerivativeRequest(
@@ -91,27 +94,27 @@ class SkinLiquiFlow extends SkinTemplate {
 						);
 						$out->addHeadItem( 'ogproperties',
 							Html::element( 'meta', [
-									'name' => 'og:type',
+									'property' => 'og:type',
 									'content' => 'article'
 								] ) . "\n"
 							. Html::element( 'meta', [
-									'name' => 'og:image',
+									'property' => 'og:image',
 									'content' => $image
 								] ) . "\n"
 							. Html::element( 'meta', [
-									'name' => 'og:url',
+									'property' => 'og:url',
 									'content' => $title->getFullURL()
 								] ) . "\n"
 							. Html::element( 'meta', [
-									'name' => 'og:title',
+									'property' => 'og:title',
 									'content' => htmlspecialchars( $out->getPageTitle() )
 								] ) . "\n"
 							. Html::element( 'meta', [
-									'name' => 'og:description',
+									'property' => 'og:description',
 									'content' => $description
 								] ) . "\n"
 							. Html::element( 'meta', [
-									'name' => 'og:site_name',
+									'property' => 'og:site_name',
 									'content' => $wgSitename
 								] )
 						);

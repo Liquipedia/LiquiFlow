@@ -33,9 +33,9 @@ class SkinLiquiFlow extends SkinTemplate {
 
 		// Do stuff for SEO
 		if( $addAutoMeta ) {
-			$out->addMeta( 'description', $description );
+			//$out->addMeta( 'description', $description );
 		}
-		$out->addHeadItem( 'twitterproperties', 
+		/*$out->addHeadItem( 'twitterproperties', 
 			'<meta name="twitter:card" content="summary" />' . "\n"
 			. '<meta name="twitter:site" content="' . $twitterAccount . '" />' . "\n"
 			. '<meta name="twitter:title" content="' . htmlspecialchars( $out->getPageTitle() ) . '" />' . "\n"
@@ -43,12 +43,12 @@ class SkinLiquiFlow extends SkinTemplate {
 			. '<meta name="twitter:image:src" content="' . $wgServer . $faviconPath . 'mstile-310x310.png" />' . "\n"
 			. '<meta name="twitter:domain" content="' . $domain . '" />' );
 		$out->addHeadItem( 'ogproperties', 
-			/*'<meta property="og:type" content="article">' . "\n"
-			. */'<meta property="og:image" content="' . $wgServer . $faviconPath . 'mstile-310x310.png" />' . "\n"
+			'<meta property="og:type" content="article">' . "\n"
+			. '<meta property="og:image" content="' . $wgServer . $faviconPath . 'mstile-310x310.png" />' . "\n"
 			. '<meta property="og:url" content="' . $title->getFullURL() . '" />' . "\n"
 			. '<meta property="og:title" content="' . htmlspecialchars( $out->getPageTitle() ) . '" />' . "\n"
 			. '<meta property="og:description" content="' . $description . '" />' . "\n"
-			. '<meta property="og:site_name" content="' . $wgSitename . '" />' );
+			. '<meta property="og:site_name" content="' . $wgSitename . '" />' );*/
 		$out->addHeadItem( 'canonicallink', '<link rel="canonical" href="' . $title->getFullURL() . '">' );
 
 		// add text to recruit people from landing page

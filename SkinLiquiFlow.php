@@ -20,6 +20,7 @@ class SkinLiquiFlow extends SkinTemplate {
 		global $wgStylePath, $wgServer, $wgSitename;
 		$faviconPath = $wgStylePath . '/LiquiFlow/images/favicon/';
 		$title = $this->getTitle();
+		$image = $wgServer . $faviconPath . 'mstile-310x310.png';
 		$description = trim( htmlspecialchars( substr( str_replace( array( "\n", "\r", "\n", '[edit]', '  ', '  ', '  ' ), ' ', strip_tags( $out->getHTML() ) ), 0, 150 ) ) ) . '...';
 		$domain = str_replace( array( '/', 'http', 'https', ':' ), '', $wgServer );
 		$twitterAccount = '@LiquipediaNet';
@@ -30,25 +31,33 @@ class SkinLiquiFlow extends SkinTemplate {
 				$description = htmlspecialchars( $metaTag[1] );
 			}
 		}
+		$matches = null;
+		preg_match_all( '/class="infobox-image".*?src="([^\\\"]+)"/' , $out->getHTML(), $matches );
+		if( isset( $matches[1] ) && isset( $matches[1][0] ) ) {
+			$image = $wgServer . $matches[1][0];
+		}
+		//echo '<pre>'.print_r($matches[1],true).'</pre>';
 
 		// Do stuff for SEO
-		if( $addAutoMeta ) {
-			//$out->addMeta( 'description', $description );
+		if( $title && $title->exists() ) {
+			if( $addAutoMeta ) {
+				$out->addMeta( 'description', $description );
+			}
+			$out->addHeadItem( 'twitterproperties', 
+				'<meta name="twitter:card" content="summary" />' . "\n"
+				. '<meta name="twitter:site" content="' . $twitterAccount . '" />' . "\n"
+				. '<meta name="twitter:title" content="' . htmlspecialchars( $out->getPageTitle() ) . '" />' . "\n"
+				. '<meta name="twitter:description" content="' . $description . '" />' . "\n"
+				. '<meta name="twitter:image:src" content="' . $image . '" />' . "\n"
+				. '<meta name="twitter:domain" content="' . $domain . '" />' );
+			$out->addHeadItem( 'ogproperties', 
+				'<meta property="og:type" content="article">' . "\n"
+				. '<meta property="og:image" content="' . $image . '" />' . "\n"
+				. '<meta property="og:url" content="' . $title->getFullURL() . '" />' . "\n"
+				. '<meta property="og:title" content="' . htmlspecialchars( $out->getPageTitle() ) . '" />' . "\n"
+				. '<meta property="og:description" content="' . $description . '" />' . "\n"
+				. '<meta property="og:site_name" content="' . $wgSitename . '" />' );
 		}
-		/*$out->addHeadItem( 'twitterproperties', 
-			'<meta name="twitter:card" content="summary" />' . "\n"
-			. '<meta name="twitter:site" content="' . $twitterAccount . '" />' . "\n"
-			. '<meta name="twitter:title" content="' . htmlspecialchars( $out->getPageTitle() ) . '" />' . "\n"
-			. '<meta name="twitter:description" content="' . $description . '" />' . "\n"
-			. '<meta name="twitter:image:src" content="' . $wgServer . $faviconPath . 'mstile-310x310.png" />' . "\n"
-			. '<meta name="twitter:domain" content="' . $domain . '" />' );
-		$out->addHeadItem( 'ogproperties', 
-			'<meta property="og:type" content="article">' . "\n"
-			. '<meta property="og:image" content="' . $wgServer . $faviconPath . 'mstile-310x310.png" />' . "\n"
-			. '<meta property="og:url" content="' . $title->getFullURL() . '" />' . "\n"
-			. '<meta property="og:title" content="' . htmlspecialchars( $out->getPageTitle() ) . '" />' . "\n"
-			. '<meta property="og:description" content="' . $description . '" />' . "\n"
-			. '<meta property="og:site_name" content="' . $wgSitename . '" />' );*/
 		$out->addHeadItem( 'canonicallink', '<link rel="canonical" href="' . $title->getFullURL() . '">' );
 
 		// add text to recruit people from landing page

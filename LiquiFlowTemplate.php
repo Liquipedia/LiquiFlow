@@ -164,7 +164,7 @@ class LiquiFlowTemplate extends BaseTemplate {
 		// extract the standard table of contents from the page html in order to add it to the left sidebar
 		preg_match("/<div id=\"toctitle\"><h2>(.*?)<\\/h2><\\/div>(.*?)<ul>(.*?)<\\/ul>(.*?)<\\/div>/si", $this->data['bodycontent'], $match);
 		$toc = "";
-		if (isset($match[0])) {
+		if(isset($match[0])) {
 			$toc = substr($match[0], 0, -6);
 			$toc = str_replace('<ul>', '<ul class="nav">', $toc);
 

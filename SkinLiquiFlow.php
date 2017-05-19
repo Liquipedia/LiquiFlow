@@ -17,46 +17,104 @@ class SkinLiquiFlow extends SkinTemplate {
 	 */
 	public function initPage( OutputPage $out ) {
 		parent::initPage( $out );
+		$title = $this->getTitle();
 		global $wgStylePath, $wgServer, $wgSitename;
 		$faviconPath = $wgStylePath . '/LiquiFlow/images/favicon/';
-		$title = $this->getTitle();
-		$image = $wgServer . $faviconPath . 'mstile-310x310.png';
-		$description = trim( htmlspecialchars( substr( str_replace( array( "\n", "\r", "\n", '[edit]', '  ', '  ', '  ' ), ' ', strip_tags( $out->getHTML() ) ), 0, 150 ) ) ) . '...';
-		$domain = str_replace( array( '/', 'http', 'https', ':' ), '', $wgServer );
-		$twitterAccount = '@LiquipediaNet';
-		$addAutoMeta = true;
-		foreach( $out->getMetaTags() as $metaTag) {
-			if( $metaTag[0] == 'description' ) {
-				$addAutoMeta = false;
-				$description = htmlspecialchars( $metaTag[1] );
-			}
-		}
-		$matches = null;
-		preg_match_all( '/class="infobox-image".*?src="([^\\\"]+)"/' , $out->getHTML(), $matches );
-		if( isset( $matches[1] ) && isset( $matches[1][0] ) ) {
-			$image = $wgServer . $matches[1][0];
-		}
-		//echo '<pre>'.print_r($matches[1],true).'</pre>';
 
 		// Do stuff for SEO
 		if( $title && $title->exists() ) {
-			if( $addAutoMeta ) {
-				$out->addMeta( 'description', $description );
+			// Try to find a good image
+			$matches = null;
+			preg_match_all( '/class="infobox-image".*?src="([^\\\"]+)"/' , $out->getHTML(), $matches );
+			if( isset( $matches[1] ) && isset( $matches[1][0] ) ) {
+				$image = $wgServer . $matches[1][0];
+				// add meta description tag if doesn't exist already
+				$api = new ApiMain(
+					new DerivativeRequest(
+						$this->getRequest(), // Fallback upon $wgRequest if you can't access context
+						array(
+							'action' => 'query',
+							'exintro' => '',
+							'explaintext' => '',
+							'prop' => 'extracts',
+							'titles' => $title->getFullText()
+						),
+						false // treat this as a POST
+					),
+					false // Enable write.
+				);
+				$api->execute();
+				$result = $api->getResult()->getResultData();
+				$result = $result['query']['pages'][$title->getArticleID()]['extract']['*'];
+				if( !empty( $result ) ) {
+					$description = $result;
+					$addAutoMeta = true;
+					foreach( $out->getMetaTags() as $metaTag) {
+						if( $metaTag[0] == 'description' ) {
+							$addAutoMeta = false;
+							$description = htmlspecialchars( $metaTag[1] );
+						}
+					}
+					if( $addAutoMeta ) {
+						$out->addMeta( 'description', $description );
+					}
+
+					$domain = str_replace( array( '/', 'http', 'https', ':' ), '', $wgServer );
+					$twitterAccount = '@LiquipediaNet';
+					$out->addHeadItem( 'twitterproperties', 
+						Html::element( 'meta', [
+								'name' => 'twitter:card',
+								'content' => 'summary'
+							] ) . "\n"
+						. Html::element( 'meta', [
+								'name' => 'twitter:site',
+								'content' => $twitterAccount
+							] ) . "\n"
+						. Html::element( 'meta', [
+								'name' => 'twitter:title',
+								'content' => htmlspecialchars( $out->getPageTitle() )
+							] ) . "\n"
+						. Html::element( 'meta', [
+								'name' => 'twitter:description',
+								'content' => $description
+							] ) . "\n"
+						. Html::element( 'meta', [
+								'name' => 'twitter:image:src',
+								'content' => $image
+							] ) . "\n"
+						. Html::element( 'meta', [
+								'name' => 'twitter:domain',
+								'content' => $domain
+							] )
+					);
+					$out->addHeadItem( 'ogproperties', 
+						Html::element( 'meta', [
+								'name' => 'og:type',
+								'content' => 'article'
+							] ) . "\n"
+						. Html::element( 'meta', [
+								'name' => 'og:image',
+								'content' => $image
+							] ) . "\n"
+						. Html::element( 'meta', [
+								'name' => 'og:url',
+								'content' => $title->getFullURL()
+							] ) . "\n"
+						. Html::element( 'meta', [
+								'name' => 'og:title',
+								'content' => htmlspecialchars( $out->getPageTitle() )
+							] ) . "\n"
+						. Html::element( 'meta', [
+								'name' => 'og:description',
+								'content' => $description
+							] ) . "\n"
+						. Html::element( 'meta', [
+								'name' => 'og:site_name',
+								'content' => $wgSitename
+							] )
+					);
+				}
 			}
-			$out->addHeadItem( 'twitterproperties', 
-				'<meta name="twitter:card" content="summary" />' . "\n"
-				. '<meta name="twitter:site" content="' . $twitterAccount . '" />' . "\n"
-				. '<meta name="twitter:title" content="' . htmlspecialchars( $out->getPageTitle() ) . '" />' . "\n"
-				. '<meta name="twitter:description" content="' . $description . '" />' . "\n"
-				. '<meta name="twitter:image:src" content="' . $image . '" />' . "\n"
-				. '<meta name="twitter:domain" content="' . $domain . '" />' );
-			$out->addHeadItem( 'ogproperties', 
-				'<meta property="og:type" content="article">' . "\n"
-				. '<meta property="og:image" content="' . $image . '" />' . "\n"
-				. '<meta property="og:url" content="' . $title->getFullURL() . '" />' . "\n"
-				. '<meta property="og:title" content="' . htmlspecialchars( $out->getPageTitle() ) . '" />' . "\n"
-				. '<meta property="og:description" content="' . $description . '" />' . "\n"
-				. '<meta property="og:site_name" content="' . $wgSitename . '" />' );
 		}
 		$out->addHeadItem( 'canonicallink', '<link rel="canonical" href="' . $title->getFullURL() . '">' );
 

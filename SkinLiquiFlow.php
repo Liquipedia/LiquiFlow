@@ -29,7 +29,7 @@ class SkinLiquiFlow extends SkinTemplate {
 				$matches = null;
 				preg_match_all( '/class="infobox-image".*?src="([^\\\"]+)"/' , $out->getHTML(), $matches );
 				if( isset( $matches[1] ) && isset( $matches[1][0] ) ) {
-					$image = $wgServer . $matches[1][0];
+					$image = $matches[1][0];
 					// add meta description tag if doesn't exist already
 					$api = new ApiMain(
 						new DerivativeRequest(

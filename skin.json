@@ -309,6 +309,15 @@
 			"dependencies": [
 				"skins.liquiflow"
 			]
+		},
+		"skins.liquiflow.theme.worldofwarcraft": {
+			"styles": [
+				"styles/themes/theme/worldofwarcraft.less"
+			],
+			"position": "top",
+			"dependencies": [
+				"skins.liquiflow"
+			]
 		}
 	},
 	"ResourceFileModulePaths": {

@@ -101,4 +101,9 @@ class LiquiFlowHooks {
 		}
 	}
 
+	public static function onResourceLoaderRegisterModules( ResourceLoader $rl ) {
+		global $wgResourceLoaderLESSVars, $wgScriptPath;
+		$wgResourceLoaderLESSVars = array_merge( $wgResourceLoaderLESSVars, LiquiFlowColors::getSkinColors( substr($wgScriptPath, 1) ) );
+	}
+
 }

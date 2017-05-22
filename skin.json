@@ -27,14 +27,16 @@
 	"AutoloadClasses": {
 		"SkinLiquiFlow": "SkinLiquiFlow.php",
 		"LiquiFlowTemplate": "LiquiFlowTemplate.php",
-		"LiquiFlowHooks": "LiquiFlowHooks.php"
+		"LiquiFlowHooks": "LiquiFlowHooks.php",
+		"LiquiFlowColors": "LiquiFlowColors.php"
 	},
 	"Hooks": {
 		"GetPreferences": "LiquiFlowHooks::onGetPreferences",
 		"MakeGlobalVariablesScript": "LiquiFlowHooks::onMakeGlobalVariablesScript",
 		"LinkerMakeExternalLink": "LiquiFlowHooks::onLinkerMakeExternalLink",
 		"BeforePageDisplay": "LiquiFlowHooks::onBeforePageDisplay",
-		"OutputPageParserOutput": "LiquiFlowHooks::onOutputPageParserOutput"
+		"OutputPageParserOutput": "LiquiFlowHooks::onOutputPageParserOutput",
+		"ResourceLoaderRegisterModules": "LiquiFlowHooks::onResourceLoaderRegisterModules"
 	},
 	"ResourceModules": {
 		"skins.liquiflow": {

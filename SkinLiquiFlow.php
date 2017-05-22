@@ -16,9 +16,9 @@ class SkinLiquiFlow extends SkinTemplate {
 	 * @param OutputPage $out Object to initialize
 	 */
 	public function initPage( OutputPage $out ) {
+		global $wgStylePath, $wgServer, $wgSitename, $wgScriptPath;
 		parent::initPage( $out );
 		$title = $this->getTitle();
-		global $wgStylePath, $wgServer, $wgSitename;
 		$faviconPath = $wgStylePath . '/LiquiFlow/images/favicon/';
 
 		// Do stuff for SEO
@@ -154,7 +154,7 @@ class SkinLiquiFlow extends SkinTemplate {
 
 		// Meta tags for mobile
 		$out->addHeadItem( 'responsive', '<meta name="viewport" content="width=device-width, initial-scale=1.0">');
-		$out->addHeadItem( 'mobile-head-color', '<meta name="theme-color" content="#5496cf">' );
+		$out->addHeadItem( 'theme-color', '<meta name="theme-color" content="' . LiquiFlowColors::getSkinColors( substr($wgScriptPath, 1), 'wiki-dark') . '">' );
 
 		// Favicons
 		$out->addHeadItem( 'favicons', 
@@ -204,12 +204,12 @@ class SkinLiquiFlow extends SkinTemplate {
 	 * @param OutputPage $out
 	 */
 	function setupSkinUserCss( OutputPage $out ) {
+		global $wgScriptPath;
 		parent::setupSkinUserCss( $out );
 
 		$out->addStyle( 'https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,700,700italic%7CDroid+Sans+Mono%7CRoboto:500' );
 		$styles = array( 'mediawiki.skinning.interface', 'skins.liquiflow', 'skins.liquiflow.bottom' );
 		$out->addModuleStyles( $styles );
-		global $wgScriptPath;
 		if( $out->getResourceLoader()->isModuleRegistered( 'skins.liquiflow.theme.' . substr($wgScriptPath, 1) ) ) {
 			$out->addModuleStyles( 'skins.liquiflow.theme.' . substr($wgScriptPath, 1) );
 		} else {

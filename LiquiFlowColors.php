@@ -1,0 +1,122 @@
+<?php
+
+class LiquiFlowColors {
+	private static $colors = array(
+		'battlerite' => array(
+			'wiki-dark' => '#945c2e',
+			'wiki-light' => '#a8b7bb',
+			'body-bg' => '#dee2ec',
+		),
+		'clashroyale' => array(
+			'wiki-dark' => '#444444',
+			'wiki-light' => '#ffa800',
+			'body-bg' => '#e5e5e5',
+		),
+		'commons' => array(
+			'wiki-dark' => '#e5e5e5',
+			'wiki-light' => '#636363',
+			'body-bg' => '#e5e5e5',
+		),
+		'counterstrike' => array(
+			'wiki-dark' => '#7b932d',
+			'wiki-light' => '#cde5b6',
+			'body-bg' => '#e5e5e5',
+		),
+		'crossfire' => array(
+			'wiki-dark' => '#0e4659',
+			'wiki-light' => '#b9953f',
+			'body-bg' => '#dcd7e6',
+		),
+		'dota2' => array(
+			'wiki-dark' => '#93352d',
+			'wiki-light' => '#ecd5cb',
+			'body-bg' => '#e5e5e5',
+		),
+		'fighters' => array(
+			'wiki-dark' => '#444444',
+			'wiki-light' => '#ffa800',
+			'body-bg' => '#e5e5e5',
+		),
+		'hearthstone' => array(
+			'wiki-dark' => '#937a2d',
+			'wiki-light' => '#f2eec7',
+			'body-bg' => '#e5e5e5',
+		),
+		'heroes' => array(
+			'wiki-dark' => '#6b2d93',
+			'wiki-light' => '#eadcf5',
+			'body-bg' => '#e5e5e5',
+		),
+		'leagueoflegends' => array(
+			'wiki-dark' => '#1e6353',
+			'wiki-light' => '#eec664',
+			'body-bg' => '#ece8f3',
+		),
+		'overwatch' => array(
+			'wiki-dark' => '#932d64',
+			'wiki-light' => '#f1d1e3',
+			'body-bg' => '#e5e5e5',
+		),
+		'pokemon' => array(
+			'wiki-dark' => '#444444',
+			'wiki-light' => '#ff9999',
+			'body-bg' => '#e5e5e5',
+		),
+		'quake' => array(
+			'wiki-dark' => '#484038',
+			'wiki-light' => '#d1753e',
+			'body-bg' => '#eeeeee',
+		),
+		'rocketleague' => array(
+			'wiki-dark' => '#003f84',
+			'wiki-light' => '#ffae51',
+			'body-bg' => '#e5e5e5',
+		),
+		'smash' => array(
+			'wiki-dark' => '#179c68',
+			'wiki-light' => '#bdf2d1',
+			'body-bg' => '#e5e5e5',
+		),
+		'starcraft' => array(
+			'wiki-dark' => '#606060',
+			'wiki-light' => '#e1e1e1',
+			'body-bg' => '#e5e5e5',
+		),
+		'starcraft2' => array(
+			'wiki-dark' => '#2d5f93',
+			'wiki-light' => '#d1e2f1',
+			'body-bg' => '#e5e5e5',
+		),
+		'teamfortress' => array(
+			'wiki-dark' => '#444444',
+			'wiki-light' => '#bc8e3d',
+			'body-bg' => '#e5e5e5',
+		),
+		'trackmania' => array(
+			'wiki-dark' => '#337238',
+			'wiki-light' => '#c3bac5',
+			'body-bg' => '#e2dce0',
+		),
+		'warcraft' => array(
+			'wiki-dark' => '#f3d05b',
+			'wiki-light' => '#750606',
+			'body-bg' => '#e5e5e5',
+		),
+		'worldofwarcraft' => array(
+			'wiki-dark' => '#831174',
+			'wiki-light' => '#d1e2f1',
+			'body-bg' => '#f1e8ea',
+		),
+	);
+	public static function getSkinColors( $wiki, $entity = null ) {
+		if( $entity == null && isset( self::$colors[$wiki] ) ) {
+			return self::$colors[$wiki];
+		} elseif ( $entity == null ) {
+			return self::$colors['commons'];
+		} elseif( isset( self::$colors[$wiki] ) ) {
+			return self::$colors[$wiki][$entity];
+		} else {
+			return self::$colors['commons'][$entity];
+		}
+	}
+}

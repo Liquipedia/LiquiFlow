@@ -51,7 +51,7 @@ class SkinLiquiFlow extends SkinTemplate {
 					$api->execute();
 					$result = $api->getResult()->getResultData();
 					$result = $result['query']['pages'][$title->getArticleID()]['extract']['*'];
-					if( !empty( $result ) ) {
+					if( !empty( $result ) && strlen( $result ) > 20 ) {
 						$description = $result;
 						$addAutoMeta = true;
 						foreach( $out->getMetaTags() as $metaTag) {

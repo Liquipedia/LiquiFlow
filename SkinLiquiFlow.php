@@ -194,7 +194,7 @@ class SkinLiquiFlow extends SkinTemplate {
 				if( strpos( trim( $urlScript) , '*' ) !== 0 ) {
 					continue;
 				}
-				$urlScript = ltrim( trim( $urlScript ), '* ' );
+				$urlScript = str_replace( '|', '%7C', ltrim( trim( $urlScript ), '* ' ) );
 				$out->addHeadItem( 'liquiflow-script-' . $urlId, "<script src=\"" . $urlScript . "\"></script>\n" );
 			}
 		}
@@ -229,7 +229,7 @@ class SkinLiquiFlow extends SkinTemplate {
 				if ( strpos( trim( $urlStyle ) , '*' ) !== 0 ) {
 					continue;
 				}
-				$urlStyle = ltrim( trim( $urlStyle ), '* ' );
+				$urlStyle = str_replace( '|', '%7C', ltrim( trim( $urlStyle ), '* ' ) );
 				if( !empty( $urlStyle ) && strlen( $urlStyle ) > 0 ) {
 					$out->addStyle( $urlStyle );
 				}

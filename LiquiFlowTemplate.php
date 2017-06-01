@@ -395,11 +395,15 @@ class LiquiFlowTemplate extends BaseTemplate {
 							<?php
 								if ( !$wgUser->isLoggedIn() ) {
 									$personalTools = $this->getPersonalTools();
-									$personalTools['createaccount']['class'] = 'visible-xs';
-									$personalTools['createaccount']['id'] = $personalTools['createaccount']['id'] . '-mobile';
+									if( isset( $personalTools['createaccount'] ) ) {
+										$personalTools['createaccount']['class'] = 'visible-xs';
+										$personalTools['createaccount']['id'] = $personalTools['createaccount']['id'] . '-mobile';
+									}
 									$personalTools['login']['class'] = 'visible-xs';
 									$personalTools['login']['id'] = $personalTools['login']['id'] . '-mobile';
-									echo $this->makeListItem( 'createaccount', $personalTools['createaccount'] );
+									if( isset( $personalTools['createaccount'] ) ) {
+										echo $this->makeListItem( 'createaccount', $personalTools['createaccount'] );
+									}
 									echo $this->makeListItem( 'login', $personalTools['login'] );
 								} else {
 									$personalTools = $this->getPersonalTools();

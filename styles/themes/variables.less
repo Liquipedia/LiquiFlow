@@ -907,10 +907,12 @@
 .wiki-color-if (@wiki-dark, @wiki-light) when (lightness(@wiki-dark) < lightness(@wiki-light)) {
 	@wiki-color-light:          @wiki-light;
 	@wiki-color-dark:           @wiki-dark;
+	@dropdown-background-color-active: @wiki-light;
 }
 .wiki-color-if (@wiki-dark, @wiki-light) when (lightness(@wiki-dark) >= lightness(@wiki-light)) {
 	@wiki-color-light:          @wiki-dark;
 	@wiki-color-dark:           @wiki-light;
+	@dropdown-background-color-active: @wiki-dark;
 }
 .wiki-color-if (@wiki-dark, @wiki-light);
 

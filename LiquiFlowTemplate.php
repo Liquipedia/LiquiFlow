@@ -643,6 +643,8 @@ $footerLinks = $this->getFooterLinks();
 							<li><a href="/teamfortress/" target="_blank">Team Fortress</a></li>
 							<li><a href="/worldofwarcraft/" target="_blank">World of Warcraft</a></li>
 						</ul>
+					</div>
+					<div class="col-md-2 col-sm-3 hidden-xs">
 						<h4><?php echo $this->msg( 'about'); ?></h4>
 						<ul>
 							<?php foreach ( $footerLinks['places'] as $link ) :	?>
@@ -651,8 +653,6 @@ $footerLinks = $this->getFooterLinks();
 								</li>
 							<?php endforeach; ?>
 						</ul>
-					</div>
-					<div class="col-md-2 col-sm-3 hidden-xs">
 						<h4><?php echo $this->msg( 'liquiflow-contact-us' ); ?></h4>
 						<ul>
 							<li><a href="mailto:liquipedia@teamliquid.net"><?php echo $this->msg( 'liquiflow-send-an-email'); ?></a></li>

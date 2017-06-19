@@ -53,7 +53,7 @@
 	 padding:5px 10px;
  }
 
-@media (max-width:991px) {
+@media(max-width:@screen-sm-max) {
 	.dropdown-menu.columns-3 {
 		margin-left:-220px;
 		min-width:700px;
@@ -78,7 +78,7 @@
 	color:@dropdown-link-hover-color;
 	background-color:@dropdown-link-hover-bg;
 }
-@media (max-width:767px) {
+@media(max-width:@screen-xs-max) {
 	.dropdown-menu.multi-column {
 		min-width:3000px !important;
 		overflow-x:hidden;
@@ -86,4 +86,14 @@
 }
 .multi-column-dropdown .dropdown-header {
 	padding:3px 0px;
+}
+@media(min-width:@screen-sm-min) {
+	#slide-nav .dropdown-menu {
+		max-height:calc(~"100vh - @{navbar-height} - 1px");
+		overflow:auto;
+	}
+	#wiki-nav .dropdown-menu {
+		max-height:calc(~"100vh - @{navbar-height} - @{wiki-nav-height} - 1px");
+		overflow:auto;
+	}
 }

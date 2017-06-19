@@ -22,13 +22,13 @@
 	//border-top:1px solid darken(@navbar-inverse-bg, 10%);
 }
 
-@media (max-width:1310px) {
+@media(max-width:@screen-md-max) {
 	#footer {
 		margin-top:10px;
 	}
 }
 
-@media (max-width:767px) {
+@media(max-width:@screen-xs-max) {
 	#footer {
 		min-height:400px;
 	}
@@ -118,7 +118,7 @@ a.twitter-icon {
 a.youtube-icon {
 	background-image:url(../../../images/footer-icons/InfoboxIcon_YouTube.png);
 }
-@media(max-width:767px) {
+@media(max-width:@screen-xs-max) {
 	span.social-link {
 		display:none;
 	}

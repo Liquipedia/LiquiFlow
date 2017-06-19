@@ -15,7 +15,7 @@
 }
 
 /* Bigger icons for tablet */
-@media (min-width:768px) and (max-width:991px) {
+@media(min-width:@screen-sm-min) and (max-width:@screen-sm-max) {
 	.navbar-inverse {
 		font-size:1.5em;
 	}
@@ -25,13 +25,13 @@
 .navbar-inverse {
 	min-height:@wiki-nav-height;
 }
-@media (min-width:992px) {
+@media(min-width:@screen-md-min) {
 	.navbar-nav-2 > li > a {
 		padding-top:7px;
 		padding-bottom:7px;
 	}
 }
-@media (min-width:768px) and (max-width:991px) {
+@media(min-width:@screen-sm-min) and (max-width:@screen-sm-max) {
 	.navbar-inverse {
 		min-height:38px;
 	}
@@ -49,7 +49,7 @@
 	margin-bottom:0px;
 }
 
-@media (max-width:767px) {
+@media(max-width:@screen-xs-max) {
 	.navbar-nav-2 .open .dropdown-menu > li > a,
 	.navbar-nav-2 .open .dropdown-menu .dropdown-header {
 		padding:5px 15px 5px 25px;
@@ -65,7 +65,7 @@
 	padding-right:0;
 }
 
-@media (max-width:767px) {
+@media(max-width:@screen-xs-max) {
 	.navbar-form {
 		border-bottom:none;
 		border-top:none;
@@ -75,7 +75,7 @@
 	}
 }
 
-@media (min-width:768px) {
+@media(min-width:@screen-sm-min) {
 	.navbar-right {
 		margin-right:0;
 	}

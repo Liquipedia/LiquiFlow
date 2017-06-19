@@ -1,4 +1,4 @@
-@media (max-width:767px) {
+@media(max-width:@screen-xs-max) {
 	.navbar-brand {
 		font-size:16pt;
 		line-height:16pt;
@@ -138,7 +138,7 @@ body.slide-active {
 	 position:fixed;
 }
 /* screw writing importants and shit, just stick it in max width since these classes are not shared between sizes */
-@media (max-width:767px) {
+@media(max-width:@screen-xs-max) {
 	#slide-nav .container {
 		margin:0!important;
 		padding:0!important;
@@ -250,7 +250,7 @@ body.slide-active {
 		color:@mobile-menu-color !important;
 	}
 }
-@media (min-width:768px) {
+@media(min-width:@screen-sm-min) {
 	.navbar.navbar-fixed-top.slide-active {
 		position:fixed;
 	}

@@ -1,5 +1,7 @@
+@import "variables.less";
+
 /* Fix second navbar for logged-in users */
-@media (min-width:768px) {
+@media(min-width:@screen-sm-min) {
 	#wiki-nav {
 		position:fixed;
 		left:0px;
@@ -10,18 +12,18 @@
 
 /* Push content down below the second navbar */
 /* Second navbar is hidden on mobile */
-@media (min-width:768px) and (max-width:991px) {
+@media(min-width:@screen-sm-min) and (max-width:@screen-sm-max) {
 	.container-fluid.main-content {
 		margin-top:40px !important;
 	}
 }
-@media (min-width:992px) {
+@media(min-width:@screen-md-min) {
 	.container-fluid.main-content {
 		margin-top:38px !important;
 	}
 }
 
-@media (min-width:768px) {
+@media(min-width:@screen-sm-min) {
 	/* Correct offset to top for anchors */
 	.mw-headline {
 		padding-top:92px !important;

@@ -153,7 +153,7 @@
 
 
 /* Add some extra vertical spacing for phones */
-@media (max-width:767px) {
+@media(max-width:@screen-xs-max) {
 	[class*="span"] + [class*="span"] {
 		clear:both;
 		margin-top:40px;
@@ -161,7 +161,7 @@
 }
 
 /* Extra padding */
-@media (min-width:768px) {
+@media(min-width:@screen-sm-min) {
 	.pad-left-small,
 	.pad-right-small,
 	.pad-sides-small,
@@ -259,7 +259,7 @@ div.thumbinner {
 	box-sizing:content-box;
 }
 
-@media (max-width:480px) {
+@media(max-width:@screen-xs-min) {
 	div.thumb {
 		width:100%;
 	}

@@ -573,7 +573,7 @@ class LiquiFlowTemplate extends BaseTemplate {
 							</div>
 						<?php endif; ?>
 
-						<?php if ( $this->data['newtalk'] ) :	?>
+						<?php if ( $this->data['newtalk'] ) : ?>
 							<div class="usermessage">
 								<?php $this->html( 'newtalk' ) ?>
 							</div>
@@ -647,7 +647,7 @@ $footerLinks = $this->getFooterLinks();
 					<div class="col-md-2 col-sm-3 hidden-xs">
 						<h4><?php echo $this->msg( 'about'); ?></h4>
 						<ul>
-							<?php foreach ( $footerLinks['places'] as $link ) :	?>
+							<?php foreach ( $footerLinks['places'] as $link ) : ?>
 								<li id="footer-places-<?php echo $link; ?>">
 									<?php echo $this->html( $link );?>
 								</li>
@@ -664,6 +664,7 @@ $footerLinks = $this->getFooterLinks();
 					<div class="col-md-2 hidden-sm col-xs-6">
 						<h4><?php echo $this->msg( 'liquiflow-affiliated-sites' ); ?></h4>
 						<ul>
+							<li><a href="http://liquipedia.net" target="_blank">Liquipedia Portal</a></li>
 							<li><a href="http://www.teamliquid.net" target="_blank">TeamLiquid.net</a></li>
 							<li><a href="http://www.liquiddota.com" target="_blank">LiquidDota.com</a></li>
 							<li><a href="http://www.liquidhearth.com" target="_blank">LiquidHearth.com</a></li>

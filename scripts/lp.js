@@ -122,7 +122,7 @@ $(document).ready(function () {
 	/* Popover for other things 8on click) */
 	$(function() {
 		$('[data-toggle="popover"]').popover()
-	})
+	});
 
 	/* Tooltips */
 	$(function() {

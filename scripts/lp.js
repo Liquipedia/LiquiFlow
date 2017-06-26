@@ -129,6 +129,7 @@ $(document).ready(function () {
 		$('[data-toggle="tooltip"]').tooltip()
 	});
 
+	/* Disable save buttoin after submit to avoid self-editconflicts */
 	$('#wpSave').click(function() {
 		$(this).attr('disabled', 'disabled');
 		$('#editform').submit();

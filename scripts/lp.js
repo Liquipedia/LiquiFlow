@@ -129,12 +129,6 @@ $(document).ready(function () {
 		$('[data-toggle="tooltip"]').tooltip()
 	});
 
-	/* Disable save button after submit to avoid self-editconflicts */
-	$('#wpSave').click(function() {
-		$(this).attr('disabled', 'disabled');
-		$('#editform').submit();
-	});
-
 });
 
 /* Hide the slide-in nav/toc if an area outside of it is clicked */

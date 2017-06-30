@@ -93,12 +93,35 @@ class LiquiFlowTemplate extends BaseTemplate {
 		],
 	];
 
+	private $installedExtensions = [];
+
+	private function checkInstalledExtensions() {
+		if( ExtensionRegistry::getInstance()->isLoaded( 'CreateTeams' ) ) {
+			$this->installedExtensions['CreateTeams'] = true;
+		} else {
+			$this->installedExtensions['CreateTeams'] = false;
+		}
+		if( wfMessage( 'flaggedrevs-desc' )->exists() ) {
+			$this->installedExtensions['FlaggedRevs'] = true;
+		} else {
+			$this->installedExtensions['FlaggedRevs'] = false;
+		}
+		if( ExtensionRegistry::getInstance()->isLoaded( 'StreamPage' ) ) {
+			$this->installedExtensions['StreamPage'] = true;
+		} else {
+			$this->installedExtensions['StreamPage'] = false;
+		}
+	}
+
 	/**
 	 * Outputs the entire contents of the (X)HTML page
 	 */
 	public function execute() {
 		global $wgUser;
 		global $wgLiquiFlowWikiTitle;
+
+		// Run checks for installed extensions
+		$this->checkInstalledExtensions();
 
 		// Build additional attributes for navigation urls
 		$nav = $this->data['content_navigation'];
@@ -1063,18 +1086,23 @@ $footerLinks = $this->getFooterLinks();
 					?>
 						<ul class="dropdown-menu">
 							<li class="dropdown-header"><?php echo $this->msg( 'liquiflow-general' ); ?></li>
-							<li><a href="<?php echo Title::newFromText('RecentChanges', NS_SPECIAL)->getLocalURL(); ?>" <?php echo Xml::expandAttributes( Linker::tooltipAndAccesskeyAttribs( 'n-recentchanges' ) ); ?>><span class="fa fa-fw fa-clock-o"></span><?php $this->msg( 'recentchanges' ); ?></a></li>
+							<li><a href="<?php echo Title::newFromText('RecentChanges', NS_SPECIAL)->getLocalURL(); ?>" <?php echo Xml::expandAttributes( Linker::tooltipAndAccesskeyAttribs( 'n-recentchanges' ) ); ?>><span class="fa fa-fw fa-clock-o"></span> <?php $this->msg( 'recentchanges' ); ?></a></li>
 
-							<?php if( wfMessage( 'flaggedrevs-desc' )->exists() ) { ?>
-							<li><a href="<?php echo Title::newFromText('PendingChanges', NS_SPECIAL)->getLocalURL(); ?>"><span class="fa fa-fw fa-circle-o-notch"></span><?php $this->msg( 'revreview-current' ); ?></a></li>
-							<?php if ( in_array( 'editor', $wgUser->getEffectiveGroups()) ) { ?><li><a href="<?php echo Title::newFromText('UnreviewedPages', NS_SPECIAL)->getLocalURL(); ?>"><span class="fa fa-fw fa-circle-o"></span><?php $this->msg( 'unreviewedpages' ); ?></a></li><?php } ?>
+							<?php if( $this->installedExtensions['FlaggedRevs'] ) { ?>
+							<li><a href="<?php echo Title::newFromText('PendingChanges', NS_SPECIAL)->getLocalURL(); ?>"><span class="fa fa-fw fa-circle-o-notch"></span> <?php $this->msg( 'revreview-current' ); ?></a></li>
+							<?php if ( in_array( 'editor', $wgUser->getEffectiveGroups()) ) { ?><li><a href="<?php echo Title::newFromText('UnreviewedPages', NS_SPECIAL)->getLocalURL(); ?>"><span class="fa fa-fw fa-circle-o"></span> <?php $this->msg( 'unreviewedpages' ); ?></a></li><?php } ?>
 							<?php } ?>
 
-							<li><a href="<?php echo Title::newFromText('Random', NS_SPECIAL)->getLocalURL(); ?>"<?php echo ($view == 'mobile'?'':' '.Xml::expandAttributes( Linker::tooltipAndAccesskeyAttribs( 'n-randompage' ) ) ); ?>><span class="fa fa-fw fa-random"></span><?php $this->msg( 'randompage' ); ?></a></li>
+							<li><a href="<?php echo Title::newFromText('Random', NS_SPECIAL)->getLocalURL(); ?>"<?php echo ($view == 'mobile'?'':' '.Xml::expandAttributes( Linker::tooltipAndAccesskeyAttribs( 'n-randompage' ) ) ); ?>><span class="fa fa-fw fa-random"></span> <?php $this->msg( 'randompage' ); ?></a></li>
 
-							<?php if( ExtensionRegistry::getInstance()->isLoaded( 'CreateTeams' ) ) { ?>
+							<?php if( $this->installedExtensions['CreateTeams'] || $this->installedExtensions['StreamPage'] ) { ?>
 								<li class="divider"></li>
-								<li><a href="<?php echo Title::newFromText('CreateTeams', NS_SPECIAL)->getLocalURL(); ?>"><span class="fa fa-fw fa-code"></span><?php $this->msg( 'createteams' ); ?></a></li>
+								<?php if( $this->installedExtensions['CreateTeams'] ) { ?>
+									<li><a href="<?php echo Title::newFromText('CreateTeams', NS_SPECIAL)->getLocalURL(); ?>"><span class="fa fa-fw fa-code"></span> <?php $this->msg( 'createteams' ); ?></a></li>
+								<?php } ?>
+								<?php if( $this->installedExtensions['StreamPage'] ) { ?>
+									<li><a href="<?php echo Title::newFromText('StreamPage', NS_SPECIAL)->getLocalURL(); ?>"><span class="fa fa-fw fa-television"></span> <?php $this->msg( 'action-stream' ); ?></a></li>
+								<?php } ?>
 							<?php } ?>
 
 							<li class="divider"></li>
@@ -1120,7 +1148,7 @@ $footerLinks = $this->getFooterLinks();
 				case 'ADMIN': ?>
 					<ul class="dropdown-menu">
 						<?php
-						if( !wfMessage( 'flaggedrevs-desc' )->exists() ) {
+						if( !$this->installedExtensions['FlaggedRevs'] ) {
 							foreach( $this->adminDropdown['about'] as $i => $adminDropDownItem ) {
 								if( $adminDropDownItem['page'] == 'Special:ValidationStatistics' ) {
 									unset( $this->adminDropdown['about'][$i] );

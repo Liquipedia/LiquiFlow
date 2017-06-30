@@ -117,7 +117,6 @@ class LiquiFlowTemplate extends BaseTemplate {
 	 * Outputs the entire contents of the (X)HTML page
 	 */
 	public function execute() {
-		global $wgUser;
 		global $wgLiquiFlowWikiTitle;
 
 		// Run checks for installed extensions
@@ -407,7 +406,7 @@ class LiquiFlowTemplate extends BaseTemplate {
 								</a>
 								<?php $this->renderNavigation( 'TOOLBOX', 'mobile' ); ?>
 							</li>
-							<?php if ( in_array( 'sysop', $wgUser->getEffectiveGroups()) ) : ?>
+							<?php if( in_array( 'sysop', $this->getSkin()->getUser()->getEffectiveGroups() ) ) : ?>
 							<li class="dropdown visible-xs">
 								<a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="#">
 									<span class="fa fa-fw fa-gavel"></span> <span>Admin Links</span> <span class="caret"></span>
@@ -416,7 +415,7 @@ class LiquiFlowTemplate extends BaseTemplate {
 							</li>
 							<?php endif; ?>
 							<?php
-								if ( !$wgUser->isLoggedIn() ) {
+								if( !$this->getSkin()->getUser()->isLoggedIn() ) {
 									$personalTools = $this->getPersonalTools();
 									if( isset( $personalTools['createaccount'] ) ) {
 										$personalTools['createaccount']['class'] = 'visible-xs';
@@ -474,7 +473,7 @@ class LiquiFlowTemplate extends BaseTemplate {
 
 						<ul class="nav navbar-nav navbar-right tablet-personal">
 							<?php
-							if ( !$wgUser->isLoggedIn() ) {
+							if ( !$this->getSkin()->getUser()->isLoggedIn() ) {
 								$personalTools = $this->getPersonalTools();
 								$personalTools['createaccount']['links'][0]['text'] = "";
 								$personalTools['createaccount']['class'] = "hidden-sm hidden-xs";
@@ -533,7 +532,7 @@ class LiquiFlowTemplate extends BaseTemplate {
 							</a>
 							<?php $this->renderNavigation( 'TOOLBOX' ); ?>
 						</li>
-						<?php if ( in_array( 'sysop', $wgUser->getEffectiveGroups()) ) : ?>
+						<?php if ( in_array( 'sysop', $this->getSkin()->getUser()->getEffectiveGroups()) ) : ?>
 						<li class="dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="#">
 								<span class="fa fa-fw fa-gavel"></span> <span class="caret"></span>
@@ -1081,7 +1080,6 @@ $footerLinks = $this->getFooterLinks();
 					break;
 
 				case 'TOOLBOX':
-					global $wgUser;
 					$toolbox = $this->getToolbox();
 					?>
 						<ul class="dropdown-menu">
@@ -1090,7 +1088,7 @@ $footerLinks = $this->getFooterLinks();
 
 							<?php if( $this->installedExtensions['FlaggedRevs'] ) { ?>
 							<li><a href="<?php echo Title::newFromText('PendingChanges', NS_SPECIAL)->getLocalURL(); ?>"><span class="fa fa-fw fa-circle-o-notch"></span> <?php $this->msg( 'revreview-current' ); ?></a></li>
-							<?php if ( in_array( 'editor', $wgUser->getEffectiveGroups()) ) { ?><li><a href="<?php echo Title::newFromText('UnreviewedPages', NS_SPECIAL)->getLocalURL(); ?>"><span class="fa fa-fw fa-circle-o"></span> <?php $this->msg( 'unreviewedpages' ); ?></a></li><?php } ?>
+							<?php if ( in_array( 'editor', $this->getSkin()->getUser()->getEffectiveGroups()) ) { ?><li><a href="<?php echo Title::newFromText('UnreviewedPages', NS_SPECIAL)->getLocalURL(); ?>"><span class="fa fa-fw fa-circle-o"></span> <?php $this->msg( 'unreviewedpages' ); ?></a></li><?php } ?>
 							<?php } ?>
 
 							<li><a href="<?php echo Title::newFromText('Random', NS_SPECIAL)->getLocalURL(); ?>"<?php echo ($view == 'mobile'?'':' '.Xml::expandAttributes( Linker::tooltipAndAccesskeyAttribs( 'n-randompage' ) ) ); ?>><span class="fa fa-fw fa-random"></span> <?php $this->msg( 'randompage' ); ?></a></li>
@@ -1121,8 +1119,7 @@ $footerLinks = $this->getFooterLinks();
 					<?php
 					break;
 				case 'PERSONAL':
-					global $wgUser;
-					if ( $wgUser->isLoggedIn() ) {
+					if ( $this->getSkin()->getUser()->isLoggedIn() ) {
 						$personalTools = $this->getPersonalTools();
 						?>
 						<li class="dropdown">

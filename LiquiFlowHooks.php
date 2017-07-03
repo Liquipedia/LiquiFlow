@@ -96,7 +96,7 @@ class LiquiFlowHooks {
 	}
 
 	public static function onOutputPageParserOutput( OutputPage &$out, ParserOutput $parserOutput ) {
-		if( !$out->getContext()->getTitle()->isSpecialPage() && $out->getContext()->getTitle()->exists() ) {
+		if( !$out->getContext()->getTitle()->isSpecialPage() && $out->getContext()->getTitle()->exists() && $out->getContext()->getSkin()->getSkinName() == 'liquiflow' ) {
 			$parserOutput->setEditSectionTokens( true );
 		}
 	}

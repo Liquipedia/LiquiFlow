@@ -274,34 +274,6 @@ div.thumbinner {
 	display:none;
 }
 
-/* change editlinks */
-.mw-content-ltr .mw-editsection, 
-.mw-content-rtl .mw-content-ltr .mw-editsection {
-	float:right;
-}
- 
-h1 .mw-editsection {
-	padding-top:18px;
-}
- 
-h2 .mw-editsection {
-	padding-top:15px;
-}
- 
-h3 .mw-editsection {
-	padding-top:13px;
-}
-
-/* So that floating [edit] tags don't get pushed down by "float-right/clear-right" divs (such as thumbnail pictures) */
-#mw-content-text h1,
-#mw-content-text h2,
-#mw-content-text h3,
-#mw-content-text h4,
-#mw-content-text h5,
-#mw-content-text h6 {
-	overflow:hidden;
-}
-
 /* "fix" chrome image rendering */
 img {
 	image-rendering:-webkit-optimize-contrast;
@@ -424,18 +396,6 @@ legend {
 	background-color:transparent !important;
 	margin-left:0;
 	margin-right:0;
-}
-
-/* Chrome need some special snowflake CSS here */
-.mw-category-group {
-	pointer-events:none;
-	> * {
-		pointer-events:auto;
-	}
-}
-
-.mw-special-Version #mw-content-text > h2 {
-	width:100%;
 }
 
 .tright .thumbinner {

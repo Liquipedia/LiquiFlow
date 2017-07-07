@@ -67,3 +67,43 @@ h6 .editsection {
 h1, h2 {
 	border-bottom:2px solid @wiki-primary-border;
 }
+
+/* Correct offset to top for anchors */
+.mw-headline {
+	padding-top:60px;
+	margin-top:-60px;
+	/* required for webkit browsers */
+	display:inline-block;
+}
+#mw-content-text {
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		padding-top:calc(~".5em + 60px");
+		margin-top:-60px;
+		pointer-events:none;
+		a,
+		abbr {
+			pointer-events:auto;
+			/* Work around https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/8295099/ s*/
+			display:inline-block;
+		}
+	}
+}
+#mw-content-text {
+	.searchresults,
+	.popover {
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			margin-top:0 !important;
+			padding-top:.5em !important;
+		}
+	}
+}

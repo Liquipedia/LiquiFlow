@@ -174,42 +174,6 @@ html {
 	top:50px !important;
 }
 
-/* Correct offset to top for anchors */
-.mw-headline {
-	padding-top:60px;
-	margin-top:-60px;
-	display:inline-block; /* required for webkit browsers */
-}
-#mw-content-text {
-	h1,
-	h2,
-	h3,
-	h4,
-	h5,
-	h6 {
-		padding-top:calc(~".5em + 60px");
-		margin-top:-60px;
-		pointer-events:none;
-		a,
-		abbr {
-			pointer-events:auto;
-		}
-	}
-}
-#mw-content-text {
-	.searchresults,
-	.popover {
-		h1,
-		h2,
-		h3,
-		h4,
-		h5,
-		h6 {
-			margin-top:0 !important;
-			padding-top:.5em !important;
-		}
-	}
-}
 
 @import "components/headers.less";
 @import "components/toc.less";

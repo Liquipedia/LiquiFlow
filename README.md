@@ -1,6 +1,5 @@
 LiquiFlow
 =========
-
 MediaWiki Skin for Liquipedia
 
 Installation

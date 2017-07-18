@@ -47,7 +47,10 @@ if (!String.prototype.includes) {
 	// codeMirror needs a special textselection jQuery function to work, save the current one to restore when
 	// CodeMirror get's disabled.
 	var origTextSelection = $.fn.textSelection,
-		codeMirror = mw.user.options.get( 'liquiflow-prefs-use-codemirror' ) === '1' || mw.user.options.get( 'liquiflow-prefs-use-codemirror' ) === 1,
+		codeMirrorPhone = mw.user.options.get( 'liquiflow-prefs-use-codemirror-phone' ) === '1' || mw.user.options.get( 'liquiflow-prefs-use-codemirror-phone' ) === 1,
+		codeMirrorTablet = mw.user.options.get( 'liquiflow-prefs-use-codemirror-tablet' ) === '1' || mw.user.options.get( 'liquiflow-prefs-use-codemirror-tablet' ) === 1,
+		codeMirrorDesktop = mw.user.options.get( 'liquiflow-prefs-use-codemirror' ) === '1' || mw.user.options.get( 'liquiflow-prefs-use-codemirror' ) === 1,
+		codeMirror,
 		// function for a textselection function for CodeMirror
 		cmTextSelection = function ( command, options ) {
 			if ( !codeMirror || codeMirror.getTextArea() !== this[ 0 ] ) {
@@ -379,7 +382,14 @@ if (!String.prototype.includes) {
 	}
 
 	// enable CodeMirror
-	if ( codeMirror ) {
+	if( window.innerWidth <= 767 ) {
+		codeMirror = codeMirrorPhone;
+	} else if( window.innerWidth <= 991 ) {
+		codeMirror = codeMirrorTablet;
+	} else {
+		codeMirror = codeMirrorDesktop;
+	}
+	if( codeMirror ) {
 		enableCodeMirror();
 	}
 }( mediaWiki, jQuery ) );

@@ -15,6 +15,16 @@ class LiquiFlowHooks {
 			'label-message' => 'liquiflow-prefs-show-dropdown-on-hover', // a system message
 			'section' => 'rendering/liquiflow'
 		);
+		$preferences['liquiflow-prefs-use-codemirror-phone'] = array(
+			'type' => 'check',
+			'label-message' => 'liquiflow-prefs-use-codemirror-phone', // a system message
+			'section' => 'editing/liquiflow'
+		);
+		$preferences['liquiflow-prefs-use-codemirror-tablet'] = array(
+			'type' => 'check',
+			'label-message' => 'liquiflow-prefs-use-codemirror-tablet', // a system message
+			'section' => 'editing/liquiflow'
+		);
 		$preferences['liquiflow-prefs-use-codemirror'] = array(
 			'type' => 'check',
 			'label-message' => 'liquiflow-prefs-use-codemirror', // a system message

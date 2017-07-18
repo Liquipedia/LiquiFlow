@@ -2,8 +2,6 @@
 
 /**
  * Callback functions for hooks
- *
- * @author Marco Ammon <ammon.marco@t-online.de>
  */
 class LiquiFlowHooks {
 

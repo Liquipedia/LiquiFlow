@@ -278,6 +278,11 @@
 //** Deprecated `@screen-phone` as of v3.0.1
 @screen-phone:               @screen-xs-min;
 
+// Large phone screen / phone
+@screen-lp:                  601px;
+@screen-lp-min:              @screen-lp;
+@screen-lg-phone:            @screen-lp-min;
+
 // Small screen / tablet
 //** Deprecated `@screen-sm` as of v3.0.1
 @screen-sm:                  768px;
@@ -305,7 +310,8 @@
 @screen-xl-desktop:          @screen-xl-min;
 
 // So media queries don't overlap when required, provide a maximum
-@screen-xs-max:              (@screen-sm-min - 1);
+@screen-xs-max:              (@screen-lp-min - 1);
+@screen-lp-max:              (@screen-sm-min - 1);
 @screen-sm-max:              (@screen-md-min - 1);
 @screen-md-max:              (@screen-lg-min - 1);
 @screen-lg-max:              (@screen-xl-min - 1);

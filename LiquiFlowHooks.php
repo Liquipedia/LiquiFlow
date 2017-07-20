@@ -45,7 +45,7 @@ class LiquiFlowHooks {
 	public static function onMakeGlobalVariablesScript( array &$vars, OutputPage $out ) {
 		$context = $out->getContext();
 		// add CodeMirror vars only for edit pages
-		if( $context->getRequest()->getText( 'action' ) == 'edit' ) {
+		if( in_array( $context->getRequest()->getText( 'action' ), array( 'edit', 'submit' ) ) ) {
 			global $wgParser;
 			$contObj = $context->getLanguage();
 

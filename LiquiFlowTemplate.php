@@ -665,7 +665,7 @@ $footerLinks = $this->getFooterLinks();
 							<li><a href="/teamfortress/" target="_blank">Team Fortress</a></li>
 							<li><a href="/worldofwarcraft/" target="_blank">World of Warcraft</a></li>
 							<li><a href="/leagueoflegends/" target="_blank">League of Legends</a></li>
-							<li><a href="/rainbowsix/" target="_blank">Rainbow 6</a></li>
+							<li><a href="/rainbowsix/" target="_blank">Rainbow Six</a></li>
 						</ul>
 					</div>
 					<div class="col-md-2 col-sm-3 hidden-xs">

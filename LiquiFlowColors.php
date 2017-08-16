@@ -67,6 +67,11 @@ class LiquiFlowColors {
 			'wiki-light' => '#d1753e',
 			'body-bg' => '#eeeeee',
 		),
+		'rainbowsix' => array(
+			'wiki-dark' => '#865879',
+			'wiki-light' => '#f0e0a4',
+			'body-bg' => '#f8f2ed',
+		),
 		'rocketleague' => array(
 			'wiki-dark' => '#003f84',
 			'wiki-light' => '#ffae51',

@@ -38,6 +38,8 @@ CodeMirror.defineMode( 'mediawiki', function( config/*, parserConfig */ ) {
 			'kbd': true, 'samp': true, 'data': true, 'time': true, 'mark': true, 'br': true,
 			'wbr': true, 'hr': true, 'li': true, 'dt': true, 'dd': true, 'td': true, 'th': true,
 			'tr': true,	'noinclude': true, 'includeonly': true, 'onlyinclude': true},
+		// Fix for self closing tags (especially <br>, <hr>, <wbr>)
+		permittedSelfClosingHtmlTags = {'br': true, 'wbr': true, 'hr': true},
 		isBold, isItalic, firstsingleletterword, firstmultiletterword, firstspace, mBold, mItalic, mTokens = [], mStyle;
 
 	function makeStyle( style, state, endGround ) {
@@ -427,7 +429,11 @@ CodeMirror.defineMode( 'mediawiki', function( config/*, parserConfig */ ) {
 				return makeLocalStyle( 'mw-htmltag-attribute', state );
 			}
 			if ( stream.eat( '>' ) ) {
-				state.InHtmlTag.push( name );
+				// state.InHtmlTag.push( name );
+				// Fix for self closing tags (especially <br>, <hr>, <wbr>)
+				if( !( name in permittedSelfClosingHtmlTags ) ) {
+					state.InHtmlTag.push( name );
+				}
 				state.tokenize = state.stack.pop();
 				return makeLocalStyle( 'mw-htmltag-bracket', state );
 			}

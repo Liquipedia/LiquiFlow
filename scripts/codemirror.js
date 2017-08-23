@@ -40,7 +40,7 @@ if (!String.prototype.includes) {
 	if( mw.config.get( 'wgCodeEditorCurrentLanguage' ) ) { // If the CodeEditor is used then just exit;
 		return;
 	}
-	if( !(mw.config.get( 'wgAction' ) == 'edit' || mw.config.get( 'wgAction' ) == 'submit') ) {
+	if( !(mw.config.get( 'wgAction' ) == 'edit' || mw.config.get( 'wgAction' ) == 'submit' ) ) {
 		return;
 	}
 

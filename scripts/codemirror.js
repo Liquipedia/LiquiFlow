@@ -40,7 +40,7 @@ if ( !String.prototype.includes ) {
 	if( mw.config.get( 'wgCodeEditorCurrentLanguage' ) ) { // If the CodeEditor is used then just exit;
 		return;
 	}
-	if( !(mw.config.get( 'wgAction' ) == 'edit' || mw.config.get( 'wgAction' ) == 'submit' ) ) {
+	if( !(mw.config.get( 'wgAction' ) === 'edit' || mw.config.get( 'wgAction' ) === 'submit' ) ) {
 		return;
 	}
 
@@ -357,7 +357,7 @@ if ( !String.prototype.includes ) {
 
 			pagename = pagename.substr( 0, 1 ).toUpperCase() + pagename.substr( 1 );
 
-			if( cssClass == 'cm-mw-template-name' ) {
+			if( cssClass === 'cm-mw-template-name' ) {
 				if( pagename.startsWith( ':' ) ) {
 					pagename = pagename.substr( 1 );
 				} else if( !pagename.includes( ':' ) ) {

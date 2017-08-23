@@ -27,12 +27,12 @@ class LiquiFlowHooks {
 			'type' => 'check',
 			'label-message' => 'liquiflow-prefs-use-codemirror', // a system message
 			'section' => 'editing/liquiflow'
-		);/*
+		);
 		$preferences['liquiflow-prefs-use-codemirror-linewrap'] = array(
 			'type' => 'check',
 			'label-message' => 'liquiflow-prefs-use-codemirror-linewrap', // a system message
 			'section' => 'editing/liquiflow'
-		);*/
+		);
 		$preferences['liquiflow-prefs-show-buggy-editor-tabs'] = array(
 			'type' => 'check',
 			'label-message' => 'liquiflow-prefs-show-buggy-editor-tabs', // a system message

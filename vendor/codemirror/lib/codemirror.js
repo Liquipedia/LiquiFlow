@@ -7264,7 +7264,8 @@ function CodeMirror$1(place, options) {
   updateGutters(this)
   themeChanged(this)
   if (options.lineWrapping)
-    { this.display.wrapper.className += " CodeMirror-wrap" }
+    // Liquipedia Core Hack
+    //{ this.display.wrapper.className += " CodeMirror-wrap" }
   initScrollbars(this)
 
   this.state = {

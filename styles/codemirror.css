@@ -37,3 +37,8 @@
 .wikiEditor-ui .options {
 	z-index:10000;
 }
+.CodeMirror.lineWrapping pre {
+	word-wrap:break-word;
+	white-space:pre-wrap;
+	word-break:normal;
+}

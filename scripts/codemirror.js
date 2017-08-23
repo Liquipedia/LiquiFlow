@@ -300,7 +300,6 @@ if ( !String.prototype.includes ) {
 			indentmode = false;
 		}
 		var linewrapping = mw.user.options.get( 'liquiflow-prefs-use-codemirror-linewrap' ) === '1' || mw.user.options.get( 'liquiflow-prefs-use-codemirror-linewrap' ) === 1;
-		linewrapping = false; //TODO: Fix this
 		codeMirror = CodeMirror.fromTextArea( textbox1[ 0 ], {
 				mwextFunctionSynonyms: mw.config.get( 'liquiflowCodemirrorFunctionSynonyms' ),
 				mwextTags: mw.config.get( 'liquiflowCodemirrorTags' ),
@@ -331,6 +330,9 @@ if ( !String.prototype.includes ) {
 		// Our best friend, IE, needs some special css
 		if ( window.navigator.userAgent.indexOf( 'Trident/' ) > -1 ) {
 			$( '.CodeMirror' ).addClass( 'CodeMirrorIE' );
+		}
+		if ( linewrapping ) {
+			$( '.CodeMirror' ).addClass( 'lineWrapping' );
 		}
 
 		// set the height of the textarea

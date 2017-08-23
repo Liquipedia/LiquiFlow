@@ -7263,8 +7263,8 @@ function CodeMirror$1(place, options) {
   display.wrapper.CodeMirror = this
   updateGutters(this)
   themeChanged(this)
-  if (options.lineWrapping)
-    // Liquipedia Core Hack
+  // Liquipedia Core Hack
+  //if (options.lineWrapping)
     //{ this.display.wrapper.className += " CodeMirror-wrap" }
   initScrollbars(this)
 

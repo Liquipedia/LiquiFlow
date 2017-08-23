@@ -1,32 +1,32 @@
-if (!String.prototype.startsWith) {
-	String.prototype.startsWith = function(searchString, position){
+if ( !String.prototype.startsWith ) {
+	String.prototype.startsWith = function( searchString, position ) {
 		position = position || 0;
-		return this.substr(position, searchString.length) === searchString;
+		return this.substr( position, searchString.length ) === searchString;
 	};
 }
 
-if (!String.prototype.endsWith) {
-	String.prototype.endsWith = function(searchString, position) {
+if ( !String.prototype.endsWith ) {
+	String.prototype.endsWith = function( searchString, position ) {
 		var subjectString = this.toString();
-		if (typeof position !== 'number' || !isFinite(position) || Math.floor(position) !== position || position > subjectString.length) {
+		if ( typeof position !== 'number' || !isFinite( position ) || Math.floor( position ) !== position || position > subjectString.length ) {
 			position = subjectString.length;
 		}
 		position -= searchString.length;
-		var lastIndex = subjectString.indexOf(searchString, position);
+		var lastIndex = subjectString.indexOf( searchString, position );
 		return lastIndex !== -1 && lastIndex === position;
 	};
 }
 
-if (!String.prototype.includes) {
-	String.prototype.includes = function(search, start) {
+if ( !String.prototype.includes ) {
+	String.prototype.includes = function( search, start ) {
 		'use strict';
-		if (typeof start !== 'number') {
+		if ( typeof start !== 'number' ) {
 			start = 0;
 		}
-		if (start + search.length > this.length) {
+		if ( start + search.length > this.length ) {
 			return false;
 		} else {
-			return this.indexOf(search, start) !== -1;
+			return this.indexOf( search, start ) !== -1;
 		}
 	};
 }
@@ -286,13 +286,13 @@ if (!String.prototype.includes) {
 		var editmode;
 		var indentmode;
 		var locationStr = window.location.href;
-		if((locationStr.endsWith('.js')) || (locationStr.includes('.js&'))) {
+		if((locationStr.endsWith( '.js' )) || (locationStr.includes( '.js&' ))) {
 			editmode = 'text/javascript';
 			indentmode = true;
-		} else if((locationStr.endsWith('.css')) || (locationStr.includes('.css&'))) {
+		} else if((locationStr.endsWith( '.css' )) || (locationStr.includes( '.css&' ))) {
 			editmode = 'text/css';
 			indentmode = true;
-		} else if(locationStr.includes('/index.php?title=Module:')) {
+		} else if(locationStr.includes( '/index.php?title=Module:' )) {
 			editmode = 'text/x-lua';
 			indentmode = true;
 		} else {
@@ -315,12 +315,12 @@ if (!String.prototype.includes) {
 				viewportMargin: 5000,
 				indentWithTabs: indentmode,
 				extraKeys: {
-					"F11": function(cm) {
-						cm.setOption("fullScreen", !cm.getOption("fullScreen"));
+					"F11": function( cm ) {
+						cm.setOption( "fullScreen", !cm.getOption( "fullScreen" ) );
 					},
-					"Esc": function(cm) {
-						if (cm.getOption("fullScreen")) {
-							cm.setOption("fullScreen", false);
+					"Esc": function( cm ) {
+						if ( cm.getOption( "fullScreen" ) ) {
+							cm.setOption( "fullScreen", false );
 						}
 					}
 				},
@@ -338,47 +338,47 @@ if (!String.prototype.includes) {
 		// Overwrite default textselection of WikiEditor to work with CodeMirror, too
 		$.fn.textSelection = cmTextSelection;
 		
-		function openPageOnClick(cssClass, element) {
+		function openPageOnClick( cssClass, element ) {
 			var pagename = element.text();
 			var index = element.index();
 			var counter;
 
 			counter = index - 1;
-			while(element.parent().children().eq(counter).hasClass(cssClass)) {
-				pagename = element.parent().children().eq(counter).text() + pagename;
+			while( element.parent().children().eq( counter ).hasClass( cssClass ) ) {
+				pagename = element.parent().children().eq( counter ).text() + pagename;
 				counter--;
 			}
 
 			counter = index + 1;
-			while(element.parent().children().eq(counter).hasClass(cssClass)) {
-				pagename = pagename + element.parent().children().eq(counter).text();
+			while( element.parent().children().eq( counter ).hasClass( cssClass ) ) {
+				pagename = pagename + element.parent().children().eq( counter ).text();
 				counter++;
 			}
 
-			pagename = pagename.substr(0, 1).toUpperCase() + pagename.substr(1);
+			pagename = pagename.substr( 0, 1 ).toUpperCase() + pagename.substr( 1 );
 
-			if(cssClass == 'cm-mw-template-name') {
-				if(pagename.startsWith(':')) {
-					pagename = pagename.substr(1);
-				} else if(!pagename.includes(':')) {
+			if( cssClass == 'cm-mw-template-name' ) {
+				if( pagename.startsWith( ':' ) ) {
+					pagename = pagename.substr( 1 );
+				} else if( !pagename.includes( ':' ) ) {
 					pagename = 'Template:' + pagename;
 				}
 			}
 
-			window.open(mw.config.get('wgScriptPath') + '/'+ pagename);
+			window.open( mw.config.get( 'wgScriptPath' ) + '/' + pagename );
 		}
 
-		$('.CodeMirror').on('click', '.cm-mw-template-name', function(e) {
+		$( '.CodeMirror' ).on( 'click', '.cm-mw-template-name', function( e ) {
 			if (e.altKey){
-				openPageOnClick('cm-mw-template-name', $(this));
+				openPageOnClick( 'cm-mw-template-name', $( this ) );
 			}
-		});
+		} );
 
-		$('.CodeMirror').on('click', '.cm-mw-link-pagename', function(e) {
+		$( '.CodeMirror' ).on( 'click', '.cm-mw-link-pagename', function( e ) {
 			if (e.altKey){
-				openPageOnClick('cm-mw-link-pagename', $(this));
+				openPageOnClick( 'cm-mw-link-pagename', $( this ) );
 			}
-		});
+		} );
 	}
 
 	// enable CodeMirror

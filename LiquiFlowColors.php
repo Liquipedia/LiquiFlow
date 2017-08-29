@@ -103,9 +103,9 @@ class LiquiFlowColors {
 			'body-bg' => '#e2dce0',
 		),
 		'warcraft' => array(
-			'wiki-dark' => '#f3d05b',
-			'wiki-light' => '#750606',
-			'body-bg' => '#e5e5e5',
+			'wiki-dark' => '#aab9b7',
+			'wiki-light' => '#1e4555',
+			'body-bg' => '#f5f1fa',
 		),
 		'worldofwarcraft' => array(
 			'wiki-dark' => '#831174',

@@ -252,6 +252,15 @@
 				"skins.liquiflow"
 			]
 		},
+		"skins.liquiflow.theme.pubg": {
+			"styles": [
+				"styles/themes/theme/pubg.less"
+			],
+			"position": "top",
+			"dependencies": [
+				"skins.liquiflow"
+			]
+		},
 		"skins.liquiflow.theme.rainbowsix": {
 			"styles": [
 				"styles/themes/theme/rainbowsix.less"

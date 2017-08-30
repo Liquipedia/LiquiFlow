@@ -62,6 +62,11 @@ class LiquiFlowColors {
 			'wiki-light' => '#ff9999',
 			'body-bg' => '#e5e5e5',
 		),
+		'pubg' => array(
+			'wiki-dark' => '#6a4a3c',
+			'wiki-light' => '#edc951',
+			'body-bg' => '#f8fafb',
+		),
 		'quake' => array(
 			'wiki-dark' => '#484038',
 			'wiki-light' => '#d1753e',

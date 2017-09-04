@@ -773,6 +773,25 @@ $footerLinks = $this->getFooterLinks();
 <?php $this->printTrail(); ?>
 
 <?php Hooks::run( 'LiquiFlowAdEndCode', array( __DIR__ ) ); ?>
+	<menu type="context" id="wiki-menu">
+		<?php
+		foreach( $this->data['namespace_urls'] as $url ) {
+			echo '<menuitem data-action="' . $url['href'] . '" label="' . $url['text'] . '" onclick="window.location.href = this.dataset.action;"></menuitem>';
+		}
+		if( count( $this->data['view_urls'] ) > 0 ) {
+			echo '<hr>';
+		}
+		foreach( $this->data['view_urls'] as $url ) {
+			echo '<menuitem data-action="' . $url['href'] . '" label="' . $url['text'] . '" onclick="window.location.href = this.dataset.action;"></menuitem>';
+		}
+		if( count( $this->data['action_urls'] ) > 0 ) {
+			echo '<hr>';
+		}
+		foreach( $this->data['action_urls'] as $url ) {
+			echo '<menuitem data-action="' . $url['href'] . '" label="' . $url['text'] . '" onclick="window.location.href = this.dataset.action;"></menuitem>';
+		}
+		?>
+	</menu>
 </body>
 </html>
 

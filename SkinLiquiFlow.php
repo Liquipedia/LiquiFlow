@@ -252,6 +252,7 @@ class SkinLiquiFlow extends SkinTemplate {
 			$bodyAttrs['class'] .= ' logged-out';
 		}
 		$bodyAttrs['class'] .= ' wiki-' . substr( $wgScriptPath, 1 );
+		$bodyAttrs['contextmenu'] = 'wiki-menu';
 	}
 
 	/**

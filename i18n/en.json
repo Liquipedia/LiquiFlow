@@ -82,5 +82,7 @@
 	"nstab-counterstrike_talk": "Talk",
 	"nstab-smash4_talk": "Talk",
 	"nstab-starbow_talk": "Talk",
-	"stabilization-tab": "Stability"
+	"stabilization-tab": "Stability",
+	"liquiflow-cache-version": "1",
+	"liquiflow-cache-version-placeholder": "CACHEBUST"
 }

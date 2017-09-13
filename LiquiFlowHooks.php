@@ -92,6 +92,9 @@ class LiquiFlowHooks {
 				}
 			}
 		}
+		$vars += array(
+			'liquiflowCacheVersion' => wfMessage( 'liquiflow-cache-version' )->text(),
+		);
 	}
 
 	public static function onLinkerMakeExternalLink( &$url, &$text, &$link, &$attribs, $linktype ) {

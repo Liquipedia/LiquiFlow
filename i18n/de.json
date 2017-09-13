@@ -82,5 +82,7 @@
 	"nstab-counterstrike_talk": "Diskussion",
 	"nstab-smash4_talk": "Diskussion",
 	"nstab-starbow_talk": "Diskussion",
-	"stabilization-tab": "Stabilität"
+	"stabilization-tab": "Stabilität",
+	"liquiflow-cache-version": "1",
+	"liquiflow-cache-version-placeholder": "CACHEBUST"
 }

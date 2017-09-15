@@ -71,7 +71,7 @@ class LiquiFlowTemplate extends BaseTemplate {
 		'about' => [
 			[ 'page' => 'Special:Statistics', 'title' => 'statistics' , 'id' => 'ad-statistics'],
 			[ 'page' => 'Special:ValidationStatistics', 'title' => 'validationstatistics' , 'id' => 'ad-validation-statistics'],
-			[ 'page' => 'Special:Version?detail=1', 'title' => 'version', 'id' => 'ad-version'],
+			[ 'page' => 'Special:Version?detail', 'title' => 'version', 'id' => 'ad-version'],
 			[ 'page' => 'Special:Log', 'title' => 'log', 'id' => 'ad-logs'],
 		],
 		'filehist-user' => [

@@ -114,7 +114,7 @@
 					$this.trigger( showEvent );
 				}, settings.hoverDelay );
 			}
-		});
+		} );
 	};
 
 	$(document).ready( function() {

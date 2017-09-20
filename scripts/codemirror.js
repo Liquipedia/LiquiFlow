@@ -1,14 +1,14 @@
-if ( !String.prototype.startsWith ) {
+if( !String.prototype.startsWith ) {
 	String.prototype.startsWith = function( searchString, position ) {
 		position = position || 0;
 		return this.substr( position, searchString.length ) === searchString;
 	};
 }
 
-if ( !String.prototype.endsWith ) {
+if( !String.prototype.endsWith ) {
 	String.prototype.endsWith = function( searchString, position ) {
 		var subjectString = this.toString();
-		if ( typeof position !== 'number' || !isFinite( position ) || Math.floor( position ) !== position || position > subjectString.length ) {
+		if( typeof position !== 'number' || !isFinite( position ) || Math.floor( position ) !== position || position > subjectString.length ) {
 			position = subjectString.length;
 		}
 		position -= searchString.length;
@@ -17,13 +17,13 @@ if ( !String.prototype.endsWith ) {
 	};
 }
 
-if ( !String.prototype.includes ) {
+if( !String.prototype.includes ) {
 	String.prototype.includes = function( search, start ) {
 		'use strict';
-		if ( typeof start !== 'number' ) {
+		if( typeof start !== 'number' ) {
 			start = 0;
 		}
-		if ( start + search.length > this.length ) {
+		if( start + search.length > this.length ) {
 			return false;
 		} else {
 			return this.indexOf( search, start ) !== -1;
@@ -36,11 +36,11 @@ if ( !String.prototype.includes ) {
  * License: GPL 2.0 or later
  */
 
-( function ( mw, $ ) {
+( function( mw, $ ) {
 	if( mw.config.get( 'wgCodeEditorCurrentLanguage' ) ) { // If the CodeEditor is used then just exit;
 		return;
 	}
-	if( !(mw.config.get( 'wgAction' ) === 'edit' || mw.config.get( 'wgAction' ) === 'submit' ) ) {
+	if( !( mw.config.get( 'wgAction' ) === 'edit' || mw.config.get( 'wgAction' ) === 'submit' ) ) {
 		return;
 	}
 
@@ -52,8 +52,8 @@ if ( !String.prototype.includes ) {
 		codeMirrorDesktop = mw.user.options.get( 'liquiflow-prefs-use-codemirror' ) === '1' || mw.user.options.get( 'liquiflow-prefs-use-codemirror' ) === 1,
 		codeMirror,
 		// function for a textselection function for CodeMirror
-		cmTextSelection = function ( command, options ) {
-			if ( !codeMirror || codeMirror.getTextArea() !== this[ 0 ] ) {
+		cmTextSelection = function( command, options ) {
+			if( !codeMirror || codeMirror.getTextArea() !== this[ 0 ] ) {
 				return origTextSelection.call( this, command, options );
 			}
 			var fn, retval;
@@ -62,11 +62,11 @@ if ( !String.prototype.includes ) {
 				/**
 				 * Get the contents of the textarea
 				 */
-				getContents: function () {
+				getContents: function() {
 					return codeMirror.doc.getValue();
 				},
 
-				setContents: function ( newContents ) {
+				setContents: function( newContents ) {
 					codeMirror.doc.setValue( newContents );
 				},
 
@@ -74,7 +74,7 @@ if ( !String.prototype.includes ) {
 				 * Get the currently selected text in this textarea. Will focus the textarea
 				 * in some browsers (IE/Opera)
 				 */
-				getSelection: function () {
+				getSelection: function() {
 					return codeMirror.doc.getSelection();
 				},
 
@@ -82,8 +82,8 @@ if ( !String.prototype.includes ) {
 				 * Inserts text at the beginning and end of a text selection, optionally
 				 * inserting text at the caret when selection is empty.
 				 */
-				encapsulateSelection: function ( options ) {
-					return this.each( function () {
+				encapsulateSelection: function( options ) {
+					return this.each( function() {
 						var insertText,
 							selText,
 							selectPeri = options.selectPeri,
@@ -92,25 +92,25 @@ if ( !String.prototype.includes ) {
 							startCursor = codeMirror.doc.getCursor( true ),
 							endCursor = codeMirror.doc.getCursor( false );
 
-						if ( options.selectionStart !== undefined ) {
+						if( options.selectionStart !== undefined ) {
 							// fn[command].call( this, options );
 							fn.setSelection( { start: options.selectionStart, end: options.selectionEnd } ); // not tested
 						}
 
 						selText = codeMirror.doc.getSelection();
-						if ( !selText ) {
+						if( !selText ) {
 							selText = options.peri;
-						} else if ( options.replace ) {
+						} else if( options.replace ) {
 							selectPeri = false;
 							selText = options.peri;
 						} else {
 							selectPeri = false;
-							while ( selText.charAt( selText.length - 1 ) === ' ' ) {
+							while( selText.charAt( selText.length - 1 ) === ' ' ) {
 								// Exclude ending space char
 								selText = selText.substring( 0, selText.length - 1 );
 								post += ' ';
 							}
-							while ( selText.charAt( 0 ) === ' ' ) {
+							while( selText.charAt( 0 ) === ' ' ) {
 								// Exclude prepending space char
 								selText = selText.substring( 1, selText.length );
 								pre = ' ' + pre;
@@ -127,29 +127,29 @@ if ( !String.prototype.includes ) {
 								insertText = '',
 								selTextArr = selText.split( '\n' );
 
-							for ( i = 0; i < selTextArr.length; i++ ) {
+							for( i = 0; i < selTextArr.length; i++ ) {
 								insertText += pre + selTextArr[ i ] + post;
-								if ( i !== selTextArr.length - 1 ) {
+								if( i !== selTextArr.length - 1 ) {
 									insertText += '\n';
 								}
 							}
 							return insertText;
 						}
 
-						if ( options.splitlines ) {
+						if( options.splitlines ) {
 							selectPeri = false;
 							insertText = doSplitLines( selText, pre, post );
 						} else {
 							insertText = pre + selText + post;
 						}
 
-						if ( options.ownline ) {
-							if ( startCursor.ch !== 0 ) {
+						if( options.ownline ) {
+							if( startCursor.ch !== 0 ) {
 								insertText = '\n' + insertText;
 								pre += '\n';
 							}
 
-							if ( codeMirror.doc.getLine( endCursor.line ).length !== endCursor.ch ) {
+							if( codeMirror.doc.getLine( endCursor.line ).length !== endCursor.ch ) {
 								insertText += '\n';
 								post += '\n';
 							}
@@ -157,7 +157,7 @@ if ( !String.prototype.includes ) {
 
 						codeMirror.doc.replaceSelection( insertText );
 
-						if ( selectPeri ) {
+						if( selectPeri ) {
 							codeMirror.doc.setSelection(
 									codeMirror.doc.posFromIndex( codeMirror.doc.indexFromPos( startCursor ) + pre.length ),
 									codeMirror.doc.posFromIndex( codeMirror.doc.indexFromPos( startCursor ) + pre.length + selText.length )
@@ -170,17 +170,17 @@ if ( !String.prototype.includes ) {
 				 * Get the position (in resolution of bytes not necessarily characters)
 				 * in a textarea
 				 */
-				getCaretPosition: function ( options ) {
+				getCaretPosition: function( options ) {
 					var caretPos = codeMirror.doc.indexFromPos( codeMirror.doc.getCursor( true ) ),
 						endPos = codeMirror.doc.indexFromPos( codeMirror.doc.getCursor( false ) );
-					if ( options.startAndEnd ) {
+					if( options.startAndEnd ) {
 						return [ caretPos, endPos ];
 					}
 					return caretPos;
 				},
 
-				setSelection: function ( options ) {
-					return this.each( function () {
+				setSelection: function( options ) {
+					return this.each( function() {
 						codeMirror.doc.setSelection( codeMirror.doc.posFromIndex( options.start ), codeMirror.doc.posFromIndex( options.end ) );
 					} );
 				},
@@ -189,14 +189,14 @@ if ( !String.prototype.includes ) {
 				* Scroll a textarea to the current cursor position. You can set the cursor
 				* position with setSelection()
 				*/
-				scrollToCaretPosition: function () {
-					return this.each( function () {
+				scrollToCaretPosition: function() {
+					return this.each( function() {
 						codeMirror.scrollIntoView( null );
 					} );
 				}
 			};
 
-			switch ( command ) {
+			switch( command ) {
 				// case 'getContents': // no params
 				// case 'setContents': // no params with defaults
 				// case 'getSelection': // no params
@@ -232,10 +232,10 @@ if ( !String.prototype.includes ) {
 						endContainer: undefined
 					}, options );
 
-					if ( options.end === undefined ) {
+					if( options.end === undefined ) {
 						options.end = options.start;
 					}
-					if ( options.endContainer === undefined ) {
+					if( options.endContainer === undefined ) {
 						options.endContainer = options.startContainer;
 					}
 					// FIXME: We may not need character position-based functions if we insert markers in the right places
@@ -256,18 +256,18 @@ if ( !String.prototype.includes ) {
 
 	// define JQuery hook for searching and replacing text using JS if CodeMirror is enabled, see Bug: T108711
 	$.valHooks.textarea = {
-		get: function ( elem ) {
-			if ( elem.id === 'wpTextbox1' && codeMirror ) {
+		get: function( elem ) {
+			if( elem.id === 'wpTextbox1' && codeMirror ) {
 				return codeMirror.doc.getValue();
-			} else if ( originHooksTextarea ) {
+			} else if( originHooksTextarea ) {
 				return originHooksTextarea.get( elem );
 			}
 			return elem.value;
 		},
-		set: function ( elem, value ) {
-			if ( elem.id === 'wpTextbox1' && codeMirror ) {
+		set: function( elem, value ) {
+			if( elem.id === 'wpTextbox1' && codeMirror ) {
 				return codeMirror.doc.setValue( value );
-			} else if ( originHooksTextarea ) {
+			} else if( originHooksTextarea ) {
 				return originHooksTextarea.set( elem, value );
 			}
 			elem.value = value;
@@ -318,7 +318,7 @@ if ( !String.prototype.includes ) {
 						cm.setOption( "fullScreen", !cm.getOption( "fullScreen" ) );
 					},
 					"Esc": function( cm ) {
-						if ( cm.getOption( "fullScreen" ) ) {
+						if( cm.getOption( "fullScreen" ) ) {
 							cm.setOption( "fullScreen", false );
 						}
 					}
@@ -328,10 +328,10 @@ if ( !String.prototype.includes ) {
 				styleActiveLine: true
 			} );
 		// Our best friend, IE, needs some special css
-		if ( window.navigator.userAgent.indexOf( 'Trident/' ) > -1 ) {
+		if( window.navigator.userAgent.indexOf( 'Trident/' ) > -1 ) {
 			$( '.CodeMirror' ).addClass( 'CodeMirrorIE' );
 		}
-		if ( linewrapping ) {
+		if( linewrapping ) {
 			$( '.CodeMirror' ).addClass( 'lineWrapping' );
 		}
 
@@ -371,13 +371,13 @@ if ( !String.prototype.includes ) {
 		}
 
 		$( '.CodeMirror' ).on( 'click', '.cm-mw-template-name', function( e ) {
-			if (e.altKey){
+			if( e.altKey ) {
 				openPageOnClick( 'cm-mw-template-name', $( this ) );
 			}
 		} );
 
 		$( '.CodeMirror' ).on( 'click', '.cm-mw-link-pagename', function( e ) {
-			if (e.altKey){
+			if( e.altKey ) {
 				openPageOnClick( 'cm-mw-link-pagename', $( this ) );
 			}
 		} );

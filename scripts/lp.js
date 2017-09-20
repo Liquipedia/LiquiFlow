@@ -1,28 +1,28 @@
+( function() {
+	'use strict';
+	if(navigator.userAgent.match(/IEMobile\/10\.0/)) {
+		var msViewportStyle = document.createElement( 'style' );
+		msViewportStyle.appendChild(
+			document.createTextNode( '@-ms-viewport{width:auto!important}' )
+		);
+		document.querySelector( 'head' ).appendChild( msViewportStyle );
+	}
+} )();
 
-if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
-	var msViewportStyle = document.createElement('style')
-	msViewportStyle.appendChild(
-		document.createTextNode(
-			'@-ms-viewport{width:auto!important}'
-		)
-	)
-	document.querySelector('head').appendChild(msViewportStyle)
-}
-
-$(document).ready(function () {
+$( document ).ready(function() {
 	
 	/* a click on mobile search closes a possibly opened menu/toc */
-	$('#mobile-search-button').click(function(e){
-		if ($('#main-nav-toggler').hasClass('slide-active')) {
-			$('#main-nav-toggler').trigger('click');
+	$( '#mobile-search-button' ).click( function( e ){
+		if( $( '#main-nav-toggler' ).hasClass( 'slide-active' ) ) {
+			$( '#main-nav-toggler' ).trigger( 'click' );
 		}
-		if ($('#toc-toggler').hasClass('slide-active')) {
-			$('#toc-toggler').trigger('click');
+		if( $( '#toc-toggler' ).hasClass( 'slide-active' ) ) {
+			$( '#toc-toggler' ).trigger( 'click' );
 		}
 		e.preventDefault();
-		$("#mobile-search-bar").toggleClass('hidden');
-		$('#mobile-search-button').toggleClass('active');
-	});
+		$( '#mobile-search-bar' ).toggleClass( 'hidden' );
+		$( '#mobile-search-button' ).toggleClass( 'active' );
+	} );
 
 	//stick in the fixed 100% height behind the navbar but don't wrap it
 	$('#slide-nav.navbar-default').after($('<div id="navbar-height-col"></div>'));
@@ -31,174 +31,174 @@ $(document).ready(function () {
 	var menuneg = '-100%';
 	var slideneg = '-80%';
 
-	$("#slide-nav").on("click", '#main-nav-toggler', function (e) {
-		if ($('#toc-toggler').hasClass('slide-active')) {
-			$('#toc-toggler').trigger("click");
+	$('#slide-nav').on( 'click', '#main-nav-toggler', function( e ) {
+		if( $( '#toc-toggler' ).hasClass( 'slide-active' ) ) {
+			$('#toc-toggler' ).trigger( 'click' );
 		}
-		if ($('#mobile-search-button').hasClass('active')) {
-			$('#mobile-search-button').trigger("click");
+		if( $( '#mobile-search-button' ).hasClass( 'active' ) ) {
+			$( '#mobile-search-button' ).trigger( 'click' );
 		}
 
-		var selected = $(this).hasClass('slide-active');
+		var selected = $( this ).hasClass( 'slide-active' );
 
-		$('#slidemenu').stop().animate({
+		$( '#slidemenu' ).stop().animate( {
 			left: selected ? menuneg : '0px'
-		}, 200);
+		}, 200 );
 
-		$('#navbar-height-col').stop().animate({
+		$( '#navbar-height-col' ).stop().animate( {
 			left: selected ? slideneg : '0px'
-		}, 200);
+		}, 200 );
 
-		$(this).toggleClass('slide-active', !selected);
-		$('#slidemenu').toggleClass('slide-active');
+		$( this ).toggleClass( 'slide-active', !selected );
+		$( '#slidemenu' ).toggleClass( 'slide-active' );
 
-		$('#page-content, .navbar, body, .navbar-header, #scroll-wrapper-menu').toggleClass('slide-active');
-	});
+		$( '#page-content, .navbar, body, .navbar-header, #scroll-wrapper-menu' ).toggleClass( 'slide-active' );
+	} );
 
-	$("#slide-nav").on("click", '#toc-toggler', function (e) {
-		if ($('#main-nav-toggler').hasClass('slide-active')) {
-			$('#main-nav-toggler').trigger("click");
+	$( '#slide-nav' ).on( 'click', '#toc-toggler', function( e ) {
+		if( $( '#main-nav-toggler' ).hasClass( 'slide-active' ) ) {
+			$( '#main-nav-toggler' ).trigger( 'click' );
 		}
-		if ($('#mobile-search-button').hasClass('active')) {
-			$('#mobile-search-button').trigger("click");
+		if( $( '#mobile-search-button' ).hasClass( 'active' ) ) {
+			$( '#mobile-search-button' ).trigger( 'click' );
 		}
 
-		var selected = $(this).hasClass('slide-active');
+		var selected = $( this ).hasClass( 'slide-active' );
 
-		$('#slide-toc').stop().animate({
+		$( '#slide-toc' ).stop().animate( {
 			right: selected ? menuneg : '0px'
-		});
+		} );
 
-		$('#toc-height-col').stop().animate({
+		$( '#toc-height-col' ).stop().animate( {
 			right: selected ? slideneg : '0px'
-		});
+		} );
 
-		$(this).toggleClass('slide-active', !selected);
-		$('#slide-toc').toggleClass('slide-active');
+		$( this ).toggleClass( 'slide-active', !selected );
+		$( '#slide-toc' ).toggleClass( 'slide-active' );
 
-		$('#page-content, .navbar, body, .navbar-header, #scroll-wrapper-toc').toggleClass('slide-active');
-	});
+		$( '#page-content, .navbar, body, .navbar-header, #scroll-wrapper-toc' ).toggleClass( 'slide-active' );
+	} );
 
 	/* Hide navigation/toc if a linked within is clicked */
-	$('#slidemenu a[href!="#"]').click(function (e) {
-		$('#main-nav-toggler').trigger('click');
-	});
+	$( '#slidemenu a[href!="#"]' ).click( function( e ) {
+		$( '#main-nav-toggler' ).trigger( 'click' );
+	} );
 
-	$('#slide-toc a').click(function (e) {
-		$('#toc-toggler').trigger('click');
-	});
+	$( '#slide-toc a' ).click( function( e ) {
+		$( '#toc-toggler' ).trigger( 'click' );
+	} );
 
 	var selected = '#slidemenu, .navbar, .navbar-header, #scroll-wrapper-menu, #scroll-wrapper-toc';
-	$(window).on("resize", function () {
-		if ($(window).width() > 767 && $('.navbar-toggle').is(':hidden')) {
-			$(selected).removeClass('slide-active');
+	$( window ).on( 'resize', function() {
+		if( $( window ).width() > 767 && $( '.navbar-toggle' ).is( ':hidden' ) ) {
+			$(selected).removeClass( 'slide-active' );
 		}
 
-	});
+	} );
 	
 	/* Add fancy popup reference boxes */
-	$('sup.reference').each(function() {
-		var href = $(this).children('a').attr('href');
-		href = href.replace(/\./g,"\\\.").replace(/\:/g,"\\\:");
-		var reference = $(href + ' > .reference-text').html();
-		$(this).children('a').attr('href', 'javascript:;');
-		$(this)
-			.data('toggle', 'popover')
-			.data('placement', 'bottom')
-			.attr('title', 'Reference')
-			.data('content', reference)
-			.data('html', true)
-			.data('trigger', 'focus')
+	$( 'sup.reference' ).each( function() {
+		var href = $( this ).children( 'a').attr( 'href' );
+		href = href.replace(/\./g, "\\\.").replace(/\:/g, "\\\:");
+		var reference = $( href + ' > .reference-text' ).html();
+		$( this ).children( 'a' ).attr( 'href', 'javascript:;' );
+		$( this )
+			.data( 'toggle', 'popover' )
+			.data( 'placement', 'bottom' )
+			.attr( 'title', 'Reference' )
+			.data( 'content', reference )
+			.data( 'html', true )
+			.data( 'trigger', 'focus' )
 			.popover();
-	});
+	} );
 
 	/* Popover achievements */
-	$('[data-toggle="popover-hover"]').hover(function() {
-		$(this).popover('show');
+	$( '[data-toggle="popover-hover"]' ).hover( function() {
+		$(this).popover( 'show' );
 	}, function() {
-		$(this).popover('hide');
-	});
+		$(this).popover( 'hide' );
+	} );
 
 	/* Popover for other things 8on click) */
-	$(function() {
-		$('[data-toggle="popover"]').popover()
-	});
+	$( function() {
+		$( '[data-toggle="popover"]' ).popover()
+	} );
 
 	/* Tooltips */
 	$(function() {
-		$('[data-toggle="tooltip"]').tooltip()
+		$( '[data-toggle="tooltip"]' ).tooltip()
 	});
 
-});
+} );
 
 /* Hide the slide-in nav/toc if an area outside of it is clicked */
-$(document).click(function (e) {
-	var container = $("#slide-nav");
+$( document ).click( function( e ) {
+	var container = $( '#slide-nav' );
 
-	if (!container.is(e.target) // if the target of the click isn't the container...
-		&& container.has(e.target).length === 0) // ... nor a descendant of the container
+	if( !container.is( e.target ) // if the target of the click isn't the container...
+		&& container.has( e.target ).length === 0 ) // ... nor a descendant of the container
 	{
-		if ($('#slidemenu').hasClass('slide-active')) {
-			$('#main-nav-toggler').trigger("click");
+		if( $( '#slidemenu' ).hasClass( 'slide-active' ) ) {
+			$( '#main-nav-toggler' ).trigger( 'click' );
 		}
-		if ($('#slide-toc').hasClass('slide-active')) {
-			$('#toc-toggler').trigger("click");
+		if( $( '#slide-toc' ).hasClass( 'slide-active' ) ) {
+			$( '#toc-toggler' ).trigger( 'click' );
 		}
 	}
-});
+} );
 
 /* Social media share links */
 Share = {
-	facebook: function(purl, ptitle) {
+	facebook: function( purl, ptitle ) {
 		url = 'https://www.facebook.com/sharer.php?s=100';
-		url += '&p[title]=' + encodeURIComponent(ptitle);
-		url += '&p[url]=' + encodeURIComponent(purl);
-		Share.popup(url);
+		url += '&p[title]=' + encodeURIComponent( ptitle );
+		url += '&p[url]=' + encodeURIComponent( purl );
+		Share.popup( url );
 	},
-	twitter: function(purl, ptitle) {
+	twitter: function( purl, ptitle ) {
 		purl = purl.replace(/ /g, '_');
 		url = 'https://twitter.com/share?';
-		url += 'text=' + encodeURIComponent(ptitle);
-		url += '&url=' + encodeURIComponent(purl);
-		url += '&counturl=' + encodeURIComponent(purl);
-		Share.popup(url);
+		url += 'text=' + encodeURIComponent( ptitle );
+		url += '&url=' + encodeURIComponent( purl );
+		url += '&counturl=' + encodeURIComponent( purl );
+		Share.popup( url );
 	},
-	reddit: function(purl, ptitle) {
+	reddit: function( purl, ptitle ) {
 		url = 'http://www.reddit.com/submit?';
-		url += 'title=' + encodeURIComponent(ptitle);
-		url += '&url=' + encodeURIComponent(purl);
-		Share.popup(url);
+		url += 'title=' + encodeURIComponent( ptitle );
+		url += '&url=' + encodeURIComponent( purl );
+		Share.popup( url );
 	},
-	googleplus: function(purl) {
+	googleplus: function( purl ) {
 		url = 'https://plus.google.com/share?';
-		url += 'url=' + encodeURIComponent(purl);
-		Share.popup(url);
+		url += 'url=' + encodeURIComponent( purl );
+		Share.popup( url );
 	},
-	qq: function(purl, ptitle) {
+	qq: function( purl, ptitle ) {
 		url = 'http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?';
-		url += 'title=' + encodeURIComponent(ptitle);
-		url += '&url=' + encodeURIComponent(purl);
-		Share.popup(url);
+		url += 'title=' + encodeURIComponent( ptitle );
+		url += '&url=' + encodeURIComponent( purl );
+		Share.popup( url );
 	},
-	vk: function(purl, ptitle) {
+	vk: function( purl, ptitle ) {
 		url = 'http://vkontakte.ru/share.php?';
-		url += 'title=' + encodeURIComponent(ptitle);
-		url += '&url=' + encodeURIComponent(purl);
-		Share.popup(url);
+		url += 'title=' + encodeURIComponent( ptitle );
+		url += '&url=' + encodeURIComponent( purl );
+		Share.popup( url );
 	},
-	weibo: function(purl, ptitle) {
+	weibo: function( purl, ptitle ) {
 		url = 'http://service.weibo.com/staticjs/weiboshare.html?';
-		url += 'title=' + encodeURIComponent(ptitle);
-		url += '&url=' + encodeURIComponent(purl);
-		url += '&count=' + encodeURIComponent(purl);
-		Share.popup(url);
+		url += 'title=' + encodeURIComponent( ptitle );
+		url += '&url=' + encodeURIComponent( purl );
+		url += '&count=' + encodeURIComponent( purl );
+		Share.popup( url );
 	},
-	whatsapp: function(purl, ptitle) {
+	whatsapp: function( purl, ptitle ) {
 		url = 'whatsapp://send?';
-		url += 'text=' + encodeURIComponent(ptitle+": " + purl.replace(" ","_"));
-		Share.popup(url);
+		url += 'text=' + encodeURIComponent( ptitle + ": " + purl.replace( " ","_" ) );
+		Share.popup( url );
 	},
-	popup: function(url) {
-		window.open(url, '', 'toolbar=0,status=0,width=626,height=436');
+	popup: function( url ) {
+		window.open( url, '', 'toolbar=0,status=0,width=626,height=436' );
 	}
 };

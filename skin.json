@@ -59,7 +59,6 @@
 				"vendor/liquipedia-custom-icons/css/Liquipedia-Custom-Icons.css"
 			],
 			"scripts": [
-				"scripts/jquery.min.js",
 				"vendor/bootstrap/dist/js/bootstrap.min.js",
 				"scripts/toc.js",
 				"scripts/lp.js",

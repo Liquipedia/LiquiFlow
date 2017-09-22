@@ -59,8 +59,6 @@
 	"liquiflow-interface": "Interface",
 	"liquiflow-edit-common-css": "Edit Common.css",
 	"liquiflow-edit-common-js": "Edit Common.js",
-	"liquiflow-edit-liquiflow-css": "Edit Liquiflow.css",
-	"liquiflow-edit-liquiflow-js": "Edit Liquiflow.js",
 	"liquiflow-edit-sidebar": "Edit Navigation Bar",
 	"liquiflow-edit-sitenotice": "Edit Site Notice",
 	"liquiflow-other": "Other",

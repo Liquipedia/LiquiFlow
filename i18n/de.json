@@ -39,6 +39,7 @@
 	"liquiflow-prefs-use-codemirror": "Verwende CodeMirror Editor (mehr als 992px Bildschirmbreite)",
 	"liquiflow-prefs-use-codemirror-linewrap": "Breche Zeilen im CodeMirror Editor",
 	"liquiflow-prefs-show-buggy-editor-tabs": "Verwende Editor tabs (buggy)",
+	"liquiflow-prefs-show-rightclick-menu": "Verwende das Rechtsklick-Kontextmenü (Firefox)",
 	"liquiflow-stability": "Stabilität",
 	"liquiflow-stability-tooltip": "Einstellungen zur Qualitätssicherung",
 	"liquiflow-tools": "Werkzeuge",

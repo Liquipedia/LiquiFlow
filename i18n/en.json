@@ -39,6 +39,7 @@
 	"liquiflow-prefs-use-codemirror": "Use CodeMirror editor on desktop (larger than 992px screen width)",
 	"liquiflow-prefs-use-codemirror-linewrap": "Enable line-wrapping in CodeMirror editor",
 	"liquiflow-prefs-show-buggy-editor-tabs": "Show buggy editor tabs",
+	"liquiflow-prefs-show-rightclick-menu": "Enable the right-click context menu (Firefox)",
 	"liquiflow-stability": "Stability",
 	"liquiflow-stability-tooltip": "Quality assurance settings",
 	"liquiflow-tools": "Tools",

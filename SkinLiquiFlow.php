@@ -205,6 +205,7 @@ class SkinLiquiFlow extends SkinTemplate {
 	 */
 	function setupSkinUserCss( OutputPage $out ) {
 		global $wgScriptPath;
+		$user = $this->getSkin()->getUser();
 		parent::setupSkinUserCss( $out );
 
 		$out->addStyle( 'https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,700,700italic%7CDroid+Sans+Mono%7CRoboto:500' );
@@ -215,10 +216,10 @@ class SkinLiquiFlow extends SkinTemplate {
 		} else {
 			$out->addModuleStyles( 'skins.liquiflow.theme.commons' );
 		}
-		if ( $this->getSkin()->getUser()->isLoggedIn() ) {
+		if ( $user->isLoggedIn() ) {
 			$out->addModuleStyles( 'skins.liquiflow.loggedin' );
 		}
-		if ( !$this->getSkin()->getUser()->getOption ( 'liquiflow-prefs-show-buggy-editor-tabs' ) ) {
+		if ( !$user->getOption ( 'liquiflow-prefs-show-buggy-editor-tabs' ) ) {
 			$out->addModuleStyles( 'skins.liquiflow.removebuggyeditortabs' );
 		}
 
@@ -245,14 +246,17 @@ class SkinLiquiFlow extends SkinTemplate {
 	 */
 	function addToBodyAttributes( $out, &$bodyAttrs ) {
 		global $wgScriptPath;
+		$user = $this->getSkin()->getUser();
 		$bodyAttrs['id'] = static::$bodyId;
-		if ( $this->getSkin()->getUser()->isLoggedIn() ) {
+		if ( $user->isLoggedIn() ) {
 			$bodyAttrs['class'] .= ' logged-in';
 		} else {
 			$bodyAttrs['class'] .= ' logged-out';
 		}
 		$bodyAttrs['class'] .= ' wiki-' . substr( $wgScriptPath, 1 );
-		$bodyAttrs['contextmenu'] = 'wiki-menu';
+		if( $user->getOption ( 'liquiflow-prefs-show-rightclick-menu' ) ) {
+			$bodyAttrs['contextmenu'] = 'wiki-menu';
+		}
 	}
 
 	/**

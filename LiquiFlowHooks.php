@@ -4,41 +4,50 @@
  * Callback functions for hooks
  */
 class LiquiFlowHooks {
-
-	//Add skin-specific user preferences (registered in skin.json)    
+	// Add skin-specific user preferences (registered in skin.json)    
 	public static function onGetPreferences($user, &$preferences) {
-		//Toggle setting to show dropdown menus on hover instead of click
+		// Toggle setting to show dropdown menus on hover instead of click
 		$preferences['liquiflow-prefs-show-dropdown-on-hover'] = array(
 			'type' => 'check',
-			'label-message' => 'liquiflow-prefs-show-dropdown-on-hover', // a system message
+			'label-message' => 'liquiflow-prefs-show-dropdown-on-hover',
 			'section' => 'rendering/liquiflow'
 		);
+
+		// CodeMirror settings
 		$preferences['liquiflow-prefs-use-codemirror-phone'] = array(
 			'type' => 'check',
-			'label-message' => 'liquiflow-prefs-use-codemirror-phone', // a system message
+			'label-message' => 'liquiflow-prefs-use-codemirror-phone',
 			'section' => 'editing/liquiflow'
 		);
 		$preferences['liquiflow-prefs-use-codemirror-tablet'] = array(
 			'type' => 'check',
-			'label-message' => 'liquiflow-prefs-use-codemirror-tablet', // a system message
+			'label-message' => 'liquiflow-prefs-use-codemirror-tablet',
 			'section' => 'editing/liquiflow'
 		);
 		$preferences['liquiflow-prefs-use-codemirror'] = array(
 			'type' => 'check',
-			'label-message' => 'liquiflow-prefs-use-codemirror', // a system message
+			'label-message' => 'liquiflow-prefs-use-codemirror',
 			'section' => 'editing/liquiflow'
 		);
 		$preferences['liquiflow-prefs-use-codemirror-linewrap'] = array(
 			'type' => 'check',
-			'label-message' => 'liquiflow-prefs-use-codemirror-linewrap', // a system message
+			'label-message' => 'liquiflow-prefs-use-codemirror-linewrap',
 			'section' => 'editing/liquiflow'
 		);
+
+		// Setting to show old editor tabs
 		$preferences['liquiflow-prefs-show-buggy-editor-tabs'] = array(
 			'type' => 'check',
-			'label-message' => 'liquiflow-prefs-show-buggy-editor-tabs', // a system message
+			'label-message' => 'liquiflow-prefs-show-buggy-editor-tabs',
 			'section' => 'editing/liquiflow'
 		);
-		//Default return value for hooks
+
+		// Setting for right click menu
+		$preferences['liquiflow-prefs-show-rightclick-menu'] = array(
+			'type' => 'check',
+			'label-message' => 'liquiflow-prefs-show-rightclick-menu',
+			'section' => 'rendering/liquiflow'
+		);
 		return true;
 	}
 

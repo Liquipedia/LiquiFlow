@@ -112,7 +112,7 @@ class LiquiFlowHooks {
 	}
 
 	public static function onBeforePageDisplay( OutputPage &$out, Skin &$skin ) {
-		if ( $skin->skinname == 'liquiflow' && $skin->getUser()->getOption ( 'liquiflow-prefs-use-codemirror' ) == true ) {
+		if ( $skin->skinname == 'liquiflow' && $skin->getUser()->getOption( 'liquiflow-prefs-use-codemirror' ) == true ) {
 			$out->addModules( 'skins.liquiflow.codemirror' );
 		}
 	}

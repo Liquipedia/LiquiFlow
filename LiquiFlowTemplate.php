@@ -771,7 +771,7 @@ $footerLinks = $this->getFooterLinks();
 <?php $this->printTrail(); ?>
 
 <?php Hooks::run( 'LiquiFlowAdEndCode', array( __DIR__ ) );
-if( $this->getSkin()->getUser()->getOption ( 'liquiflow-prefs-show-rightclick-menu' ) ) { ?>
+if( $this->getSkin()->getUser()->getOption( 'liquiflow-prefs-show-rightclick-menu' ) ) { ?>
 	<menu type="context" id="wiki-menu">
 		<?php
 		foreach( $this->data['namespace_urls'] as $url ) {

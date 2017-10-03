@@ -219,7 +219,7 @@ class SkinLiquiFlow extends SkinTemplate {
 		if ( $user->isLoggedIn() ) {
 			$out->addModuleStyles( 'skins.liquiflow.loggedin' );
 		}
-		if ( !$user->getOption ( 'liquiflow-prefs-show-buggy-editor-tabs' ) ) {
+		if ( !$user->getOption( 'liquiflow-prefs-show-buggy-editor-tabs' ) ) {
 			$out->addModuleStyles( 'skins.liquiflow.removebuggyeditortabs' );
 		}
 
@@ -254,7 +254,7 @@ class SkinLiquiFlow extends SkinTemplate {
 			$bodyAttrs['class'] .= ' logged-out';
 		}
 		$bodyAttrs['class'] .= ' wiki-' . substr( $wgScriptPath, 1 );
-		if( $user->getOption ( 'liquiflow-prefs-show-rightclick-menu' ) ) {
+		if( $user->getOption( 'liquiflow-prefs-show-rightclick-menu' ) ) {
 			$bodyAttrs['contextmenu'] = 'wiki-menu';
 		}
 	}

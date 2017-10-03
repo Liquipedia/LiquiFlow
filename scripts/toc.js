@@ -69,7 +69,6 @@ function adjustSidebar() {
 
 		$window.on( 'load', function () {
 			$body.scrollspy( 'refresh' );
-			$( '#sidebar-toc-column' ).css( 'height', $( '#main-content-column' ).height() + 12 );
 		} );
 
 		$( window ).scroll( function() {

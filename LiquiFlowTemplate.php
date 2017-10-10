@@ -53,6 +53,7 @@ class LiquiFlowTemplate extends BaseTemplate {
 		't-contributions' => 'fa fa-fw fa-puzzle-piece',
 		't-userrights' => 'fa fa-fw fa-list-alt',
 		'feed-atom' => 'fa fa-fw fa-rss',
+		't-liquipediadblink' => 'fa fa-fw fa-database',
 
 		// Personal
 		'pt-user' => 'fa fa-fw fa-user',

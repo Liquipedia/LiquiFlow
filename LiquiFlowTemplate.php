@@ -667,7 +667,7 @@ $footerLinks = $this->getFooterLinks();
 							<li><a href="/rainbowsix/" target="_blank">Rainbow Six</a></li>
 						</ul>
 					</div>
-					<div class="col-md-2 col-sm-3 hidden-xs">
+					<div class="col-md-2 col-sm-3 col-xs-6">
 						<h4><?php echo $this->msg( 'about'); ?></h4>
 						<ul>
 							<?php foreach ( $footerLinks['places'] as $link ) : ?>
@@ -684,7 +684,7 @@ $footerLinks = $this->getFooterLinks();
 						</ul>
 					</div>
 
-					<div class="col-md-2 hidden-sm col-xs-6">
+					<div class="col-md-2 hidden-sm hidden-xs">
 						<h4><?php echo $this->msg( 'liquiflow-affiliated-sites' ); ?></h4>
 						<ul>
 							<li><a href="http://liquipedia.net" target="_blank">Liquipedia Portal</a></li>

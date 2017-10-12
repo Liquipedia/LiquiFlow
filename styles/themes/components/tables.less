@@ -192,7 +192,11 @@ table {
 
 .table-responsive {
 	overflow-x:auto;
-	min-height:0.01%; // Workaround for IE9 bug (see https://github.com/twbs/bootstrap/issues/14837)
+	// Workaround for IE9 bug (see https://github.com/twbs/bootstrap/issues/14837)
+	min-height:0.01%;
+	// Workaround for shitty chrome overflow bugginess
+	padding-bottom:3px;
+	margin-bottom:-4px;
 
 	@media screen and (max-width:@screen-xs-max) {
 		width:100%;

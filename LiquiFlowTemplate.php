@@ -564,6 +564,7 @@ class LiquiFlowTemplate extends BaseTemplate {
 			<div id="main-content-column" class="col-md-12">
 				<div id="main-content" class="mw-body">
 
+					<div class="wiki-backgroundcolor-light wiki-bordercolor-dark" style="padding:5px;margin-top:10px;margin-bottom:20px;text-align:center;border-left-width:5px;border-left-style:solid;font-size:120%;"><a target="_blank" href="">We are looking for a full-time MediaWiki Developer to turn our wiki dreams into reality.</a></div>
 					<?php if ( $this->data['sitenotice'] ) : ?>
 					<div id="siteNotice">
 						<?php $this->html( 'sitenotice' ) ?>

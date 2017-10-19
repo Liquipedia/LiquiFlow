@@ -29,7 +29,7 @@
 	"liquiflow-purge": "Erneuern",
 	"liquiflow-purge-tooltip": "Den Zwischenspeicher dieser Seite erneuern",
 	"liquiflow-recent-changes": "Kürzliche Änderungen",
-	"liquiflow-search": "Durchsuche",
+	"liquiflow-search": "Durchsuche $1 Wiki",
 	"liquiflow-search-placeholder": "Suche",
 	"liquiflow-send-an-email": "Sende eine Email",
 	"liquiflow-share": "Teilen",

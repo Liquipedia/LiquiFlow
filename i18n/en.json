@@ -29,7 +29,7 @@
 	"liquiflow-purge": "Purge",
 	"liquiflow-purge-tooltip": "Purge this page's cache",
 	"liquiflow-recent-changes": "Recent changes",
-	"liquiflow-search": "Search",
+	"liquiflow-search": "Search $1 Wiki",
 	"liquiflow-search-placeholder": "Search",
 	"liquiflow-send-an-email": "Send an Email",
 	"liquiflow-share": "Share",

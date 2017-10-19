@@ -499,7 +499,7 @@ class LiquiFlowTemplate extends BaseTemplate {
 <nav id="mobile-search-bar" class="navbar visible-xs noprint hidden">
 	<form action="<?php $this->text( 'wgScript' ) ?>" id="mobile-search-form" class="navbar-form navbar-left" role="search">
 		<div class="input-group">
-			<input id="searchInput-mobile" type="search" accesskey="f" title="Search <?php echo $this->msg( 'liquiflow-brand' ) . ' ' . $wgLiquiFlowWikiTitle; ?> Wiki [alt-shift-f]" placeholder="Search <?php echo $this->msg( 'liquiflow-brand' ); ?>" name="search" autocomplete="off" class="form-control">
+			<input id="searchInput-mobile" type="search" accesskey="<?php echo $this->msg( 'accesskey-search' ); ?>" title="<?php wfMessage( 'liquiflow-search' )->params( wfMessage( 'liquiflow-brand' )->text() . ' ' .  $wgLiquiFlowWikiTitle )->text(); ?> [alt-shift-<?php echo $this->msg( 'accesskey-search' ); ?>]" placeholder="Search <?php echo $this->msg( 'liquiflow-brand' ); ?>" name="search" autocomplete="off" class="form-control">
 			<div class="input-group-btn">
 				<button class="btn navbar-search-btn searchButton" type="submit" id="searchButton-mobile">
 					<i class="fa fa-arrow-right"></i>
@@ -1202,7 +1202,7 @@ if( $this->getSkin()->getUser()->getOption( 'liquiflow-prefs-show-rightclick-men
 						<form action="<?php echo $this->text( 'wgScript' ); ?>" id="searchform" class="navbar-form" role="search">
 							<div class="input-group">
 								<input id="searchInput" type="search" accesskey="<?php echo $this->msg( 'accesskey-search' ); ?>"
-									title="<?php echo $this->msg( 'liquiflow-search' ) . ' ' . $this->msg( 'liquiflow-brand' ) . ' ' .  $wgLiquiFlowWikiTitle;?> Wiki [alt-shift-<?php echo $this->msg( 'accesskey-search' ); ?>]" placeholder="<?php echo $this->msg( 'liquiflow-search-placeholder' ); ?>"
+									title="<?php echo wfMessage( 'liquiflow-search' )->params( wfMessage( 'liquiflow-brand' )->text() . ' ' .  $wgLiquiFlowWikiTitle )->text();?> [alt-shift-<?php echo $this->msg( 'accesskey-search' ); ?>]" placeholder="<?php echo $this->msg( 'liquiflow-search-placeholder' ); ?>"
 									name="search" autocomplete="off">
 								<div class="input-group-btn">
 									<button class="btn btn-default searchButton" type="submit" id="searchButton">

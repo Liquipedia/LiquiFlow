@@ -128,7 +128,7 @@ class LiquiFlowTemplate extends BaseTemplate {
 			? 'unwatch'
 			: 'watch';
 
-		if ( isset( $nav['actions'][$mode] ) ) {
+		if( isset( $nav['actions'][$mode] ) ) {
 			$nav['views'][$mode] = $nav['actions'][$mode];
 			$nav['views'][$mode]['class'] = rtrim( 'icon ' . $nav['views'][$mode]['class'], ' ' );
 			$nav['views'][$mode]['primary'] = true;
@@ -136,20 +136,20 @@ class LiquiFlowTemplate extends BaseTemplate {
 		}
 
 		$xmlID = '';
-		foreach ( $nav as $section => $links ) {
-			foreach ( $links as $key => $link ) {
-				if ( $section == 'views' && !( isset( $link['primary'] ) && $link['primary'] ) ) {
+		foreach( $nav as $section => $links ) {
+			foreach( $links as $key => $link ) {
+				if( $section == 'views' && !( isset( $link['primary'] ) && $link['primary'] ) ) {
 					$link['class'] = rtrim( 'collapsible ' . $link['class'], ' ' );
 				}
 
 				$xmlID = isset( $link['id'] ) ? $link['id'] : 'ca-' . $xmlID;
 				$nav[$section][$key]['attributes'] = ' id="' . Sanitizer::escapeId( $xmlID ) . '"';
-				if ( $link['class'] ) {
+				if( $link['class'] ) {
 					$nav[$section][$key]['attributes'] .=
 					' class="' . htmlspecialchars( $link['class'] ) . '"';
 					unset( $nav[$section][$key]['class'] );
 				}
-				if ( isset( $link['tooltiponly'] ) && $link['tooltiponly'] ) {
+				if( isset( $link['tooltiponly'] ) && $link['tooltiponly'] ) {
 					$nav[$section][$key]['key'] =
 					Linker::tooltip( $xmlID );
 				} else {
@@ -158,7 +158,7 @@ class LiquiFlowTemplate extends BaseTemplate {
 				}
 			}
 		}
-		unset($nav['views']['view']);
+		unset( $nav['views']['view'] );
 		//$nav['actions']['delete']['text'] = '<span class="fa fa-fw fa-trash-o" title="Page"></span> <span="hidden-sm">Delete</span>';
 		$this->data['namespace_urls'] = $nav['namespaces'];
 		$this->data['view_urls'] = $nav['views'];
@@ -166,7 +166,7 @@ class LiquiFlowTemplate extends BaseTemplate {
 		$this->data['variant_urls'] = $nav['variants'];
 
 		// Reverse horizontally rendered navigation elements
-		if ( $this->data['rtl'] ) {
+		if( $this->data['rtl'] ) {
 			$this->data['view_urls'] =
 			array_reverse( $this->data['view_urls'] );
 			$this->data['namespace_urls'] =
@@ -174,39 +174,34 @@ class LiquiFlowTemplate extends BaseTemplate {
 			$this->data['personal_urls'] =
 			array_reverse( $this->data['personal_urls'] );
 		}
-		// Output HTML Page
-		//$pos = strpos($this->data['headelement'], '<meta charset="UTF-8" />') + strlen("<meta charset=\"UTF-8\" />\n");
-		//$meta = "<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\" />\n" .
-		//		"<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n";
-		//$this->data['headelement'] = substr_replace($this->data['headelement'], $meta, $pos, 0);
 
 		$this->html( 'headelement' );
 
 		// extract the standard table of contents from the page html in order to add it to the left sidebar
-		preg_match("/<div id=\"toctitle\"><h2>(.*?)<\\/h2><\\/div>(.*?)<ul>(.*?)<\\/ul>(.*?)<\\/div>/si", $this->data['bodycontent'], $match);
-		$toc = "";
-		if(isset($match[0])) {
-			$toc = substr($match[0], 0, -6);
-			$toc = str_replace('<ul>', '<ul class="nav">', $toc);
+		preg_match( "/<div id=\"toctitle\"><h2>(.*?)<\\/h2><\\/div>(.*?)<ul>(.*?)<\\/ul>(.*?)<\\/div>/si", $this->data['bodycontent'], $match );
+		$toc = '';
+		if( isset( $match[0] ) ) {
+			$toc = substr( $match[0], 0, -6 );
+			$toc = str_replace( '<ul>', '<ul class="nav">', $toc );
 
 			// Adjust Data-Targets in menu so scrollspy works properly with special characters
-			preg_match_all('/\<a href=\"([^"]*?)\"\>/', $toc, $toc_matches);
-			foreach($toc_matches[1] as $match) {
-				$toc = str_replace('<a href="' . $match . '"', '<a data-target="' . preg_replace('/\./', '\\\\.', preg_replace('/\:/', '\\\\:', $match)) . '" href="' . $match . '"', $toc);
+			preg_match_all( '/\<a href=\"([^"]*?)\"\>/', $toc, $toc_matches );
+			foreach( $toc_matches[1] as $match ) {
+				$toc = str_replace( '<a href="' . $match . '"', '<a data-target="' . preg_replace( '/\./', '\\\\.', preg_replace( '/\:/', '\\\\:', $match ) ) . '" href="' . $match . '"', $toc );
 			}
 
-			preg_match("/<div class=\"toclimit-([1-6])\">/si", $this->data['bodycontent'], $toclimitmatch);
-			if (isset($toclimitmatch[0])) {
+			preg_match( "/<div class=\"toclimit-([1-6])\">/si", $this->data['bodycontent'], $toclimitmatch );
+			if( isset( $toclimitmatch[0] ) ) {
 				$toclimit = $toclimitmatch[1];
 			}
 
 			// Hide standard toc on big screens when the sidebar toc is shown
-			$this->data['bodycontent'] = str_replace('<div id="toc" class="toc">', '<div id="toc" class="toc hidden-lg hidden-xl">', $this->data['bodycontent']);
+			$this->data['bodycontent'] = str_replace( '<div id="toc" class="toc">', '<div id="toc" class="toc hidden-lg hidden-xl">', $this->data['bodycontent'] );
 		}
 		Hooks::run( 'LiquiFlowBodyFirst' );
 ?>
 
-<nav class="navbar navbar-default navbar-fixed-top noprint<?php global $wgLiquiFlowAlphawiki; echo (isset($wgLiquiFlowAlphawiki) && $wgLiquiFlowAlphawiki)?' alphawiki':''; ?>" id="slide-nav">
+<nav class="navbar navbar-default navbar-fixed-top noprint<?php global $wgLiquiFlowAlphawiki; echo( isset( $wgLiquiFlowAlphawiki ) && $wgLiquiFlowAlphawiki )?' alphawiki':''; ?>" id="slide-nav">
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-md-12 navbar-main-column">
@@ -220,11 +215,11 @@ class LiquiFlowTemplate extends BaseTemplate {
 						<?php echo Xml::expandAttributes( Linker::tooltipAndAccesskeyAttribs( 'p-logo' ) )?>>
 						<div style="display: inline-block;">
 							<div style="float:left;"><img id="brand-logo" src="<?php $this->text( 'logopath' ) ?>" alt="Logo"></div>
-							<div class="brand-name visible-xs logotype" style="white-space: nowrap; margin-left: 5px; float: left;"><?php global $wgLiquiFlowAlphawiki; echo (isset($wgLiquiFlowAlphawiki) && $wgLiquiFlowAlphawiki)?'<small>' . wfMessage( 'liquiflow-brand' )->text() . '</small> alpha':$this->msg( 'liquiflow-brand' ); ?></div>
+							<div class="brand-name visible-xs logotype" style="white-space: nowrap; margin-left: 5px; float: left;"><?php global $wgLiquiFlowAlphawiki; echo ( isset( $wgLiquiFlowAlphawiki ) && $wgLiquiFlowAlphawiki ) ? '<small>' . wfMessage( 'liquiflow-brand' )->text() . '</small> alpha' : $this->msg( 'liquiflow-brand' ); ?></div>
 						</div>
 					</a>
 
-					<?php if (strlen($toc) > 0) { ?>
+					<?php if( strlen( $toc ) > 0 ) { ?>
 					<button class="navbar-toggle pull-right" id="toc-toggler">
 						<span class="sr-only">Toggle navigation</span>
 						<span style="padding-top:4px;" class="fa fa-list fa-2x"></span>
@@ -235,11 +230,11 @@ class LiquiFlowTemplate extends BaseTemplate {
 					</button>
 
 				</div><!-- /.navbar-header -->
-				<?php if (strlen($toc) > 0) { ?>
+				<?php if( strlen( $toc ) > 0 ) { ?>
 					<div id="slide-toc" class="visible-xs">
-						<div id="scroll-wrapper-toc" class="<?php if(isset($toclimit)) {echo 'toclimit-'.$toclimit;} ?>">
+						<div id="scroll-wrapper-toc" class="<?php if( isset( $toclimit ) ) {echo 'toclimit-' . $toclimit;} ?>">
 							<div class="nav navbar-nav">
-								<?php echo str_replace('id="toctitle"', 'id="toctitle-mobile"', $toc); ?>
+								<?php echo str_replace( 'id="toctitle"', 'id="toctitle-mobile"', $toc ); ?>
 							</div>
 						</div>
 					</div>
@@ -249,19 +244,19 @@ class LiquiFlowTemplate extends BaseTemplate {
 					<div id="scroll-wrapper-menu">
 						<ul class="nav navbar-nav">
 						<?php
-						$currentWikiTitle = key($this->data['sidebar']);
-						$wikiNavigation = array_shift($this->data['sidebar']);
+						$currentWikiTitle = key( $this->data['sidebar'] );
+						$wikiNavigation = array_shift( $this->data['sidebar'] );
 						?>
 							<li class="dropdown dropdown-brand hidden-xs">
 								<a class="dropdown-toggle brand-title" data-toggle="dropdown" data-hover="dropdown" href="#">
-									<span id="brand-desktop" class="brand-name logotype" style="font-size: 18px;"><?php global $wgLiquiFlowAlphawiki; echo (isset($wgLiquiFlowAlphawiki) && $wgLiquiFlowAlphawiki)?'<small>' . wfMessage( 'liquiflow-brand' )->text() . '</small> alpha':$this->msg( 'liquiflow-brand' ); ?></span> <span class="caret"></span> <br>
+									<span id="brand-desktop" class="brand-name logotype" style="font-size:18px;"><?php global $wgLiquiFlowAlphawiki; echo ( isset( $wgLiquiFlowAlphawiki ) && $wgLiquiFlowAlphawiki )?'<small>' . wfMessage( 'liquiflow-brand' )->text() . '</small> alpha':$this->msg( 'liquiflow-brand' ); ?></span> <span class="caret"></span> <br>
 									<span class="hidden-xs brand-subtitle">
 										<?php echo $currentWikiTitle; ?>
 									</span>
 								</a>
 								<ul class="dropdown-menu">
 								<?php
-									foreach ($wikiNavigation as $wikiNavigationEntry) {
+									foreach( $wikiNavigation as $wikiNavigationEntry ) {
 										echo '<li><a href="'.$wikiNavigationEntry['href'].'">'.$wikiNavigationEntry['text'].'</a></li>';
 									}
 								?>
@@ -270,13 +265,13 @@ class LiquiFlowTemplate extends BaseTemplate {
 
 						<?php
 
-						foreach ($this->data['sidebar'] as $navHeader => $navEntryArray) {
+						foreach( $this->data['sidebar'] as $navHeader => $navEntryArray ) {
 
-							if ($navHeader == 'TRENDING') {
+							if( $navHeader == 'TRENDING' ) {
 								?>
 								<li class="dropdown icon-tablet">
 									<a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="#">
-										<div class="visible-xl visible-lg visible-md visible-xs"><span class="fa fa-fw fa-line-chart"></span> Trending <span class="caret"></span></div>
+										<div class="visible-xl visible-lg visible-md visible-xs"><span class="fa fa-fw fa-line-chart"></span> <?php echo wfMessage( 'liquiflow-menu-trending' )->text(); ?> <span class="caret"></span></div>
 										<div class="visible-sm">
 											<span class="fa fa-fw fa-line-chart"></span> <span class="caret"></span>
 										</div>
@@ -284,11 +279,11 @@ class LiquiFlowTemplate extends BaseTemplate {
 									<ul id="trending-pages-menu" class="dropdown-menu"></ul>
 								</li>
 								<?php
-							} elseif ($navHeader == 'TOURNAMENTS') {
+							} elseif( $navHeader == 'TOURNAMENTS' ) {
 								?>
 								<li class="dropdown hidden-xs icon-tablet">
 									<a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="#">
-										<div class="visible-xl visible-lg visible-md visible-xs"><span class="fa fa-fw fa-trophy"></span> Tournaments <span class="caret"></span></div>
+										<div class="visible-xl visible-lg visible-md visible-xs"><span class="fa fa-fw fa-trophy"></span> <?php echo wfMessage( 'liquiflow-menu-tournaments' )->text(); ?> <span class="caret"></span></div>
 										<div class="visible-sm">
 											<span class="fa fa-fw fa-trophy"></span> <span class="caret"></span>
 										</div>
@@ -296,16 +291,16 @@ class LiquiFlowTemplate extends BaseTemplate {
 									<div class="dropdown-menu multi-column columns-3">
 										<div class="row">
 										<?php
-										if (is_array($navEntryArray)) {
-											foreach ($navEntryArray as $subNavHeader => $navSubEntryArray) {
+										if( is_array( $navEntryArray ) ) {
+											foreach( $navEntryArray as $subNavHeader => $navSubEntryArray ) {
 												?>
 												<div class="col-sm-4">
 													<ul class="multi-column-dropdown">
 													<li class="dropdown-header"><?php echo $subNavHeader; ?></li>
 												<?php
-												if (is_array($navSubEntryArray)) {
-													foreach ($navSubEntryArray as $navEntry) {
-														echo '<li><a href="'.$navEntry['href'].'">'.$navEntry['text'].'</a></li>';
+												if( is_array( $navSubEntryArray ) ) {
+													foreach( $navSubEntryArray as $navEntry ) {
+														echo '<li><a href="' . $navEntry['href'] . '">' . $navEntry['text'] . '</a></li>';
 													}
 												}
 												?>
@@ -317,24 +312,24 @@ class LiquiFlowTemplate extends BaseTemplate {
 										?>
 										</div>
 										<div class="row">
-											<div style="float:right; margin-right:23px"><a href="<?php echo Title::newFromText('Tournaments', NS_PROJECT)->getEditURL(); ?>">[edit]</a></div>
+											<div style="float:right;margin-right:23px"><a href="<?php echo Title::newFromText( 'Tournaments', NS_PROJECT )->getEditURL(); ?>">[<?php echo wfMessage( 'liquiflow-menu-edit' )->text(); ?>]</a></div>
 										</div>
 									</div>
 								</li>
 								<li class="visible-xs mobile-divider"></li>
 								<?php
-								if (is_array($navEntryArray)) {
-									foreach ($navEntryArray as $subNavHeader => $navSubEntryArray) {
+								if( is_array( $navEntryArray ) ) {
+									foreach( $navEntryArray as $subNavHeader => $navSubEntryArray ) {
 										?>
 								<li class="dropdown visible-xs">
-									<a class="dropdown-toggle"	data-toggle="dropdown" href="#">
+									<a class="dropdown-toggle" data-toggle="dropdown" href="#">
 										<span class="fa fa-fw fa-trophy"></span> <?php echo $subNavHeader; ?> <span class="caret"></span>
 									</a>
 									<ul class="dropdown-menu">
 									<?php
-										if (is_array($navSubEntryArray)) {
-											foreach ($navSubEntryArray as $navEntry) {
-												echo '<li><a href="'.$navEntry['href'].'">'.$navEntry['text'].'</a></li>';
+										if( is_array( $navSubEntryArray ) ) {
+											foreach( $navSubEntryArray as $navEntry ) {
+												echo '<li><a href="' . $navEntry['href'] . '">' . $navEntry['text'] . '</a></li>';
 											}
 										}
 										?>
@@ -344,7 +339,7 @@ class LiquiFlowTemplate extends BaseTemplate {
 									<?php
 									}
 								}
-							} elseif ($navHeader == 'Contribute') {
+							} elseif( $navHeader == wfMessage( 'liquiflow-menu-contribute' )->text() ) {
 								?>
 								<li class="visible-xs mobile-divider"></li>
 								<li class="dropdown icon-tablet">
@@ -356,8 +351,8 @@ class LiquiFlowTemplate extends BaseTemplate {
 									</a>
 									<ul class="dropdown-menu">
 									<?php
-									foreach ($navEntryArray as $navEntry) {
-										echo '<li><a href="'.$navEntry['href'].'">'.$navEntry['text'].'</a></li>';
+									foreach( $navEntryArray as $navEntry ) {
+										echo '<li><a href="' . $navEntry['href'] . '">' . $navEntry['text'] . '</a></li>';
 									}
 									?>
 									</ul>
@@ -372,8 +367,8 @@ class LiquiFlowTemplate extends BaseTemplate {
 									</a>
 									<ul class="dropdown-menu">
 									<?php
-									foreach ($navEntryArray as $navEntry) {
-										echo '<li><a href="'.$navEntry['href'].'">'.$navEntry['text'].'</a></li>';
+									foreach( $navEntryArray as $navEntry ) {
+										echo '<li><a href="' . $navEntry['href'] . '">' . $navEntry['text'] . '</a></li>';
 									}
 									?>
 									</ul>
@@ -390,7 +385,7 @@ class LiquiFlowTemplate extends BaseTemplate {
 									<span class="fa fa-fw fa-gavel"></span> Actions <span class="caret"></span>
 								</a>
 								<ul class="dropdown-menu">
-								<?php $this->renderNavigation(array('NAMESPACES', 'VIEWS', 'ACTIONS'), 'mobile') ?>
+								<?php $this->renderNavigation( array( 'NAMESPACES', 'VIEWS', 'ACTIONS' ), 'mobile' ) ?>
 								</ul>
 							</li>
 							<li class="dropdown visible-xs">
@@ -437,7 +432,7 @@ class LiquiFlowTemplate extends BaseTemplate {
 										<ul class="dropdown-menu">
 											<?php
 											$personalTools["userpage"]["links"][0]["text"] = 'Userpage';
-											foreach ( $personalTools as $key => $item ) {
+											foreach( $personalTools as $key => $item ) {
 												$item['id'] = $item['id'] . '-mobile';
 												unset( $item['links'][0]['single-id'] );
 												echo $this->makeListItem( $key, $item );
@@ -456,15 +451,15 @@ class LiquiFlowTemplate extends BaseTemplate {
 								</a>
 								<ul class="dropdown-menu">
 								<?php
-									foreach ($wikiNavigation as $wikiNavigationEntry) {
-										echo '<li><a href="'.$wikiNavigationEntry['href'].'">'.$wikiNavigationEntry['text'].'</a></li>';
+									foreach( $wikiNavigation as $wikiNavigationEntry ) {
+										echo '<li><a href="' . $wikiNavigationEntry['href'] . '">' . $wikiNavigationEntry['text'] . '</a></li>';
 									}
 								?>
 								</ul>
 							</li>
 							<li class="dropdown visible-xs">
 								<a href="#top">
-									<span class="fa fa-fw fa-arrow-up"></span> Back to top
+									<span class="fa fa-fw fa-arrow-up"></span> <?php echo wfMessage( 'liquiflow-back-to-top' )->text(); ?>
 								</a>
 							</li>
 
@@ -472,13 +467,13 @@ class LiquiFlowTemplate extends BaseTemplate {
 
 						<ul class="nav navbar-nav navbar-right tablet-personal">
 							<?php
-							if ( !$this->getSkin()->getUser()->isLoggedIn() ) {
+							if( !$this->getSkin()->getUser()->isLoggedIn() ) {
 								$personalTools = $this->getPersonalTools();
-								$personalTools['createaccount']['links'][0]['text'] = "";
-								$personalTools['createaccount']['class'] = "hidden-sm hidden-xs";
+								$personalTools['createaccount']['links'][0]['text'] = '';
+								$personalTools['createaccount']['class'] = 'hidden-sm hidden-xs';
 
-								$personalTools['login']['links'][0]['text'] = "";
-								$personalTools['login']['class'] = "icon-tablet hidden-xs";
+								$personalTools['login']['links'][0]['text'] = '';
+								$personalTools['login']['class'] = 'icon-tablet hidden-xs';
 
 								echo $this->makeListItem( 'createaccount', $personalTools['createaccount'] );
 								echo $this->makeListItem( 'login', $personalTools['login'] );
@@ -515,7 +510,7 @@ class LiquiFlowTemplate extends BaseTemplate {
 			<div id="wiki-nav-main-column" class="col-md-12">
 				<div class="wiki-tool-nav">
 					<ul class="nav navbar-nav navbar-nav-2">
-						<?php $this->renderNavigation(array('NAMESPACES', 'VIEWS', 'ACTIONS')) ?>
+						<?php $this->renderNavigation( array( 'NAMESPACES', 'VIEWS', 'ACTIONS' ) ) ?>
 					</ul>
 
 					<ul class="nav navbar-nav navbar-right navbar-nav-2">
@@ -531,7 +526,7 @@ class LiquiFlowTemplate extends BaseTemplate {
 							</a>
 							<?php $this->renderNavigation( 'TOOLBOX' ); ?>
 						</li>
-						<?php if ( in_array( 'sysop', $this->getSkin()->getUser()->getEffectiveGroups()) ) : ?>
+						<?php if( in_array( 'sysop', $this->getSkin()->getUser()->getEffectiveGroups() ) ) : ?>
 						<li class="dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="#">
 								<span class="fa fa-fw fa-gavel"></span> <span class="caret"></span>
@@ -550,7 +545,7 @@ class LiquiFlowTemplate extends BaseTemplate {
 <div id="wrap">
 
 	<div id="sidebar-toc-column" class="hidden-xs hidden-sm hidden-md">
-		<div id="sidebar-toc" class="sidebar-toc bs-docs-sidebar hidden-print hidden-xs hidden-sm affix-top <?php if(isset($toclimit)) {echo 'toclimit-'.$toclimit;} ?>" style="" role="complementary">
+		<div id="sidebar-toc" class="sidebar-toc bs-docs-sidebar hidden-print hidden-xs hidden-sm affix-top <?php if( isset( $toclimit ) ) {echo 'toclimit-' . $toclimit;} ?>" style="" role="complementary">
 			<?php if( strlen( $toc ) > 0 ) {
 				echo str_replace( 'id="toctitle"', 'id="toctitle-sidebar"', $toc );
 			}
@@ -566,7 +561,7 @@ class LiquiFlowTemplate extends BaseTemplate {
 				<div id="main-content" class="mw-body">
 
 					<div class="wiki-backgroundcolor-light wiki-bordercolor-dark" style="padding:5px;margin-top:10px;margin-bottom:20px;text-align:center;border-left-width:5px;border-left-style:solid;font-size:120%;"><a target="_blank" href="http://www.teamliquid.net/forum/general/527528-liquipedia-is-hiring">We are looking for a full-time MediaWiki Developer to turn our wiki dreams into reality.</a></div>
-					<?php if ( $this->data['sitenotice'] ) : ?>
+					<?php if( $this->data['sitenotice'] ) : ?>
 					<div id="siteNotice">
 						<?php $this->html( 'sitenotice' ) ?>
 					</div>
@@ -581,7 +576,7 @@ class LiquiFlowTemplate extends BaseTemplate {
 
 					<?php $this->html( 'prebodyhtml' ) ?>
 					<div id="bodyContent" class="mw-body-content">
-						<?php if ( $this->data['isarticle'] ) : ?>
+						<?php if( $this->data['isarticle'] ) : ?>
 							<div id="siteSub">
 								<?php $this->msg( 'tagline' ) ?>
 							</div>
@@ -591,13 +586,13 @@ class LiquiFlowTemplate extends BaseTemplate {
 							<?php $this->html( 'subtitle' ) ?>
 						</div>
 
-						<?php if ( $this->data['undelete'] ) : ?>
+						<?php if( $this->data['undelete'] ) : ?>
 						<div id="contentSub2">
 								<?php $this->html( 'undelete' ) ?>
 							</div>
 						<?php endif; ?>
 
-						<?php if ( $this->data['newtalk'] ) : ?>
+						<?php if( $this->data['newtalk'] ) : ?>
 							<div class="usermessage">
 								<?php $this->html( 'newtalk' ) ?>
 							</div>
@@ -605,16 +600,16 @@ class LiquiFlowTemplate extends BaseTemplate {
 
 						<?php $this->html( 'bodycontent' ) ?>
 
-						<?php if ( $this->data['printfooter'] ) : ?>
+						<?php if( $this->data['printfooter'] ) : ?>
 							<div class="printfooter">
 								<?php $this->html( 'printfooter' ); ?>
 							</div>
 						<?php endif; ?>
 						<?php
-						if ( $this->data['catlinks'] ) {
+						if( $this->data['catlinks'] ) {
 							$this->html( 'catlinks' );
 						}
-						if ( $this->data['dataAfterContent'] ) {
+						if( $this->data['dataAfterContent'] ) {
 							$this->html( 'dataAfterContent' );
 						}
 						?>
@@ -671,9 +666,9 @@ $footerLinks = $this->getFooterLinks();
 						</ul>
 					</div>
 					<div class="col-md-2 col-sm-3 col-xs-6">
-						<h4><?php echo $this->msg( 'about'); ?></h4>
+						<h4><?php echo $this->msg( 'about' ); ?></h4>
 						<ul>
-							<?php foreach ( $footerLinks['places'] as $link ) : ?>
+							<?php foreach( $footerLinks['places'] as $link ) : ?>
 								<li id="footer-places-<?php echo $link; ?>">
 									<?php echo $this->html( $link );?>
 								</li>
@@ -681,9 +676,9 @@ $footerLinks = $this->getFooterLinks();
 						</ul>
 						<h4><?php echo $this->msg( 'liquiflow-contact-us' ); ?></h4>
 						<ul>
-							<li><a href="mailto:liquipedia@teamliquid.net"><?php echo $this->msg( 'liquiflow-send-an-email'); ?></a></li>
-							<li><a href="http://www.teamliquid.net/forum/website-feedback/94785-liquipedia-feedback-thread" target="_blank"><?php echo $this->msg( 'liquiflow-post-feedback'); ?></a></li>
-							<li><a href="http://liquipedia.net/discord" target="_blank"><?php echo $this->msg( 'liquiflow-chat-with-us'); ?></a></li>
+							<li><a href="mailto:liquipedia@teamliquid.net"><?php echo $this->msg( 'liquiflow-send-an-email' ); ?></a></li>
+							<li><a href="http://www.teamliquid.net/forum/website-feedback/94785-liquipedia-feedback-thread" target="_blank"><?php echo $this->msg( 'liquiflow-post-feedback' ); ?></a></li>
+							<li><a href="http://liquipedia.net/discord" target="_blank"><?php echo $this->msg( 'liquiflow-chat-with-us' ); ?></a></li>
 						</ul>
 					</div>
 
@@ -735,8 +730,8 @@ $footerLinks = $this->getFooterLinks();
 		<div style="text-align:center;padding-bottom:1em;" class="col-md-12 col-xs-12">
 			<ul id="f-list">
 				<?php
-				if (isset($footerLinks['info']) && is_array($footerLinks['info'])) {
-					foreach ( $footerLinks['info'] as $link ) { ?>
+				if( isset( $footerLinks['info'] ) && is_array( $footerLinks['info'] ) ) {
+					foreach( $footerLinks['info'] as $link ) { ?>
 						<li id="footer-info-<?php echo $link; ?>">
 							<?php echo $this->html( $link ); ?>
 						</li>
@@ -746,29 +741,6 @@ $footerLinks = $this->getFooterLinks();
 				?>
 			</ul><!-- #/f-list -->
 		</div><!-- ./col-lg-8 -->
-
-	<?php
-	/**
-		* <div style="margin-bottom:20px; text-align:center;" class="col-lg-offset-2 col-lg-8 col-md-12">
-		* <?php
-		* $footericons = $this->getFooterIcons( "icononly" );
-			* if ( count( $footericons ) > 0 ) :
-			* ?>
-				* <ul id="footer-icons" class="noprint">
-				* <?php foreach ( $footericons as $blockName => $footerIcons ) : ?>
-					* <li id="footer-<?php echo htmlspecialchars( $blockName ); ?>ico">
-					* <?php
-						* foreach ( $footerIcons as $icon ) {
-							* echo $this->getSkin()->makeFooterIcon( $icon );
-						* }
-					* ?>
-					* </li>
-					* <?php endforeach; ?>
-				* </ul>
-			* <?php endif; ?>
-		* </div>
-		*/
-	?>
 	</div><!-- /.container-fluid -->
 </div><!-- /.footer -->
 
@@ -800,8 +772,7 @@ if( $this->getSkin()->getUser()->getOption( 'liquiflow-prefs-show-rightclick-men
 </body>
 </html>
 
-
-	<?php
+<?php
 	}
 
 	/**
@@ -811,35 +782,35 @@ if( $this->getSkin()->getUser()->getOption( 'liquiflow-prefs-show-rightclick-men
 	 */
 	protected function renderPortals( $portals ) {
 		// Force the rendering of the following portals
-		if ( !isset( $portals['SEARCH'] ) ) {
+		if( !isset( $portals['SEARCH'] ) ) {
 			$portals['SEARCH'] = true;
 		}
-		if ( !isset( $portals['TOOLBOX'] ) ) {
+		if( !isset( $portals['TOOLBOX'] ) ) {
 			$portals['TOOLBOX'] = true;
 		}
-		if ( !isset( $portals['LANGUAGES'] ) ) {
+		if( !isset( $portals['LANGUAGES'] ) ) {
 			$portals['LANGUAGES'] = true;
 		}
 		// Render portals
-		foreach ( $portals as $name => $content ) {
-			if ( $content === false ) {
+		foreach( $portals as $name => $content ) {
+			if( $content === false ) {
 				continue;
 			}
 
-			switch ( $name ) {
+			switch( $name ) {
 				case 'SEARCH':
 					break;
 				case 'TOOLBOX':
 					$this->renderPortal( 'tb', $this->getToolbox(), 'toolbox', 'SkinTemplateToolboxEnd' );
 					break;
 				case 'LANGUAGES':
-					if ( $this->data['language_urls'] !== false ) {
+					if( $this->data['language_urls'] !== false ) {
 						$this->renderPortal( 'lang', $this->data['language_urls'], 'otherlanguages' );
 					}
 					break;
 				default:
-					echo "renderPortal(". $name . "," . $content . ")";
-					print_r($content);
+					echo "renderPortal( ". $name . "," . $content . " )";
+					print_r( $content );
 					$this->renderPortal( $name, $content );
 					break;
 			}
@@ -853,7 +824,7 @@ if( $this->getSkin()->getUser()->getOption( 'liquiflow-prefs-show-rightclick-men
 	 * @param null|string|array $hook
 	 */
 	protected function renderPortal( $name, $content, $msg = null, $hook = null ) {
-		if ( $msg === null ) {
+		if( $msg === null ) {
 			$msg = $name;
 		}
 		$msgObj = wfMessage( $msg );
@@ -866,17 +837,17 @@ if( $this->getSkin()->getUser()->getOption( 'liquiflow-prefs-show-rightclick-men
 
 			<div class="body">
 				<?php
-				if ( is_array( $content ) ) {
+				if( is_array( $content ) ) {
 					?>
 					<ul>
 						<?php
-						foreach ( $content as $key => $val ) {
+						foreach( $content as $key => $val ) {
 							?>
 							<?php echo $this->makeListItem( $key, $val ); ?>
 
 						<?php
 						}
-						if ( $hook !== null ) {
+						if( $hook !== null ) {
 							wfRunHooks( $hook, array( &$this, true ) );
 						}
 						?>
@@ -902,22 +873,22 @@ if( $this->getSkin()->getUser()->getOption( 'liquiflow-prefs-show-rightclick-men
 	protected function renderNavigation( $elements, $view = 'desktop' ) {
 		// If only one element was given, wrap it in an array, allowing more
 		// flexible arguments
-		if ( !is_array( $elements ) ) {
+		if( !is_array( $elements ) ) {
 			$elements = array( $elements );
 			// If there's a series of elements, reverse them when in RTL mode
-		} elseif ( $this->data['rtl'] ) {
+		} elseif( $this->data['rtl'] ) {
 			$elements = array_reverse( $elements );
 		}
 		// Render elements
-		foreach ( $elements as $name => $element ) {
-			switch ( $element ) {
+		foreach( $elements as $name => $element ) {
+			switch( $element ) {
 
 				case 'NAMESPACES':
 					?>
-					<?php foreach ( $this->data['namespace_urls'] as $key => $link ) : ?>
-						<?php if($view == 'mobile') {
-							$link['attributes'] = preg_replace('/id="([^\"]*)"/', 'id="$1-mobile"', $link['attributes']);
-							$link['key'] = preg_replace('/ accesskey="[^\"]*"/', '', $link['key']);
+					<?php foreach( $this->data['namespace_urls'] as $key => $link ) : ?>
+						<?php if( $view == 'mobile' ) {
+							$link['attributes'] = preg_replace( '/id="([^\"]*)"/', 'id="$1-mobile"', $link['attributes'] );
+							$link['key'] = preg_replace( '/ accesskey="[^\"]*"/', '', $link['key'] );
 						}
 						$namespace = $this->getSkin()->getTitle()->getNamespace();
 						$namespace -= $namespace % 2;
@@ -926,11 +897,11 @@ if( $this->getSkin()->getUser()->getOption( 'liquiflow-prefs-show-rightclick-men
 							<a href="<?php echo htmlspecialchars( $link['href'] );?>"
 							<?php echo $link['key'] ?>>
 							<?php
-							if (isset($this->icons[$link['context']]) && $link['context'] == 'subject' && isset($this->icons[$link['context']]['subject-' . $namespace]) && $this->icons[$link['context']]['subject-' . $namespace] !== false) {
+							if( isset( $this->icons[$link['context']] ) && $link['context'] == 'subject' && isset( $this->icons[$link['context']]['subject-' . $namespace] ) && $this->icons[$link['context']]['subject-' . $namespace] !== false ) {
 								echo '<span class="' . $this->icons['subject']['subject-' . $namespace] . '"></span> <span class="hidden-sm">' . htmlspecialchars( $link['text'] ) . '</span>';
-							} elseif ($link['context'] == 'subject') {
+							} elseif( $link['context'] == 'subject' ) {
 								echo '<span class="' . $this->icons['subjectdefault'] . '"></span> <span class="hidden-sm">' . htmlspecialchars( $link['text'] ) . '</span>';
-							} elseif (isset($this->icons[$link['context']]) && $this->icons[$link['context']] !== false) {
+							} elseif( isset( $this->icons[$link['context']] ) && $this->icons[$link['context']] !== false ) {
 								echo '<span class="' . $this->icons[$link['context']] . '"></span> <span class="hidden-sm">' . htmlspecialchars( $link['text'] ) . '</span>';
 							} else {
 								echo htmlspecialchars( $link['text'] );
@@ -946,32 +917,32 @@ if( $this->getSkin()->getUser()->getOption( 'liquiflow-prefs-show-rightclick-men
 					break;
 				case 'VIEWS':
 					?>
-					<?php foreach ( $this->data['view_urls'] as $key => $link ) : ?>
-						<?php if($view == 'mobile') {
-							$link['attributes'] = preg_replace('/id="([^\"]*)"/', 'id="$1-mobile"', $link['attributes']);
-							$link['key'] = preg_replace('/ accesskey="[^\"]*"/', '', $link['key']);
+					<?php foreach( $this->data['view_urls'] as $key => $link ) : ?>
+						<?php if( $view == 'mobile' ) {
+							$link['attributes'] = preg_replace( '/id="([^\"]*)"/', 'id="$1-mobile"', $link['attributes'] );
+							$link['key'] = preg_replace( '/ accesskey="[^\"]*"/', '', $link['key'] );
 						} ?>
 						<li<?php echo $link['attributes']; ?>>
 							<a href="<?php echo htmlspecialchars( $link['href'] );?>"
 							<?php echo $link['key'] ?>>
 							<?php
-							if (isset($this->icons[$key]) && $this->icons[$key] !== false) {
-								if (in_array( 'sysop', $this->getSkin()->getUser()->getEffectiveGroups())
-									&& in_array($key, ['watch', 'unwatch', 'current', 'addsection'])) {
+							if( isset( $this->icons[$key] ) && $this->icons[$key] !== false ) {
+								if( in_array( 'sysop', $this->getSkin()->getUser()->getEffectiveGroups() )
+									&& in_array( $key, ['watch', 'unwatch', 'current', 'addsection'] ) ) {
 									echo '<span class="visible-xs"><span class="' . $this->icons[$key] . '"></span> ' .
 										htmlspecialchars( $link['text'] ) . '</span>';
 									echo '<span class="hidden-xs"><span class="' . $this->icons[$key] . '"></span></span>';
-								} elseif (in_array( 'reviewer', $this->getSkin()->getUser()->getEffectiveGroups())
-									&& in_array($key, ['watch', 'unwatch', 'current'])) {
+								} elseif( in_array( 'reviewer', $this->getSkin()->getUser()->getEffectiveGroups() )
+									&& in_array( $key, ['watch', 'unwatch', 'current'] ) ) {
 									echo '<span class="visible-xs"><span class="' . $this->icons[$key] . '"></span> ' .
 										htmlspecialchars( $link['text'] ) . '</span>';
 									echo '<span class="hidden-xs"><span class="' . $this->icons[$key] . '"></span></span>';
-								} elseif (in_array( 'editor', $this->getSkin()->getUser()->getEffectiveGroups())
-									&& in_array($key, ['current'])) {
+								} elseif( in_array( 'editor', $this->getSkin()->getUser()->getEffectiveGroups() )
+									&& in_array( $key, ['current'] ) ) {
 									echo '<span class="visible-xs"><span class="' . $this->icons[$key] . '"></span> ' .
 										htmlspecialchars( $link['text'] ) . '</span>';
 									echo '<span class="hidden-xs"><span class="' . $this->icons[$key] . '"></span></span>';
-								} elseif (in_array($key, ['current'])) {
+								} elseif( in_array( $key, ['current'] ) ) {
 									echo '<span class="visible-xs"><span class="' . $this->icons[$key] . '"></span> ' .
 										htmlspecialchars( $link['text'] ) . '</span>';
 									echo '<span class="hidden-xs"><span class="' . $this->icons[$key] . '"></span></span>';
@@ -993,7 +964,7 @@ if( $this->getSkin()->getUser()->getOption( 'liquiflow-prefs-show-rightclick-men
 					break;
 				case 'ACTIONS':
 					global $wgScriptPath;
-					if (isset($this->data['action_urls']['protect'])) {$this->data['action_urls']['default'] = Array(
+					if( isset( $this->data['action_urls']['protect'] ) ) {$this->data['action_urls']['default'] = array(
 						'class' => '',
 						'text' => $this->getMsg( 'liquiflow-stability' ),
 						'href' => SpecialPage::getTitleFor( 'Stabilization' )->getLocalUrl( 'page=' . $this->getSkin()->getTitle() ),
@@ -1001,7 +972,7 @@ if( $this->getSkin()->getUser()->getOption( 'liquiflow-prefs-show-rightclick-men
 						'attributes' => ' id="ca-default"',
 						'key' => ' title="'. $this->getMsg( 'liquiflow-stability-tooltip' ) .'"'
 					);}
-					if (isset($this->data['action_urls']['purge'])) {$this->data['action_urls']['purge']  = Array(
+					if( isset( $this->data['action_urls']['purge'] ) ) {$this->data['action_urls']['purge']  = array(
 						'class' => '',
 						'text' => $this->getMsg( 'liquiflow-purge' ),
 						'href' => $wgScriptPath. '/index.php?title=' . $this->getSkin()->getTitle() . '&action=purge',
@@ -1009,32 +980,32 @@ if( $this->getSkin()->getUser()->getOption( 'liquiflow-prefs-show-rightclick-men
 						'attributes' => ' id="ca-purge"',
 						'key' => ' title="'. $this->getMsg( 'liquiflow-purge-tooltip' ) .'"'
 					);}
-					foreach ( $this->data['action_urls'] as $key => $link ) : ?>
-						<?php if($view == 'mobile') {
-							$link['attributes'] = preg_replace('/id="([^\"]*)"/', 'id="$1-mobile"', $link['attributes']);
-							$link['key'] = preg_replace('/ accesskey="[^\"]*"/', '', $link['key']);
+					foreach( $this->data['action_urls'] as $key => $link ) : ?>
+						<?php if( $view == 'mobile' ) {
+							$link['attributes'] = preg_replace( '/id="([^\"]*)"/', 'id="$1-mobile"', $link['attributes'] );
+							$link['key'] = preg_replace( '/ accesskey="[^\"]*"/', '', $link['key'] );
 						} ?>
 						<li<?php echo $link['attributes']; ?>>
 							<a href="<?php echo htmlspecialchars( $link['href'] );?>"
 							<?php echo $link['key'] ?>>
 							<?php
-							if (isset($this->icons[$key]) && $this->icons[$key] !== false) {
-								if (in_array( 'sysop', $this->getSkin()->getUser()->getEffectiveGroups())
-									&& in_array($key, ['purge', 'delete', 'undelete', 'protect', 'unprotect', 'default', 'move'])) {
+							if( isset( $this->icons[$key] ) && $this->icons[$key] !== false ) {
+								if( in_array( 'sysop', $this->getSkin()->getUser()->getEffectiveGroups() )
+									&& in_array( $key, ['purge', 'delete', 'undelete', 'protect', 'unprotect', 'default', 'move'] ) ) {
 									echo '<span class="visible-xs"><span class="' . $this->icons[$key] . '"></span> ' .
 									htmlspecialchars( $link['text'] ) . '</span>';
 									echo '<span class="hidden-xs"><span class="' . $this->icons[$key] . '"></span></span>';
-								} elseif (in_array( 'reviewer', $this->getSkin()->getUser()->getEffectiveGroups())
-									&& in_array($key, ['purge', 'move'])) {
+								} elseif( in_array( 'reviewer', $this->getSkin()->getUser()->getEffectiveGroups() )
+									&& in_array( $key, ['purge', 'move'] ) ) {
 									echo '<span class="visible-xs"><span class="' . $this->icons[$key] . '"></span> ' .
 									htmlspecialchars( $link['text'] ) . '</span>';
 									echo '<span class="hidden-xs"><span class="' . $this->icons[$key] . '"></span></span>';
-								} elseif (in_array( 'editor', $this->getSkin()->getUser()->getEffectiveGroups())
-									&& in_array($key, ['purge'])) {
+								} elseif( in_array( 'editor', $this->getSkin()->getUser()->getEffectiveGroups() )
+									&& in_array( $key, ['purge'] ) ) {
 									echo '<span class="visible-xs"><span class="' . $this->icons[$key] . '"></span> ' .
 									htmlspecialchars( $link['text'] ) . '</span>';
 									echo '<span class="hidden-xs"><span class="' . $this->icons[$key] . '"></span></span>';
-								} elseif (in_array($key, ['purge'])) {
+								} elseif( in_array( $key, ['purge'] ) ) {
 									echo '<span class="visible-xs"><span class="' . $this->icons[$key] . '"></span> ' .
 									htmlspecialchars( $link['text'] ) . '</span>';
 									echo '<span class="hidden-xs"><span class="' . $this->icons[$key] . '"></span></span>';
@@ -1109,30 +1080,30 @@ if( $this->getSkin()->getUser()->getOption( 'liquiflow-prefs-show-rightclick-men
 					?>
 						<ul class="dropdown-menu">
 							<li class="dropdown-header"><?php echo $this->msg( 'liquiflow-general' ); ?></li>
-							<li><a href="<?php echo Title::newFromText('RecentChanges', NS_SPECIAL)->getLocalURL(); ?>" <?php echo Xml::expandAttributes( Linker::tooltipAndAccesskeyAttribs( 'n-recentchanges' ) ); ?>><span class="fa fa-fw fa-clock-o"></span> <?php $this->msg( 'recentchanges' ); ?></a></li>
+							<li><a href="<?php echo Title::newFromText( 'RecentChanges', NS_SPECIAL )->getLocalURL(); ?>" <?php echo Xml::expandAttributes( Linker::tooltipAndAccesskeyAttribs( 'n-recentchanges' ) ); ?>><span class="fa fa-fw fa-clock-o"></span> <?php $this->msg( 'recentchanges' ); ?></a></li>
 
 							<?php if( $this->installedExtensions['FlaggedRevs'] ) { ?>
-							<li><a href="<?php echo Title::newFromText('PendingChanges', NS_SPECIAL)->getLocalURL(); ?>"><span class="fa fa-fw fa-circle-o-notch"></span> <?php $this->msg( 'revreview-current' ); ?></a></li>
-							<?php if ( in_array( 'editor', $this->getSkin()->getUser()->getEffectiveGroups()) ) { ?><li><a href="<?php echo Title::newFromText('UnreviewedPages', NS_SPECIAL)->getLocalURL(); ?>"><span class="fa fa-fw fa-circle-o"></span> <?php $this->msg( 'unreviewedpages' ); ?></a></li><?php } ?>
+							<li><a href="<?php echo Title::newFromText( 'PendingChanges', NS_SPECIAL )->getLocalURL(); ?>"><span class="fa fa-fw fa-circle-o-notch"></span> <?php $this->msg( 'revreview-current' ); ?></a></li>
+							<?php if( in_array( 'editor', $this->getSkin()->getUser()->getEffectiveGroups() ) ) { ?><li><a href="<?php echo Title::newFromText( 'UnreviewedPages', NS_SPECIAL )->getLocalURL(); ?>"><span class="fa fa-fw fa-circle-o"></span> <?php $this->msg( 'unreviewedpages' ); ?></a></li><?php } ?>
 							<?php } ?>
 
-							<li><a href="<?php echo Title::newFromText('Random', NS_SPECIAL)->getLocalURL(); ?>"<?php echo ($view == 'mobile'?'':' '.Xml::expandAttributes( Linker::tooltipAndAccesskeyAttribs( 'n-randompage' ) ) ); ?>><span class="fa fa-fw fa-random"></span> <?php $this->msg( 'randompage' ); ?></a></li>
+							<li><a href="<?php echo Title::newFromText( 'Random', NS_SPECIAL )->getLocalURL(); ?>"<?php echo( $view == 'mobile' ? '' : ' '.Xml::expandAttributes( Linker::tooltipAndAccesskeyAttribs( 'n-randompage' ) ) ); ?>><span class="fa fa-fw fa-random"></span> <?php $this->msg( 'randompage' ); ?></a></li>
 
 							<?php if( $this->installedExtensions['CreateTeams'] || $this->installedExtensions['StreamPage'] ) { ?>
 								<li class="divider"></li>
 								<?php if( $this->installedExtensions['CreateTeams'] ) { ?>
-									<li><a href="<?php echo Title::newFromText('CreateTeams', NS_SPECIAL)->getLocalURL(); ?>"><span class="fa fa-fw fa-code"></span> <?php $this->msg( 'createteams' ); ?></a></li>
+									<li><a href="<?php echo Title::newFromText( 'CreateTeams', NS_SPECIAL )->getLocalURL(); ?>"><span class="fa fa-fw fa-code"></span> <?php $this->msg( 'createteams' ); ?></a></li>
 								<?php } ?>
 								<?php if( $this->installedExtensions['StreamPage'] ) { ?>
-									<li><a href="<?php echo Title::newFromText('StreamPage', NS_SPECIAL)->getLocalURL(); ?>"><span class="fa fa-fw fa-television"></span> <?php $this->msg( 'action-stream' ); ?></a></li>
+									<li><a href="<?php echo Title::newFromText( 'StreamPage', NS_SPECIAL )->getLocalURL(); ?>"><span class="fa fa-fw fa-television"></span> <?php $this->msg( 'action-stream' ); ?></a></li>
 								<?php } ?>
 							<?php } ?>
 
 							<li class="divider"></li>
 							<li class="dropdown-header"><?php echo $this->msg( 'liquiflow-tools-specific' ); ?></li>
 							<?php
-							foreach ( $toolbox as $key => $item ) {
-								if($view == 'mobile') {
+							foreach( $toolbox as $key => $item ) {
+								if( $view == 'mobile' ) {
 									$item['single-id'] = $item['id'];
 									$item['id'] = $item['id'] . "-mobile";
 
@@ -1144,7 +1115,7 @@ if( $this->getSkin()->getUser()->getOption( 'liquiflow-prefs-show-rightclick-men
 					<?php
 					break;
 				case 'PERSONAL':
-					if ( $this->getSkin()->getUser()->isLoggedIn() ) {
+					if( $this->getSkin()->getUser()->isLoggedIn() ) {
 						$personalTools = $this->getPersonalTools();
 						?>
 						<li class="dropdown">
@@ -1156,7 +1127,7 @@ if( $this->getSkin()->getUser()->getOption( 'liquiflow-prefs-show-rightclick-men
 								<li class="dropdown-header visible-sm"><?php echo $personalTools["userpage"]["links"][0]["text"]; ?></li>
 								<?php
 								$personalTools["userpage"]["links"][0]["text"] = $this->getMsg( 'filehist-user' );
-								foreach ( $personalTools as $key => $item ) {
+								foreach( $personalTools as $key => $item ) {
 									echo $this->makeListItem( $key, $item );
 								}
 								?>
@@ -1178,20 +1149,20 @@ if( $this->getSkin()->getUser()->getOption( 'liquiflow-prefs-show-rightclick-men
 							}
 						}
 						$this->adminDropdown['about'] = array_values( $this->adminDropdown['about'] );
-						$adminDropdownLength = sizeof($this->adminDropdown);
+						$adminDropdownLength = sizeof( $this->adminDropdown );
 						$count = 0;
-						foreach ($this->adminDropdown as $header => $items) :
+						foreach( $this->adminDropdown as $header => $items ) :
 							$count++;
 						?>
 							<li class="dropdown-header"><?php echo $this->msg( $header ); ?></li>
-							<?php foreach ($items as $key => $item) : ?>
-								<li id="<?php echo $item['id'] . (($view == 'mobile')?'-mobile':''); ?>">
-									<a href="<?php echo $this->data['serverurl'] . str_replace('$1', $item['page'], $this->data['articlepath']) ?>">
+							<?php foreach( $items as $key => $item ) : ?>
+								<li id="<?php echo $item['id'] . ( ( $view == 'mobile' ) ? '-mobile' : '' ); ?>">
+									<a href="<?php echo $this->data['serverurl'] . str_replace( '$1', $item['page'], $this->data['articlepath'] ) ?>">
 										<?php echo $this->msg( $item['title'] ); ?>
 									</a>
 								</li>
 							<?php endforeach; ?>
-							<?php if ($count < $adminDropdownLength) : ?>
+							<?php if( $count < $adminDropdownLength ) : ?>
 								<li class="divider"></li>
 							<?php endif; ?>
 						<?php endforeach; ?>
@@ -1266,26 +1237,26 @@ if( $this->getSkin()->getUser()->getOption( 'liquiflow-prefs-show-rightclick-men
 	 * @return string
 	 */
 	function makeLink( $key, $item, $options = [] ) {
-		if ( isset( $item['text'] ) ) {
+		if( isset( $item['text'] ) ) {
 			$text = $item['text'];
 		} else {
 			$text = $this->translator->translate( isset( $item['msg'] ) ? $item['msg'] : $key );
 		}
 
-		if ( isset($item['single-id']) && isset($this->icons[$item['single-id']]) ) {
+		if( isset( $item['single-id'] ) && isset( $this->icons[$item['single-id']] ) ) {
 			$html = '<span class="' . $this->icons[$item['single-id']] .'"></span> ' . htmlspecialchars( $text );
-		} elseif ( isset($item['id']) && isset($this->icons[$item['id']]) ) {
+		} elseif( isset( $item['id'] ) && isset( $this->icons[$item['id']] ) ) {
 			$html = '<span class="' . $this->icons[$item['id']] .'"></span> ' . htmlspecialchars( $text );
 		} else {
 			$html = htmlspecialchars( $text );
 		}
 
-		if ( isset( $options['text-wrapper'] ) ) {
+		if( isset( $options['text-wrapper'] ) ) {
 			$wrapper = $options['text-wrapper'];
-			if ( isset( $wrapper['tag'] ) ) {
+			if( isset( $wrapper['tag'] ) ) {
 				$wrapper = [ $wrapper ];
 			}
-			while ( count( $wrapper ) > 0 ) {
+			while( count( $wrapper ) > 0 ) {
 				$element = array_pop( $wrapper );
 				$html = Html::rawElement( $element['tag'], isset( $element['attributes'] )
 					? $element['attributes']
@@ -1293,40 +1264,40 @@ if( $this->getSkin()->getUser()->getOption( 'liquiflow-prefs-show-rightclick-men
 			}
 		}
 
-		if ( isset( $item['href'] ) || isset( $options['link-fallback'] ) ) {
+		if( isset( $item['href'] ) || isset( $options['link-fallback'] ) ) {
 			$attrs = $item;
-			foreach ( [ 'single-id', 'text', 'msg', 'tooltiponly', 'context', 'primary',
+			foreach( [ 'single-id', 'text', 'msg', 'tooltiponly', 'context', 'primary',
 				'tooltip-params' ] as $k ) {
 				unset( $attrs[$k] );
 			}
 
-			if ( isset( $item['id'] ) && !isset( $item['single-id'] ) ) {
+			if( isset( $item['id'] ) && !isset( $item['single-id'] ) ) {
 				$item['single-id'] = $item['id'];
 			}
 
 			$tooltipParams = [];
-			if ( isset( $item['tooltip-params'] ) ) {
+			if( isset( $item['tooltip-params'] ) ) {
 				$tooltipParams = $item['tooltip-params'];
 			}
 
-			if ( isset( $item['single-id'] ) ) {
-				if ( isset( $item['tooltiponly'] ) && $item['tooltiponly'] ) {
+			if( isset( $item['single-id'] ) ) {
+				if( isset( $item['tooltiponly'] ) && $item['tooltiponly'] ) {
 					$title = Linker::titleAttrib( $item['single-id'], null, $tooltipParams );
-					if ( $title !== false ) {
+					if( $title !== false ) {
 						$attrs['title'] = $title;
 					}
 				} else {
 					$tip = Linker::tooltipAndAccesskeyAttribs( $item['single-id'], $tooltipParams );
-					if ( isset( $tip['title'] ) && $tip['title'] !== false ) {
+					if( isset( $tip['title'] ) && $tip['title'] !== false ) {
 						$attrs['title'] = $tip['title'];
 					}
-					if ( isset( $tip['accesskey'] ) && $tip['accesskey'] !== false ) {
+					if( isset( $tip['accesskey'] ) && $tip['accesskey'] !== false ) {
 						$attrs['accesskey'] = $tip['accesskey'];
 					}
 				}
 			}
-			if ( isset( $options['link-class'] ) ) {
-				if ( isset( $attrs['class'] ) ) {
+			if( isset( $options['link-class'] ) ) {
+				if( isset( $attrs['class'] ) ) {
 					$attrs['class'] .= " {$options['link-class']}";
 				} else {
 					$attrs['class'] = $options['link-class'];

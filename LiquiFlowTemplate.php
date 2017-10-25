@@ -551,10 +551,11 @@ class LiquiFlowTemplate extends BaseTemplate {
 
 	<div id="sidebar-toc-column" class="hidden-xs hidden-sm hidden-md">
 		<div id="sidebar-toc" class="sidebar-toc bs-docs-sidebar hidden-print hidden-xs hidden-sm affix-top <?php if(isset($toclimit)) {echo 'toclimit-'.$toclimit;} ?>" style="" role="complementary">
-			<?php if (strlen($toc) > 0) : ?>
-			<?php echo str_replace('id="toctitle"', 'id="toctitle-sidebar"', $toc); ?>
-			<?php endif;?>
-			<?php Hooks::run( 'LiquiFlowAdSidebar' ); ?>
+			<?php if( strlen( $toc ) > 0 ) {
+				echo str_replace( 'id="toctitle"', 'id="toctitle-sidebar"', $toc );
+			}
+			Hooks::run( 'LiquiFlowSidebar' );
+			Hooks::run( 'LiquiFlowAdSidebar' ); ?>
 		</div>
 	</div><!-- /#sidebar-toc-colum -->
 
@@ -571,6 +572,7 @@ class LiquiFlowTemplate extends BaseTemplate {
 					</div>
 					<?php endif; ?>
 
+					<?php Hooks::run( 'LiquiFlowTop' ); ?>
 					<?php Hooks::run( 'LiquiFlowAdTop' ); ?>
 
 					<h1 id="firstHeading" class="firstHeading">
@@ -772,7 +774,8 @@ $footerLinks = $this->getFooterLinks();
 
 <?php $this->printTrail(); ?>
 
-<?php Hooks::run( 'LiquiFlowAdEndCode', array( __DIR__ ) );
+<?php Hooks::run( 'LiquiFlowEndCode', array( __DIR__ ) );
+Hooks::run( 'LiquiFlowAdEndCode', array( __DIR__ ) );
 if( $this->getSkin()->getUser()->getOption( 'liquiflow-prefs-show-rightclick-menu' ) ) { ?>
 	<menu type="context" id="wiki-menu">
 		<?php

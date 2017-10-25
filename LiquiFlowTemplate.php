@@ -567,6 +567,7 @@ class LiquiFlowTemplate extends BaseTemplate {
 					</div>
 					<?php endif; ?>
 
+					<?php Hooks::run( 'LiquiFlowNetworkNotice' ); ?>
 					<?php Hooks::run( 'LiquiFlowTop' ); ?>
 					<?php Hooks::run( 'LiquiFlowAdTop' ); ?>
 

@@ -214,7 +214,7 @@ class LiquiFlowTemplate extends BaseTemplate {
 					<a class="navbar-brand" href="<?php echo htmlspecialchars( $this->data['nav_urls']['mainpage']['href'] )?>"
 						<?php echo Xml::expandAttributes( Linker::tooltipAndAccesskeyAttribs( 'p-logo' ) )?>>
 						<div style="display: inline-block;">
-							<div style="float:left;"><img id="brand-logo" src="<?php $this->text( 'logopath' ) ?>" alt="Logo"></div>
+							<div style="float: left;"><img id="brand-logo" src="<?php $this->text( 'logopath' ) ?>" alt="Logo"></div>
 							<div class="brand-name visible-xs logotype" style="white-space: nowrap; margin-left: 5px; float: left;"><?php global $wgLiquiFlowAlphawiki; echo ( isset( $wgLiquiFlowAlphawiki ) && $wgLiquiFlowAlphawiki ) ? '<small>' . wfMessage( 'liquiflow-brand' )->text() . '</small> alpha' : $this->msg( 'liquiflow-brand' ); ?></div>
 						</div>
 					</a>
@@ -549,8 +549,7 @@ class LiquiFlowTemplate extends BaseTemplate {
 			<?php if( strlen( $toc ) > 0 ) {
 				echo str_replace( 'id="toctitle"', 'id="toctitle-sidebar"', $toc );
 			}
-			Hooks::run( 'LiquiFlowSidebar' );
-			Hooks::run( 'LiquiFlowAdSidebar' ); ?>
+			Hooks::run( 'LiquiFlowSidebar' ); ?>
 		</div>
 	</div><!-- /#sidebar-toc-colum -->
 
@@ -565,11 +564,10 @@ class LiquiFlowTemplate extends BaseTemplate {
 					<div id="siteNotice">
 						<?php $this->html( 'sitenotice' ) ?>
 					</div>
-					<?php endif; ?>
+					<?php endif;
 
-					<?php Hooks::run( 'LiquiFlowNetworkNotice' ); ?>
-					<?php Hooks::run( 'LiquiFlowTop' ); ?>
-					<?php Hooks::run( 'LiquiFlowAdTop' ); ?>
+					Hooks::run( 'LiquiFlowNetworkNotice', array( $this->getSkin()->getContext() ) );
+					Hooks::run( 'LiquiFlowTop' ); ?>
 
 					<h1 id="firstHeading" class="firstHeading">
 						<span dir="auto"><?php $this->html( 'title' ) ?></span>
@@ -748,7 +746,6 @@ $footerLinks = $this->getFooterLinks();
 <?php $this->printTrail(); ?>
 
 <?php Hooks::run( 'LiquiFlowEndCode', array( __DIR__ ) );
-Hooks::run( 'LiquiFlowAdEndCode', array( __DIR__ ) );
 if( $this->getSkin()->getUser()->getOption( 'liquiflow-prefs-show-rightclick-menu' ) ) { ?>
 	<menu type="context" id="wiki-menu">
 		<?php

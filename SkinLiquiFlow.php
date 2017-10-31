@@ -180,7 +180,6 @@ class SkinLiquiFlow extends SkinTemplate {
 			. '<meta name="msapplication-square310x310logo" content="' . $faviconPath . 'mstile-310x310.png" />' );
 
 		Hooks::run( 'LiquiFlowStartCode', array( &$out ) );
-		Hooks::run( 'LiquiFlowAdStartCode', array( &$out ) );
 
 		$scripts = array( 'skins.liquiflow', 'skins.liquiflow.bottom', 'jquery.chosen' );
 		$out->addModuleScripts( $scripts );

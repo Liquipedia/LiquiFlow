@@ -1078,14 +1078,13 @@ if( $this->getSkin()->getUser()->getOption( 'liquiflow-prefs-show-rightclick-men
 					?>
 						<ul class="dropdown-menu">
 							<li class="dropdown-header"><?php echo $this->msg( 'liquiflow-general' ); ?></li>
-							<li><a href="<?php echo Title::newFromText( 'RecentChanges', NS_SPECIAL )->getLocalURL(); ?>" <?php echo Xml::expandAttributes( Linker::tooltipAndAccesskeyAttribs( 'n-recentchanges' ) ); ?>><span class="fa fa-fw fa-clock-o"></span> <?php $this->msg( 'recentchanges' ); ?></a></li>
-
+							<li><a href="<?php echo Title::newFromText( 'RecentChanges', NS_SPECIAL )->getLocalURL(); ?>"<?php echo ( $view == 'mobile' ? '' : ' ' . Xml::expandAttributes( Linker::tooltipAndAccesskeyAttribs( 'n-recentchanges' ) ) ); ?>><span class="fa fa-fw fa-clock-o"></span> <?php $this->msg( 'recentchanges' ); ?></a></li>
 							<?php if( $this->installedExtensions['FlaggedRevs'] ) { ?>
 							<li><a href="<?php echo Title::newFromText( 'PendingChanges', NS_SPECIAL )->getLocalURL(); ?>"><span class="fa fa-fw fa-circle-o-notch"></span> <?php $this->msg( 'revreview-current' ); ?></a></li>
 							<?php if( in_array( 'editor', $this->getSkin()->getUser()->getEffectiveGroups() ) ) { ?><li><a href="<?php echo Title::newFromText( 'UnreviewedPages', NS_SPECIAL )->getLocalURL(); ?>"><span class="fa fa-fw fa-circle-o"></span> <?php $this->msg( 'unreviewedpages' ); ?></a></li><?php } ?>
 							<?php } ?>
 
-							<li><a href="<?php echo Title::newFromText( 'Random', NS_SPECIAL )->getLocalURL(); ?>"<?php echo( $view == 'mobile' ? '' : ' '.Xml::expandAttributes( Linker::tooltipAndAccesskeyAttribs( 'n-randompage' ) ) ); ?>><span class="fa fa-fw fa-random"></span> <?php $this->msg( 'randompage' ); ?></a></li>
+							<li><a href="<?php echo Title::newFromText( 'Random', NS_SPECIAL )->getLocalURL(); ?>"<?php echo ( $view == 'mobile' ? '' : ' ' . Xml::expandAttributes( Linker::tooltipAndAccesskeyAttribs( 'n-randompage' ) ) ); ?>><span class="fa fa-fw fa-random"></span> <?php $this->msg( 'randompage' ); ?></a></li>
 
 							<?php if( $this->installedExtensions['CreateTeams'] || $this->installedExtensions['StreamPage'] ) { ?>
 								<li class="divider"></li>

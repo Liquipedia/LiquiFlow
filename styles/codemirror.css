@@ -3,6 +3,8 @@
 }
 .CodeMirror {
 	height:600px;
+	font-family:'Source Code Pro', monospace;
+	font-size:13px;
 }
 .cm-mw-htmltag-attribute {
 	color:#8a5700;

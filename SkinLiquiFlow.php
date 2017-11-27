@@ -208,7 +208,7 @@ class SkinLiquiFlow extends SkinTemplate {
 		$user = $this->getSkin()->getUser();
 		parent::setupSkinUserCss( $out );
 
-		$out->addStyle( 'https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,700,700italic%7CDroid+Sans+Mono%7CRoboto:500' );
+		$out->addStyle( 'https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,700,700italic%7CDroid+Sans+Mono%7CRoboto:500%7CSource+Code+Pro:400,700' );
 		$styles = array( 'mediawiki.skinning.interface', 'skins.liquiflow', 'skins.liquiflow.bottom' );
 		$out->addModuleStyles( $styles );
 		if( $out->getResourceLoader()->isModuleRegistered( 'skins.liquiflow.theme.' . substr($wgScriptPath, 1) ) ) {

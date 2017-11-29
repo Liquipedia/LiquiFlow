@@ -1103,7 +1103,7 @@ if( $this->getSkin()->getUser()->getOption( 'liquiflow-prefs-show-rightclick-men
 								if( $view == 'mobile' ) {
 									$item['single-id'] = $item['id'];
 									$item['id'] = $item['id'] . "-mobile";
-
+									$item['tooltiponly'] = true;
 								}
 								echo $this->makeListItem( $key, $item );
 							}

@@ -48,9 +48,9 @@ class LiquiFlowColors {
 			'body-bg' => '#e5e5e5',
 		),
 		'leagueoflegends' => array(
-			'wiki-dark' => '#196B6B',
-			'wiki-light' => '#F4DB96',
-			'body-bg' => '#E5E5E5',
+			'wiki-dark' => '#196b6b',
+			'wiki-light' => '#f4db96',
+			'body-bg' => '#e5e5e5',
 		),
 		'overwatch' => array(
 			'wiki-dark' => '#932d64',

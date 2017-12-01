@@ -670,7 +670,7 @@ $footerLinks = $this->getFooterLinks();
 						<ul>
 							<?php foreach( $footerLinks['places'] as $link ) : ?>
 								<li id="footer-places-<?php echo $link; ?>">
-									<?php echo $this->html( $link );?>
+									<?php echo $this->html( $link ); ?>
 								</li>
 							<?php endforeach; ?>
 						</ul>

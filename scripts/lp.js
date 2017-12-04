@@ -98,6 +98,7 @@ $( document ).ready(function() {
 			.data( 'content', reference )
 			.data( 'html', true )
 			.data( 'trigger', 'focus' )
+			.data( 'template', '<div class="popover" role="tooltip" style="max-width:400px;"><div class="arrow"></div><h3 class="popover-title"></h3><div class="popover-content"></div></div>' )
 			.popover();
 	} );
 

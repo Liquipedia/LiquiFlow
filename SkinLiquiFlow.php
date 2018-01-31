@@ -203,7 +203,7 @@ class SkinLiquiFlow extends SkinTemplate {
 		$styles = array( 'mediawiki.skinning.interface', 'skins.liquiflow', 'skins.liquiflow.bottom' );
 		$out->addModuleStyles( $styles );
 		if( $out->getResourceLoader()->isModuleRegistered( 'skins.liquiflow.theme.' . substr( $scriptPath, 1 ) ) ) {
-			$out->addModuleStyles( 'skins.liquiflow.theme.' . substr( $scriptPath, 1) );
+			$out->addModuleStyles( 'skins.liquiflow.theme.' . substr( $scriptPath, 1 ) );
 		} else {
 			$out->addModuleStyles( 'skins.liquiflow.theme.commons' );
 		}

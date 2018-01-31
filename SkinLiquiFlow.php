@@ -16,10 +16,10 @@ class SkinLiquiFlow extends SkinTemplate {
 	 * @param OutputPage $out Object to initialize
 	 */
 	public function initPage( OutputPage $out ) {
-		global $wgStylePath, $wgServer, $wgSitename, $wgScriptPath;
 		parent::initPage( $out );
+		$config = $out->getConfig();
 		$title = $this->getTitle();
-		$faviconPath = $wgStylePath . '/LiquiFlow/images/favicon/';
+		$faviconPath = $config->get( 'StylePath' ) . '/LiquiFlow/images/favicon/';
 
 		// Do stuff for SEO
 		if( ExtensionRegistry::getInstance()->isLoaded( 'TextExtracts' ) ) {
@@ -31,7 +31,7 @@ class SkinLiquiFlow extends SkinTemplate {
 				if( isset( $matches[1] ) && isset( $matches[1][0] ) ) {
 					$image = $matches[1][0];
 					if( strpos( $image, 'http') !== 0 ) {
-						$image = $wgServer . $image;
+						$image = $config->get( 'Server' ) . $image;
 					}
 					// add meta description tag if doesn't exist already
 					$api = new ApiMain(
@@ -64,7 +64,7 @@ class SkinLiquiFlow extends SkinTemplate {
 							$out->addMeta( 'description', $description );
 						}
 
-						$domain = str_replace( array( '/', 'http', 'https', ':' ), '', $wgServer );
+						$domain = str_replace( array( '/', 'http', 'https', ':' ), '', $config->get( 'Server' ) );
 						$twitterAccount = '@LiquipediaNet';
 						$out->addHeadItem( 'twitterproperties',
 							Html::element( 'meta', [
@@ -115,7 +115,7 @@ class SkinLiquiFlow extends SkinTemplate {
 								] ) . "\n"
 							. Html::element( 'meta', [
 									'property' => 'og:site_name',
-									'content' => $wgSitename
+									'content' => $config->get( 'Sitename' )
 								] )
 						);
 					}
@@ -145,7 +145,7 @@ class SkinLiquiFlow extends SkinTemplate {
 
 		// Meta tags for mobile
 		$out->addHeadItem( 'responsive', '<meta name="viewport" content="width=device-width, initial-scale=1.0">');
-		$out->addHeadItem( 'theme-color', '<meta name="theme-color" content="' . LiquiFlowColors::getSkinColors( substr( $wgScriptPath, 1 ), 'wiki-dark' ) . '">' );
+		$out->addHeadItem( 'theme-color', '<meta name="theme-color" content="' . LiquiFlowColors::getSkinColors( substr( $config->get( 'ScriptPath' ), 1 ), 'wiki-dark' ) . '">' );
 
 		// Favicons
 		$out->addHeadItem( 'favicons', 
@@ -162,7 +162,7 @@ class SkinLiquiFlow extends SkinTemplate {
 			. '<link rel="icon" type="image/png" href="' . $faviconPath . 'favicon-32x32.png" sizes="32x32" />'
 			. '<link rel="icon" type="image/png" href="' . $faviconPath . 'favicon-16x16.png" sizes="16x16" />'
 			. '<link rel="icon" type="image/png" href="' . $faviconPath . 'favicon-128x128.png" sizes="128x128" />'
-			. '<meta name="application-name" content="' . $wgSitename . '"/>'
+			. '<meta name="application-name" content="' . $config->get( 'Sitename' ) . '"/>'
 			. '<meta name="msapplication-TileColor" content="#ffffff" />'
 			. '<meta name="msapplication-TileImage" content="' . $faviconPath . 'mstile-144x144.png" />'
 			. '<meta name="msapplication-square70x70logo" content="' . $faviconPath . 'mstile-70x70.png" />'
@@ -195,15 +195,15 @@ class SkinLiquiFlow extends SkinTemplate {
 	 * @param OutputPage $out
 	 */
 	function setupSkinUserCss( OutputPage $out ) {
-		global $wgScriptPath;
+		$scriptPath = $out->getConfig()->get( 'ScriptPath' );
 		$user = $this->getSkin()->getUser();
 		parent::setupSkinUserCss( $out );
 
 		$out->addStyle( 'https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,700,700italic%7CDroid+Sans+Mono%7CRoboto:500%7CSource+Code+Pro:400,700' );
 		$styles = array( 'mediawiki.skinning.interface', 'skins.liquiflow', 'skins.liquiflow.bottom' );
 		$out->addModuleStyles( $styles );
-		if( $out->getResourceLoader()->isModuleRegistered( 'skins.liquiflow.theme.' . substr($wgScriptPath, 1) ) ) {
-			$out->addModuleStyles( 'skins.liquiflow.theme.' . substr($wgScriptPath, 1) );
+		if( $out->getResourceLoader()->isModuleRegistered( 'skins.liquiflow.theme.' . substr( $scriptPath, 1) ) ) {
+			$out->addModuleStyles( 'skins.liquiflow.theme.' . substr( $scriptPath, 1) );
 		} else {
 			$out->addModuleStyles( 'skins.liquiflow.theme.commons' );
 		}
@@ -236,7 +236,7 @@ class SkinLiquiFlow extends SkinTemplate {
 	 * @param array &$bodyAttrs Array of attributes that will be set on the body element
 	 */
 	function addToBodyAttributes( $out, &$bodyAttrs ) {
-		global $wgScriptPath;
+		$scriptPath = $out->getConfig()->get( 'ScriptPath' );
 		$user = $this->getSkin()->getUser();
 		$bodyAttrs['id'] = static::$bodyId;
 		if ( $user->isLoggedIn() ) {
@@ -244,7 +244,7 @@ class SkinLiquiFlow extends SkinTemplate {
 		} else {
 			$bodyAttrs['class'] .= ' logged-out';
 		}
-		$bodyAttrs['class'] .= ' wiki-' . substr( $wgScriptPath, 1 );
+		$bodyAttrs['class'] .= ' wiki-' . substr( $scriptPath, 1 );
 		if( $user->getOption( 'liquiflow-prefs-show-rightclick-menu' ) ) {
 			$bodyAttrs['contextmenu'] = 'wiki-menu';
 		}

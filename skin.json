@@ -37,17 +37,11 @@
 		"MakeGlobalVariablesScript": [
 			"LiquiFlowHooks::onMakeGlobalVariablesScript"
 		],
-		"LinkerMakeExternalLink": [
-			"LiquiFlowHooks::onLinkerMakeExternalLink"
-		],
 		"BeforePageDisplay": [
 			"LiquiFlowHooks::onBeforePageDisplay"
 		],
-		"OutputPageParserOutput": [
-			"LiquiFlowHooks::onOutputPageParserOutput"
-		],
-		"ResourceLoaderRegisterModules": [
-			"LiquiFlowHooks::onResourceLoaderRegisterModules"
+		"ResourceLoaderGetLessVars": [
+			"LiquiFlowHooks::onResourceLoaderGetLessVars"
 		]
 	},
 	"ResourceModules": {

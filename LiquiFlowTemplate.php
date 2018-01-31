@@ -70,25 +70,25 @@ class LiquiFlowTemplate extends BaseTemplate {
 
 	private $adminDropdown = [
 		'about' => [
-			[ 'page' => 'Special:Statistics', 'title' => 'statistics' , 'id' => 'ad-statistics'],
-			[ 'page' => 'Special:ValidationStatistics', 'title' => 'validationstatistics' , 'id' => 'ad-validation-statistics'],
-			[ 'page' => 'Special:Version?detail', 'title' => 'version', 'id' => 'ad-version'],
-			[ 'page' => 'Special:Log', 'title' => 'log', 'id' => 'ad-logs'],
+			['page' => 'Special:Statistics', 'title' => 'statistics' , 'id' => 'ad-statistics'],
+			['page' => 'Special:ValidationStatistics', 'title' => 'validationstatistics' , 'id' => 'ad-validation-statistics'],
+			['page' => 'Special:Version?detail', 'title' => 'version', 'id' => 'ad-version'],
+			['page' => 'Special:Log', 'title' => 'log', 'id' => 'ad-logs'],
 		],
 		'filehist-user' => [
-			[ 'page' => 'Special:UserList', 'title' => 'liquiflow-user-list', 'id' => 'ad-user-list'],
-			[ 'page' => 'Special:UserRights', 'title' => 'liquiflow-user-rights', 'id' => 'ad-user-rights'],
-			[ 'page' => 'Special:BlockUser', 'title' => 'liquiflow-block-user', 'id' => 'ad-block-user'],
+			['page' => 'Special:UserList', 'title' => 'liquiflow-user-list', 'id' => 'ad-user-list'],
+			['page' => 'Special:UserRights', 'title' => 'liquiflow-user-rights', 'id' => 'ad-user-rights'],
+			['page' => 'Special:BlockUser', 'title' => 'liquiflow-block-user', 'id' => 'ad-block-user'],
 		],
 		'liquiflow-interface' => [
-			[ 'page' => 'MediaWiki:Common.css', 'title' => 'liquiflow-edit-common-css', 'id' => 'ad-edit-css'],
-			[ 'page' => 'MediaWiki:Common.js', 'title' => 'liquiflow-edit-common-js', 'id' => 'ad-edit-js'],
-			[ 'page' => 'MediaWiki:Sidebar', 'title' => 'liquiflow-edit-sidebar', 'id' => 'ad-sidebar'],
-			[ 'page' => 'MediaWiki:Sitenotice', 'title' => 'liquiflow-edit-sitenotice', 'id' => 'ad-sitenotice'],
+			['page' => 'MediaWiki:Common.css', 'title' => 'liquiflow-edit-common-css', 'id' => 'ad-edit-css'],
+			['page' => 'MediaWiki:Common.js', 'title' => 'liquiflow-edit-common-js', 'id' => 'ad-edit-js'],
+			['page' => 'MediaWiki:Sidebar', 'title' => 'liquiflow-edit-sidebar', 'id' => 'ad-sidebar'],
+			['page' => 'MediaWiki:Sitenotice', 'title' => 'liquiflow-edit-sitenotice', 'id' => 'ad-sitenotice'],
 		],
 		'liquiflow-other' => [
-			[ 'page' => 'Special:Import', 'title' => 'liquiflow-import', 'id' => 'ad-import'],
-			[ 'page' => 'Special:Export', 'title' => 'liquiflow-export', 'id' => 'ad-export'],
+			['page' => 'Special:Import', 'title' => 'liquiflow-import', 'id' => 'ad-import'],
+			['page' => 'Special:Export', 'title' => 'liquiflow-export', 'id' => 'ad-export'],
 		],
 	];
 
@@ -116,8 +116,6 @@ class LiquiFlowTemplate extends BaseTemplate {
 	 * Outputs the entire contents of the (X)HTML page
 	 */
 	public function execute() {
-		global $wgLiquiFlowWikiTitle;
-
 		// Run checks for installed extensions
 		$this->checkInstalledExtensions();
 
@@ -199,9 +197,10 @@ class LiquiFlowTemplate extends BaseTemplate {
 			$this->data['bodycontent'] = str_replace( '<div id="toc" class="toc">', '<div id="toc" class="toc hidden-lg hidden-xl">', $this->data['bodycontent'] );
 		}
 		Hooks::run( 'LiquiFlowBodyFirst' );
+		$liquiFlowAlphawiki = $this->config->get( 'LiquiFlowAlphawiki' );
 ?>
 
-<nav class="navbar navbar-default navbar-fixed-top noprint<?php global $wgLiquiFlowAlphawiki; echo( isset( $wgLiquiFlowAlphawiki ) && $wgLiquiFlowAlphawiki )?' alphawiki':''; ?>" id="slide-nav">
+<nav class="navbar navbar-default navbar-fixed-top noprint<?php echo( isset( $liquiFlowAlphawiki ) && $liquiFlowAlphawiki )?' alphawiki':''; ?>" id="slide-nav">
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-md-12 navbar-main-column">
@@ -215,7 +214,7 @@ class LiquiFlowTemplate extends BaseTemplate {
 						<?php echo Xml::expandAttributes( Linker::tooltipAndAccesskeyAttribs( 'p-logo' ) )?>>
 						<div style="display: inline-block;">
 							<div style="float: left;"><img id="brand-logo" src="<?php $this->text( 'logopath' ) ?>" alt="Logo"></div>
-							<div class="brand-name visible-xs logotype" style="white-space: nowrap; margin-left: 5px; float: left;"><?php global $wgLiquiFlowAlphawiki; echo ( isset( $wgLiquiFlowAlphawiki ) && $wgLiquiFlowAlphawiki ) ? '<small>' . wfMessage( 'liquiflow-brand' )->text() . '</small> alpha' : $this->msg( 'liquiflow-brand' ); ?></div>
+							<div class="brand-name visible-xs logotype" style="white-space: nowrap; margin-left: 5px; float: left;"><?php echo ( isset( $liquiFlowAlphawiki ) && $liquiFlowAlphawiki ) ? '<small>' . wfMessage( 'liquiflow-brand' )->text() . '</small> alpha' : $this->msg( 'liquiflow-brand' ); ?></div>
 						</div>
 					</a>
 
@@ -249,7 +248,7 @@ class LiquiFlowTemplate extends BaseTemplate {
 						?>
 							<li class="dropdown dropdown-brand hidden-xs">
 								<a class="dropdown-toggle brand-title" data-toggle="dropdown" data-hover="dropdown" href="#">
-									<span id="brand-desktop" class="brand-name logotype" style="font-size:18px;"><?php global $wgLiquiFlowAlphawiki; echo ( isset( $wgLiquiFlowAlphawiki ) && $wgLiquiFlowAlphawiki )?'<small>' . wfMessage( 'liquiflow-brand' )->text() . '</small> alpha':$this->msg( 'liquiflow-brand' ); ?></span> <span class="caret"></span> <br>
+									<span id="brand-desktop" class="brand-name logotype" style="font-size:18px;"><?php echo ( isset( $liquiFlowAlphawiki ) && $liquiFlowAlphawiki )?'<small>' . wfMessage( 'liquiflow-brand' )->text() . '</small> alpha':$this->msg( 'liquiflow-brand' ); ?></span> <span class="caret"></span> <br>
 									<span class="hidden-xs brand-subtitle">
 										<?php echo $currentWikiTitle; ?>
 									</span>
@@ -494,7 +493,7 @@ class LiquiFlowTemplate extends BaseTemplate {
 <nav id="mobile-search-bar" class="navbar visible-xs noprint hidden">
 	<form action="<?php $this->text( 'wgScript' ) ?>" id="mobile-search-form" class="navbar-form navbar-left" role="search">
 		<div class="input-group">
-			<input id="searchInput-mobile" type="search" accesskey="<?php echo $this->msg( 'accesskey-search' ); ?>" title="<?php wfMessage( 'liquiflow-search' )->params( wfMessage( 'liquiflow-brand' )->text() . ' ' .  $wgLiquiFlowWikiTitle )->text(); ?> [alt-shift-<?php echo $this->msg( 'accesskey-search' ); ?>]" placeholder="Search <?php echo $this->msg( 'liquiflow-brand' ); ?>" name="search" autocomplete="off" class="form-control">
+			<input id="searchInput-mobile" type="search" accesskey="<?php echo $this->msg( 'accesskey-search' ); ?>" title="<?php wfMessage( 'liquiflow-search' )->params( wfMessage( 'liquiflow-brand' )->text() . ' ' .  $this->config->get( 'LiquiFlowWikiTitle' ) )->text(); ?> [alt-shift-<?php echo $this->msg( 'accesskey-search' ); ?>]" placeholder="Search <?php echo $this->msg( 'liquiflow-brand' ); ?>" name="search" autocomplete="off" class="form-control">
 			<div class="input-group-btn">
 				<button class="btn navbar-search-btn searchButton" type="submit" id="searchButton-mobile">
 					<i class="fa fa-arrow-right"></i>
@@ -961,7 +960,6 @@ if( $this->getSkin()->getUser()->getOption( 'liquiflow-prefs-show-rightclick-men
 					<?php
 					break;
 				case 'ACTIONS':
-					global $wgScriptPath;
 					if( isset( $this->data['action_urls']['protect'] ) ) {$this->data['action_urls']['default'] = array(
 						'class' => '',
 						'text' => $this->getMsg( 'liquiflow-stability' ),
@@ -973,7 +971,7 @@ if( $this->getSkin()->getUser()->getOption( 'liquiflow-prefs-show-rightclick-men
 					if( isset( $this->data['action_urls']['purge'] ) ) {$this->data['action_urls']['purge']  = array(
 						'class' => '',
 						'text' => $this->getMsg( 'liquiflow-purge' ),
-						'href' => $wgScriptPath. '/index.php?title=' . $this->getSkin()->getTitle() . '&action=purge',
+						'href' => $this->config->get( 'ScriptPath' ). '/index.php?title=' . $this->getSkin()->getTitle() . '&action=purge',
 						'id' => 'ca-purge',
 						'attributes' => ' id="ca-purge"',
 						'key' => ' title="'. $this->getMsg( 'liquiflow-purge-tooltip' ) .'"'
@@ -1167,13 +1165,12 @@ if( $this->getSkin()->getUser()->getOption( 'liquiflow-prefs-show-rightclick-men
 					<?php break;
 
 				case 'SEARCH':
-					global $wgLiquiFlowWikiTitle;
 					?>
 					<li class="hidden-xs">
 						<form action="<?php echo $this->text( 'wgScript' ); ?>" id="searchform" class="navbar-form" role="search">
 							<div class="input-group">
 								<input id="searchInput" type="search" accesskey="<?php echo $this->msg( 'accesskey-search' ); ?>"
-									title="<?php echo wfMessage( 'liquiflow-search' )->params( wfMessage( 'liquiflow-brand' )->text() . ' ' .  $wgLiquiFlowWikiTitle )->text();?> [alt-shift-<?php echo $this->msg( 'accesskey-search' ); ?>]" placeholder="<?php echo $this->msg( 'liquiflow-search-placeholder' ); ?>"
+									title="<?php echo wfMessage( 'liquiflow-search' )->params( wfMessage( 'liquiflow-brand' )->text() . ' ' . $this->config->get( 'LiquiFlowWikiTitle' ) )->text();?> [alt-shift-<?php echo $this->msg( 'accesskey-search' ); ?>]" placeholder="<?php echo $this->msg( 'liquiflow-search-placeholder' ); ?>"
 									name="search" autocomplete="off">
 								<div class="input-group-btn">
 									<button class="btn btn-default searchButton" type="submit" id="searchButton">

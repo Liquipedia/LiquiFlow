@@ -40,8 +40,8 @@
 		"BeforePageDisplay": [
 			"LiquiFlowHooks::onBeforePageDisplay"
 		],
-		"ResourceLoaderGetLessVars": [
-			"LiquiFlowHooks::onResourceLoaderGetLessVars"
+		"ResourceLoaderRegisterModules": [
+			"LiquiFlowHooks::onResourceLoaderRegisterModules"
 		]
 	},
 	"ResourceModules": {

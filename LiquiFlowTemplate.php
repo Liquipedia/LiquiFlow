@@ -237,7 +237,7 @@ class LiquiFlowTemplate extends BaseTemplate {
 							</div>
 						</div>
 					</div>
-				<?php }	?>
+				<?php } ?>
 
 				<div id="slidemenu">
 					<div id="scroll-wrapper-menu">
@@ -247,13 +247,13 @@ class LiquiFlowTemplate extends BaseTemplate {
 						$wikiNavigation = array_shift( $this->data['sidebar'] );
 						?>
 							<li class="dropdown dropdown-brand hidden-xs">
-								<a class="dropdown-toggle brand-title" data-toggle="dropdown" data-hover="dropdown" href="#">
+								<a id="brand-menu-toggle" class="dropdown-toggle brand-title" data-toggle="dropdown" data-hover="dropdown" href="#">
 									<span id="brand-desktop" class="brand-name logotype" style="font-size:18px;"><?php echo ( isset( $liquiFlowAlphawiki ) && $liquiFlowAlphawiki )?'<small>' . wfMessage( 'liquiflow-brand' )->text() . '</small> alpha':$this->msg( 'liquiflow-brand' ); ?></span> <span class="caret"></span> <br>
 									<span class="hidden-xs brand-subtitle">
 										<?php echo $currentWikiTitle; ?>
 									</span>
 								</a>
-								<ul class="dropdown-menu">
+								<ul id="brand-menu" class="dropdown-menu">
 								<?php
 									foreach( $wikiNavigation as $wikiNavigationEntry ) {
 										echo '<li><a href="'.$wikiNavigationEntry['href'].'">'.$wikiNavigationEntry['text'].'</a></li>';
@@ -269,7 +269,7 @@ class LiquiFlowTemplate extends BaseTemplate {
 							if( $navHeader == 'TRENDING' ) {
 								?>
 								<li class="dropdown icon-tablet">
-									<a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="#">
+									<a id="trending-pages-menu-toggle" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="#">
 										<div class="visible-xl visible-lg visible-md visible-xs"><span class="fa fa-fw fa-line-chart"></span> <?php echo wfMessage( 'liquiflow-menu-trending' )->text(); ?> <span class="caret"></span></div>
 										<div class="visible-sm">
 											<span class="fa fa-fw fa-line-chart"></span> <span class="caret"></span>
@@ -281,20 +281,20 @@ class LiquiFlowTemplate extends BaseTemplate {
 							} elseif( $navHeader == 'TOURNAMENTS' ) {
 								?>
 								<li class="dropdown hidden-xs icon-tablet">
-									<a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="#">
+									<a id="tournaments-menu-toggle" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="#">
 										<div class="visible-xl visible-lg visible-md visible-xs"><span class="fa fa-fw fa-trophy"></span> <?php echo wfMessage( 'liquiflow-menu-tournaments' )->text(); ?> <span class="caret"></span></div>
 										<div class="visible-sm">
 											<span class="fa fa-fw fa-trophy"></span> <span class="caret"></span>
 										</div>
 									</a>
-									<div class="dropdown-menu multi-column columns-3">
+									<div id="tournaments-menu" class="dropdown-menu multi-column columns-3">
 										<div class="row">
 										<?php
 										if( is_array( $navEntryArray ) ) {
 											foreach( $navEntryArray as $subNavHeader => $navSubEntryArray ) {
 												?>
 												<div class="col-sm-4">
-													<ul class="multi-column-dropdown">
+													<ul id="tournaments-menu-<?php echo str_replace( ' ', '-', strtolower( $subNavHeader ) ); ?>" class="multi-column-dropdown">
 													<li class="dropdown-header"><?php echo $subNavHeader; ?></li>
 												<?php
 												if( is_array( $navSubEntryArray ) ) {
@@ -342,16 +342,16 @@ class LiquiFlowTemplate extends BaseTemplate {
 								?>
 								<li class="visible-xs mobile-divider"></li>
 								<li class="dropdown icon-tablet">
-									<a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="#">
+									<a id="contribute-menu-toggle" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="#">
 										<div class="visible-xl visible-lg visible-md visible-xs"><span class="fa fa-fw fa-puzzle-piece"></span> <?php echo $navHeader; ?> <span class="caret"></span></div>
 										<div class="visible-sm">
 											<span class="fa fa-fw fa-puzzle-piece"></span> <span class="caret"></span>
 										</div>
 									</a>
-									<ul class="dropdown-menu">
+									<ul id="contribute-menu" class="dropdown-menu">
 									<?php
 									foreach( $navEntryArray as $navEntry ) {
-										echo '<li><a href="' . $navEntry['href'] . '">' . $navEntry['text'] . '</a></li>';
+										echo '<li><a id="contribute-menu-' . str_replace( ' ', '-', strtolower( $navEntry['text'] ) ) . '" href="' . $navEntry['href'] . '">' . $navEntry['text'] . '</a></li>';
 									}
 									?>
 									</ul>

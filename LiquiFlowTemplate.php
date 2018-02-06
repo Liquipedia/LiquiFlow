@@ -361,10 +361,10 @@ class LiquiFlowTemplate extends BaseTemplate {
 								?>
 								<li class="visible-xs mobile-divider"></li>
 								<li class="dropdown icon-tablet">
-									<a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="#">
+									<a id="<?php echo str_replace( ' ', '-', strtolower( $navHeader ) ); ?>-menu-toggle" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="#">
 										 <?php echo $navHeader; ?> <span class="caret"></span>
 									</a>
-									<ul class="dropdown-menu">
+									<ul id="<?php echo str_replace( ' ', '-', strtolower( $navHeader ) ); ?>-menu" class="dropdown-menu">
 									<?php
 									foreach( $navEntryArray as $navEntry ) {
 										echo '<li><a href="' . $navEntry['href'] . '">' . $navEntry['text'] . '</a></li>';

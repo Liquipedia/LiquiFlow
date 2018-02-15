@@ -654,13 +654,13 @@ $footerLinks = $this->getFooterLinks();
 					<div class="col-md-2 col-sm-3 col-xs-6">
 						<h4><?php echo $this->msg( 'liquiflow-alpha-wikis' ); ?></h4>
 						<ul>
-							<li><a href="/warcraft/" target="_blank">Warcraft III</a></li>
-							<li><a href="/fighters/" target="_blank">Fighting Games</a></li>
-							<li><a href="/teamfortress/" target="_blank">Team Fortress</a></li>
-							<li><a href="/worldofwarcraft/" target="_blank">World of Warcraft</a></li>
 							<li><a href="/leagueoflegends/" target="_blank">League of Legends</a></li>
+							<li><a href="/warcraft/" target="_blank">Warcraft III</a></li>
 							<li><a href="/rainbowsix/" target="_blank">Rainbow Six</a></li>
 							<li><a href="/quake/" target="_blank">Quake</a></li>
+							<li><a href="/teamfortress/" target="_blank">Team Fortress</a></li>
+							<li><a href="/worldofwarcraft/" target="_blank">World of Warcraft</a></li>
+							<li><a href="/fighters/" target="_blank">Fighting Games</a></li>
 						</ul>
 					</div>
 					<div class="col-md-2 col-sm-3 col-xs-6">

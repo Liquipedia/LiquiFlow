@@ -95,6 +95,7 @@ $( document ).ready(function() {
 			.data( 'toggle', 'popover' )
 			.data( 'placement', 'bottom' )
 			.attr( 'title', 'Reference' )
+			.attr( 'tabindex', '0' )
 			.data( 'content', reference )
 			.data( 'html', true )
 			.data( 'trigger', 'focus' )

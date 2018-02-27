@@ -686,7 +686,7 @@ $footerLinks = $this->getFooterLinks();
 							<li><a href="http://liquipedia.net">Liquipedia Portal</a></li>
 							<li><a href="http://www.teamliquid.net" target="_blank">TeamLiquid.net</a></li>
 							<li><a href="https://www.liquiddota.com" target="_blank">LiquidDota.com</a></li>
-							<li><a href="http:s//www.liquidhearth.com" target="_blank">LiquidHearth.com</a></li>
+							<li><a href="https://www.liquidhearth.com" target="_blank">LiquidHearth.com</a></li>
 							<li><a href="http://www.liquidlegends.net" target="_blank">LiquidLegends.net</a></li>
 						</ul>
 					</div>

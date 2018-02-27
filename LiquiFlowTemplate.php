@@ -196,7 +196,7 @@ class LiquiFlowTemplate extends BaseTemplate {
 			// Hide standard toc on big screens when the sidebar toc is shown
 			$this->data['bodycontent'] = str_replace( '<div id="toc" class="toc">', '<div id="toc" class="toc hidden-lg hidden-xl">', $this->data['bodycontent'] );
 		}
-		Hooks::run( 'LiquiFlowBodyFirst' );
+		Hooks::run( 'LiquiFlowBodyFirst', array( $this->getSkin() ) );
 		$liquiFlowAlphawiki = $this->config->get( 'LiquiFlowAlphawiki' );
 ?>
 
@@ -548,7 +548,7 @@ class LiquiFlowTemplate extends BaseTemplate {
 			<?php if( strlen( $toc ) > 0 ) {
 				echo str_replace( 'id="toctitle"', 'id="toctitle-sidebar"', $toc );
 			}
-			Hooks::run( 'LiquiFlowSidebar' ); ?>
+			Hooks::run( 'LiquiFlowSidebar', array( $this->getSkin() ) ); ?>
 		</div>
 	</div><!-- /#sidebar-toc-colum -->
 
@@ -565,7 +565,7 @@ class LiquiFlowTemplate extends BaseTemplate {
 					<?php endif;
 
 					Hooks::run( 'LiquiFlowNetworkNotice', array( $this->getSkin()->getContext() ) );
-					Hooks::run( 'LiquiFlowTop' ); ?>
+					Hooks::run( 'LiquiFlowTop', array( $this->getSkin() ) ); ?>
 
 					<h1 id="firstHeading" class="firstHeading">
 						<span dir="auto"><?php $this->html( 'title' ) ?></span>
@@ -744,7 +744,7 @@ $footerLinks = $this->getFooterLinks();
 
 <?php $this->printTrail(); ?>
 
-<?php Hooks::run( 'LiquiFlowEndCode', array( __DIR__ ) );
+<?php Hooks::run( 'LiquiFlowEndCode', array( __DIR__, $this->getSkin() ) );
 if( $this->getSkin()->getUser()->getOption( 'liquiflow-prefs-show-rightclick-menu' ) ) { ?>
 	<menu type="context" id="wiki-menu">
 		<?php

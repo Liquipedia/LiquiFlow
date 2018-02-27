@@ -629,7 +629,7 @@ $footerLinks = $this->getFooterLinks();
 				<div class="footer-links">
 					<div class="col-md-2 hidden-sm hidden-xs">
 						<div class="col">
-							<div id="footer-logo-big"></div>
+							<a id="footer-logo-big" href="http://liquipedia.net"></a>
 						</div>
 					</div>
 

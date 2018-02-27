@@ -683,7 +683,7 @@ $footerLinks = $this->getFooterLinks();
 					<div class="col-md-2 hidden-sm hidden-xs">
 						<h4><?php echo $this->msg( 'liquiflow-affiliated-sites' ); ?></h4>
 						<ul>
-							<li><a href="http://liquipedia.net" target="_blank">Liquipedia Portal</a></li>
+							<li><a href="http://liquipedia.net">Liquipedia Portal</a></li>
 							<li><a href="http://www.teamliquid.net" target="_blank">TeamLiquid.net</a></li>
 							<li><a href="http://www.liquiddota.com" target="_blank">LiquidDota.com</a></li>
 							<li><a href="http://www.liquidhearth.com" target="_blank">LiquidHearth.com</a></li>

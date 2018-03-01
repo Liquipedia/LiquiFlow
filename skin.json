@@ -1,6 +1,6 @@
 {
 	"name": "LiquiFlow",
-	"version": "1.2",
+	"version": "1.3",
 	"author": [
 		"Philip Becker-Ehmck",
 		"[http://fo-nttax.de Alex Winkler]"
@@ -11,10 +11,7 @@
 	"license-name": "GPL-2.0+",
 	"type": "skin",
 	"requires": {
-		"MediaWiki": ">= 1.27.0"
-	},
-	"ConfigRegistry": {
-		"liquiflow": "GlobalVarConfig::newInstance"
+		"MediaWiki": ">= 1.28.0"
 	},
 	"ValidSkinNames": {
 		"liquiflow": "LiquiFlow"
@@ -27,21 +24,21 @@
 	"AutoloadClasses": {
 		"SkinLiquiFlow": "SkinLiquiFlow.php",
 		"LiquiFlowTemplate": "LiquiFlowTemplate.php",
-		"LiquiFlowHooks": "LiquiFlowHooks.php",
-		"LiquiFlowColors": "LiquiFlowColors.php"
+		"Liquipedia\\LiquiFlow\\Hooks": "LiquiFlowHooks.php",
+		"Liquipedia\\LiquiFlow\\Colors": "LiquiFlowColors.php"
 	},
 	"Hooks": {
 		"GetPreferences": [
-			"LiquiFlowHooks::onGetPreferences"
+			"Liquipedia\\LiquiFlow\\Hooks::onGetPreferences"
 		],
 		"MakeGlobalVariablesScript": [
-			"LiquiFlowHooks::onMakeGlobalVariablesScript"
+			"Liquipedia\\LiquiFlow\\Hooks::onMakeGlobalVariablesScript"
 		],
 		"BeforePageDisplay": [
-			"LiquiFlowHooks::onBeforePageDisplay"
+			"Liquipedia\\LiquiFlow\\Hooks::onBeforePageDisplay"
 		],
 		"ResourceLoaderRegisterModules": [
-			"LiquiFlowHooks::onResourceLoaderRegisterModules"
+			"Liquipedia\\LiquiFlow\\Hooks::onResourceLoaderRegisterModules"
 		]
 	},
 	"ResourceModules": {

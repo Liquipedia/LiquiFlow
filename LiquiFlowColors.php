@@ -1,6 +1,8 @@
 <?php
 
-class LiquiFlowColors {
+namespace Liquipedia\LiquiFlow;
+
+class Colors {
 	private static $colors = array(
 		'battlerite' => array(
 			'wiki-dark' => '#945c2e',

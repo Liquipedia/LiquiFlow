@@ -1,9 +1,11 @@
 <?php
 
+namespace Liquipedia\LiquiFlow;
+
 /**
  * Callback functions for hooks
  */
-class LiquiFlowHooks {
+class Hooks {
 	// Add skin-specific user preferences (registered in skin.json)    
 	public static function onGetPreferences( $user, &$preferences ) {
 		// Toggle setting to show dropdown menus on hover instead of click
@@ -51,7 +53,7 @@ class LiquiFlowHooks {
 		return true;
 	}
 
-	public static function onMakeGlobalVariablesScript( array &$vars, OutputPage $out ) {
+	public static function onMakeGlobalVariablesScript( array &$vars, \OutputPage $out ) {
 		$config = $out->getConfig();
 		$context = $out->getContext();
 		// add CodeMirror vars only for edit pages
@@ -82,7 +84,7 @@ class LiquiFlowHooks {
 			);
 
 			$mw = $contObj->getMagicWords();
-			foreach( MagicWord::getDoubleUnderscoreArray()->names as $name ) {
+			foreach( \MagicWord::getDoubleUnderscoreArray()->names as $name ) {
 				if( isset( $mw[$name] ) ) {
 					$caseSensitive = array_shift( $mw[$name] ) == 0 ? 0 : 1;
 					foreach( $mw[$name] as $n ) {
@@ -93,7 +95,7 @@ class LiquiFlowHooks {
 				}
 			}
 
-			foreach( MagicWord::getVariableIDs() as $name ) {
+			foreach( \MagicWord::getVariableIDs() as $name ) {
 				if( isset( $mw[$name] ) ) {
 					$caseSensitive = array_shift( $mw[$name] ) == 0 ? 0 : 1;
 					foreach( $mw[$name] as $n ) {
@@ -107,15 +109,15 @@ class LiquiFlowHooks {
 		);
 	}
 
-	public static function onBeforePageDisplay( OutputPage &$out, Skin &$skin ) {
+	public static function onBeforePageDisplay( \OutputPage &$out, \Skin &$skin ) {
 		if ( $skin->skinname == 'liquiflow' && $skin->getUser()->getOption( 'liquiflow-prefs-use-codemirror' ) == true ) {
 			$out->addModules( 'skins.liquiflow.codemirror' );
 		}
 	}
 
-	public static function onResourceLoaderRegisterModules( ResourceLoader $rl ) {
+	public static function onResourceLoaderRegisterModules( \ResourceLoader $rl ) {
 		global $wgResourceLoaderLESSVars, $wgScriptPath;
-		$wgResourceLoaderLESSVars = array_merge( $wgResourceLoaderLESSVars, LiquiFlowColors::getSkinColors( substr($wgScriptPath, 1) ) );
+		$wgResourceLoaderLESSVars = array_merge( $wgResourceLoaderLESSVars, Colors::getSkinColors( substr( $wgScriptPath, 1 ) ) );
 	}
 
 }

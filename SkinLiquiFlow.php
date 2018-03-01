@@ -1,5 +1,7 @@
 <?php
 
+use Liquipedia\LiquiFlow\Colors;
+
 /**
  * SkinTemplate class for LiquiFlow skin
  * @ingroup Skins
@@ -145,7 +147,7 @@ class SkinLiquiFlow extends SkinTemplate {
 
 		// Meta tags for mobile
 		$out->addHeadItem( 'responsive', '<meta name="viewport" content="width=device-width, initial-scale=1.0">');
-		$out->addHeadItem( 'theme-color', '<meta name="theme-color" content="' . LiquiFlowColors::getSkinColors( substr( $config->get( 'ScriptPath' ), 1 ), 'wiki-dark' ) . '">' );
+		$out->addHeadItem( 'theme-color', '<meta name="theme-color" content="' . Colors::getSkinColors( substr( $config->get( 'ScriptPath' ), 1 ), 'wiki-dark' ) . '">' );
 
 		// Favicons
 		$out->addHeadItem( 'favicons', 

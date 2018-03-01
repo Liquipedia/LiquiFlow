@@ -1,11 +1,20 @@
 <?php
 
+namespace Liquipedia\LiquiFlow;
+use \ExtensionRegistry;
+use \Hooks as MWHooks;
+use \Html;
+use \Linker;
+use \Title;
+use \Sanitizer;
+use \Xml;
+
 /**
  * QuickTemplate class for LiquiFlow skin
  * @ingroup Skins
  */
 
-class LiquiFlowTemplate extends BaseTemplate {
+class Template extends \BaseTemplate {
 
 	private $icons = [
 		// Wiki actions
@@ -196,7 +205,7 @@ class LiquiFlowTemplate extends BaseTemplate {
 			// Hide standard toc on big screens when the sidebar toc is shown
 			$this->data['bodycontent'] = str_replace( '<div id="toc" class="toc">', '<div id="toc" class="toc hidden-lg hidden-xl">', $this->data['bodycontent'] );
 		}
-		Hooks::run( 'LiquiFlowBodyFirst', array( $this->getSkin() ) );
+		MWHooks::run( 'LiquiFlowBodyFirst', array( $this->getSkin() ) );
 		$liquiFlowAlphawiki = $this->config->get( 'LiquiFlowAlphawiki' );
 ?>
 
@@ -548,7 +557,7 @@ class LiquiFlowTemplate extends BaseTemplate {
 			<?php if( strlen( $toc ) > 0 ) {
 				echo str_replace( 'id="toctitle"', 'id="toctitle-sidebar"', $toc );
 			}
-			Hooks::run( 'LiquiFlowSidebar', array( $this->getSkin() ) ); ?>
+			MWHooks::run( 'LiquiFlowSidebar', array( $this->getSkin() ) ); ?>
 		</div>
 	</div><!-- /#sidebar-toc-colum -->
 
@@ -564,8 +573,8 @@ class LiquiFlowTemplate extends BaseTemplate {
 					</div>
 					<?php endif;
 
-					Hooks::run( 'LiquiFlowNetworkNotice', array( $this->getSkin()->getContext() ) );
-					Hooks::run( 'LiquiFlowTop', array( $this->getSkin() ) ); ?>
+					MWHooks::run( 'LiquiFlowNetworkNotice', array( $this->getSkin()->getContext() ) );
+					MWHooks::run( 'LiquiFlowTop', array( $this->getSkin() ) ); ?>
 
 					<h1 id="firstHeading" class="firstHeading">
 						<span dir="auto"><?php $this->html( 'title' ) ?></span>
@@ -744,7 +753,7 @@ $footerLinks = $this->getFooterLinks();
 
 <?php $this->printTrail(); ?>
 
-<?php Hooks::run( 'LiquiFlowEndCode', array( __DIR__, $this->getSkin() ) );
+<?php MWHooks::run( 'LiquiFlowEndCode', array( __DIR__, $this->getSkin() ) );
 if( $this->getSkin()->getUser()->getOption( 'liquiflow-prefs-show-rightclick-menu' ) ) { ?>
 	<menu type="context" id="wiki-menu">
 		<?php
@@ -963,7 +972,7 @@ if( $this->getSkin()->getUser()->getOption( 'liquiflow-prefs-show-rightclick-men
 					if( isset( $this->data['action_urls']['protect'] ) ) {$this->data['action_urls']['default'] = array(
 						'class' => '',
 						'text' => $this->getMsg( 'liquiflow-stability' ),
-						'href' => SpecialPage::getTitleFor( 'Stabilization' )->getLocalUrl( 'page=' . $this->getSkin()->getTitle() ),
+						'href' => \SpecialPage::getTitleFor( 'Stabilization' )->getLocalUrl( 'page=' . $this->getSkin()->getTitle() ),
 						'id' => 'ca-default',
 						'attributes' => ' id="ca-default"',
 						'key' => ' title="'. $this->getMsg( 'liquiflow-stability-tooltip' ) .'"'

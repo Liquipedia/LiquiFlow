@@ -1,15 +1,20 @@
 <?php
 
-use Liquipedia\LiquiFlow\Colors;
+namespace Liquipedia\LiquiFlow;
+use \ExtensionRegistry;
+use \Hooks as MWHooks;
+use \Html;
+use \OutputPage;
+use \SkinTemplate;
 
 /**
  * SkinTemplate class for LiquiFlow skin
  * @ingroup Skins
  */
-class SkinLiquiFlow extends SkinTemplate {
+class Skin extends SkinTemplate {
 	public $skinname = 'liquiflow';
 	public $stylename = 'LiquiFlow';
-	public $template = 'LiquiFlowTemplate';
+	public $template = 'Liquipedia\\LiquiFlow\\Template';
 
 	protected static $bodyId = 'top';
 
@@ -36,8 +41,8 @@ class SkinLiquiFlow extends SkinTemplate {
 						$image = $config->get( 'Server' ) . $image;
 					}
 					// add meta description tag if doesn't exist already
-					$api = new ApiMain(
-						new DerivativeRequest(
+					$api = new \ApiMain(
+						new \DerivativeRequest(
 							$this->getRequest(), // Fallback upon $wgRequest if you can't access context
 							array(
 								'action' => 'query',
@@ -172,7 +177,7 @@ class SkinLiquiFlow extends SkinTemplate {
 			. '<meta name="msapplication-wide310x150logo" content="' . $faviconPath . 'mstile-310x150.png" />'
 			. '<meta name="msapplication-square310x310logo" content="' . $faviconPath . 'mstile-310x310.png" />' );
 
-		Hooks::run( 'LiquiFlowStartCode', array( &$out ) );
+		MWHooks::run( 'LiquiFlowStartCode', array( &$out ) );
 
 		$scripts = array( 'skins.liquiflow', 'skins.liquiflow.bottom', 'jquery.chosen' );
 		$out->addModuleScripts( $scripts );
@@ -266,3 +271,6 @@ class SkinLiquiFlow extends SkinTemplate {
 		];
 	}
 }
+
+// MediaWiki can't handle a namespaced \SkinTemplate without an alias
+class_alias( 'Liquipedia\LiquiFlow\Skin', 'SkinLiquiFlow' );

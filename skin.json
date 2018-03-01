@@ -23,7 +23,7 @@
 	},
 	"AutoloadClasses": {
 		"SkinLiquiFlow": "SkinLiquiFlow.php",
-		"LiquiFlowTemplate": "LiquiFlowTemplate.php",
+		"Liquipedia\\LiquiFlow\\Template": "LiquiFlowTemplate.php",
 		"Liquipedia\\LiquiFlow\\Hooks": "LiquiFlowHooks.php",
 		"Liquipedia\\LiquiFlow\\Colors": "LiquiFlowColors.php"
 	},

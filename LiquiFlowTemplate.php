@@ -635,7 +635,7 @@ class Template extends \BaseTemplate {
 						<div class="footer-links">
 							<div class="col-md-2 hidden-sm hidden-xs">
 								<div class="col">
-									<a id="footer-logo-big" href="http://liquipedia.net"></a>
+									<a id="footer-logo-big" href="https://liquipedia.net"></a>
 								</div>
 							</div>
 

@@ -3,6 +3,7 @@
 namespace Liquipedia\LiquiFlow;
 
 class Colors {
+
 	private static $colors = array(
 		'battlerite' => array(
 			'wiki-dark' => '#945c2e',
@@ -120,15 +121,17 @@ class Colors {
 			'body-bg' => '#f1e8ea',
 		),
 	);
+
 	public static function getSkinColors( $wiki, $entity = null ) {
-		if( $entity == null && isset( self::$colors[$wiki] ) ) {
-			return self::$colors[$wiki];
+		if ( $entity == null && isset( self::$colors[ $wiki ] ) ) {
+			return self::$colors[ $wiki ];
 		} elseif ( $entity == null ) {
-			return self::$colors['commons'];
-		} elseif( isset( self::$colors[$wiki] ) ) {
-			return self::$colors[$wiki][$entity];
+			return self::$colors[ 'commons' ];
+		} elseif ( isset( self::$colors[ $wiki ] ) ) {
+			return self::$colors[ $wiki ][ $entity ];
 		} else {
-			return self::$colors['commons'][$entity];
+			return self::$colors[ 'commons' ][ $entity ];
 		}
 	}
+
 }

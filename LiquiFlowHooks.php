@@ -5,7 +5,7 @@ namespace Liquipedia\LiquiFlow;
 /**
  * Callback functions for hooks
  */
-class Hooks {
+class LFHooks {
 
 	// Add skin-specific user preferences (registered in skin.json)
 	public static function onGetPreferences( $user, &$preferences ) {

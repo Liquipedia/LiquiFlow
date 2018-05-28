@@ -3,7 +3,7 @@
 namespace Liquipedia\LiquiFlow;
 
 use ExtensionRegistry;
-use Hooks as MWHooks;
+use Hooks;
 use Html;
 use OutputPage;
 use SkinTemplate;
@@ -172,7 +172,7 @@ class Skin extends SkinTemplate {
 			. '<meta name="msapplication-wide310x150logo" content="' . $faviconPath . 'mstile-310x150.png" />'
 			. '<meta name="msapplication-square310x310logo" content="' . $faviconPath . 'mstile-310x310.png" />' );
 
-		MWHooks::run( 'LiquiFlowStartCode', array( &$out ) );
+		Hooks::run( 'LiquiFlowStartCode', array( &$out ) );
 
 		$scripts = array( 'skins.liquiflow', 'skins.liquiflow.bottom', 'jquery.chosen' );
 		$out->addModuleScripts( $scripts );

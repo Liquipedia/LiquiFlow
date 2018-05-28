@@ -3,7 +3,7 @@
 namespace Liquipedia\LiquiFlow;
 
 use ExtensionRegistry;
-use Hooks as MWHooks;
+use Hooks;
 use Html;
 use Linker;
 use Title;
@@ -193,7 +193,7 @@ class Template extends \BaseTemplate {
 			// Hide standard toc on big screens when the sidebar toc is shown
 			$this->data[ 'bodycontent' ] = str_replace( '<div id="toc" class="toc">', '<div id="toc" class="toc hidden-lg hidden-xl">', $this->data[ 'bodycontent' ] );
 		}
-		MWHooks::run( 'LiquiFlowBodyFirst', array( $this->getSkin() ) );
+		Hooks::run( 'LiquiFlowBodyFirst', array( $this->getSkin() ) );
 		$liquiFlowAlphawiki = $this->config->get( 'LiquiFlowAlphawiki' );
 		?>
 
@@ -542,17 +542,13 @@ class Template extends \BaseTemplate {
 		<div id="wrap">
 
 			<div id="sidebar-toc-column" class="hidden-xs hidden-sm hidden-md">
-				<div id="sidebar-toc" class="sidebar-toc bs-docs-sidebar hidden-print hidden-xs hidden-sm affix-top <?php
-				if ( isset( $toclimit ) ) {
-					echo 'toclimit-' . $toclimit;
-				}
-				?>" style="" role="complementary">
-					     <?php
-					     if ( strlen( $toc ) > 0 ) {
-						     echo str_replace( 'id="toctitle"', 'id="toctitle-sidebar"', $toc );
-					     }
-					     MWHooks::run( 'LiquiFlowSidebar', array( $this->getSkin() ) );
-					     ?>
+				<div id="sidebar-toc" class="sidebar-toc bs-docs-sidebar hidden-print hidden-xs hidden-sm affix-top <?php echo ( isset( $toclimit ) ? 'toclimit-' . $toclimit : '' ); ?>" style="" role="complementary">
+					<?php
+					if ( strlen( $toc ) > 0 ) {
+						echo str_replace( 'id="toctitle"', 'id="toctitle-sidebar"', $toc );
+					}
+					Hooks::run( 'LiquiFlowSidebar', array( $this->getSkin() ) );
+					?>
 				</div>
 			</div><!-- /#sidebar-toc-colum -->
 
@@ -569,8 +565,8 @@ class Template extends \BaseTemplate {
 								<?php
 							endif;
 
-							MWHooks::run( 'LiquiFlowNetworkNotice', array( $this->getSkin()->getContext() ) );
-							MWHooks::run( 'LiquiFlowTop', array( $this->getSkin() ) );
+							Hooks::run( 'LiquiFlowNetworkNotice', array( $this->getSkin()->getContext() ) );
+							Hooks::run( 'LiquiFlowTop', array( $this->getSkin() ) );
 							?>
 
 							<h1 id="firstHeading" class="firstHeading">
@@ -752,7 +748,7 @@ class Template extends \BaseTemplate {
 		<?php $this->printTrail(); ?>
 
 		<?php
-		MWHooks::run( 'LiquiFlowEndCode', array( __DIR__, $this->getSkin() ) );
+		Hooks::run( 'LiquiFlowEndCode', array( __DIR__, $this->getSkin() ) );
 		if ( $this->getSkin()->getUser()->getOption( 'liquiflow-prefs-show-rightclick-menu' ) ) {
 			?>
 			<menu type="context" id="wiki-menu">

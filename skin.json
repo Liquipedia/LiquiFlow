@@ -1,6 +1,6 @@
 {
 	"name": "LiquiFlow",
-	"version": "1.3",
+	"version": "1.3.1",
 	"author": [
 		"Philip Becker-Ehmck",
 		"[https://fo-nttax.de Alex Winkler]"
@@ -24,21 +24,21 @@
 	"AutoloadClasses": {
 		"SkinLiquiFlow": "SkinLiquiFlow.php",
 		"Liquipedia\\LiquiFlow\\Template": "LiquiFlowTemplate.php",
-		"Liquipedia\\LiquiFlow\\Hooks": "LiquiFlowHooks.php",
+		"Liquipedia\\LiquiFlow\\LFHooks": "LiquiFlowHooks.php",
 		"Liquipedia\\LiquiFlow\\Colors": "LiquiFlowColors.php"
 	},
 	"Hooks": {
 		"GetPreferences": [
-			"Liquipedia\\LiquiFlow\\Hooks::onGetPreferences"
+			"Liquipedia\\LiquiFlow\\LFHooks::onGetPreferences"
 		],
 		"MakeGlobalVariablesScript": [
-			"Liquipedia\\LiquiFlow\\Hooks::onMakeGlobalVariablesScript"
+			"Liquipedia\\LiquiFlow\\LFHooks::onMakeGlobalVariablesScript"
 		],
 		"BeforePageDisplay": [
-			"Liquipedia\\LiquiFlow\\Hooks::onBeforePageDisplay"
+			"Liquipedia\\LiquiFlow\\LFHooks::onBeforePageDisplay"
 		],
 		"ResourceLoaderRegisterModules": [
-			"Liquipedia\\LiquiFlow\\Hooks::onResourceLoaderRegisterModules"
+			"Liquipedia\\LiquiFlow\\LFHooks::onResourceLoaderRegisterModules"
 		]
 	},
 	"ResourceModules": {

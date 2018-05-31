@@ -345,5 +345,6 @@
 	"ResourceFileModulePaths": {
 		"localBasePath": "",
 		"remoteSkinPath": "LiquiFlow"
-	}
+	},
+	"manifest_version": 1
 }

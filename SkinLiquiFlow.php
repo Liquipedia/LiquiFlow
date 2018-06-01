@@ -270,4 +270,4 @@ class Skin extends SkinTemplate {
 }
 
 // MediaWiki can't handle a namespaced \SkinTemplate without an alias
-class_alias( 'Liquipedia\LiquiFlow\Skin', 'SkinLiquiFlow' );
+class_alias( Skin::class, 'SkinLiquiFlow' );

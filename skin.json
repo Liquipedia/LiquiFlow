@@ -1,6 +1,6 @@
 {
 	"name": "LiquiFlow",
-	"version": "1.3.1",
+	"version": "1.4.0",
 	"author": [
 		"Philip Becker-Ehmck",
 		"[https://fo-nttax.de Alex Winkler]"
@@ -11,7 +11,7 @@
 	"license-name": "GPL-2.0+",
 	"type": "skin",
 	"requires": {
-		"MediaWiki": ">= 1.28.0"
+		"MediaWiki": ">= 1.31.0"
 	},
 	"ValidSkinNames": {
 		"liquiflow": "LiquiFlow"
@@ -42,13 +42,7 @@
 		]
 	},
 	"ResourceModules": {
-		"skins.liquiflow": {
-			"styles": [
-				"vendor/font-awesome/css/font-awesome.css",
-				"vendor/font-awesome/font-awesome-custom.css",
-				"vendor/liquipedia-custom-icons/css.css",
-				"vendor/liquipedia-custom-icons/css/Liquipedia-Custom-Icons.css"
-			],
+		"skins.liquiflow.scripts": {
 			"scripts": [
 				"vendor/bootstrap/dist/js/bootstrap.min.js",
 				"scripts/toc.js",
@@ -61,11 +55,18 @@
 				"jquery.chosen"
 			]
 		},
-		"skins.liquiflow.bottom": {
+		"skins.liquiflow.styles": {
 			"styles": [
+				"vendor/font-awesome/css/font-awesome.css",
+				"vendor/font-awesome/font-awesome-custom.css",
+				"vendor/liquipedia-custom-icons/css.css",
+				"vendor/liquipedia-custom-icons/css/Liquipedia-Custom-Icons.css",
 				"vendor/chosen/chosen.css",
 				"vendor/chosen/chosen-custom.css"
 			],
+			"position": "bottom"
+		},
+		"skins.liquiflow.bottom": {
 			"scripts": [
 				"scripts/chosen.js"
 			],
@@ -79,19 +80,13 @@
 			"styles": [
 				"styles/loggedin.less"
 			],
-			"position": "top",
-			"dependencies": [
-				"skins.liquiflow"
-			]
+			"position": "top"
 		},
 		"skins.liquiflow.removebuggyeditortabs": {
 			"styles": [
 				"styles/removebuggyeditortabs.css"
 			],
-			"position": "top",
-			"dependencies": [
-				"skins.liquiflow"
-			]
+			"position": "top"
 		},
 		"skins.liquiflow.codemirror": {
 			"scripts": [
@@ -138,208 +133,139 @@
 			"styles": [
 				"styles/themes/theme/battlerite.less"
 			],
-			"position": "top",
-			"dependencies": [
-				"skins.liquiflow"
-			]
+			"position": "top"
 		},
 		"skins.liquiflow.theme.clashroyale": {
 			"styles": [
 				"styles/themes/theme/clashroyale.less"
 			],
-			"position": "top",
-			"dependencies": [
-				"skins.liquiflow"
-			]
+			"position": "top"
 		},
 		"skins.liquiflow.theme.commons": {
 			"styles": [
 				"styles/themes/theme/commons.less"
 			],
-			"position": "top",
-			"dependencies": [
-				"skins.liquiflow"
-			]
+			"position": "top"
 		},
 		"skins.liquiflow.theme.counterstrike": {
 			"styles": [
 				"styles/themes/theme/counterstrike.less"
 			],
-			"position": "top",
-			"dependencies": [
-				"skins.liquiflow"
-			]
+			"position": "top"
 		},
 		"skins.liquiflow.theme.crossfire": {
 			"styles": [
 				"styles/themes/theme/crossfire.less"
 			],
-			"position": "top",
-			"dependencies": [
-				"skins.liquiflow"
-			]
+			"position": "top"
 		},
 		"skins.liquiflow.theme.dota2": {
 			"styles": [
 				"styles/themes/theme/dota2.less"
 			],
-			"position": "top",
-			"dependencies": [
-				"skins.liquiflow"
-			]
+			"position": "top"
 		},
 		"skins.liquiflow.theme.fighters": {
 			"styles": [
 				"styles/themes/theme/fighters.less"
 			],
-			"position": "top",
-			"dependencies": [
-				"skins.liquiflow"
-			]
+			"position": "top"
 		},
 		"skins.liquiflow.theme.hearthstone": {
 			"styles": [
 				"styles/themes/theme/hearthstone.less"
 			],
-			"position": "top",
-			"dependencies": [
-				"skins.liquiflow"
-			]
+			"position": "top"
 		},
 		"skins.liquiflow.theme.heroes": {
 			"styles": [
 				"styles/themes/theme/heroes.less"
 			],
-			"position": "top",
-			"dependencies": [
-				"skins.liquiflow"
-			]
+			"position": "top"
 		},
 		"skins.liquiflow.theme.leagueoflegends": {
 			"styles": [
 				"styles/themes/theme/leagueoflegends.less"
 			],
-			"position": "top",
-			"dependencies": [
-				"skins.liquiflow"
-			]
+			"position": "top"
 		},
 		"skins.liquiflow.theme.overwatch": {
 			"styles": [
 				"styles/themes/theme/overwatch.less"
 			],
-			"position": "top",
-			"dependencies": [
-				"skins.liquiflow"
-			]
+			"position": "top"
 		},
 		"skins.liquiflow.theme.pokemon": {
 			"styles": [
 				"styles/themes/theme/pokemon.less"
 			],
-			"position": "top",
-			"dependencies": [
-				"skins.liquiflow"
-			]
+			"position": "top"
 		},
 		"skins.liquiflow.theme.pubg": {
 			"styles": [
 				"styles/themes/theme/pubg.less"
 			],
-			"position": "top",
-			"dependencies": [
-				"skins.liquiflow"
-			]
+			"position": "top"
 		},
 		"skins.liquiflow.theme.rainbowsix": {
 			"styles": [
 				"styles/themes/theme/rainbowsix.less"
 			],
-			"position": "top",
-			"dependencies": [
-				"skins.liquiflow"
-			]
+			"position": "top"
 		},
 		"skins.liquiflow.theme.rocketleague": {
 			"styles": [
 				"styles/themes/theme/rocketleague.less"
 			],
-			"position": "top",
-			"dependencies": [
-				"skins.liquiflow"
-			]
+			"position": "top"
 		},
 		"skins.liquiflow.theme.quake": {
 			"styles": [
 				"styles/themes/theme/quake.less"
 			],
-			"position": "top",
-			"dependencies": [
-				"skins.liquiflow"
-			]
+			"position": "top"
 		},
 		"skins.liquiflow.theme.smash": {
 			"styles": [
 				"styles/themes/theme/smash.less"
 			],
-			"position": "top",
-			"dependencies": [
-				"skins.liquiflow"
-			]
+			"position": "top"
 		},
 		"skins.liquiflow.theme.starcraft": {
 			"styles": [
 				"styles/themes/theme/starcraft.less"
 			],
-			"position": "top",
-			"dependencies": [
-				"skins.liquiflow"
-			]
+			"position": "top"
 		},
 		"skins.liquiflow.theme.starcraft2": {
 			"styles": [
 				"styles/themes/theme/starcraft2.less"
 			],
-			"position": "top",
-			"dependencies": [
-				"skins.liquiflow"
-			]
+			"position": "top"
 		},
 		"skins.liquiflow.theme.teamfortress": {
 			"styles": [
 				"styles/themes/theme/teamfortress.less"
 			],
-			"position": "top",
-			"dependencies": [
-				"skins.liquiflow"
-			]
+			"position": "top"
 		},
 		"skins.liquiflow.theme.trackmania": {
 			"styles": [
 				"styles/themes/theme/trackmania.less"
 			],
-			"position": "top",
-			"dependencies": [
-				"skins.liquiflow"
-			]
+			"position": "top"
 		},
 		"skins.liquiflow.theme.warcraft": {
 			"styles": [
 				"styles/themes/theme/warcraft.less"
 			],
-			"position": "top",
-			"dependencies": [
-				"skins.liquiflow"
-			]
+			"position": "top"
 		},
 		"skins.liquiflow.theme.worldofwarcraft": {
 			"styles": [
 				"styles/themes/theme/worldofwarcraft.less"
 			],
-			"position": "top",
-			"dependencies": [
-				"skins.liquiflow"
-			]
+			"position": "top"
 		}
 	},
 	"ResourceFileModulePaths": {

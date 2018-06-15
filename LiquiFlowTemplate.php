@@ -173,7 +173,7 @@ class Template extends \BaseTemplate {
 		$this->html( 'headelement' );
 
 		// extract the standard table of contents from the page html in order to add it to the left sidebar
-		preg_match( "/<div id=\"toctitle\"><h2>(.*?)<\\/h2><\\/div>(.*?)<ul>(.*?)<\\/ul>(.*?)<\\/div>/si", $this->data[ 'bodycontent' ], $match );
+		preg_match( '/<div class="toctitle"(.*?)><h2>(.*?)<\/h2><\/div>(.*?)<ul>(.*?)<\/ul>(.*?)<\/div>/si', $this->data[ 'bodycontent' ], $match );
 		$toc = '';
 		if ( isset( $match[ 0 ] ) ) {
 			$toc = substr( $match[ 0 ], 0, -6 );
@@ -234,7 +234,7 @@ class Template extends \BaseTemplate {
 								}
 								?>">
 									<div class="nav navbar-nav">
-										<?php echo str_replace( 'id="toctitle"', 'id="toctitle-mobile"', $toc ); ?>
+										<?php echo $toc; ?>
 									</div>
 								</div>
 							</div>
@@ -545,7 +545,7 @@ class Template extends \BaseTemplate {
 				<div id="sidebar-toc" class="sidebar-toc bs-docs-sidebar hidden-print hidden-xs hidden-sm affix-top <?php echo ( isset( $toclimit ) ? 'toclimit-' . $toclimit : '' ); ?>" style="" role="complementary">
 					<?php
 					if ( strlen( $toc ) > 0 ) {
-						echo str_replace( 'id="toctitle"', 'id="toctitle-sidebar"', $toc );
+						echo $toc;
 					}
 					Hooks::run( 'LiquiFlowSidebar', array( $this->getSkin() ) );
 					?>

@@ -45,13 +45,13 @@ class Skin extends SkinTemplate {
 					$api = new \ApiMain(
 						new \DerivativeRequest(
 						$this->getRequest(), // Fallback upon $wgRequest if you can't access context
-						array(
+						[
 						'action' => 'query',
 						'exintro' => '',
 						'explaintext' => '',
 						'prop' => 'extracts',
 						'titles' => $title->getFullText()
-						), false // treat this as a POST
+						], false // treat this as a POST
 						), false // Enable write.
 					);
 					$api->execute();
@@ -70,7 +70,7 @@ class Skin extends SkinTemplate {
 							$out->addMeta( 'description', $description );
 						}
 
-						$domain = str_replace( array( '/', 'http', 'https', ':' ), '', $config->get( 'Server' ) );
+						$domain = str_replace( [ '/', 'http', 'https', ':' ], '', $config->get( 'Server' ) );
 						$twitterAccount = '@LiquipediaNet';
 						$out->addHeadItem( 'twitterproperties', Html::element( 'meta', [
 								'name' => 'twitter:card',
@@ -172,9 +172,9 @@ class Skin extends SkinTemplate {
 			. '<meta name="msapplication-wide310x150logo" content="' . $faviconPath . 'mstile-310x150.png" />'
 			. '<meta name="msapplication-square310x310logo" content="' . $faviconPath . 'mstile-310x310.png" />' );
 
-		Hooks::run( 'LiquiFlowStartCode', array( &$out ) );
+		Hooks::run( 'LiquiFlowStartCode', [ &$out ] );
 
-		$scripts = array( 'skins.liquiflow', 'skins.liquiflow.bottom', 'jquery.chosen' );
+		$scripts = [ 'skins.liquiflow.scripts', 'skins.liquiflow.bottom', 'jquery.chosen' ];
 		$out->addModuleScripts( $scripts );
 		if ( $this->getSkin()->getUser()->getOption( 'liquiflow-prefs-show-dropdown-on-hover' ) == true ) {
 			$out->addModuleScripts( 'skins.liquiflow.hoverdropdown' );
@@ -198,12 +198,12 @@ class Skin extends SkinTemplate {
 	 * @param OutputPage $out
 	 */
 	function setupSkinUserCss( OutputPage $out ) {
+		parent::setupSkinUserCss( $out );
 		$scriptPath = $out->getConfig()->get( 'ScriptPath' );
 		$user = $this->getSkin()->getUser();
-		parent::setupSkinUserCss( $out );
 
 		$out->addStyle( 'https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,700,700italic%7CDroid+Sans+Mono%7CRoboto:500%7CSource+Code+Pro:400,700' );
-		$styles = array( 'mediawiki.skinning.interface', 'skins.liquiflow', 'skins.liquiflow.bottom' );
+		$styles = [ 'mediawiki.skinning.interface', 'skins.liquiflow.styles' ];
 		$out->addModuleStyles( $styles );
 		if ( $out->getResourceLoader()->isModuleRegistered( 'skins.liquiflow.theme.' . substr( $scriptPath, 1 ) ) ) {
 			$out->addModuleStyles( 'skins.liquiflow.theme.' . substr( $scriptPath, 1 ) );
@@ -217,8 +217,9 @@ class Skin extends SkinTemplate {
 			$out->addModuleStyles( 'skins.liquiflow.removebuggyeditortabs' );
 		}
 
-		if ( wfMessage( 'liquiflow-css-urls' )->exists() ) {
-			$urlStyles = wfMessage( 'liquiflow-css-urls' )->plain();
+		$liquiflowCssUrls = wfMessage( 'liquiflow-css-urls' );
+		if ( $liquiflowCssUrls->exists() ) {
+			$urlStyles = $liquiflowCssUrls->plain();
 			$urlStyles = explode( "\n", $urlStyles );
 			foreach ( $urlStyles as $urlStyle ) {
 				if ( strpos( trim( $urlStyle ), '*' ) !== 0 ) {

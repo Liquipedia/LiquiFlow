@@ -1251,7 +1251,7 @@ class Template extends \BaseTemplate {
 		if ( isset( $item[ 'text' ] ) ) {
 			$text = $item[ 'text' ];
 		} else {
-			$text = $this->translator->translate( isset( $item[ 'msg' ] ) ? $item[ 'msg' ] : $key );
+			$text = wfMessage( isset( $item[ 'msg' ] ) ? $item[ 'msg' ] : $key )->text();
 		}
 
 		if ( isset( $item[ 'single-id' ] ) && isset( $this->icons[ $item[ 'single-id' ] ] ) ) {
@@ -1276,8 +1276,15 @@ class Template extends \BaseTemplate {
 		if ( isset( $item[ 'href' ] ) || isset( $options[ 'link-fallback' ] ) ) {
 			$attrs = $item;
 			foreach ( [ 'single-id', 'text', 'msg', 'tooltiponly', 'context', 'primary',
-			'tooltip-params' ] as $k ) {
+			'tooltip-params', 'exists' ] as $k ) {
 				unset( $attrs[ $k ] );
+			}
+
+			if ( isset( $attrs[ 'data' ] ) ) {
+				foreach ( $attrs[ 'data' ] as $key => $value ) {
+					$attrs[ 'data-' . $key ] = $value;
+				}
+				unset( $attrs[ 'data' ] );
 			}
 
 			if ( isset( $item[ 'id' ] ) && !isset( $item[ 'single-id' ] ) ) {
@@ -1290,13 +1297,17 @@ class Template extends \BaseTemplate {
 			}
 
 			if ( isset( $item[ 'single-id' ] ) ) {
+				$tooltipOption = isset( $item[ 'exists' ] ) && $item[ 'exists' ] === false ? 'nonexisting' : null;
+
 				if ( isset( $item[ 'tooltiponly' ] ) && $item[ 'tooltiponly' ] ) {
-					$title = Linker::titleAttrib( $item[ 'single-id' ], null, $tooltipParams );
+					$title = Linker::titleAttrib( $item[ 'single-id' ], $tooltipOption, $tooltipParams );
 					if ( $title !== false ) {
 						$attrs[ 'title' ] = $title;
 					}
 				} else {
-					$tip = Linker::tooltipAndAccesskeyAttribs( $item[ 'single-id' ], $tooltipParams );
+					$tip = Linker::tooltipAndAccesskeyAttribs(
+							$item[ 'single-id' ], $tooltipParams, $tooltipOption
+					);
 					if ( isset( $tip[ 'title' ] ) && $tip[ 'title' ] !== false ) {
 						$attrs[ 'title' ] = $tip[ 'title' ];
 					}

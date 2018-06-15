@@ -51,8 +51,7 @@
 			],
 			"position": "top",
 			"dependencies": [
-				"mediawiki.user",
-				"jquery.chosen"
+				"mediawiki.user"
 			]
 		},
 		"skins.liquiflow.styles": {
@@ -60,20 +59,14 @@
 				"vendor/font-awesome/css/font-awesome.css",
 				"vendor/font-awesome/font-awesome-custom.css",
 				"vendor/liquipedia-custom-icons/css.css",
-				"vendor/liquipedia-custom-icons/css/Liquipedia-Custom-Icons.css",
-				"vendor/chosen/chosen.css",
-				"vendor/chosen/chosen-custom.css"
+				"vendor/liquipedia-custom-icons/css/Liquipedia-Custom-Icons.css"
 			],
 			"position": "bottom"
 		},
 		"skins.liquiflow.bottom": {
-			"scripts": [
-				"scripts/chosen.js"
-			],
 			"position": "bottom",
 			"dependencies": [
-				"skins.liquiflow",
-				"jquery.chosen"
+				"skins.liquiflow"
 			]
 		},
 		"skins.liquiflow.loggedin": {

@@ -24,4 +24,4 @@ License
 
 Version
 =======
-This version is for MediaWiki 1.27+, for a MediaWiki 1.25 version go to the 1.25 branch.
+This version is for MediaWiki 1.31+, for a MediaWiki 1.28 version go to the 1.28 branch and for a MediaWiki 1.25 version go to the 1.25 branch.

@@ -1,6 +1,6 @@
 {
 	"name": "LiquiFlow",
-	"version": "1.4.0",
+	"version": "1.4.1",
 	"author": [
 		"Philip Becker-Ehmck",
 		"[https://fo-nttax.de Alex Winkler]"
@@ -122,6 +122,12 @@
 				"skins.liquiflow"
 			]
 		},
+		"skins.liquiflow.theme.artifact": {
+			"styles": [
+				"styles/themes/theme/artifact.less"
+			],
+			"position": "top"
+		},
 		"skins.liquiflow.theme.battlerite": {
 			"styles": [
 				"styles/themes/theme/battlerite.less"
@@ -161,6 +167,12 @@
 		"skins.liquiflow.theme.fighters": {
 			"styles": [
 				"styles/themes/theme/fighters.less"
+			],
+			"position": "top"
+		},
+		"skins.liquiflow.theme.fortnite": {
+			"styles": [
+				"styles/themes/theme/fortnite.less"
 			],
 			"position": "top"
 		},

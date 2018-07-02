@@ -5,6 +5,11 @@ namespace Liquipedia\LiquiFlow;
 class Colors {
 
 	private static $colors = array(
+		'artifact' => array(
+			'wiki-dark' => '#484848',
+			'wiki-light' => '#fbf6df',
+			'body-bg' => '#dee2ec',
+		),
 		'battlerite' => array(
 			'wiki-dark' => '#945c2e',
 			'wiki-light' => '#a8b7bb',
@@ -38,6 +43,11 @@ class Colors {
 		'fighters' => array(
 			'wiki-dark' => '#444444',
 			'wiki-light' => '#ffa800',
+			'body-bg' => '#e5e5e5',
+		),
+		'fortnite' => array(
+			'wiki-dark' => '#5d5d16',
+			'wiki-light' => '#fbf2df',
 			'body-bg' => '#e5e5e5',
 		),
 		'hearthstone' => array(

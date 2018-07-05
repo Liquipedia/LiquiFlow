@@ -104,7 +104,7 @@ $( document ).ready(function() {
 	} );
 
 	/* Popover achievements */
-	$( '[data-toggle="popover-hover"]' ).hover( function() {
+	$( '[data-toggle="popover-hover"]' ).mouseover( function() {
 		$(this).popover( 'show' );
 	}, function() {
 		$(this).popover( 'hide' );

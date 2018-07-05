@@ -45,7 +45,7 @@
 				settings = $.extend( true, {}, defaults, options, data ),
 				timeout, timeoutHover;
 
-			$parent.hover( function( event ) {
+			$parent.mouseover( function( event ) {
 				// so a neighbor can't open the dropdown
 				if( !$parent.hasClass( 'open' ) && !$this.is( event.target ) ) {
 					// stop this event, stop executing any code
@@ -65,7 +65,7 @@
 			} );
 
 			// this helps with button groups!
-			$this.hover( function( event ) {
+			$this.mouseover( function( event ) {
 				// this helps prevent a double event from firing.
 				// see https://github.com/CWSpear/bootstrap-hover-dropdown/issues/55
 				if( !$parent.hasClass( 'open' ) && !$parent.is( event.target ) ) {
@@ -81,7 +81,7 @@
 			$parent.find( '.dropdown-submenu' ).each( function(){
 				var $this = $(this);
 				var subTimeout;
-				$this.hover( function() {
+				$this.mouseover( function() {
 					window.clearTimeout( subTimeout );
 					$this.children( '.dropdown-menu' ).show();
 					// always close submenu siblings instantly

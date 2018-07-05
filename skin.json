@@ -1,6 +1,6 @@
 {
 	"name": "LiquiFlow",
-	"version": "1.4.1",
+	"version": "1.5.0",
 	"author": [
 		"Philip Becker-Ehmck",
 		"[https://fo-nttax.de Alex Winkler]"
@@ -33,9 +33,6 @@
 		],
 		"MakeGlobalVariablesScript": [
 			"Liquipedia\\LiquiFlow\\LFHooks::onMakeGlobalVariablesScript"
-		],
-		"BeforePageDisplay": [
-			"Liquipedia\\LiquiFlow\\LFHooks::onBeforePageDisplay"
 		],
 		"ResourceLoaderRegisterModules": [
 			"Liquipedia\\LiquiFlow\\LFHooks::onResourceLoaderRegisterModules"
@@ -80,38 +77,6 @@
 				"styles/removebuggyeditortabs.css"
 			],
 			"position": "top"
-		},
-		"skins.liquiflow.codemirror": {
-			"scripts": [
-				"scripts/codemirror.js"
-			],
-			"position": "bottom",
-			"dependencies": [
-				"skins.liquiflow.codemirror.lib",
-				"user.options",
-				"ext.wikiEditor"
-			]
-		},
-		"skins.liquiflow.codemirror.lib": {
-			"styles": [
-				"vendor/codemirror/lib/codemirror.css",
-				"vendor/codemirror/addon/display/fullscreen.css",
-				"vendor/codemirror-mode/mediawiki/mediawiki.css",
-				"styles/codemirror.css"
-			],
-			"scripts": [
-				"vendor/codemirror/lib/codemirror.js",
-				"vendor/codemirror/addon/display/fullscreen.js",
-				"vendor/codemirror/addon/edit/matchbrackets.js",
-				"vendor/codemirror/addon/selection/active-line.js",
-				"vendor/codemirror/mode/xml/xml.js",
-				"vendor/codemirror/mode/css/css.js",
-				"vendor/codemirror/mode/javascript/javascript.js",
-				"vendor/codemirror/mode/htmlmixed/htmlmixed.js",
-				"vendor/codemirror/mode/lua/lua.js",
-				"vendor/codemirror-mode/mediawiki/mediawiki.js"
-			],
-			"position": "bottom"
 		},
 		"skins.liquiflow.hoverdropdown": {
 			"scripts": [

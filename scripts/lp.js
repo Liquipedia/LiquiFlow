@@ -104,11 +104,11 @@ $( document ).ready(function() {
 	} );
 
 	/* Popover achievements */
-	$( '[data-toggle="popover-hover"]' ).mouseover( function() {
+	$( '[data-toggle="popover-hover"]' ).on( { 'mouseenter': function() {
 		$(this).popover( 'show' );
-	}, function() {
+	}, 'mouseleave': function() {
 		$(this).popover( 'hide' );
-	} );
+	} } );
 
 	/* Popover for other things 8on click) */
 	$( function() {

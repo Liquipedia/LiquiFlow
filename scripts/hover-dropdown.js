@@ -45,7 +45,7 @@
 				settings = $.extend( true, {}, defaults, options, data ),
 				timeout, timeoutHover;
 
-			$parent.mouseover( function( event ) {
+			$parent.on( { 'mouseenter': function( event ) {
 				// so a neighbor can't open the dropdown
 				if( !$parent.hasClass( 'open' ) && !$this.is( event.target ) ) {
 					// stop this event, stop executing any code
@@ -54,7 +54,7 @@
 				}
 
 				openDropdown( event );
-			}, function() {
+			}, 'mouseleave': function() {
 				// clear timer for hover event
 				window.clearTimeout( timeoutHover );
 				timeout = window.setTimeout( function() {
@@ -62,10 +62,10 @@
 					$parent.removeClass( 'open' );
 					$this.trigger( hideEvent );
 				}, settings.delay );
-			} );
+			} } );
 
 			// this helps with button groups!
-			$this.mouseover( function( event ) {
+			$this.on( 'mouseenter', function( event ) {
 				// this helps prevent a double event from firing.
 				// see https://github.com/CWSpear/bootstrap-hover-dropdown/issues/55
 				if( !$parent.hasClass( 'open' ) && !$parent.is( event.target ) ) {
@@ -81,7 +81,7 @@
 			$parent.find( '.dropdown-submenu' ).each( function(){
 				var $this = $(this);
 				var subTimeout;
-				$this.mouseover( function() {
+				$this.on( 'mouseenter', function() {
 					window.clearTimeout( subTimeout );
 					$this.children( '.dropdown-menu' ).show();
 					// always close submenu siblings instantly

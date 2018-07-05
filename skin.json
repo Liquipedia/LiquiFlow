@@ -43,8 +43,7 @@
 			"scripts": [
 				"vendor/bootstrap/dist/js/bootstrap.min.js",
 				"scripts/toc.js",
-				"scripts/lp.js",
-				"scripts/ie10-viewport-bug-workaround.js"
+				"scripts/lp.js"
 			],
 			"position": "top",
 			"dependencies": [

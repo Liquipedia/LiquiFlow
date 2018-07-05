@@ -59,7 +59,7 @@ function adjustSidebar() {
 
 	$( function() {
 		var $window = $( window );
-		var $body   = $( document.body );
+		var $body = $( document.body );
 
 		$body.scrollspy( {
 			target: '#sidebar-toc',
@@ -71,16 +71,16 @@ function adjustSidebar() {
 			$body.scrollspy( 'refresh' );
 		} );
 
-		$( window ).scroll( function() {
+		$window.scroll( function() {
 			adjustSidebar();
 		} );
 
-		$( window ).resize( function() {
+		$window.resize( function() {
 			$( '#sidebar-toc-column' ).css( 'height', $( '#main-content-column' ).height() + 12 );
 			adjustSidebar();
 		} );
 
-		$( window ).load( function() {
+		$window.on( 'load', function() {
 			adjustSidebar();
 		} );
 	});

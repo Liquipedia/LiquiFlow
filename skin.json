@@ -53,9 +53,7 @@
 		"skins.liquiflow.styles": {
 			"styles": [
 				"vendor/font-awesome/css/font-awesome.css",
-				"vendor/font-awesome/font-awesome-custom.css",
-				"vendor/liquipedia-custom-icons/css.css",
-				"vendor/liquipedia-custom-icons/css/Liquipedia-Custom-Icons.css"
+				"vendor/font-awesome/font-awesome-custom.css"
 			],
 			"position": "bottom"
 		},

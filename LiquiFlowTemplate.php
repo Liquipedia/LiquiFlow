@@ -659,6 +659,7 @@ class Template extends \BaseTemplate {
 									<li><a href="/leagueoflegends/" target="_blank">League of Legends</a></li>
 									<li><a href="/warcraft/" target="_blank">Warcraft III</a></li>
 									<li><a href="/rainbowsix/" target="_blank">Rainbow Six</a></li>
+									<li><a href="/pubg/" target="_blank">PUBG</a></li>
 									<li><a href="/quake/" target="_blank">Quake</a></li>
 									<li><a href="/teamfortress/" target="_blank">Team Fortress</a></li>
 									<li><a href="/worldofwarcraft/" target="_blank">World of Warcraft</a></li>

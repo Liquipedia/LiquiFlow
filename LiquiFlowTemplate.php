@@ -1115,7 +1115,7 @@ class Template extends \BaseTemplate {
 								<li><a href="<?php echo Title::newFromText( 'StreamPage', NS_SPECIAL )->getLocalURL(); ?>"><span class="fa fa-fw fa-television"></span> <?php $this->msg( 'action-stream' ); ?></a></li>
 							<?php } ?>
 							<?php if ( $this->installedExtensions[ 'BugTracker' ] ) { ?>
-								<li><a href="<?php echo Title::newFromText( 'BugTracker', NS_SPECIAL )->getLocalURL(); ?>"><span class="fa fa-fw fa-television"></span> <?php $this->msg( 'bugtracker' ); ?></a></li>
+								<li><a href="<?php echo Title::newFromText( 'BugTracker', NS_SPECIAL )->getLocalURL(); ?>"><span class="fa fa-fw fa-bug"></span> <?php $this->msg( 'bugtracker' ); ?></a></li>
 							<?php } ?>
 						<?php } ?>
 

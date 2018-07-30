@@ -115,6 +115,11 @@ class Template extends \BaseTemplate {
 		} else {
 			$this->installedExtensions[ 'StreamPage' ] = false;
 		}
+		if ( ExtensionRegistry::getInstance()->isLoaded( 'BugTracker' ) ) {
+			$this->installedExtensions[ 'BugTracker' ] = true;
+		} else {
+			$this->installedExtensions[ 'BugTracker' ] = false;
+		}
 	}
 
 	/**
@@ -1044,42 +1049,42 @@ class Template extends \BaseTemplate {
 						$externalLink = $this->getSkin()->getTitle()->getFullURL();
 						?>
 						<li>
-							<a data-type="twitter" onclick="Share.twitter('<?php echo $externalLink; ?>', '<?php echo $this->data[ 'title' ]; ?>')">
+							<a data-type="twitter" onclick="Share.twitter( '<?php echo $externalLink; ?>', '<?php echo $this->data[ 'title' ]; ?>' )">
 								<span class="fa fa-fw fa-twitter"></span> Twitter
 							</a>
 						</li>
 						<li>
-							<a data-type="facebook" onclick="Share.facebook('<?php echo $externalLink; ?>', '<?php echo $this->data[ 'title' ]; ?>')">
+							<a data-type="facebook" onclick="Share.facebook( '<?php echo $externalLink; ?>', '<?php echo $this->data[ 'title' ]; ?>' )">
 								<span class="fa fa-fw fa-facebook"></span> Facebook
 							</a>
 						</li>
 						<li>
-							<a data-type="reddit" onclick="Share.reddit('<?php echo $externalLink; ?>', '<?php echo $this->data[ 'title' ]; ?>')">
+							<a data-type="reddit" onclick="Share.reddit( '<?php echo $externalLink; ?>', '<?php echo $this->data[ 'title' ]; ?>' )">
 								<span class="fa fa-fw fa-reddit-alien"></span> Reddit
 							</a>
 						</li>
 						<li>
-							<a data-type="googleplus" onclick="Share.googleplus('<?php echo $externalLink; ?>')">
+							<a data-type="googleplus" onclick="Share.googleplus( '<?php echo $externalLink; ?>' )">
 								<span class="fa fa-fw fa-google-plus"></span> Google+
 							</a>
 						</li>
 						<li>
-							<a data-type="qq" onclick="Share.qq('<?php echo $externalLink; ?>', '<?php echo $this->data[ 'title' ]; ?>')">
+							<a data-type="qq" onclick="Share.qq( '<?php echo $externalLink; ?>', '<?php echo $this->data[ 'title' ]; ?>' )">
 								<span class="fa fa-fw fa-qq"></span> Tencent QQ
 							</a>
 						</li>
 						<li>
-							<a data-type="vk" onclick="Share.vk('<?php echo $externalLink; ?>', '<?php echo $this->data[ 'title' ]; ?>')">
+							<a data-type="vk" onclick="Share.vk( '<?php echo $externalLink; ?>', '<?php echo $this->data[ 'title' ]; ?>' )">
 								<span class="fa fa-fw fa-vk"></span> VK
 							</a>
 						</li>
 						<li>
-							<a data-type="weibo" onclick="Share.weibo('<?php echo $externalLink; ?>', '<?php echo $this->data[ 'title' ]; ?>')">
+							<a data-type="weibo" onclick="Share.weibo( '<?php echo $externalLink; ?>', '<?php echo $this->data[ 'title' ]; ?>' )">
 								<span class="fa fa-fw fa-weibo"></span> Weibo
 							</a>
 						</li>
 						<li class="hidden-lg">
-							<a data-type="whatsapp" onclick="Share.whatsapp('<?php echo $externalLink; ?>', '<?php echo $this->data[ 'title' ]; ?>')">
+							<a data-type="whatsapp" onclick="Share.whatsapp( '<?php echo $externalLink; ?>', '<?php echo $this->data[ 'title' ]; ?>' )">
 								<span class="fa fa-fw fa-whatsapp"></span> WhatsApp
 							</a>
 						</li>
@@ -1108,6 +1113,9 @@ class Template extends \BaseTemplate {
 							<?php } ?>
 							<?php if ( $this->installedExtensions[ 'StreamPage' ] ) { ?>
 								<li><a href="<?php echo Title::newFromText( 'StreamPage', NS_SPECIAL )->getLocalURL(); ?>"><span class="fa fa-fw fa-television"></span> <?php $this->msg( 'action-stream' ); ?></a></li>
+							<?php } ?>
+							<?php if ( $this->installedExtensions[ 'BugTracker' ] ) { ?>
+								<li><a href="<?php echo Title::newFromText( 'BugTracker', NS_SPECIAL )->getLocalURL(); ?>"><span class="fa fa-fw fa-television"></span> <?php $this->msg( 'bugtracker' ); ?></a></li>
 							<?php } ?>
 						<?php } ?>
 

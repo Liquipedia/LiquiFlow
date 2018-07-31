@@ -15,7 +15,6 @@ class Skin extends SkinTemplate {
 	public $skinname = 'liquiflow';
 	public $stylename = 'LiquiFlow';
 	public $template = 'Liquipedia\\LiquiFlow\\Template';
-	protected static $bodyId = 'top';
 
 	/**
 	 * Initializes output page and sets up skin-specific parameters

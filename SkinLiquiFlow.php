@@ -73,9 +73,6 @@ class Skin extends SkinTemplate {
 		if ( $user->isLoggedIn() ) {
 			$out->addModuleStyles( 'skins.liquiflow.loggedin' );
 		}
-		if ( !$user->getOption( 'liquiflow-prefs-show-buggy-editor-tabs' ) ) {
-			$out->addModuleStyles( 'skins.liquiflow.removebuggyeditortabs' );
-		}
 
 		$liquiflowCssUrls = $out->msg( 'liquiflow-css-urls' );
 		if ( $liquiflowCssUrls->exists() ) {
@@ -90,27 +87,6 @@ class Skin extends SkinTemplate {
 					$out->addStyle( $urlStyle );
 				}
 			}
-		}
-	}
-
-	/**
-	 * Adds stuff to the body element.
-	 *
-	 * @param OutputPage $out
-	 * @param array &$bodyAttrs Array of attributes that will be set on the body element
-	 */
-	function addToBodyAttributes( $out, &$bodyAttrs ) {
-		$scriptPath = $out->getConfig()->get( 'ScriptPath' );
-		$user = $this->getSkin()->getUser();
-		$bodyAttrs[ 'id' ] = static::$bodyId;
-		if ( $user->isLoggedIn() ) {
-			$bodyAttrs[ 'class' ] .= ' logged-in';
-		} else {
-			$bodyAttrs[ 'class' ] .= ' logged-out';
-		}
-		$bodyAttrs[ 'class' ] .= ' wiki-' . substr( $scriptPath, 1 );
-		if ( $user->getOption( 'liquiflow-prefs-show-rightclick-menu' ) ) {
-			$bodyAttrs[ 'contextmenu' ] = 'wiki-menu';
 		}
 	}
 

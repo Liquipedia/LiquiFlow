@@ -69,12 +69,6 @@
 			],
 			"position": "top"
 		},
-		"skins.liquiflow.removebuggyeditortabs": {
-			"styles": [
-				"styles/removebuggyeditortabs.css"
-			],
-			"position": "top"
-		},
 		"skins.liquiflow.hoverdropdown": {
 			"scripts": [
 				"scripts/hover-dropdown.js"

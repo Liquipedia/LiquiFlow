@@ -755,28 +755,7 @@ class Template extends \BaseTemplate {
 
 		<?php
 		Hooks::run( 'LiquiFlowEndCode', array( __DIR__, $this->getSkin() ) );
-		if ( $this->getSkin()->getUser()->getOption( 'liquiflow-prefs-show-rightclick-menu' ) ) {
-			?>
-			<menu type="context" id="wiki-menu">
-				<?php
-				foreach ( $this->data[ 'namespace_urls' ] as $url ) {
-					echo '<menuitem data-action="' . $url[ 'href' ] . '" label="' . $url[ 'text' ] . '" onclick="window.location.href = this.dataset.action;"></menuitem>';
-				}
-				if ( count( $this->data[ 'view_urls' ] ) > 0 ) {
-					echo '<hr>';
-				}
-				foreach ( $this->data[ 'view_urls' ] as $url ) {
-					echo '<menuitem data-action="' . $url[ 'href' ] . '" label="' . $url[ 'text' ] . '" onclick="window.location.href = this.dataset.action;"></menuitem>';
-				}
-				if ( count( $this->data[ 'action_urls' ] ) > 0 ) {
-					echo '<hr>';
-				}
-				foreach ( $this->data[ 'action_urls' ] as $url ) {
-					echo '<menuitem data-action="' . $url[ 'href' ] . '" label="' . $url[ 'text' ] . '" onclick="window.location.href = this.dataset.action;"></menuitem>';
-				}
-				?>
-			</menu>
-		<?php } ?>
+		?>
 		</body>
 		</html>
 

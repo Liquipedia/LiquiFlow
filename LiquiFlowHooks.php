@@ -15,20 +15,6 @@ class LFHooks {
 			'label-message' => 'liquiflow-prefs-show-dropdown-on-hover',
 			'section' => 'rendering/liquiflow'
 		);
-
-		// Setting to show old editor tabs
-		$preferences[ 'liquiflow-prefs-show-buggy-editor-tabs' ] = array(
-			'type' => 'check',
-			'label-message' => 'liquiflow-prefs-show-buggy-editor-tabs',
-			'section' => 'editing/liquiflow'
-		);
-
-		// Setting for right click menu
-		$preferences[ 'liquiflow-prefs-show-rightclick-menu' ] = array(
-			'type' => 'check',
-			'label-message' => 'liquiflow-prefs-show-rightclick-menu',
-			'section' => 'rendering/liquiflow'
-		);
 		return true;
 	}
 

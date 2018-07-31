@@ -39,8 +39,6 @@
 	"liquiflow-send-an-email": "Отправить на эл. почту",
 	"liquiflow-share": "Поделиться",
 	"liquiflow-prefs-show-dropdown-on-hover": "Показать выпадающее меню при наведении",
-	"liquiflow-prefs-show-buggy-editor-tabs": "Показать вкладки редактора багов",
-	"liquiflow-prefs-show-rightclick-menu": "Включить контекстное меню по клику правой кнопки мыши (Firefox)",
 	"liquiflow-stability": "Стабильные",
 	"liquiflow-stability-tooltip": "Настройки обеспечения качества",
 	"liquiflow-tools": "Инструменты",

@@ -34,8 +34,6 @@
 	"liquiflow-send-an-email": "Sende eine Email",
 	"liquiflow-share": "Teilen",
 	"liquiflow-prefs-show-dropdown-on-hover": "Zeige ausgeklapptes Menü bei schwebendem Mauszeiger",
-	"liquiflow-prefs-show-buggy-editor-tabs": "Verwende Editor tabs (buggy)",
-	"liquiflow-prefs-show-rightclick-menu": "Verwende das Rechtsklick-Kontextmenü (Firefox)",
 	"liquiflow-stability": "Stabilität",
 	"liquiflow-stability-tooltip": "Einstellungen zur Qualitätssicherung",
 	"liquiflow-tools": "Werkzeuge",

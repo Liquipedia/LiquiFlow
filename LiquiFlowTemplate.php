@@ -73,6 +73,10 @@ class Template extends \BaseTemplate {
 		'pt-logout' => 'fa fa-fw fa-sign-out',
 		'pt-login' => 'fa fa-fw fa-sign-in',
 		'pt-adminlinks' => 'fa fa-fw fa-gavel',
+		// Extensions
+		'ext-bugtracker' => 'fa fa-fw fa-bug',
+		'ext-createteams' => 'fa fa-fw fa-code',
+		'ext-streampage' => 'fa fa-fw fa-television',
 	];
 	private $adminDropdown = [
 		'about' => [
@@ -100,25 +104,10 @@ class Template extends \BaseTemplate {
 	private $installedExtensions = [];
 
 	private function checkInstalledExtensions() {
-		if ( ExtensionRegistry::getInstance()->isLoaded( 'CreateTeams' ) ) {
-			$this->installedExtensions[ 'CreateTeams' ] = true;
-		} else {
-			$this->installedExtensions[ 'CreateTeams' ] = false;
-		}
 		if ( wfMessage( 'flaggedrevs-desc' )->exists() ) {
 			$this->installedExtensions[ 'FlaggedRevs' ] = true;
 		} else {
 			$this->installedExtensions[ 'FlaggedRevs' ] = false;
-		}
-		if ( ExtensionRegistry::getInstance()->isLoaded( 'StreamPage' ) ) {
-			$this->installedExtensions[ 'StreamPage' ] = true;
-		} else {
-			$this->installedExtensions[ 'StreamPage' ] = false;
-		}
-		if ( ExtensionRegistry::getInstance()->isLoaded( 'BugTracker' ) ) {
-			$this->installedExtensions[ 'BugTracker' ] = true;
-		} else {
-			$this->installedExtensions[ 'BugTracker' ] = false;
 		}
 	}
 
@@ -1085,18 +1074,16 @@ class Template extends \BaseTemplate {
 
 						<li><a href="<?php echo Title::newFromText( 'Random', NS_SPECIAL )->getLocalURL(); ?>"<?php echo ( $view == 'mobile' ? '' : ' ' . Xml::expandAttributes( Linker::tooltipAndAccesskeyAttribs( 'n-randompage' ) ) ); ?>><span class="fa fa-fw fa-random"></span> <?php $this->msg( 'randompage' ); ?></a></li>
 
-						<?php if ( $this->installedExtensions[ 'CreateTeams' ] || $this->installedExtensions[ 'StreamPage' ] ) { ?>
-							<li class="divider"></li>
-							<?php if ( $this->installedExtensions[ 'CreateTeams' ] ) { ?>
-								<li><a href="<?php echo Title::newFromText( 'CreateTeams', NS_SPECIAL )->getLocalURL(); ?>"><span class="fa fa-fw fa-code"></span> <?php $this->msg( 'createteams' ); ?></a></li>
-							<?php } ?>
-							<?php if ( $this->installedExtensions[ 'StreamPage' ] ) { ?>
-								<li><a href="<?php echo Title::newFromText( 'StreamPage', NS_SPECIAL )->getLocalURL(); ?>"><span class="fa fa-fw fa-television"></span> <?php $this->msg( 'action-stream' ); ?></a></li>
-							<?php } ?>
-							<?php if ( $this->installedExtensions[ 'BugTracker' ] ) { ?>
-								<li><a href="<?php echo Title::newFromText( 'BugTracker', NS_SPECIAL )->getLocalURL(); ?>"><span class="fa fa-fw fa-bug"></span> <?php $this->msg( 'bugtracker' ); ?></a></li>
-							<?php } ?>
-						<?php } ?>
+						<?php
+						$extensionsMenu = [];
+						Hooks::run( 'LPExtensionMenu', [ &$extensionsMenu, $this->getSkin() ] );
+						if ( count( $extensionsMenu ) > 0 ) {
+							echo '<li class="divider"></li>';
+							foreach ( $extensionsMenu as $extensionKey => $extensionSpecialPage ) {
+								echo '<li><a href="' . Title::newFromText( $extensionSpecialPage, NS_SPECIAL )->getLocalURL() . '">' . ( isset( $this->icons[ 'ext-' . $extensionKey ] ) ? '<span class="' . $this->icons[ 'ext-' . $extensionKey ] . '"></span> ' : '' ) . $this->getMsg( 'lpextmenu-' . $extensionKey )->text() . '</a></li>';
+							}
+						}
+						?>
 
 						<li class="divider"></li>
 						<li class="dropdown-header"><?php echo $this->msg( 'liquiflow-tools-specific' ); ?></li>

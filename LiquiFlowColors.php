@@ -16,9 +16,9 @@ class Colors {
 			'body-bg' => '#dee2ec',
 		),
 		'clashroyale' => array(
-			'wiki-dark' => '#444444',
-			'wiki-light' => '#ffa800',
-			'body-bg' => '#e5e5e5',
+			'wiki-dark' => '#31519c',
+			'wiki-light' => '#e6e6e6',
+			'body-bg' => '#e6e6e6',
 		),
 		'commons' => array(
 			'wiki-dark' => '#e5e5e5',

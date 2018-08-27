@@ -658,6 +658,7 @@ class Template extends \BaseTemplate {
 									<li><a href="/teamfortress/" target="_blank">Team Fortress</a></li>
 									<li><a href="/worldofwarcraft/" target="_blank">World of Warcraft</a></li>
 									<li><a href="/fighters/" target="_blank">Fighting Games</a></li>
+									<li><a href="/clashroyale/" target="_blank">Clash Royale</a></li>
 								</ul>
 							</div>
 							<div class="col-md-2 col-sm-3 col-xs-6">

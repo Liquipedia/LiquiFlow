@@ -642,6 +642,7 @@ class Template extends \BaseTemplate {
 										<li><a href="/rocketleague/" target="_blank">Rocket League</a></li>
 										<li><a href="/smash/" target="_blank">Smash</a></li>
 										<li><a href="/starcraft2/" target="_blank">StarCraft II</a></li>
+										<li><a href="/rainbowsix/" target="_blank">Rainbow Six</a></li>
 										<li><a href="/commons/" target="_blank">Commons</a></li>
 									</ul>
 								</div>
@@ -652,7 +653,6 @@ class Template extends \BaseTemplate {
 								<ul>
 									<li><a href="/leagueoflegends/" target="_blank">League of Legends</a></li>
 									<li><a href="/warcraft/" target="_blank">Warcraft III</a></li>
-									<li><a href="/rainbowsix/" target="_blank">Rainbow Six</a></li>
 									<li><a href="/pubg/" target="_blank">PUBG</a></li>
 									<li><a href="/quake/" target="_blank">Quake</a></li>
 									<li><a href="/teamfortress/" target="_blank">Team Fortress</a></li>

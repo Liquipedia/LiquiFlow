@@ -24,6 +24,10 @@ class Skin extends SkinTemplate {
 		parent::initPage( $out );
 		$config = $out->getConfig();
 
+		if ( $out->getUser()->getBoolOption( 'teamliquidintegration-enable-beta-features' ) ) {
+			$out->addHeadItem( 'migratetrace', '<script>jQuery.migrateTrace = true;</script>' );
+		}
+
 		// Edge compatibility mode (don't run in outdated compat)
 		$out->addHeadItem( 'ie-edge', '<meta http-equiv="X-UA-Compatible" content="IE=edge">' );
 

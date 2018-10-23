@@ -78,6 +78,12 @@
 				"skins.liquiflow"
 			]
 		},
+		"skins.liquiflow.theme.arenaofvalor": {
+			"styles": [
+				"styles/themes/theme/arenaofvalor.less"
+			],
+			"position": "top"
+		},
 		"skins.liquiflow.theme.artifact": {
 			"styles": [
 				"styles/themes/theme/artifact.less"

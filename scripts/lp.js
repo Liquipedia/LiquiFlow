@@ -1,11 +1,11 @@
-$( document ).ready(function() {
-	
+$( document ).ready( function() {
+
 	/* a click on mobile search closes a possibly opened menu/toc */
-	$( '#mobile-search-button' ).click( function( e ){
-		if( $( '#main-nav-toggler' ).hasClass( 'slide-active' ) ) {
+	$( '#mobile-search-button' ).click( function( e ) {
+		if ( $( '#main-nav-toggler' ).hasClass( 'slide-active' ) ) {
 			$( '#main-nav-toggler' ).trigger( 'click' );
 		}
-		if( $( '#toc-toggler' ).hasClass( 'slide-active' ) ) {
+		if ( $( '#toc-toggler' ).hasClass( 'slide-active' ) ) {
 			$( '#toc-toggler' ).trigger( 'click' );
 		}
 		e.preventDefault();
@@ -20,11 +20,11 @@ $( document ).ready(function() {
 	var menuneg = '-100%';
 	var slideneg = '-80%';
 
-	$('#slide-nav').on( 'click', '#main-nav-toggler', function( e ) {
-		if( $( '#toc-toggler' ).hasClass( 'slide-active' ) ) {
-			$('#toc-toggler' ).trigger( 'click' );
+	$( '#slide-nav' ).on( 'click', '#main-nav-toggler', function( e ) {
+		if ( $( '#toc-toggler' ).hasClass( 'slide-active' ) ) {
+			$( '#toc-toggler' ).trigger( 'click' );
 		}
-		if( $( '#mobile-search-button' ).hasClass( 'active' ) ) {
+		if ( $( '#mobile-search-button' ).hasClass( 'active' ) ) {
 			$( '#mobile-search-button' ).trigger( 'click' );
 		}
 
@@ -45,10 +45,10 @@ $( document ).ready(function() {
 	} );
 
 	$( '#slide-nav' ).on( 'click', '#toc-toggler', function( e ) {
-		if( $( '#main-nav-toggler' ).hasClass( 'slide-active' ) ) {
+		if ( $( '#main-nav-toggler' ).hasClass( 'slide-active' ) ) {
 			$( '#main-nav-toggler' ).trigger( 'click' );
 		}
-		if( $( '#mobile-search-button' ).hasClass( 'active' ) ) {
+		if ( $( '#mobile-search-button' ).hasClass( 'active' ) ) {
 			$( '#mobile-search-button' ).trigger( 'click' );
 		}
 
@@ -79,16 +79,16 @@ $( document ).ready(function() {
 
 	var selected = '#slidemenu, .navbar, .navbar-header, #scroll-wrapper-menu, #scroll-wrapper-toc';
 	$( window ).on( 'resize', function() {
-		if( $( window ).width() > 767 && $( '.navbar-toggle' ).is( ':hidden' ) ) {
-			$(selected).removeClass( 'slide-active' );
+		if ( $( window ).width() > 767 && $( '.navbar-toggle' ).is( ':hidden' ) ) {
+			$( selected ).removeClass( 'slide-active' );
 		}
 
 	} );
-	
+
 	/* Add fancy popup reference boxes */
 	$( 'sup.reference' ).each( function() {
-		var href = $( this ).children( 'a').attr( 'href' );
-		href = href.replace(/\./g, "\\\.").replace(/\:/g, "\\\:");
+		var href = $( this ).children( 'a' ).attr( 'href' );
+		href = href.replace( /\./g, "\\\." ).replace( /\:/g, "\\\:" );
 		var reference = $( href + ' > .reference-text' ).html();
 		$( this ).children( 'a' ).attr( 'href', 'javascript:;' );
 		$( this )
@@ -105,10 +105,10 @@ $( document ).ready(function() {
 
 	/* Popover achievements */
 	$( '[data-toggle="popover-hover"]' ).on( { 'mouseenter': function() {
-		$(this).popover( 'show' );
-	}, 'mouseleave': function() {
-		$(this).popover( 'hide' );
-	} } );
+			$( this ).popover( 'show' );
+		}, 'mouseleave': function() {
+			$( this ).popover( 'hide' );
+		} } );
 
 	/* Popover for other things 8on click) */
 	$( function() {
@@ -116,9 +116,9 @@ $( document ).ready(function() {
 	} );
 
 	/* Tooltips */
-	$(function() {
+	$( function() {
 		$( '[data-toggle="tooltip"]' ).tooltip()
-	});
+	} );
 
 } );
 
@@ -126,13 +126,13 @@ $( document ).ready(function() {
 $( document ).click( function( e ) {
 	var container = $( '#slide-nav' );
 
-	if( !container.is( e.target ) // if the target of the click isn't the container...
+	if ( !container.is( e.target ) // if the target of the click isn't the container...
 		&& container.has( e.target ).length === 0 ) // ... nor a descendant of the container
 	{
-		if( $( '#slidemenu' ).hasClass( 'slide-active' ) ) {
+		if ( $( '#slidemenu' ).hasClass( 'slide-active' ) ) {
 			$( '#main-nav-toggler' ).trigger( 'click' );
 		}
-		if( $( '#slide-toc' ).hasClass( 'slide-active' ) ) {
+		if ( $( '#slide-toc' ).hasClass( 'slide-active' ) ) {
 			$( '#toc-toggler' ).trigger( 'click' );
 		}
 	}
@@ -147,7 +147,7 @@ Share = {
 		Share.popup( url );
 	},
 	twitter: function( purl, ptitle ) {
-		purl = purl.replace(/ /g, '_');
+		purl = purl.replace( / /g, '_' );
 		url = 'https://twitter.com/share?';
 		url += 'text=' + encodeURIComponent( ptitle );
 		url += '&url=' + encodeURIComponent( purl );
@@ -155,7 +155,7 @@ Share = {
 		Share.popup( url );
 	},
 	reddit: function( purl, ptitle ) {
-		url = 'http://www.reddit.com/submit?';
+		url = 'https://www.reddit.com/submit?';
 		url += 'title=' + encodeURIComponent( ptitle );
 		url += '&url=' + encodeURIComponent( purl );
 		Share.popup( url );
@@ -166,13 +166,13 @@ Share = {
 		Share.popup( url );
 	},
 	qq: function( purl, ptitle ) {
-		url = 'http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?';
+		url = 'https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?';
 		url += 'title=' + encodeURIComponent( ptitle );
 		url += '&url=' + encodeURIComponent( purl );
 		Share.popup( url );
 	},
 	vk: function( purl, ptitle ) {
-		url = 'http://vkontakte.ru/share.php?';
+		url = 'https://vkontakte.ru/share.php?';
 		url += 'title=' + encodeURIComponent( ptitle );
 		url += '&url=' + encodeURIComponent( purl );
 		Share.popup( url );
@@ -186,7 +186,7 @@ Share = {
 	},
 	whatsapp: function( purl, ptitle ) {
 		url = 'whatsapp://send?';
-		url += 'text=' + encodeURIComponent( ptitle + ": " + purl.replace( " ","_" ) );
+		url += 'text=' + encodeURIComponent( ptitle + ": " + purl.replace( " ", "_" ) );
 		Share.popup( url );
 	},
 	popup: function( url ) {

@@ -674,7 +674,7 @@ class Template extends \BaseTemplate {
 								<h4><?php echo $this->msg( 'liquiflow-contact-us' ); ?></h4>
 								<ul>
 									<li><a href="mailto:liquipedia@teamliquid.net"><?php echo $this->msg( 'liquiflow-send-an-email' ); ?></a></li>
-									<li><a href="http://www.teamliquid.net/forum/website-feedback/94785-liquipedia-feedback-thread" target="_blank"><?php echo $this->msg( 'liquiflow-post-feedback' ); ?></a></li>
+									<li><a href="https://www.teamliquid.net/forum/website-feedback/94785-liquipedia-feedback-thread" target="_blank"><?php echo $this->msg( 'liquiflow-post-feedback' ); ?></a></li>
 									<li><a href="https://liquipedia.net/discord" target="_blank"><?php echo $this->msg( 'liquiflow-chat-with-us' ); ?></a></li>
 								</ul>
 							</div>
@@ -683,7 +683,7 @@ class Template extends \BaseTemplate {
 								<h4><?php echo $this->msg( 'liquiflow-affiliated-sites' ); ?></h4>
 								<ul>
 									<li><a href="https://liquipedia.net">Liquipedia Portal</a></li>
-									<li><a href="http://www.teamliquid.net" target="_blank">TeamLiquid.net</a></li>
+									<li><a href="https://www.teamliquid.net" target="_blank">TeamLiquid.net</a></li>
 									<li><a href="https://www.liquiddota.com" target="_blank">LiquidDota.com</a></li>
 									<li><a href="https://www.liquidhearth.com" target="_blank">LiquidHearth.com</a></li>
 									<li><a href="https://www.liquidlegends.net" target="_blank">LiquidLegends.net</a></li>

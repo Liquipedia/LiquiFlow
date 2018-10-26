@@ -643,6 +643,7 @@ class Template extends \BaseTemplate {
 										<li><a href="/rocketleague/" target="_blank">Rocket League</a></li>
 										<li><a href="/smash/" target="_blank">Smash</a></li>
 										<li><a href="/starcraft2/" target="_blank">StarCraft II</a></li>
+										<li><a href="/warcraft/" target="_blank">Warcraft III</a></li>
 										<li><a href="/commons/" target="_blank">Commons</a></li>
 									</ul>
 								</div>
@@ -652,7 +653,6 @@ class Template extends \BaseTemplate {
 								<h4><?php echo $this->msg( 'liquiflow-alpha-wikis' ); ?></h4>
 								<ul>
 									<li><a href="/leagueoflegends/" target="_blank">League of Legends</a></li>
-									<li><a href="/warcraft/" target="_blank">Warcraft III</a></li>
 									<li><a href="/pubg/" target="_blank">PUBG</a></li>
 									<li><a href="/fortnite/" target="_blank">Fortnite</a></li>
 									<li><a href="/quake/" target="_blank">Quake</a></li>

@@ -1020,17 +1020,17 @@ class Template extends \BaseTemplate {
 						$externalLink = $this->getSkin()->getTitle()->getFullURL();
 						?>
 						<li>
-							<a data-type="twitter" onclick="Share.twitter( '<?php echo $externalLink; ?>', '<?php echo strip_tags( $this->data[ 'title' ] ); ?>' )">
+							<a data-type="twitter" onclick="Share.twitter( '<?php echo $externalLink; ?>', '<?php echo trim( strip_tags( $this->data[ 'title' ] ) ); ?>' )">
 								<span class="fa fa-fw fa-twitter"></span> Twitter
 							</a>
 						</li>
 						<li>
-							<a data-type="facebook" onclick="Share.facebook( '<?php echo $externalLink; ?>', '<?php echo strip_tags( $this->data[ 'title' ] ); ?>' )">
+							<a data-type="facebook" onclick="Share.facebook( '<?php echo $externalLink; ?>', '<?php echo trim( strip_tags( $this->data[ 'title' ] ) ); ?>' )">
 								<span class="fa fa-fw fa-facebook"></span> Facebook
 							</a>
 						</li>
 						<li>
-							<a data-type="reddit" onclick="Share.reddit( '<?php echo $externalLink; ?>', '<?php echo strip_tags( $this->data[ 'title' ] ); ?>' )">
+							<a data-type="reddit" onclick="Share.reddit( '<?php echo $externalLink; ?>', '<?php echo trim( strip_tags( $this->data[ 'title' ] ) ); ?>' )">
 								<span class="fa fa-fw fa-reddit-alien"></span> Reddit
 							</a>
 						</li>
@@ -1040,22 +1040,22 @@ class Template extends \BaseTemplate {
 							</a>
 						</li>
 						<li>
-							<a data-type="qq" onclick="Share.qq( '<?php echo $externalLink; ?>', '<?php echo strip_tags( $this->data[ 'title' ] ); ?>' )">
+							<a data-type="qq" onclick="Share.qq( '<?php echo $externalLink; ?>', '<?php echo trim( strip_tags( $this->data[ 'title' ] ) ); ?>' )">
 								<span class="fa fa-fw fa-qq"></span> Tencent QQ
 							</a>
 						</li>
 						<li>
-							<a data-type="vk" onclick="Share.vk( '<?php echo $externalLink; ?>', '<?php echo strip_tags( $this->data[ 'title' ] ); ?>' )">
+							<a data-type="vk" onclick="Share.vk( '<?php echo $externalLink; ?>', '<?php echo trim( strip_tags( $this->data[ 'title' ] ) ); ?>' )">
 								<span class="fa fa-fw fa-vk"></span> VK
 							</a>
 						</li>
 						<li>
-							<a data-type="weibo" onclick="Share.weibo( '<?php echo $externalLink; ?>', '<?php echo strip_tags( $this->data[ 'title' ] ); ?>' )">
+							<a data-type="weibo" onclick="Share.weibo( '<?php echo $externalLink; ?>', '<?php echo trim( strip_tags( $this->data[ 'title' ] ) ); ?>' )">
 								<span class="fa fa-fw fa-weibo"></span> Weibo
 							</a>
 						</li>
 						<li class="hidden-lg">
-							<a data-type="whatsapp" onclick="Share.whatsapp( '<?php echo $externalLink; ?>', '<?php echo strip_tags( $this->data[ 'title' ] ); ?>' )">
+							<a data-type="whatsapp" onclick="Share.whatsapp( '<?php echo $externalLink; ?>', '<?php echo trim( strip_tags( $this->data[ 'title' ] ) ); ?>' )">
 								<span class="fa fa-fw fa-whatsapp"></span> WhatsApp
 							</a>
 						</li>

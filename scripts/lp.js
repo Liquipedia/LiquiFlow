@@ -160,11 +160,6 @@ Share = {
 		url += '&url=' + encodeURIComponent( purl );
 		Share.popup( url );
 	},
-	googleplus: function( purl ) {
-		url = 'https://plus.google.com/share?';
-		url += 'url=' + encodeURIComponent( purl );
-		Share.popup( url );
-	},
 	qq: function( purl, ptitle ) {
 		url = 'https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?';
 		url += 'title=' + encodeURIComponent( ptitle );

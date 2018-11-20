@@ -1035,11 +1035,6 @@ class Template extends \BaseTemplate {
 							</a>
 						</li>
 						<li>
-							<a data-type="googleplus" onclick="Share.googleplus( '<?php echo $externalLink; ?>' )">
-								<span class="fa fa-fw fa-google-plus"></span> Google+
-							</a>
-						</li>
-						<li>
 							<a data-type="qq" onclick="Share.qq( '<?php echo $externalLink; ?>', '<?php echo trim( strip_tags( $this->data[ 'title' ] ) ); ?>' )">
 								<span class="fa fa-fw fa-qq"></span> Tencent QQ
 							</a>

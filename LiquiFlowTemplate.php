@@ -707,7 +707,7 @@ class Template extends \BaseTemplate {
 									</li>
 									<li>
 										<a target="_blank" href="https://www.youtube.com/user/Liquipedia" class="social-icon youtube-icon">
-											<span class="social-link">Youtube</span>
+											<span class="social-link">YouTube</span>
 										</a>
 									</li>
 									<li>

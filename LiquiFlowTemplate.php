@@ -558,7 +558,6 @@ class Template extends \BaseTemplate {
 								<?php
 							endif;
 
-							Hooks::run( 'LiquiFlowNetworkNotice', array( $this->getSkin()->getContext() ) );
 							Hooks::run( 'LiquiFlowTop', array( $this->getSkin() ) );
 							?>
 

@@ -642,6 +642,7 @@ class Template extends \BaseTemplate {
 										<li><a href="/smash/" target="_blank">Smash</a></li>
 										<li><a href="/starcraft2/" target="_blank">StarCraft II</a></li>
 										<li><a href="/warcraft/" target="_blank">Warcraft III</a></li>
+										<li><a href="/artifact/" target="_blank">Artifact</a></li>
 										<li><a href="/commons/" target="_blank">Commons</a></li>
 									</ul>
 								</div>

@@ -173,10 +173,9 @@ Share = {
 		Share.popup( url );
 	},
 	weibo: function( purl, ptitle ) {
-		url = 'http://service.weibo.com/staticjs/weiboshare.html?';
-		url += 'title=' + encodeURIComponent( ptitle );
-		url += '&url=' + encodeURIComponent( purl );
-		url += '&count=' + encodeURIComponent( purl );
+		url = 'https://service.weibo.com/share/share.php?';
+		url += 'url=' + encodeURIComponent( purl );
+		url += '&title=' + encodeURIComponent( ptitle );
 		Share.popup( url );
 	},
 	whatsapp: function( purl, ptitle ) {

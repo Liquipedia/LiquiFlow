@@ -94,13 +94,17 @@ class Skin extends SkinTemplate {
 	 * @return array Array of associative name-to-value elements for <html> element
 	 */
 	public function getHtmlElementAttributes() {
-		$lang = $this->getLanguage();
-		return [
-			'lang' => $lang->getHtmlCode(),
-			'dir' => $lang->getDir(),
-			'class' => 'client-nojs Send_pizza_to_FO-nTTaX All_glory_to_Liquipedia',
-			'prefix' => 'og: http://ogp.me/ns#',
-		];
+		$attributes = parent::getHtmlElementAttributes();
+
+		$class = 'Send_pizza_to_FO-nTTaX All_glory_to_Liquipedia';
+		if ( array_key_exists( 'class', $attributes ) ) {
+			$attributes[ 'class' ] .= ' ' . $class;
+		} else {
+			$attributes[ 'class' ] = $class;
+		}
+		$attributes[ 'prefix' ] = 'og: http://ogp.me/ns#';
+
+		return $attributes;
 	}
 
 }

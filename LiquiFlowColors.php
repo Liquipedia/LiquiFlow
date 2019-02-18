@@ -21,7 +21,7 @@ class Colors {
 			'body-bg' => '#dee2ec',
 		),
 		'battlerite' => array(
-			'wiki-dark' => '#945c2e',
+			'wiki-dark' => '#955623',
 			'wiki-light' => '#fbecdf',
 			'body-bg' => '#dee2ec',
 		),

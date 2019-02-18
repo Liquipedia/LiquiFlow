@@ -80,6 +80,11 @@ class Colors {
 			'wiki-light' => '#f4db96',
 			'body-bg' => '#e5e5e5',
 		),
+		'magic' => array(
+			'wiki-dark' => '#a4276e',
+			'wiki-light' => '#fbecdf',
+			'body-bg' => '#e5e5e5',
+		),
 		'overwatch' => array(
 			'wiki-dark' => '#932d64',
 			'wiki-light' => '#f1d1e3',

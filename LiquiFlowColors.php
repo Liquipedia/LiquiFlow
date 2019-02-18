@@ -56,8 +56,8 @@ class Colors {
 			'body-bg' => '#e5e5e5',
 		),
 		'fighters' => array(
-			'wiki-dark' => '#444444',
-			'wiki-light' => '#ffa800',
+			'wiki-dark' => '#1e7a1d',
+			'wiki-light' => '#f9f9c7',
 			'body-bg' => '#e5e5e5',
 		),
 		'fortnite' => array(

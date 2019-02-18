@@ -22,8 +22,13 @@ class Colors {
 		),
 		'battlerite' => array(
 			'wiki-dark' => '#945c2e',
-			'wiki-light' => '#a8b7bb',
+			'wiki-light' => '#fbecdf',
 			'body-bg' => '#dee2ec',
+		),
+		'callofduty' => array(
+			'wiki-dark' => '#4a4a4a',
+			'wiki-light' => '#e6e6e6',
+			'body-bg' => '#e5e5e5',
 		),
 		'clashroyale' => array(
 			'wiki-dark' => '#31519c',

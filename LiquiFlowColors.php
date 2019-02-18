@@ -5,6 +5,11 @@ namespace Liquipedia\LiquiFlow;
 class Colors {
 
 	private static $colors = array(
+		'apexlegends' => array(
+			'wiki-dark' => '#b12a2a',
+			'wiki-light' => '#e6e6e6',
+			'body-bg' => '#e5e5e5',
+		),
 		'arenaofvalor' => array(
 			'wiki-dark' => '#196b6b',
 			'wiki-light' => '#e6e6e6',

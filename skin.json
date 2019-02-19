@@ -1,6 +1,6 @@
 {
 	"name": "LiquiFlow",
-	"version": "1.5.1",
+	"version": "1.5.2",
 	"author": [
 		"Philip Becker-Ehmck",
 		"[https://fo-nttax.de Alex Winkler]"
@@ -78,6 +78,12 @@
 				"skins.liquiflow"
 			]
 		},
+		"skins.liquiflow.theme.apexlegends": {
+			"styles": [
+				"styles/themes/theme/apexlegends.less"
+			],
+			"position": "top"
+		},
 		"skins.liquiflow.theme.arenaofvalor": {
 			"styles": [
 				"styles/themes/theme/arenaofvalor.less"
@@ -93,6 +99,12 @@
 		"skins.liquiflow.theme.battlerite": {
 			"styles": [
 				"styles/themes/theme/battlerite.less"
+			],
+			"position": "top"
+		},
+		"skins.liquiflow.theme.callofduty": {
+			"styles": [
+				"styles/themes/theme/callofduty.less"
 			],
 			"position": "top"
 		},
@@ -153,6 +165,12 @@
 		"skins.liquiflow.theme.leagueoflegends": {
 			"styles": [
 				"styles/themes/theme/leagueoflegends.less"
+			],
+			"position": "top"
+		},
+		"skins.liquiflow.theme.magic": {
+			"styles": [
+				"styles/themes/theme/magic.less"
 			],
 			"position": "top"
 		},

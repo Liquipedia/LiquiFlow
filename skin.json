@@ -132,9 +132,21 @@
 			],
 			"position": "top"
 		},
+		"skins.liquiflow.theme.diabotical": {
+			"styles": [
+				"styles/themes/theme/diabotical.less"
+			],
+			"position": "top"
+		},
 		"skins.liquiflow.theme.dota2": {
 			"styles": [
 				"styles/themes/theme/dota2.less"
+			],
+			"position": "top"
+		},
+		"skins.liquiflow.theme.fifa": {
+			"styles": [
+				"styles/themes/theme/fifa.less"
 			],
 			"position": "top"
 		},
@@ -177,6 +189,12 @@
 		"skins.liquiflow.theme.overwatch": {
 			"styles": [
 				"styles/themes/theme/overwatch.less"
+			],
+			"position": "top"
+		},
+		"skins.liquiflow.theme.paladins": {
+			"styles": [
+				"styles/themes/theme/paladins.less"
 			],
 			"position": "top"
 		},

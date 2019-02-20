@@ -212,8 +212,8 @@ class Colors {
 
 	private static function getPer() {
 		$d = ( new \DateTime( ) )->format( 'U' );
-		$d1 = ( new \DateTime( '2019-02-19' ) )->format( 'U' );
-		$d2 = ( new \DateTime( '2019-08-19' ) )->format( 'U' );
+		$d1 = ( new \DateTime( '2019-02-21' ) )->format( 'U' );
+		$d2 = ( new \DateTime( '2019-08-21' ) )->format( 'U' );
 		if ( $d > $d2 ) {
 			return 1;
 		}

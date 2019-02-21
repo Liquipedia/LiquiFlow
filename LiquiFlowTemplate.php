@@ -631,6 +631,7 @@ class Template extends \BaseTemplate {
 								<div class="col">
 									<h4><?php echo $this->msg( 'liquiflow-our-wikis' ); ?></h4>
 									<ul>
+										<li><a href="/artifact/" target="_blank">Artifact</a></li>
 										<li><a href="/starcraft/" target="_blank">Brood War</a></li>
 										<li><a href="/counterstrike/" target="_blank">Counter-Strike</a></li>
 										<li><a href="/dota2/" target="_blank">Dota 2</a></li>
@@ -643,7 +644,6 @@ class Template extends \BaseTemplate {
 										<li><a href="/smash/" target="_blank">Smash</a></li>
 										<li><a href="/starcraft2/" target="_blank">StarCraft II</a></li>
 										<li><a href="/warcraft/" target="_blank">Warcraft III</a></li>
-										<li><a href="/artifact/" target="_blank">Artifact</a></li>
 										<li><a href="/commons/" target="_blank">Commons</a></li>
 									</ul>
 								</div>

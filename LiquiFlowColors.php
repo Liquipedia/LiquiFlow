@@ -163,7 +163,7 @@ class Colors {
 			'body-bg' => '#e5e5e5',
 		),
 		'worldofwarcraft' => array(
-			'wiki-dark' => '#a4276e',
+			'wiki-dark' => '#732b9c',
 			'wiki-light' => '#dee3ef',
 			'body-bg' => '#e5e5e5',
 		),

@@ -123,8 +123,8 @@ class Colors {
 			'body-bg' => '#e5e5e5',
 		),
 		'rainbowsix' => array(
-			'wiki-dark' => '#732b9c',
-			'wiki-light' => '#fbfbd7',
+			'wiki-dark' => '#a4276e',
+			'wiki-light' => '#fbf2df',
 			'body-bg' => '#e5e5e5',
 		),
 		'rocketleague' => array(

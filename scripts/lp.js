@@ -91,6 +91,9 @@ $( document ).ready( function() {
 		href = href.replace( /\./g, "\\\." ).replace( /\:/g, "\\\:" );
 		var reference = $( href + ' > .reference-text' ).html();
 		$( this ).children( 'a' ).attr( 'href', 'javascript:;' );
+		var helperdiv = document.createElement( 'div' );
+		helperdiv.innerHTML = reference;
+		reference = helperdiv.textContent || helperdiv.innerText;
 		$( this )
 			.data( 'toggle', 'popover' )
 			.data( 'placement', 'bottom' )

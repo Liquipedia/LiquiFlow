@@ -100,43 +100,7 @@ $( document ).ready( function() {
 			.data( 'html', true )
 			.data( 'trigger', 'focus' )
 			.data( 'template', '<div class="popover" role="tooltip" style="max-width:400px;"><div class="arrow"></div><h3 class="popover-title"></h3><div class="popover-content"></div></div>' )
-			.popover( {
-				whiteList: {
-					// Global attributes allowed on any supplied element below.
-					'*': [ 'class', 'dir', 'id', 'lang', 'role', /^aria-[\w-]*$/i ],
-					a: [ 'target', 'href', 'title', 'rel' ],
-					area: [ ],
-					b: [ ],
-					br: [ ],
-					col: [ ],
-					code: [ ],
-					div: [ ],
-					em: [ ],
-					hr: [ ],
-					h1: [ ],
-					h2: [ ],
-					h3: [ ],
-					h4: [ ],
-					h5: [ ],
-					h6: [ ],
-					i: [ ],
-					img: [ 'src', 'alt', 'title', 'width', 'height' ],
-					li: [ ],
-					ol: [ ],
-					p: [ ],
-					pre: [ ],
-					s: [ ],
-					small: [ ],
-					span: [ ],
-					sub: [ ],
-					sup: [ ],
-					strong: [ ],
-					u: [ ],
-					ul: [ ],
-					// Local options
-					abbr: [ 'title' ]
-				}
-			} );
+			.popover( { sanitize: false } );
 	} );
 
 	/* Popover achievements */

@@ -639,6 +639,7 @@ class Template extends \BaseTemplate {
 										<li><a href="/heroes/" target="_blank">Heroes of the Storm</a></li>
 										<li><a href="/leagueoflegends/" target="_blank">League of Legends</a></li>
 										<li><a href="/overwatch/" target="_blank">Overwatch</a></li>
+										<li><a href="/pubg/" target="_blank">PUBG</a></li>
 										<li><a href="/rainbowsix/" target="_blank">Rainbow Six</a></li>
 										<li><a href="/rocketleague/" target="_blank">Rocket League</a></li>
 										<li><a href="/smash/" target="_blank">Smash</a></li>
@@ -652,7 +653,6 @@ class Template extends \BaseTemplate {
 							<div class="col-md-2 col-sm-3 col-xs-6">
 								<h4><?php echo $this->msg( 'liquiflow-alpha-wikis' ); ?></h4>
 								<ul>
-									<li><a href="/pubg/" target="_blank">PUBG</a></li>
 									<li><a href="/fortnite/" target="_blank">Fortnite</a></li>
 									<li><a href="/quake/" target="_blank">Quake</a></li>
 									<li><a href="/teamfortress/" target="_blank">Team Fortress</a></li>

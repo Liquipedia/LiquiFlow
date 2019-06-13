@@ -132,6 +132,11 @@ class Colors {
 			'wiki-light' => '#fbf2df',
 			'body-bg' => '#e5e5e5',
 		),
+		'simracing' => array(
+			'wiki-dark' => '#31519c',
+			'wiki-light' => '#fbdfdf',
+			'body-bg' => '#e5e5e5',
+		),
 		'smash' => array(
 			'wiki-dark' => '#196b6b',
 			'wiki-light' => '#dbeded',

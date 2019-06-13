@@ -228,6 +228,12 @@
 			],
 			"position": "top"
 		},
+		"skins.liquiflow.theme.simracing": {
+			"styles": [
+				"styles/themes/theme/simracing.less"
+			],
+			"position": "top"
+		},
 		"skins.liquiflow.theme.smash": {
 			"styles": [
 				"styles/themes/theme/smash.less"

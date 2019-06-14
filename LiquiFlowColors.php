@@ -16,7 +16,7 @@ class Colors {
 			'body-bg' => '#e5e5e5',
 		),
 		'artifact' => array(
-			'wiki-dark' => '#484848',
+			'wiki-dark' => '#4A4A4A',
 			'wiki-light' => '#fbf6df',
 			'body-bg' => '#e5e5e5',
 		),
@@ -37,7 +37,7 @@ class Colors {
 		),
 		'commons' => array(
 			'wiki-dark' => '#e6e6e6',
-			'wiki-light' => '#484848',
+			'wiki-light' => '#4A4A4A',
 			'body-bg' => '#e5e5e5',
 		),
 		'counterstrike' => array(
@@ -108,7 +108,7 @@ class Colors {
 			'body-bg' => '#e5e5e5',
 		),
 		'pokemon' => array(
-			'wiki-dark' => '#484848',
+			'wiki-dark' => '#4A4A4A',
 			'wiki-light' => '#fbdfdf',
 			'body-bg' => '#e5e5e5',
 		),
@@ -118,7 +118,7 @@ class Colors {
 			'body-bg' => '#e5e5e5',
 		),
 		'quake' => array(
-			'wiki-dark' => '#484848',
+			'wiki-dark' => '#4A4A4A',
 			'wiki-light' => '#fbecdf',
 			'body-bg' => '#e5e5e5',
 		),
@@ -143,7 +143,7 @@ class Colors {
 			'body-bg' => '#e5e5e5',
 		),
 		'starcraft' => array(
-			'wiki-dark' => '#484848',
+			'wiki-dark' => '#4A4A4A',
 			'wiki-light' => '#e6e6e6',
 			'body-bg' => '#e5e5e5',
 		),
@@ -153,13 +153,18 @@ class Colors {
 			'body-bg' => '#e5e5e5',
 		),
 		'teamfortress' => array(
-			'wiki-dark' => '#484848',
+			'wiki-dark' => '#4A4A4A',
 			'wiki-light' => '#e8ddef',
 			'body-bg' => '#e5e5e5',
 		),
 		'trackmania' => array(
 			'wiki-dark' => '#1e7a1d',
 			'wiki-light' => '#dee3ef',
+			'body-bg' => '#e5e5e5',
+		),
+		'underlords' => array(
+			'wiki-dark' => '#732b9c',
+			'wiki-light' => '#fbdfdf',
 			'body-bg' => '#e5e5e5',
 		),
 		'warcraft' => array(

@@ -264,6 +264,12 @@
 			],
 			"position": "top"
 		},
+		"skins.liquiflow.theme.underlords": {
+			"styles": [
+				"styles/themes/theme/underlords.less"
+			],
+			"position": "top"
+		},
 		"skins.liquiflow.theme.warcraft": {
 			"styles": [
 				"styles/themes/theme/warcraft.less"

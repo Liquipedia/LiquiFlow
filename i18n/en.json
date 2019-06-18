@@ -6,7 +6,7 @@
 		]
 	},
 	"skinname-liquiflow": "LiquiFlow",
-	"liquiflow-brand": "",
+	"liquiflow-brand": "liquipedia",
 	"liquiflow-skin-desc": "Modern bootstrap skin for [https://liquipedia.net/ Liquipedia].",
 	"liquiflow.css": "/* CSS placed here will affect users of the LiquiFlow skin */",
 	"liquiflow.js": "/* Any JavaScript here will be loaded for users using the LiquiFlow skin */",

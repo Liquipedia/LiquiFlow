@@ -103,7 +103,7 @@ class Template extends \BaseTemplate {
 	private $installedExtensions = [];
 
 	private function checkInstalledExtensions() {
-		if ( wfMessage( 'flaggedrevs-desc' )->exists() ) {
+		if ( $this->getMsg( 'flaggedrevs-desc' )->exists() ) {
 			$this->installedExtensions[ 'FlaggedRevs' ] = true;
 		} else {
 			$this->installedExtensions[ 'FlaggedRevs' ] = false;
@@ -200,11 +200,11 @@ class Template extends \BaseTemplate {
 								<span class="fa fa-bars fa-2x"></span>
 							</button>
 
-							<a class="navbar-brand" href="<?php echo htmlspecialchars( $this->data[ 'nav_urls' ][ 'mainpage' ][ 'href' ] ) ?>"
-							   <?php echo Xml::expandAttributes( Linker::tooltipAndAccesskeyAttribs( 'p-logo' ) ) ?>>
+							<a class="navbar-brand" href="<?php echo htmlspecialchars( $this->data[ 'nav_urls' ][ 'mainpage' ][ 'href' ] ); ?>"
+							   <?php echo Xml::expandAttributes( Linker::tooltipAndAccesskeyAttribs( 'p-logo' ) ); ?>>
 								<div style="display: inline-block;">
-									<div style="float: left;"><img id="brand-logo" src="<?php $this->text( 'logopath' ) ?>" alt="Logo"></div>
-									<div class="brand-name visible-xs logotype" style="white-space: nowrap; margin-left: 5px; float: left;"><?php echo ( isset( $liquiFlowAlphawiki ) && $liquiFlowAlphawiki ) ? '<small>' . wfMessage( 'liquiflow-brand' )->text() . '</small> alpha' : $this->msg( 'liquiflow-brand' ); ?></div>
+									<div style="float: left;"><img id="brand-logo" src="<?php $this->text( 'logopath' ); ?>" alt="Logo"></div>
+									<div class="brand-name visible-xs logotype" style="white-space: nowrap; margin-left: 5px; float: left;"><?php echo ( isset( $liquiFlowAlphawiki ) && $liquiFlowAlphawiki ) ? '<small>' . $this->getMsg( 'liquiflow-brand' )->text() . '</small> alpha' : $this->getMsg( 'liquiflow-brand' )->text(); ?></div>
 								</div>
 							</a>
 
@@ -242,7 +242,7 @@ class Template extends \BaseTemplate {
 									?>
 									<li class="dropdown dropdown-brand hidden-xs">
 										<a id="brand-menu-toggle" class="dropdown-toggle brand-title" data-toggle="dropdown" data-hover="dropdown" href="#">
-											<span id="brand-desktop" class="brand-name logotype" style="font-size:18px;"><?php echo ( isset( $liquiFlowAlphawiki ) && $liquiFlowAlphawiki ) ? '<small>' . wfMessage( 'liquiflow-brand' )->text() . '</small> alpha' : $this->msg( 'liquiflow-brand' ); ?></span> <span class="caret"></span> <br>
+											<span id="brand-desktop" class="brand-name logotype" style="font-size:18px;"><?php echo ( isset( $liquiFlowAlphawiki ) && $liquiFlowAlphawiki ) ? '<small>' . $this->getMsg( 'liquiflow-brand' )->text() . '</small> alpha' : $this->getMsg( 'liquiflow-brand' )->text(); ?></span> <span class="caret"></span> <br>
 											<span class="hidden-xs brand-subtitle">
 												<?php echo $currentWikiTitle; ?>
 											</span>
@@ -263,7 +263,7 @@ class Template extends \BaseTemplate {
 											?>
 											<li class="dropdown icon-tablet">
 												<a id="trending-pages-menu-toggle" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="#">
-													<div class="visible-xl visible-lg visible-md visible-xs"><span class="fa fa-fw fa-line-chart"></span> <?php echo wfMessage( 'liquiflow-menu-trending' )->text(); ?> <span class="caret"></span></div>
+													<div class="visible-xl visible-lg visible-md visible-xs"><span class="fa fa-fw fa-line-chart"></span> <?php echo $this->getMsg( 'liquiflow-menu-trending' )->text(); ?> <span class="caret"></span></div>
 													<div class="visible-sm">
 														<span class="fa fa-fw fa-line-chart"></span> <span class="caret"></span>
 													</div>
@@ -275,7 +275,7 @@ class Template extends \BaseTemplate {
 											?>
 											<li class="dropdown hidden-xs icon-tablet">
 												<a id="tournaments-menu-toggle" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="#">
-													<div class="visible-xl visible-lg visible-md visible-xs"><span class="fa fa-fw fa-trophy"></span> <?php echo wfMessage( 'liquiflow-menu-tournaments' )->text(); ?> <span class="caret"></span></div>
+													<div class="visible-xl visible-lg visible-md visible-xs"><span class="fa fa-fw fa-trophy"></span> <?php echo $this->getMsg( 'liquiflow-menu-tournaments' )->text(); ?> <span class="caret"></span></div>
 													<div class="visible-sm">
 														<span class="fa fa-fw fa-trophy"></span> <span class="caret"></span>
 													</div>
@@ -304,7 +304,7 @@ class Template extends \BaseTemplate {
 														?>
 													</div>
 													<div class="row">
-														<div style="float:right;margin-right:23px"><a href="<?php echo Title::newFromText( 'Tournaments', NS_PROJECT )->getEditURL(); ?>">[<?php echo wfMessage( 'liquiflow-menu-edit' )->text(); ?>]</a></div>
+														<div style="float:right;margin-right:23px"><a href="<?php echo Title::newFromText( 'Tournaments', NS_PROJECT )->getEditURL(); ?>">[<?php echo $this->getMsg( 'liquiflow-menu-edit' )->text(); ?>]</a></div>
 													</div>
 												</div>
 											</li>
@@ -331,7 +331,7 @@ class Template extends \BaseTemplate {
 													<?php
 												}
 											}
-										} elseif ( $navHeader == wfMessage( 'liquiflow-menu-contribute' )->text() ) {
+										} elseif ( $navHeader == $this->getMsg( 'liquiflow-menu-contribute' )->text() ) {
 											?>
 											<li class="visible-xs mobile-divider"></li>
 											<li class="dropdown icon-tablet">
@@ -375,18 +375,18 @@ class Template extends \BaseTemplate {
 											<span class="fa fa-fw fa-gavel"></span> Actions <span class="caret"></span>
 										</a>
 										<ul class="dropdown-menu">
-											<?php $this->renderNavigation( array( 'NAMESPACES', 'VIEWS', 'ACTIONS' ), 'mobile' ) ?>
+											<?php $this->renderNavigation( array( 'NAMESPACES', 'VIEWS', 'ACTIONS' ), 'mobile' ); ?>
 										</ul>
 									</li>
 									<li class="dropdown visible-xs">
 										<a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="#">
-											<span class="fa fa-fw fa-share-alt"></span> <span class="hidden-sm"><?php $this->msg( 'liquiflow-share' ); ?></span> <span class="caret"></span>
+											<span class="fa fa-fw fa-share-alt"></span> <span class="hidden-sm"><?php echo $this->getMsg( 'liquiflow-share' )->text(); ?></span> <span class="caret"></span>
 										</a>
 										<?php $this->renderNavigation( 'SHARE' ); ?>
 									</li>
 									<li class="dropdown visible-xs">
 										<a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="#">
-											<span class="fa fa-fw fa-wrench"></span> <span class="hidden-sm"><?php $this->msg( 'toolbox' ); ?></span> <span class="caret"></span>
+											<span class="fa fa-fw fa-wrench"></span> <span class="hidden-sm"><?php echo $this->getMsg( 'toolbox' )->text(); ?></span> <span class="caret"></span>
 										</a>
 										<?php $this->renderNavigation( 'TOOLBOX', 'mobile' ); ?>
 									</li>
@@ -449,7 +449,7 @@ class Template extends \BaseTemplate {
 									</li>
 									<li class="dropdown visible-xs">
 										<a href="#top">
-											<span class="fa fa-fw fa-arrow-up"></span> <?php echo wfMessage( 'liquiflow-back-to-top' )->text(); ?>
+											<span class="fa fa-fw fa-arrow-up"></span> <?php echo $this->getMsg( 'liquiflow-back-to-top' )->text(); ?>
 										</a>
 									</li>
 
@@ -482,9 +482,9 @@ class Template extends \BaseTemplate {
 		</nav><!-- /.navbar -->
 
 		<nav id="mobile-search-bar" class="navbar visible-xs noprint hidden">
-			<form action="<?php $this->text( 'wgScript' ) ?>" id="mobile-search-form" class="navbar-form navbar-left" role="search">
+			<form action="<?php $this->text( 'wgScript' ); ?>" id="mobile-search-form" class="navbar-form navbar-left" role="search">
 				<div class="input-group">
-					<input id="searchInput-mobile" type="search" accesskey="<?php echo $this->msg( 'accesskey-search' ); ?>" title="<?php wfMessage( 'liquiflow-search' )->params( wfMessage( 'liquiflow-brand' )->text() . ' ' . $this->config->get( 'LiquiFlowWikiTitle' ) )->text(); ?> [alt-shift-<?php echo $this->msg( 'accesskey-search' ); ?>]" placeholder="Search <?php echo $this->msg( 'liquiflow-brand' ); ?>" name="search" autocomplete="off" class="form-control">
+					<input id="searchInput-mobile" type="search" accesskey="<?php echo $this->getMsg( 'accesskey-search' )->text(); ?>" title="<?php echo $this->getMsg( 'liquiflow-search' )->params( $this->getMsg( 'liquiflow-brand' )->text() . ' ' . $this->config->get( 'LiquiFlowWikiTitle' ) )->text(); ?> [alt-shift-<?php echo $this->getMsg( 'accesskey-search' )->text(); ?>]" placeholder="Search <?php echo $this->getMsg( 'liquiflow-brand' )->text(); ?>" name="search" autocomplete="off" class="form-control">
 					<div class="input-group-btn">
 						<button class="btn navbar-search-btn searchButton" type="submit" id="searchButton-mobile">
 							<i class="fa fa-arrow-right"></i>
@@ -500,19 +500,19 @@ class Template extends \BaseTemplate {
 					<div id="wiki-nav-main-column" class="col-md-12">
 						<div class="wiki-tool-nav">
 							<ul class="nav navbar-nav navbar-nav-2">
-								<?php $this->renderNavigation( array( 'NAMESPACES', 'VIEWS', 'ACTIONS' ) ) ?>
+								<?php $this->renderNavigation( array( 'NAMESPACES', 'VIEWS', 'ACTIONS' ) ); ?>
 							</ul>
 
 							<ul class="nav navbar-nav navbar-right navbar-nav-2">
 								<li class="dropdown">
 									<a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="#">
-										<span class="fa fa-fw fa-share-alt"></span> <span class="hidden-sm"><?php $this->msg( 'liquiflow-share' ); ?></span> <span class="caret"></span>
+										<span class="fa fa-fw fa-share-alt"></span> <span class="hidden-sm"><?php echo $this->getMsg( 'liquiflow-share' )->text(); ?></span> <span class="caret"></span>
 									</a>
 									<?php $this->renderNavigation( 'SHARE' ); ?>
 								</li>
 								<li class="dropdown">
 									<a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="#">
-										<span class="fa fa-fw fa-wrench"></span> <span class="hidden-sm"><?php $this->msg( 'toolbox' ); ?></span> <span class="caret"></span>
+										<span class="fa fa-fw fa-wrench"></span> <span class="hidden-sm"><?php echo $this->getMsg( 'toolbox' )->text(); ?></span> <span class="caret"></span>
 									</a>
 									<?php $this->renderNavigation( 'TOOLBOX' ); ?>
 								</li>
@@ -553,7 +553,7 @@ class Template extends \BaseTemplate {
 
 							<?php if ( $this->data[ 'sitenotice' ] ) : ?>
 								<div id="siteNotice">
-									<?php $this->html( 'sitenotice' ) ?>
+									<?php $this->html( 'sitenotice' ); ?>
 								</div>
 								<?php
 							endif;
@@ -562,34 +562,34 @@ class Template extends \BaseTemplate {
 							?>
 
 							<h1 id="firstHeading" class="firstHeading">
-								<span dir="auto"><?php $this->html( 'title' ) ?></span>
+								<span dir="auto"><?php $this->html( 'title' ); ?></span>
 							</h1>
 
-							<?php $this->html( 'prebodyhtml' ) ?>
+							<?php $this->html( 'prebodyhtml' ); ?>
 							<div id="bodyContent" class="mw-body-content">
 								<?php if ( $this->data[ 'isarticle' ] ) : ?>
 									<div id="siteSub">
-										<?php $this->msg( 'tagline' ) ?>
+										<?php $this->getMsg( 'tagline' )->text(); ?>
 									</div>
 								<?php endif; ?>
 
 								<div id="contentSub">
-									<?php $this->html( 'subtitle' ) ?>
+									<?php $this->html( 'subtitle' ); ?>
 								</div>
 
 								<?php if ( $this->data[ 'undelete' ] ) : ?>
 									<div id="contentSub2">
-										<?php $this->html( 'undelete' ) ?>
+										<?php $this->html( 'undelete' ); ?>
 									</div>
 								<?php endif; ?>
 
 								<?php if ( $this->data[ 'newtalk' ] ) : ?>
 									<div class="usermessage">
-										<?php $this->html( 'newtalk' ) ?>
+										<?php $this->html( 'newtalk' ); ?>
 									</div>
 								<?php endif; ?>
 
-								<?php $this->html( 'bodycontent' ) ?>
+								<?php $this->html( 'bodycontent' ); ?>
 
 								<?php if ( $this->data[ 'printfooter' ] ) : ?>
 									<div class="printfooter">
@@ -629,7 +629,7 @@ class Template extends \BaseTemplate {
 
 							<div class="col-md-2 col-sm-3 col-xs-6">
 								<div class="col">
-									<h4><?php echo $this->msg( 'liquiflow-our-wikis' ); ?></h4>
+									<h4><?php echo $this->getMsg( 'liquiflow-our-wikis' )->text(); ?></h4>
 									<ul>
 										<li><a href="/artifact/" target="_blank">Artifact</a></li>
 										<li><a href="/starcraft/" target="_blank">Brood War</a></li>
@@ -651,7 +651,7 @@ class Template extends \BaseTemplate {
 							</div>
 
 							<div class="col-md-2 col-sm-3 col-xs-6">
-								<h4><?php echo $this->msg( 'liquiflow-alpha-wikis' ); ?></h4>
+								<h4><?php echo $this->getMsg( 'liquiflow-alpha-wikis' )->text(); ?></h4>
 								<ul>
 									<li><a href="/fortnite/" target="_blank">Fortnite</a></li>
 									<li><a href="/apexlegends/" target="_blank">Apex Legends</a></li>
@@ -665,7 +665,7 @@ class Template extends \BaseTemplate {
 								</ul>
 							</div>
 							<div class="col-md-2 col-sm-3 col-xs-6">
-								<h4><?php echo $this->msg( 'about' ); ?></h4>
+								<h4><?php echo $this->getMsg( 'about' )->text(); ?></h4>
 								<ul>
 									<?php foreach ( $footerLinks[ 'places' ] as $link ) { ?>
 										<li id="footer-places-<?php echo $link; ?>">
@@ -673,16 +673,16 @@ class Template extends \BaseTemplate {
 										</li>
 									<?php } ?>
 								</ul>
-								<h4><?php echo $this->msg( 'liquiflow-contact-us' ); ?></h4>
+								<h4><?php echo $this->getMsg( 'liquiflow-contact-us' )->text(); ?></h4>
 								<ul>
-									<li><a href="mailto:liquipedia@teamliquid.net"><?php echo $this->msg( 'liquiflow-send-an-email' ); ?></a></li>
-									<li><a href="https://tl.net/forum/website-feedback/94785-liquipedia-feedback-thread" target="_blank"><?php echo $this->msg( 'liquiflow-post-feedback' ); ?></a></li>
-									<li><a href="https://liquipedia.net/discord" target="_blank"><?php echo $this->msg( 'liquiflow-chat-with-us' ); ?></a></li>
+									<li><a href="mailto:liquipedia@teamliquid.net"><?php echo $this->getMsg( 'liquiflow-send-an-email' )->text(); ?></a></li>
+									<li><a href="https://tl.net/forum/website-feedback/94785-liquipedia-feedback-thread" target="_blank"><?php echo $this->getMsg( 'liquiflow-post-feedback' )->text(); ?></a></li>
+									<li><a href="https://liquipedia.net/discord" target="_blank"><?php echo $this->getMsg( 'liquiflow-chat-with-us' )->text(); ?></a></li>
 								</ul>
 							</div>
 
 							<div class="col-md-2 hidden-sm hidden-xs">
-								<h4><?php echo $this->msg( 'liquiflow-affiliated-sites' ); ?></h4>
+								<h4><?php echo $this->getMsg( 'liquiflow-affiliated-sites' )->text(); ?></h4>
 								<ul>
 									<li><a href="https://liquipedia.net">Liquipedia Portal</a></li>
 									<li><a href="https://tl.net" target="_blank">TL.net</a></li>
@@ -694,7 +694,7 @@ class Template extends \BaseTemplate {
 							</div>
 
 							<div class="col-md-2 col-sm-3 col-xs-12">
-								<h4 class="hidden-xs"><?php echo $this->msg( 'liquiflow-follow-us' ); ?></h4>
+								<h4 class="hidden-xs"><?php echo $this->getMsg( 'liquiflow-follow-us' )->text(); ?></h4>
 								<ul id="footer-social-media">
 									<li>
 										<a target="_blank" href="https://twitter.com/LiquipediaNet" class="social-icon twitter-icon">
@@ -808,11 +808,11 @@ class Template extends \BaseTemplate {
 		if ( $msg === null ) {
 			$msg = $name;
 		}
-		$msgObj = wfMessage( $msg );
+		$msgObj = $this->getMsg( $msg );
 		?>
-		<div class="portal" role="navigation" id='<?php echo Sanitizer::escapeId( "p-$name" ) ?>'<?php echo Linker::tooltip( 'p-' . $name ) ?>
-		     aria-labelledby='<?php echo Sanitizer::escapeId( "p-$name-label" ) ?>'>
-			<h3 <?php echo $this->html( 'userlangattributes' ); ?> id='<?php echo Sanitizer::escapeId( "p-$name-label" ) ?>'>
+		<div class="portal" role="navigation" id='<?php echo Sanitizer::escapeId( "p-$name" ); ?>'<?php echo Linker::tooltip( 'p-' . $name ); ?>
+		     aria-labelledby='<?php echo Sanitizer::escapeId( "p-$name-label" ); ?>'>
+			<h3 <?php echo $this->html( 'userlangattributes' ); ?> id='<?php echo Sanitizer::escapeId( "p-$name-label" ); ?>'>
 				<?php echo htmlspecialchars( $msgObj->exists() ? $msgObj->text() : $msg  ); ?>
 			</h3>
 
@@ -1065,14 +1065,14 @@ class Template extends \BaseTemplate {
 					$toolbox = $this->getToolbox();
 					?>
 					<ul class="dropdown-menu">
-						<li class="dropdown-header"><?php echo $this->msg( 'liquiflow-general' ); ?></li>
-						<li><a href="<?php echo Title::newFromText( 'RecentChanges', NS_SPECIAL )->getLocalURL(); ?>"<?php echo ( $view == 'mobile' ? '' : ' ' . Xml::expandAttributes( Linker::tooltipAndAccesskeyAttribs( 'n-recentchanges' ) ) ); ?>><span class="fa fa-fw fa-clock-o"></span> <?php $this->msg( 'recentchanges' ); ?></a></li>
+						<li class="dropdown-header"><?php echo $this->getMsg( 'liquiflow-general' )->text(); ?></li>
+						<li><a href="<?php echo Title::newFromText( 'RecentChanges', NS_SPECIAL )->getLocalURL(); ?>"<?php echo ( $view == 'mobile' ? '' : ' ' . Xml::expandAttributes( Linker::tooltipAndAccesskeyAttribs( 'n-recentchanges' ) ) ); ?>><span class="fa fa-fw fa-clock-o"></span> <?php echo $this->getMsg( 'recentchanges' )->text(); ?></a></li>
 						<?php if ( $this->installedExtensions[ 'FlaggedRevs' ] ) { ?>
-							<li><a href="<?php echo Title::newFromText( 'PendingChanges', NS_SPECIAL )->getLocalURL(); ?>"><span class="fa fa-fw fa-circle-o-notch"></span> <?php $this->msg( 'revreview-current' ); ?></a></li>
-							<?php if ( in_array( 'editor', $this->getSkin()->getUser()->getEffectiveGroups() ) ) { ?><li><a href="<?php echo Title::newFromText( 'UnreviewedPages', NS_SPECIAL )->getLocalURL(); ?>"><span class="fa fa-fw fa-circle-o"></span> <?php $this->msg( 'unreviewedpages' ); ?></a></li><?php } ?>
+							<li><a href="<?php echo Title::newFromText( 'PendingChanges', NS_SPECIAL )->getLocalURL(); ?>"><span class="fa fa-fw fa-circle-o-notch"></span> <?php echo $this->getMsg( 'revreview-current' )->text(); ?></a></li>
+							<?php if ( in_array( 'editor', $this->getSkin()->getUser()->getEffectiveGroups() ) ) { ?><li><a href="<?php echo Title::newFromText( 'UnreviewedPages', NS_SPECIAL )->getLocalURL(); ?>"><span class="fa fa-fw fa-circle-o"></span> <?php echo $this->getMsg( 'unreviewedpages' )->text(); ?></a></li><?php } ?>
 						<?php } ?>
 
-						<li><a href="<?php echo Title::newFromText( 'Random', NS_SPECIAL )->getLocalURL(); ?>"<?php echo ( $view == 'mobile' ? '' : ' ' . Xml::expandAttributes( Linker::tooltipAndAccesskeyAttribs( 'n-randompage' ) ) ); ?>><span class="fa fa-fw fa-random"></span> <?php $this->msg( 'randompage' ); ?></a></li>
+						<li><a href="<?php echo Title::newFromText( 'Random', NS_SPECIAL )->getLocalURL(); ?>"<?php echo ( $view == 'mobile' ? '' : ' ' . Xml::expandAttributes( Linker::tooltipAndAccesskeyAttribs( 'n-randompage' ) ) ); ?>><span class="fa fa-fw fa-random"></span> <?php echo $this->getMsg( 'randompage' )->text(); ?></a></li>
 
 						<?php
 						$extensionsMenu = [];
@@ -1086,7 +1086,7 @@ class Template extends \BaseTemplate {
 						?>
 
 						<li class="divider"></li>
-						<li class="dropdown-header"><?php echo $this->msg( 'liquiflow-tools-specific' ); ?></li>
+						<li class="dropdown-header"><?php echo $this->getMsg( 'liquiflow-tools-specific' )->text(); ?></li>
 						<?php
 						foreach ( $toolbox as $key => $item ) {
 							if ( $view == 'mobile' ) {
@@ -1141,11 +1141,11 @@ class Template extends \BaseTemplate {
 						foreach ( $this->adminDropdown as $header => $items ) :
 							$count++;
 							?>
-							<li class="dropdown-header"><?php echo $this->msg( $header ); ?></li>
+							<li class="dropdown-header"><?php echo $this->getMsg( $header )->text(); ?></li>
 							<?php foreach ( $items as $key => $item ) : ?>
 								<li id="<?php echo $item[ 'id' ] . ( ( $view == 'mobile' ) ? '-mobile' : '' ); ?>">
-									<a href="<?php echo $this->data[ 'serverurl' ] . str_replace( '$1', $item[ 'page' ], $this->data[ 'articlepath' ] ) ?>">
-										<?php echo $this->msg( $item[ 'title' ] ); ?>
+									<a href="<?php echo $this->data[ 'serverurl' ] . str_replace( '$1', $item[ 'page' ], $this->data[ 'articlepath' ] ); ?>">
+										<?php echo $this->getMsg( $item[ 'title' ] )->text(); ?>
 									</a>
 								</li>
 							<?php endforeach; ?>
@@ -1162,8 +1162,8 @@ class Template extends \BaseTemplate {
 					<li class="hidden-xs">
 						<form action="<?php echo $this->text( 'wgScript' ); ?>" id="searchform" class="navbar-form" role="search">
 							<div class="input-group">
-								<input id="searchInput" type="search" accesskey="<?php echo $this->msg( 'accesskey-search' ); ?>"
-								       title="<?php echo wfMessage( 'liquiflow-search' )->params( wfMessage( 'liquiflow-brand' )->text() . ' ' . $this->config->get( 'LiquiFlowWikiTitle' ) )->text(); ?> [alt-shift-<?php echo $this->msg( 'accesskey-search' ); ?>]" placeholder="<?php echo $this->msg( 'liquiflow-search-placeholder' ); ?>"
+								<input id="searchInput" type="search" accesskey="<?php echo $this->getMsg( 'accesskey-search' )->text(); ?>"
+								       title="<?php echo $this->getMsg( 'liquiflow-search' )->params( $this->getMsg( 'liquiflow-brand' )->text() . ' ' . $this->config->get( 'LiquiFlowWikiTitle' ) )->text(); ?> [alt-shift-<?php echo $this->getMsg( 'accesskey-search' )->text(); ?>]" placeholder="<?php echo $this->getMsg( 'liquiflow-search-placeholder' )->text(); ?>"
 								       name="search" autocomplete="off">
 								<div class="input-group-btn">
 									<button class="btn btn-default searchButton" type="submit" id="searchButton">
@@ -1226,7 +1226,7 @@ class Template extends \BaseTemplate {
 		if ( isset( $item[ 'text' ] ) ) {
 			$text = $item[ 'text' ];
 		} else {
-			$text = wfMessage( isset( $item[ 'msg' ] ) ? $item[ 'msg' ] : $key )->text();
+			$text = $this->getMsg( isset( $item[ 'msg' ] ) ? $item[ 'msg' ] : $key )->text();
 		}
 
 		if ( isset( $item[ 'single-id' ] ) && isset( $this->icons[ $item[ 'single-id' ] ] ) ) {

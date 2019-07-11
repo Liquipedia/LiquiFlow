@@ -67,7 +67,7 @@ class Skin extends SkinTemplate {
 		if ( $out->getResourceLoader()->isModuleRegistered( 'skins.liquiflow.theme.' . substr( $scriptPath, 1 ) ) ) {
 			$out->addModuleStyles( 'skins.liquiflow.theme.' . substr( $scriptPath, 1 ) );
 		} else {
-			$out->addModuleStyles( 'skins.liquiflow.theme.commons' );
+			$out->addModuleStyles( 'skins.liquiflow.theme.default' );
 		}
 		if ( $user->isLoggedIn() ) {
 			$out->addModuleStyles( 'skins.liquiflow.loggedin' );

@@ -5,6 +5,11 @@ namespace Liquipedia\LiquiFlow;
 class Colors {
 
 	private static $colors = array(
+		'default' => array(
+			'wiki-dark' => '#e6e6e6',
+			'wiki-light' => '#4a4a4a',
+			'body-bg' => '#e5e5e5',
+		),
 		'apexlegends' => array(
 			'wiki-dark' => '#b12a2a',
 			'wiki-light' => '#e6e6e6',
@@ -193,7 +198,7 @@ class Colors {
 		if ( isset( self::$colors[ $wiki ] ) ) {
 			$colors = self::$colors[ $wiki ];
 		} else {
-			$colors = self::$colors[ 'commons' ];
+			$colors = self::$colors[ 'default' ];
 		}
 		if ( array_key_exists( 'wiki-dark-target', $colors ) ) {
 			$colors[ 'wiki-dark' ] = self::getGradient( $colors[ 'wiki-dark-target' ], $colors[ 'wiki-dark' ] );

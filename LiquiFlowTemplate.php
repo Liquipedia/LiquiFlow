@@ -540,7 +540,9 @@ class Template extends \BaseTemplate {
 					if ( strlen( $toc ) > 0 ) {
 						echo $toc;
 					}
-					Hooks::run( 'LiquiFlowSidebar', array( $this->getSkin() ) );
+					$hookValue = '';
+					Hooks::run( 'LiquiFlowSidebar', array( $this->getSkin(), &$hookValue ) );
+					echo $hookValue;
 					?>
 				</div>
 			</div><!-- /#sidebar-toc-colum -->
@@ -558,7 +560,9 @@ class Template extends \BaseTemplate {
 								<?php
 							endif;
 
-							Hooks::run( 'LiquiFlowTop', array( $this->getSkin() ) );
+							$hookValue = '';
+							Hooks::run( 'LiquiFlowTop', array( $this->getSkin(), &$hookValue ) );
+							echo $hookValue;
 							?>
 
 							<h1 id="firstHeading" class="firstHeading">

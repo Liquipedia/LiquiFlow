@@ -186,7 +186,11 @@ class Template extends \BaseTemplate {
 			// Hide standard toc on big screens when the sidebar toc is shown
 			$this->data[ 'bodycontent' ] = str_replace( '<div id="toc" class="toc">', '<div id="toc" class="toc hidden-lg hidden-xl">', $this->data[ 'bodycontent' ] );
 		}
-		Hooks::run( 'LiquiFlowBodyFirst', array( $this->getSkin() ) );
+
+		$hookValue = '';
+		Hooks::run( 'LiquiFlowBodyFirst', array( $this->getSkin(), $hookValue ) );
+		echo $hookValue;
+
 		$liquiFlowAlphawiki = $this->config->get( 'LiquiFlowAlphawiki' );
 		?>
 

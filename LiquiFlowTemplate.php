@@ -188,7 +188,7 @@ class Template extends \BaseTemplate {
 		}
 
 		$hookValue = '';
-		Hooks::run( 'LiquiFlowBodyFirst', array( $this->getSkin(), $hookValue ) );
+		Hooks::run( 'LiquiFlowBodyFirst', array( $this->getSkin(), &$hookValue ) );
 		echo $hookValue;
 
 		$liquiFlowAlphawiki = $this->config->get( 'LiquiFlowAlphawiki' );

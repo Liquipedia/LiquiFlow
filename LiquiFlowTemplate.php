@@ -757,7 +757,9 @@ class Template extends \BaseTemplate {
 		<?php $this->printTrail(); ?>
 
 		<?php
-		Hooks::run( 'LiquiFlowEndCode', array( __DIR__, $this->getSkin() ) );
+		$endCode = '';
+		Hooks::run( 'LiquiFlowEndCode', array( __DIR__, $this->getSkin(), &$endCode ) );
+		echo $endCode;
 		?>
 		</body>
 		</html>

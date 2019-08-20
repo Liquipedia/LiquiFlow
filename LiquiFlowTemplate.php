@@ -75,6 +75,7 @@ class Template extends \BaseTemplate {
 		// Extensions
 		'ext-bugtracker' => 'fa fa-fw fa-bug',
 		'ext-createteams' => 'fa fa-fw fa-code',
+		'ext-teamtemplate' => 'fa fa-fw fa-users',
 		'ext-streampage' => 'fa fa-fw fa-television',
 	];
 	private $adminDropdown = [

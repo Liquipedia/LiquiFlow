@@ -699,7 +699,7 @@ class Template extends \BaseTemplate {
 									<li><a href="https://www.liquiddota.com" target="_blank">LiquidDota.com</a></li>
 									<li><a href="https://www.liquidlegends.net" target="_blank">LiquidLegends.net</a></li>
 									<li><a href="https://masterleague.net/" target="_blank">MasterLeague.net</a></li>
-									<li><a href="https://drawtwo.gg/" target="_blank">DrawTwo.gg</a></li>
+									<li><a href="https://qihl.gg/" target="_blank">qihl.gg</a></li>
 								</ul>
 							</div>
 

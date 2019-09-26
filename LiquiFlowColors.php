@@ -5,6 +5,11 @@ namespace Liquipedia\LiquiFlow;
 class Colors {
 
 	private static $colors = array(
+		'default' => array(
+			'wiki-dark' => '#e6e6e6',
+			'wiki-light' => '#4a4a4a',
+			'body-bg' => '#e5e5e5',
+		),
 		'apexlegends' => array(
 			'wiki-dark' => '#b12a2a',
 			'wiki-light' => '#e6e6e6',
@@ -41,10 +46,8 @@ class Colors {
 			'body-bg' => '#e5e5e5',
 		),
 		'counterstrike' => array(
-			'wiki-dark' => '#7b932d',
-			'wiki-dark-target' => '#54711b',
-			'wiki-light' => '#cde5b6',
-			'wiki-light-target' => '#f0f9de',
+			'wiki-dark' => '#54711b',
+			'wiki-light' => '#f0f9de',
 			'body-bg' => '#e5e5e5',
 		),
 		'crossfire' => array(
@@ -193,44 +196,9 @@ class Colors {
 		if ( isset( self::$colors[ $wiki ] ) ) {
 			$colors = self::$colors[ $wiki ];
 		} else {
-			$colors = self::$colors[ 'commons' ];
-		}
-		if ( array_key_exists( 'wiki-dark-target', $colors ) ) {
-			$colors[ 'wiki-dark' ] = self::getGradient( $colors[ 'wiki-dark-target' ], $colors[ 'wiki-dark' ] );
-			unset( $colors[ 'wiki-dark-target' ] );
-		}
-		if ( array_key_exists( 'wiki-light-target', $colors ) ) {
-			$colors[ 'wiki-light' ] = self::getGradient( $colors[ 'wiki-light-target' ], $colors[ 'wiki-light' ] );
-			unset( $colors[ 'wiki-light-target' ] );
+			$colors = self::$colors[ 'default' ];
 		}
 		return $colors;
-	}
-
-	private static function getGradient( $hex1, $hex2 ) {
-		$per = self::getPer();
-		$new = [];
-		$parts1 = str_split( substr( $hex1, 1 ), 2 );
-		$parts2 = str_split( substr( $hex2, 1 ), 2 );
-		for ( $i = 0; $i < 3; $i++ ) {
-			$h1 = hexdec( $parts1[ $i ] );
-			$h2 = hexdec( $parts2[ $i ] );
-			$new[ $i ] = str_pad( dechex( round( $h1 + ( $h2 - $h1 ) * ( 1 - $per ) ) ), 2, '0' );
-		}
-		$ret = '#' . implode( '', $new );
-		return $ret;
-	}
-
-	private static function getPer() {
-		$d = ( new \DateTime( ) )->format( 'U' );
-		$d1 = ( new \DateTime( '2019-02-21' ) )->format( 'U' );
-		$d2 = ( new \DateTime( '2019-08-21' ) )->format( 'U' );
-		if ( $d > $d2 ) {
-			return 1;
-		}
-		$i1 = $d - $d1;
-		$i2 = $d2 - $d1;
-		$per = $i1 / $i2;
-		return $per;
 	}
 
 }

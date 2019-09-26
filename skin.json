@@ -78,6 +78,12 @@
 				"skins.liquiflow"
 			]
 		},
+		"skins.liquiflow.theme.default": {
+			"styles": [
+				"styles/themes/theme/default.less"
+			],
+			"position": "top"
+		},
 		"skins.liquiflow.theme.apexlegends": {
 			"styles": [
 				"styles/themes/theme/apexlegends.less"

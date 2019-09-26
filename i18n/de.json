@@ -6,7 +6,7 @@
 		]
 	},
 	"skinname-liquiflow": "LiquiFlow",
-	"liquiflow-brand": "",
+	"liquiflow-brand": "liquipedia",
 	"liquiflow-skin-desc": "Moderner Skin für [https://liquipedia.net/ Liquipedia], basierend auf Bootstrap.",
 	"liquiflow.css": "/* Hier platziertes CSS beeinflusst alle Benutzer des LiquiFlow Skins */",
 	"liquiflow.js": "/* Hier platziertes JavaScript wird für alle Benutzer des LiquiFlow Skins geladen. */",

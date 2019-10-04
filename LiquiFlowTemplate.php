@@ -542,11 +542,12 @@ class Template extends \BaseTemplate {
 			<div id="sidebar-toc-column" class="hidden-xs hidden-sm hidden-md">
 				<div id="sidebar-toc" class="sidebar-toc bs-docs-sidebar hidden-print hidden-xs hidden-sm affix-top <?php echo ( isset( $toclimit ) ? 'toclimit-' . $toclimit : '' ); ?>" style="" role="complementary">
 					<?php
-					if ( strlen( $toc ) > 0 ) {
+					$hasToc = strlen( $toc ) > 0;
+					if ( $hasToc ) {
 						echo $toc;
 					}
 					$hookValue = '';
-					Hooks::run( 'LiquiFlowSidebar', array( $this->getSkin(), &$hookValue ) );
+					Hooks::run( 'LiquiFlowSidebar', array( $this->getSkin(), &$hookValue, $hasToc ) );
 					echo $hookValue;
 					?>
 				</div>

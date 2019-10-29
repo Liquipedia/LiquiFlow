@@ -33,7 +33,7 @@ class Skin extends SkinTemplate {
 
 		Hooks::run( 'LiquiFlowStartCode', [ &$out ] );
 
-		$scripts = [ 'skins.liquiflow.scripts', 'skins.liquiflow.bottom' ];
+		$scripts = [ 'skins.liquiflow.scripts' ];
 		$out->addModuleScripts( $scripts );
 		if ( $this->getSkin()->getUser()->getOption( 'liquiflow-prefs-show-dropdown-on-hover' ) == true ) {
 			$out->addModuleScripts( 'skins.liquiflow.hoverdropdown' );

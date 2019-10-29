@@ -50,7 +50,15 @@
 				"mediawiki.user"
 			]
 		},
+		"skins.liquiflow.fontawesome": {
+			"styles": [
+				"vendor/font-awesome/css/font-awesome.css",
+				"vendor/font-awesome/font-awesome-custom.css"
+			],
+			"position": "bottom"
+		},
 		"skins.liquiflow.styles": {
+			"deprecated": "skins.liquiflow.styles is deprecated, use skins.liquiflow.fontawesome instead",
 			"styles": [
 				"vendor/font-awesome/css/font-awesome.css",
 				"vendor/font-awesome/font-awesome-custom.css"
@@ -60,7 +68,7 @@
 		"skins.liquiflow.bottom": {
 			"position": "bottom",
 			"dependencies": [
-				"skins.liquiflow"
+				"skins.liquiflow.fontawesome"
 			]
 		},
 		"skins.liquiflow.loggedin": {
@@ -75,7 +83,7 @@
 			],
 			"position": "top",
 			"dependencies": [
-				"skins.liquiflow"
+				"skins.liquiflow.scripts"
 			]
 		},
 		"skins.liquiflow.theme.default": {

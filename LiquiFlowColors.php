@@ -135,6 +135,11 @@ class Colors {
 			'wiki-light' => '#fbf2df',
 			'body-bg' => '#e5e5e5',
 		),
+		'runeterra' => array(
+			'wiki-dark' => '#f4db96',
+			'wiki-light' => '#196b6b',
+			'body-bg' => '#e5e5e5',
+		),
 		'simracing' => array(
 			'wiki-dark' => '#31519c',
 			'wiki-light' => '#fbdfdf',

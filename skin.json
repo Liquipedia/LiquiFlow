@@ -222,6 +222,12 @@
 			],
 			"position": "top"
 		},
+		"skins.liquiflow.theme.runeterra": {
+			"styles": [
+				"styles/themes/theme/runeterra.less"
+			],
+			"position": "top"
+		},
 		"skins.liquiflow.theme.quake": {
 			"styles": [
 				"styles/themes/theme/quake.less"

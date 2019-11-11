@@ -1,6 +1,6 @@
 {
 	"name": "LiquiFlow",
-	"version": "1.5.2",
+	"version": "1.5.3",
 	"author": [
 		"Philip Becker-Ehmck",
 		"[https://fo-nttax.de Alex Winkler]"
@@ -51,6 +51,7 @@
 			]
 		},
 		"skins.liquiflow.fontawesome": {
+			"deprecated": "This should not be used anymore.",
 			"styles": [
 				"vendor/font-awesome/css/font-awesome.css",
 				"vendor/font-awesome/font-awesome-custom.css"

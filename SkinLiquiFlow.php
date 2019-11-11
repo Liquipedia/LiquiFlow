@@ -62,7 +62,7 @@ class Skin extends SkinTemplate {
 		$user = $this->getSkin()->getUser();
 
 		$out->addStyle( 'https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,700,700italic%7CDroid+Sans+Mono%7CRoboto:500%7CSource+Code+Pro:400,700' );
-		$styles = [ 'mediawiki.skinning.interface', 'skins.liquiflow.fontawesome' ];
+		$styles = [ 'mediawiki.skinning.interface' ];
 		$out->addModuleStyles( $styles );
 		if ( $out->getResourceLoader()->isModuleRegistered( 'skins.liquiflow.theme.' . substr( $scriptPath, 1 ) ) ) {
 			$out->addModuleStyles( 'skins.liquiflow.theme.' . substr( $scriptPath, 1 ) );

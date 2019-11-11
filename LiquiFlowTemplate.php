@@ -18,66 +18,100 @@ class Template extends \BaseTemplate {
 	private $icons = [
 		// Wiki actions
 		'subject' => [
-			'subject-0' => 'fa fa-fw fa-file-text-o',
-			'subject-2' => 'fa fa-fw fa-user',
-			'subject-6' => 'fa fa-fw fa-file-image-o',
-			'subject-8' => 'fa fa-fw fa-file-code-o',
-			'subject-10' => 'fa fa-fw fa-file-code-o',
-			'subject-12' => 'fa fa-fw fa-question-circle-o',
-			'subject-14' => 'fa fa-fw fa-folder-o',
+			'subject-0' => 'far fa-fw fa-file-alt',
+			'subject-2' => 'fas fa-fw fa-user',
+			'subject-6' => 'far fa-fw fa-file-image',
+			'subject-8' => 'far fa-fw fa-file-code',
+			'subject-10' => 'far fa-fw fa-file-code',
+			'subject-12' => 'far fa-fw fa-question-circle',
+			'subject-14' => 'far fa-fw fa-folder',
 		],
-		'subjectdefault' => 'fa fa-fw fa-file-text-o',
-		'main' => 'fa fa-fw fa-file-text-o',
-		'view' => 'fa fa-fw fa-file-text-o',
-		'talk' => 'fa fa-fw fa-comments-o',
-		'history' => 'fa fa-fw fa-history',
-		'edit' => 'fa fa-fw fa-pencil',
-		'watch' => 'fa fa-fw fa-bookmark-o',
-		'unwatch' => 'fa fa-fw fa-bookmark',
-		'delete' => 'fa fa-fw fa-trash-o',
-		'undelete' => 'fa fa-fw fa-undo',
-		'move' => 'fa fa-fw fa-exchange',
-		'protect' => 'fa fa-fw fa-unlock',
-		'unprotect' => 'fa fa-fw fa-lock',
-		'purge' => 'fa fa-fw fa-repeat',
-		'addsection' => 'fa fa-fw fa-plus',
-		'stability' => 'fa fa-fw fa-check-circle-o',
-		'viewsource' => 'fa fa-fw fa-pencil',
-		'current' => 'fa fa-fw fa-circle-o-notch fa-spinner-7s',
-		'default' => 'fa fa-fw fa-pause-circle-o',
-		'view-foreign' => 'fa fa-fw fa-hdd-o',
+		'subjectdefault' => 'far fa-fw fa-file-alt',
+		'main' => 'far fa-fw fa-file-alt',
+		'view' => 'far fa-fw fa-file-alt',
+		'talk' => 'fas fa-fw fa-comments',
+		'history' => 'far fa-fw fa-history',
+		'edit' => 'far fa-fw fa-pencil-alt',
+		'watch' => 'far fa-fw fa-bookmark',
+		'unwatch' => 'fas fa-fw fa-bookmark',
+		'delete' => 'far fa-fw fa-trash-alt',
+		'undelete' => 'far fa-fw fa-undo',
+		'move' => 'fas fa-fw fa-exchange-alt',
+		'protect' => 'fas fa-fw fa-lock-open-alt',
+		'unprotect' => 'fas fa-fw fa-lock-alt',
+		'purge' => 'far fa-fw fa-redo-alt',
+		'addsection' => 'fas fa-fw fa-plus',
+		'stability' => 'far fa-fw fa-check-circle',
+		'viewsource' => 'far fa-fw fa-pencil-alt',
+		'current' => 'far fa-fw fa-circle-notch fa-spinner-7s',
+		'default' => 'far fa-fw fa-pause-circle',
+		'view-foreign' => 'far fa-fw fa-hdd',
 		// Tools
-		't-whatlinkshere' => 'fa fa-fw fa-link',
-		't-print' => 'fa fa-fw fa-print',
+		't-recent-changes' => 'far fa-fw fa-clock',
+		't-pending-changes' => 'far fa-fw fa-circle-notch',
+		't-unreviewed-pages' => 'far fa-fw fa-circle',
+		't-random-page' => 'fas fa-fw fa-random',
+		't-whatlinkshere' => 'fas fa-fw fa-link',
+		't-print' => 'fas fa-fw fa-print',
 		't-recentchangeslinked' => 'liquipedia-custom-icon liquipedia-custom-icon-related-changes',
-		't-specialpages' => 'fa fa-fw fa-magic',
-		't-permalink' => 'fa fa-fw fa-dot-circle-o',
-		't-info' => 'fa fa-fw fa-info',
-		't-smwbrowselink' => 'fa fa-fw fa-thumb-tack',
-		't-upload' => 'fa fa-fw fa-upload',
-		't-blockip' => 'fa fa-fw fa-ban',
-		't-log' => 'fa fa-fw fa-book',
-		't-contributions' => 'fa fa-fw fa-puzzle-piece',
-		't-userrights' => 'fa fa-fw fa-list-alt',
-		'feed-atom' => 'fa fa-fw fa-rss',
-		't-liquipediadblink' => 'fa fa-fw fa-database',
+		't-specialpages' => 'fas fa-fw fa-magic',
+		't-permalink' => 'far fa-fw fa-dot-circle',
+		't-info' => 'fas fa-fw fa-info',
+		't-smwbrowselink' => 'fas fa-fw fa-thumbtack',
+		't-upload' => 'fas fa-fw fa-upload',
+		't-blockip' => 'far fa-fw fa-ban',
+		't-log' => 'fas fa-fw fa-book',
+		't-contributions' => 'fas fa-fw fa-puzzle-piece',
+		't-userrights' => 'far fa-fw fa-list-alt',
+		'feed-atom' => 'fas fa-fw fa-rss',
+		't-liquipediadblink' => 'fas fa-fw fa-database',
+		't-share' => 'fas fa-fa fa-share-alt',
+		't-tools' => 'fas fa-fw fa-wrench',
+		't-admin-links' => 'fas fa-fw fa-gavel',
+		't-menu-user' => 'fas fa-fa fa-user-circle',
+		't-other-wikis' => 'fas fa-fa fa-map-signs',
+		't-back-to-top' => 'fas fa-fw fa-arrow-up',
+		't-mobile-search-button' => 'fas fa-fw fa-arrow-right',
 		// Personal
-		'pt-user' => 'fa fa-fw fa-user',
-		'pt-userpage' => 'fa fa-fw fa-home',
-		'pt-mytalk' => 'fa fa-fw fa-inbox',
-		'pt-preferences' => 'fa fa-fw fa-sliders',
-		'pt-watchlist' => 'fa fa-fw fa-bookmark',
-		'pt-mycontris' => 'fa fa-fw fa-puzzle-piece',
-		'pt-createaccount' => 'fa fa-fw fa-user-plus',
-		'pt-logout' => 'fa fa-fw fa-sign-out',
-		'pt-login' => 'fa fa-fw fa-sign-in',
-		'pt-adminlinks' => 'fa fa-fw fa-gavel',
+		'pt-user' => 'fas fa-fw fa-user',
+		'pt-userpage' => 'fas fa-fw fa-home',
+		'pt-mytalk' => 'fas fa-fw fa-inbox',
+		'pt-preferences' => 'fas fa-fw fa-sliders-v',
+		'pt-watchlist' => 'fas fa-fw fa-bookmark',
+		'pt-mycontris' => 'fas fa-fw fa-puzzle-piece',
+		'pt-createaccount' => 'fas fa-fw fa-user-plus',
+		'pt-logout' => 'fas fa-fw fa-sign-out-alt',
+		'pt-login' => 'fas fa-fw fa-sign-in-alt',
+		'pt-adminlinks' => 'fas fa-fw fa-gavel',
 		// Extensions
-		'ext-bugtracker' => 'fa fa-fw fa-bug',
-		'ext-createteams' => 'fa fa-fw fa-code',
-		'ext-teamtemplate' => 'fa fa-fw fa-users',
-		'ext-streampage' => 'fa fa-fw fa-television',
+		'ext-bugtracker' => 'fas fa-fw fa-bug',
+		'ext-createteams' => 'far fa-fw fa-code',
+		'ext-teamtemplate' => 'fas fa-fw fa-users',
+		'ext-streampage' => 'fas fa-fw fa-tv-retro',
+		// Other icons
+		'top-menu-trending' => 'far fa-fw fa-chart-line',
+		'top-menu-tournaments' => 'fas fa-fw fa-trophy',
+		'top-menu-contribute' => 'fas fa-fw fa-puzzle-piece',
+		'top-menu-actions' => 'fas fa-fw fa-gavel',
+		'top-menu-search-button' => 'fas fa-fw fa-search',
+		// Share menu
+		'share-twitter' => 'fab fa-fw fa-twitter',
+		'share-facebook' => 'fab fa-fw fa-facebook-f',
+		'share-reddit' => 'fab fa-fw fa-reddit-alien',
+		'share-qq' => 'fab fa-fw fa-qq',
+		'share-vk' => 'fab fa-fw fa-vk',
+		'share-weibo' => 'fab fa-fw fa-weibo',
+		'share-whatsapp' => 'fab fa-fw fa-whatsapp',
+		// Mobile icons
+		'big-bars' => 'fas fa-fw fa-bars fa-2x',
+		'big-list' => 'fas fa-fw fa-list fa-2x',
+		'big-search' => 'fas fa-fw fa-search fa-2x',
 	];
+
+	private function makeFAIcon( $name ) {
+		return '<span class="' . $this->icons[ $name ] . '"></span>';
+	}
+
 	private $adminDropdown = [
 		'about' => [
 			[ 'page' => 'Special:Statistics', 'title' => 'statistics', 'id' => 'ad-statistics' ],
@@ -202,7 +236,7 @@ class Template extends \BaseTemplate {
 						<div class="navbar-header">
 							<button class="navbar-toggle" id="main-nav-toggler">
 								<span class="sr-only">Toggle navigation</span>
-								<span class="fa fa-bars fa-2x"></span>
+								<?php echo $this->makeFAIcon( 'big-bars' ); ?></span>
 							</button>
 
 							<a class="navbar-brand" href="<?php echo htmlspecialchars( $this->data[ 'nav_urls' ][ 'mainpage' ][ 'href' ] ); ?>"
@@ -216,11 +250,11 @@ class Template extends \BaseTemplate {
 							<?php if ( strlen( $toc ) > 0 ) { ?>
 								<button class="navbar-toggle pull-right" id="toc-toggler">
 									<span class="sr-only">Toggle navigation</span>
-									<span style="padding-top:4px;" class="fa fa-list fa-2x"></span>
+									<?php echo $this->makeFAIcon( 'big-list' ); ?>
 								</button>
 							<?php } ?>
 							<button id="mobile-search-button" class="navbar-toggle navbar-search-toggle pull-right visible-xs">
-								<span class="fa fa-search fa-2x"></span>
+								<?php echo $this->makeFAIcon( 'big-search' ); ?>
 							</button>
 
 						</div><!-- /.navbar-header -->
@@ -268,9 +302,9 @@ class Template extends \BaseTemplate {
 											?>
 											<li class="dropdown icon-tablet">
 												<a id="trending-pages-menu-toggle" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="#">
-													<div class="visible-xl visible-lg visible-md visible-xs"><span class="fa fa-fw fa-line-chart"></span> <?php echo $this->getMsg( 'liquiflow-menu-trending' )->text(); ?> <span class="caret"></span></div>
+													<div class="visible-xl visible-lg visible-md visible-xs"><?php echo $this->makeFAIcon( 'top-menu-trending' ); ?> <?php echo $this->getMsg( 'liquiflow-menu-trending' )->text(); ?> <span class="caret"></span></div>
 													<div class="visible-sm">
-														<span class="fa fa-fw fa-line-chart"></span> <span class="caret"></span>
+														<?php echo $this->makeFAIcon( 'top-menu-trending' ); ?> <span class="caret"></span>
 													</div>
 												</a>
 												<ul id="trending-pages-menu" class="dropdown-menu"></ul>
@@ -280,9 +314,9 @@ class Template extends \BaseTemplate {
 											?>
 											<li class="dropdown hidden-xs icon-tablet">
 												<a id="tournaments-menu-toggle" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="#">
-													<div class="visible-xl visible-lg visible-md visible-xs"><span class="fa fa-fw fa-trophy"></span> <?php echo $this->getMsg( 'liquiflow-menu-tournaments' )->text(); ?> <span class="caret"></span></div>
+													<div class="visible-xl visible-lg visible-md visible-xs"><?php echo $this->makeFAIcon( 'top-menu-tournaments' ); ?> <?php echo $this->getMsg( 'liquiflow-menu-tournaments' )->text(); ?> <span class="caret"></span></div>
 													<div class="visible-sm">
-														<span class="fa fa-fw fa-trophy"></span> <span class="caret"></span>
+														<?php echo $this->makeFAIcon( 'top-menu-tournaments' ); ?> <span class="caret"></span>
 													</div>
 												</a>
 												<div id="tournaments-menu" class="dropdown-menu multi-column columns-3">
@@ -320,7 +354,7 @@ class Template extends \BaseTemplate {
 													?>
 													<li class="dropdown visible-xs">
 														<a class="dropdown-toggle" data-toggle="dropdown" href="#">
-															<span class="fa fa-fw fa-trophy"></span> <?php echo $subNavHeader; ?> <span class="caret"></span>
+															<?php echo $this->makeFAIcon( 'top-menu-trending' ); ?> <?php echo $subNavHeader; ?> <span class="caret"></span>
 														</a>
 														<ul class="dropdown-menu">
 															<?php
@@ -341,9 +375,9 @@ class Template extends \BaseTemplate {
 											<li class="visible-xs mobile-divider"></li>
 											<li class="dropdown icon-tablet">
 												<a id="contribute-menu-toggle" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="#">
-													<div class="visible-xl visible-lg visible-md visible-xs"><span class="fa fa-fw fa-puzzle-piece"></span> <?php echo $navHeader; ?> <span class="caret"></span></div>
+													<div class="visible-xl visible-lg visible-md visible-xs"><?php echo $this->makeFAIcon( 'top-menu-contribute' ); ?> <?php echo $navHeader; ?> <span class="caret"></span></div>
 													<div class="visible-sm">
-														<span class="fa fa-fw fa-puzzle-piece"></span> <span class="caret"></span>
+														<?php echo $this->makeFAIcon( 'top-menu-contribute' ); ?> <span class="caret"></span>
 													</div>
 												</a>
 												<ul id="contribute-menu" class="dropdown-menu">
@@ -377,7 +411,7 @@ class Template extends \BaseTemplate {
 									<li class="visible-xs mobile-divider"></li>
 									<li class="dropdown visible-xs">
 										<a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="#">
-											<span class="fa fa-fw fa-gavel"></span> Actions <span class="caret"></span>
+											<?php echo $this->makeFAIcon( 'top-menu-actions' ); ?> Actions <span class="caret"></span>
 										</a>
 										<ul class="dropdown-menu">
 											<?php $this->renderNavigation( array( 'NAMESPACES', 'VIEWS', 'ACTIONS' ), 'mobile' ); ?>
@@ -385,20 +419,20 @@ class Template extends \BaseTemplate {
 									</li>
 									<li class="dropdown visible-xs">
 										<a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="#">
-											<span class="fa fa-fw fa-share-alt"></span> <span class="hidden-sm"><?php echo $this->getMsg( 'liquiflow-share' )->text(); ?></span> <span class="caret"></span>
+											<?php echo $this->makeFAIcon( 't-share' ); ?> <span class="hidden-sm"><?php echo $this->getMsg( 'liquiflow-share' )->text(); ?></span> <span class="caret"></span>
 										</a>
 										<?php $this->renderNavigation( 'SHARE' ); ?>
 									</li>
 									<li class="dropdown visible-xs">
 										<a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="#">
-											<span class="fa fa-fw fa-wrench"></span> <span class="hidden-sm"><?php echo $this->getMsg( 'toolbox' )->text(); ?></span> <span class="caret"></span>
+											<?php echo $this->makeFAIcon( 't-tools' ); ?> <span class="hidden-sm"><?php echo $this->getMsg( 'toolbox' )->text(); ?></span> <span class="caret"></span>
 										</a>
 										<?php $this->renderNavigation( 'TOOLBOX', 'mobile' ); ?>
 									</li>
 									<?php if ( in_array( 'sysop', $this->getSkin()->getUser()->getEffectiveGroups() ) ) : ?>
 										<li class="dropdown visible-xs">
 											<a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="#">
-												<span class="fa fa-fw fa-gavel"></span> <span>Admin Links</span> <span class="caret"></span>
+												<?php echo $this->makeFAIcon( 't-admin-links' ); ?> <span>Admin Links</span> <span class="caret"></span>
 											</a>
 											<?php $this->renderNavigation( 'ADMIN', 'mobile' ); ?>
 										</li>
@@ -421,7 +455,7 @@ class Template extends \BaseTemplate {
 										?>
 										<li class="dropdown visible-xs">
 											<a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="#">
-												<span class="fa fa-fw fa-user"></span> <?php echo $personalTools[ "userpage" ][ "links" ][ 0 ][ "text" ]; ?>
+												<?php echo $this->makeFAIcon( 't-menu-user' ); ?> <?php echo $personalTools[ "userpage" ][ "links" ][ 0 ][ "text" ]; ?>
 												<span class="caret"></span>
 											</a>
 											<ul class="dropdown-menu">
@@ -442,7 +476,7 @@ class Template extends \BaseTemplate {
 									<li class="visible-xs mobile-divider"></li>
 									<li class="dropdown visible-xs">
 										<a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="#">
-											<span class="fa fa-fw fa-puzzle-piece"></span> Other Wikis <span class="caret"></span>
+											<?php echo $this->makeFAIcon( 't-other-wikis' ); ?> Other Wikis <span class="caret"></span>
 										</a>
 										<ul class="dropdown-menu">
 											<?php
@@ -454,7 +488,7 @@ class Template extends \BaseTemplate {
 									</li>
 									<li class="dropdown visible-xs">
 										<a href="#top">
-											<span class="fa fa-fw fa-arrow-up"></span> <?php echo $this->getMsg( 'liquiflow-back-to-top' )->text(); ?>
+											<?php echo $this->makeFAIcon( 't-back-to-top' ); ?> <?php echo $this->getMsg( 'liquiflow-back-to-top' )->text(); ?>
 										</a>
 									</li>
 
@@ -492,7 +526,7 @@ class Template extends \BaseTemplate {
 					<input id="searchInput-mobile" type="search" accesskey="<?php echo $this->getMsg( 'accesskey-search' )->text(); ?>" title="<?php echo $this->getMsg( 'liquiflow-search' )->params( $this->getMsg( 'liquiflow-brand' )->text() . ' ' . $this->config->get( 'LiquiFlowWikiTitle' ) )->text(); ?> [alt-shift-<?php echo $this->getMsg( 'accesskey-search' )->text(); ?>]" placeholder="Search <?php echo $this->getMsg( 'liquiflow-brand' )->text(); ?>" name="search" autocomplete="off" class="form-control">
 					<div class="input-group-btn">
 						<button class="btn navbar-search-btn searchButton" type="submit" id="searchButton-mobile">
-							<i class="fa fa-arrow-right"></i>
+							<?php echo $this->makeFAIcon( 'top-menu-search-button' ); ?><?php echo $this->makeFAIcon( 't-mobile-search-button' ); ?>
 						</button>
 					</div>
 				</div>
@@ -511,20 +545,20 @@ class Template extends \BaseTemplate {
 							<ul class="nav navbar-nav navbar-right navbar-nav-2">
 								<li class="dropdown">
 									<a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="#">
-										<span class="fa fa-fw fa-share-alt"></span> <span class="hidden-sm"><?php echo $this->getMsg( 'liquiflow-share' )->text(); ?></span> <span class="caret"></span>
+										<?php echo $this->makeFAIcon( 't-share' ); ?> <span class="hidden-sm"><?php echo $this->getMsg( 'liquiflow-share' )->text(); ?></span> <span class="caret"></span>
 									</a>
 									<?php $this->renderNavigation( 'SHARE' ); ?>
 								</li>
 								<li class="dropdown">
 									<a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="#">
-										<span class="fa fa-fw fa-wrench"></span> <span class="hidden-sm"><?php echo $this->getMsg( 'toolbox' )->text(); ?></span> <span class="caret"></span>
+										<?php echo $this->makeFAIcon( 't-tools' ); ?> <span class="hidden-sm"><?php echo $this->getMsg( 'toolbox' )->text(); ?></span> <span class="caret"></span>
 									</a>
 									<?php $this->renderNavigation( 'TOOLBOX' ); ?>
 								</li>
 								<?php if ( in_array( 'sysop', $this->getSkin()->getUser()->getEffectiveGroups() ) ) : ?>
 									<li class="dropdown">
 										<a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="#">
-											<span class="fa fa-fw fa-gavel"></span> <span class="caret"></span>
+											<?php echo $this->makeFAIcon( 't-admin-links' ); ?> <span class="caret"></span>
 										</a>
 										<?php $this->renderNavigation( 'ADMIN' ); ?>
 									</li>
@@ -1036,37 +1070,37 @@ class Template extends \BaseTemplate {
 						?>
 						<li>
 							<a data-type="twitter" onclick="Share.twitter( '<?php echo $externalLink; ?>', '<?php echo trim( strip_tags( $this->data[ 'title' ] ) ); ?>' )">
-								<span class="fa fa-fw fa-twitter"></span> Twitter
+								<?php echo $this->makeFAIcon( 'share-twitter' ); ?> Twitter
 							</a>
 						</li>
 						<li>
 							<a data-type="facebook" onclick="Share.facebook( '<?php echo $externalLink; ?>', '<?php echo trim( strip_tags( $this->data[ 'title' ] ) ); ?>' )">
-								<span class="fa fa-fw fa-facebook"></span> Facebook
+								<?php echo $this->makeFAIcon( 'share-facebook' ); ?> Facebook
 							</a>
 						</li>
 						<li>
 							<a data-type="reddit" onclick="Share.reddit( '<?php echo $externalLink; ?>', '<?php echo trim( strip_tags( $this->data[ 'title' ] ) ); ?>' )">
-								<span class="fa fa-fw fa-reddit-alien"></span> Reddit
+								<?php echo $this->makeFAIcon( 'share-reddit' ); ?></span> Reddit
 							</a>
 						</li>
 						<li>
 							<a data-type="qq" onclick="Share.qq( '<?php echo $externalLink; ?>', '<?php echo trim( strip_tags( $this->data[ 'title' ] ) ); ?>' )">
-								<span class="fa fa-fw fa-qq"></span> Tencent QQ
+								<?php echo $this->makeFAIcon( 'share-qq' ); ?> Tencent QQ
 							</a>
 						</li>
 						<li>
 							<a data-type="vk" onclick="Share.vk( '<?php echo $externalLink; ?>', '<?php echo trim( strip_tags( $this->data[ 'title' ] ) ); ?>' )">
-								<span class="fa fa-fw fa-vk"></span> VK
+								<?php echo $this->makeFAIcon( 'share-vk' ); ?> VK
 							</a>
 						</li>
 						<li>
 							<a data-type="weibo" onclick="Share.weibo( '<?php echo $externalLink; ?>', '<?php echo trim( strip_tags( $this->data[ 'title' ] ) ); ?>' )">
-								<span class="fa fa-fw fa-weibo"></span> Weibo
+								<?php echo $this->makeFAIcon( 'share-weibo' ); ?> Weibo
 							</a>
 						</li>
 						<li class="hidden-lg">
 							<a data-type="whatsapp" onclick="Share.whatsapp( '<?php echo $externalLink; ?>', '<?php echo trim( strip_tags( $this->data[ 'title' ] ) ); ?>' )">
-								<span class="fa fa-fw fa-whatsapp"></span> WhatsApp
+								<?php echo $this->makeFAIcon( 'share-whatsapp' ); ?> WhatsApp
 							</a>
 						</li>
 					</ul>
@@ -1079,13 +1113,13 @@ class Template extends \BaseTemplate {
 					?>
 					<ul class="dropdown-menu">
 						<li class="dropdown-header"><?php echo $this->getMsg( 'liquiflow-general' )->text(); ?></li>
-						<li><a href="<?php echo Title::newFromText( 'RecentChanges', NS_SPECIAL )->getLocalURL(); ?>"<?php echo ( $view == 'mobile' ? '' : ' ' . Xml::expandAttributes( Linker::tooltipAndAccesskeyAttribs( 'n-recentchanges' ) ) ); ?>><span class="fa fa-fw fa-clock-o"></span> <?php echo $this->getMsg( 'recentchanges' )->text(); ?></a></li>
+						<li><a href="<?php echo Title::newFromText( 'RecentChanges', NS_SPECIAL )->getLocalURL(); ?>"<?php echo ( $view == 'mobile' ? '' : ' ' . Xml::expandAttributes( Linker::tooltipAndAccesskeyAttribs( 'n-recentchanges' ) ) ); ?>><?php echo $this->makeFAIcon( 't-recent-changes' ); ?> <?php echo $this->getMsg( 'recentchanges' )->text(); ?></a></li>
 						<?php if ( $this->installedExtensions[ 'FlaggedRevs' ] ) { ?>
-							<li><a href="<?php echo Title::newFromText( 'PendingChanges', NS_SPECIAL )->getLocalURL(); ?>"><span class="fa fa-fw fa-circle-o-notch"></span> <?php echo $this->getMsg( 'revreview-current' )->text(); ?></a></li>
-							<?php if ( in_array( 'editor', $this->getSkin()->getUser()->getEffectiveGroups() ) ) { ?><li><a href="<?php echo Title::newFromText( 'UnreviewedPages', NS_SPECIAL )->getLocalURL(); ?>"><span class="fa fa-fw fa-circle-o"></span> <?php echo $this->getMsg( 'unreviewedpages' )->text(); ?></a></li><?php } ?>
+							<li><a href="<?php echo Title::newFromText( 'PendingChanges', NS_SPECIAL )->getLocalURL(); ?>"><?php echo $this->makeFAIcon( 't-pending-changes' ); ?> <?php echo $this->getMsg( 'revreview-current' )->text(); ?></a></li>
+							<?php if ( in_array( 'editor', $this->getSkin()->getUser()->getEffectiveGroups() ) ) { ?><li><a href="<?php echo Title::newFromText( 'UnreviewedPages', NS_SPECIAL )->getLocalURL(); ?>"><?php echo $this->makeFAIcon( 't-unreviewed-pages' ); ?> <?php echo $this->getMsg( 'unreviewedpages' )->text(); ?></a></li><?php } ?>
 						<?php } ?>
 
-						<li><a href="<?php echo Title::newFromText( 'Random', NS_SPECIAL )->getLocalURL(); ?>"<?php echo ( $view == 'mobile' ? '' : ' ' . Xml::expandAttributes( Linker::tooltipAndAccesskeyAttribs( 'n-randompage' ) ) ); ?>><span class="fa fa-fw fa-random"></span> <?php echo $this->getMsg( 'randompage' )->text(); ?></a></li>
+						<li><a href="<?php echo Title::newFromText( 'Random', NS_SPECIAL )->getLocalURL(); ?>"<?php echo ( $view == 'mobile' ? '' : ' ' . Xml::expandAttributes( Linker::tooltipAndAccesskeyAttribs( 'n-randompage' ) ) ); ?>><?php echo $this->makeFAIcon( 't-random-page' ); ?> <?php echo $this->getMsg( 'randompage' )->text(); ?></a></li>
 
 						<?php
 						$extensionsMenu = [];
@@ -1119,7 +1153,7 @@ class Template extends \BaseTemplate {
 						?>
 						<li class="dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="#">
-								<span class="fa fa-fw fa-user-circle-o"></span> <span class="hidden-sm"><?php echo $personalTools[ "userpage" ][ "links" ][ 0 ][ "text" ]; ?></span>
+								<?php echo $this->makeFAIcon( 't-menu-user' ); ?> <span class="hidden-sm"><?php echo $personalTools[ "userpage" ][ "links" ][ 0 ][ "text" ]; ?></span>
 								<span class="caret"></span>
 							</a>
 							<ul class="dropdown-menu multi-level">
@@ -1180,7 +1214,7 @@ class Template extends \BaseTemplate {
 								       name="search" autocomplete="off">
 								<div class="input-group-btn">
 									<button class="btn btn-default searchButton" type="submit" id="searchButton">
-										<i class="fa fa-fw fa-search"></i>
+										<?php echo $this->makeFAIcon( 'top-menu-search-button' ); ?>
 									</button>
 								</div>
 							</div>

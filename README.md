@@ -9,7 +9,7 @@ Installation
 
 	wfLoadSkin('LiquiFlow');
 
-This skin requires an installation of FontAwesome 5 Pro, but does not ship one. You will have to provide and load that yourself.
+This skin requires an installation of Font Awesome 5 Pro, but does not ship one. You will have to provide and load that yourself.
 
 Credits
 =======

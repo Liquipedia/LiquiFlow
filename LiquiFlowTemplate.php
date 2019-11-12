@@ -19,7 +19,7 @@ class Template extends \BaseTemplate {
 		// Wiki actions
 		'subject' => [
 			'subject-0' => 'far fa-fw fa-file-alt',
-			'subject-2' => 'fas fa-fw fa-user',
+			'subject-2' => 'far fa-fw fa-user',
 			'subject-6' => 'far fa-fw fa-file-image',
 			'subject-8' => 'far fa-fw fa-file-code',
 			'subject-10' => 'far fa-fw fa-file-code',
@@ -29,7 +29,7 @@ class Template extends \BaseTemplate {
 		'subjectdefault' => 'far fa-fw fa-file-alt',
 		'main' => 'far fa-fw fa-file-alt',
 		'view' => 'far fa-fw fa-file-alt',
-		'talk' => 'fas fa-fw fa-comments',
+		'talk' => 'far fa-fw fa-comments-alt',
 		'history' => 'far fa-fw fa-history',
 		'edit' => 'far fa-fw fa-pencil-alt',
 		'watch' => 'far fa-fw fa-bookmark',
@@ -37,8 +37,8 @@ class Template extends \BaseTemplate {
 		'delete' => 'far fa-fw fa-trash-alt',
 		'undelete' => 'far fa-fw fa-undo',
 		'move' => 'fas fa-fw fa-exchange-alt',
-		'protect' => 'fas fa-fw fa-lock-open-alt',
-		'unprotect' => 'fas fa-fw fa-lock-alt',
+		'protect' => 'far fa-fw fa-lock-open-alt',
+		'unprotect' => 'far fa-fw fa-lock-alt',
 		'purge' => 'far fa-fw fa-redo-alt',
 		'addsection' => 'fas fa-fw fa-plus',
 		'stability' => 'far fa-fw fa-check-circle',
@@ -73,7 +73,7 @@ class Template extends \BaseTemplate {
 		't-back-to-top' => 'fas fa-fw fa-arrow-up',
 		't-mobile-search-button' => 'fas fa-fw fa-arrow-right',
 		// Personal
-		'pt-user' => 'fas fa-fw fa-user',
+		'pt-user' => 'far fa-fw fa-user',
 		'pt-userpage' => 'fas fa-fw fa-home',
 		'pt-mytalk' => 'fas fa-fw fa-inbox',
 		'pt-preferences' => 'fas fa-fw fa-sliders-v',

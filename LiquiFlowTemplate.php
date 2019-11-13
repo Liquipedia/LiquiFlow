@@ -354,7 +354,7 @@ class Template extends \BaseTemplate {
 													?>
 													<li class="dropdown visible-xs">
 														<a class="dropdown-toggle" data-toggle="dropdown" href="#">
-															<?php echo $this->makeFAIcon( 'top-menu-trending' ); ?> <?php echo $subNavHeader; ?> <span class="caret"></span>
+															<?php echo $this->makeFAIcon( 'top-menu-tournaments' ); ?> <?php echo $subNavHeader; ?> <span class="caret"></span>
 														</a>
 														<ul class="dropdown-menu">
 															<?php

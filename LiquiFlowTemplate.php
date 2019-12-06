@@ -600,6 +600,9 @@ class Template extends \BaseTemplate {
 								<?php
 							endif;
 
+							echo '<div class="networknotice networknotice-red ie-only-do-not-reuse-this-class">Liquipedia will soon drop support for Internet Explorer.</div>';
+							echo '<style>@supports(position:sticky){.ie-only-do-not-reuse-this-class{display:none;}}</style>';
+
 							$hookValue = '';
 							Hooks::run( 'LiquiFlowTop', array( $this->getSkin(), &$hookValue ) );
 							echo $hookValue;

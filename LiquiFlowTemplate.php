@@ -678,6 +678,7 @@ class Template extends \BaseTemplate {
 								<div class="col">
 									<h4><?php echo $this->getMsg( 'liquiflow-our-wikis' )->text(); ?></h4>
 									<ul>
+										<li><a href="/apexlegends/" target="_blank">Apex Legends</a></li>
 										<li><a href="/artifact/" target="_blank">Artifact</a></li>
 										<li><a href="/starcraft/" target="_blank">Brood War</a></li>
 										<li><a href="/counterstrike/" target="_blank">Counter-Strike</a></li>
@@ -701,7 +702,6 @@ class Template extends \BaseTemplate {
 								<h4><?php echo $this->getMsg( 'liquiflow-alpha-wikis' )->text(); ?></h4>
 								<ul>
 									<li><a href="/fortnite/" target="_blank">Fortnite</a></li>
-									<li><a href="/apexlegends/" target="_blank">Apex Legends</a></li>
 									<li><a href="/quake/" target="_blank">Quake</a></li>
 									<li><a href="/teamfortress/" target="_blank">Team Fortress</a></li>
 									<li><a href="/worldofwarcraft/" target="_blank">World of Warcraft</a></li>

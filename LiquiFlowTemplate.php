@@ -85,9 +85,9 @@ class Template extends \BaseTemplate {
 		'pt-adminlinks' => 'fas fa-fw fa-gavel',
 		// Extensions
 		'ext-bugtracker' => 'fas fa-fw fa-bug',
-		'ext-createteams' => 'far fa-fw fa-code',
 		'ext-teamtemplate' => 'fas fa-fw fa-users',
 		'ext-streampage' => 'fas fa-fw fa-tv-retro',
+		'ext-networknotice' => 'far fa-fw fa-exclamation-triangle',
 		// Other icons
 		'top-menu-trending' => 'far fa-fw fa-chart-line',
 		'top-menu-tournaments' => 'fas fa-fw fa-trophy',

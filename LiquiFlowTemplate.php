@@ -298,7 +298,9 @@ class Template extends \BaseTemplate {
 									<?php
 									foreach ( $this->data[ 'sidebar' ] as $navHeader => $navEntryArray ) {
 
-										if ( $navHeader == 'TRENDING' ) {
+										if ( $navHeader == 'WIKIMENU' ) {
+											continue;
+										} elseif ( $navHeader == 'TRENDING' ) {
 											?>
 											<li class="dropdown icon-tablet">
 												<a id="trending-pages-menu-toggle" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="#">

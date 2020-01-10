@@ -288,8 +288,16 @@ class Template extends \BaseTemplate {
 										</a>
 										<ul id="brand-menu" class="dropdown-menu">
 											<?php
-											foreach ( $wikiNavigation as $wikiNavigationEntry ) {
-												echo '<li><a href="' . $wikiNavigationEntry[ 'href' ] . '">' . $wikiNavigationEntry[ 'text' ] . '</a></li>';
+											$wikiMenuKey = 'WIKIMENU';
+											if ( array_key_exists( $wikiMenuKey, $this->data[ 'sidebar' ] ) ) {
+												echo $this->data[ 'sidebar' ][ $wikiMenuKey ];
+												unset( $this->data[ 'sidebar' ][ $wikiMenuKey ] );
+											} elseif ( count( $wikiNavigation ) > 0 ) {
+												if ( is_array( $wikiNavigation ) ) {
+													foreach ( $wikiNavigation as $wikiNavigationEntry ) {
+														echo '<li><a href="' . $wikiNavigationEntry[ 'href' ] . '">' . $wikiNavigationEntry[ 'text' ] . '</a></li>';
+													}
+												}
 											}
 											?>
 										</ul>

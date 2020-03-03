@@ -15,6 +15,11 @@ class Colors {
 			'wiki-light' => '#e6e6e6',
 			'body-bg' => '#e5e5e5',
 		),
+		'arenafps' => array(
+			'wiki-dark' => '#4a4a4a',
+			'wiki-light' => '#fbecdf',
+			'body-bg' => '#e5e5e5',
+		),
 		'arenaofvalor' => array(
 			'wiki-dark' => '#196b6b',
 			'wiki-light' => '#e6e6e6',
@@ -53,11 +58,6 @@ class Colors {
 		'crossfire' => array(
 			'wiki-dark' => '#196b6b',
 			'wiki-light' => '#fbecdf',
-			'body-bg' => '#e5e5e5',
-		),
-		'diabotical' => array(
-			'wiki-dark' => '#e6e6e6',
-			'wiki-light' => '#b12a2a',
 			'body-bg' => '#e5e5e5',
 		),
 		'dota2' => array(
@@ -120,11 +120,6 @@ class Colors {
 			'wiki-light' => '#fbfbd7',
 			'body-bg' => '#e5e5e5',
 		),
-		'quake' => array(
-			'wiki-dark' => '#4a4a4a',
-			'wiki-light' => '#fbecdf',
-			'body-bg' => '#e5e5e5',
-		),
 		'rainbowsix' => array(
 			'wiki-dark' => '#a4276e',
 			'wiki-light' => '#fbf2df',
@@ -173,6 +168,11 @@ class Colors {
 		'underlords' => array(
 			'wiki-dark' => '#732b9c',
 			'wiki-light' => '#fbdfdf',
+			'body-bg' => '#e5e5e5',
+		),
+		'valorant' => array(
+			'wiki-dark' => '#e6e6e6',
+			'wiki-light' => '#b12a2a',
 			'body-bg' => '#e5e5e5',
 		),
 		'warcraft' => array(

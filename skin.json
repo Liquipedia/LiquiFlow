@@ -77,6 +77,12 @@
 			],
 			"position": "top"
 		},
+		"skins.liquiflow.theme.arenafps": {
+			"styles": [
+				"styles/themes/theme/arenafps.less"
+			],
+			"position": "top"
+		},
 		"skins.liquiflow.theme.arenaofvalor": {
 			"styles": [
 				"styles/themes/theme/arenaofvalor.less"
@@ -122,12 +128,6 @@
 		"skins.liquiflow.theme.crossfire": {
 			"styles": [
 				"styles/themes/theme/crossfire.less"
-			],
-			"position": "top"
-		},
-		"skins.liquiflow.theme.diabotical": {
-			"styles": [
-				"styles/themes/theme/diabotical.less"
 			],
 			"position": "top"
 		},
@@ -221,12 +221,6 @@
 			],
 			"position": "top"
 		},
-		"skins.liquiflow.theme.quake": {
-			"styles": [
-				"styles/themes/theme/quake.less"
-			],
-			"position": "top"
-		},
 		"skins.liquiflow.theme.simracing": {
 			"styles": [
 				"styles/themes/theme/simracing.less"
@@ -266,6 +260,12 @@
 		"skins.liquiflow.theme.underlords": {
 			"styles": [
 				"styles/themes/theme/underlords.less"
+			],
+			"position": "top"
+		},
+		"skins.liquiflow.theme.valorant": {
+			"styles": [
+				"styles/themes/theme/valorant.less"
 			],
 			"position": "top"
 		},

@@ -427,7 +427,7 @@ class Template extends \BaseTemplate {
 											<?php $this->renderNavigation( array( 'NAMESPACES', 'VIEWS', 'ACTIONS' ), 'mobile' ); ?>
 										</ul>
 									</li>
-									<li class="dropdown visible-xs" id="dropdown-share">
+									<li class="dropdown visible-xs">
 										<a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="#">
 											<?php echo $this->makeFAIcon( 't-share' ); ?> <span class="hidden-sm"><?php echo $this->getMsg( 'liquiflow-share' )->text(); ?></span> <span class="caret"></span>
 										</a>
@@ -553,7 +553,7 @@ class Template extends \BaseTemplate {
 							</ul>
 
 							<ul class="nav navbar-nav navbar-right navbar-nav-2">
-								<li class="dropdown">
+								<li class="dropdown" id="dropdown-share">
 									<a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="#">
 										<?php echo $this->makeFAIcon( 't-share' ); ?> <span class="hidden-sm"><?php echo $this->getMsg( 'liquiflow-share' )->text(); ?></span> <span class="caret"></span>
 									</a>

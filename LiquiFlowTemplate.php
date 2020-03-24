@@ -712,7 +712,7 @@ class Template extends \BaseTemplate {
 								<h4><?php echo $this->getMsg( 'liquiflow-alpha-wikis' )->text(); ?></h4>
 								<ul>
 									<li><a href="/fortnite/" target="_blank">Fortnite</a></li>
-									<li><a href="/quake/" target="_blank">Quake</a></li>
+									<li><a href="/arenafps/" target="_blank">Arena FPS</a></li>
 									<li><a href="/teamfortress/" target="_blank">Team Fortress</a></li>
 									<li><a href="/worldofwarcraft/" target="_blank">World of Warcraft</a></li>
 									<li><a href="/fighters/" target="_blank">Fighting Games</a></li>

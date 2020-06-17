@@ -733,7 +733,7 @@ class Template extends \BaseTemplate {
 								</ul>
 								<h4><?php echo $this->getMsg( 'liquiflow-contact-us' )->text(); ?></h4>
 								<ul>
-									<li><a href="mailto:liquipedia@teamliquid.net"><?php echo $this->getMsg( 'liquiflow-send-an-email' )->text(); ?></a></li>
+									<li><a href="mailto:contact@liquipedia.net"><?php echo $this->getMsg( 'liquiflow-send-an-email' )->text(); ?></a></li>
 									<li><a href="https://tl.net/forum/website-feedback/94785-liquipedia-feedback-thread" target="_blank"><?php echo $this->getMsg( 'liquiflow-post-feedback' )->text(); ?></a></li>
 									<li><a href="https://liquipedia.net/discord" target="_blank"><?php echo $this->getMsg( 'liquiflow-chat-with-us' )->text(); ?></a></li>
 								</ul>

@@ -36,8 +36,8 @@ class Colors {
 			'body-bg' => '#e5e5e5',
 		),
 		'callofduty' => array(
-			'wiki-dark' => '#4a4a4a',
-			'wiki-light' => '#fbecdf',
+			'wiki-dark' => '#54711b',
+			'wiki-light' => '#dbeded',
 			'body-bg' => '#e5e5e5',
 		),
 		'clashroyale' => array(

@@ -730,6 +730,7 @@ class Template extends \BaseTemplate {
 											<?php echo $this->html( $link ); ?>
 										</li>
 									<?php } ?>
+									<li><a href="#" id="ncmp-consent-link"></a></li>
 								</ul>
 								<h4><?php echo $this->getMsg( 'liquiflow-contact-us' )->text(); ?></h4>
 								<ul>

@@ -2,6 +2,10 @@ LiquiFlow
 =========
 MediaWiki Skin for Liquipedia
 
+DEPRECATED
+==========
+This skin is officially deprecated and will not receive any further updates. It only works with MediaWiki 1.31 and 1.32, and will not work with any MediaWiki version after that!
+
 Installation
 ============
 * Extract the skin folder to skins/LiquiFlow/
